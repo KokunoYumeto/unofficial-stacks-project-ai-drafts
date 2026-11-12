@@ -1,0 +1,729 @@
+{
+  "schema": "tohoku-stacks-d1012-formalization-check-v1",
+  "formalization_id": "D1012",
+  "overall_result": "STRICT_PASS",
+  "serialization": {
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "indentation": 2,
+    "terminal_newline": true
+  },
+  "scope": {
+    "source_reference": "Tohoku Chapter IV, Section 3.9, printed pp. 179–180",
+    "live_inserted_lines": {
+      "start": 3924,
+      "end": 4275
+    },
+    "authority_boundary": "Binds the admitted p.179 source repair, v068c3r19 reader, v68r41 QA, sem/r20, exact D1012 TeX insertion, fixed-point PDF, strict parser, visual render, scanner replay, and the five planned r56 closures.",
+    "exclusions": [
+      "AGENTS.md was not edited.",
+      "No GitHub action, publication, upload, or release is claimed.",
+      "No mapping ledger mutation is claimed by this receipt.",
+      "No cleanup, archive, ZIP, watcher, or broad scan is claimed."
+    ],
+    "external_constraints": {
+      "github": {
+        "status": "temporarily_unavailable",
+        "reason": "GitHub access is suspended during a VPN/security review; support ticket filed.",
+        "action": "Continue locally; do not attempt GitHub operations."
+      }
+    }
+  },
+  "source_repair": {
+    "defect_id": "D1012-R001",
+    "family_id": "TOH-P179-COR-002",
+    "root_correction_id": "TOH-SRC-P179-009",
+    "layer_target": "fr_corrected;en",
+    "design": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_source_repair_design.json",
+      "bytes": 11812,
+      "sha256": "9F282268F4496469D2601BE25523EF6276F9CF15722D6F50A71B202F32E80B82",
+      "schema": "tohoku-source-repair-design-v1",
+      "status": "DESIGN_PASS_NOT_APPLIED",
+      "disposition": "superseded by the sealed admission"
+    },
+    "design_audit": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_design_audit.json",
+      "bytes": 11187,
+      "sha256": "450F5797010AEA550A0AA972AD1DA27C6A03AD1910777489352B222FC27FF8BC",
+      "schema": "tohoku-stacks-d1012-design-audit-v1",
+      "status": "STRICT_DESIGN_PASS_SOURCE_REPAIR_REQUIRED"
+    },
+    "independent_review": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_independent_review_r1.json",
+      "bytes": 14941,
+      "sha256": "E8685E081850E1D31ABC93498839FCDB2975DB72BB5972ECC176DEC6BF0C5B55",
+      "schema": "tohoku-stacks-d1012-independent-review-r1-v1",
+      "overall_result": "STRICT_PASS",
+      "blocking_defects": 0
+    },
+    "admission": {
+      "check": {
+        "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p179_fix2/check.json",
+        "bytes": 4425,
+        "sha256": "61AD974EC36B4FB525643EEABF7E12F57AC3FB2B80D7267D32DDCC83035D1D27",
+        "schema": "tohoku-p179-cross-cover-trace-source-admission-v1",
+        "status": "PASS"
+      },
+      "decisions": {
+        "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p179_fix2/decisions.jsonl",
+        "bytes": 3863,
+        "sha256": "4B32C9521442CE2330068147C20ACE804A3D3C097E91FB83F02D501556D0200C",
+        "appended_id": "TOH-P179-COR-002",
+        "appended_rows": 1,
+        "predecessor_prefix_exact": true
+      },
+      "diplomatic_french_p179": {
+        "bytes": 4413,
+        "sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182",
+        "predecessor_byte_exact": true
+      },
+      "corrected_french_p179": {
+        "bytes": 4375,
+        "sha256": "27C6C84EEE0B74133B6376453801DF451B892FF782B7AC09E72146C4A7834C48",
+        "replacement_occurrences": 1
+      },
+      "english_p179": {
+        "bytes": 4173,
+        "sha256": "A7491524DBAC64EA345B36384DE39F503A2F4680B995779DEB826D7C21443D73",
+        "replacement_occurrences": 1
+      },
+      "root_ledger": {
+        "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/SOURCE_CORRECTIONS.jsonl",
+        "bytes": 211141,
+        "sha256": "94F39C3058F24A0E8E43B3D3D98679C4EF265C23873ACE2B075F23F8810C262",
+        "appended_id": "TOH-SRC-P179-009",
+        "appended_rows": 1,
+        "predecessor_prefix_exact": true
+      },
+      "validation": {
+        "target_sequence_count": 13,
+        "layers": {
+          "dip": 13,
+          "fr": 13,
+          "en": 13
+        },
+        "cross_cover_trace_occurrences": {
+          "dip": 0,
+          "fr": 1,
+          "en": 1
+        },
+        "diplomatic_french_changes": 0,
+        "corrected_french_replacements": 1,
+        "english_replacements": 1,
+        "semantic_state": "UNCHANGED"
+      }
+    }
+  },
+  "reader_and_semantic_gates": {
+    "reader_build": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/build.json",
+      "bytes": 22218,
+      "sha256": "F31B4D90398DD35783CFF6178305F331F64976EC242135EE1BA933093635608F",
+      "schema": "tohoku-v068-staged-successor-build-v1",
+      "revision": "v068c3r19",
+      "status": "PASS",
+      "staged_source_rows": 543,
+      "staged_source_bytes": 62845,
+      "staged_source_sha256": "D49CC85CF58B08E28A73C71D7A868559AB0B8F6454763BF69861FDAEB7DB8944",
+      "english_pdf": {
+        "bytes": 1381116,
+        "sha256": "A7B12B68566D4B2B5DA90DF64C8972D2A80A38EE7BB341E13DC77B75FFD51E96",
+        "pages": 90
+      },
+      "french_pdf": {
+        "bytes": 1417542,
+        "sha256": "C2BB5BAC3D9641076A906379D4F7AC3C6A12C37C5877C63387B8C9443D6C74DA",
+        "pages": 94
+      }
+    },
+    "reader_qa": {
+      "check": {
+        "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/qa/v68r41/check.json",
+        "bytes": 4745,
+        "sha256": "7153FAF431F3767F8C2E581745FD9E90ECD253B8C7B8369F3D9C46DB52B8DC5D",
+        "status": "PASS"
+      },
+      "structural": {
+        "bytes": 7900,
+        "sha256": "9DE87B78D032449E996FA6527E7794501E2E41F0B27194DCC17ED6E75FEE4E5E",
+        "status": "STRUCTURAL_PASS_VISUAL_PENDING"
+      },
+      "page_inventory": {
+        "bytes": 28257,
+        "sha256": "E0C4F7CD1A08A71C703F4E35C531584A4866607BE350836B5FDBE39A2FEFEA29"
+      },
+      "p179_visual_attestation": {
+        "path": "user/Documents/stacks-ftg/tmp/d1012_p179_repair_toolchain/r41_visual_attestation.json",
+        "bytes": 1517,
+        "sha256": "1EA3E26D44941DDFA814C320E791ECAC480FAD142CEE535388F38BA2B3961B3D",
+        "pages": [
+          "EN 48",
+          "EN 49",
+          "EN 50",
+          "FR 50",
+          "FR 51",
+          "FR 52"
+        ],
+        "checks": {
+          "clipping": 0,
+          "overlap": 0,
+          "broken_glyphs": 0,
+          "seam_defects": 0
+        }
+      }
+    },
+    "semantic_successor": {
+      "revision": "sem/r20",
+      "manifest": {
+        "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/sem/r20/manifest.json",
+        "bytes": 33263,
+        "sha256": "A5ADE906B63382C3071F8EE4908546F010A3F08ED7DC1F6FD8D2C84D9713782D"
+      },
+      "validation": {
+        "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/sem/r20/validation.json",
+        "bytes": 10529,
+        "sha256": "AF76F4B6A8263586F178D2AA82A0E781590F9824F62BF9A8868A8B87406CF863",
+        "status": "PASS"
+      },
+      "counts": {
+        "records": 18,
+        "aggregate_bytes": 1469,
+        "complete_surface_bytes": 2062999,
+        "complete_surface_sha256": "24861176EE64BD43E3F3AF8FC1CEA0844F4F73C22FC904E86BB95712EB2BE63A"
+      },
+      "affected_node": "tohoku:setup:acyclicity-cover-families",
+      "affected_occurrences": [
+        "tohoku:occ:p179:o003",
+        "tohoku:occ:p180:o006"
+      ],
+      "dependent_proof": "tohoku:proof:theorem-3.9.1:induction-on-k",
+      "zero_new_targets": true,
+      "layer_targets": 13
+    }
+  },
+  "formalization_artifacts": {
+    "revised_candidate": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_block_candidate.tex",
+      "bytes": 14479,
+      "sha256": "47846682E4B789557EDAA8F5DADAC4F927267394FAC57ACED0590210F039311D",
+      "lines": 352,
+      "terminal_lf": true,
+      "labels": [
+        "section-covering-acyclicity-criteria",
+        "lemma-cech-spectral-sequence-closed-covering",
+        "lemma-covering-acyclicity-local-killing",
+        "lemma-covering-acyclicity-conditions",
+        "lemma-special-coverings-compute-acyclicity",
+        "lemma-bounded-nerve-special-coverings-acyclic"
+      ],
+      "official_tags": 0
+    },
+    "live_source": {
+      "path": "user/Documents/stacks-ftg/cohomology.tex",
+      "bytes": 909844,
+      "sha256": "B686159DD380301A5A7752C389A93E27734672545CCC6F719806175DD688423B",
+      "lines": 24637,
+      "terminal_lf": true
+    },
+    "exact_insertion": {
+      "candidate_occurrences_in_live": 1,
+      "start_line": 3924,
+      "end_line": 4275,
+      "extracted_line_array_exact": true,
+      "predecessor_after_removing_one_boundary_byte_each": {
+        "bytes": 895363,
+        "sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+      },
+      "live_size_equals_predecessor_plus_candidate_plus_two_boundary_bytes": true
+    }
+  },
+  "tex_audit": {
+    "labels_count": 6,
+    "labels_unique": true,
+    "candidate_definitions_each": 1,
+    "live_definitions_each": 1,
+    "total_references": 17,
+    "unique_references": 12,
+    "unresolved_references": 0,
+    "begin_environments": 21,
+    "end_environments": 21,
+    "environment_nesting_errors": 0,
+    "display_math_delimiters": 34,
+    "display_math_parity_even": true
+  },
+  "fixed_point_build": {
+    "engine": "MiKTeX pdflatex",
+    "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cohomology.tex",
+    "passes": 2,
+    "rerun_stable": true,
+    "aux": {
+      "path": "user/Documents/stacks-ftg/cohomology.aux",
+      "bytes": 56600,
+      "sha256": "98C97BA1605943CD3373F8A2FB80AEC411BC84BF692D6EB9F50DF1ED04F09EAA"
+    },
+    "out": {
+      "path": "user/Documents/stacks-ftg/cohomology.out",
+      "bytes": 12725,
+      "sha256": "E20175BCE90BA5C272D88818F692C70BF698D24E5E04C6CAF200E3D812D62651"
+    },
+    "toc": {
+      "path": "user/Documents/stacks-ftg/cohomology.toc",
+      "bytes": 5574,
+      "sha256": "9E9D758F343C993E281ACFD2DD41EA6C2061FC601FAB3D19AA6A530FAFD81A48"
+    },
+    "pdf": {
+      "path": "user/Documents/stacks-ftg/cohomology.pdf",
+      "bytes": 1995257,
+      "sha256": "6F237865D0E46546CF18F24D3F153846135AD2DBDF95F2D6B3DA3A0A240D7B5E",
+      "pages": 238
+    },
+    "log": {
+      "path": "user/Documents/stacks-ftg/cohomology.log",
+      "bytes": 48611,
+      "sha256": "8D97373DA2448A2342AB1552B2288862DD478BA6BB4BDC5FD8F4B463EE7E301C"
+    },
+    "aux_label_pages": {
+      "section-covering-acyclicity-criteria": 39,
+      "lemma-cech-spectral-sequence-closed-covering": 39,
+      "lemma-covering-acyclicity-local-killing": 41,
+      "lemma-covering-acyclicity-conditions": 42,
+      "lemma-special-coverings-compute-acyclicity": 42,
+      "lemma-bounded-nerve-special-coverings-acyclic": 42
+    },
+    "next_section_page": 152,
+    "fixed_point_log_evidence": "Package rerunfilecheck Info: File `cohomology.out' has not changed."
+  },
+  "pdf_and_log_qa": {
+    "parser": {
+      "engine": "pypdf",
+      "version": "6.12.2",
+      "strict": true,
+      "pdf_header": "%PDF-1.5",
+      "encrypted": false,
+      "pages": 238,
+      "page_tree_count": 238,
+      "pages_parsed": 238,
+      "content_streams_parsed": 238,
+      "content_decoded_bytes": 4501963,
+      "text_pages_parsed": 238,
+      "text_chars": 521771,
+      "all_pages_have_text": true,
+      "uniform_media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotations": [
+        0
+      ],
+      "xref_objects_parsed": 4275,
+      "trailer_keys": [
+        "/ID",
+        "/Info",
+        "/Root",
+        "/Size"
+      ],
+      "trailer_size": 4286,
+      "root_type": "/Catalog",
+      "eof_marker_count": 1,
+      "trailing_whitespace_bytes": 1,
+      "startxref": 1909370,
+      "startxref_target_valid": true,
+      "page_errors": 0,
+      "content_stream_errors": 0,
+      "text_errors": 0,
+      "box_errors": 0,
+      "rotation_errors": 0,
+      "xref_errors": 0,
+      "result": "STRICT_PASS"
+    },
+    "log_audit": {
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "rerun_requests": 0,
+      "fatal_or_latex_errors": 0,
+      "multiply_defined": 0,
+      "total_box_diagnostics": 40,
+      "overfull": 39,
+      "underfull": 1,
+      "source_located_box_diagnostics": 40,
+      "candidate_local_diagnostics": [
+        {
+          "line": 3984,
+          "kind": "overfull_hbox",
+          "amount_pt": 18.20024,
+          "disposition": "non-blocking; visual check clean"
+        },
+        {
+          "lines": [
+            4192,
+            4194
+          ],
+          "kind": "overfull_hbox",
+          "amount_pt": 2.89575,
+          "disposition": "non-blocking; visual check clean"
+        }
+      ],
+      "result": "STRICT_PASS"
+    },
+    "visual_audit": {
+      "render_method": "pdftoppm PNG at 180 dpi for pages 37–46, with 300 dpi spot checks for pages 39–42",
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "width": 1530,
+      "height": 1980,
+      "dpi": 180,
+      "files": [
+        {
+          "page": 37,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-037.png",
+          "bytes": 365115,
+          "sha256": "3C11BE6DD30A0198CD271024C54AC590628DEB12007C6AA84F87F0CA889EE818"
+        },
+        {
+          "page": 38,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-038.png",
+          "bytes": 304515,
+          "sha256": "C8592E73ECEC29C7259767051510ABD615234F7952F3478F52AB300829B4538C"
+        },
+        {
+          "page": 39,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-039.png",
+          "bytes": 371629,
+          "sha256": "EADE37836C9026CBB8AED2094564EFE7CECB08F415A6CF6E44B730B8281F2A0F"
+        },
+        {
+          "page": 40,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-040.png",
+          "bytes": 384030,
+          "sha256": "20EB95773A83E719B961A103F9C58ACAD46E1DE643C29557EDE898252DB2A569"
+        },
+        {
+          "page": 41,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-041.png",
+          "bytes": 419661,
+          "sha256": "27CFA0CC6A32CB00D6C7DD89814DF9E29CB14A0E11B33499D43CDCDC9CB00B41"
+        },
+        {
+          "page": 42,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-042.png",
+          "bytes": 433455,
+          "sha256": "E6C343E4429EE0227A1395E98AA6DC97FDB7B69D92528392E6990129FD034610"
+        },
+        {
+          "page": 43,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-043.png",
+          "bytes": 381924,
+          "sha256": "00B4E478287A8FF1DD130EAE46A6C0798A228D46951D45C1E160EE5281B2BE89"
+        },
+        {
+          "page": 44,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-044.png",
+          "bytes": 376696,
+          "sha256": "E14B372B74C4CB1CC3A6E022101C9B6BB85DD17EE53F061B10F20C2B4CF5B6DE"
+        },
+        {
+          "page": 45,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-045.png",
+          "bytes": 382435,
+          "sha256": "B2E49637DBE036863F8A6BEAC577FAAEB34B1A163C35765A7D2306DD595B7559"
+        },
+        {
+          "page": 46,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/page-046.png",
+          "bytes": 338794,
+          "sha256": "7D20F599A63889B2A02BFEF0D4CF1555A139B11B98331D60BAD3DD1AC9E97F69"
+        }
+      ],
+      "total_bytes": 3758254,
+      "manifest_path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/D1012_RENDER_MANIFEST.txt",
+      "manifest_bytes": 850,
+      "manifest_sha256": "4797908ECB87DDBF384CCE29225DB814970B6FF4AC9E82ABE74ECCC85C63E52D",
+      "high_resolution_spot_checks": [
+        {
+          "page": 39,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/hi-039.png",
+          "bytes": 518303,
+          "sha256": "AA43D656721715EEE404305B6A9480AD002AC53AE1A3FF24322D0A117CEE29F9"
+        },
+        {
+          "page": 40,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/hi-040.png",
+          "bytes": 508616,
+          "sha256": "284FDB5137E83899BCC2BE044941E08565CC4764401602756D64FE511C06B546"
+        },
+        {
+          "page": 41,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/hi-041.png",
+          "bytes": 581067,
+          "sha256": "B99A9B71A4A99E993E4F2CC53EF2058AFD95131E5A303DD10881D4BCCC8FDC72"
+        },
+        {
+          "page": 42,
+          "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_render/hi-042.png",
+          "bytes": 614210,
+          "sha256": "435F156046557E6D020329FD2AD6738C3916031E039EC007C13BBAE887A39080"
+        }
+      ],
+      "checks": {
+        "clipping": 0,
+        "overlap": 0,
+        "broken_glyphs": 0,
+        "equation_overflow": 0,
+        "margin_violations": 0,
+        "bad_page_breaks": 0,
+        "seam_defects": 0
+      },
+      "result": "STRICT_PASS"
+    }
+  },
+  "scanner_oracle": {
+    "baseline": {
+      "path": "user/Documents/stacks-ftg/tmp/d1011_scan",
+      "check": {
+        "bytes": 80879,
+        "sha256": "798607A517735BC50C77356894D9089D9218DC0A2B5D49DB073347C455615EDD"
+      },
+      "counts": {
+        "labels": 22087,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topic_coverage_direct": 13,
+        "warnings": 659,
+        "errors": 0
+      },
+      "cohomology_tex_sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+    },
+    "final": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_scan",
+      "check": {
+        "bytes": 81523,
+        "sha256": "B2D6E35F8C97D756AC252CF2D49F2265BD6CCEC09AC70691E4513DE1FBDD82A1"
+      },
+      "counts": {
+        "labels": 22093,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topic_coverage_direct": 13,
+        "warnings": 665,
+        "errors": 0
+      },
+      "cohomology_tex_sha256": "B686159DD380301A5A7752C389A93E27734672545CCC6F719806175DD688423B"
+    },
+    "replay": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_scan_replay",
+      "check": {
+        "bytes": 81523,
+        "sha256": "B2D6E35F8C97D756AC252CF2D49F2265BD6CCEC09AC70691E4513DE1FBDD82A1"
+      },
+      "output_files_byte_identical_to_final": true
+    },
+    "delta": {
+      "labels": 6,
+      "official_tags_joined": 0,
+      "tex_files": 0,
+      "topic_candidates": 0,
+      "topic_coverage_direct": 0,
+      "warnings": 6,
+      "errors": 0,
+      "new_warnings_are_exactly_six_missing_official_tags": true,
+      "unrelated_warning_drift": 0
+    },
+    "status": "PASS"
+  },
+  "mapping_design": {
+    "path": "user/Documents/stacks-ftg/tmp/d1012_mapping_design.json",
+    "bytes": 30870,
+    "sha256": "257F4C5677CCCF5DDD88991FF5AE262CD9531CE6DDCBEFB1321C51E9D5FA7FE7",
+    "schema": "tohoku-stacks-d1012-r56-mapping-design-v1",
+    "status": "STRICT_DESIGN_PASS_CONTINGENT",
+    "planned_decisions": [
+      {
+        "decision_id": "D001032",
+        "supersedes": "D000446",
+        "unit_id": "tohoku:theorem:3.9.1",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-covering-acyclicity-local-killing"
+      },
+      {
+        "decision_id": "D001033",
+        "supersedes": "D000378",
+        "unit_id": "tohoku:corollary:3.9.1:1",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-covering-acyclicity-conditions"
+      },
+      {
+        "decision_id": "D001034",
+        "supersedes": "D000379",
+        "unit_id": "tohoku:corollary:3.9.1:2",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-special-coverings-compute-acyclicity"
+      },
+      {
+        "decision_id": "D001035",
+        "supersedes": "D000380",
+        "unit_id": "tohoku:corollary:3.9.1:3",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-bounded-nerve-special-coverings-acyclic"
+      },
+      {
+        "decision_id": "D001036",
+        "supersedes": "D000329",
+        "unit_id": "tohoku:section:3.9",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-section-covering-acyclicity-criteria"
+      }
+    ],
+    "planned_issue": {
+      "issue_id": "I000031",
+      "resolves_by": "D001032",
+      "status": "resolved",
+      "source_defect": "cross-cover trace quantifier omission"
+    },
+    "projected_counts": {
+      "decisions_before": 1031,
+      "decisions_after": 1036,
+      "issues_before": 30,
+      "issues_after": 31,
+      "gaps_before": 34,
+      "gaps_after": 29,
+      "source_repairs_appended": 1
+    },
+    "output_identities": {
+      "dec_csv": {
+        "bytes": 381639,
+        "sha256": "5680E5911F51D5A583FD184BFA954618C9E45D73A32192F3D9AC824C57F6BDFA"
+      },
+      "issues_csv": {
+        "bytes": 32866,
+        "sha256": "D882954C9D55F7AB93F2910CE99D86FA1D107F6EFE7008B26722F012F50BC2BC"
+      },
+      "map_csv": {
+        "bytes": 483640,
+        "sha256": "0F06BCBBCAE7ED210C382BF60DE8B998D6598B9130D99E96071CB48B752DCD91"
+      }
+    }
+  },
+  "predicates": [
+    {
+      "id": "P001",
+      "claim": "Admitted p.179 family/root repairs and exact layer counts pass.",
+      "result": "PASS",
+      "expected": "admission identities/counts",
+      "observed": "admission identities/counts"
+    },
+    {
+      "id": "P002",
+      "claim": "Design audit, independent review, and authority chain pass.",
+      "result": "PASS",
+      "expected": "design/review PASS",
+      "observed": "design/review PASS"
+    },
+    {
+      "id": "P003",
+      "claim": "Reader v068c3r19 build and EN/FR identities pass.",
+      "result": "PASS",
+      "expected": "reader PASS",
+      "observed": "reader PASS"
+    },
+    {
+      "id": "P004",
+      "claim": "Reader QA and p.179 visual attestation pass.",
+      "result": "PASS",
+      "expected": "QA PASS",
+      "observed": "QA PASS"
+    },
+    {
+      "id": "P005",
+      "claim": "sem/r20 validates with zero new targets and affected proof binding.",
+      "result": "PASS",
+      "expected": "semantic PASS",
+      "observed": "semantic PASS"
+    },
+    {
+      "id": "P006",
+      "claim": "Candidate TeX labels, references, environments, and math delimiters pass.",
+      "result": "PASS",
+      "expected": "TeX counts",
+      "observed": "TeX counts"
+    },
+    {
+      "id": "P007",
+      "claim": "Exact candidate insertion replay reconstructs D1011 after boundary-byte normalization.",
+      "result": "PASS",
+      "expected": "insertion replay",
+      "observed": "insertion replay"
+    },
+    {
+      "id": "P008",
+      "claim": "Two pdflatex passes reach a fixed point with bound products.",
+      "result": "PASS",
+      "expected": "fixed point",
+      "observed": "fixed point"
+    },
+    {
+      "id": "P009",
+      "claim": "Strict pypdf parser has no structural or content errors.",
+      "result": "PASS",
+      "expected": "strict PDF PASS",
+      "observed": "strict PDF PASS"
+    },
+    {
+      "id": "P010",
+      "claim": "Final visual surface and manifest pass with zero visual defects.",
+      "result": "PASS",
+      "expected": "visual PASS",
+      "observed": "visual PASS"
+    },
+    {
+      "id": "P011",
+      "claim": "Final scanner and replay are byte-identical PASS with isolated six-label delta.",
+      "result": "PASS",
+      "expected": "scanner PASS",
+      "observed": "scanner PASS"
+    },
+    {
+      "id": "P012",
+      "claim": "Five exact r56 replacements and I000031 project 34 gaps to 29.",
+      "result": "PASS",
+      "expected": "mapping projection",
+      "observed": "mapping projection"
+    }
+  ],
+  "predicate_ids": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P007",
+    "P008",
+    "P009",
+    "P010",
+    "P011",
+    "P012"
+  ],
+  "predicate_summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "rule": "overall_result is STRICT_PASS iff every predicate replays PASS from the bound live files"
+  },
+  "errors": [],
+  "next_action": "Create and independently replay atomic tohoku_r56 from sealed r55; append D001032–D001036 and I000031 exactly once; bind the 29-gap cursor; keep GitHub temporarily unavailable."
+}

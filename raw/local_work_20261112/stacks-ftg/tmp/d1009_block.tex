@@ -1,0 +1,264 @@
+\section{Equivariant cohomology with supports}
+\label{section-equivariant-cohomology-supports}
+
+\noindent
+Throughout this section a $G$-sheaf means an abelian $G$-sheaf. No extension
+to modules over a general equivariant sheaf of rings is asserted.
+
+\begin{definition}
+\label{definition-equivariant-cohomology-family-supports}
+\begin{reference}
+\cite[Chapter V, \S 5.7, p. 219]{Tohoku}
+\end{reference}
+Let $G$ act on a topological space $X$, and let $\Phi$ be a family of
+supports on $X$ in the sense of Definition
+\ref{definition-family-supports}. For an abelian $G$-sheaf $\mathcal A$ on
+$X$, set
+$$
+\Gamma^G_\Phi(X,\mathcal A)
+=
+\{s\in\Gamma(X,\mathcal A)^G\mid
+\text{Supp}_X(s)\in\Phi\}.
+$$
+Thus the right hand side means the intersection of the invariant global
+sections with the sections supported in $\Phi$; it does not require
+$\Gamma_\Phi(X,\mathcal A)$ to be stable under $G$.
+
+This defines an additive left exact functor
+$$
+\Gamma^G_\Phi(X,-):
+\textit{Mod}_G(\underline{\mathbf Z}_X)
+\longrightarrow
+\textit{Ab};
+$$
+see Lemma \ref{lemma-equivariant-family-supports-invariant-saturation}.
+The source category has enough injectives by Injectives, Lemma
+\ref{injectives-lemma-equivariant-modules-enough-injectives}. We define
+$$
+H^n_\Phi(X;G,\mathcal A)
+=
+R^n\Gamma^G_\Phi(X,-)(\mathcal A),
+\qquad n\geq 0,
+$$
+and put these groups equal to zero in negative degrees. If $\Phi$ is the
+family of all closed subsets of $X$, this recovers
+$H^n(X;G,\mathcal A)$ of Definition
+\ref{definition-orbit-space-equivariant-cohomology}.
+\end{definition}
+
+\begin{lemma}[Invariant saturation of a family of supports]
+\label{lemma-equivariant-family-supports-invariant-saturation}
+\begin{reference}
+\cite[Chapter V, \S 5.7, p. 219]{Tohoku}
+\end{reference}
+Let $G$ act on $X$, and let $\Phi$ be a family of supports on $X$. Put
+$$
+\Phi^G=
+\left\{
+Z\subset X\ \middle|\
+\begin{aligned}
+&Z\text{ is closed, and there is }W\in\Phi\text{ with }Z\subset W,\\
+&gW=W\text{ for every }g\in G
+\end{aligned}
+\right\}.
+$$
+Then $\Phi^G$ is a family of supports, it is stable under the action of
+$G$, and $\Phi^G\subset\Phi$. For every abelian $G$-sheaf $\mathcal A$
+there is a functorial equality
+$$
+\Gamma^G_\Phi(X,\mathcal A)
+=
+\Gamma^G_{\Phi^G}(X,\mathcal A).
+$$
+For the family on the right, supported global sections form a
+$\mathbf Z[G]$-module and
+$$
+\Gamma^G_{\Phi^G}(X,-)
+=
+(-)^G\circ\Gamma_{\Phi^G}(X,-).
+$$
+In particular, $\Gamma^G_\Phi(X,-)$ is additive and left exact.
+\end{lemma}
+
+\begin{proof}
+Every family of supports contains the empty set. Hence the empty set is in
+$\Phi^G$. If $Z_i\subset W_i$ exhibits $Z_i\in\Phi^G$ for $i=1,2$, then
+$W_1\cup W_2$ is an invariant member of $\Phi$ containing
+$Z_1\cup Z_2$. Downward closure is immediate. This proves that $\Phi^G$
+is a family of supports. If $Z\subset W$ is such an exhibition, then
+$gZ\subset W$ for every $g\in G$, so the family is $G$-stable. Downward
+closure of $\Phi$ also gives $\Phi^G\subset\Phi$.
+
+Let $s\in\Gamma(X,\mathcal A)^G$. The action isomorphisms on the stalks
+carry $s_x$ to $s_{gx}$. Thus
+$$
+g\text{Supp}_X(s)=\text{Supp}_X(s)
+$$
+for every $g\in G$. If $\text{Supp}_X(s)\in\Phi$, this support itself is
+an invariant member of $\Phi$, and hence it lies in $\Phi^G$. The converse
+follows from $\Phi^G\subset\Phi$. This proves the functorial equality.
+
+Because $\Phi^G$ is $G$-stable, the group action on global sections
+preserves $\Gamma_{\Phi^G}(X,\mathcal A)$. This gives the last displayed
+factorization. The functor $\Gamma_{\Phi^G}(X,-)$ is additive and left
+exact by Lemma \ref{lemma-cohomology-family-supports}, and taking
+$G$-invariants is additive and left exact. The final assertion follows.
+\end{proof}
+
+\begin{lemma}[Equivariant cohomology with supports on the orbit space]
+\label{lemma-orbit-space-equivariant-support-spectral-sequence}
+\begin{reference}
+\cite[Chapter V, \S 5.7, pp. 219--220]{Tohoku}
+\end{reference}
+\begin{history}
+The support subscript on the abutment in the cited source is essential. It
+is the subscript restored in corrected-source decision
+\texttt{TOH-SRC-P220-004}; omitting it would contradict the degree-zero
+functor identity proved below.
+\end{history}
+Let $G$ act on $X$, let $Y=X/G$, and let $q:X\to Y$ be the orbit map. Let
+$\Psi$ be a family of supports on $Y$, and put
+$$
+q^\dagger\Psi=
+\{Z\subset X\mid Z\text{ is closed and }
+\overline{q(Z)}\in\Psi\}.
+$$
+The closure in this formula is part of the definition; the image under an
+arbitrary orbit map of a closed subset need not be closed. Then:
+\begin{enumerate}
+\item $q^\dagger\Psi$ is a family of supports on $X$, and it equals its
+invariant saturation $(q^\dagger\Psi)^G$.
+\item If $\mathcal A$ is an abelian $G$-sheaf on $X$ and an invariant
+section $s\in\Gamma(X,\mathcal A)^G$ corresponds to
+$\widetilde s\in\Gamma(Y,q_*^G\mathcal A)$, then
+$$
+\text{Supp}_Y(\widetilde s)
+=
+\overline{q(\text{Supp}_X(s))}.
+$$
+Consequently there is a natural equality of left exact functors
+$$
+\Gamma^G_{q^\dagger\Psi}(X,-)
+=
+\Gamma_\Psi(Y,-)\circ q_*^G.
+$$
+\item For every abelian $G$-sheaf $\mathcal A$ there is a functorial
+first-quadrant spectral sequence
+$$
+E_2^{p,q}
+=
+H^p_\Psi\bigl(Y,\mathcal H^q(G,\mathcal A)\bigr)
+\Longrightarrow
+H^{p+q}_{q^\dagger\Psi}(X;G,\mathcal A).
+$$
+It is additive and functorial from the $E_2$-page onward and gives a
+finite filtration on every abutment group.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The empty set belongs to $q^\dagger\Psi$. If $Z'\subset Z$ are closed and
+$Z\in q^\dagger\Psi$, then
+$$
+\overline{q(Z')}\subset\overline{q(Z)},
+$$
+so downward closure of $\Psi$ gives $Z'\in q^\dagger\Psi$. For two closed
+subsets $Z_1,Z_2\subset X$, we have
+$$
+\overline{q(Z_1\cup Z_2)}
+=
+\overline{q(Z_1)}\cup\overline{q(Z_2)}.
+$$
+Thus closure under finite unions follows from the corresponding property
+of $\Psi$. This proves that $q^\dagger\Psi$ is a family of supports.
+
+Let $Z\in q^\dagger\Psi$, put $C=\overline{q(Z)}$, and set
+$$
+W=q^{-1}(C).
+$$
+The subset $W$ is closed, $G$-invariant, and contains $Z$. Since $q$ is
+surjective, $q(W)=C$, and hence $W\in q^\dagger\Psi$. Therefore every
+member of $q^\dagger\Psi$ is contained in an invariant member of the same
+family. Lemma
+\ref{lemma-equivariant-family-supports-invariant-saturation} gives
+$(q^\dagger\Psi)^G=q^\dagger\Psi$.
+
+We prove the support identity. Put $S=\text{Supp}_X(s)$. For $y\in Y$, the
+definition of a stalk and of invariant direct image gives
+\begin{align*}
+\widetilde s_y=0
+&\Longleftrightarrow
+\text{there is an open }V\ni y\text{ such that }
+s|_{q^{-1}(V)}=0\\
+&\Longleftrightarrow
+\text{there is an open }V\ni y\text{ such that }
+V\cap q(S)=\emptyset\\
+&\Longleftrightarrow
+y\notin\overline{q(S)}.
+\end{align*}
+Hence $\text{Supp}_Y(\widetilde s)=\overline{q(S)}$. By Definition
+\ref{definition-family-supports}, the section $\widetilde s$ is supported
+in $\Psi$ if and only if $s$ is supported in $q^\dagger\Psi$. This proves
+the functor identity.
+
+Set
+$$
+F=q_*^G:
+\textit{Mod}_G(\underline{\mathbf Z}_X)
+\longrightarrow\textit{Ab}(Y)
+\quad\text{and}\quad
+T=\Gamma_\Psi(Y,-):\textit{Ab}(Y)\longrightarrow\textit{Ab}.
+$$
+These are additive left exact functors by Modules, Lemma
+\ref{modules-lemma-invariant-direct-image-G-O-modules} and Lemma
+\ref{lemma-cohomology-family-supports}. If $\mathcal I$ is an injective
+abelian $G$-sheaf on $X$, then $F(\mathcal I)=q_*^G\mathcal I$ is flasque
+by Injectives, Lemma
+\ref{injectives-lemma-equivariant-injective-sections-invariants}. It is
+therefore right acyclic for $T$ by Lemma
+\ref{lemma-family-supports-flasque-soft-acyclic}.
+
+The Grothendieck spectral sequence, Derived Categories, Lemma
+\ref{derived-lemma-grothendieck-spectral-sequence}, now applies to
+$T\circ F$. Definition
+\ref{definition-orbit-space-equivariant-cohomology} identifies
+$R^qF(\mathcal A)$ with $\mathcal H^q(G,\mathcal A)$, while Lemma
+\ref{lemma-cohomology-family-supports} identifies $R^pT$ with
+$H^p_\Psi(Y,-)$. The degree-zero functor identity above and Definition
+\ref{definition-equivariant-cohomology-family-supports} identify the
+derived composite with
+$H^{p+q}_{q^\dagger\Psi}(X;G,\mathcal A)$. This proves (3).
+\end{proof}
+
+\begin{remark}
+\label{remark-equivariant-support-second-spectral-sequence}
+\begin{reference}
+\cite[Chapter V, \S 5.7, p. 220]{Tohoku}
+\end{reference}
+For the invariant family $q^\dagger\Psi$, there is also a degree-zero
+factorization
+$$
+\Gamma^G_{q^\dagger\Psi}(X,-)
+=
+(-)^G\circ\Gamma_{q^\dagger\Psi}(X,-).
+$$
+This factorization alone does not produce a second Grothendieck spectral
+sequence. One would have to prove, in particular, that
+$\Gamma_{q^\dagger\Psi}(X,\mathcal I)$ is right acyclic for $(-)^G$ for
+every injective abelian $G$-sheaf $\mathcal I$; the preceding results do not
+give that assertion. This is only a failure of the present hypotheses to
+verify the Grothendieck acyclicity condition; it is not a nonexistence
+claim. Thus we do not assert a spectral sequence with a putative initial page
+$$
+H^p\bigl(G,H^q_{q^\dagger\Psi}(X,\mathcal A)\bigr).
+$$
+The cited source next assumes, exactly, that every member of $\Psi$ has a
+neighbourhood which is again a member of $\Psi$. Under that hypothesis it
+passes through extension by zero and a filtered system of neighbourhoods in
+order to construct a different second spectral sequence. We record the
+hypothesis here because it marks the end of the obstruction statement, but
+we do not yet identify supported cohomology with that filtered colimit,
+construct the resulting spectral sequence, or interchange group cohomology
+with a filtered colimit. Those are separate assertions requiring the
+additional work carried out after the cited passage.
+\end{remark}

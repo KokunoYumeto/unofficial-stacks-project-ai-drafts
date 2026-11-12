@@ -1,0 +1,166 @@
+\medskip\noindent
+The construction of the underlying sheaf of abelian groups does not
+require the coefficient rings to be commutative. We spell this out.
+
+\begin{definition}
+\label{definition-hom-left-modules}
+Let $X$ be a topological space and let $\mathcal{A}$ be a sheaf of
+not necessarily commutative rings with $1$ on $X$.
+A {\it sheaf of left $\mathcal{A}$-modules} is a sheaf of abelian
+groups $\mathcal{F}$ endowed with a morphism
+$$
+\mathcal{A} \times \mathcal{F} \longrightarrow \mathcal{F}
+$$
+such that $\mathcal{F}(U)$ is a unital left
+$\mathcal{A}(U)$-module for every open $U \subset X$.
+A morphism of sheaves of left $\mathcal{A}$-modules is a morphism
+of the underlying sheaves of abelian groups compatible with these
+actions.
+
+Let $\mathcal{F}$ and $\mathcal{G}$ be sheaves of left
+$\mathcal{A}$-modules. We denote the abelian group of morphisms by
+$$
+\Hom_{\mathcal{A}}(\mathcal{F}, \mathcal{G}).
+$$
+If $T \subset X$ is any subset, endowed with its subspace topology,
+and $i_T : T \to X$ is the inclusion, we set
+$$
+\Hom_{\mathcal{A}}(T; \mathcal{F}, \mathcal{G})
+=
+\Hom_{i_T^{-1}\mathcal{A}}
+(i_T^{-1}\mathcal{F}, i_T^{-1}\mathcal{G}).
+$$
+The inverse image sheaves have their natural left
+$i_T^{-1}\mathcal{A}$-module structures. If $T$ is open, this agrees
+with
+$$
+\Hom_{\mathcal{A}|_T}
+(\mathcal{F}|_T, \mathcal{G}|_T).
+$$
+\end{definition}
+
+\begin{lemma}
+\label{lemma-sheaf-hom-left-modules}
+In the situation of
+Definition \ref{definition-hom-left-modules}, the rule
+$$
+U \longmapsto
+\Hom_{\mathcal{A}|_U}
+(\mathcal{F}|_U, \mathcal{G}|_U)
+$$
+on open subsets of $X$ is a sheaf of abelian groups. Denote it by
+$\SheafHom_{\mathcal{A}}(\mathcal{F}, \mathcal{G})$. For every open
+$U \subset X$ we have
+$$
+\Gamma(U, \SheafHom_{\mathcal{A}}(\mathcal{F}, \mathcal{G}))
+=
+\Hom_{\mathcal{A}}(U; \mathcal{F}, \mathcal{G}).
+$$
+
+For every open $U \subset X$, put
+$$
+\mathcal{Z}_{\mathcal{A}}(U)
+=
+\left\{
+z \in \mathcal{A}(U) \mid
+z|_V a = a z|_V
+\text{ for every open }V \subset U
+\text{ and every }a \in \mathcal{A}(V)
+\right\}.
+$$
+This defines a sheaf of commutative rings
+$\mathcal{Z}_{\mathcal{A}}$ on $X$, and
+$\SheafHom_{\mathcal{A}}(\mathcal{F}, \mathcal{G})$
+is canonically a sheaf of
+$\mathcal{Z}_{\mathcal{A}}$-modules. In particular,
+$$
+\Hom_{\mathcal{A}}(\mathcal{F}, \mathcal{G})
+$$
+is canonically a module over
+$\Gamma(X, \mathcal{Z}_{\mathcal{A}})$, and there is a canonical
+inclusion
+$$
+\Gamma(X, \mathcal{Z}_{\mathcal{A}})
+\subset
+Z(\Gamma(X, \mathcal{A})).
+$$
+\end{lemma}
+
+\begin{proof}
+Addition of morphisms of left $\mathcal{A}|_U$-modules is defined
+pointwise, so the displayed groups are abelian. Suppose that
+$U = \bigcup U_i$ and that
+$$
+\varphi_i :
+\mathcal{F}|_{U_i} \longrightarrow \mathcal{G}|_{U_i}
+$$
+are compatible morphisms of left
+$\mathcal{A}|_{U_i}$-modules. For an open $V \subset U$ and
+$s \in \mathcal{F}(V)$, the sections
+$$
+\varphi_{i, V \cap U_i}(s|_{V \cap U_i})
+\in
+\mathcal{G}(V \cap U_i)
+$$
+agree on overlaps. They glue to a unique section of
+$\mathcal{G}(V)$. These glued sections are compatible with
+restriction and define a morphism
+$\varphi : \mathcal{F}|_U \to \mathcal{G}|_U$.
+Additivity and $\mathcal{A}|_U$-linearity can be checked after
+restriction to the covering $\{U_i\}$. The same local argument gives
+uniqueness. This proves the sheaf assertion and the formula for
+sections.
+
+Restrictions preserve the defining condition for
+$\mathcal{Z}_{\mathcal{A}}$. Conversely, suppose that
+$U = \bigcup U_i$ and compatible sections
+$z_i \in \mathcal{Z}_{\mathcal{A}}(U_i)$ glue to
+$z \in \mathcal{A}(U)$. If $V \subset U$ is open and
+$a \in \mathcal{A}(V)$, then
+$$
+z|_V a = a z|_V
+$$
+can be checked after restriction to the covering
+$\{V \cap U_i\}$ of $V$. Thus $z$ belongs to
+$\mathcal{Z}_{\mathcal{A}}(U)$. Hence
+$\mathcal{Z}_{\mathcal{A}}$ is a sheaf of rings. Its sections are
+closed under the ring operations, and two of its sections commute
+by the defining condition. Thus it is a sheaf of commutative rings.
+
+Let $z \in \mathcal{Z}_{\mathcal{A}}(U)$ and
+$\varphi \in
+\SheafHom_{\mathcal{A}}(\mathcal{F}, \mathcal{G})(U)$.
+For $V \subset U$ open, define
+$$
+(z\varphi)_V(s) = z|_V\varphi_V(s).
+$$
+If $a \in \mathcal{A}(V)$ and $s \in \mathcal{F}(V)$, then
+$$
+(z\varphi)_V(as)
+=
+z|_V a\varphi_V(s)
+=
+a z|_V\varphi_V(s)
+=
+a(z\varphi)_V(s).
+$$
+Thus $z\varphi$ is a morphism of left
+$\mathcal{A}|_U$-modules. The module axioms and compatibility with
+restriction follow pointwise. Taking $U=X$ gives the asserted global
+action. Finally, a locally central global section commutes with every
+global section, which gives the displayed inclusion.
+\end{proof}
+
+\medskip\noindent
+The last inclusion need not be an equality. For example, let
+$X = \{x, u\}$ have open subsets
+$\emptyset$, $\{u\}$, and $X$. Given a field $k$, the data
+$$
+\mathcal{A}(X) = k[t], \qquad
+\mathcal{A}(\{u\}) = M_2(k), \qquad
+t \longmapsto e_{11}
+$$
+define a sheaf of rings. The section $t$ lies in
+$Z(\mathcal{A}(X))$, but its restriction $e_{11}$ is not central.
+Thus $t$ does not belong to
+$\Gamma(X, \mathcal{Z}_{\mathcal{A}})$.

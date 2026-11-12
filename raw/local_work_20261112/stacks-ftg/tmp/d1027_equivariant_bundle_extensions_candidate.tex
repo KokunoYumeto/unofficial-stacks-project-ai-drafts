@@ -1,0 +1,77 @@
+\begin{lemma}[Equivariant holomorphic bundle-extension classes]
+\label{lemma-equivariant-holomorphic-vector-bundle-extension-classes}
+\begin{reference}
+\cite[Chapter V, \S 5.6, p. 219]{Tohoku}
+\end{reference}
+Let $X$ be a complex analytic space on which a group $G$ acts by analytic
+automorphisms. Let $E$ and $F$ be holomorphic vector bundles on $X$ with
+compatible $G$-actions. Equivalence classes of short exact sequences
+$$
+0 \longrightarrow F \longrightarrow V \longrightarrow E \longrightarrow 0
+$$
+of $G$-equivariant holomorphic vector bundles are canonically in bijection
+with
+$$
+\Ext^1_{\mathcal O_X,G}
+(X;\mathcal O(E),\mathcal O(F)).
+$$
+The bijection is compatible with Baer sum. Composing it with Lemma
+\ref{lemma-equivariant-ext-locally-free} gives the canonical identification
+$$
+\Ext^1_{\mathcal O_X,G}
+(X;\mathcal O(E),\mathcal O(F))
+\cong
+H^1\left(X;G,
+\SheafHom_{\mathcal O_X}(\mathcal O(E),\mathcal O(F))\right).
+$$
+Together with the canonical evaluation identification, this is canonically
+isomorphic to
+$$
+H^1\left(X;G,\mathcal O(E^\vee\otimes F)\right).
+$$
+\end{lemma}
+
+\begin{proof}
+Apply the section-sheaf functor of Lemma
+\ref{lemma-equivariant-holomorphic-vector-bundles-locally-free-modules}.
+A short exact sequence of equivariant holomorphic vector bundles is locally
+split after forgetting the $G$-action, and hence gives a short exact sequence
+$$
+0 \longrightarrow \mathcal O(F) \longrightarrow \mathcal O(V)
+\longrightarrow \mathcal O(E) \longrightarrow 0
+$$
+in $\textit{Mod}_G(\mathcal O_X)$.
+
+Conversely, consider an extension in $\textit{Mod}_G(\mathcal O_X)$
+$$
+0 \longrightarrow \mathcal O(F) \longrightarrow \mathcal M
+\longrightarrow \mathcal O(E) \longrightarrow 0.
+$$
+After forgetting the $G$-action, this sequence splits locally. Indeed, near
+any point we may identify $\mathcal O(E)$ with $\mathcal O_X^r$; after
+shrinking, local lifts in $\mathcal M$ of its standard basis define a
+splitting. Thus locally
+$$
+\mathcal M \cong \mathcal O(F)\oplus\mathcal O(E),
+$$
+so $\mathcal M$ is finite locally free. The equivariant bundle--module
+equivalence therefore supplies a $G$-equivariant holomorphic vector bundle
+$V$ with $\mathcal O(V)\cong\mathcal M$. Full faithfulness transports the
+two maps, and their locally split exact section sequence shows that
+$0\to F\to V\to E\to0$ is exact.
+
+These constructions are inverse on extension classes and preserve the
+pullbacks and pushouts defining Baer sum. Lemma
+\ref{lemma-equivariant-extension-classes-finite-locally-free} now gives the
+first displayed bijection, and Lemma
+\ref{lemma-equivariant-ext-locally-free} gives the first cohomological
+identification. Finally, duals and tensor products commute with the
+equivariant bundle--module equivalence, so the natural evaluation map gives
+the $G$-equivariant isomorphism
+$$
+\mathcal O(E^\vee\otimes F)
+\cong
+\SheafHom_{\mathcal O_X}(\mathcal O(E),\mathcal O(F)).
+$$
+Applying $H^1(X;G,-)$ gives the last identification.
+\end{proof}

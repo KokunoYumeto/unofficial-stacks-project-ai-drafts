@@ -1,0 +1,279 @@
+{
+  "schema": "tohoku-stacks-d1012-independent-review-v1",
+  "unit": "D1012",
+  "overall_result": "BLOCKED",
+  "review_kind": "narrow independent mathematical and source-exactness audit",
+  "write_boundary": {
+    "created": [
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_independent_review.json"
+    ],
+    "not_modified": [
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_design_audit.json",
+      "user\\Documents\\stacks-ftg\\cohomology.tex"
+    ],
+    "build_or_scan_run": false,
+    "git_used": false,
+    "cleanup_run": false
+  },
+  "input_identities": {
+    "candidate": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+      "bytes": 14449,
+      "sha256": "5399ABB0D931203A2CAC2A4B5E643342AE8D3EB93B78F9B85F2EEC9EA2E6FE45",
+      "lf_count": 352
+    },
+    "design": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_design_audit.json",
+      "bytes": 10227,
+      "sha256": "7253B7A16CFB4E461ECE5F8039B665A4897090864156656CE07551050484E66A",
+      "lf_count": 205,
+      "claimed_status": "STRICT_DESIGN_PASS"
+    },
+    "live_source": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 895363,
+      "sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C",
+      "lf_count": 24283
+    }
+  },
+  "source_authority_replayed": [
+    {
+      "page": 179,
+      "layer": "dip",
+      "bytes": 4413,
+      "sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182"
+    },
+    {
+      "page": 179,
+      "layer": "fr",
+      "bytes": 4347,
+      "sha256": "C3B0470AC85B9A34A0DFAAF5A0325690756C7FB541B12421CC651A29C7410CC7"
+    },
+    {
+      "page": 179,
+      "layer": "en",
+      "bytes": 4144,
+      "sha256": "3CD9D83B12C0B48B94577F0BBDA2E632B8E6EE8E7778B1B9442D5054D8505FE1"
+    },
+    {
+      "page": 180,
+      "layer": "dip",
+      "bytes": 4626,
+      "sha256": "8AB7B01C86B798D9E5E9E0ECF7AB3791688EF7C8902A311DBFC0E5C93FED6A31"
+    },
+    {
+      "page": 180,
+      "layer": "fr",
+      "bytes": 5138,
+      "sha256": "2F68D547A44E47A0F9CA5B602C440454D0244B3CA8EA62430DA0D6AAA9F83D18"
+    },
+    {
+      "page": 180,
+      "layer": "en",
+      "bytes": 4928,
+      "sha256": "F7D39A2F78D45C9CEA5A00360B96EBF6F1A5CBC656A8AB075DDE7B6093735961"
+    },
+    {
+      "page": 181,
+      "layer": "dip",
+      "bytes": 4151,
+      "sha256": "4E79B6D13131BF504B0AF63C5001D1297D2C1640F1F3A88FFD0817F73C080431"
+    },
+    {
+      "page": 181,
+      "layer": "fr",
+      "bytes": 4097,
+      "sha256": "B0335E067B6405E3AB7A0BC621E80828F0917AFCE0C8BF8201D4FF6A838F7D27"
+    },
+    {
+      "page": 181,
+      "layer": "en",
+      "bytes": 3850,
+      "sha256": "B88E5CE78F19532500B47905EAF2DD0D0B15F38A820E6DFE730217E84E1F6BFE"
+    }
+  ],
+  "direct_dependencies_replayed": [
+    {
+      "label": "cohomology-lemma-kill-cohomology-class-on-covering",
+      "live_tex_line": 792,
+      "result": "PASS",
+      "finding": "Every positive-degree class is killed on an open covering, as used in candidate lines 316-319."
+    },
+    {
+      "label": "cohomology-lemma-cech-spectral-sequence",
+      "live_tex_line": 1843,
+      "result": "PASS",
+      "finding": "Supplies the open-cover case."
+    },
+    {
+      "label": "cohomology-lemma-flasque-soft-family-supports",
+      "live_tex_line": 5744,
+      "result": "PASS",
+      "finding": "On a paracompact space, flasque sheaves are soft."
+    },
+    {
+      "label": "cohomology-lemma-family-supports-flasque-soft-acyclic",
+      "live_tex_line": 6010,
+      "result": "PASS",
+      "finding": "Soft sheaves are acyclic for the paracompactifying family of all closed supports, hence for ordinary global sections on a paracompact space."
+    },
+    {
+      "label": "cohomology-lemma-alternating-usual",
+      "live_tex_line": 7664,
+      "result": "PASS",
+      "finding": "Its normalization and homotopy formulas use only restriction maps and therefore apply to the candidate's subset-cover cochain system."
+    },
+    {
+      "label": "cohomology-lemma-covering-resolution",
+      "live_tex_line": 8003,
+      "result": "PASS",
+      "finding": "Confirms the augmented simplex contraction used for the open case and mirrored stalkwise for locally finite closed covers."
+    },
+    {
+      "label": "cohomology-lemma-godement-resolution",
+      "live_tex_line": 10446,
+      "result": "PASS",
+      "finding": "The functorial resolution is degreewise exact and flasque, which is enough for the candidate's double-complex argument."
+    }
+  ],
+  "audit_predicates": [
+    {
+      "id": "P01_INPUT_IDENTITIES",
+      "result": "PASS",
+      "evidence": "Candidate, design, live source, and all nine p179-p181 authority-layer byte/hash identities match the design bindings exactly."
+    },
+    {
+      "id": "P02_LABEL_FRESHNESS",
+      "result": "PASS",
+      "evidence": "Each of the six candidate TeX labels has zero occurrences in the bound live cohomology.tex."
+    },
+    {
+      "id": "P03_AUGMENTED_CLOSED_COVER_RESOLUTION",
+      "result": "PASS",
+      "candidate_lines": [99, 119],
+      "evidence": "For fixed p the supports of the tuple factors are locally finite when the original closed family is locally finite. Therefore stalks see only finitely many factors, and the augmented stalk complex is the contractible ordered simplex complex on the nonempty finite set I_x."
+    },
+    {
+      "id": "P04_FINITE_CLOSED_DERIVED_COLUMNS",
+      "result": "PASS",
+      "candidate_lines": [135, 143],
+      "evidence": "For a closed inclusion j, j_* is exact by its stalk description and preserves injectives because its exact left adjoint is restriction. Global sections of j_* agree with global sections on the closed subset; finite products preserve the resulting cohomology calculation."
+    },
+    {
+      "id": "P05_PARACOMPACT_LOCALLY_FINITE_CLOSED_DERIVED_COLUMNS",
+      "result": "PASS",
+      "candidate_lines": [145, 169],
+      "evidence": "A flasque resolution is soft on paracompact A; restrictions to closed intersections are soft. At each fixed p the tuple-intersection family is locally finite, so the product of the closed direct-image columns is locally a finite product and is soft. These columns are Gamma-acyclic. K^p is exact stalkwise, and exactness of products in Ab identifies the E1 terms with the stated products of intersection cohomology."
+    },
+    {
+      "id": "P06_GODEMENT_HYPERCOHOMOLOGY_AND_CONVERGENCE",
+      "result": "PASS",
+      "candidate_lines": [121, 133],
+      "evidence": "Degreewise exactness of the Godement functor preserves the augmented covering resolution. Its flasque terms make the horizontal spectral sequence collapse to the Godement complex of F, while the vertical spectral sequence has E1=H^q(A,K^p). The first-quadrant double complex converges to H*(A,F)."
+    },
+    {
+      "id": "P07_EDGE_MAPS_AND_EDGE_EXACTNESS",
+      "result": "PASS",
+      "candidate_lines": [62, 90, 172, 184],
+      "evidence": "The augmentation gives the bottom Cech-to-derived edge, and the vertical edge is the compatible family of restrictions. Vanishing for 0<q<n removes every possible differential and filtration obstruction relevant to the displayed three-term sequence in total degree n."
+    },
+    {
+      "id": "P08_REFINEMENT_TRACE_AND_PRISM_NATURALITY",
+      "result": "PASS",
+      "candidate_lines": [72, 78, 172, 180],
+      "evidence": "Restriction gives the refinement and trace morphisms of augmented covering resolutions. The standard prism homotopy makes two refinement functions agree from E2 onward; augmentations identify the maps on abutments as identity and restriction respectively. The statement correctly conditions trace naturality on both source and target coverings satisfying an allowed case."
+    },
+    {
+      "id": "P09_LOCAL_KILLING_TRACE_CLOSURE",
+      "result": "BLOCKED",
+      "candidate_lines": [199, 201, 255, 258],
+      "evidence": "Hypothesis (2) only says R|_B belongs to R(B) when B is a member of that same R. In the k>1 proof, B is a member of R^1 but the proof asserts R^i|_B belongs to R(B) for i=2,...,k. No stated hypothesis yields these cross-cover trace memberships."
+    },
+    {
+      "id": "P10_COROLLARY_1_SOURCE_EXACTNESS",
+      "result": "BLOCKED",
+      "candidate_lines": [263, 294],
+      "evidence": "The spectral-sequence necessity argument is correct, but the converse invokes the blocked local-killing lemma."
+    },
+    {
+      "id": "P11_COROLLARY_2_SOURCE_EXACTNESS",
+      "result": "BLOCKED",
+      "candidate_lines": [296, 322],
+      "evidence": "The open-cover local-killing dependency correctly proves B(m), but the final equivalence invokes the blocked Corollary 1 formalization."
+    },
+    {
+      "id": "P12_COROLLARY_3_SOURCE_EXACTNESS",
+      "result": "BLOCKED",
+      "candidate_lines": [324, 352],
+      "evidence": "Alternating normalization correctly forces covering cohomology above the nerve dimension to vanish, but the final derived-acyclicity conclusion invokes the blocked preceding equivalence."
+    },
+    {
+      "id": "P13_PAGE_181_SEAM_AND_SECTION_UNIT",
+      "result": "PASS",
+      "evidence": "The exact p181 source finishes Proposition 3.9.2, gives an application and a nonabelian remark, then starts Section 3.10. Those subordinate source units are not claimed by this candidate. The scoped section LayerTarget itself is represented by the candidate section label, so D000329 can remain a section-unit closure without closing the omitted subordinate units."
+    }
+  ],
+  "blocking_defects": [
+    {
+      "id": "D1012-R001",
+      "severity": "BLOCKING",
+      "title": "Stated trace axiom is too weak for the induction on the number of coverings",
+      "candidate_assumption_lines": [199, 201],
+      "candidate_use_lines": [255, 258],
+      "design_claim_lines": [189, 193],
+      "source_evidence": {
+        "setup": "English p179 lines 10-16 (and the corresponding dip/fr layers) states only the same-cover trace condition.",
+        "use": "English p180 lines 47-56 (and the corresponding dip/fr layers) uses traces of R^2,...,R^k on a member B of R^1."
+      },
+      "analysis": "The candidate faithfully inherits a logical gap present in the printed source wording: B in R^1 does not imply R^i|_B is an allowed member of the independently specified collection R(B). The local-killing proof therefore stops at k>1, and the theorem is not established under its stated assumptions.",
+      "required_resolution": "Add an explicit cross-cover trace hypothesis: whenever B is a member of some covering in R(A), the trace R'|_B belongs to R(B) for every R' in R(A), or supply an equivalent stronger closure axiom. Because this strengthens the printed setup, record and bind it as a source repair before claiming source-exact equivalence.",
+      "blocked_decisions": [
+        "D000446",
+        "D000378",
+        "D000379",
+        "D000380"
+      ]
+    }
+  ],
+  "supersession_review": [
+    {
+      "decision_id": "D000446",
+      "unit_id": "tohoku:theorem:3.9.1",
+      "result": "BLOCKED",
+      "reason": "Directly affected by D1012-R001."
+    },
+    {
+      "decision_id": "D000378",
+      "unit_id": "tohoku:corollary:3.9.1:1",
+      "result": "BLOCKED",
+      "reason": "Its converse depends on the unproved local-killing theorem."
+    },
+    {
+      "decision_id": "D000379",
+      "unit_id": "tohoku:corollary:3.9.1:2",
+      "result": "BLOCKED",
+      "reason": "It depends on Corollary 1 and hence on D1012-R001."
+    },
+    {
+      "decision_id": "D000380",
+      "unit_id": "tohoku:corollary:3.9.1:3",
+      "result": "BLOCKED",
+      "reason": "Its bounded-nerve calculation passes, but its conclusion depends on the blocked preceding equivalence."
+    },
+    {
+      "decision_id": "D000329",
+      "unit_id": "tohoku:section:3.9",
+      "result": "PASS",
+      "reason": "The section LayerTarget and subject heading have an exact local section target; Proposition 3.9.2 and the p181 application/remark remain separate, unclaimed subordinate units."
+    }
+  ],
+  "nondefects_confirmed": [
+    "The finite closed-cover resolution and its derived-column identification are valid.",
+    "The paracompact locally finite closed-cover construction is not merely an appeal to the open-cover spectral sequence; it supplies the required stalk, soft-resolution, locally finite product, and acyclicity arguments.",
+    "The edge-map descriptions, refinement-function prism homotopy, and trace maps are compatible with the augmented resolutions.",
+    "The bounded-nerve normalization argument is algebraic in the restriction maps and extends to the stated subset coverings.",
+    "No candidate label collides with the bound live source."
+  ],
+  "terminal_instruction": "Do not integrate or map the four blocked statement units. Repair D1012-R001 explicitly, regenerate the design status and candidate identity, and rerun an independent audit."
+}

@@ -1,0 +1,502 @@
+{
+  "cohomology_build": {
+    "log": {
+      "bytes": 47254,
+      "name": "cohomology.log",
+      "sha256": "2F1DE67A70A23FFC4A262E63F4ED5492C431033F81E4CCF07B2A5AB847DD8402"
+    },
+    "new_block_overfull_boxes": 0,
+    "pdf": {
+      "bytes": 1771853,
+      "name": "cohomology.pdf",
+      "sha256": "BAA0355F7218D7536110004F703E94DFC0D7F49BCDDCAEC0DC98B2D96AE84A1A"
+    },
+    "pdf_pages": 203,
+    "rerun_notices": 0,
+    "tex": {
+      "bytes": 780460,
+      "name": "cohomology.tex",
+      "sha256": "A1E0B6C34AF08451A8C0B33FCA09043CDB004A938963A2731B471B83649BC417"
+    },
+    "undefined_citations": 0,
+    "undefined_references": 0,
+    "visual_reviewed_pages": [
+      166,
+      167,
+      168,
+      169
+    ]
+  },
+  "deltas": {
+    "decisions": [
+      {
+        "action": "replace",
+        "decision_id": "D000934",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs from the three factorizations (5.6.5) the additive first-quadrant spectral sequences I--III, functorial in B from E_2 onward, identifies their nonequivariant inner derived functors with global Ext and sheaf Ext carrying their induced G-actions, and proves that all three converge to Ext_{O,G}^{p+q}(X;A,B). This exactly covers the p. 216 unit; spectral sequence I uses the authority-correct quotient space Y.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-underlying-ext;cohomology-lemma-equivariant-ext-spectral-sequences",
+        "supersedes": "D000650",
+        "unit_id": "tohoku:spectral-sequence:three-equivariant-ext-sequences"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000935",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the equivariant continuation explicitly: an injective resolution in Mod_G(O) is underlying-injective, so deriving ordinary global Hom and internal Hom on the equivariant category computes ordinary global Ext and sheaf Ext, with their canonical induced G-actions.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-underlying-ext",
+        "supersedes": "D000631",
+        "unit_id": "tohoku:relation:derived-hom-functors"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000936",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs the same three functorial first-quadrant equivariant Ext spectral sequences and explicitly records their canonical edge homomorphisms and associated five-term exact sequences, exactly the source consequence.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-ext-spectral-sequences",
+        "supersedes": "D000577",
+        "unit_id": "tohoku:consequence:edge-homomorphisms-five-term"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000937",
+        "disposition": "existing_equivalent",
+        "rationale": "For an underlying O-module A locally isomorphic to finite free O^r, SheafHom_O(A,-) is exact, so ordinary SheafExt_O^q(A,B)=0 for q>0. The third equivariant Ext spectral sequence therefore degenerates at E_2, and its bottom edge gives the canonical isomorphisms H^n(X;G,SheafHom_O(A,B))->Ext^n_{O,G}(X;A,B), functorial in B, exactly as in the source corollary.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-ext-locally-free",
+        "supersedes": "D000601",
+        "unit_id": "tohoku:corollary:theorem-5.6.3-locally-free"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000938",
+        "disposition": "existing_equivalent",
+        "rationale": "For A=O, evaluation at 1 is a canonical G-equivariant O-linear isomorphism SheafHom_O(O,B)=B. Under this identification the bottom-edge isomorphism of the preceding degeneration is H^n(X;G,B)->Ext^n_{O,G}(X;O,B), functorial in B, exactly the source formula.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-ext-locally-free",
+        "supersedes": "D000602",
+        "unit_id": "tohoku:corollary:theorem-5.6.3-structure-sheaf"
+      }
+    ],
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 3,
+      "candidate_units": 0,
+      "decided_units": 678,
+      "decisions": 938,
+      "dispositions": {
+        "example_or_remark": 82,
+        "existing_equivalent": 306,
+        "existing_stronger": 38,
+        "existing_weaker": 19,
+        "extend_existing": 51,
+        "historical_reference": 33,
+        "new_section": 10,
+        "new_statement": 35,
+        "structural_only": 416
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 22,
+      "unit_candidates": 0,
+      "units": 990
+    },
+    "new_labels": [
+      "cohomology-lemma-equivariant-ext-locally-free",
+      "cohomology-lemma-equivariant-ext-spectral-sequences",
+      "cohomology-lemma-equivariant-underlying-ext"
+    ],
+    "remaining_gap_class_dispositions": 115,
+    "scan_counts": {
+      "labels": 21998,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1239,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13
+    },
+    "source_issues": [
+      {
+        "claim": "The active local correction TOH-SRC-P217-001 changes the printed Y in spectral sequence I of (5.6.11) to X, but bold Ext_{O,G}^q(A,B) is a sheaf on Y=X/G; therefore H^p(Y,-) is type-correct, whereas H^p(X,-) is undefined without an additional pullback.",
+        "control": "Preserve Y diplomatically. In the next authorized no-overwrite source and semantic successor, reverse TOH-SRC-P217-001 by restoring Y in corrected French, English, and tohoku:equation:5.6.11. Keep D000655 open while its structural child carries X; after the correction is admitted, append a resolving mapping successor to D000655.",
+        "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed pp. 214 and 217: (5.6.2) defines the equivariant Hom sheaf on Y=X/G, the discussion following (5.6.7) says the corresponding bold Ext objects are sheaves on Y, and (5.6.11) prints H^p(Y,bold Ext). TOH-SRC-P217-001 and the corrected French, English, and sem/r10 equation row instead carry X.",
+        "evidence_labels": "cohomology-definition-equivariant-ext;cohomology-lemma-equivariant-ext-spectral-sequences",
+        "issue_id": "I000022",
+        "kind": "source_correction_wrong_base_space",
+        "resolution_decision": "",
+        "status": "confirmed",
+        "unit_id": "tohoku:equation:5.6.11"
+      }
+    ],
+    "substantive_map_changes": [
+      "tohoku:consequence:edge-homomorphisms-five-term",
+      "tohoku:corollary:theorem-5.6.3-locally-free",
+      "tohoku:corollary:theorem-5.6.3-structure-sheaf",
+      "tohoku:relation:derived-hom-functors",
+      "tohoku:spectral-sequence:three-equivariant-ext-sequences"
+    ]
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "contract": "read_once_then_execute_builder_same_bytes",
+        "path": "srcmap/start_build_tohoku_r17.py"
+      },
+      "builder": {
+        "bytes": 44992,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r17.py",
+        "sha256": "33A70776A24E30B2EF14B3B5428F8029BDB4F39FF4384EC6FC2D789E31A209C4"
+      }
+    },
+    "bootstrap": {
+      "bytes": 1330,
+      "name": "start_build_tohoku_r17.py",
+      "sha256": "9CA1716B682819894CB3B36DF34E51F3D82E62CF9AC61423A8328A6EEFBFB6BB"
+    },
+    "contract": "same_bytes_bootstrap; exact_inputs_locked_against_write_delete_through_generation_replay_and_promotion",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "powershell_envelope": {
+      "bytes": 722,
+      "name": "start_build_tohoku_r17.ps1",
+      "sha256": "5AE7149E9AED941C095A7926904535AE17C9DF035BE3ACF1AEAF4C78D21B7B74"
+    }
+  },
+  "files": [
+    {
+      "bytes": 862,
+      "name": "STATUS.md",
+      "sha256": "3EA6FA3928F14DDF50B98F8F80544A041D81AE90D4C63059EAE501F0752BA01E"
+    },
+    {
+      "bytes": 5193,
+      "name": "cfg.json",
+      "sha256": "AFB25A5C6A2136C3C4991F8849785A4AA0FF5AF2ED262D14263615450A637BD3"
+    },
+    {
+      "bytes": 70906,
+      "name": "check.json",
+      "sha256": "B67AD3D7915FE266C688153A7DBA34AB5DA0E98B4ED578A27B57C5D3C1DA2E6D"
+    },
+    {
+      "bytes": 320098,
+      "name": "dec.csv",
+      "sha256": "2CBC59EA2BCD37EE173612F993C4FF0435EE3E0EB005A482367DA95C96588056"
+    },
+    {
+      "bytes": 1877,
+      "name": "intake.json",
+      "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+    },
+    {
+      "bytes": 18227,
+      "name": "issues.csv",
+      "sha256": "AABA123C53D04D9DF99FC693BFB3C21222973BB5194C16F4B48B9C90BDA2AA69"
+    },
+    {
+      "bytes": 454503,
+      "name": "map.csv",
+      "sha256": "A746FB8B4E7EC43624AB36B5A1234A2CE964545F4E86D227591BDC9E5AC7926B"
+    },
+    {
+      "bytes": 60735,
+      "name": "mcheck.json",
+      "sha256": "5FD17764A0A2D58AA79E46391B8B19836BA813C78E997DE600ECB4E6AFB05242"
+    },
+    {
+      "bytes": 5258840,
+      "name": "stx.csv",
+      "sha256": "E38CC984023D33EA735FD647BC79061950E0E93D9D9D3FD5EFF2A7219EA185A6"
+    },
+    {
+      "bytes": 472639,
+      "name": "tcand.csv",
+      "sha256": "2E9423D994A0CD0C2946BBA0B56D1CACA250B9780E4C9051C6F0ED825E506FE3"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 391651,
+      "name": "units.csv",
+      "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+    }
+  ],
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 19702,
+      "path": "tohoku_r16/r16-check.json",
+      "sha256": "9DE506CE051A6A812B27A23CD6682513E9A1F53D1BF0416A80A35D56BE47C5DA"
+    },
+    "reason": "Workspace machine-safety policy forbids repository-wide Git inspection.",
+    "remote_server_freshness_verified": false
+  },
+  "nonclaims": [
+    "No Git command is executed by this ledger-only successor.",
+    "No Git commit or push is made by this receipt.",
+    "No remote-server freshness check is performed.",
+    "The Stacks scan binds the exact live integrated worktree, not the frozen HEAD tree.",
+    "The transaction denies write/delete access to every existing consumed file; hostile same-user mutation of directory namespaces is outside this lock contract.",
+    "No release, publication, upload, DOI, Zenodo, rights, or whole-paper gate is closed.",
+    "115 Tohoku gap-class dispositions remain after D000938.",
+    "Three confirmed source-formula or source-correction issues remain open for the translation phase."
+  ],
+  "predecessor_dossier": {
+    "aggregate_sha256": "E88D4A6A65C170D0AFD3FC8FC8DB19D856016F3F3A1F3E8D5065D3EEFC6D7AFC",
+    "bytes": 7074276,
+    "file_count": 15,
+    "files": [
+      {
+        "bytes": 624,
+        "name": "STATUS.md",
+        "sha256": "0D76370F5227DF4A300B042FC3CD1FD832A3B07179C85A05A987D0BBF98DD000"
+      },
+      {
+        "bytes": 5193,
+        "name": "cfg.json",
+        "sha256": "26911209D4EB7A27D0E088B92B94AE4695D4D13135621927DD28CB71F4740B7E"
+      },
+      {
+        "bytes": 70599,
+        "name": "check.json",
+        "sha256": "39843DAEF7DA5542B099A0ED9AAC21ABD932B5C8D473B6D5A7F3BCA012982D50"
+      },
+      {
+        "bytes": 317550,
+        "name": "dec.csv",
+        "sha256": "A112C2E0ECF5D8CF65E854F0114554099CF40A23240A9E78F0BB9C400780A1B9"
+      },
+      {
+        "bytes": 1877,
+        "name": "intake.json",
+        "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+      },
+      {
+        "bytes": 17080,
+        "name": "issues.csv",
+        "sha256": "E49BB99134A71F847FCCFD6E9E9D3ABAD4AFAD4D8E6267D565E6BD33881DD74D"
+      },
+      {
+        "bytes": 453856,
+        "name": "map.csv",
+        "sha256": "2E9975E9E93180028EFE6F621DF48153C03DE611B6E26EE2DBDBCAE5B739AF7D"
+      },
+      {
+        "bytes": 60428,
+        "name": "mcheck.json",
+        "sha256": "0977275901D8F2D9135A1F9B8E02024ED854256DA0AC9F25F6926AD9D4314A0F"
+      },
+      {
+        "bytes": 19702,
+        "name": "r16-check.json",
+        "sha256": "9DE506CE051A6A812B27A23CD6682513E9A1F53D1BF0416A80A35D56BE47C5DA"
+      },
+      {
+        "bytes": 5258055,
+        "name": "stx.csv",
+        "sha256": "A861089289AE8B8BA47CCB8B799112FA2B5B05213D7B965DA03BA509D1232305"
+      },
+      {
+        "bytes": 472664,
+        "name": "tcand.csv",
+        "sha256": "9F2D1D24E3BCE5F84A6554587CD13B5EA4982CEC644F5602AEE5E88A7221DA09"
+      },
+      {
+        "bytes": 2424,
+        "name": "tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      {
+        "bytes": 2453,
+        "name": "topics.csv",
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      },
+      {
+        "bytes": 120,
+        "name": "ucand.csv",
+        "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+      },
+      {
+        "bytes": 391651,
+        "name": "units.csv",
+        "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+      }
+    ],
+    "name": "tohoku_r16"
+  },
+  "schema": "tohoku-stacks-mapping-successor-r17-v1",
+  "semantic_source": {
+    "aggregate_sha256": "80A41130E5797219568E87AC0E15F7AF5F996EFE2895A159FC807C0356DCC33D",
+    "bytes": 2020949,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 10421,
+        "name": "bib.csv",
+        "sha256": "B8DBAF65161B60DC973DFAB6F57037185F8808274BB9618D27FE8BC65AD0B695"
+      },
+      {
+        "bytes": 768,
+        "name": "catalog.csv",
+        "sha256": "69896FB82FDAFD0AB0AEEC1D3387262F67740F952AAD102E5DA662CD9DA15AF9"
+      },
+      {
+        "bytes": 260771,
+        "name": "edges.csv",
+        "sha256": "5DCC1F11489A88AC02351103A6B5987877F55424CFFB066EAB9404EA5FA38BB1"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 6402,
+        "name": "manifest.json",
+        "sha256": "F314863C1F6586FBEBC91ADBF7256C3C3B3B32307F72C5726DD5DB916C758D52"
+      },
+      {
+        "bytes": 582572,
+        "name": "nodes.csv",
+        "sha256": "0F656565E4F4732E7DF1CE1ABA910A6A68BE4CC6896B325ED562E8CD573CF7A8"
+      },
+      {
+        "bytes": 106247,
+        "name": "objects.csv",
+        "sha256": "5BBAB7CD31239A509E4E927BE6D827285FE07CD8DED6180DC60DDB90A6AF7133"
+      },
+      {
+        "bytes": 513504,
+        "name": "occ.csv",
+        "sha256": "478BF2F1A3FC211E6D888A5D0E3DA8EAF20E44CC6439ACDD838678A1B221FFDB"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2190,
+        "name": "README.md",
+        "sha256": "61CFC939C8D65180675226D65B05C444ED8AE25D554A8A90D0168B4C886A11B8"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 159814,
+        "name": "refs.csv",
+        "sha256": "723B0C2B06713607EE39A78A33991C7E92CAB6A13BD5503ACA51F6C727C49C76"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325273,
+        "name": "terms.csv",
+        "sha256": "5E416E9CDC6983745E6D907110F4E91B5DD9EE273FF613FD70A0CC34CE8C4B12"
+      },
+      {
+        "bytes": 3744,
+        "name": "validation.json",
+        "sha256": "CBD612B566B2517A854A841154391E62C01EE0AE02834AB5BE7C48926673C9D2"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r10",
+    "sem_check": {
+      "bytes": 6395,
+      "name": "qa/v68r24/sem-check.json",
+      "sha256": "A425DDAA035F9E00D01579039F0E3786BCB0B52B079D614A7421D8828D837ADB"
+    },
+    "sem_input": {
+      "bytes": 299780,
+      "name": "qa/v68r24/sem-input.json",
+      "sha256": "42437BDDF7BE9AAB14869FD4B1F741191C8BCC9EDE1FFCDA3EB04964F8F1FB26"
+    }
+  },
+  "source_correction_ledger": {
+    "bound_for": "active TOH-SRC-P217-001 cited by I000022",
+    "bytes": 192672,
+    "name": "SOURCE_CORRECTIONS.jsonl",
+    "sha256": "39F17F1414A2C4047700D752A9BE1F23BC25C79F7E7EEFE1D52094886B048643"
+  },
+  "status": "PASS"
+}

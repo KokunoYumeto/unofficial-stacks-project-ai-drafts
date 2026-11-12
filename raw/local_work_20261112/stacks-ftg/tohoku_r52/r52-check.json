@@ -1,0 +1,709 @@
+{
+  "authority_inputs": {
+    "part_i": {
+      "bytes": 7305283,
+      "name": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    "part_ii": {
+      "bytes": 3984260,
+      "name": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    }
+  },
+  "builds": {
+    "aux": {
+      "bytes": 53482,
+      "name": "cohomology.aux",
+      "sha256": "6C5A5E80839E7AA8B24A391B73157B7BB6A85D540CF928C558AD3F32092BC31E"
+    },
+    "build_audit": "STRICT_PASS",
+    "log": {
+      "bytes": 47369,
+      "name": "cohomology.log",
+      "sha256": "FFDACC3A15E1C35EF674EB90543324F5A46AB10A656571ECA7224D5CF75EE7E0"
+    },
+    "math_audit": "STRICT_PASS",
+    "out": {
+      "bytes": 12488,
+      "name": "cohomology.out",
+      "sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"
+    },
+    "pdf": {
+      "bytes": 1910921,
+      "name": "cohomology.pdf",
+      "sha256": "3B98EA5B1C1010BDBAB73D717A148CE8A2F691FA158F7509882B3A655BA77E18"
+    },
+    "pdf_audit": "STRICT_PASS",
+    "tex": {
+      "bytes": 869226,
+      "name": "cohomology.tex",
+      "sha256": "31E9F1607073933C2159AE5D1595A451CB298FFD3BB9E006B4DB28B7B5CD48D0"
+    },
+    "toc": {
+      "bytes": 5477,
+      "name": "cohomology.toc",
+      "sha256": "7AF072814F59D0B8156D5D673BE213FB2435FDE242DE09465685FE1AC0D557BB"
+    }
+  },
+  "decision_audit": {
+    "planned_decisions": [
+      {
+        "decision_id": "D001019",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-section-equivariant-cohomology-supports",
+        "supersedes": "D000340",
+        "unit_id": "tohoku:section:5.7"
+      },
+      {
+        "decision_id": "D001020",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-definition-equivariant-cohomology-family-supports",
+        "supersedes": "D000612",
+        "unit_id": "tohoku:definition:support-antifilter"
+      },
+      {
+        "decision_id": "D001021",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-equivariant-family-supports-invariant-saturation",
+        "supersedes": "D000588",
+        "unit_id": "tohoku:construction:invariant-support-antifilter"
+      },
+      {
+        "decision_id": "D001022",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence",
+        "supersedes": "D000954",
+        "unit_id": "tohoku:spectral-sequence:5.7-i-supported-equivariant"
+      },
+      {
+        "decision_id": "D001023",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-remark-equivariant-support-second-spectral-sequence",
+        "supersedes": "D000625",
+        "unit_id": "tohoku:obstruction:second-spectral-sequence-with-supports"
+      }
+    ],
+    "receipt": {
+      "bytes": 16871,
+      "name": "D1009_CHECK.json",
+      "sha256": "B23A19372E6F055FE2D24FB59B89689651697CFAE1AC77B3878D4CADF2827E80"
+    },
+    "source_correction": {
+      "decision_id": "TOH-SRC-P220-004",
+      "line": 368,
+      "state": "active"
+    },
+    "status": "STRICT_PASS"
+  },
+  "deltas": {
+    "decisions": 1023,
+    "decisions_appended": [
+      {
+        "action": "replace",
+        "decision_id": "D001019",
+        "disposition": "existing_equivalent",
+        "rationale": "The local Stacks chapter now contains a dedicated section developing equivariant cohomology with families of supports for abelian G-sheaves, so the source section heading and its organizing formalism are represented directly. The mapping is limited to the admitted abelian-sheaf setting and makes no module-valued extension claim.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-section-equivariant-cohomology-supports",
+        "supersedes": "D000340",
+        "unit_id": "tohoku:section:5.7"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001020",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now defines a G-stable family of supports, the supported invariant-section functor, and its right derived groups, matching the source's support antifilter after the documented terminology normalization. No assertion beyond abelian G-sheaves is made.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-definition-equivariant-cohomology-family-supports",
+        "supersedes": "D000612",
+        "unit_id": "tohoku:definition:support-antifilter"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001021",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves that invariant saturation Phi^G is a family of supports contained in Phi and gives the same invariant supported sections, which is exactly the source construction needed for equivariant support cohomology.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-family-supports-invariant-saturation",
+        "supersedes": "D000588",
+        "unit_id": "tohoku:construction:invariant-support-antifilter"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001022",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the first-quadrant Grothendieck spectral sequence from supported cohomology of the group-cohomology sheaves to supported equivariant cohomology, including additivity, functoriality, and the finite abutment filtration. The orbit-space support family uses closure of q(Z), so no closed-image property of the orbit map is assumed.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence",
+        "supersedes": "D000954",
+        "unit_id": "tohoku:spectral-sequence:5.7-i-supported-equivariant"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001023",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now records the failure of automatic Grothendieck acyclicity for the second factorization and states the source's exact sufficient hypothesis that every member of Psi has a neighbourhood again belonging to Psi. It deliberately does not claim the deferred filtered-colimit construction, second spectral sequence, or interchange with group cohomology.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-remark-equivariant-support-second-spectral-sequence",
+        "supersedes": "D000625",
+        "unit_id": "tohoku:obstruction:second-spectral-sequence-with-supports"
+      }
+    ],
+    "errors": [],
+    "map_delta": {
+      "changed_units": 5,
+      "changes": {
+        "tohoku:construction:invariant-support-antifilter": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ],
+        "tohoku:definition:support-antifilter": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ],
+        "tohoku:obstruction:second-spectral-sequence-with-supports": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ],
+        "tohoku:section:5.7": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels"
+        ],
+        "tohoku:spectral-sequence:5.7-i-supported-equivariant": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ]
+      },
+      "unchanged_units": 986
+    },
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 679,
+      "decisions": 1023,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 367,
+        "existing_stronger": 41,
+        "existing_weaker": 6,
+        "extend_existing": 18,
+        "historical_reference": 33,
+        "new_section": 5,
+        "new_statement": 13,
+        "structural_only": 424
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 29,
+      "unit_candidates": 0,
+      "units": 991
+    },
+    "remaining_gap_class_dispositions": 42,
+    "scan_counts": {
+      "errors": 0,
+      "labels": 22069,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1275,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 641
+    },
+    "scanner_delta": {
+      "candidate_cap_displacement": {
+        "added_label": "cohomology-definition-equivariant-cohomology-family-supports",
+        "reason": "The bounded per-topic candidate cap sorts equal scores by full label; the new definition lexically displaces the former last tied candidate.",
+        "removed_label": "cohomology-lemma-RHom-from-K-flat-into-K-injective",
+        "score": 46,
+        "topic": "sheaf-cohomology"
+      },
+      "candidate_keys_added": 6,
+      "candidate_keys_removed": 1,
+      "candidate_other_changes": 0,
+      "candidate_rows_line_number_only": 16,
+      "changed_tex_files": [
+        "cohomology.tex"
+      ],
+      "existing_label_other_changes": 0,
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "new_labels": [
+        "cohomology-section-equivariant-cohomology-supports",
+        "cohomology-definition-equivariant-cohomology-family-supports",
+        "cohomology-lemma-equivariant-family-supports-invariant-saturation",
+        "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence",
+        "cohomology-remark-equivariant-support-second-spectral-sequence"
+      ],
+      "official_tag_changes": 0,
+      "removed_labels": 0,
+      "warning_delta": 5,
+      "warning_delta_reason": "Exactly the five new local labels have no official tag in the pinned snapshot."
+    },
+    "semantic_generation": "sem/r18",
+    "source_repairs_appended": 0,
+    "status": "PASS"
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "bytes": 3751,
+        "contract": "one_read_hash_compile_exec_builder_and_pin_validator",
+        "path": "srcmap/start_build_tohoku_r52.py",
+        "sha256": "1AE0730919281BF49D61905EA9DF8BC6744FEE0B45E956FC57C8D29279018553"
+      },
+      "builder": {
+        "bytes": 16206,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r52.py",
+        "sha256": "2C050F577D2A09F3E4CE226327EEAF229F478659AEAD7B28A03AA2D1E91DDD78"
+      },
+      "driver": {
+        "bytes": 4126,
+        "contract": "self_read_hash_then_one_shot_bootstrap_envelope",
+        "path": "srcmap/start_build_tohoku_r52.ps1",
+        "sha256": "D8F74645AF5EF105D424A58FCACFCC76F108F584CFCE838A6B4BBCFC385AD6F5"
+      },
+      "validator": {
+        "bytes": 43213,
+        "contract": "independent_same_bytes_stage_and_receipt_replay",
+        "path": "srcmap/validate_tohoku_r52.py",
+        "sha256": "6CB3D35DB2DFDEE1843CCD02B102085BA9C612052764D50DC19C1A1D9554C78C"
+      }
+    },
+    "contract": "one_shot_self_attested_driver_bootstrap_builder_validator; exact_inputs_locked_through_atomic_no_overwrite_promotion_with_rollback",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    }
+  },
+  "files": [
+    {
+      "bytes": 1320,
+      "name": "STATUS.md",
+      "sha256": "20400607D2B4647CD38EDFE10CA78AE2046E0CFA01D9B1F5CD4C3AC5AE5CA076"
+    },
+    {
+      "bytes": 5151,
+      "name": "cfg.json",
+      "sha256": "CB0CEC7B41CA510FE1D19304341C3F26A7D094FBDB26CF90B4F4117A87F5974F"
+    },
+    {
+      "bytes": 78742,
+      "name": "check.json",
+      "sha256": "7D7701B770C6B9B05438D3A1A75B8C561401FEB338465D6F84A67C733BD5D6A0"
+    },
+    {
+      "bytes": 372876,
+      "name": "dec.csv",
+      "sha256": "B3BCF2455FCB0ED4BF94EB6BAC68DD0BB4F4E215E2F562CADC942412DC160024"
+    },
+    {
+      "bytes": 1578,
+      "name": "intake.json",
+      "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F"
+    },
+    {
+      "bytes": 29535,
+      "name": "issues.csv",
+      "sha256": "3439D68823BF69087F025976FB0AC41C2C4D93B8BFB4E63D6FD3267DB6AC178A"
+    },
+    {
+      "bytes": 478986,
+      "name": "map.csv",
+      "sha256": "70D08CFD1899EC0C5337857A8CB07A352FA7C411B6BBE55EA7944796B2D2B0DA"
+    },
+    {
+      "bytes": 68570,
+      "name": "mcheck.json",
+      "sha256": "EAC825E47A29D54BB46F7F67A9AE785EB0C5886A447674EC462A9E846AFAE8F4"
+    },
+    {
+      "bytes": 5278176,
+      "name": "stx.csv",
+      "sha256": "A5535AF7AA7C02780D88DBEAB50417ED0BB7688865AB4A002D7B6656BAD41D14"
+    },
+    {
+      "bytes": 487516,
+      "name": "tcand.csv",
+      "sha256": "7CF3E31793144F7AB87F7A9E79923E7B654E527713C3467823179BA74F224915"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 393225,
+      "name": "units.csv",
+      "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+    }
+  ],
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 48954,
+      "name": "tohoku_r51/r51-check.json",
+      "sha256": "711F5162BB7830ABA202B9A51BE356427126C28624FE7BA3797EF0BF4F528922"
+    },
+    "reason": "Direct user report: the account was suspended after VPN use and a support ticket is filed; no Git operation is needed for this bounded local successor.",
+    "remote_server_freshness_verified": false,
+    "status": "temporarily_unavailable"
+  },
+  "nonclaims": [
+    "No Git command or recursive workspace scan is executed by this mapping successor.",
+    "The Stacks scanner is confined to the exact 119 top-level TeX filenames in the D1009 oracle.",
+    "Exactly D001019 through D001023 are appended; the r51 decision prefix is byte-identical.",
+    "The semantic source remains sem/r18 and no reader or semantic source file is changed.",
+    "D1009 is restricted to abelian G-sheaves and makes no module-valued extension claim.",
+    "The deferred filtered-colimit construction, second supported spectral sequence, and interchange with group cohomology are not claimed.",
+    "No official Stacks tag is claimed for any of the five new local labels.",
+    "No GitHub inspection, synchronization, push, or publication is attempted while GitHub is temporarily unavailable.",
+    "No release, publication, upload, DOI, Zenodo, rights, remote-freshness, or whole-paper completion claim is made.",
+    "42 Tohoku gap-class dispositions remain."
+  ],
+  "predecessor_dossier": {
+    "complete_surface": {
+      "aggregate_sha256": "82DDD6C08EDFD0775E58B22A7D5688B6B37CFBC61003EDC7B016978E0CF7AA7F",
+      "bytes": 7241947,
+      "files": 15
+    },
+    "decision_count": 1018,
+    "historical_live_validator_replay": "NOT_APPLICABLE_AFTER_D1009_TEX_SUCCESSOR",
+    "independent_sealed_surface_replay": "PASS",
+    "name": "tohoku_r51",
+    "payload_surface": {
+      "aggregate_sha256": "686AC3287DA298129718E9EF6AF3909EBDC21156BB2E20112C2A9D5B860EE477",
+      "bytes": 7192993,
+      "files": 14
+    },
+    "receipt": {
+      "bytes": 48954,
+      "name": "tohoku_r51/r51-check.json",
+      "sha256": "711F5162BB7830ABA202B9A51BE356427126C28624FE7BA3797EF0BF4F528922"
+    },
+    "remaining_gap_class_dispositions": 47
+  },
+  "runtime": {
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "local_import_cache_evidence": {
+      "mkidx": {
+        "execution_boundary": "The import may use this exact pinned cache when timestamp-valid, otherwise it compiles the exact pinned source; both files are locked for the transaction.",
+        "header_flags": 0,
+        "header_source_size": 14844,
+        "source": {
+          "bytes": 14844,
+          "name": "fga/mkidx.py",
+          "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+        },
+        "timestamp_cache": {
+          "bytes": 21123,
+          "name": "fga/__pycache__/mkidx.cpython-313.pyc",
+          "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+        }
+      },
+      "mkmap": {
+        "execution_boundary": "The import may use this exact pinned cache when timestamp-valid, otherwise it compiles the exact pinned source; both files are locked for the transaction.",
+        "header_flags": 0,
+        "header_source_size": 22213,
+        "source": {
+          "bytes": 22213,
+          "name": "fga/mkmap.py",
+          "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+        },
+        "timestamp_cache": {
+          "bytes": 26471,
+          "name": "fga/__pycache__/mkmap.cpython-313.pyc",
+          "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+        }
+      }
+    },
+    "python": {
+      "bytes": 104264,
+      "name": "user\\miniconda3\\python.exe",
+      "sha256": "7679E53FA969789309E81FDAD0D52B8CDA5F83C9ABF7CB31A3C58BF24B31E264"
+    }
+  },
+  "scanner_oracle": {
+    "counts": {
+      "errors": 0,
+      "labels": 22069,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1275,
+      "topics": 13,
+      "warnings": 641
+    },
+    "delta_from_r51": {
+      "candidate_cap_displacement": {
+        "added_label": "cohomology-definition-equivariant-cohomology-family-supports",
+        "reason": "The bounded per-topic candidate cap sorts equal scores by full label; the new definition lexically displaces the former last tied candidate.",
+        "removed_label": "cohomology-lemma-RHom-from-K-flat-into-K-injective",
+        "score": 46,
+        "topic": "sheaf-cohomology"
+      },
+      "candidate_keys_added": 6,
+      "candidate_keys_removed": 1,
+      "candidate_other_changes": 0,
+      "candidate_rows_line_number_only": 16,
+      "changed_tex_files": [
+        "cohomology.tex"
+      ],
+      "existing_label_other_changes": 0,
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "new_labels": [
+        "cohomology-section-equivariant-cohomology-supports",
+        "cohomology-definition-equivariant-cohomology-family-supports",
+        "cohomology-lemma-equivariant-family-supports-invariant-saturation",
+        "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence",
+        "cohomology-remark-equivariant-support-second-spectral-sequence"
+      ],
+      "official_tag_changes": 0,
+      "removed_labels": 0,
+      "warning_delta": 5,
+      "warning_delta_reason": "Exactly the five new local labels have no official tag in the pinned snapshot."
+    },
+    "outputs": {
+      "check.json": {
+        "bytes": 78742,
+        "name": "tmp/d1009_scan/check.json",
+        "sha256": "F674AE16BCC04E12FF97705F7CC29B6E26B3CBA8EC978DD84A80FFA0F27B8808"
+      },
+      "stx.csv": {
+        "bytes": 5278176,
+        "name": "tmp/d1009_scan/stx.csv",
+        "sha256": "A5535AF7AA7C02780D88DBEAB50417ED0BB7688865AB4A002D7B6656BAD41D14"
+      },
+      "tcand.csv": {
+        "bytes": 487516,
+        "name": "tmp/d1009_scan/tcand.csv",
+        "sha256": "7CF3E31793144F7AB87F7A9E79923E7B654E527713C3467823179BA74F224915"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "name": "tmp/d1009_scan/tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      }
+    }
+  },
+  "schema": "tohoku-stacks-mapping-successor-r52-v1",
+  "semantic_source": {
+    "aggregate_sha256": "76B6EBA7042FCFF59306E6178AC702BFDEDA392D2ADD754DDE932EBFAA6E6302",
+    "bytes": 2060023,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 2585,
+        "name": "README.md",
+        "sha256": "66D4CF92728AF7FF10E82CDFD97AFCD9D26B55CE9FBC985932FFBCD597DD64B4"
+      },
+      {
+        "bytes": 10422,
+        "name": "bib.csv",
+        "sha256": "93F5A934ADDE0CD92BBB21AF70EFD81BA128CCD2EDF51EB19428B83437EC3516"
+      },
+      {
+        "bytes": 772,
+        "name": "catalog.csv",
+        "sha256": "12C8C0D5EB10157AB1DBCD170AFF2147103AB848A3D28A8CA9EDF1C15186540A"
+      },
+      {
+        "bytes": 260944,
+        "name": "edges.csv",
+        "sha256": "F1607445D52F28DA2F3FE93D8F47D7959C35ECFFBC167B5AB0E787A91264C719"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 38138,
+        "name": "manifest.json",
+        "sha256": "40596FD03A707CF8AC3C1D825D0FEAD4447663F6A57E7BD16735021F14B520AB"
+      },
+      {
+        "bytes": 585012,
+        "name": "nodes.csv",
+        "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D"
+      },
+      {
+        "bytes": 106319,
+        "name": "objects.csv",
+        "sha256": "82FF34C19C6D17D80DC3A617FD106ED324099CC9D0F2FE752757D0642ED31999"
+      },
+      {
+        "bytes": 515084,
+        "name": "occ.csv",
+        "sha256": "54E545121F4D108E5C88B7039C39E3814F71F03332592C3F3965BD49B7FACED5"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 159815,
+        "name": "refs.csv",
+        "sha256": "995C9526CEC36FB6B437D7C688E4D40547BFC050949E3819A607FEEF53EA1162"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325587,
+        "name": "terms.csv",
+        "sha256": "6D93CBBD2D6CF3E354FE90DC51605ACD9C7B0932CEF216FB9D606AD97D666E5D"
+      },
+      {
+        "bytes": 6102,
+        "name": "validation.json",
+        "sha256": "2972E56494357AD0ABDB765057E20CA99777E6A6AA73B5AF7571EA1F715AA3D4"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r18",
+    "manifest_payload_surface": {
+      "aggregate_sha256": "71906EBD41B1777C661B904510BAC999FB5827E018CD1C606CE5007DFD0B9EB7",
+      "bytes": 2015783,
+      "file_count": 16
+    },
+    "p214_semantic_replay": "EXACT",
+    "reader_r17_binding": "EXACT",
+    "stable_node_ids": 991,
+    "stable_surfaces": {
+      "edges": 1475,
+      "nodes": 991,
+      "occurrences": 1036,
+      "references": 436
+    },
+    "validation_status": "PASS"
+  },
+  "status": "PASS"
+}

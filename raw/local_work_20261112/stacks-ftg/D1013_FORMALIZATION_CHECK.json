@@ -1,0 +1,295 @@
+{
+  "schema": "tohoku-stacks-d1013-formalization-check-v1",
+  "formalization_id": "D1013",
+  "overall_result": "STRICT_PASS",
+  "serialization": {
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "indentation": 2,
+    "terminal_newline": true
+  },
+  "scope": {
+    "source_reference": "Tohoku Chapter IV, Section 5.6, printed p. 219",
+    "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+    "current_decision": "D000565",
+    "successor_decision": "D001037",
+    "live_inserted_lines": {
+      "start": 20040,
+      "end": 20114
+    },
+    "authority_boundary": "Binds the exact p.219 English/French source, sem/r20 node, independently reviewed bounded abstract Ext bridge, fixed-point TeX/PDF, strict parser, visual render, scanner replay, and the contingent r57 map transition.",
+    "exclusions": [
+      "AGENTS.md was not edited.",
+      "No source layer or SOURCE_CORRECTIONS.jsonl was modified.",
+      "No analytic bundle equivalence, GAGA comparison, descent, finite-dimensionality, or whole-paper completion claim is made.",
+      "No GitHub action, publication, upload, release, cleanup, archive, ZIP, watcher, or broad scan is claimed."
+    ],
+    "external_constraints": {
+      "github": {
+        "status": "temporarily_unavailable",
+        "reason": "GitHub access is suspended during a VPN/security review; support ticket filed.",
+        "action": "Continue locally; do not attempt GitHub operations."
+      }
+    }
+  },
+  "source_authority": {
+    "english_p219": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/en/p219.tex",
+      "bytes": 4520,
+      "sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+      "target_occurrences": 1
+    },
+    "french_p219": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/fr/p219.tex",
+      "bytes": 4814,
+      "sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE",
+      "target_occurrences": 1
+    },
+    "semantic_node": {
+      "id": "tohoku:classification:equivariant-bundle-extensions",
+      "generation": "sem/r20",
+      "node_row": 93,
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "predecessor_mapping": {
+      "path": "user/Documents/stacks-ftg/tohoku_r56/map.csv",
+      "bytes": 483640,
+      "sha256": "0F06BCBBCAE7ED210C382BF60DE8B998D6598B9130D99E96071CB48B752DCD91"
+    }
+  },
+  "design_and_review": {
+    "design": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_formalization_design.json",
+      "bytes": 4298,
+      "sha256": "B3D9BF2769D791DF0DA19656A258840F5AE6F502BABDF62B2481DCA1A2A392FA",
+      "status": "STRICT_DESIGN_PASS"
+    },
+    "independent_review": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_independent_review_r1.json",
+      "bytes": 2927,
+      "sha256": "6E4BCA403D93287E70B971971AE93AC7AB9783BFC940EDD5B05CD5761306CFB9",
+      "status": "STRICT_PASS_WITH_EXPLICIT_ANALYTIC_BOUNDARY"
+    },
+    "candidate": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_block_candidate.tex",
+      "bytes": 2945,
+      "sha256": "6B5B8A8685A72D07CA94214BA21693490B28238ECBB3275960E26D9EC0C6E272",
+      "lines": 75,
+      "labels": [
+        "lemma-equivariant-extension-classes-finite-locally-free",
+        "remark-equivariant-extension-classes-analytic-boundary"
+      ],
+      "label_count": 2,
+      "balanced_environments": true,
+      "balanced_display_math": true,
+      "terminal_lf": true
+    },
+    "mathematical_boundary": {
+      "hypotheses": [
+        "(X,O) is a commutative G-ringed space",
+        "E and F are G-O-modules",
+        "the underlying O-module E is locally isomorphic to O^r for finite r"
+      ],
+      "claims": [
+        "equivariant degree-one Yoneda extensions are classified by Ext^1 in Mod_G(O)",
+        "the locally-free edge identifies Ext^1 with H^1(X;G,SheafHom_O(E,F))",
+        "evaluation identifies E^vee tensor_O F with SheafHom_O(E,F)"
+      ],
+      "nonclaims": [
+        "No analytic holomorphic-bundle/module equivalence is asserted.",
+        "No GAGA comparison, quotient descent, compact-quotient finiteness, or algebraization is asserted."
+      ]
+    }
+  },
+  "formalization_artifacts": {
+    "live_source": {
+      "path": "user/Documents/stacks-ftg/cohomology.tex",
+      "bytes": 912791,
+      "sha256": "93A3BCE86198A5A7A453790488E6E56C9B27155BF4748BB5FD045DCBC859EF01",
+      "lines": 24714,
+      "candidate_occurrences_in_live": 1,
+      "candidate_labels_each_once": true
+    },
+    "fixed_point_build": {
+      "engine": "MiKTeX pdflatex",
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cohomology.tex",
+      "passes": 2,
+      "rerun_stable": true,
+      "aux": {
+        "path": "user/Documents/stacks-ftg/cohomology.aux",
+        "bytes": 56883,
+        "sha256": "667C3CC758840781CA7C7800EE7E0D90F573BCB09BE222B22C5FE916E46C07EE"
+      },
+      "out": {
+        "path": "user/Documents/stacks-ftg/cohomology.out",
+        "bytes": 12725,
+        "sha256": "E20175BCE90BA5C272D88818F692C70BF698D24E5E04C6CAF200E3D812D62651"
+      },
+      "toc": {
+        "path": "user/Documents/stacks-ftg/cohomology.toc",
+        "bytes": 5574,
+        "sha256": "AE81948F55482644B638E0FA23B7B221EA86F4DDC4CCF605F4194227EF7A4830"
+      },
+      "pdf": {
+        "path": "user/Documents/stacks-ftg/cohomology.pdf",
+        "bytes": 1998117,
+        "sha256": "F07D8C9125AA3528FD3F5E7FB1DD57A300AF6AF2F7B6AE5F7AFDD6269363F2B8",
+        "pages": 238
+      },
+      "log": {
+        "path": "user/Documents/stacks-ftg/cohomology.log",
+        "bytes": 48454,
+        "sha256": "1971486471B77C1D174BC7A5D70A34629A76846F382BFD65BF4A2701115F2DA0",
+        "undefined_references": 0,
+        "fatal_or_latex_errors": 0,
+        "overfull_hboxes": 37,
+        "underfull_boxes": 1
+      }
+    }
+  },
+  "pdf_and_log_qa": {
+    "parser": {
+      "engine": "pypdf",
+      "strict": true,
+      "encrypted": false,
+      "pages": 238,
+      "pages_parsed": 238,
+      "text_pages_parsed": 238,
+      "text_chars": 523380,
+      "required_text_present": [
+        "Lemma 46.61",
+        "Analytic boundary",
+        "GAGA"
+      ],
+      "result": "STRICT_PASS"
+    },
+    "visual_audit": {
+      "render_method": "pdftoppm PNG at 180 dpi",
+      "pages": [192, 193, 194],
+      "manifest_path": "user/Documents/stacks-ftg/tmp/d1013_render/D1013_RENDER_MANIFEST.txt",
+      "manifest_bytes": 834,
+      "manifest_sha256": "8663874CF67CBD4600C1F97C149D3485A85111A3CBD728D90A2FD5C3311ED6D1",
+      "checks": {
+        "clipping": 0,
+        "overlap": 0,
+        "broken_glyphs": 0,
+        "equation_overflow": 0,
+        "margin_violations": 0,
+        "bad_page_breaks": 0
+      },
+      "result": "STRICT_PASS"
+    }
+  },
+  "scanner_oracle": {
+    "baseline": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_formalization_scan",
+      "check_sha256": "B2D6E35F8C97D756AC252CF2D49F2265BD6CCEC09AC70691E4513DE1FBDD82A1",
+      "counts": {
+        "labels": 22093,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topic_coverage_direct": 13,
+        "warnings": 665,
+        "errors": 0
+      }
+    },
+    "final": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_formalization_scan",
+      "check": {
+        "bytes": 81766,
+        "sha256": "9D15E5DADC243B5BB225CF6F41CC20E0015926EF91286B6DFE2C03ABE05C6B87"
+      },
+      "stx": {
+        "bytes": 5285699,
+        "sha256": "ADA99020E4B57061BE8EE0ACCF321DDB9EA286E7184AA8520BE0A15A7CF1E748"
+      },
+      "tcand": {
+        "bytes": 489175,
+        "sha256": "917A043875F1966A5E942A5DB9F027D347686B9AF59FCC267FAFDD4810AE1700"
+      },
+      "tmap": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "counts": {
+        "labels": 22095,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topic_coverage_direct": 13,
+        "warnings": 667,
+        "errors": 0
+      },
+      "new_labels": [
+        "cohomology-lemma-equivariant-extension-classes-finite-locally-free",
+        "cohomology-remark-equivariant-extension-classes-analytic-boundary"
+      ],
+      "new_warnings_exactly_new_labels": true
+    },
+    "replay": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_formalization_scan_replay",
+      "check_sha256": "9D15E5DADC243B5BB225CF6F41CC20E0015926EF91286B6DFE2C03ABE05C6B87",
+      "output_files_byte_identical_to_final": true
+    },
+    "delta": {
+      "labels": 2,
+      "official_tags_joined": 0,
+      "tex_files": 0,
+      "topic_candidates": 0,
+      "topic_coverage_direct": 0,
+      "warnings": 2,
+      "errors": 0,
+      "unrelated_warning_drift": 0
+    },
+    "status": "PASS"
+  },
+  "mapping_projection": {
+    "predecessor": "tohoku_r56",
+    "successor": "tohoku_r57",
+    "decision_id": "D001037",
+    "supersedes": "D000565",
+    "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+    "disposition": "new_statement",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-lemma-equivariant-extension-classes-finite-locally-free;cohomology-lemma-equivariant-ext-locally-free",
+    "stacks_tags": "",
+    "gap_projection": {
+      "before": 29,
+      "after": 29,
+      "reason": "The bounded abstract bridge does not close the analytic/GAGA boundary."
+    },
+    "projected_counts": {
+      "decisions": 1037,
+      "source_issues": 31,
+      "active_source_issues": 0,
+      "units": 991,
+      "decided_units": 679,
+      "new_statement": 7,
+      "existing_equivalent": 380,
+      "structural_only": 424
+    }
+  },
+  "predicates": [
+    {"id": "P001", "claim": "Exact bilingual p.219 source and sem/r20 node are bound.", "result": "PASS"},
+    {"id": "P002", "claim": "Design and independent review pass with explicit analytic boundary.", "result": "PASS"},
+    {"id": "P003", "claim": "Candidate TeX is balanced, unique, and inserted exactly once.", "result": "PASS"},
+    {"id": "P004", "claim": "The abstract Ext/Yoneda statement uses only admitted local prerequisites.", "result": "PASS"},
+    {"id": "P005", "claim": "No analytic bundle equivalence or GAGA claim is asserted.", "result": "PASS"},
+    {"id": "P006", "claim": "Two pdflatex passes reach a stable auxiliary fixed point.", "result": "PASS"},
+    {"id": "P007", "claim": "Strict pypdf parsing passes all 238 pages.", "result": "PASS"},
+    {"id": "P008", "claim": "Affected PDF pages render without visual defects.", "result": "PASS"},
+    {"id": "P009", "claim": "Final scanner completes with zero errors and the isolated two-label delta.", "result": "PASS"},
+    {"id": "P010", "claim": "Scanner replay is byte-identical to the final scan.", "result": "PASS"},
+    {"id": "P011", "claim": "D001037 remains new_statement and supersedes D000565 without reducing the gap count.", "result": "PASS"},
+    {"id": "P012", "claim": "GitHub remains recorded as unavailable and no remote operation is attempted.", "result": "PASS"}
+  ],
+  "predicate_summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "rule": "overall_result is STRICT_PASS iff every predicate replays PASS from the bound live files"
+  },
+  "errors": [],
+  "next_action": "Build and independently replay the atomic tohoku_r57 successor from sealed tohoku_r56; append D001037 exactly once; preserve the 29-gap analytic boundary and continue locally while GitHub is suspended."
+}

@@ -1,0 +1,168 @@
+{
+  "schema": "tohoku-d1020-equivariant-holomorphic-bundles-design-v1",
+  "status": "DRAFT_READY_FOR_INDEPENDENT_REVIEW",
+  "errors": [],
+  "formalization": {
+    "id": "D1020",
+    "primary_unit": "tohoku:equivalence:equivariant-holomorphic-bundles",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:561",
+    "predecessor_mapping": {
+      "dossier": "tohoku_r62",
+      "decision_id": "D000614",
+      "disposition": "new_statement",
+      "stacks_labels": "groupoids-definition-equivariant-module",
+      "official_tags": "03LF",
+      "map_row_with_lf": {
+        "bytes": 464,
+        "sha256": "E27526FEF71B946D33D28AB53EFDB099FCF89446DCA68931D70CF34E29AE8252"
+      }
+    }
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "semantic_row_with_lf": {
+      "path": "sem/r18/nodes.csv:561",
+      "bytes": 686,
+      "sha256": "0E7D595BB3F19DB020B5EE3D524C70744C02E3EA61115D498BF2CEC9AD98C038"
+    },
+    "occurrence_row_with_lf": {
+      "path": "sem/r18/occ.csv:985",
+      "occurrence_id": "tohoku:occ:p219:o004",
+      "bytes": 541,
+      "sha256": "6E61E9247F0E2760D18E1809D8A38DDC2C89215D0B35656F003D336B91288692"
+    },
+    "page_layers": {
+      "diplomatic": {
+        "path": "build/v068c3r20/src/dip/p219.tex",
+        "file_bytes": 4809,
+        "file_sha256": "53B23B8B039FA4BD34EB83A6F5E02B18758614E17A5737723A854F72C3A225B1",
+        "segment_bytes": 256,
+        "segment_sha256": "9DA42E0BC883F6AB9D74DD4A2ECF5EE602FBB175AA50F4701D15F2F1D52FF583"
+      },
+      "corrected_french": {
+        "path": "build/v068c3r20/src/fr/p219.tex",
+        "file_bytes": 4814,
+        "file_sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE",
+        "segment_bytes": 256,
+        "segment_sha256": "9DA42E0BC883F6AB9D74DD4A2ECF5EE602FBB175AA50F4701D15F2F1D52FF583"
+      },
+      "english": {
+        "path": "build/v068c3r20/src/en/p219.tex",
+        "file_bytes": 4520,
+        "file_sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+        "segment_bytes": 231,
+        "segment_sha256": "B72FEE68B2ACE24B4D07ECA6E4D24CB9F3043C7F61EAD909FDFFF0A9753A9C52"
+      }
+    },
+    "claim": "Under the analytic bundle--module correspondence, rank-n holomorphic vector bundles with compatible G-action correspond to G-O-modules whose underlying O-module is locally isomorphic to O^n; the inverse bundle has fibre L_x tensor_{O_{X,x}} C through the residue map.",
+    "repair_required": false
+  },
+  "coverage_audit": {
+    "current_label": {
+      "label": "groupoids-definition-equivariant-module",
+      "tag": "03LF",
+      "verdict": "ALGEBRAIC_DEFINITION_ONLY_NOT_ANALYTIC_EQUIVALENCE"
+    },
+    "algebraic_analogue": {
+      "label": "constructions-lemma-category-vector-bundles",
+      "tag": "062N",
+      "verdict": "SCHEME_ANALOGUE_ONLY"
+    },
+    "target_language_dependencies": [
+      {
+        "label": "modules-definition-G-O-module",
+        "tag": "",
+        "role": "semilinear G-O-module convention"
+      },
+      {
+        "label": "sheaves-definition-G-sheaf",
+        "tag": "",
+        "role": "sectionwise G-sheaf action and group law"
+      }
+    ],
+    "existing_analytic_boundary": "cohomology-remark-equivariant-extension-classes-analytic-boundary explicitly says this correspondence is not yet claimed",
+    "verdict": "NEW_BOUNDED_ANALYTIC_FORMALIZATION_REQUIRED"
+  },
+  "candidate": {
+    "path": "tmp/d1020_equivariant_holomorphic_bundles_candidate.tex",
+    "bytes": 4937,
+    "sha256": "CBF6FA0EE8451F0CBC8793EBDE2C2D7377696E92A2ABCBF39B4595734C34CF3E",
+    "target_file": "cohomology.tex",
+    "target_anchor": "cohomology-remark-equivariant-extension-classes-analytic-boundary",
+    "placement": "after the target remark and before cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "new_labels": [
+      "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+      "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules"
+    ],
+    "new_tags": ["", ""]
+  },
+  "proof_obligations": [
+    {
+      "id": "P1",
+      "claim": "The section-sheaf functor is fully faithful.",
+      "closure": "In local trivializations, both holomorphic bundle maps and O-linear sheaf maps are exactly matrices of holomorphic functions."
+    },
+    {
+      "id": "P2",
+      "claim": "Every locally free analytic module comes from a holomorphic vector bundle.",
+      "closure": "Local bases give GL_n(O)-valued transition matrices satisfying the cocycle identities, which glue trivial holomorphic bundles; evaluation of the same matrices gives the canonical fibre L_x tensor_{O_{X,x}} C."
+    },
+    {
+      "id": "P3",
+      "claim": "The locally free analytic modules in the source are coherent.",
+      "closure": "Coherence is local and follows from Oka coherence; Grauert-direct-image p. 16 is pinned."
+    },
+    {
+      "id": "P4",
+      "claim": "A compatible bundle action induces the exact G-O-module semilinearity used by Stacks.",
+      "closure": "The formula rho_g(s)(gx)=g(s(x)) gives the group law and rho_g(as)=rho_g(a)rho_g(s)."
+    },
+    {
+      "id": "P5",
+      "claim": "A locally free G-O-module reconstructs a compatible holomorphic bundle action.",
+      "closure": "In local bases the semilinear maps are invertible holomorphic matrices; basis changes and the group cocycle glue them to fibrewise-linear bundle maps over g."
+    },
+    {
+      "id": "P6",
+      "claim": "The constructions form an equivalence of equivariant categories.",
+      "closure": "The nonequivariant full-faithfulness and the sectionwise group identities identify inverse objects and equivariant morphisms."
+    },
+    {
+      "id": "P7",
+      "claim": "Adjacent source claims stay separate.",
+      "closure": "The candidate excludes extension classification, H^1, quotient descent, compactness, finite dimensionality, and GAGA."
+    }
+  ],
+  "scope_separation": {
+    "primary_mapping": "Only D000614 is authorized for D1020.",
+    "adjacent_underlying_unit": "D000615 is stated in its own first lemma and may be closed only by a separate mapping transaction after independent source review.",
+    "following_unit": "tohoku:classification:equivariant-bundle-extensions is not included."
+  },
+  "conditional_mapping_projection": {
+    "decision_id": "D001044",
+    "unit_id": "tohoku:equivalence:equivariant-holomorphic-bundles",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules",
+    "official_tags": "",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000614",
+    "issue_append": null,
+    "source_repair_append": null,
+    "projected_after_r63": {
+      "decisions": 1044,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 387,
+      "new_statement": 4,
+      "remaining_gap_class_dispositions": 22,
+      "changed_map_rows": 1
+    }
+  }
+}

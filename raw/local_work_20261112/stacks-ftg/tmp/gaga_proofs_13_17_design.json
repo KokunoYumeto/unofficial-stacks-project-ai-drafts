@@ -1,0 +1,1099 @@
+{
+  "schema": "gaga_proofs_13_17_design/v1",
+  "audit_date": "2026-08-24",
+  "status": "design_complete_no_live_edits_no_build",
+  "scope": {
+    "repository": "user/Documents/stacks-ftg",
+    "sealed_dossier": "user/Documents/stacks-ftg/gaga_r1",
+    "exact_source": "user/Documents/stacks-ftg/gaga_source_r1/english_source_aligned_workpass/components/04_proofs_theorems1_3_nos13_17.tex",
+    "expected_source_sha256": "167DE10CD53AB8A2C4609DE4276B970B51A6C8D8169D2D5930EB45A77762D5A0",
+    "observed_source_sha256": "167DE10CD53AB8A2C4609DE4276B970B51A6C8D8169D2D5930EB45A77762D5A0",
+    "source_bytes": 22613,
+    "source_lines": 395,
+    "unit_ids": [
+      "gaga:no:13",
+      "gaga:lemma:4",
+      "gaga:lemma:5",
+      "gaga:no:14",
+      "gaga:lemma:6",
+      "gaga:no:15",
+      "gaga:no:16",
+      "gaga:lemma:7",
+      "gaga:lemma:8",
+      "gaga:no:17"
+    ],
+    "structural_children_not_separate_review_units": [
+      "gaga:eq:1",
+      "gaga:eq:2",
+      "gaga:eq:3",
+      "gaga:eq:4",
+      "gaga:eq:5",
+      "gaga:eq:6",
+      "gaga:eq:7",
+      "gaga:eq:8",
+      "gaga:eq:9"
+    ],
+    "write_boundary": [
+      "user/Documents/stacks-ftg/tmp/gaga_proofs_13_17_design.json",
+      "user/Documents/stacks-ftg/tmp/gaga_proofs_13_17_candidate.tex"
+    ],
+    "excluded_actions": [
+      "No edit to live Stacks TeX, gaga.tex, the gaga or gaga_r1 dossiers, Makefile, chapters.tex, tags, or bibliography.",
+      "No build, tag generation, dossier rerun, broad workspace scan, Git operation, publication, cleanup, or archive audit."
+    ]
+  },
+  "determinism": {
+    "span_encoding": "UTF-8 without BOM",
+    "span_line_endings": "LF",
+    "span_terminal_newline": true,
+    "hash_algorithm": "SHA-256",
+    "source_hash_match": true,
+    "needs_review_unit_count": 10,
+    "recovered_semantic_span_count": 10
+  },
+  "sealed_inputs": [
+    {
+      "path": "gaga_r1/units.csv",
+      "bytes": 60100,
+      "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+    },
+    {
+      "path": "gaga_r1/map.csv",
+      "bytes": 64686,
+      "sha256": "B1332587032EA06E3FCCA3C595CDBA8CAEA825D7B8F278035E688B84CD84BE91"
+    },
+    {
+      "path": "gaga_r1/check.json",
+      "bytes": 84524,
+      "sha256": "662F0128D4B3B96F97E58F96371675B4DB4106A80B8C5238698C53FAB1E2F473"
+    },
+    {
+      "path": "gaga_r1/stx.csv",
+      "bytes": 5291661,
+      "sha256": "2AFD11C6BA12EDDF5BBCADFF60973BE4E1ACA58CA1A7A6E9D6C66EE0C2D55D7F"
+    },
+    {
+      "path": "gaga_source_r1/english_source_aligned_workpass/components/03_sheaf_correspondence_nos09_12.tex",
+      "bytes": 11808,
+      "sha256": "2A454DDF3F34EC17E71B7889CE59E2D64D422BE3CFD7AABF79E549E90BCC7447",
+      "purpose": "Only the exact statements of Theorems 1--3 used by the proof tranche were read."
+    }
+  ],
+  "target_theorem_claims": [
+    {
+      "source_unit": "gaga:thm:1",
+      "source_file": "03_sheaf_correspondence_nos09_12.tex",
+      "lines": [163, 171],
+      "bytes_utf8_lf": 375,
+      "sha256_lf": "223D55EC6037F250EBA195D854B2B97A3FF337007DDDB6F19CBFBF77CE06B39C",
+      "claim": "For a coherent algebraic sheaf on a complex projective variety, every cohomology comparison map H^q(X,F) to H^q(X^an,F^an) is bijective."
+    },
+    {
+      "source_unit": "gaga:thm:2",
+      "source_file": "03_sheaf_correspondence_nos09_12.tex",
+      "lines": [175, 175],
+      "bytes_utf8_lf": 298,
+      "sha256_lf": "EF17CF2FF58A23153C5EBD52788B41D58A9EC95A3C766B3AD2EE4C94879656DC",
+      "claim": "Analytification induces a bijection from algebraic homomorphisms F to G to analytic homomorphisms F^an to G^an for coherent algebraic sheaves on a complex projective variety."
+    },
+    {
+      "source_unit": "gaga:thm:3",
+      "source_file": "03_sheaf_correspondence_nos09_12.tex",
+      "lines": [177, 177],
+      "bytes_utf8_lf": 326,
+      "sha256_lf": "5F20ED3F8D843F00593BFEBB3472BD7834976E930A1EE9E4BAEC4C5034439369",
+      "claim": "Every coherent analytic sheaf on the analytification of a complex projective variety is the analytification of a coherent algebraic sheaf, unique up to isomorphism."
+    }
+  ],
+  "disposition_definitions": {
+    "existing_equivalent": "Current named Stacks results imply the complete target claim without adding a target-specific mathematical statement.",
+    "existing_stronger": "A current named Stacks result proves the target as a specialization and is strictly more general; a GAGA corollary label may still be useful for exposition.",
+    "existing_weaker": "A current statement has the same mathematical direction but a strictly weaker conclusion, so a strengthening is required.",
+    "new_statement": "No current named Stacks result proves the target claim; the standalone GAGA continuation must add the statement and proof."
+  },
+  "summary": {
+    "current_dispositions": {
+      "existing_equivalent": 0,
+      "existing_stronger": 1,
+      "existing_weaker": 0,
+      "new_statement": 9
+    },
+    "true_gap_count": 9,
+    "true_gap_unit_ids": [
+      "gaga:no:13",
+      "gaga:lemma:4",
+      "gaga:lemma:5",
+      "gaga:no:14",
+      "gaga:no:15",
+      "gaga:no:16",
+      "gaga:lemma:7",
+      "gaga:lemma:8",
+      "gaga:no:17"
+    ],
+    "existing_stronger_unit_ids": [
+      "gaga:lemma:6"
+    ],
+    "rows_requiring_continuation_text": 10,
+    "post_candidate_dispositions": {
+      "existing_equivalent": 10,
+      "existing_stronger": 0,
+      "existing_weaker": 0,
+      "new_statement": 0
+    },
+    "post_candidate_remaining_true_gaps": 0,
+    "interpretation": "Lemma 6 is the current flat-pullback internal-Hom lemma specialized to the analytification morphism. Its analytic flatness premise belongs to the preceding nos. 5--8 tranche. The other nine source units have no exact or stronger live GAGA statement."
+  },
+  "unit_audit": [
+    {
+      "ordinal": 1,
+      "unit_id": "gaga:no:13",
+      "unit_type": "numbered_unit",
+      "map_physical_line": 47,
+      "map_row_bytes_utf8_lf": 453,
+      "map_row_sha256_lf": "32996828A6F23239EDF282BD9473CFA9D785ECB788426E5FB4F56C8179962263",
+      "units_physical_line": 47,
+      "units_row_bytes_utf8_lf": 419,
+      "units_row_sha256_lf": "7421D2FB9DE867892EB3E698A425CE38E1BC8C4C98648F2C920FAC59E6448207",
+      "intake_locator": {
+        "lines": [1, 1],
+        "bytes_utf8_lf": 52,
+        "sha256_lf": "CB4261F77FACEBD7033A9F955A8833FA556910607D762FA39ADD6A2AE0DFB90F",
+        "exact_text": "\\GAGASubsection{13. Proof of Theorem 1}{gaga:no:13}"
+      },
+      "recovered_semantic_span": {
+        "lines": [1, 103],
+        "bytes_utf8_lf": 5847,
+        "sha256_lf": "0D9FC41113FCDAB4CCD7E84DC46170EB3C11359E31AC6AF1233A76A7E4B6646B"
+      },
+      "exact_role": "Proves Theorem 1 by closed-immersion reduction to projective space, Lemmas 4 and 5 for O and O(n), then descending induction on cohomological degree using a finite quotient by twists and two diagram chases.",
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-section-proof-gaga-cohomology",
+        "gaga-lemma-projective-analytic-cohomological-dimension",
+        "gaga-theorem-gaga-cohomology"
+      ],
+      "dependencies": [
+        "gaga:lemma:4",
+        "gaga:lemma:5",
+        "coherent-lemma-coherent-projective",
+        "cohomology-lemma-cohomology-and-closed-immersions",
+        "homology-lemma-four-lemma"
+      ],
+      "rationale": "The live tree has the algebraic quotient-by-twists theorem, algebraic vanishing, closed-immersion cohomology, and the four/five lemmas, but no algebraic-to-analytic coherent cohomology comparison or its descending-induction proof."
+    },
+    {
+      "ordinal": 2,
+      "unit_id": "gaga:lemma:4",
+      "unit_type": "lemma",
+      "map_physical_line": 48,
+      "map_row_bytes_utf8_lf": 431,
+      "map_row_sha256_lf": "F6AA6A862294DEFD92032B748AA2A6F13EEC8418A9EBDD46CFF5CD68C493CCAF",
+      "units_physical_line": 48,
+      "units_row_bytes_utf8_lf": 473,
+      "units_row_sha256_lf": "F783FA5148ECBAE86C4E6D6D64E2135B0B69DD3F3FFBD08DB712CFF06A4188AE",
+      "claim_span": {
+        "lines": [24, 24],
+        "bytes_utf8_lf": 124,
+        "sha256_lf": "17992AD198C398259FC5C17BF8D9816A87E7E43096E4D8732437483C4D582031",
+        "exact_text": "\\GAGATarget{gaga:lemma:4}\\textsc{Lemma 4}. --- \\emph{Theorem~\\hyperref[gaga:thm:1]{1} is true for the sheaf $\\mathcal{O}$.}"
+      },
+      "recovered_semantic_span": {
+        "lines": [24, 26],
+        "bytes_utf8_lf": 832,
+        "sha256_lf": "F9140476ED2857D0AAEC8FADD90C7EF02807B8DF9258184E89E197B47DA84855"
+      },
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-lemma-projective-structure-sheaf-comparison"
+      ],
+      "existing_partial_labels": [
+        "coherent-lemma-cohomology-projective-space-over-ring"
+      ],
+      "external_analytic_dependency": "Dolbeault identifies coherent O-cohomology with (0,q)-cohomology and the standard projective-space computation gives C in degree zero and zero in positive degree.",
+      "rationale": "The algebraic side is computed exactly in the live tree. The analytic vanishing and hence the comparison isomorphism are absent, so the algebraic calculation alone is not a weaker version of the target comparison claim."
+    },
+    {
+      "ordinal": 3,
+      "unit_id": "gaga:lemma:5",
+      "unit_type": "lemma",
+      "map_physical_line": 49,
+      "map_row_bytes_utf8_lf": 431,
+      "map_row_sha256_lf": "EDB4109785F82146B9F70F9B264734D98B369D56D6F17E66A37D213A7EA2C7E1",
+      "units_physical_line": 49,
+      "units_row_bytes_utf8_lf": 479,
+      "units_row_sha256_lf": "907BB9AEA259A0B2BBC8D0B488449C06EE70CC7BD5798985EF5583C216C5A88A",
+      "claim_span": {
+        "lines": [28, 28],
+        "bytes_utf8_lf": 127,
+        "sha256_lf": "181B6EDECD01150B32E1071B61B4E78FE5851451EE6BC28E7D85D7E15FBDCA71",
+        "exact_text": "\\GAGATarget{gaga:lemma:5}\\textsc{Lemma 5}. --- \\emph{Theorem~\\hyperref[gaga:thm:1]{1} is true for the sheaf $\\mathcal{O}(n)$.}"
+      },
+      "recovered_semantic_span": {
+        "lines": [28, 74],
+        "bytes_utf8_lf": 2250,
+        "sha256_lf": "DBA721C3D8BFB11E33BA2213326FAC9988DA030413AD22E8C13FDB50ED7CC54B"
+      },
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-lemma-projective-twist-comparison"
+      ],
+      "dependencies": [
+        "gaga-lemma-projective-structure-sheaf-comparison",
+        "varieties-lemma-hyperplane",
+        "homology-lemma-five-lemma",
+        "gaga-lemma-analytification-exact-faithful-coherent",
+        "gaga-lemma-analytification-pushforward-closed-immersion",
+        "gaga-lemma-analytification-cohomology-map-functorial"
+      ],
+      "rationale": "The live tree has hyperplanes, twists, exact sequences, and the five lemma but no comparison map for analytic twists. The new proof makes the induction on dimension and the two-way induction on n explicit."
+    },
+    {
+      "ordinal": 4,
+      "unit_id": "gaga:no:14",
+      "unit_type": "numbered_unit",
+      "map_physical_line": 50,
+      "map_row_bytes_utf8_lf": 456,
+      "map_row_sha256_lf": "C440DBC8FF480B81EF7BBA151314CBAB95C1494F8B4AE8BC520065F7AE52ACC5",
+      "units_physical_line": 50,
+      "units_row_bytes_utf8_lf": 422,
+      "units_row_sha256_lf": "26A75F161501FED39D15887CB64386A193F7E327D8ED37699A4C6F84A8696B4B",
+      "intake_locator": {
+        "lines": [105, 105],
+        "bytes_utf8_lf": 52,
+        "sha256_lf": "2FEE5A05165585008B254F66ECDF894DD7D42CA4E3066A1F088EC5BCE33509EC",
+        "exact_text": "\\GAGASubsection{14. Proof of Theorem 2}{gaga:no:14}"
+      },
+      "recovered_semantic_span": {
+        "lines": [105, 164],
+        "bytes_utf8_lf": 2959,
+        "sha256_lf": "2769E164FD916448F201D9692BA43776B714D4B2C08BECCD80132BFA24CB3F5F"
+      },
+      "exact_role": "Identifies analytification of internal Hom, then applies Theorem 1 in degree zero to prove that analytification is fully faithful on coherent algebraic sheaves.",
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-section-proof-gaga-fully-faithful",
+        "gaga-theorem-gaga-fully-faithful"
+      ],
+      "dependencies": [
+        "gaga:lemma:6",
+        "gaga-theorem-gaga-cohomology"
+      ],
+      "rationale": "The global GAGA full-faithfulness statement and proof are absent even though the internal-Hom base-change mechanism is abstractly available."
+    },
+    {
+      "ordinal": 5,
+      "unit_id": "gaga:lemma:6",
+      "unit_type": "lemma",
+      "map_physical_line": 51,
+      "map_row_bytes_utf8_lf": 434,
+      "map_row_sha256_lf": "75050A579051C44FAC5FDC7AE84D39ED25925A1493234181DD8EE3ACB73485A4",
+      "units_physical_line": 51,
+      "units_row_bytes_utf8_lf": 454,
+      "units_row_sha256_lf": "C4D8C76ED66BB6D7C7F61B4C2177C5CFFAB5F91B4D3197DECC79F9098A4460ED",
+      "claim_span": {
+        "lines": [119, 119],
+        "bytes_utf8_lf": 121,
+        "sha256_lf": "E331375877DF5943CEEBE5B371782AECDBB07FF05C5DF0918623D8D2EEDCD1FD",
+        "exact_text": "\\GAGATarget{gaga:lemma:6}\\textsc{Lemma 6}. --- \\emph{The homomorphism $\\iota:\\mathcal{A}^h\\to\\mathcal{B}$ is bijective.}"
+      },
+      "recovered_semantic_span": {
+        "lines": [119, 152],
+        "bytes_utf8_lf": 1196,
+        "sha256_lf": "6E0232765066E9880C9749398DB457891EC1932AACA2D271D2C564A1580619E3"
+      },
+      "disposition": "existing_stronger",
+      "live_stronger_labels": [
+        "modules-lemma-pullback-internal-hom",
+        "more-algebra-lemma-pseudo-coherence-and-base-change-ext"
+      ],
+      "prerequisite_from_preceding_tranche": "gaga-theorem-analytification-local-faithfully-flat",
+      "planned_expository_full_label": "gaga-lemma-analytification-internal-hom",
+      "rationale": "Modules tag 0C6I states the sheaf-level isomorphism for every flat morphism of ringed spaces and finitely presented first argument, strictly more generally than GAGA Lemma 6. More on Algebra tag 087R gives the stalk calculation. No independent strengthening is required in this tranche; the candidate adds only the named specialization once analytic flatness is available."
+    },
+    {
+      "ordinal": 6,
+      "unit_id": "gaga:no:15",
+      "unit_type": "numbered_unit",
+      "map_physical_line": 52,
+      "map_row_bytes_utf8_lf": 456,
+      "map_row_sha256_lf": "94E669F7B98366F9E81EBEA6811BBA1E5242B1E2FFDEE92F09861DEB356026E8",
+      "units_physical_line": 52,
+      "units_row_bytes_utf8_lf": 452,
+      "units_row_sha256_lf": "ED2CA0C523565E70CFBCC63D4B8CEBE73EB492BB1E94D3BD9A7716CA7581C4F3",
+      "intake_locator": {
+        "lines": [166, 166],
+        "bytes_utf8_lf": 67,
+        "sha256_lf": "E800C6BB9D4352CE9FD63062664AEDF944C823670C0FC864DEF220C5E10C0112",
+        "exact_text": "\\GAGASubsection{15. Proof of Theorem 3. Preliminaries}{gaga:no:15}"
+      },
+      "recovered_semantic_span": {
+        "lines": [166, 186],
+        "bytes_utf8_lf": 2621,
+        "sha256_lf": "9383D48520205B9B2B94499CFF64AE7B5C5BB00358F0209C6984002B4C37CCF7"
+      },
+      "exact_role": "Derives uniqueness from full faithfulness and reduces existence from an arbitrary projective variety to projective space using coherent extension by zero, annihilation by the defining ideal, and compatibility of analytification with closed immersions.",
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-section-gaga-essential-surjectivity-preliminaries",
+        "gaga-lemma-coherent-analytic-closed-immersion",
+        "gaga-lemma-gaga-essential-surjectivity-projective-reduction"
+      ],
+      "existing_formal_labels": [
+        "modules-lemma-i-star-equivalence",
+        "modules-lemma-i-star-reflects-finite-type",
+        "modules-lemma-coherent-change-rings",
+        "morphisms-lemma-i-star-equivalence",
+        "coherent-lemma-i-star-equivalence",
+        "cohomology-lemma-cohomology-and-closed-immersions"
+      ],
+      "rationale": "The abstract closed-immersion module theory is present, but the live tree has no GAGA algebraization functor, no full faithfulness theorem, and no projective-space reduction for coherent analytic sheaves."
+    },
+    {
+      "ordinal": 7,
+      "unit_id": "gaga:no:16",
+      "unit_type": "numbered_unit",
+      "map_physical_line": 53,
+      "map_row_bytes_utf8_lf": 456,
+      "map_row_sha256_lf": "C40EE1F7A558543BB03A2BFEB2600B73C124037290D42FFF0C67E1C336B9BEE3",
+      "units_physical_line": 53,
+      "units_row_bytes_utf8_lf": 570,
+      "units_row_sha256_lf": "19DD7DCB385487F97795F742F4D8E4A65AE21B0907EDC5D5C29A3AC26E377FCA",
+      "intake_locator": {
+        "lines": [188, 188],
+        "bytes_utf8_lf": 141,
+        "sha256_lf": "7FDDAFD46005D6BA51D327A577905E999457D7493C63E17A3AF08B39A28E22E2",
+        "exact_text": "\\GAGASubsection{16. Proof of Theorem 3. The sheaves M(n)}{gaga:no:16}"
+      },
+      "recovered_semantic_span": {
+        "lines": [188, 361],
+        "bytes_utf8_lf": 9523,
+        "sha256_lf": "E4F0F45CE0A2DAD28137C81BD6B8893A90770F2F166197E583A5548A60F3B66C"
+      },
+      "exact_role": "Defines analytic twists, proves hyperplane Serre vanishing by induction and Theorem 1, and proves eventual global generation by the hyperplane exact sequence, finite-dimensional H^1 stabilization, lifting generators, and Nakayama.",
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-section-gaga-analytic-twists",
+        "gaga-definition-coherent-analytic-twist",
+        "gaga-lemma-hyperplane-analytic-serre-vanishing",
+        "gaga-lemma-projective-analytic-global-generation"
+      ],
+      "dependencies": [
+        "gaga:lemma:7",
+        "gaga:lemma:8",
+        "gaga-theorem-gaga-cohomology",
+        "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+        "properties-proposition-characterize-ample",
+        "algebra-lemma-NAK"
+      ],
+      "rationale": "No live statement defines twists of arbitrary coherent analytic modules on projective analytification or proves analytic eventual global generation. The finite-dimensionality, algebraic Serre vanishing/global generation, and Nakayama inputs are present."
+    },
+    {
+      "ordinal": 8,
+      "unit_id": "gaga:lemma:7",
+      "unit_type": "lemma",
+      "map_physical_line": 54,
+      "map_row_bytes_utf8_lf": 550,
+      "map_row_sha256_lf": "58453569EAAC67BF3DFFFFB3A5BA9BACACD5B54591DCC19279AB17BBE2A8E19E",
+      "units_physical_line": 54,
+      "units_row_bytes_utf8_lf": 705,
+      "units_row_sha256_lf": "58F65ACAC4160EC399EB7FD80D68391C3A6A10DCB6B7A16AA56710E59AC46354",
+      "claim_span": {
+        "lines": [202, 202],
+        "bytes_utf8_lf": 252,
+        "sha256_lf": "C8B61DCAD921045CB904C3D8DFB5421506702E12468CB040548D1F620FB1CAC4",
+        "exact_text": "Let E be a hyperplane in projective r-space and A a coherent analytic sheaf on E. Then H^q(E^an,A(n))=0 for q>0 and all sufficiently large n."
+      },
+      "recovered_semantic_span": {
+        "lines": [202, 206],
+        "bytes_utf8_lf": 694,
+        "sha256_lf": "A75BDC6FDA42AF0D1ECE46A1400D076B36CA02D9E86E84E39BF10DC254D684DD"
+      },
+      "disposition": "new_statement",
+      "planned_full_label": "gaga-lemma-hyperplane-analytic-serre-vanishing",
+      "existing_partial_label": "coherent-lemma-coherent-projective",
+      "rationale": "The live lemma proves the algebraic Serre vanishing conclusion. Passing to an arbitrary coherent analytic sheaf requires the new GAGA induction hypothesis and Theorem 1, so no current live label proves this analytic claim."
+    },
+    {
+      "ordinal": 9,
+      "unit_id": "gaga:lemma:8",
+      "unit_type": "lemma",
+      "map_physical_line": 55,
+      "map_row_bytes_utf8_lf": 528,
+      "map_row_sha256_lf": "B38AE531A2227B1191C54FA6157A47554C50C46C076B224A4CBF54BD0E5C6432",
+      "units_physical_line": 55,
+      "units_row_bytes_utf8_lf": 687,
+      "units_row_sha256_lf": "5D3DE52B70B181719AD511C4E7F54C6FC6393653F5263EFC136F76C0D698C905",
+      "claim_span": {
+        "lines": [208, 208],
+        "bytes_utf8_lf": 354,
+        "sha256_lf": "36868E8F7D199FFD3E4595FEE1A3797BE135B9F93C3EA9C4F44224799E6507B1",
+        "exact_text": "For a coherent analytic sheaf M on projective r-space, M(n) is generated at every stalk by global sections for every sufficiently large n."
+      },
+      "recovered_semantic_span": {
+        "lines": [208, 361],
+        "bytes_utf8_lf": 7541,
+        "sha256_lf": "FF71D7F856BB5393B9F7F5B1B7F01FEAA5D2C58475BF921D11ABEE1CB4C716A9"
+      },
+      "disposition": "new_statement",
+      "planned_full_label": "gaga-lemma-projective-analytic-global-generation",
+      "existing_dependency_labels": [
+        "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+        "properties-proposition-characterize-ample",
+        "algebra-lemma-NAK",
+        "modules-lemma-coherent-abelian"
+      ],
+      "rationale": "The live tree contains the three decisive auxiliary results but not their analytic hyperplane-stabilization argument or its eventual-global-generation conclusion."
+    },
+    {
+      "ordinal": 10,
+      "unit_id": "gaga:no:17",
+      "unit_type": "numbered_unit",
+      "map_physical_line": 65,
+      "map_row_bytes_utf8_lf": 583,
+      "map_row_sha256_lf": "268E907F1EF97D8DFEFA2548DD5C01E1880375B1B101F47220BEE0354BF5494B",
+      "units_physical_line": 65,
+      "units_row_bytes_utf8_lf": 465,
+      "units_row_sha256_lf": "B36E94C0B65BE0AD3D43B2B97B827916636591BE76512A5C8BF4416BB84B6FB7",
+      "intake_locator": {
+        "lines": [363, 363],
+        "bytes_utf8_lf": 70,
+        "sha256_lf": "52C5765C9862A3D4A540607D388CF290B8CBCBE856AA4D7C9854E41476509C85",
+        "exact_text": "\\GAGASubsection{17. Completion of the proof of Theorem 3}{gaga:no:17}"
+      },
+      "recovered_semantic_span": {
+        "lines": [363, 395],
+        "bytes_utf8_lf": 1659,
+        "sha256_lf": "269D583BC541D069BAB8FAF1D8CFAC59DAEE30CA1F7212197BC35F748511CC6D"
+      },
+      "exact_role": "Uses eventual global generation twice to give a two-term presentation by analytifications of finite sums of twists, algebraizes the relation map by full faithfulness, and takes its cokernel using exactness of analytification.",
+      "disposition": "new_statement",
+      "planned_full_labels": [
+        "gaga-section-completion-gaga-essential-surjectivity",
+        "gaga-theorem-gaga-essential-surjectivity"
+      ],
+      "dependencies": [
+        "gaga-lemma-projective-analytic-global-generation",
+        "gaga-theorem-gaga-fully-faithful",
+        "gaga-lemma-analytification-exact-faithful-coherent",
+        "modules-lemma-coherent-abelian"
+      ],
+      "rationale": "The live tree has cokernels and coherence but no analytic global-generation presentation or GAGA full-faithfulness bridge, so the algebraization construction is absent."
+    }
+  ],
+  "live_file_evidence": [
+    {
+      "path": "coherent.tex",
+      "bytes": 365621,
+      "sha256": "802D88F603D79F9AFC4E098EDD555E86446EC53054D0A3C7BDE70F096B18DF90"
+    },
+    {
+      "path": "cohomology.tex",
+      "bytes": 948056,
+      "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+    },
+    {
+      "path": "homology.tex",
+      "bytes": 384334,
+      "sha256": "7520BDAD32E68DB449A671802A5D0B2EFAA6EE4EDEC94206F313AB23AB1B6908"
+    },
+    {
+      "path": "more-algebra.tex",
+      "bytes": 1556948,
+      "sha256": "F70B0B6973F3330DE04F862DF8217459400BE75B511741B04CBC0D0C2852375B"
+    },
+    {
+      "path": "algebra.tex",
+      "bytes": 1851008,
+      "sha256": "1AD1C80E33CA42280B09915B7A0D15A91A9F9740C04545ADB7BFAD9B49E3BA37"
+    },
+    {
+      "path": "morphisms.tex",
+      "bytes": 605523,
+      "sha256": "31A65A4C73778740F7D66030AE5D21D9670B9DF251EDBA367DF793399B6B9519"
+    },
+    {
+      "path": "modules.tex",
+      "bytes": 232828,
+      "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+    },
+    {
+      "path": "properties.tex",
+      "bytes": 216855,
+      "sha256": "EEC73C32C17A45F975180268BFCC976C0A7BD35B798635B2D39381256623C4A3"
+    },
+    {
+      "path": "varieties.tex",
+      "bytes": 475029,
+      "sha256": "E8175DA57DBCC5441294A537D666355DF1BDAC451DA7BD0ECC0E8855CF1D7D9B"
+    }
+  ],
+  "live_evidence_catalog": [
+    {
+      "label": "coherent-lemma-cohomology-projective-space-over-ring",
+      "tag": "01XT",
+      "file": "coherent.tex",
+      "label_line": 1670,
+      "statement_lines": [1669, 1740],
+      "bytes_utf8_lf": 3406,
+      "sha256_lf": "C19E68093A064A31EC1592A5B73C00C7F7E651B49DB89EE8A94E474918DA0794",
+      "use": "Exact algebraic cohomology of every O(d) on projective space."
+    },
+    {
+      "label": "coherent-lemma-coherent-projective",
+      "tag": "01YS",
+      "file": "coherent.tex",
+      "label_line": 3822,
+      "statement_lines": [3821, 3908],
+      "bytes_utf8_lf": 4138,
+      "sha256_lf": "5041A08DE1AC4BDEC49ADDE7A3008ED57633ADE65D640EF3675BD55740CE5E92",
+      "use": "Finite quotient by twists, cohomological bound, finite cohomology, and Serre vanishing for coherent algebraic modules on projective space."
+    },
+    {
+      "label": "cohomology-lemma-cohomology-and-closed-immersions",
+      "tag": "02UV",
+      "file": "cohomology.tex",
+      "label_line": 5458,
+      "statement_lines": [5457, 5466],
+      "bytes_utf8_lf": 373,
+      "sha256_lf": "EB65322B838A0BADE1DF5A354977CE35B3C79DB2A75178287FD069D3B29767D9",
+      "use": "Cohomology is unchanged by extension along a closed topological immersion."
+    },
+    {
+      "label": "modules-lemma-pullback-internal-hom",
+      "tag": "0C6I",
+      "file": "modules.tex",
+      "label_line": 4383,
+      "statement_lines": [4382, 4394],
+      "bytes_utf8_lf": 440,
+      "sha256_lf": "F0433752FFD276EBA9BE6422410EFA5EB99DE6FE2B03041CD7089F8F5BDAD4E9",
+      "use": "Strictly stronger sheaf-level result covering GAGA Lemma 6 for a flat analytification morphism."
+    },
+    {
+      "label": "more-algebra-lemma-pseudo-coherence-and-base-change-ext",
+      "tag": "087R",
+      "file": "more-algebra.tex",
+      "label_line": 17315,
+      "statement_lines": [17314, 17340],
+      "bytes_utf8_lf": 1197,
+      "sha256_lf": "215AB83B133AABE2700667104DD92FA8E25ADB508F5C36E8F2F911A96A5D93FB",
+      "use": "Stalkwise flat Hom and Ext base change; this is the Appendix Proposition 21 mechanism cited by GAGA Lemma 6."
+    },
+    {
+      "label": "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+      "tag": null,
+      "file": "cohomology.tex",
+      "label_line": 20826,
+      "statement_lines": [20825, 20836],
+      "bytes_utf8_lf": 449,
+      "sha256_lf": "498D034CC40D6CC420D57DE2C8885654A8028DE6307A08FDECE7BDD72B754A5C",
+      "use": "Exact finite-dimensionality input for stabilization in Lemma 8."
+    },
+    {
+      "label": "cohomology-lemma-coherent-analytic-sheaf-ext",
+      "tag": null,
+      "file": "cohomology.tex",
+      "label_line": 20851,
+      "statement_lines": [20850, 20858],
+      "bytes_utf8_lf": 341,
+      "sha256_lf": "7B05E3F9EBDB2F8CC1F21CE46FCE7F4F7D476175F552040AD8B2DFFAB7644B66",
+      "use": "The q=0 case gives coherence of analytic internal Hom."
+    },
+    {
+      "label": "homology-lemma-four-lemma",
+      "tag": "05QA",
+      "file": "homology.tex",
+      "label_line": 1595,
+      "statement_lines": [1594, 1611],
+      "bytes_utf8_lf": 515,
+      "sha256_lf": "6F0EA9214FDBF971B368F552C4F5AA4E3F56270B40633784843CC2D87EC700B0",
+      "use": "Surjectivity then injectivity diagram chases in the descending-induction proof of Theorem 1."
+    },
+    {
+      "label": "homology-lemma-five-lemma",
+      "tag": "05QB",
+      "file": "homology.tex",
+      "label_line": 1642,
+      "statement_lines": [1641, 1660],
+      "bytes_utf8_lf": 530,
+      "sha256_lf": "7E704809FCC5729596263E220DAF5F041F8678F5465BA5183DC4B722384C2555",
+      "use": "Two-of-three comparison along the hyperplane long exact sequence."
+    },
+    {
+      "label": "properties-proposition-characterize-ample",
+      "tag": "01Q3",
+      "file": "properties.tex",
+      "label_line": 4618,
+      "statement_lines": [4617, 4696],
+      "bytes_utf8_lf": 2972,
+      "sha256_lf": "8A289D0729409EA11BC3AB1D0E2912EBEDB9CAAB9810CD4550400A59D5D04DED",
+      "use": "Every sufficiently high twist of a finite type quasi-coherent module by an ample invertible module is globally generated."
+    },
+    {
+      "label": "algebra-lemma-NAK",
+      "tag": "00DV",
+      "file": "algebra.tex",
+      "label_line": 3635,
+      "statement_lines": [3634, 3677],
+      "bytes_utf8_lf": 1987,
+      "sha256_lf": "629E6EA41B53D1FA6D1DD8F6402973A9DD2A017BACBFDE0014350FF964D395D9",
+      "use": "M=N+mM implies M=N for a finite module over the analytic local ring."
+    },
+    {
+      "label": "modules-lemma-coherent-abelian",
+      "tag": "01BY",
+      "file": "modules.tex",
+      "label_line": 2036,
+      "statement_lines": [2035, 2063],
+      "bytes_utf8_lf": 1241,
+      "sha256_lf": "B23E1C9BCC47910035A5DFBFC964383FC410EC68AE3F55F88E32DB2F39AFCB57",
+      "use": "Coherent kernels and cokernels in the hyperplane and two-term-presentation arguments."
+    },
+    {
+      "label": "modules-lemma-coherent-change-rings",
+      "tag": null,
+      "file": "modules.tex",
+      "label_line": 2186,
+      "statement_lines": [2185, 2198],
+      "bytes_utf8_lf": 638,
+      "sha256_lf": "A8D595AC7D2B44AE1846EFE2B254AA0C11B609CFD0FEA1D7072B6FEF21D2C814",
+      "use": "Coherence across the quotient structure sheaf of a closed analytic subspace."
+    },
+    {
+      "label": "modules-lemma-i-star-equivalence",
+      "tag": "08KS",
+      "file": "modules.tex",
+      "label_line": 2422,
+      "statement_lines": [2421, 2436],
+      "bytes_utf8_lf": 564,
+      "sha256_lf": "0B2DBD94C09A9F0D921B4057DE9B755C69AA2F97348E8C15301BD061C9156EFC",
+      "use": "Exact fully faithful closed-immersion pushforward and annihilator characterization for ringed spaces."
+    },
+    {
+      "label": "modules-lemma-i-star-reflects-finite-type",
+      "tag": "01C4",
+      "file": "modules.tex",
+      "label_line": 2353,
+      "statement_lines": [2352, 2368],
+      "bytes_utf8_lf": 797,
+      "sha256_lf": "CF6583FCF0AA6F8B63651D20C69A4631F692507ADEEFA3E1E6CE62ABF6007C7F",
+      "use": "Finite type and coherence transport along a closed ringed-space immersion."
+    },
+    {
+      "label": "morphisms-lemma-i-star-equivalence",
+      "tag": "01QY",
+      "file": "morphisms.tex",
+      "label_line": 386,
+      "statement_lines": [385, 398],
+      "bytes_utf8_lf": 434,
+      "sha256_lf": "8B7F10F3CE3C0AD94E4CD4444393C59B0BAB571B422E82CDBEF5D3C24BB03DD7",
+      "use": "Algebraic quasi-coherent descent from an ambient projective space by ideal annihilation."
+    },
+    {
+      "label": "coherent-lemma-i-star-equivalence",
+      "tag": "087T",
+      "file": "coherent.tex",
+      "label_line": 2575,
+      "statement_lines": [2574, 2601],
+      "bytes_utf8_lf": 1424,
+      "sha256_lf": "1C9D5587EAE0F073AB087D2FC226E2500C59E024FEFFDFEB5A9AE7F3F169B6F9",
+      "use": "Coherent algebraic sheaves on a closed subscheme are equivalent to coherent ambient sheaves annihilated by its ideal."
+    },
+    {
+      "label": "varieties-lemma-hyperplane",
+      "tag": "089Z",
+      "file": "varieties.tex",
+      "label_line": 6552,
+      "statement_lines": [6551, 6560],
+      "bytes_utf8_lf": 285,
+      "sha256_lf": "097423F38D987B7BDB4A70E006A8CA759C2E6FB11EBD77298A46A516484081B5",
+      "use": "A hyperplane in projective r-space is projective (r-1)-space and its O(1) is the restricted twist."
+    }
+  ],
+  "external_analytic_dependencies": [
+    {
+      "id": "projective-space-sheaf-cohomological-dimension",
+      "needed_by": [
+        "gaga:no:13"
+      ],
+      "statement": "A paracompact Hausdorff space of covering dimension d has sheaf cohomological dimension at most d; P^r(C) is compact triangulable of real dimension 2r.",
+      "current_stacks_status": "not_found_as_a_named_covering-dimension theorem",
+      "candidate_handling": "Stated as gaga-lemma-projective-analytic-cohomological-dimension with the external topological theorem named explicitly."
+    },
+    {
+      "id": "dolbeault-projective-structure-sheaf",
+      "needed_by": [
+        "gaga:lemma:4"
+      ],
+      "statement": "Dolbeault identifies H^q(P^r(C),O_hol) with H^{0,q}_{dbar}, and H^{0,q}(P^r(C)) is C for q=0 and zero for q>0.",
+      "current_stacks_status": "not_found",
+      "candidate_handling": "Declared exactly in the proof of gaga-lemma-projective-structure-sheaf-comparison and cited to GAGA no. 13."
+    },
+    {
+      "id": "compact-coherent-analytic-cohomology-finite-dimensional",
+      "needed_by": [
+        "gaga:lemma:8"
+      ],
+      "statement": "Cohomology of a coherent analytic module on a compact complex analytic space is finite dimensional in every degree.",
+      "current_stacks_status": "existing_exact",
+      "label": "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+      "proof_dependency": "Grauert proper direct image theorem"
+    },
+    {
+      "id": "oka-cartan-coherence",
+      "needed_by": [
+        "gaga:no:15",
+        "gaga:no:16",
+        "gaga:no:17"
+      ],
+      "statement": "Analytic structure sheaves and closed analytic ideals are coherent.",
+      "current_stacks_status": "planned prerequisite in the standalone GAGA foundation tranche",
+      "planned_label": "gaga-theorem-oka-cartan-coherence"
+    },
+    {
+      "id": "analytification-local-faithful-flatness",
+      "needed_by": [
+        "gaga:lemma:6"
+      ],
+      "statement": "For every algebraic point x, O_{X,x} to O_{X^an,x} is faithfully flat.",
+      "current_stacks_status": "planned prerequisite in the nos. 5--8 analytification tranche",
+      "planned_label": "gaga-theorem-analytification-local-faithfully-flat"
+    }
+  ],
+  "predecessor_contract": {
+    "notation": {
+      "analytic_space": "X^{an}",
+      "analytic_module": "F^{an}",
+      "canonical_morphism": "a_X:X^{an}->X",
+      "comparison_map": "epsilon^q_F"
+    },
+    "required_planned_full_labels": [
+      "gaga-theorem-analytification-local-faithfully-flat",
+      "gaga-lemma-analytification-exact-faithful-coherent",
+      "gaga-lemma-analytification-pushforward-closed-immersion",
+      "gaga-construction-analytification-cohomology-map",
+      "gaga-lemma-analytification-cohomology-map-functorial",
+      "gaga-theorem-gaga-cohomology",
+      "gaga-theorem-gaga-fully-faithful",
+      "gaga-theorem-gaga-essential-surjectivity",
+      "gaga-remark-gaga-comparison-factorization"
+    ],
+    "source": "Exact names and notation supplied by the concurrent nos. 5--8 and nos. 9--12 audits; no live files were edited or inferred from an unbuilt gaga.tex."
+  },
+  "proof_dependency_order": [
+    {
+      "step": 1,
+      "label": "gaga-lemma-projective-analytic-cohomological-dimension",
+      "requires": [
+        "external projective-space covering-dimension theorem"
+      ]
+    },
+    {
+      "step": 2,
+      "label": "gaga-lemma-projective-structure-sheaf-comparison",
+      "requires": [
+        "coherent-lemma-cohomology-projective-space-over-ring",
+        "external Dolbeault-projective-space calculation"
+      ]
+    },
+    {
+      "step": 3,
+      "label": "gaga-lemma-projective-twist-comparison",
+      "requires": [
+        "step 2",
+        "dimension induction",
+        "varieties-lemma-hyperplane",
+        "gaga-lemma-analytification-exact-faithful-coherent",
+        "gaga-lemma-analytification-pushforward-closed-immersion",
+        "gaga-lemma-analytification-cohomology-map-functorial",
+        "homology-lemma-five-lemma"
+      ]
+    },
+    {
+      "step": 4,
+      "label": "gaga-theorem-gaga-cohomology",
+      "requires": [
+        "steps 1 and 3",
+        "cohomology-lemma-cohomology-and-closed-immersions",
+        "coherent-lemma-coherent-projective",
+        "homology-lemma-four-lemma"
+      ]
+    },
+    {
+      "step": 5,
+      "label": "gaga-lemma-analytification-internal-hom",
+      "requires": [
+        "gaga-theorem-analytification-local-faithfully-flat",
+        "modules-lemma-pullback-internal-hom"
+      ]
+    },
+    {
+      "step": 6,
+      "label": "gaga-theorem-gaga-fully-faithful",
+      "requires": [
+        "steps 4 and 5"
+      ]
+    },
+    {
+      "step": 7,
+      "label": "gaga-lemma-gaga-essential-surjectivity-projective-reduction",
+      "requires": [
+        "step 6",
+        "gaga-lemma-coherent-analytic-closed-immersion",
+        "gaga-lemma-analytification-exact-faithful-coherent",
+        "gaga-lemma-analytification-pushforward-closed-immersion"
+      ]
+    },
+    {
+      "step": 8,
+      "label": "gaga-lemma-hyperplane-analytic-serre-vanishing",
+      "requires": [
+        "step 4",
+        "essential-surjectivity induction in dimension r-1",
+        "coherent-lemma-coherent-projective"
+      ]
+    },
+    {
+      "step": 9,
+      "label": "gaga-lemma-projective-analytic-global-generation",
+      "requires": [
+        "step 8",
+        "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+        "properties-proposition-characterize-ample",
+        "algebra-lemma-NAK"
+      ]
+    },
+    {
+      "step": 10,
+      "label": "gaga-theorem-gaga-essential-surjectivity",
+      "requires": [
+        "steps 6, 7, and 9",
+        "gaga-lemma-analytification-exact-faithful-coherent",
+        "modules-lemma-coherent-abelian"
+      ]
+    }
+  ],
+  "architecture_checks": {
+    "theorem_1_descending_induction": "For B=L, C=F, D=H^{q+1}(R), E=H^{q+1}(L), the surjective half of the four lemma proves epsilon_F^q surjective. Applying that result to R supplies epsilon_R^q surjective; the injective half of the four lemma then proves epsilon_F^q injective.",
+    "theorem_3_no_circularity": "At dimension r, Lemma 7 and the algebraization of B in Lemma 8 use essential surjectivity only on the hyperplane of dimension r-1. Theorem 1 and Theorem 2 are already complete before the induction starts.",
+    "lemma_8_stabilization": "H^2(C(n))=0 and H^1(B(n))=0 give dim H^1(M(n-1)) >= dim H^1(L_n) >= dim H^1(M(n)); finite-dimensionality makes the integer sequence eventually constant, so H^1(L_n)->H^1(M(n)) is an isomorphism and H^0(M(n))->H^0(B(n)) is surjective.",
+    "lemma_8_nakayama": "At x on E, B(n)_x=M/(t)M. Lifted global sections generate this quotient, hence M=N+(t)M=N+mM; M is finite and Nakayama gives M=N.",
+    "completion": "Two finite global-generation surjections produce L_1^an -> L_0^an -> M -> 0. Full faithfulness algebraizes the first map and exactness of analytification identifies the cokernel with M."
+  },
+  "candidate": {
+    "path": "user/Documents/stacks-ftg/tmp/gaga_proofs_13_17_candidate.tex",
+    "kind": "continuation_fragment",
+    "bytes": 18173,
+    "sha256": "BB8C97D69A2A877A3D270EED01976A77798BAE501E1A997C52B9FFC6021E5530",
+    "lines": 437,
+    "actual_local_labels": [
+      "section-proof-gaga-cohomology",
+      "lemma-projective-analytic-cohomological-dimension",
+      "lemma-projective-structure-sheaf-comparison",
+      "lemma-projective-twist-comparison",
+      "section-proof-gaga-fully-faithful",
+      "lemma-analytification-internal-hom",
+      "section-gaga-essential-surjectivity-preliminaries",
+      "lemma-coherent-analytic-closed-immersion",
+      "lemma-gaga-essential-surjectivity-projective-reduction",
+      "section-gaga-analytic-twists",
+      "definition-coherent-analytic-twist",
+      "lemma-hyperplane-analytic-serre-vanishing",
+      "lemma-projective-analytic-global-generation",
+      "section-completion-gaga-essential-surjectivity"
+    ],
+    "projected_full_labels": [
+      "gaga-section-proof-gaga-cohomology",
+      "gaga-lemma-projective-analytic-cohomological-dimension",
+      "gaga-lemma-projective-structure-sheaf-comparison",
+      "gaga-lemma-projective-twist-comparison",
+      "gaga-section-proof-gaga-fully-faithful",
+      "gaga-lemma-analytification-internal-hom",
+      "gaga-section-gaga-essential-surjectivity-preliminaries",
+      "gaga-lemma-coherent-analytic-closed-immersion",
+      "gaga-lemma-gaga-essential-surjectivity-projective-reduction",
+      "gaga-section-gaga-analytic-twists",
+      "gaga-definition-coherent-analytic-twist",
+      "gaga-lemma-hyperplane-analytic-serre-vanishing",
+      "gaga-lemma-projective-analytic-global-generation",
+      "gaga-section-completion-gaga-essential-surjectivity"
+    ],
+    "statement_labels_closed_by_proofs": [
+      "gaga-theorem-gaga-cohomology",
+      "gaga-theorem-gaga-fully-faithful",
+      "gaga-theorem-gaga-essential-surjectivity"
+    ],
+    "mathematical_content": [
+      "Explicit external topological and Dolbeault inputs.",
+      "Closed-immersion reduction and source-faithful descending induction for Theorem 1.",
+      "Flat-pullback internal Hom and H^0 comparison for Theorem 2.",
+      "Uniqueness, projective-space reduction, analytic twists, hyperplane vanishing, H^1 stabilization, Nakayama, and the two-term algebraization presentation for Theorem 3."
+    ]
+  },
+  "integration_anchor": {
+    "target_file": "user/Documents/stacks-ftg/gaga.tex",
+    "target_currently_exists": false,
+    "predecessor_fragment": "nos. 9--12 sheaf/statement tranche",
+    "anchor_local_label": "remark-gaga-comparison-factorization",
+    "anchor_full_label": "gaga-remark-gaga-comparison-factorization",
+    "operation": "Insert the exact candidate fragment after the end of the remark carrying the anchor label and before the unique terminal \\input{chapters}.",
+    "terminal_guard": "The merged standalone file must contain exactly one terminal \\input{chapters}; do not append this fragment after it.",
+    "ordering": [
+      "foundation nos. 1--4",
+      "analytification nos. 5--8",
+      "sheaves and theorem statements nos. 9--12",
+      "this proof continuation nos. 13--17",
+      "later applications nos. 18--20",
+      "terminal chapters input"
+    ]
+  },
+  "projected_mapping_transaction": [
+    {
+      "unit_id": "gaga:no:13",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-section-proof-gaga-cohomology;gaga-lemma-projective-analytic-cohomological-dimension;gaga-lemma-projective-structure-sheaf-comparison;gaga-lemma-projective-twist-comparison;gaga-theorem-gaga-cohomology",
+      "rationale": "The integrated section contains the complete reduction, base cases, twist induction, and descending-induction proof."
+    },
+    {
+      "unit_id": "gaga:lemma:4",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-lemma-projective-structure-sheaf-comparison;coherent-lemma-cohomology-projective-space-over-ring",
+      "rationale": "The new GAGA lemma combines the exact live algebraic computation with the explicit Dolbeault analytic input."
+    },
+    {
+      "unit_id": "gaga:lemma:5",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-lemma-projective-twist-comparison;varieties-lemma-hyperplane;homology-lemma-five-lemma",
+      "rationale": "The integrated statement and proof give comparison for every O(n), every n and q."
+    },
+    {
+      "unit_id": "gaga:no:14",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-section-proof-gaga-fully-faithful;gaga-lemma-analytification-internal-hom;gaga-theorem-gaga-fully-faithful",
+      "rationale": "The integrated section identifies internal Hom under analytification and proves full faithfulness via Theorem 1 in degree zero."
+    },
+    {
+      "unit_id": "gaga:lemma:6",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-lemma-analytification-internal-hom;modules-lemma-pullback-internal-hom;more-algebra-lemma-pseudo-coherence-and-base-change-ext",
+      "rationale": "The named GAGA specialization is proved by the already stronger flat-pullback internal-Hom theorem."
+    },
+    {
+      "unit_id": "gaga:no:15",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-section-gaga-essential-surjectivity-preliminaries;gaga-lemma-coherent-analytic-closed-immersion;gaga-lemma-gaga-essential-surjectivity-projective-reduction",
+      "rationale": "The integrated lemmas prove uniqueness and the exact reduction from projective varieties to projective space."
+    },
+    {
+      "unit_id": "gaga:no:16",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-section-gaga-analytic-twists;gaga-definition-coherent-analytic-twist;gaga-lemma-hyperplane-analytic-serre-vanishing;gaga-lemma-projective-analytic-global-generation",
+      "rationale": "The integrated section contains the analytic twist construction and the complete hyperplane/global-generation proof."
+    },
+    {
+      "unit_id": "gaga:lemma:7",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-lemma-hyperplane-analytic-serre-vanishing;coherent-lemma-coherent-projective;gaga-theorem-gaga-cohomology",
+      "rationale": "The new analytic lemma is deduced from induction, GAGA cohomology, and exact algebraic Serre vanishing."
+    },
+    {
+      "unit_id": "gaga:lemma:8",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-lemma-projective-analytic-global-generation;cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional;properties-proposition-characterize-ample;algebra-lemma-NAK",
+      "rationale": "The integrated proof includes monotonicity, openness, compactness, the Tor hyperplane sequence, H^1 stabilization, lifting, and Nakayama."
+    },
+    {
+      "unit_id": "gaga:no:17",
+      "action": "set",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "gaga-section-completion-gaga-essential-surjectivity;gaga-theorem-gaga-essential-surjectivity;gaga-theorem-gaga-fully-faithful;gaga-lemma-projective-analytic-global-generation",
+      "rationale": "The integrated completion algebraizes a two-term presentation and proves essential surjectivity."
+    }
+  ],
+  "deterministic_checks": {
+    "performed": [
+      {
+        "check": "exact source SHA-256",
+        "result": "pass"
+      },
+      {
+        "check": "sealed map has exactly the ten requested needs_review rows",
+        "result": "pass"
+      },
+      {
+        "check": "nine equation children remain structural_only/inherits_parent",
+        "result": "pass"
+      },
+      {
+        "check": "candidate begin/end environment counts",
+        "begin_count": 21,
+        "end_count": 21,
+        "mismatches": 0,
+        "result": "pass"
+      },
+      {
+        "check": "candidate labels after stripping comments",
+        "labels": 14,
+        "unique_labels": 14,
+        "duplicates": 0,
+        "result": "pass"
+      },
+      {
+        "check": "candidate references against candidate labels, sealed Stacks inventory, and declared predecessor labels",
+        "references": 49,
+        "unique_references": 35,
+        "unresolved": 0,
+        "result": "pass"
+      },
+      {
+        "check": "projected full-label collisions against sealed stx.csv",
+        "projected_labels": 14,
+        "collisions": 0,
+        "result": "pass"
+      },
+      {
+        "check": "bibliography key GAGA exists",
+        "file": "my.bib",
+        "file_bytes": 220937,
+        "file_sha256": "953C5DFAEE8F1176A1F154B40B99C751EE206D41F030299E0DE7D9807F5128E8",
+        "result": "pass"
+      }
+    ],
+    "not_performed": [
+      {
+        "check": "TeX build",
+        "reason": "Explicit task boundary forbids builds."
+      },
+      {
+        "check": "fresh tag or dossier generation",
+        "reason": "Explicit task boundary forbids tag and dossier mutations."
+      },
+      {
+        "check": "merged gaga.tex anchor count",
+        "reason": "The target gaga.tex does not yet exist; the exact predecessor anchor is supplied by the concurrent nos. 9--12 design."
+      }
+    ],
+    "required_integration_gates_in_order": [
+      "Rehash every predecessor fragment and this candidate before merge.",
+      "Assemble the standalone gaga.tex in source order and verify the anchor label and terminal chapters input each occur exactly once.",
+      "Verify all declared predecessor labels exist with the exact local spellings in predecessor bytes.",
+      "Re-run comment-aware environment, local-label uniqueness, reference closure, citation closure, and projected full-label collision checks on the merged file.",
+      "Build only after the task boundary is lifted; require a clean TeX exit, no undefined references/citations, and stable second-pass auxiliary output.",
+      "Run the narrow GAGA mapping transaction only for gaga_r1 map rows 47--55 and 65, preserving equation children 56--64 as structural_only unless a later explicit mapping policy says otherwise."
+    ]
+  },
+  "non_goals": [
+    "This audit does not edit or claim integration of gaga.tex.",
+    "It does not re-audit Theorems 1--3 as statement units in no. 12, except to hash and quote their exact target claims.",
+    "It does not audit applications nos. 18--20 or Appendix nos. 21--24.",
+    "It does not hide the Dolbeault or topological cohomological-dimension inputs behind the phrase GAGA."
+  ]
+}

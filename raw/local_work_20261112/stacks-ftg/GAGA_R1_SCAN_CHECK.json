@@ -1,0 +1,49 @@
+{
+  "schema": "gaga-post-tohoku-current-tree-scanner-check-v1",
+  "status": "STRICT_PASS_BYTE_IDENTICAL_ORACLE_AND_REPLAY",
+  "created_utc": "2026-08-24T13:55:19Z",
+  "purpose": "Freeze the current post-Tohoku-r71 Stacks label and topic-candidate surface before the first GAGA decision tranche.",
+  "baseline": {
+    "path": "gaga/mcheck.json",
+    "bytes": 33500,
+    "sha256": "0644631A04DD4F75386E92E20D1573A9C5E437F576DF2DD33A7DD35D817BE822",
+    "units": 126,
+    "decisions": 0,
+    "needs_review": 79
+  },
+  "oracle": "tmp/gaga_post_tohoku_scan_probe_r1",
+  "replay": "tmp/gaga_post_tohoku_scan_probe_replay_r1",
+  "configuration_change": {
+    "field": "dossier_id",
+    "value": "gaga_r1",
+    "reason": "Make check.json path keys deterministic and identical across the two task-owned scanner directories; no authority, topic rule, or source input changed."
+  },
+  "counts": {
+    "tex_files": 119,
+    "labels": 22116,
+    "official_tags_joined": 21437,
+    "topics": 9,
+    "topic_candidates": 569,
+    "topic_coverage": {
+      "direct": 4,
+      "partial": 2,
+      "no_direct": 3
+    },
+    "warnings": 690,
+    "errors": 0
+  },
+  "warning_classes": {
+    "untagged_TeX_labels": 679,
+    "generated_book_labels_outside_chapter_TeX": 9,
+    "untagged_analytification_topic_evidence": 2
+  },
+  "byte_identical_inventory": [
+    {"file": "cfg.json", "bytes": 2294, "sha256": "DE859ECB7D8CB30F8C6270FE93F573B29220FB68C39CA4E6CA9356CFCBD7BB9C"},
+    {"file": "check.json", "bytes": 84422, "sha256": "88BEB039B2838BEAC8C9CF61CCA18E056A0336DDF9705970DCBEDFBB63D35464"},
+    {"file": "stx.csv", "bytes": 5291400, "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"},
+    {"file": "tcand.csv", "bytes": 222670, "sha256": "143156A4BACED58796C3AED709A919DEC3F9E1BBE37A7D2AC275908991A3F933"},
+    {"file": "tmap.csv", "bytes": 1792, "sha256": "E1798EA106C06DC3E5E04B8A9C659B24409DCE9FD7A451119723C6776027FD99"},
+    {"file": "topics.csv", "bytes": 1875, "sha256": "B603A8EE4DB16870D2F2E82ED03A7BFC34D88329CFB9DC612ADDD3BF7A061CF8"}
+  ],
+  "authorization": "PASS_CURRENT_SCANNER_GATE_FOR_NO_OVERWRITE_GAGA_SUCCESSOR"
+}

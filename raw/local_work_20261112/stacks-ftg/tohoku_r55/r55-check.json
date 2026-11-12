@@ -1,0 +1,1293 @@
+{
+  "authority_inputs": {
+    "part_i": {
+      "bytes": 7305283,
+      "name": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    "part_ii": {
+      "bytes": 3984260,
+      "name": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    }
+  },
+  "deltas": {
+    "decisions": 1031,
+    "decisions_appended": [
+      {
+        "action": "replace",
+        "decision_id": "D001031",
+        "disposition": "existing_equivalent",
+        "rationale": "The integrated Stacks cohomology chapter now contains the p. 213--218 abstract equivariant Hom/Ext theory: the four degree-zero Hom functors and their factorizations; derived global and sheaf Ext in the abelian category of G-O-modules; locality, slice restriction, and stalk comparison; the injective-acyclicity lemmas required for invariant direct image, invariants, and equivariant global sections; the underlying Ext identifications; spectral sequences I--V and the sheaf-valued Grothendieck spectral sequence; and the locally-free degeneration. The p. 219 complex-analytic applications remain separately open and are not used for this section-level closure. Only the existing Ext-sheaves aggregate carries authoritative official tag 0BQP; the integrated local labels carry no official tags.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-section-ext;cohomology-lemma-equivariant-internal-hom;cohomology-lemma-equivariant-hom-functors;cohomology-definition-equivariant-ext;cohomology-lemma-equivariant-ext-properties;cohomology-lemma-localize-equivariant-ext;cohomology-lemma-equivariant-ext-slice;cohomology-lemma-equivariant-hom-injective-stalk;cohomology-lemma-equivariant-ext-stalk;cohomology-lemma-skew-group-hom-injective-acyclic;cohomology-lemma-equivariant-product-internal-hom;cohomology-lemma-equivariant-hom-injective-acyclic;cohomology-lemma-equivariant-higher-invariant-direct-image-modules;cohomology-lemma-equivariant-underlying-ext;cohomology-lemma-equivariant-ext-spectral-sequences;cohomology-lemma-equivariant-sheaf-ext-spectral-sequence;cohomology-lemma-equivariant-ext-locally-free;cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence;cohomology-lemma-equivariant-ext-trivial-action-spectral-sequence",
+        "supersedes": "D000639",
+        "unit_id": "tohoku:section:5.6-equivariant-ext"
+      }
+    ],
+    "errors": [],
+    "inherited_unit_inventory": "BYTE_IDENTICAL_R54",
+    "issues_appended": [],
+    "map_delta": {
+      "changed_units": 1,
+      "changes": {
+        "tohoku:section:5.6-equivariant-ext": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ]
+      },
+      "unchanged_units": 990
+    },
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 679,
+      "decisions": 1031,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 375,
+        "existing_stronger": 41,
+        "existing_weaker": 6,
+        "extend_existing": 13,
+        "historical_reference": 33,
+        "new_section": 4,
+        "new_statement": 11,
+        "structural_only": 424
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 30,
+      "unit_candidates": 0,
+      "units": 991
+    },
+    "remaining_gap_class_dispositions": 34,
+    "scan_counts": {
+      "errors": 0,
+      "labels": 22087,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 659
+    },
+    "scanner_check_delta": {
+      "changed_fields": [
+        "sha256"
+      ],
+      "namespace_keys_only": 4,
+      "normalized_equal": true
+    },
+    "scanner_payload_change": "NONE",
+    "semantic_generation": "sem/r19",
+    "source_change": "NONE",
+    "source_repairs_appended": 0,
+    "status": "PASS"
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "bytes": 3723,
+        "contract": "one_read_hash_compile_exec_builder_and_pin_validator",
+        "path": "srcmap/start_build_tohoku_r55.py",
+        "sha256": "7BBB3F55A49950CCB9C17B31FDCA4D1B53B5E18E562EFB1F39046D81E3C16D3F"
+      },
+      "builder": {
+        "bytes": 14190,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r55.py",
+        "sha256": "A3205F5955FCFB570D3E17CA1D29D66683A8BB780283C97122DA0969E90AC0E6"
+      },
+      "driver": {
+        "bytes": 4126,
+        "contract": "self_read_hash_then_one_shot_bootstrap_envelope",
+        "path": "srcmap/start_build_tohoku_r55.ps1",
+        "sha256": "297F39F269B2206B63C4095DAF065BB6283351EC80DFB20987CAAFD4FB54C0A0"
+      },
+      "validator": {
+        "bytes": 80790,
+        "contract": "independent_same_bytes_stage_and_receipt_replay",
+        "path": "srcmap/validate_tohoku_r55.py",
+        "sha256": "DAC9DDC672B4C323D43AB9B8D7D233CB3E40DD68A2F7FB3F7C29ED3E63253CE9"
+      }
+    },
+    "contract": "one_shot_self_attested_driver_bootstrap_builder_validator; exact_inputs_locked_through_atomic_no_overwrite_promotion_with_rollback",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    }
+  },
+  "files": [
+    {
+      "bytes": 1123,
+      "name": "STATUS.md",
+      "sha256": "B8DDD0C30810FD56344096E03D249E9D3DEA3BB0870FEE698C1D847A23716231"
+    },
+    {
+      "bytes": 5151,
+      "name": "cfg.json",
+      "sha256": "3F8EC62FEA5C2EEA711FBF93F73BC95052E3B69594F9712D115DDCA8DC56A68F"
+    },
+    {
+      "bytes": 80879,
+      "name": "check.json",
+      "sha256": "ABFB36E65B4A5F46AFD6584AB4074EF782BFA2D1C15142335E36DB2DEF680982"
+    },
+    {
+      "bytes": 378984,
+      "name": "dec.csv",
+      "sha256": "CBA7EB96B1EF1E61A1E1AE824EB40BF54B4B8D6388E31EE88DC20DF3860E3B45"
+    },
+    {
+      "bytes": 1578,
+      "name": "intake.json",
+      "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F"
+    },
+    {
+      "bytes": 31413,
+      "name": "issues.csv",
+      "sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503"
+    },
+    {
+      "bytes": 482243,
+      "name": "map.csv",
+      "sha256": "0EAAF30DD6AC08B21E6C7156FD9C7FA92A5033D20AED7F172A564A491FA1503B"
+    },
+    {
+      "bytes": 70707,
+      "name": "mcheck.json",
+      "sha256": "A3F79F68A6F814B40A0B6894C3D3745FB53BBCB6BE73C9F195604C920E85A4E0"
+    },
+    {
+      "bytes": 5283396,
+      "name": "stx.csv",
+      "sha256": "5E22D3B8B976E5BD845BA0CF69D7AB7685C619D39CDEB53DADCF9A269798BB9D"
+    },
+    {
+      "bytes": 488729,
+      "name": "tcand.csv",
+      "sha256": "4AA8FDD23C221B7663B1FDB5B61F7F6F4B65BEA89346D2881713C5A5AFDB8DAC"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 393225,
+      "name": "units.csv",
+      "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+    }
+  ],
+  "formalization_audit": {
+    "candidate": {
+      "bytes": 10966,
+      "name": "user\\Documents\\stacks-ftg\\tmp\\d1011_block_candidate.tex",
+      "sha256": "4AD32E4AB5A76973B0175663578654BB410714709BC720815286FC2EB185C90F"
+    },
+    "corrected_source": {
+      "corrected_french_p193": {
+        "bytes": 4381,
+        "name": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p193.tex",
+        "sha256": "9EB244D7FC0BA1C69C778560677BE83F48880E027905A4E34D197FF5EA1B6906"
+      },
+      "english_p193": {
+        "bytes": 4186,
+        "name": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p193.tex",
+        "sha256": "E12D0413BAB9D7C66916AFCACF28757C5D4BE8A569AF0892D79AF9F6B67D4858"
+      }
+    },
+    "fixed_point_pdf": {
+      "bytes": 1952425,
+      "name": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+      "pages": 234,
+      "sha256": "0A8435C4E6D6FD17CEEC99E19AD67040270EE1BEE66DBA109E68D1D0414D0244"
+    },
+    "formalization_id": "D1011",
+    "independent_live_replay": "STRICT_PASS",
+    "intended_mapping_closures": [
+      {
+        "decision_id": "D001028",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-constant-sheaf-ext-stalk-spectral-sequences",
+        "supersedes": "D000476",
+        "unit_id": "tohoku:construction:stalk-spectral-sequence-limits"
+      },
+      {
+        "decision_id": "D001029",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-constant-sheaf-ext-stalk-comparison;cohomology-lemma-constant-sheaf-ext-stalk-noetherian-quotient",
+        "supersedes": "D000490",
+        "unit_id": "tohoku:criterion:stalk-ext-limit-transfer"
+      },
+      {
+        "decision_id": "D001030",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-section-ext",
+        "supersedes": "D000332",
+        "unit_id": "tohoku:section:4.3"
+      }
+    ],
+    "live_source": {
+      "bytes": 895363,
+      "name": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+    },
+    "predicate_results": {
+      "P001": "PASS",
+      "P002": "PASS",
+      "P003": "PASS",
+      "P004": "PASS",
+      "P005": "PASS",
+      "P006": "PASS",
+      "P007": "PASS",
+      "P008": "PASS",
+      "P009": "PASS",
+      "P010": "PASS",
+      "P011": "PASS",
+      "P012": "PASS"
+    },
+    "predicate_summary": {
+      "failed": 0,
+      "passed": 12,
+      "rule": "overall_result is STRICT_PASS iff every predicate replays PASS from the bound live files",
+      "total": 12
+    },
+    "receipt": {
+      "bytes": 26909,
+      "name": "D1011_FORMALIZATION_CHECK.json",
+      "sha256": "2681A171FDA816DAC6B96916C51DC705BE596DC00B93C2F943C205F5DA246C38"
+    },
+    "scanner_oracle": {
+      "check.json": {
+        "bytes": 80879,
+        "name": "tmp/d1011_scan/check.json",
+        "sha256": "798607A517735BC50C77356894D9089D9218DC0A2B5D49DB073347C455615EDD"
+      },
+      "stx.csv": {
+        "bytes": 5283396,
+        "name": "tmp/d1011_scan/stx.csv",
+        "sha256": "5E22D3B8B976E5BD845BA0CF69D7AB7685C619D39CDEB53DADCF9A269798BB9D"
+      },
+      "tcand.csv": {
+        "bytes": 488729,
+        "name": "tmp/d1011_scan/tcand.csv",
+        "sha256": "4AA8FDD23C221B7663B1FDB5B61F7F6F4B65BEA89346D2881713C5A5AFDB8DAC"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "name": "tmp/d1011_scan/tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      }
+    },
+    "schema": "tohoku-stacks-d1011-formalization-check-v1",
+    "status": "STRICT_PASS",
+    "visual_manifest_sha256": "90E06341B4EC52C21F82DE3C8C6A986A80077AB4596A0F0E74D9F4023822C4DC"
+  },
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 32373,
+      "name": "tohoku_r54/r54-check.json",
+      "sha256": "2A63159128896CEB8FCF0F536278ADFA883906C4D0CE0A71B96BC1E1EE089936"
+    },
+    "reason": "Direct user report: the account was suspended after VPN use and a support ticket is filed; no Git operation is needed for this bounded local successor.",
+    "remote_server_freshness_verified": false,
+    "status": "temporarily_unavailable"
+  },
+  "mapping_design": {
+    "analytic_nonclaims": [
+      "This design does not assert any theorem about holomorphic spaces, coherent analytic sheaves, holomorphic vector bundles, compact analytic quotients, analytic descent, or finite-dimensional analytic extension spaces.",
+      "The six listed p.219 complex-analytic gap units remain open with their current dispositions and rationales.",
+      "The p.219 analogy and holomorphic example remain example_or_remark, and the embedded holomorphic Ext equation remains structural_only; none is used to justify D001031.",
+      "The section-level existing_equivalent disposition refers only to the abstract equivariant Hom/Ext theory integrated from pp.213--218.",
+      "No official tag is claimed for any newly integrated local label. Only the pre-existing section aggregate cohomology-section-ext carries authoritative tag 0BQP.",
+      "No source correction, source edit, mapping mutation, cursor update, build, scanner run, Git/GitHub action, publication, cleanup, or archive action is performed by this design."
+    ],
+    "audit_predicates": {
+      "derived_ext_covered": true,
+      "exact_live_source_identity": true,
+      "exact_r53_source_decision_map_rows_bound": true,
+      "exact_source_pages_213_218_bound": true,
+      "four_hom_functors_covered": true,
+      "injective_acyclicity_covered": true,
+      "integrated_labels_found_once_each": true,
+      "locality_covered": true,
+      "locally_free_case_covered": true,
+      "official_tag_boundary_enforced": true,
+      "projected_gap_delta_exact": true,
+      "r54_contingency_explicit": true,
+      "result": "STRICT_PASS",
+      "section_aggregate_covered": true,
+      "sheaf_ext_spectral_sequence_covered": true,
+      "six_p219_complex_analytic_gaps_left_open": true,
+      "spectral_sequences_I_through_V_covered": true,
+      "stalks_covered": true
+    },
+    "canonical_decision_row": {
+      "csv_bytes": 1832,
+      "csv_encoding": "csv.writer(...,lineterminator='\\n'), UTF-8 without BOM, no header",
+      "csv_schema": [
+        "decision_id",
+        "unit_id",
+        "action",
+        "disposition",
+        "stacks_labels",
+        "rationale",
+        "review_state",
+        "supersedes"
+      ],
+      "csv_sha256": "4911BD911C6D081C5F6E9F6AD73154BA46BA5D57188080BE83E46686AE824CFC",
+      "json_bytes": 1950,
+      "json_encoding": "json.dumps(row,ensure_ascii=True,sort_keys=True,separators=(',',':'))",
+      "json_sha256": "A229F0C67ED6DAC1733F6071956C889D4D7FB912CE401F6B0D2048540A519CAA"
+    },
+    "expected_delta": {
+      "changed_fields": [
+        "decision_id",
+        "disposition",
+        "rationale",
+        "review_state",
+        "stacks_labels",
+        "stacks_tags"
+      ],
+      "changed_units": 1,
+      "decision_rows_appended": 1,
+      "issues_csv_change": "none",
+      "remaining_gap_class_dispositions_after": 34,
+      "remaining_gap_class_dispositions_before": 35,
+      "scanner_change": "none",
+      "source_change": "none",
+      "unchanged_units": 990
+    },
+    "independent_live_replay": "STRICT_PASS",
+    "label_count": 19,
+    "label_inventory": [
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-section-ext",
+        "kind": "section",
+        "line": 14676,
+        "official_tag": "0BQP",
+        "section_label": "section-ext",
+        "section_title": "Ext sheaves",
+        "short_label": "section-ext",
+        "text_sha256": "B399F70D557470FE1A964954BE0B6F05ADE1BD886B9E238F5E57F03C02A841AF"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-internal-hom",
+        "kind": "lemma",
+        "line": 18317,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-internal-hom",
+        "text_sha256": "CEADBE54826590E0D79225E5F6B0D768E8621E5AC20DBB4D40B47DA5BA393C88"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-hom-functors",
+        "kind": "lemma",
+        "line": 18400,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-hom-functors",
+        "text_sha256": "F10B2666C61E225E5030FD6AA6E9D3A820C3388417C5A67813C261EF7B332FD8"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-definition-equivariant-ext",
+        "kind": "definition",
+        "line": 18473,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "definition-equivariant-ext",
+        "text_sha256": "127D74C056006E05B944C8150B57D259CA0C2FBD16D6BF9A426C1A681ABBEA57"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-properties",
+        "kind": "lemma",
+        "line": 18504,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-properties",
+        "text_sha256": "B6771DF349D66E8AB599D6037C36D4FFB309F0D13F1FD78D143994740B6C2D65"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-localize-equivariant-ext",
+        "kind": "lemma",
+        "line": 18605,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-localize-equivariant-ext",
+        "text_sha256": "CDBB116838DB1D906B22041EBDAB0A1A7DEB0DF4413A12CBA5173F40DFE33521"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-slice",
+        "kind": "lemma",
+        "line": 18649,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-slice",
+        "text_sha256": "F9694B677DB67CA63815F933D3A764225B530F35B1F660B43CB8AE450F7E96BA"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-hom-injective-stalk",
+        "kind": "lemma",
+        "line": 18734,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-hom-injective-stalk",
+        "text_sha256": "C629C98FE2C45D09B6F3B1FFD03E1AD515B079B93BA495F93560C73ACF683D47"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-stalk",
+        "kind": "lemma",
+        "line": 18931,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-stalk",
+        "text_sha256": "95D4DEBCF70B94B6A3CC1A1C068FD5B2824569344777B531C19020FD296B9689"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-skew-group-hom-injective-acyclic",
+        "kind": "lemma",
+        "line": 19005,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-skew-group-hom-injective-acyclic",
+        "text_sha256": "74C5A6E46BF95BA62BB07321F18D319A33D86DC00905CA884844D831B9F12642"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-product-internal-hom",
+        "kind": "lemma",
+        "line": 19122,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-product-internal-hom",
+        "text_sha256": "DEE45310A33EAB3D8A82C63A55194C336379EBFF0E6EBFD22E22F79828073EFE"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-hom-injective-acyclic",
+        "kind": "lemma",
+        "line": 19260,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-hom-injective-acyclic",
+        "text_sha256": "A4BFF7C2F646E76F7ACAF793CB2244AA6419328B4771D9CCA6AC19FC2E2FA065"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-higher-invariant-direct-image-modules",
+        "kind": "lemma",
+        "line": 19358,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-higher-invariant-direct-image-modules",
+        "text_sha256": "A45C5B574D09407063E87D2E86F22913035F0BA80E173C77D5479C536CECEE15"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-underlying-ext",
+        "kind": "lemma",
+        "line": 19436,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-underlying-ext",
+        "text_sha256": "E49BD46056AE536E7E05E552FFFEB198E0B894961E14A0DDF93DF1B9ACC9D6B0"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-spectral-sequences",
+        "kind": "lemma",
+        "line": 19483,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-spectral-sequences",
+        "text_sha256": "88BD4BF895F18E6F4EE845FC4024B8F9D48590913958B6A1EA9F5E775EE63CED"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-sheaf-ext-spectral-sequence",
+        "kind": "lemma",
+        "line": 19582,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-sheaf-ext-spectral-sequence",
+        "text_sha256": "E886D038EDB5350AFF44AEB92EAF0F9F56B7FA94690EC3F554F4AAAF0B600C11"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-locally-free",
+        "kind": "lemma",
+        "line": 19639,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-locally-free",
+        "text_sha256": "6C546C2525CB43F02D09C11995E2C618AF3D6844449F733ADDA3D36E3DB12EA4"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence",
+        "kind": "lemma",
+        "line": 19687,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-crossed-product-spectral-sequence",
+        "text_sha256": "3F91FD775BFF8BE515378E3F00861B0D0DEBEAB7C24D4788B445287BD2416E10"
+      },
+      {
+        "file": "cohomology.tex",
+        "full_label": "cohomology-lemma-equivariant-ext-trivial-action-spectral-sequence",
+        "kind": "lemma",
+        "line": 19781,
+        "official_tag": "",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "short_label": "lemma-equivariant-ext-trivial-action-spectral-sequence",
+        "text_sha256": "B9E957D15590125B8401206834494BA7759E345B5C8AA5E0CD34243457BDBB6D"
+      }
+    ],
+    "open_analytic_gap_units": [
+      {
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "decision_id": "D000564",
+        "disposition": "extend_existing",
+        "r55_action": "unchanged_open",
+        "rationale": "Stacks proves coherence is preserved under extensions on locally Noetherian algebraic stacks and identifies Ext^1 with extension classes generally. The source's coherent analytic equivariant classification is a distinct setting.",
+        "review_state": "reviewed_gap",
+        "source_loc": "sem/r18/nodes.csv:92",
+        "stacks_labels": "stacks-cohomology-lemma-extension-coherent;homology-definition-ext-group;derived-lemma-ext-1",
+        "stacks_tags": "0GRA;010K;06XV",
+        "unit_id": "tohoku:classification:coherent-extension-classes"
+      },
+      {
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "decision_id": "D000565",
+        "disposition": "new_statement",
+        "r55_action": "unchanged_open",
+        "rationale": "General extension classes and algebraic equivariant modules are present locally, but the asserted classification of equivariant holomorphic-bundle extensions by this analytic equivariant Ext group is not.",
+        "review_state": "reviewed_new_statement",
+        "source_loc": "sem/r18/nodes.csv:93",
+        "stacks_labels": "homology-definition-ext-group;derived-lemma-ext-1;groupoids-definition-equivariant-module",
+        "stacks_tags": "010K;06XV;03LF",
+        "unit_id": "tohoku:classification:equivariant-bundle-extensions"
+      },
+      {
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "decision_id": "D000613",
+        "disposition": "new_statement",
+        "r55_action": "unchanged_open",
+        "rationale": "The characteristic-zero descent from equivariant coherent analytic sheaves to the quotient uses the source's free/discontinuous action theorem. The listed local results do not establish this analytic descent.",
+        "review_state": "reviewed_new_statement",
+        "source_loc": "sem/r18/nodes.csv:353",
+        "stacks_labels": "etale-cohomology-section-group-cohomology;stacks-cohomology-lemma-extension-coherent",
+        "stacks_tags": "0A2H;0GRA",
+        "unit_id": "tohoku:descent:discontinuous-action-characteristic-zero"
+      },
+      {
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "decision_id": "D000614",
+        "disposition": "new_statement",
+        "r55_action": "unchanged_open",
+        "rationale": "The correspondence between holomorphic vector bundles with a G-action and locally free analytic G-O-modules is not the algebraic equivariant-module definition and has no exact local target.",
+        "review_state": "reviewed_new_statement",
+        "source_loc": "sem/r18/nodes.csv:561",
+        "stacks_labels": "groupoids-definition-equivariant-module",
+        "stacks_tags": "03LF",
+        "unit_id": "tohoku:equivalence:equivariant-holomorphic-bundles"
+      },
+      {
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "decision_id": "D000615",
+        "disposition": "new_statement",
+        "r55_action": "unchanged_open",
+        "rationale": "This is the analytic equivalence between holomorphic vector bundles and locally free coherent analytic sheaves. No verified labelled target in the admitted Stacks surface states that analytic theorem.",
+        "review_state": "reviewed_new_statement",
+        "source_loc": "sem/r18/nodes.csv:562",
+        "stacks_labels": "",
+        "stacks_tags": "",
+        "unit_id": "tohoku:equivalence:holomorphic-bundles-locally-free-sheaves"
+      },
+      {
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "decision_id": "D000617",
+        "disposition": "new_statement",
+        "r55_action": "unchanged_open",
+        "rationale": "Finite dimensionality of analytic equivariant extension classes over a compact quotient is not implied by the local coherence-of-extensions result or the abstract Ext classification.",
+        "review_state": "reviewed_new_statement",
+        "source_loc": "sem/r18/nodes.csv:590",
+        "stacks_labels": "homology-definition-ext-group;stacks-cohomology-lemma-extension-coherent",
+        "stacks_tags": "010K;0GRA",
+        "unit_id": "tohoku:finiteness:compact-quotient-extension-classes"
+      }
+    ],
+    "planned_decision": {
+      "action": "replace",
+      "decision_id": "D001031",
+      "disposition": "existing_equivalent",
+      "rationale": "The integrated Stacks cohomology chapter now contains the p. 213--218 abstract equivariant Hom/Ext theory: the four degree-zero Hom functors and their factorizations; derived global and sheaf Ext in the abelian category of G-O-modules; locality, slice restriction, and stalk comparison; the injective-acyclicity lemmas required for invariant direct image, invariants, and equivariant global sections; the underlying Ext identifications; spectral sequences I--V and the sheaf-valued Grothendieck spectral sequence; and the locally-free degeneration. The p. 219 complex-analytic applications remain separately open and are not used for this section-level closure. Only the existing Ext-sheaves aggregate carries authoritative official tag 0BQP; the integrated local labels carry no official tags.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "stacks_labels": "cohomology-section-ext;cohomology-lemma-equivariant-internal-hom;cohomology-lemma-equivariant-hom-functors;cohomology-definition-equivariant-ext;cohomology-lemma-equivariant-ext-properties;cohomology-lemma-localize-equivariant-ext;cohomology-lemma-equivariant-ext-slice;cohomology-lemma-equivariant-hom-injective-stalk;cohomology-lemma-equivariant-ext-stalk;cohomology-lemma-skew-group-hom-injective-acyclic;cohomology-lemma-equivariant-product-internal-hom;cohomology-lemma-equivariant-hom-injective-acyclic;cohomology-lemma-equivariant-higher-invariant-direct-image-modules;cohomology-lemma-equivariant-underlying-ext;cohomology-lemma-equivariant-ext-spectral-sequences;cohomology-lemma-equivariant-sheaf-ext-spectral-sequence;cohomology-lemma-equivariant-ext-locally-free;cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence;cohomology-lemma-equivariant-ext-trivial-action-spectral-sequence",
+      "supersedes": "D000639",
+      "unit_id": "tohoku:section:5.6-equivariant-ext"
+    },
+    "projected_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 679,
+      "decisions": 1031,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 375,
+        "existing_stronger": 41,
+        "existing_weaker": 6,
+        "extend_existing": 13,
+        "historical_reference": 33,
+        "new_section": 4,
+        "new_statement": 11,
+        "structural_only": 424
+      },
+      "review_units": 0,
+      "units": 991
+    },
+    "receipt": {
+      "bytes": 33527,
+      "name": "tmp/r55_section56_mapping_design.json",
+      "sha256": "A0EEF6146FEC2624231DFC1C19806AE569BACE71748E66D91B92AE014CB4F923"
+    },
+    "schema": "tohoku-stacks-r55-section56-mapping-design-v1",
+    "status": "STRICT_PASS",
+    "tag_control": {
+      "authoritative_tag_source": "cohomology-section-ext",
+      "local_integrated_label_tags": "",
+      "planned_stacks_tags": "0BQP",
+      "prohibited_claims": [
+        "No local integrated label is assigned or claimed to have an official tag.",
+        "No analytic unit inherits tag 0BQP from the section aggregate.",
+        "No topic-evidence tag is promoted into a mapping target tag."
+      ]
+    }
+  },
+  "nonclaims": [
+    "No Git command, GitHub action, recursive workspace scan, cleanup audit, or watcher is executed by this mapping successor.",
+    "The scanner is confined to the exact 119 top-level TeX filenames in the D1011 oracle.",
+    "Exactly D001031 is appended; the r54 decision prefix is byte-identical.",
+    "No issue or source-repair row is appended; r55 issues.csv is byte-identical to r54 issues.csv.",
+    "The r54 source, unit inventory, scanner surface, sem/r19, and reader v068c3r18/QA v68r40 evidence are retained exactly.",
+    "This successor does not assert any theorem about holomorphic spaces, coherent analytic sheaves, holomorphic vector bundles, compact analytic quotients, analytic descent, or finite-dimensional analytic extension spaces.",
+    "The six listed p.219 complex-analytic gap units remain open with their current dispositions and rationales.",
+    "The p.219 analogy and holomorphic example remain example_or_remark, and the embedded holomorphic Ext equation remains structural_only; none is used to justify D001031.",
+    "The section-level existing_equivalent disposition refers only to the abstract equivariant Hom/Ext theory integrated from pp.213--218.",
+    "No official tag is claimed for any newly integrated local label. Only the pre-existing section aggregate cohomology-section-ext carries authoritative tag 0BQP.",
+    "No source correction, source edit, mapping mutation outside the atomic r55 transaction, cursor update, scanner mutation, Git/GitHub action, publication, cleanup, or archive action is claimed.",
+    "No live selector or pointer is changed.",
+    "No release, publication, upload, DOI, Zenodo, rights, remote-freshness, or whole-paper completion claim is made.",
+    "34 Tohoku gap-class dispositions remain."
+  ],
+  "predecessor_dossier": {
+    "complete_surface": {
+      "aggregate_sha256": "A21E639C48AFFA63DDD88A1CBA116BE52AA2424925F264F070BC059D78486925",
+      "bytes": 7251655,
+      "files": 15
+    },
+    "decision_count": 1030,
+    "independent_sealed_surface_replay": "PASS",
+    "name": "tohoku_r54",
+    "payload_surface": {
+      "aggregate_sha256": "574AE536B2DC9CCC3CA496442CFA21179028763083702F5D30B753C2E005F9BF",
+      "bytes": 7219282,
+      "files": 14
+    },
+    "receipt": {
+      "bytes": 32373,
+      "name": "tohoku_r54/r54-check.json",
+      "sha256": "2A63159128896CEB8FCF0F536278ADFA883906C4D0CE0A71B96BC1E1EE089936"
+    },
+    "remaining_gap_class_dispositions": 35,
+    "sealed_receipt_replay": "PASS",
+    "source_issue_count": 30,
+    "validator": {
+      "bytes": 66617,
+      "name": "srcmap/validate_tohoku_r54.py",
+      "sha256": "5C72E15325C031923ABD2BB3F80B1E2348C3C26957B7EC4990049D0EC8D24005"
+    }
+  },
+  "reader": {
+    "build_receipt": {
+      "bytes": 32685,
+      "name": "build/v068c3r18/build.json",
+      "sha256": "287CF9B793BE34598878AD63546B081C27ACEE10C722AF82FBDE03251C92EADB"
+    },
+    "deterministic_build_replay": {
+      "compiled_to_final_byte_identity": {
+        "en": true,
+        "fr": true
+      },
+      "logs_replayed": {
+        "en": [
+          {
+            "bytes": 25660,
+            "path": "build/v068c3r18/en/command-output.log",
+            "sha256": "3A387C36ADB7073CCDAD1CA6EF4A6D5F57CC318745DB2DD2EDF2D46AC7005C30"
+          },
+          {
+            "bytes": 34932,
+            "path": "build/v068c3r18/en/main-en.log",
+            "sha256": "CF699F90882E1A0CD739E51A7F3D62369D438DEC5C772CFE83E4F2826EFE7FDF"
+          }
+        ],
+        "fr": [
+          {
+            "bytes": 25700,
+            "path": "build/v068c3r18/fr/command-output.log",
+            "sha256": "E55BA1A41FC98233D598B91C746EE2AC7C6B9A6A9623EFC199AAADCB3F0D14C8"
+          },
+          {
+            "bytes": 35062,
+            "path": "build/v068c3r18/fr/main-fr.log",
+            "sha256": "5078E998426627818381076B4D0EF854B8008EC1D7E9A39BDF05D0A5A9967D80"
+          }
+        ]
+      },
+      "method": "recompute staged manifest, replay every pinned compile log, and require byte identity between each compiled PDF and its promoted final",
+      "receipt_semantics": "PASS",
+      "staged_manifest_recomputed": "PASS"
+    },
+    "english_pdf": {
+      "bytes": 1381057,
+      "name": "output/pdf/en-p119-221-v068c3r18.pdf",
+      "sha256": "58A7F14A50D92CA0EAF9EEC04CE3399D4282144FF618C4887318C962CC9A5DB9"
+    },
+    "french_pdf": {
+      "bytes": 1417469,
+      "name": "output/pdf/fr-p119-221-v068c3r18.pdf",
+      "sha256": "24EA55FFA0CA94CBD089053B5A0BA2495E2553F798561DB059E77D4F6F724429"
+    },
+    "p220_visual_review": {
+      "english": {
+        "adjacent_seam_successor_pdf_pages": [
+          88,
+          90
+        ],
+        "all_successor_visual_pdf_pages": [
+          88,
+          89,
+          90
+        ],
+        "lead_review": "Pages 88 and 90 preserve the p219 and p221 seams exactly. Page 89 contains the complete English qualification, with correct mathematics and no clipping, overlap, missing glyph, broken header, or footer collision.",
+        "p220_successor_pdf_pages": [
+          89
+        ],
+        "predecessor_rasters": [
+          {
+            "pdf_page": 88,
+            "raster": {
+              "bytes": 552332,
+              "path": "qa/v68r40/en-r17-page-88.png",
+              "sha256": "B313ACE3E03F97FE60EA25E9B12A1CF3A07223C066C8C5C3C97DE3B952D9B754"
+            }
+          },
+          {
+            "pdf_page": 89,
+            "raster": {
+              "bytes": 442786,
+              "path": "qa/v68r40/en-r17-page-89.png",
+              "sha256": "9B74588BE2809A94D342F80B382BCCF9EAF7848A4F1C8822178AAA20E2D460F7"
+            }
+          },
+          {
+            "pdf_page": 90,
+            "raster": {
+              "bytes": 376824,
+              "path": "qa/v68r40/en-r17-page-90.png",
+              "sha256": "5D42404C65EB74ADB92639CBC0DCC98E315702515E264D4B806BD274967103D6"
+            }
+          }
+        ],
+        "printed_page": 220,
+        "raster_comparisons": {
+          "r17_page_88_to_r18_page_88": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_89_to_r18_page_89": {
+            "changed_fraction": 0.08532126341824764,
+            "changed_pixels": 399328,
+            "difference_bbox": [
+              259,
+              362,
+              1561,
+              2319
+            ],
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": false,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_90_to_r18_page_90": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          }
+        },
+        "successor_rasters": [
+          {
+            "pdf_page": 88,
+            "raster": {
+              "bytes": 552332,
+              "path": "qa/v68r40/en-r18-page-88.png",
+              "sha256": "B313ACE3E03F97FE60EA25E9B12A1CF3A07223C066C8C5C3C97DE3B952D9B754"
+            }
+          },
+          {
+            "pdf_page": 89,
+            "raster": {
+              "bytes": 530279,
+              "path": "qa/v68r40/en-r18-page-89.png",
+              "sha256": "E5D8C91DCBADBEFEED585509C47893BCD06CA182543D69234F62F2178A8AC134"
+            }
+          },
+          {
+            "pdf_page": 90,
+            "raster": {
+              "bytes": 376824,
+              "path": "qa/v68r40/en-r18-page-90.png",
+              "sha256": "5D42404C65EB74ADB92639CBC0DCC98E315702515E264D4B806BD274967103D6"
+            }
+          }
+        ]
+      },
+      "french": {
+        "adjacent_seam_successor_pdf_pages": [
+          91,
+          94
+        ],
+        "all_successor_visual_pdf_pages": [
+          91,
+          92,
+          93,
+          94
+        ],
+        "lead_review": "Pages 91 and 92 preserve the p219 seam and first p220 page exactly. Page 93 contains the complete French qualification without a layout defect. Page 94 begins p221 cleanly after the added page; its parity-adjusted header, margins, and footer are correct.",
+        "p220_successor_pdf_pages": [
+          92,
+          93
+        ],
+        "predecessor_rasters": [
+          {
+            "pdf_page": 91,
+            "raster": {
+              "bytes": 571294,
+              "path": "qa/v68r40/fr-r17-page-91.png",
+              "sha256": "77BF1E234809C52413465BBED690233560E71E490BE74647BF13EC9FE110559F"
+            }
+          },
+          {
+            "pdf_page": 92,
+            "raster": {
+              "bytes": 445781,
+              "path": "qa/v68r40/fr-r17-page-92.png",
+              "sha256": "BDF8CA4656708788D6FEB0ACBF7937B6CA6EB3A3C0083661B50EA3E56FE2AA7C"
+            }
+          },
+          {
+            "pdf_page": 93,
+            "raster": {
+              "bytes": 376803,
+              "path": "qa/v68r40/fr-r17-page-93.png",
+              "sha256": "6C5C5A16E67F3C7D9CCE6B9BD980E6A7E9EE35CFB8F43311FE5B567665C9434E"
+            }
+          }
+        ],
+        "printed_page": 220,
+        "raster_comparisons": {
+          "p221_r17_page_93_to_r18_page_94": {
+            "changed_fraction": 0.002313746998848575,
+            "changed_pixels": 10829,
+            "difference_bbox": [
+              102,
+              172,
+              1737,
+              2390
+            ],
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": false,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_91_to_r18_page_91": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_92_to_r18_page_92": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          }
+        },
+        "successor_rasters": [
+          {
+            "pdf_page": 91,
+            "raster": {
+              "bytes": 571294,
+              "path": "qa/v68r40/fr-r18-page-91.png",
+              "sha256": "77BF1E234809C52413465BBED690233560E71E490BE74647BF13EC9FE110559F"
+            }
+          },
+          {
+            "pdf_page": 92,
+            "raster": {
+              "bytes": 445781,
+              "path": "qa/v68r40/fr-r18-page-92.png",
+              "sha256": "BDF8CA4656708788D6FEB0ACBF7937B6CA6EB3A3C0083661B50EA3E56FE2AA7C"
+            }
+          },
+          {
+            "pdf_page": 93,
+            "raster": {
+              "bytes": 127737,
+              "path": "qa/v68r40/fr-r18-page-93.png",
+              "sha256": "6CEC8F755B7D0E261AF93F4E4102DE58DADF5F78903F96075E7720A17007830C"
+            }
+          },
+          {
+            "pdf_page": 94,
+            "raster": {
+              "bytes": 376671,
+              "path": "qa/v68r40/fr-r18-page-94.png",
+              "sha256": "7C852AE0E6F94B92A5FF91DFACAAE21D75DE593B7D8F7A2A29ABC0B328A81801"
+            }
+          }
+        ]
+      },
+      "review_scope": "every successor reader page containing corrected p.220 plus both adjacent source seams: English pages 88--90 and corrected-French pages 91--94; all corresponding predecessor comparison rasters were also inspected",
+      "status": "PASS"
+    },
+    "page_inventory": {
+      "bytes": 28257,
+      "name": "qa/v68r40/page-inventory.csv",
+      "sha256": "CFCBD2BBF9DCCBCFA8C36B802D5266DEB84990E90130A01A06C61AFE90C32AEE"
+    },
+    "qa_receipt": {
+      "bytes": 10374,
+      "name": "qa/v68r40/check.json",
+      "sha256": "9969A37D8CDDE716A29C03EF268C5394A13F967BD4C706A0EB8F59CA9695769F"
+    },
+    "qa_revision": "v68r40",
+    "reader_revision": "v068c3r18",
+    "structural_receipt": {
+      "bytes": 13015,
+      "name": "qa/v68r40/structural.json",
+      "sha256": "352C82546CA0E6110267718F5DCC413CCC5099C70B7ACFD4764A2A8EAD664A00"
+    }
+  },
+  "runtime": {
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "python": {
+      "bytes": 104264,
+      "name": "user\\miniconda3\\python.exe",
+      "sha256": "7679E53FA969789309E81FDAD0D52B8CDA5F83C9ABF7CB31A3C58BF24B31E264"
+    }
+  },
+  "scanner_oracle": {
+    "counts": {
+      "errors": 0,
+      "labels": 22087,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 659
+    },
+    "outputs": {
+      "check.json": {
+        "bytes": 80879,
+        "name": "tmp/d1011_scan/check.json",
+        "sha256": "798607A517735BC50C77356894D9089D9218DC0A2B5D49DB073347C455615EDD"
+      },
+      "stx.csv": {
+        "bytes": 5283396,
+        "name": "tmp/d1011_scan/stx.csv",
+        "sha256": "5E22D3B8B976E5BD845BA0CF69D7AB7685C619D39CDEB53DADCF9A269798BB9D"
+      },
+      "tcand.csv": {
+        "bytes": 488729,
+        "name": "tmp/d1011_scan/tcand.csv",
+        "sha256": "4AA8FDD23C221B7663B1FDB5B61F7F6F4B65BEA89346D2881713C5A5AFDB8DAC"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "name": "tmp/d1011_scan/tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      }
+    }
+  },
+  "schema": "tohoku-stacks-mapping-successor-r55-v1",
+  "semantic_source": {
+    "aggregate_sha256": "58DEFA91A60771FB427AB152394CA5BB0D9B289F632F735FD4BE0E68361B649F",
+    "bytes": 2061217,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 2585,
+        "name": "README.md",
+        "sha256": "66D4CF92728AF7FF10E82CDFD97AFCD9D26B55CE9FBC985932FFBCD597DD64B4"
+      },
+      {
+        "bytes": 10422,
+        "name": "bib.csv",
+        "sha256": "93F5A934ADDE0CD92BBB21AF70EFD81BA128CCD2EDF51EB19428B83437EC3516"
+      },
+      {
+        "bytes": 772,
+        "name": "catalog.csv",
+        "sha256": "FC0D201FB3BE414D132EC10ED4D00FF2DE16B6F2C90BEADF72213B597113AA20"
+      },
+      {
+        "bytes": 261660,
+        "name": "edges.csv",
+        "sha256": "5B924BF4E9D0E7CAFF51D3C75D0C85045E985AE21152744ABD38929A87E622D5"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 36480,
+        "name": "manifest.json",
+        "sha256": "CED21E8761F781885600C609683DAA2110232012EEF742C657386655CBC4FAC6"
+      },
+      {
+        "bytes": 585600,
+        "name": "nodes.csv",
+        "sha256": "301172BC3D1DD0D4D518E14B96C6E24A380060F31A09987AAE8EC74812DC80A0"
+      },
+      {
+        "bytes": 106319,
+        "name": "objects.csv",
+        "sha256": "82FF34C19C6D17D80DC3A617FD106ED324099CC9D0F2FE752757D0642ED31999"
+      },
+      {
+        "bytes": 515084,
+        "name": "occ.csv",
+        "sha256": "2F657244FB211F4B5680DFDFC247167BCFD3C011F622930CC409872DEF3370BB"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 161519,
+        "name": "refs.csv",
+        "sha256": "2BB0DC3356C0C4B18E82F7C168334D450DF541586EE89F94FB254C3296ACDE3D"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325587,
+        "name": "terms.csv",
+        "sha256": "6D93CBBD2D6CF3E354FE90DC51605ACD9C7B0932CEF216FB9D606AD97D666E5D"
+      },
+      {
+        "bytes": 5946,
+        "name": "validation.json",
+        "sha256": "61D05C5E62515F097CDF098412CD93B394CE8F9A9C616943DCB1B1AB7C4302B1"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r19",
+    "manifest_payload_surface": {
+      "aggregate_sha256": "A0BC270B0F26F9E8E26515FCDDE49E5BBEEEE3D6A370CBEAD275B727A1D6497F",
+      "bytes": 2018791,
+      "file_count": 16
+    },
+    "stable_node_ids": 991,
+    "stable_surfaces": {
+      "edges": 1479,
+      "nodes": 991,
+      "occurrences": 1036,
+      "references": 440
+    },
+    "validation_status": "PASS"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "tohoku-stacks-d1013-independent-review-v1",
+  "formalization_id": "D1013",
+  "status": "STRICT_PASS_WITH_EXPLICIT_ANALYTIC_BOUNDARY",
+  "reviewer": "independent local replay",
+  "source_binding": {
+    "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+    "map_row": 93,
+    "sem_r18_node_row": 93,
+    "english_p219_sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+    "french_p219_sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE",
+    "target_occurrences": {"english": 1, "french": 1},
+    "orientation": "0 -> O(F) -> V -> O(E) -> 0 in Mod_G(O)"
+  },
+  "candidate_replay": {
+    "path": "user/Documents/stacks-ftg/tmp/d1013_block_candidate.tex",
+    "bytes": 2945,
+    "sha256": "6B5B8A8685A72D07CA94214BA21693490B28238ECBB3275960E26D9EC0C6E272",
+    "lines": 77,
+    "labels": [
+      "lemma-equivariant-extension-classes-finite-locally-free",
+      "remark-equivariant-extension-classes-analytic-boundary"
+    ],
+    "unique_labels": true,
+    "balanced_begin_end": true,
+    "balanced_display_math": true,
+    "all_refs_resolve_against_live_or_candidate": true,
+    "live_label_collisions": []
+  },
+  "mathematical_checks": [
+    {
+      "id": "M001",
+      "claim": "Degree-one Ext in the abelian category Mod_G(O) classifies equivariant short exact extensions.",
+      "basis": ["degree-one Yoneda description of Ext", "lemma-equivariant-ext-properties"],
+      "result": "PASS"
+    },
+    {
+      "id": "M002",
+      "claim": "Underlying finite local freeness of E invokes the degree-one edge isomorphism to H^1(X;G,SheafHom_O(E,F)).",
+      "basis": ["lemma-equivariant-ext-locally-free"],
+      "result": "PASS"
+    },
+    {
+      "id": "M003",
+      "claim": "For commutative O, evaluation E^vee tensor_O F -> SheafHom_O(E,F) is G-equivariant and locally an isomorphism.",
+      "basis": ["lemma-equivariant-internal-hom", "local finite-free calculation"],
+      "result": "PASS"
+    },
+    {
+      "id": "M004",
+      "claim": "No analytic bundle equivalence, complex-vector-space assertion, discontinuous-action descent, compact-quotient finiteness, or GAGA comparison is asserted.",
+      "result": "PASS"
+    }
+  ],
+  "mapping_review": {
+    "decision_id": "D001037",
+    "supersedes": "D000565",
+    "disposition": "new_statement",
+    "reason": "The abstract result records a new bounded bridge but does not close the analytic source unit; the six p.219 complex-analytic gaps remain explicitly open.",
+    "stacks_labels": "cohomology-lemma-equivariant-extension-classes-finite-locally-free;cohomology-lemma-equivariant-ext-locally-free",
+    "stacks_tags": "",
+    "result": "PASS"
+  },
+  "write_boundary_review": {
+    "source_layers_unchanged": true,
+    "source_corrections_unchanged": true,
+    "github_actions": 0,
+    "cleanup_actions": 0,
+    "broad_scans": 0,
+    "result": "PASS"
+  },
+  "errors": []
+}

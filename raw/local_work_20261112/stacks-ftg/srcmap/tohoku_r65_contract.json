@@ -1,0 +1,137 @@
+{
+  "schema": "tohoku-r65-transaction-contract-v1",
+  "contract_id": "D1021-r65-D001045-v1",
+  "purpose": "No-overwrite D1021 mapping-only successor from sealed tohoku_r64 using the already sealed D1020 formalization and byte-identical scanner payload.",
+  "script": {
+    "path": "srcmap/build_tohoku_r65.py",
+    "bytes": 40617,
+    "sha256": "A51A8FDC8BBD4EE4493423B8912482C5D8812BF8CD56C277008F2B78FE2ECF0A"
+  },
+  "engine": {
+    "path": "srcmap/build_tohoku_r64.py",
+    "bytes": 41390,
+    "sha256": "F1FAAABFB4C633ED87F6E1AC04E409E8B8C16F772DB2EE5A3E68FFBF2DFFA513"
+  },
+  "predecessor": {
+    "path": "tohoku_r64/r64-check.json",
+    "bytes": 10148,
+    "sha256": "2133F7D0C6CC875A196394308233C5DF1FC120AB764C8AB45D2999AE7FCC7E93"
+  },
+  "frozen_prerequisite": {
+    "path": "D1021_CHECK.json",
+    "bytes": 7654,
+    "sha256": "234CC49BE26F082727A66CC7859668351BD7D7BEBC7DB6867242E44CB59EE940"
+  },
+  "bound_inputs": {
+    "audit": {
+      "path": "D1021_CHECK.json",
+      "bytes": 7654,
+      "sha256": "234CC49BE26F082727A66CC7859668351BD7D7BEBC7DB6867242E44CB59EE940"
+    },
+    "mapping_review": {
+      "path": "tmp/d1021_mapping_review.json",
+      "bytes": 4585,
+      "sha256": "BAC136EED314E3E1A07CD7A1154D33E79B413A83A746E3A1460AF2D14ECFA8B6"
+    },
+    "originating_audit": {
+      "path": "D1020_CHECK.json",
+      "bytes": 14789,
+      "sha256": "E03C0BDB19BB564CEC782124367D6CD053624551F847F64885E6ECC1A7E4B083"
+    },
+    "cohomology_tex": {
+      "path": "cohomology.tex",
+      "bytes": 927351,
+      "sha256": "934223B83092E38F7184DE6B739569002BFCBE9F934A5AA9212EBF78AD8424CA"
+    },
+    "bibliography": {
+      "path": "my.bib",
+      "bytes": 220625,
+      "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE"
+    },
+    "cohomology_pdf": {
+      "path": "cohomology.pdf",
+      "bytes": 2020550,
+      "sha256": "4B55BF958522964140AD364EF911F71DEA72455DA709E80176AC707381786C2E"
+    }
+  },
+  "scanner_probe": {
+    "oracle_path": "tmp/d1020_scan_probe_r1",
+    "replay_path": "tmp/d1020_scan_probe_replay_r1",
+    "files": {
+      "cfg.json": {
+        "bytes": 5151,
+        "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+      },
+      "check.json": {
+        "bytes": 83022,
+        "sha256": "CA4BD4D6C25E995CF422795472D17E039CBD260F1D17B16915DF5245B4CB272E"
+      },
+      "stx.csv": {
+        "bytes": 5288663,
+        "sha256": "01C9089B9AF31597C7FD787C37D31C7FCB5A052DED324EDB3648FEEAC083DAEC"
+      },
+      "tcand.csv": {
+        "bytes": 489256,
+        "sha256": "73C6BFD919058171C14E2CDEC94F47DDBFF389636BDA7250BE4B6BBE7BC29357"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "topics.csv": {
+        "bytes": 2453,
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      }
+    },
+    "counts": {
+      "labels": 22106,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 678,
+      "errors": 0
+    }
+  },
+  "decision": {
+    "decision_id": "D001045",
+    "unit_id": "tohoku:equivalence:holomorphic-bundles-locally-free-sheaves",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+    "official_tags": "",
+    "rationale": "Stacks now proves the natural equivalence between rank-n holomorphic vector bundles and analytic O_X-modules locally isomorphic to O_X^n, proves that these modules are coherent, and identifies the inverse bundle fibre as L_x tensor_{O_{X,x}} C through the residue or evaluation map. Equivariance, extension classification and H^1, quotient descent, compactness, finite dimensionality, and GAGA are separate units and are not mapped here.",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000615"
+  },
+  "projected_counts": {
+    "decisions": 1045,
+    "decided_units": 679,
+    "issues": 32,
+    "active_issues": 0,
+    "existing_equivalent": 388,
+    "new_statement": 3,
+    "remaining_gap_class_dispositions": 21,
+    "source_repairs_appended": 0,
+    "mapping_closures": 1,
+    "changed_map_rows": 1
+  },
+  "target": "tohoku_r65",
+  "transaction": {
+    "source": "tohoku_r64",
+    "stage": ".tohoku-r65-txn",
+    "no_overwrite": true,
+    "atomic_directory_rename": true,
+    "post_promotion_replay": true
+  },
+  "write_boundary": [
+    ".tohoku-r65-txn",
+    "tohoku_r65"
+  ],
+  "external_constraints": {
+    "git": "GitHub availability was restored by direct user update; this bounded local transaction requires no Git or GitHub operation."
+  }
+}

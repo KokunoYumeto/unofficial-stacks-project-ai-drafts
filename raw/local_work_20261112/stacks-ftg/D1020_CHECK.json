@@ -1,0 +1,361 @@
+{
+  "schema": "tohoku-stacks-d1020-check-v1",
+  "formalization_id": "D1020",
+  "status": "STRICT_PASS_PREREQUISITES_R64_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T02:57:31.0124297Z",
+  "finalized_utc": "2026-08-24T02:57:31.0124297Z",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:equivalence:equivariant-holomorphic-bundles",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:561",
+    "predecessor_decision": "D000614",
+    "predecessor_disposition": "new_statement",
+    "predecessor_map_row_with_lf": {
+      "bytes": 464,
+      "sha256": "E27526FEF71B946D33D28AB53EFDB099FCF89446DCA68931D70CF34E29AE8252"
+    }
+  },
+  "source_claim": {
+    "summary": "Under the analytic bundle--module correspondence, rank-n holomorphic vector bundles with compatible G-action correspond to G-O-modules whose underlying O-module is locally isomorphic to O^n.",
+    "inverse_fibre_formula": "(E_L)_x is canonically L_x tensor_{O_{X,x}} C, where C=O_{X,x}/m_x acts through the residue or evaluation map.",
+    "scope_boundary": [
+      "the adjacent nonequivariant analytic bundle--module unit D000615 is stated by a separate first lemma but is not mapped in this transaction",
+      "equivariant extension classification and its H^1 description are separate source units",
+      "quotient descent, compactness, finite dimensionality, and GAGA are not asserted"
+    ],
+    "source_repair_required": false,
+    "transcription_or_translation_repair_required": false
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "semantic_row_with_lf": {
+      "path": "sem/r18/nodes.csv:561",
+      "bytes": 686,
+      "sha256": "0E7D595BB3F19DB020B5EE3D524C70744C02E3EA61115D498BF2CEC9AD98C038"
+    },
+    "occurrence_row_with_lf": {
+      "path": "sem/r18/occ.csv:985",
+      "occurrence_id": "tohoku:occ:p219:o004",
+      "bytes": 541,
+      "sha256": "6E61E9247F0E2760D18E1809D8A38DDC2C89215D0B35656F003D336B91288692"
+    },
+    "layers": {
+      "diplomatic": {
+        "path": "build/v068c3r20/src/dip/p219.tex",
+        "file_bytes": 4809,
+        "file_sha256": "53B23B8B039FA4BD34EB83A6F5E02B18758614E17A5737723A854F72C3A225B1",
+        "segment_bytes": 256,
+        "segment_sha256": "9DA42E0BC883F6AB9D74DD4A2ECF5EE602FBB175AA50F4701D15F2F1D52FF583"
+      },
+      "corrected_french": {
+        "path": "build/v068c3r20/src/fr/p219.tex",
+        "file_bytes": 4814,
+        "file_sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE",
+        "segment_bytes": 256,
+        "segment_sha256": "9DA42E0BC883F6AB9D74DD4A2ECF5EE602FBB175AA50F4701D15F2F1D52FF583"
+      },
+      "english": {
+        "path": "build/v068c3r20/src/en/p219.tex",
+        "file_bytes": 4520,
+        "file_sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+        "segment_bytes": 231,
+        "segment_sha256": "B72FEE68B2ACE24B4D07ECA6E4D24CB9F3043C7F61EAD909FDFFF0A9753A9C52"
+      }
+    }
+  },
+  "coverage_decomposition": {
+    "nonequivariant_correspondence": {
+      "label": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+      "tag": "",
+      "scanner_text_sha256": "0D6D69B427976C318544F4D967CB82A6A6E8EED3F138133AFB2B155B12F66467",
+      "result": "The first lemma proves the analytic vector-bundle/locally-free-module equivalence, coherence, and the canonical residue-fibre formula."
+    },
+    "equivariant_restriction": {
+      "label": "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules",
+      "tag": "",
+      "scanner_text_sha256": "B32D66309690486FC9B82F267349A762086309A106EF486F83039515D6B029E0",
+      "result": "The second lemma proves that compatible holomorphic bundle actions and semilinear G-O-module structures correspond, including equivariant morphisms."
+    },
+    "excluded_analogues_and_dependencies": [
+      "groupoids-definition-equivariant-module (03LF) is an algebraic definition, not the analytic equivalence",
+      "constructions-lemma-category-vector-bundles (062N) is a scheme analogue",
+      "modules-definition-G-O-module and sheaves-definition-G-sheaf supply target-language conventions only"
+    ]
+  },
+  "design": {
+    "path": "tmp/d1020_equivariant_holomorphic_bundles_design.json",
+    "bytes": 7209,
+    "sha256": "E83A9DD2C0C3F8D82371330F214BB2804D0B44D8CB3C2CB33C7127568B65AFF6",
+    "status": "DRAFT_READY_FOR_INDEPENDENT_REVIEW",
+    "errors": []
+  },
+  "candidate": {
+    "path": "tmp/d1020_equivariant_holomorphic_bundles_candidate.tex",
+    "bytes": 4937,
+    "sha256": "CBF6FA0EE8451F0CBC8793EBDE2C2D7377696E92A2ABCBF39B4595734C34CF3E"
+  },
+  "independent_review": {
+    "path": "tmp/d1020_independent_review_r1.json",
+    "bytes": 2630,
+    "sha256": "25DF060091E9E63EF795DD862152877D2D3964510E41B3F13B71B164FBA13567",
+    "status": "STRICT_PASS_FOR_LIVE_INSERTION_AND_BUILD",
+    "predicate_summary": {
+      "source_and_scope": "PASS",
+      "mathematical_proof_obligations_P1_through_P7": "PASS",
+      "inverse_fibre_formula": "PASS",
+      "byte_exact_integration_and_citations": "PASS"
+    }
+  },
+  "bibliography": {
+    "path": "my.bib",
+    "bytes": 220625,
+    "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE",
+    "entries_added": [],
+    "citation_reused": "Grauert-direct-image, Oka coherence discussion p. 16"
+  },
+  "stacks_edit": {
+    "path": "cohomology.tex",
+    "preimage": {
+      "bytes": 922413,
+      "sha256": "AEC4A47B15E55D4BB99267EE03E961FB1288E69F8911A13310C59DA81354653F"
+    },
+    "postimage": {
+      "bytes": 927351,
+      "sha256": "934223B83092E38F7184DE6B739569002BFCBE9F934A5AA9212EBF78AD8424CA"
+    },
+    "placement": "immediately after cohomology-remark-equivariant-extension-classes-analytic-boundary and before cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "candidate_block_occurrences": 1,
+    "new_raw_labels": [
+      {
+        "label": "lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+        "occurrences": 1,
+        "line": 20277
+      },
+      {
+        "label": "lemma-equivariant-holomorphic-vector-bundles-locally-free-modules",
+        "occurrences": 1,
+        "line": 20343
+      }
+    ],
+    "following_d1019_raw_label_occurrences": 1,
+    "following_d1019_raw_label_line": 20395,
+    "unrelated_live_source_files_changed_by_insertion": 0
+  },
+  "pdf_build": {
+    "target": "cohomology.pdf",
+    "driver": "mingw32-make with the installed Git-for-Windows touch utility on PATH",
+    "final_driver_exit_code": 0,
+    "preimage": {
+      "bytes": 2013727,
+      "sha256": "167DFFEA7D1B9009B0672714150BE613A9F1C1E5FF5207EBB6C68EF0E67B3EC6",
+      "pages": 241
+    },
+    "postimage": {
+      "path": "cohomology.pdf",
+      "bytes": 2020550,
+      "sha256": "4B55BF958522964140AD364EF911F71DEA72455DA709E80176AC707381786C2E",
+      "pages": 242,
+      "page_size": "612 x 792 pt"
+    },
+    "diagnostics": {
+      "fatal_tex_errors": 0,
+      "latex_errors": 0,
+      "undefined_control_sequences": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "rerun_requests": 0,
+      "bibtex_warnings": 0,
+      "inserted_line_interval_overfull_findings": 0
+    },
+    "supporting_files": {
+      "aux": {
+        "bytes": 57882,
+        "sha256": "EA5F7D99BC10C5AF68955524A81F3187D1449E07614C504307D5B52014144F91"
+      },
+      "bbl": {
+        "bytes": 2313,
+        "sha256": "B549EC2BF6A2D441ABC2587AEB0D81AAB800C65A0F4461EC39573EACB228034A"
+      },
+      "blg": {
+        "bytes": 1037,
+        "sha256": "AD428028D6914435597B90AC92610E926BBA25B968AC3102678A58B633397428"
+      },
+      "log": {
+        "bytes": 48437,
+        "sha256": "441728B51C6F8605504D469B31984A0BDA9D59F08A905F0D63F23B77CEA2DA5B"
+      }
+    },
+    "new_label_aux_records": [
+      "\\newlabel{lemma-holomorphic-vector-bundles-locally-free-analytic-modules}{{46.66}{195}{Holomorphic bundles and locally free analytic modules}{subsection.46.66}{}}",
+      "\\newlabel{lemma-equivariant-holomorphic-vector-bundles-locally-free-modules}{{46.67}{196}{Equivariant holomorphic bundles and locally free modules}{subsection.46.67}{}}"
+    ],
+    "following_d1019_aux_record": "\\newlabel{lemma-discontinuous-analytic-invariant-direct-image-coherent}{{46.68}{197}{Coherence on a discontinuous analytic quotient}{subsection.46.68}{}}"
+  },
+  "visual_qa": {
+    "status": "STRICT_PASS_INDEPENDENTLY_CONFIRMED",
+    "inspected_pdf_pages": [195, 196, 197, 198, 199],
+    "defects": [],
+    "checks": [
+      "both new lemma headings, statements, displays, proofs, and proof termini are complete",
+      "the canonical fibre formula and residue-map explanation are legible",
+      "the page-196 to page-197 proof continuation is grammatical and unclipped",
+      "the following D1019 lemma and page-198 to page-199 transitions are intact",
+      "headers, page numbers, margins, and hyperlink annotations render normally"
+    ],
+    "rasters": [
+      {
+        "path": "tmp/d1020_pdf_qa/page-195.png",
+        "bytes": 309159,
+        "sha256": "B487289C4185DF5E4B7157AE96F9A32D6AF3EF908D551E831CB6532C58A5B13A"
+      },
+      {
+        "path": "tmp/d1020_pdf_qa/page-196.png",
+        "bytes": 297305,
+        "sha256": "F35811E78F946FD1EFD027111784E6062870239B2FE4115127864796B51B6BDA"
+      },
+      {
+        "path": "tmp/d1020_pdf_qa/page-197.png",
+        "bytes": 280729,
+        "sha256": "196485DBB2BE97E7D63642A776D012A1BEFF1154B2860FB3E37FCE2BB8479CA0"
+      },
+      {
+        "path": "tmp/d1020_pdf_qa/page-198.png",
+        "bytes": 290296,
+        "sha256": "4D5F4D885DC792DD7B63689138A22D031759E26B01268EFFF0EEFC8BEEB4424F"
+      },
+      {
+        "path": "tmp/d1020_pdf_qa/page-199.png",
+        "bytes": 289012,
+        "sha256": "29FB48DBC3668D9061A6E76D75444686CE88F445C31461284301522BCF68957A"
+      }
+    ]
+  },
+  "scanner_probe": {
+    "status": "PASS_BYTE_IDENTICAL_REPLAY",
+    "oracle_path": "tmp/d1020_scan_probe_r1",
+    "replay_path": "tmp/d1020_scan_probe_replay_r1",
+    "complete_inventory": {
+      "files": 6,
+      "bytes": 5870969,
+      "surface_bytes": 483,
+      "surface_sha256": "91CE6A450E4DBD550A1D651FF4FD583DB92E06E1F9F84BC1B4C2459D2453A0AD"
+    },
+    "counts": {
+      "tex_files": 119,
+      "labels": 22106,
+      "official_tags_joined": 21437,
+      "topics": 13,
+      "topic_candidates": 1286,
+      "direct_topic_coverage": 13,
+      "warnings": 678,
+      "errors": 0
+    },
+    "files": {
+      "cfg.json": {
+        "bytes": 5151,
+        "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+      },
+      "check.json": {
+        "bytes": 83022,
+        "sha256": "CA4BD4D6C25E995CF422795472D17E039CBD260F1D17B16915DF5245B4CB272E"
+      },
+      "stx.csv": {
+        "bytes": 5288663,
+        "sha256": "01C9089B9AF31597C7FD787C37D31C7FCB5A052DED324EDB3648FEEAC083DAEC"
+      },
+      "tcand.csv": {
+        "bytes": 489256,
+        "sha256": "73C6BFD919058171C14E2CDEC94F47DDBFF389636BDA7250BE4B6BBE7BC29357"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "topics.csv": {
+        "bytes": 2453,
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      }
+    },
+    "new_label_rows": [
+      {
+        "full_label": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+        "physical_line": 3629,
+        "source_line": 20277,
+        "row_bytes_with_lf": 315,
+        "row_sha256_with_lf": "386B6923A5C3B9A4801AEF64A1F5CA9512A131A2A1A839121D794C321FD91A44",
+        "text_sha256": "0D6D69B427976C318544F4D967CB82A6A6E8EED3F138133AFB2B155B12F66467"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules",
+        "physical_line": 3630,
+        "source_line": 20343,
+        "row_bytes_with_lf": 321,
+        "row_sha256_with_lf": "4C69CC1B305F17BDDE990C2D9C139D86BC9DBA48895CF0EA6ECC3B883EE62BC3",
+        "text_sha256": "B32D66309690486FC9B82F267349A762086309A106EF486F83039515D6B029E0"
+      }
+    ]
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_FOR_NO_OVERWRITE_R64_TRANSACTION",
+    "predecessor": "tohoku_r63",
+    "successor": "tohoku_r64",
+    "decision": {
+      "decision_id": "D001044",
+      "unit_id": "tohoku:equivalence:equivariant-holomorphic-bundles",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules",
+      "official_tags": "",
+      "rationale": "The analytic vector-bundle/locally-free-module equivalence and its equivariant restriction are now proved in Stacks. Compatible holomorphic fibrewise-linear G-actions correspond exactly to semilinear G-O_X-module structures on locally free analytic modules, with full faithfulness and essential surjectivity. The adjacent nonequivariant source unit D000615, extension classification, H^1, quotient descent, compactness, finite dimensionality, and GAGA are not mapped here.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000614"
+    },
+    "issue_append": null,
+    "source_repair_append": null,
+    "map_replacement": {
+      "physical_line": 561,
+      "source_locator_preserved": "sem/r18/nodes.csv:561",
+      "only_fields_changed": [
+        "decision_id",
+        "disposition",
+        "review_state",
+        "stacks_labels",
+        "official_tags",
+        "rationale"
+      ]
+    },
+    "projected_counts": {
+      "decisions": 1044,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 387,
+      "new_statement": 4,
+      "remaining_gap_class_dispositions": 22,
+      "source_repairs_appended": 0,
+      "mapping_closures": 1,
+      "changed_map_rows": 1
+    }
+  },
+  "scope_separation": {
+    "current_unit": "equivariant holomorphic bundle/locally free analytic module equivalence",
+    "excluded_adjacent_units": [
+      "D000615: nonequivariant analytic vector-bundle/module correspondence",
+      "equivariant bundle extension classification and H^1",
+      "quotient descent and invariant direct-image coherence",
+      "compactness and finite dimensionality",
+      "GAGA"
+    ]
+  },
+  "external_constraints": {
+    "github": "AVAILABLE_BY_DIRECT_USER_UPDATE; NO GIT OR REMOTE ACTION REQUIRED FOR THIS BOUNDED LOCAL TRANSACTION"
+  },
+  "remaining_work": [
+    "construct, validate, promote, and replay tohoku_r64 exactly as authorized here; do not mutate this frozen prerequisite audit afterward"
+  ]
+}

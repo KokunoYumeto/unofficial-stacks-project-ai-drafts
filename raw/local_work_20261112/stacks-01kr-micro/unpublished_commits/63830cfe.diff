@@ -1,0 +1,20 @@
+commit 63830cfe0986c9a71f58d4b91b2200b8e94232d1
+parent a04446e57ec1fbc252a871afcec7752fb2807b14
+date Tue Aug 11 18:30:23 2026 +0200
+subject Fix duplicate arrow in fibre product diagram
+
+The lower horizontal map in tag 01KR invokes \ar[r] twice at the same source, so Xy-pic emits two coincident arrows. Keep only the labelled diagonal arrow.
+
+diff --git a/schemes.tex b/schemes.tex
+index 901e0ea3..e0abb2bf 100644
+--- a/schemes.tex
++++ b/schemes.tex
+@@ -4249,7 +4249,7 @@ By general category theory the following diagram
+ $$
+ \xymatrix{
+ X \times_T Y \ar[r] \ar[d] & X \times_S Y \ar[d] \\
+-T \ar[r]^{\Delta_{T/S}} \ar[r] & T \times_S T
++T \ar[r]^{\Delta_{T/S}} & T \times_S T
+ }
+ $$
+ is a fibre product diagram. The lemma follows

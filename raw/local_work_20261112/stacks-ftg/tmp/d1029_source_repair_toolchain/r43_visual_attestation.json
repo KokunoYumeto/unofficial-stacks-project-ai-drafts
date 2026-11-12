@@ -1,0 +1,45 @@
+{
+  "schema": "tohoku-v68r43-visual-attestation-v1",
+  "qa_revision": "v68r43",
+  "reader_revision": "v068c3r21",
+  "status": "PASS",
+  "errors": [],
+  "inspected_utc": "2026-08-24T08:40:00Z",
+  "inspection_scope": "Successor target pages and immediately adjacent physical PDF pages in both bilingual readers, rendered at 160 dpi with the identity-bound Poppler pdftoppm executable.",
+  "images": {
+    "qa/v68r43/renders/en-p055.png": {
+      "bytes": 353852,
+      "sha256": "4A80B9D894CB63CCAC00791103F47D344B60E75EA60FA9E17C121D630C514255"
+    },
+    "qa/v68r43/renders/en-p056.png": {
+      "bytes": 314058,
+      "sha256": "D6A8D1ED404E34524BB5B402758E10081329FE8227D477142A7E9A6F76BB8A86"
+    },
+    "qa/v68r43/renders/en-p057.png": {
+      "bytes": 300511,
+      "sha256": "6055619808E48BEC466F97B2BC527854515453DCEE09AEB0A20112AD0A1BA095"
+    },
+    "qa/v68r43/renders/fr-p057.png": {
+      "bytes": 387941,
+      "sha256": "378CC60F8CE1D831122525651325743EAB98ABB4C3B8D3BD179A94DA3E4FA1A0"
+    },
+    "qa/v68r43/renders/fr-p058.png": {
+      "bytes": 322510,
+      "sha256": "BAB35DEE7D79B8FB6E814AB94E0EA5CE47DBDDCC0AE511D1C544A8ADCF01A0FD"
+    },
+    "qa/v68r43/renders/fr-p059.png": {
+      "bytes": 312066,
+      "sha256": "98E66352A60CC72C32F3576CE11175578D5BCB0BBBAB621E6A8BB46387BF4616"
+    }
+  },
+  "checks": {
+    "english_target_sentence_displays_gamma_of_center_sheaf": true,
+    "french_target_sentence_displays_gamma_of_center_sheaf": true,
+    "false_center_of_global_sections_phrase_absent_in_corrected_readers": true,
+    "formulae_and_numbering_on_p188_undamaged": true,
+    "target_pages_have_no_clipping_overlap_or_garbled_glyphs": true,
+    "adjacent_page_seams_are_visually_intact": true,
+    "headers_source_page_labels_and_physical_page_numbers_are_intact": true
+  },
+  "qualification": "This attestation covers corrected French and English reader output only. Diplomatic French is separately proved byte-identical to its predecessor and intentionally retains the printed false scalar-ring phrase."
+}

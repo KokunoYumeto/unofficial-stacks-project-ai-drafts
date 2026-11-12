@@ -1,0 +1,66 @@
+{
+  "schema": "tohoku-d1022-independent-review-v1",
+  "created_at": "2026-08-24T03:27:26.4419829Z",
+  "formalization_id": "D1022",
+  "primary_unit": "tohoku:finiteness:compact-quotient-extension-classes",
+  "status": "STRICT_PASS_FOR_LIVE_INSERTION_AND_BUILD",
+  "candidate": {
+    "path": "tmp/d1022_compact_quotient_ext_finiteness_candidate.tex",
+    "bytes": 7182,
+    "sha256": "588852F97DE8FA516791E264A37EB2C77BC7D1E07BB0CF1DC4382A9CEC293D26"
+  },
+  "design": {
+    "path": "tmp/d1022_compact_quotient_ext_finiteness_design.json",
+    "bytes": 8952,
+    "sha256": "7C69F1BF1EC0EC010F08FA474646B4EC32D247C2FF339FE0A2C3E0E6A06F533B"
+  },
+  "source_review": {
+    "verdict": "PASS",
+    "predicates": [
+      "both p.219 clauses are stated: arbitrary coherent equivariant Ext in every degree and equivariant bundle-extension classes",
+      "compactness is imposed on Y=X/G and the standing discontinuous analytic quotient hypotheses are preserved",
+      "the following abstract algebraic analogue and all GAGA, moduli, noncompact, and finite-set claims remain excluded",
+      "all local references and bibliography keys resolve",
+      "r65 row 590 is byte-bound as the exact predecessor and r66 is the projected successor"
+    ],
+    "initial_design_defect": "The first draft named r64/r65 rather than r65/r66 in transaction sequencing. The candidate TeX passed; the design was corrected and independently rechecked.",
+    "revised_design_recheck": "PASS"
+  },
+  "mathematical_review": {
+    "verdict": "PASS",
+    "proof_obligations": {
+      "P1_compact_coherent_cohomology": "PASS",
+      "P2_arbitrary_degree_analytic_sheaf_ext_coherence": "PASS",
+      "P3_equivariant_sheaf_ext_spectral_sequence_collapse": "PASS",
+      "P4_coherence_on_quotient": "PASS",
+      "P5_finite_dimensional_global_ext": "PASS",
+      "P6_bundle_and_module_extension_equivalence": "PASS",
+      "P7_canonical_H1_identifications": "PASS",
+      "P8_scope_and_type_guards": "PASS"
+    },
+    "critical_checks": [
+      "only a finite partial locally free resolution is used in each fixed degree; no finite projective dimension or Ext vanishing is asserted",
+      "ordinary sheaf Ext lives on X while equivariant sheaf Ext and invariant direct image live on Y",
+      "maps between bundles of different ranks are handled by the explicit rectangular local-matrix full-faithfulness argument",
+      "local splitting against the locally free quotient makes the middle extension module locally free",
+      "first-quadrant finite diagonals and the canonical finite filtration close finite dimensionality"
+    ]
+  },
+  "predicate_summary": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+  },
+  "mapping_boundary": {
+    "authorized_after_live_gates": "D001046 replaces only D000617 and maps only to cohomology-lemma-compact-analytic-quotient-equivariant-ext-finite-dimensional",
+    "not_included": "the following abstract algebraic analogue, noncompact cases, global properness of q, finite sets of extensions, Ext vanishing, moduli, algebraization, or GAGA"
+  },
+  "remaining_gates": [
+    "insert the candidate exactly once after cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "run the narrow cohomology build and close reference and BibTeX diagnostics",
+    "render and visually inspect every changed PDF page",
+    "run a new scanner oracle and byte-exact replay",
+    "replace only D000617 in a no-overwrite r66 transaction if every deterministic gate passes"
+  ],
+  "errors": []
+}

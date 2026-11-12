@@ -1,0 +1,71 @@
+\GAGASection{\S 1. Analytic spaces}{gaga:section:1}
+
+\GAGASubsection{1. Analytic subsets of affine space}{gaga:no:1}
+
+Let $n$ be an integer $\geqslant 0$, and let $\mathbf{C}^n$ denote complex numerical space of dimension $n$, endowed with its usual topology. A subset $\mathrm{U}$ of $\mathbf{C}^n$ is said to be \emph{analytic} if, for every $x\in\mathrm{U}$, there exist functions $f_1,\ldots,f_k$, holomorphic in a neighbourhood $\mathrm{W}$ of $x$, such that $\mathrm{U}\cap\mathrm{W}$ is exactly the set of points $z\in\mathrm{W}$ satisfying the equations $f_i(z)=0$, $i=1,\ldots,k$. The subset $\mathrm{U}$ is then locally closed in $\mathbf{C}^n$ (that is, the intersection of an open and a closed subset), hence locally compact when endowed with the topology induced from $\mathbf{C}^n$.
+
+We now endow the topological space $\mathrm{U}$ with a sheaf. If $\mathrm{X}$ is any space, we write $\mathcal{C}(\mathrm{X})$ for the sheaf of germs of complex-valued functions on $\mathrm{X}$ (cf. \GAGACite{18}, no.~3). If $\mathcal{H}$ denotes the sheaf of germs of holomorphic functions on $\mathbf{C}^n$, then $\mathcal{H}$ is a subsheaf of $\mathcal{C}(\mathbf{C}^n)$. For $x\in\mathrm{U}$ there is a restriction homomorphism
+
+\begin{equation*}
+\varepsilon_x:\quad \mathcal{C}(\mathbf{C}^n)_x\longrightarrow\mathcal{C}(\mathrm{U})_x.
+\end{equation*}
+
+The image of $\mathcal{H}_x$ under $\varepsilon_x$ is a subring $\mathcal{H}_{x,\,\mathrm{U}}$ of $\mathcal{C}(\mathrm{U})_x$; the rings $\mathcal{H}_{x,\,\mathrm{U}}$ form a subsheaf $\mathcal{H}_{\mathrm{U}}$ of $\mathcal{C}(\mathrm{U})$, which we call the \emph{sheaf of germs of holomorphic functions on $\mathrm{U}$}; it is a sheaf of rings. We write $\mathcal{A}_x(\mathrm{U})$ for the kernel of $\varepsilon_x:\mathcal{H}_x\to\mathcal{H}_{x,\,\mathrm{U}}$. By the definition of $\mathcal{H}_{x,\,\mathrm{U}}$, this is the set of $f\in\mathcal{H}_x$ whose restriction to $\mathrm{U}$ vanishes in a neighbourhood of $x$. We shall frequently identify $\mathcal{H}_{x,\,\mathrm{U}}$ with the quotient ring $\mathcal{H}_x/\mathcal{A}_x(\mathrm{U})$.
+
+Since $\mathrm{U}$ now has both a topology and a sheaf of functions, we can define the notion of a \emph{holomorphic map} (cf. \GAGACite{3}, Expos\'e VI, and \GAGACite{18}, no.~32):
+
+Let $\mathrm{U}$ and $\mathrm{V}$ be analytic subsets of $\mathbf{C}^r$ and $\mathbf{C}^s$, respectively. A map $\varphi:\mathrm{U}\to\mathrm{V}$ is called holomorphic if it is continuous and if $f\in\mathcal{H}_{\varphi(x),\,\mathrm{V}}$ implies $f\circ\varphi\in\mathcal{H}_{x,\,\mathrm{U}}$.
+
+Equivalently, the $s$ coordinates of $\varphi(x)$, $x\in\mathrm{U}$, are holomorphic functions of $x$, that is, sections of $\mathcal{H}_{\mathrm{U}}$.
+
+The composite of two holomorphic maps is holomorphic. A bijection $\varphi:\mathrm{U}\to\mathrm{V}$ is called an \emph{analytic isomorphism} (or simply an isomorphism) if $\varphi$ and $\varphi^{-1}$ are holomorphic. Equivalently, $\varphi$ is a homeomorphism of $\mathrm{U}$ onto $\mathrm{V}$ that carries the sheaf $\mathcal{H}_{\mathrm{U}}$ to the sheaf $\mathcal{H}_{\mathrm{V}}$.
+
+If $\mathrm{U}$ and $\mathrm{U}'$ are analytic subsets of $\mathbf{C}^r$ and $\mathbf{C}^{r'}$, then $\mathrm{U}\times\mathrm{U}'$ is an analytic subset of $\mathbf{C}^{r+r'}$. The properties stated in \GAGACite{18}, no.~33 remain valid upon replacing every occurrence of ``locally closed subset'' by ``analytic subset'' and every occurrence of ``regular map'' by ``holomorphic map.'' In particular, if $\varphi:\mathrm{U}\to\mathrm{V}$ and $\varphi':\mathrm{U}'\to\mathrm{V}'$ are analytic isomorphisms, then so is
+
+\begin{equation*}
+\varphi\times\varphi':\quad \mathrm{U}\times\mathrm{U}'\longrightarrow\mathrm{V}\times\mathrm{V}'.
+\end{equation*}
+
+Unlike the algebraic case, however, the topology of $\mathrm{U}\times\mathrm{U}'$ is the product topology of the topologies of $\mathrm{U}$ and $\mathrm{U}'$.
+
+\GAGASubsection{2. The notion of analytic space}{gaga:no:2}
+
+\GAGATarget{gaga:def:1}\textsc{Definition 1}. --- \emph{An analytic space is a set $\mathrm{X}$ endowed with a topology and with a subsheaf $\mathcal{H}_{\mathrm{X}}$ of the sheaf $\mathcal{C}(\mathrm{X})$, subject to the following axioms:}
+
+$(\mathrm{H}_{\mathrm{I}})$. \emph{There exists an open cover $\{\mathrm{V}_i\}$ of $\mathrm{X}$ such that every $\mathrm{V}_i$, endowed with the topology and sheaf induced by those of $\mathrm{X}$, is isomorphic to an analytic subset $\mathrm{U}_i$ of an affine space, endowed with the topology and sheaf defined in \GAGAInternalRef{gaga:no:1}{no.~1}.}
+
+$(\mathrm{H}_{\mathrm{II}})$. \emph{The topology of $\mathrm{X}$ is Hausdorff.}
+
+The definitions in \GAGAInternalRef{gaga:no:1}{no.~1} are local in nature and therefore carry over to analytic spaces. Thus, if $\mathrm{X}$ is an analytic space, the sheaf $\mathcal{H}_{\mathrm{X}}$ is called the sheaf of germs of holomorphic functions on $\mathrm{X}$. If $\mathrm{X}$ and $\mathrm{Y}$ are analytic spaces, a map $\varphi:\mathrm{X}\to\mathrm{Y}$ is called holomorphic if it is continuous and if $f\in\mathcal{H}_{\varphi(x),\,\mathrm{Y}}$ implies $f\circ\varphi\in\mathcal{H}_{x,\,\mathrm{X}}$; these maps form a family of \emph{morphisms} (in the sense of N. \textsc{Bourbaki}) for the structure of analytic space.
+
+If $\mathrm{V}$ is an open subset of an analytic space $\mathrm{X}$, a \emph{chart} on $\mathrm{V}$ means any analytic isomorphism from $\mathrm{V}$ onto an analytic subset $\mathrm{U}$ of an affine space. Axiom $(\mathrm{H}_{\mathrm{I}})$ says that $\mathrm{X}$ can be covered by open subsets possessing charts. If $\mathrm{Y}$ is a subset of $\mathrm{X}$, we call $\mathrm{Y}$ analytic if, for every chart $\varphi:\mathrm{V}\to\mathrm{U}$, the image $\varphi(\mathrm{Y}\cap\mathrm{V})$ is an analytic subset of $\mathrm{U}$. If this is so, $\mathrm{Y}$ is locally closed in $\mathrm{X}$ and may naturally be endowed with a structure of analytic space, said to be \emph{induced} by that of $\mathrm{X}$ (cf. \GAGACite{18}, no.~35 for the algebraic case). Likewise, if $\mathrm{X}$ and $\mathrm{X}'$ are analytic spaces, there exists a unique structure of analytic space on $\mathrm{X}\times\mathrm{X}'$ such that, whenever $\varphi:\mathrm{V}\to\mathrm{U}$ and $\varphi':\mathrm{V}'\to\mathrm{U}'$ are charts, $\varphi\times\varphi':\mathrm{V}\times\mathrm{V}'\to\mathrm{U}\times\mathrm{U}'$ is a chart on $\mathrm{V}\times\mathrm{V}'$. Endowed with this structure, $\mathrm{X}\times\mathrm{X}'$ is called the \emph{product} of the analytic spaces $\mathrm{X}$ and $\mathrm{X}'$. Notice that the topology of $\mathrm{X}\times\mathrm{X}'$ agrees with the product topology of the topologies of $\mathrm{X}$ and $\mathrm{X}'$.
+
+We leave it to the reader to carry over to analytic spaces the other results of \GAGACite{18}, nos.~34--35.
+
+\GAGASubsection{3. Analytic sheaves}{gaga:no:3}
+
+The definition of analytic sheaves given in \GAGACite{2}, Expos\'e XV extends immediately to an analytic space $\mathrm{X}$: an analytic sheaf $\mathcal{F}$ is simply a sheaf of modules over the sheaf of rings $\mathcal{H}_{\mathrm{X}}$, in other words, a sheaf of $\mathcal{H}_{\mathrm{X}}$-modules (cf. \GAGACite{18}, no.~6).
+
+Let $\mathrm{Y}$ be a closed analytic subset of $\mathrm{X}$. For every $x\in\mathrm{X}$, let $\mathcal{J}_x(\mathrm{Y})$ be the set of $f\in\mathcal{H}_{x,\,\mathrm{X}}$ whose restriction to $\mathrm{Y}$ vanishes in a neighbourhood of $x$. The $\mathcal{J}_x(\mathrm{Y})$ form a sheaf of ideals $\mathcal{J}(\mathrm{Y})$ of $\mathcal{H}_{\mathrm{X}}$; hence $\mathcal{J}(\mathrm{Y})$ is an analytic sheaf. The quotient sheaf $\mathcal{H}_{\mathrm{X}}/\mathcal{J}(\mathrm{Y})$ vanishes outside $\mathrm{Y}$, and its restriction to $\mathrm{Y}$ is precisely $\mathcal{H}_{\mathrm{Y}}$ by the definition of the induced structure. We may therefore identify it with $\mathcal{H}_{\mathrm{Y}}$; cf. \GAGACite{18}, no.~5.
+
+\GAGATarget{gaga:prop:1}\textsc{Proposition 1}. --- a) \emph{The sheaf $\mathcal{H}_{\mathrm{X}}$ is a coherent sheaf of rings} (\GAGACite{18}, no.~15).
+
+b) \emph{If $\mathrm{Y}$ is a closed analytic subspace of $\mathrm{X}$, then $\mathcal{J}(\mathrm{Y})$ is a coherent analytic sheaf (that is, a coherent sheaf of $\mathcal{H}_{\mathrm{X}}$-modules in the sense of \GAGACite{18}, no.~12).}
+
+When $\mathrm{X}$ is an open subset of $\mathbf{C}^n$, these results are due to K. \textsc{Oka} and H. \textsc{Cartan}; cf. \GAGACite{1}, Theorems~1 and~2, and \GAGACite{2}, Expos\'es XV--XVI. The general case reduces immediately to this one. Since the question is local, we may suppose that $\mathrm{X}$ is a closed analytic subset of an open set $\mathrm{U}\subset\mathbf{C}^n$. Then $\mathcal{H}_{\mathrm{X}}=\mathcal{H}_{\mathrm{U}}/\mathcal{J}(\mathrm{X})$, and, by what precedes, $\mathcal{H}_{\mathrm{U}}$ is a coherent sheaf of rings and $\mathcal{J}(\mathrm{X})$ is a coherent sheaf of ideals of $\mathcal{H}_{\mathrm{U}}$. It follows that $\mathcal{H}_{\mathrm{X}}$ is coherent; cf. \GAGACite{18}, no.~16. Assertion b) is proved in the same way.
+
+Other examples of coherent analytic sheaves are the sheaves of germs of sections of fibre spaces with vector-space fibre (cf. \GAGAInternalRef{gaga:no:20}{no.~20}) and the sheaves of germs of automorphic functions (\GAGACite{3}, Expos\'e XX).
+
+\GAGASubsection{4. A neighbourhood of a point in an analytic space}{gaga:no:4}
+
+Let $\mathrm{X}$ be an analytic space, let $x\in\mathrm{X}$, and let $\mathcal{H}_x$ be the ring of germs of holomorphic functions on $\mathrm{X}$ at $x$. This ring is an algebra over $\mathbf{C}$ with a unique maximal ideal $\mathfrak{m}$, consisting of the functions $f$ that vanish at $x$, and the field $\mathcal{H}_x/\mathfrak{m}$ is precisely $\mathbf{C}$. In other words, $\mathcal{H}_x$ is a \emph{local algebra} over $\mathbf{C}$. When $\mathrm{X}=\mathbf{C}^n$, the algebra $\mathcal{H}_x$ is the algebra $\mathbf{C}\{z_1,\ldots,z_n\}$ of convergent power series in $n$ variables. In general, $\mathcal{H}_x$ is isomorphic to a quotient algebra $\mathbf{C}\{z_1,\ldots,z_n\}/\mathfrak{a}$, since $\mathrm{X}$ is locally isomorphic to an analytic subspace of $\mathbf{C}^n$. It follows that $\mathcal{H}_x$ is a \emph{Noetherian ring}; it is also an \emph{analytic ring} in the sense of H. \textsc{Cartan} (\GAGACite{3}, Expos\'e VII).
+
+It is easy to see that knowledge of $\mathcal{H}_x$ determines $\mathrm{X}$ in a neighbourhood of $x$ (\GAGACite{3}, \emph{loc. cit.}). In particular, $\mathrm{X}$ is isomorphic to $\mathbf{C}^n$ in a neighbourhood of $x$ if and only if the algebra $\mathcal{H}_x$ is isomorphic to $\mathbf{C}\{z_1,\ldots,z_n\}$. One readily sees that this is equivalent to $\mathcal{H}_x$ being a \emph{regular} local ring of dimension $n$ (for all matters concerning local rings, cf. \GAGACite{16}). The point $x$ is then called a \emph{simple point} of dimension $n$ on $\mathrm{X}$; if all points of $\mathrm{X}$ are simple, $\mathrm{X}$ is called an analytic \emph{variety}.
+
+Return to the general case. Since $\mathcal{H}_x$ has no nilpotent element other than $0$, it follows (cf. \GAGACite{15}, Chapter IV, \S 2) that
+
+\begin{equation*}
+0=\bigcap\mathfrak{p}_i,
+\end{equation*}
+
+where the $\mathfrak{p}_i$ are the minimal prime ideals of $\mathcal{H}_x$. If $\mathrm{X}_i$ denotes the irreducible components of $\mathrm{X}$ at $x$, then $\mathfrak{p}_i=\mathcal{A}_x(\mathrm{X}_i)$ and $\mathcal{H}_x/\mathfrak{p}_i=\mathcal{H}_{x,\,\mathrm{X}_i}$. This essentially reduces the local study of $\mathrm{X}$ to that of the $\mathrm{X}_i$. For example, the \emph{analytic dimension} (that is, half the topological dimension) of $\mathrm{X}$ at $x$ is the supremum of the dimensions of the $\mathrm{X}_i$. Notice that this dimension \emph{coincides} with the dimension, in the sense of Krull, of the local ring $\mathcal{H}_x$. Indeed, it is enough to verify this when $\mathrm{X}$ is irreducible at $x$, that is, when $\mathcal{H}_x$ is an integral domain. In that case, if $r$ denotes the analytic dimension of $\mathrm{X}$ at $x$, it is known (cf. \GAGACite{14}, \S 4 and \GAGACite{3}, Expos\'e VIII) that $\mathcal{H}_x$ is a finite extension of $\mathbf{C}\{z_1,\ldots,z_r\}$. Since the completion of $\mathbf{C}\{z_1,\ldots,z_r\}$ is the formal power-series algebra $\mathbf{C}[[z_1,\ldots,z_r]]$, its dimension is $r$; the same is therefore true of $\mathcal{H}_x$ by \GAGACite{16}, p.~18, proving the assertion.

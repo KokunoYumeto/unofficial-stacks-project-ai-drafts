@@ -1,0 +1,48 @@
+{
+  "schema": "tohoku-r62-transaction-contract-v1",
+  "contract_id": "D1018-r62-D001042-v1",
+  "purpose": "No-overwrite mapping-only successor for the corrected p.185 sheaf-Hom definition, with independent r62-namespaced scanner oracle and deterministic replay.",
+  "script": {
+    "path": "srcmap/build_tohoku_r62.py",
+    "bytes": 31929,
+    "sha256": "4283B6FBFE10BF5189C9B6B654467448E0A2F044FA60BCF27F6737C6E96C8D79"
+  },
+  "engine": {
+    "path": "srcmap/build_tohoku_r61.py",
+    "bytes": 40313,
+    "sha256": "37D3CBB4C5E940F98F57F7AD9DF93CBCDC54F0E432E35EA18331FB05D1DD78EB"
+  },
+  "predecessor": {
+    "path": "tohoku_r61/r61-check.json",
+    "bytes": 10568,
+    "sha256": "D882C7AE62252BC94DA8D7D442A84507FCFC9F5E8E4C77CA988399E7EB835B80"
+  },
+  "frozen_prerequisite": {
+    "path": "D1018_MAPPING_CHECK.json",
+    "bytes": 6699,
+    "sha256": "A74F649A0AF0F1EE393145BD857D3C71442EC010CEF17BDDDF378DC6C5A6CA81"
+  },
+  "target": "tohoku_r62",
+  "transaction": {
+    "target_overwrite_allowed": false,
+    "stage": ".tohoku-r62-txn",
+    "promotion": "same-parent atomic directory rename after full staged validation",
+    "post_promotion_replay_required": true
+  },
+  "mapping_delta": {
+    "decision_id": "D001042",
+    "issue_id": null,
+    "unit_id": "tohoku:definition:sheaf-hom-o",
+    "supersedes": "D000407",
+    "disposition": "existing_equivalent",
+    "changed_map_rows": 1,
+    "remaining_gap_class_dispositions": 24
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "reason": "Account suspension during VPN/security review; support ticket filed.",
+      "effect": "Continue local production and QA; do not attempt Git or GitHub operations; this is not a local-work blocker."
+    }
+  }
+}

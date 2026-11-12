@@ -1,0 +1,580 @@
+{
+  "builds": {
+    "cohomology": {
+      "log": {
+        "bytes": 47485,
+        "name": "cohomology.log",
+        "sha256": "95EFD946BDA79140BBA240055142E4F13E2F8E53A690DD5B74690D6449A386D2"
+      },
+      "new_block_overfull_boxes": 0,
+      "pdf": {
+        "bytes": 1832179,
+        "name": "cohomology.pdf",
+        "sha256": "50DE21B2916AF71A8B05774FCBAB754A750F599CC34C0E2B62CE069526E29822"
+      },
+      "pdf_pages": 214,
+      "rerun_notices": 0,
+      "tex": {
+        "bytes": 814928,
+        "name": "cohomology.tex",
+        "sha256": "C120A56D9C3788BE467DDDBA310F8A2FDDE0AB3326ED7B9183E8B16337418AD4"
+      },
+      "undefined_citations": 0,
+      "undefined_references": 0,
+      "visual_reviewed_pages": [
+        162,
+        163,
+        164
+      ]
+    },
+    "homology": {
+      "aux": {
+        "bytes": 27343,
+        "name": "homology.aux",
+        "sha256": "7C456430772D0EE7607B3B49FA16C3F475597E3A724C5C2B27F2D8BE0F2C111B"
+      },
+      "log": {
+        "bytes": 38788,
+        "name": "homology.log",
+        "sha256": "560242487CF446AF7666246BE0A059F97183D571906761C19B323E55991D5C40"
+      },
+      "new_block_overfull_boxes": 0,
+      "pdf": {
+        "bytes": 1001976,
+        "name": "homology.pdf",
+        "sha256": "E28C38B9EEB55106AC8E32B4731C47A9B3F10E084D95ED9DA243C3EC59F8917F"
+      },
+      "pdf_pages": 101,
+      "rerun_notices": 0,
+      "tex": {
+        "bytes": 340821,
+        "name": "homology.tex",
+        "sha256": "EDFE145CF213538622CB540CDD4957EA9C2EDAAA2F03E2BCB77BF26E491B3F6A"
+      },
+      "undefined_citations": 0,
+      "undefined_references": 0,
+      "visual_reviewed_pages": [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "injectives": {
+      "log": {
+        "bytes": 35028,
+        "name": "injectives.log",
+        "sha256": "5F0474FCF38F15F733CEF9DCA12044FB54D9E87BFAE5FD2B219E830AA46CC404"
+      },
+      "new_block_overfull_boxes": 0,
+      "pdf": {
+        "bytes": 633384,
+        "name": "injectives.pdf",
+        "sha256": "7D651B4DB0A9D03D24195CCF3BCD726817867057BC082F8A996A30AD8E858D58"
+      },
+      "pdf_pages": 38,
+      "rerun_notices": 0,
+      "tex": {
+        "bytes": 130520,
+        "name": "injectives.tex",
+        "sha256": "5BC898D7A1A1017D28C6C28CA5F318D3E96A12A333CE6684FF13600316DA5D22"
+      },
+      "undefined_citations": 0,
+      "undefined_references": 0,
+      "visual_reviewed_pages": [
+        18,
+        19,
+        20
+      ]
+    },
+    "modules": {
+      "log": {
+        "bytes": 35913,
+        "name": "modules.log",
+        "sha256": "D2989C27651EACA9A5AA4BD22FCF67E7273EF67D0CC0DA9606C23844E7D94BE1"
+      },
+      "new_block_overfull_boxes": 0,
+      "pdf": {
+        "bytes": 758941,
+        "name": "modules.pdf",
+        "sha256": "1254E015413AFF83541031659835E3B02998D1F43550FB83D00D07A5DE3CB3E9"
+      },
+      "pdf_pages": 58,
+      "rerun_notices": 0,
+      "tex": {
+        "bytes": 227768,
+        "name": "modules.tex",
+        "sha256": "6BDE2852FFC50945A781FE7598FE96EC69D8B650EEF5C4C608C440D9E7E53BC0"
+      },
+      "undefined_citations": 0,
+      "undefined_references": 0,
+      "visual_reviewed_pages": [
+        5,
+        6
+      ]
+    }
+  },
+  "deltas": {
+    "active_source_issues": [],
+    "decisions": [
+      {
+        "action": "replace",
+        "decision_id": "D000988",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now defines morphisms between graded connecting functors having the same arbitrary interval, variance, and step epsilon = +1 or -1 as componentwise natural transformations commuting with the correctly oriented boundary square in both the covariant and contravariant cases. Identities, sums, and composites are componentwise, and no exactness or one-sided-degree hypothesis is imposed. This gives the full p. 140 notion; the earlier nonnegative exact delta-functor definition is only a specialization.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "homology-definition-morphism-graded-connecting-functors",
+        "supersedes": "D000152",
+        "unit_id": "tohoku:def:delta-functor-morphism"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000989",
+        "disposition": "existing_equivalent",
+        "rationale": "After the resolved p. 140 correction reads all five unbound i_0 occurrences as degree 0, Stacks defines universality on any interval containing 0 and for either variance and step. For step +1 every degree-zero map T^0 -> T'^0 extends uniquely to T -> T'; for step -1 both arrows reverse, so T'^0 -> T^0 extends uniquely to T' -> T. The interval may be finite and neither the universal object nor its competitors need be exact, making the finite degrees 0 through a definition an exact specialization.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "homology-definition-universal-graded-connecting-functor",
+        "supersedes": "D000164",
+        "unit_id": "tohoku:def:universal-delta-functor"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000990",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks proves for any fixed interval containing degree 0, variance, and step that two universal graded connecting functors with fixed identifications of their degree-zero functors are joined by a unique isomorphism inducing the prescribed degree-zero identification. Specializing to covariant step +1 and degrees 0 through a, with a > 0, gives exactly the p. 140 satellite-uniqueness assertion. No existence of satellites, unqualified uniqueness under nontrivial automorphisms of F, or compatibility between different truncation lengths is claimed.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "homology-lemma-uniqueness-universal-graded-connecting-functor",
+        "supersedes": "D000198",
+        "unit_id": "tohoku:prop:satellites-uniqueness"
+      }
+    ],
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 678,
+      "decisions": 990,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 341,
+        "existing_stronger": 38,
+        "existing_weaker": 12,
+        "extend_existing": 24,
+        "historical_reference": 33,
+        "new_section": 6,
+        "new_statement": 26,
+        "structural_only": 426
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 25,
+      "unit_candidates": 0,
+      "units": 990
+    },
+    "remaining_gap_class_dispositions": 68,
+    "resolved_source_issues": [],
+    "scan_counts": {
+      "labels": 22030,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1246,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13
+    },
+    "semantic_title_changes": [],
+    "stacks_index_line_shifts": {
+      "count": 172,
+      "delta": 136
+    },
+    "substantive_map_changes": [
+      "tohoku:def:delta-functor-morphism",
+      "tohoku:def:universal-delta-functor",
+      "tohoku:prop:satellites-uniqueness"
+    ],
+    "topic_candidate_churn": {
+      "added": [
+        [
+          "additive",
+          "homology-definition-morphism-graded-connecting-functors"
+        ],
+        [
+          "delta-functor",
+          "homology-definition-morphism-graded-connecting-functors"
+        ],
+        [
+          "delta-functor",
+          "homology-definition-universal-graded-connecting-functor"
+        ],
+        [
+          "delta-functor",
+          "homology-lemma-uniqueness-universal-graded-connecting-functor"
+        ]
+      ],
+      "dropped": [
+        [
+          "additive",
+          "homology-section-functors"
+        ]
+      ],
+      "line_delta": 136,
+      "line_only_shifts": 93
+    }
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "contract": "read_once_then_execute_builder_same_bytes",
+        "path": "srcmap/start_build_tohoku_r36.py"
+      },
+      "builder": {
+        "bytes": 50789,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r36.py",
+        "sha256": "DBAC432409EA6E6928A37EB940787828F55DB6877046C443D42500EC696B9B61"
+      }
+    },
+    "bootstrap": {
+      "bytes": 1498,
+      "name": "start_build_tohoku_r36.py",
+      "sha256": "B18295C7A018B729FFE4733AE301189F445CBC536BDE27A3462F2EDECEBC0BBF"
+    },
+    "contract": "same_bytes_bootstrap; exact_inputs_locked_against_write_delete_through_generation_replay_and_promotion",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "powershell_envelope": {
+      "bytes": 1475,
+      "name": "start_build_tohoku_r36.ps1",
+      "sha256": "188DC1DC3BB327AE82B4396111EC0DD9D57CE6689BDBA46BC4D620577544B9CD"
+    }
+  },
+  "files": [
+    {
+      "bytes": 653,
+      "name": "STATUS.md",
+      "sha256": "88C750954E1ACA58BFC732B38C92EB20425137F43DC063FCDC719892A1D55648"
+    },
+    {
+      "bytes": 5193,
+      "name": "cfg.json",
+      "sha256": "E39C9BA41930F612E1C4B44C01F15B45B9702D261ACFB104C2A7B7495FD8F84E"
+    },
+    {
+      "bytes": 74514,
+      "name": "check.json",
+      "sha256": "2BB759C7F7873909FE2D8CAA63B61B477A18145F458D15CD1903D2AA88EC4D32"
+    },
+    {
+      "bytes": 351425,
+      "name": "dec.csv",
+      "sha256": "1A1DCD9A98AC07FC88A495DDA953C8E50049258964BD2822D736A473C88947B8"
+    },
+    {
+      "bytes": 1877,
+      "name": "intake.json",
+      "sha256": "7F2A3787C6A60653A0FAEB4DA4A5D3BE93A39D437FC73BD0EF8A8F4C82F3FAE4"
+    },
+    {
+      "bytes": 21785,
+      "name": "issues.csv",
+      "sha256": "586B29854BD4C754FB5AB96E07A7EF1FD6C0DAB9EF584319FEFC0480A68B4327"
+    },
+    {
+      "bytes": 468024,
+      "name": "map.csv",
+      "sha256": "1698116C332A13EA0229EFF815D34341AEB258870A6197A4C230A037DD36D214"
+    },
+    {
+      "bytes": 64342,
+      "name": "mcheck.json",
+      "sha256": "8A967BB988760918E875BF470D2AB598C987DCCAA7D58CAAD877DA3413A1E16D"
+    },
+    {
+      "bytes": 5267616,
+      "name": "stx.csv",
+      "sha256": "28939E2582C70EECB9B6F259BF2F1DA15B4F6CBB0EFB74454C39263A77AE68D1"
+    },
+    {
+      "bytes": 476551,
+      "name": "tcand.csv",
+      "sha256": "3B2FB9F603B8B92C09F6590D7DA133AEBE9994449939A0E38FFF5CACEAD44D68"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 391679,
+      "name": "units.csv",
+      "sha256": "6F00CF4EDB9095FBE15EBC9428DBA1ECDF4F8D34484AB8F910072A3528F19CFB"
+    }
+  ],
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 18940,
+      "path": "tohoku_r35/r35-check.json",
+      "sha256": "1CC68A44CEB1AD99840157B8A34257E7820D95299A2737CC8491EC3207814671"
+    },
+    "reason": "Workspace machine-safety policy forbids Git inspection without separate exact authorization.",
+    "remote_server_freshness_verified": false
+  },
+  "nonclaims": [
+    "No Git command is executed by this mapping successor.",
+    "No Git commit or push is made by this receipt.",
+    "No remote-server freshness check is performed.",
+    "Existing-target replay treats the live Stacks TeX and build artifacts as creation-time evidence bound by the receipt; it does not assert that those external files remain byte-identical later.",
+    "The outer-envelope sentinel prevents accidental direct-bootstrap use but is not cryptographic provenance against a same-user forged invocation.",
+    "The Stacks scan binds the exact live integrated worktree, not the frozen HEAD tree.",
+    "The transaction denies write/delete access to every existing consumed file; hostile same-user mutation of directory namespaces is outside this lock contract.",
+    "No release, publication, upload, DOI, Zenodo, rights, or whole-paper gate is closed.",
+    "68 Tohoku gap-class dispositions remain after D000990.",
+    "All 25 recorded source issues are resolved; no active source issue remains."
+  ],
+  "predecessor_dossier": {
+    "aggregate_sha256": "E1A3339A84DF2E77701FD8DD069EAB62637B93CF4885DFB0AD86DD167386CE7F",
+    "bytes": 7141407,
+    "file_count": 15,
+    "files": [
+      {
+        "bytes": 650,
+        "name": "STATUS.md",
+        "sha256": "4D0EFBB442D7983EE8B395FB68FFBF04225F26A4E607352FFCCC32F01BB9BEC3"
+      },
+      {
+        "bytes": 5193,
+        "name": "cfg.json",
+        "sha256": "DEA83BA2AD039F74591F06E809BD40A5F63DB5331EF6D694A70F3F215A607D30"
+      },
+      {
+        "bytes": 74175,
+        "name": "check.json",
+        "sha256": "BA3A558CF1D2496746691FE31AE1E8C5D6319DACE78619BEA1676BA01F653D94"
+      },
+      {
+        "bytes": 349308,
+        "name": "dec.csv",
+        "sha256": "7F07D40E76A047DF49DB662480F601F738584439E98A382C7982FAB642E432CC"
+      },
+      {
+        "bytes": 1877,
+        "name": "intake.json",
+        "sha256": "7F2A3787C6A60653A0FAEB4DA4A5D3BE93A39D437FC73BD0EF8A8F4C82F3FAE4"
+      },
+      {
+        "bytes": 21785,
+        "name": "issues.csv",
+        "sha256": "586B29854BD4C754FB5AB96E07A7EF1FD6C0DAB9EF584319FEFC0480A68B4327"
+      },
+      {
+        "bytes": 467019,
+        "name": "map.csv",
+        "sha256": "556D3E9F0B9027FCC05A7EB80BB7C26E9468C5BF23B68F09C26696A5A1786AE8"
+      },
+      {
+        "bytes": 64003,
+        "name": "mcheck.json",
+        "sha256": "A0FE526CDE36971F37B128542E1FD2F7E6D4227AD9D1E9D3E64D4481A0DB7A55"
+      },
+      {
+        "bytes": 18940,
+        "name": "r35-check.json",
+        "sha256": "1CC68A44CEB1AD99840157B8A34257E7820D95299A2737CC8491EC3207814671"
+      },
+      {
+        "bytes": 5266760,
+        "name": "stx.csv",
+        "sha256": "491C33310A94B6352415E375BDD15687325D8DAD3A852AF3655DE6F181A876F8"
+      },
+      {
+        "bytes": 475021,
+        "name": "tcand.csv",
+        "sha256": "510F6098CB6EDF39956A4392CB6586FA5AD49E3D1CA4A2DA855A01EA97F72B6D"
+      },
+      {
+        "bytes": 2424,
+        "name": "tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      {
+        "bytes": 2453,
+        "name": "topics.csv",
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      },
+      {
+        "bytes": 120,
+        "name": "ucand.csv",
+        "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+      },
+      {
+        "bytes": 391679,
+        "name": "units.csv",
+        "sha256": "6F00CF4EDB9095FBE15EBC9428DBA1ECDF4F8D34484AB8F910072A3528F19CFB"
+      }
+    ],
+    "name": "tohoku_r35"
+  },
+  "schema": "tohoku-stacks-mapping-successor-r36-v1",
+  "semantic_source": {
+    "aggregate_sha256": "1FFB9D0BB60E32937A66F3AE43E22793B5594C0A039AD5F7062E3FC7F135A219",
+    "bytes": 2022604,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 10421,
+        "name": "bib.csv",
+        "sha256": "B8DBAF65161B60DC973DFAB6F57037185F8808274BB9618D27FE8BC65AD0B695"
+      },
+      {
+        "bytes": 772,
+        "name": "catalog.csv",
+        "sha256": "128E0074A426131B1A74C3672B4621AB79AA0A80281713F76669919755CA48C5"
+      },
+      {
+        "bytes": 260771,
+        "name": "edges.csv",
+        "sha256": "5DCC1F11489A88AC02351103A6B5987877F55424CFFB066EAB9404EA5FA38BB1"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 6403,
+        "name": "manifest.json",
+        "sha256": "3410B4D850DE7EF7F2CA5CF5DA8784A279AEA9D2A813451CDC1AFB86786E8CDC"
+      },
+      {
+        "bytes": 582746,
+        "name": "nodes.csv",
+        "sha256": "70A629E17A2782D8EFBD6C827D665FD3E24BAC6CEC1A9A25F3D35F676F9320DA"
+      },
+      {
+        "bytes": 106319,
+        "name": "objects.csv",
+        "sha256": "82FF34C19C6D17D80DC3A617FD106ED324099CC9D0F2FE752757D0642ED31999"
+      },
+      {
+        "bytes": 514561,
+        "name": "occ.csv",
+        "sha256": "89FD79E7164E3531F757772B9E009B4603DAEB5AB823DCC649AAC4BBC2560507"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2190,
+        "name": "README.md",
+        "sha256": "61CFC939C8D65180675226D65B05C444ED8AE25D554A8A90D0168B4C886A11B8"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 159814,
+        "name": "refs.csv",
+        "sha256": "723B0C2B06713607EE39A78A33991C7E92CAB6A13BD5503ACA51F6C727C49C76"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325587,
+        "name": "terms.csv",
+        "sha256": "6D93CBBD2D6CF3E354FE90DC51605ACD9C7B0932CEF216FB9D606AD97D666E5D"
+      },
+      {
+        "bytes": 3777,
+        "name": "validation.json",
+        "sha256": "CFF4ADAB13369B2D4C7CE733334B1687C0547E0C5BB5D8A0685585E8B71B37EB"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r12",
+    "sem_check": {
+      "bytes": 6528,
+      "name": "qa/v68r28/sem-check.json",
+      "sha256": "CDD157630C633D68ED5CEFBA55F56DFDD027FDDCE39B6EA91A451ABAC110DF78"
+    },
+    "sem_input": {
+      "bytes": 330107,
+      "name": "qa/v68r28/sem-input.json",
+      "sha256": "6C02F64A84747026BB7732B5CC066A309EE676DB76ADFB6670FD10FB32C759D8"
+    }
+  },
+  "status": "PASS"
+}

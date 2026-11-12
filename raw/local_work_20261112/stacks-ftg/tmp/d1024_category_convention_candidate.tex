@@ -1,0 +1,36 @@
+\begin{remark}
+\label{remark-category-convention-boundary}
+\begin{reference}
+\cite[Chapter I, Section 1.1, p. 122]{Tohoku}
+\end{reference}
+The cited source builds three conventions into the word category: the class
+of objects is nonempty, it may be a proper class, and the sets of morphisms
+for distinct ordered pairs of objects are disjoint. Definition
+\ref{definition-category} instead permits the empty category and uses a set
+of objects by default; the selected exceptions to the latter convention are
+listed in Remark \ref{remark-big-categories}. The discussion following
+Definition \ref{definition-category} treats disjointness of the morphism
+sets as optional. Apart from these three convention choices, the data and
+axioms are the same.
+
+The disjointness convention changes no categorical structure. Given a
+category $\mathcal{C}$, let $\mathcal{C}^\dagger$ have the same objects and
+put
+$$
+\Mor_{\mathcal{C}^\dagger}(x, y) =
+\{(x, f, y) \mid f \in \Mor_\mathcal{C}(x, y)\}.
+$$
+Define composition and identities by
+$$
+(y, g, z) \circ (x, f, y) = (x, g \circ f, z), \qquad
+\text{id}^{\dagger}_x = (x, \text{id}_x, x).
+$$
+Associativity and the identity axioms follow from those of $\mathcal{C}$.
+The displayed maps define a functor
+$T : \mathcal{C} \to \mathcal{C}^\dagger$ which is the identity on objects
+and sends $f \in \Mor_\mathcal{C}(x, y)$ to $(x, f, y)$. The identity on
+objects together with $(x, f, y) \mapsto f$ defines an inverse functor.
+Thus pairwise disjoint morphism sets can always be imposed by tagging arrows
+with their source and target; object size and nonemptiness remain convention
+choices.
+\end{remark}

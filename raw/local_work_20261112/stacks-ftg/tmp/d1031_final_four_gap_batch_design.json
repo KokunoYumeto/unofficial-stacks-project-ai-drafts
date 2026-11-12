@@ -1,0 +1,504 @@
+{
+  "schema": "tohoku-stacks-final-four-gap-batch-design-v1",
+  "formalization_id": "D1031_FINAL_FOUR_GAP_BATCH",
+  "status": "CONDITIONAL_DESIGN_COMPLETE_NO_TRANSACTION_EXECUTED",
+  "created_utc": "2026-08-24T10:00:00Z",
+  "purpose": "Define one deterministic immediate post-r70 mapping successor that closes the four known remaining gap-class rows, with D1030 before its section 3.4 parent and with no unperformed live, build, review, or scanner gate treated as passed.",
+  "write_scope": {
+    "written": [
+      "tmp/d1031_final_four_gap_batch_design.json"
+    ],
+    "not_written": [
+      "live TeX or PDFs",
+      "canonical Tohoku source layers or ledgers",
+      "mapping dossiers",
+      "mapping builders or contracts",
+      "scanner outputs"
+    ],
+    "git_used": false,
+    "build_or_scanner_run": false
+  },
+  "input_identities": [
+    {
+      "path": "D1029_SOURCE_REPAIR_CHECK.json",
+      "bytes": 23296,
+      "sha256": "E996D56A24B4BCF4776CFE9351F2932E66E9B7ACB3B0493C877DEDCD13C63E02",
+      "role": "sealed PASS p.188 source, reader, QA, and sem/r22 chain"
+    },
+    {
+      "path": "tmp/d1029_mapping_issue_design.json",
+      "bytes": 26920,
+      "sha256": "288CCE3CC12FCA4E499AA2A758BA8A84F95F9844A54A4B30687769E472FE33CC",
+      "role": "exact D1029 decision, map, and I000033 templates"
+    },
+    {
+      "path": "tmp/d1029_ext_center_actions_candidate.tex",
+      "bytes": 3189,
+      "sha256": "6B6566697F349854C1866661952A7AC5487FAFEB473354D4403E27886B3287FA",
+      "role": "D1029 live candidate"
+    },
+    {
+      "path": "tmp/d1029_ext_center_math_source_audit.json",
+      "bytes": 14637,
+      "sha256": "35C3ECBD18B1F06036C58723D0B59E1CAD48BE29890E8E0026C0A99280A3EC64",
+      "role": "D1029 STRICT_PASS pre-live mathematical/source audit"
+    },
+    {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_design.json",
+      "bytes": 5668,
+      "sha256": "0A23502F52B25BE644B13473817E8FCA1969DD561BE89437C1B3D2F1461CB776",
+      "role": "D1030 child design"
+    },
+    {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_candidate.tex",
+      "bytes": 1894,
+      "sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E",
+      "role": "D1030 live candidate"
+    },
+    {
+      "path": "tmp/d1030_independent_review_r1.json",
+      "bytes": 9132,
+      "sha256": "6E3811EAC77F0036B248DC98421D3CEEE03564B822354E27285C1D141BC5EFF7",
+      "role": "D1030 STRICT_PASS pre-live independent review"
+    },
+    {
+      "path": "tmp/d1030_parent_section_34_review.json",
+      "bytes": 34346,
+      "sha256": "4F22F50999EEDA62CA2FD709FA73A25668765BAF85F8EA782C9FE85670A0C062",
+      "role": "STRICT_PASS conditional parent closure after D1030 seals"
+    },
+    {
+      "path": "tmp/d1031_projective_effacement_duality_design.json",
+      "bytes": 5881,
+      "sha256": "8B1E576D2A777F0FA7A7BA1270D2EEB483F0CFBD16ACE3101BC47E963F18D538",
+      "role": "repaired D1031 design"
+    },
+    {
+      "path": "tmp/d1031_projective_effacement_duality_candidate.tex",
+      "bytes": 2165,
+      "sha256": "4E53BD2ED92771A52F78C3010566CF548975E4F7400A19046339EE1445163D5D",
+      "role": "D1031 live candidate"
+    },
+    {
+      "path": "tmp/d1031_independent_review_r2.json",
+      "bytes": 5323,
+      "sha256": "3D1325BC240B9E4B4F0E90426CAD82D36B0C84730E420414B8801263795110C7",
+      "role": "D1031 STRICT_PASS repaired-design review"
+    }
+  ],
+  "expected_immediate_predecessor": {
+    "dossier": "tohoku_r70",
+    "state": "PENDING_SEAL_NOT_ASSUMED",
+    "required_decision_tail": "D001062",
+    "required_issue_tail": "I000032",
+    "required_I000033_occurrences": 0,
+    "required_counts": {
+      "decisions": 1062,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 397,
+      "existing_weaker": 2,
+      "extend_existing": 0,
+      "new_section": 1,
+      "new_statement": 1,
+      "structural_only": 432,
+      "remaining_gap_class_dispositions": 4
+    },
+    "continuity_rule": "The sealed r70 receipt, decision sequence, issue sequence, counts, scanner inventory, and complete payload inventory must pass. Each of the four target map rows and predecessor decision rows must remain byte-identical to the exact r69 identities below. The known r70 projection changes eleven disjoint rows; this design does not infer continuity before the sealed r70 readback proves it.",
+    "collision_rule": "If r70 does not end at D001062, uses I000033, changes any target unit, or has different counts, this exact D001063-D001066 design is invalid and no row may be appended or silently renumbered."
+  },
+  "decision_order": {
+    "rule": "Append exactly four decision rows contiguously after sealed D001062. D1029 is independent and first so I000033 resolves to the first new decision; D1030 child is next; its section 3.4 parent follows only after the child row; independent D1031 is last.",
+    "ids": [
+      "D001063",
+      "D001064",
+      "D001065",
+      "D001066"
+    ],
+    "sequence_contiguous": true,
+    "parent_after_child": true
+  },
+  "decisions": [
+    {
+      "order": 1,
+      "formalization": "D1029",
+      "decision_id": "D001063",
+      "dependency": "The sealed D1029 source chain is already bound, but the D1029 live insertion, build, post-live independent audit, and scanner/replay must still pass.",
+      "predecessor": {
+        "unit_id": "tohoku:remark:ext-center-modules",
+        "source_locator": "sem/r18/nodes.csv:825",
+        "map_physical_line": 825,
+        "map_row_bytes_with_lf": 475,
+        "map_row_sha256_with_lf": "AF01F68A22C7C6B985B939FD87CE229668445BA0499A1AC906950DEB0DC5C430",
+        "decision_id": "D000539",
+        "decision_physical_line": 540,
+        "decision_row_bytes_with_lf": 288,
+        "decision_row_sha256_with_lf": "9E4AC3099D798D6F586CD5FCA68C3EC81CF6C7A20E826823A2B3EDB66CFDCD6D",
+        "disposition": "existing_weaker",
+        "review_state": "reviewed_weaker",
+        "stacks_labels": "cohomology-section-ext;cohomology-section-global-RHom",
+        "stacks_tags": "0BQP;0B6A"
+      },
+      "preserved_map_fields": {
+        "unit_id": "tohoku:remark:ext-center-modules",
+        "item": "188",
+        "unit_type": "remark",
+        "parent_id": "tohoku:section:4.2",
+        "source_start": "188",
+        "source_end": "188",
+        "source_loc": "sem/r18/nodes.csv:825",
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "source_topics": "ext",
+        "topic_evidence_labels": "cohomology-section-ext;derived-section-ext",
+        "topic_evidence_tags": "06XP;0BQP"
+      },
+      "successor": {
+        "decision_id": "D001063",
+        "unit_id": "tohoku:remark:ext-center-modules",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-ext-center-actions-left-modules;modules-lemma-sheaf-hom-left-modules",
+        "stacks_tags": "",
+        "rationale": "Stacks proves the canonical Gamma(X,Z_A)-module structure on global Ext and the Z_A-module structure on sheaf Ext for left modules over an arbitrary ring sheaf, and recovers Z(Gamma(X,A)) only under equality with Gamma(X,Z_A). The p.188 diplomatic wording is preserved as a recorded source error; corrected French and English replace the false larger scalar ring. No larger-center action is asserted in general.",
+        "review_state": "integrated_source_repair_semantic_stacks_and_independent_review",
+        "supersedes": "D000539"
+      },
+      "projected_decision_row": {
+        "bytes_with_lf": 641,
+        "sha256_with_lf": "B963A92A57A9614327923D487A121152FB5C4771AEDC77EC568E8479025AF2EF"
+      },
+      "projected_map_row": {
+        "bytes_with_lf": 808,
+        "sha256_with_lf": "C5F4239D4975C7093DE009167755EDEFC1EC92858E2F242DEDD22CDA18F9469D"
+      }
+    },
+    {
+      "order": 2,
+      "formalization": "D1030",
+      "decision_id": "D001064",
+      "dependency": "The D1030 candidate must be inserted exactly once and its divisors build, visual QA, post-live audit, and scanner/replay must pass before this row is effective.",
+      "predecessor": {
+        "unit_id": "tohoku:prop:3.4.1",
+        "source_locator": "sem/r18/nodes.csv:761",
+        "map_physical_line": 761,
+        "map_row_bytes_with_lf": 375,
+        "map_row_sha256_with_lf": "961D0FF52FD939AD46E48F2FF07B89C55EB790555DFBBA2CF36CA6F10FD6491C",
+        "decision_id": "D000306",
+        "decision_physical_line": 307,
+        "decision_row_bytes_with_lf": 262,
+        "decision_row_sha256_with_lf": "41ADB8D27D655C3FF88369C3991E66467EF86E1E23CAE3E01BB3EC277E5BA208",
+        "disposition": "new_statement",
+        "review_state": "reviewed_new_statement",
+        "stacks_labels": "",
+        "stacks_tags": ""
+      },
+      "preserved_map_fields": {
+        "unit_id": "tohoku:prop:3.4.1",
+        "item": "161",
+        "unit_type": "proposition",
+        "parent_id": "tohoku:section:3.4",
+        "source_start": "161",
+        "source_end": "161",
+        "source_loc": "sem/r18/nodes.csv:761",
+        "authority_sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+        "source_topics": "",
+        "topic_evidence_labels": "",
+        "topic_evidence_tags": ""
+      },
+      "successor": {
+        "decision_id": "D001064",
+        "unit_id": "tohoku:prop:3.4.1",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+        "stacks_tags": "",
+        "rationale": "Stacks proves H^i(X,O_X^*)=0 for i >= 2 on Noetherian integral locally UFD schemes and the new bounded lemma applies the central sequence 1 -> G_m -> GL_n -> PGL_n -> 1 to show every Zariski PGL_n-torsor lifts to GL_n, hence each corresponding projective-space bundle is a projectivization. These hypotheses include the source's irreducible locally factorial variety; no etale/fppf lifting or general Brauer-vanishing claim is made.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000306"
+      },
+      "projected_decision_row": {
+        "bytes_with_lf": 649,
+        "sha256_with_lf": "5EB03169EA34EB1D681CB732BE238E1EBC5870E9C57D2EA13D3DF228DD95DEC3"
+      },
+      "projected_map_row": {
+        "bytes_with_lf": 767,
+        "sha256_with_lf": "6342BD3A7384875BFE5E47CC943FD66C48093FC26F450C93CFC89DED73241CDD"
+      }
+    },
+    {
+      "order": 3,
+      "formalization": "D1030_PARENT_SECTION_3_4",
+      "decision_id": "D001065",
+      "dependency": "D001064 must be the immediately preceding effective child closure in this batch, and every D1030 live/build/review/scanner gate must pass. If the child is not sealed, append neither this row nor a partial batch.",
+      "predecessor": {
+        "unit_id": "tohoku:section:3.4",
+        "source_locator": "sem/r18/nodes.csv:914",
+        "map_physical_line": 914,
+        "map_row_bytes_with_lf": 464,
+        "map_row_sha256_with_lf": "4BF61AD01B5600B461DA90A8DE4EDB5D82A06987351449C973C8EEC34295460D",
+        "decision_id": "D000324",
+        "decision_physical_line": 325,
+        "decision_row_bytes_with_lf": 340,
+        "decision_row_sha256_with_lf": "2D4BC67C691E472C3AD8066CFDE25ACDF931CDE9F5EA9B222939A00AB64D736A",
+        "disposition": "new_section",
+        "review_state": "reviewed_new_section",
+        "stacks_labels": "cohomology-section-h1-torsors;divisors-section-Weil-divisors",
+        "stacks_tags": "02FN;0BE0"
+      },
+      "preserved_map_fields": {
+        "unit_id": "tohoku:section:3.4",
+        "item": "121;160",
+        "unit_type": "section",
+        "parent_id": "tohoku:chapter:III",
+        "source_start": "121",
+        "source_end": "160",
+        "source_loc": "sem/r18/nodes.csv:914",
+        "authority_sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+        "source_topics": "",
+        "topic_evidence_labels": "",
+        "topic_evidence_tags": ""
+      },
+      "successor": {
+        "decision_id": "D001065",
+        "unit_id": "tohoku:section:3.4",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-cech-always;cohomology-lemma-crossed-homomorphism-affine-action;cohomology-lemma-crossed-homomorphism-torsor-obstruction;cohomology-lemma-flasque-group-torsors-trivial;cohomology-lemma-holomorphic-logarithmic-derivative-obstruction;cohomology-lemma-pointwise-envelope-crossed-homomorphism;cohomology-lemma-pointwise-envelope-degree-two-boundary;cohomology-lemma-pointwise-envelope-torsor-bijection;cohomology-lemma-pointwise-flasque-envelope-groups;cohomology-section-h1-torsors;divisors-definition-sheaf-Weil-divisors;divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift;divisors-lemma-meromorphic-quotient-divisor-germs;divisors-lemma-sheaf-Weil-divisors-flasque;divisors-section-Weil-divisors;divisors-section-meromorphic-functions",
+        "stacks_tags": "01X1;02FN;09V1;0BE0",
+        "rationale": "All 53 direct sem/r18 children are closed once D1030 seals: Proposition 3.4.1, the sole remaining gap-class child, is then represented by the locally-UFD divisor resolution and the bounded PGL_n-to-GL_n lifting lemma; the other substantive children are already existing_equivalent or example_or_remark, and all diagram, equation, footnote, proof, and other internal children remain structural_only with their existing or inherited decisions. The sorted parent/child label union covers the section's divisor resolution, Cech H^1 comparison, crossed-homomorphism and nonabelian torsor obstructions, structure-group lifting, and geometric applications. No etale/fppf lifting or general Brauer-vanishing claim is made.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000324"
+      },
+      "projected_decision_row": {
+        "bytes_with_lf": 1631,
+        "sha256_with_lf": "7B43CFA343C6750462D202090D73614C915D158AECD28E42881E0D44C43BB7FD"
+      },
+      "projected_map_row": {
+        "bytes_with_lf": 1768,
+        "sha256_with_lf": "45891AA20C6B154220B5A322E0D357B5D7DF333E3CC544458ACC4CFC0C54BD60"
+      }
+    },
+    {
+      "order": 4,
+      "formalization": "D1031",
+      "decision_id": "D001066",
+      "dependency": "The D1031 candidate must be inserted exactly once and its homology build, visual QA, post-live audit, and scanner/replay must pass before this row is effective.",
+      "predecessor": {
+        "unit_id": "tohoku:thm:1.10.1:remark:4",
+        "source_locator": "sem/r18/nodes.csv:983",
+        "map_physical_line": 983,
+        "map_row_bytes_with_lf": 880,
+        "map_row_sha256_with_lf": "5D681E064A508E416961EAA95633DFFF67D68DE2B4815F8704767886F06BBE96",
+        "decision_id": "D000730",
+        "decision_physical_line": 731,
+        "decision_row_bytes_with_lf": 756,
+        "decision_row_sha256_with_lf": "4B53CC57D268268D32566C1FB51306EAC7A28B913E136DE725A77B6BE9B95519",
+        "disposition": "existing_weaker",
+        "review_state": "integrated_bounded_source_special_case",
+        "stacks_labels": "homology-definition-projective;homology-definition-projective-effacement;homology-lemma-projective-effacement;homology-lemma-characterize-projectives;homology-lemma-characterize-effaceable-functor",
+        "stacks_tags": "013B;013C"
+      },
+      "preserved_map_fields": {
+        "unit_id": "tohoku:thm:1.10.1:remark:4",
+        "item": "137",
+        "unit_type": "theorem",
+        "parent_id": "tohoku:section:1.10",
+        "source_start": "137",
+        "source_end": "137",
+        "source_loc": "sem/r18/nodes.csv:983",
+        "authority_sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+        "source_topics": "",
+        "topic_evidence_labels": "",
+        "topic_evidence_tags": ""
+      },
+      "successor": {
+        "decision_id": "D001066",
+        "unit_id": "tohoku:thm:1.10.1:remark:4",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "homology-definition-projective;homology-definition-projective-effacement;homology-lemma-projective-effacement;homology-lemma-characterize-projectives;homology-lemma-projective-effacement-opposite-category",
+        "stacks_tags": "013B;013C",
+        "rationale": "Stacks defines projective objects and projective effacements, characterizes projective objects, and the new lemma makes explicit their formal opposite-category correspondence with injective effacements and enough injectives. When A^opp is Grothendieck, it dualizes the functorial injective-embedding theorem to natural epimorphisms from projectives. It does not assert that A^opp is Grothendieck when A is, that every abelian category has enough projectives, or any projective-cover minimality.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000730"
+      },
+      "projected_decision_row": {
+        "bytes_with_lf": 821,
+        "sha256_with_lf": "5B89C642B11079A83C2B1548C05972662A60D461A7C197186F86A8F4CF59A30D"
+      },
+      "projected_map_row": {
+        "bytes_with_lf": 945,
+        "sha256_with_lf": "0D75D0D157C9646D0A5D1C0E747457D916992523F40E1FBC814609726ED10E2D"
+      }
+    }
+  ],
+  "exact_issue_append": {
+    "append_after": "I000032",
+    "append_count": 1,
+    "row": {
+      "issue_id": "I000033",
+      "unit_id": "tohoku:remark:ext-center-modules",
+      "status": "resolved",
+      "kind": "global_ext_center_does_not_restrict_to_local_centers",
+      "claim": "The printed p.188 sentence makes global Ext_A^p a module over Z(Gamma(X,A)), but a globally central section can restrict to a noncentral local section. The canonical general scalar ring is Gamma(X,Z_A); the printed ring is recovered only when the canonical inclusion is an equality.",
+      "evidence_labels": "modules-lemma-sheaf-hom-left-modules;cohomology-lemma-ext-center-actions-left-modules",
+      "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p.188. On the Sierpinski space take A(X)=Q[t], A(U)=M_2(Q), with t restricting to e_11: t is globally central but e_11 is not locally central, and for F=G=A the claimed action already fails in degree zero. D1029 formalizes the canonical Gamma(X,Z_A)-action on global Ext and the Z_A-action on sheaf Ext; the transaction receipt binds the frozen p.188 source-repair audit, corrected-source successor, reader/QA/semantic successor, live build, independent review, and scanner replay.",
+      "control": "Preserve the printed p.188 scalar-ring sentence byte-for-byte in diplomatic French. Use TOH-P188-COR-002 and TOH-SRC-P188-003 only in the no-overwrite corrected French and English successor; bind the frozen source-repair audit, exact reader/QA/semantic successor, live build, independent review, and scanner replay before replacing D000539. Do not alter, reopen, or broaden I000032.",
+      "resolution_decision": "D001063"
+    },
+    "projected_row": {
+      "bytes_with_lf": 1450,
+      "sha256_with_lf": "ABB8BE14713E6ECCCD33F30F2C8A3BE5BB1B1FBEEB1C22EDB73C3813B1327C9B"
+    },
+    "control": "Append the already-resolved row only in the atomic successful four-decision mapping transaction. Preserve I000032 and every predecessor issue byte."
+  },
+  "map_replacement_contract": {
+    "replace_exactly_units": [
+      "tohoku:remark:ext-center-modules",
+      "tohoku:prop:3.4.1",
+      "tohoku:section:3.4",
+      "tohoku:thm:1.10.1:remark:4"
+    ],
+    "physical_lines": [
+      761,
+      825,
+      914,
+      983
+    ],
+    "only_fields_changed_per_row": [
+      "decision_id",
+      "disposition",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags",
+      "rationale"
+    ],
+    "changed_map_rows": 4,
+    "all_other_map_rows_byte_identical": true,
+    "source_locators_and_authority_hashes_preserved": true,
+    "embedded_structural_decisions_appended": 0
+  },
+  "projected_counts": {
+    "relative_to_sealed_r70": {
+      "decisions": 4,
+      "decided_units": 0,
+      "issues": 1,
+      "active_issues": 0,
+      "existing_equivalent": 4,
+      "existing_weaker": -2,
+      "extend_existing": 0,
+      "new_section": -1,
+      "new_statement": -1,
+      "structural_only": 0,
+      "remaining_gap_class_dispositions": -4,
+      "source_repairs_appended": 1,
+      "mapping_closures_appended": 4,
+      "changed_map_rows": 4
+    },
+    "absolute_successor": {
+      "dossier": "tohoku_r71",
+      "decisions": 1066,
+      "decided_units": 679,
+      "issues": 33,
+      "active_issues": 0,
+      "existing_equivalent": 401,
+      "existing_weaker": 0,
+      "extend_existing": 0,
+      "new_section": 0,
+      "new_statement": 0,
+      "structural_only": 432,
+      "remaining_gap_class_dispositions": 0
+    },
+    "zero_gap_justification": "Conditional and complete: the two weaker rows become equivalent, the sole new_statement child becomes equivalent, and the sole new_section parent becomes equivalent after that child seals. If any required gate fails, no batch is authorized and r70 remains at four gaps."
+  },
+  "gate_matrix": {
+    "already_frozen_pass": [
+      "D1029 source/reader/QA/sem/r22 chain in D1029_SOURCE_REPAIR_CHECK.json",
+      "D1029 pre-live mathematical/source audit",
+      "D1030 pre-live independent review",
+      "D1030 conditional parent review",
+      "D1031 repaired-design independent review r2"
+    ],
+    "pending_not_assumed": [
+      "sealed r70 receipt, exact counts, decision/issue tails, target-row continuity, complete inventory, scanner oracle, and replay",
+      "D1029 exact live cohomology.tex insertion with one cohomology-lemma-ext-center-actions-left-modules occurrence",
+      "D1029 cohomology.pdf build, diagnostics, rendered QA, post-live independent audit, scanner oracle, and replay",
+      "D1030 exact live divisors.tex insertion with one divisors-lemma-locally-UFD-projective-linear-torsors-lift occurrence",
+      "D1030 divisors.pdf build, diagnostics, rendered QA, post-live independent audit, scanner oracle, and replay",
+      "D1031 exact live homology.tex insertion with one homology-lemma-projective-effacement-opposite-category occurrence",
+      "D1031 homology.pdf build, diagnostics, rendered QA, post-live independent audit, scanner oracle, and replay",
+      "one final bounded scanner oracle and independent replay binding all three new labels, their files, kinds, tags, statement hashes, and byte-identical six-file inventories"
+    ],
+    "parent_gate": "D001065 is authorized only after D001064 and the frozen D1030 final audit prove the child closure. The transaction is atomic; it may not publish a child-only or parent-only partial successor.",
+    "failure_rule": "Any missing or non-PASS receipt, changed preimage, label collision, TeX/build diagnostic, visual defect, mathematical edit request, scanner error, inventory mismatch, noncontiguous ID, issue collision, or count mismatch aborts the entire batch before append/promotion."
+  },
+  "serialization_contract": {
+    "encoding": "UTF-8 without BOM",
+    "line_ending": "LF",
+    "csv_dialect": "Python csv.writer default excel dialect with quoting=QUOTE_MINIMAL and lineterminator=LF",
+    "decision_field_order": [
+      "decision_id",
+      "unit_id",
+      "action",
+      "disposition",
+      "stacks_labels",
+      "rationale",
+      "review_state",
+      "supersedes"
+    ],
+    "issue_field_order": [
+      "issue_id",
+      "unit_id",
+      "status",
+      "kind",
+      "claim",
+      "evidence_labels",
+      "evidence",
+      "control",
+      "resolution_decision"
+    ],
+    "map_field_order": [
+      "unit_id",
+      "item",
+      "unit_type",
+      "parent_id",
+      "source_start",
+      "source_end",
+      "source_loc",
+      "authority_sha256",
+      "source_topics",
+      "topic_evidence_labels",
+      "topic_evidence_tags",
+      "decision_id",
+      "disposition",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags",
+      "rationale"
+    ]
+  },
+  "transaction_contract": {
+    "target_dossier": "tohoku_r71",
+    "target_must_be_absent": true,
+    "preflight": "Bind the sealed r70 receipt and complete inventory, all input identities above, all later live/build/review/scanner audits, exact projected row serializations, projected counts, and every collision/continuity check before writing.",
+    "write_surface": "Append exactly four decision rows and one issue row, replace exactly four map rows, regenerate only scanner-derived successor payloads and the successor receipt/status, and preserve every other inherited payload byte.",
+    "promotion": "Use a task-owned exclusive staging directory and one atomic no-overwrite directory rename only after the full staged inventory and counts pass.",
+    "replay": "Independently replay the frozen builder/contract against promoted r71 bytes; require the complete inventory, decision and issue sequences, four map deltas, scanner oracle, and receipt to match exactly.",
+    "partial_successor_allowed": false
+  },
+  "authorization": {
+    "design_verdict": "STRICT_PASS_CONDITIONAL_BATCH_DESIGN",
+    "zero_gap_target": "JUSTIFIED_IF_AND_ONLY_IF_ALL_PENDING_GATES_PASS",
+    "authorized_now": "The exact conditional D001063-D001066 decision order, row templates, I000033 row, count projection, and transaction constraints may be used to build a future no-overwrite r71 contract after all pending evidence is frozen.",
+    "not_authorized_now": [
+      "claiming r70 is sealed",
+      "claiming any live candidate is inserted",
+      "claiming any later build, post-live audit, or scanner passed",
+      "appending D001063-D001066 or I000033",
+      "replacing any map row",
+      "building or promoting tohoku_r71"
+    ],
+    "terminal_rule": "Promote r71 only when every gate passes and the exact immediate predecessor is sealed r70 with tail D001062 and I000032. Otherwise append nothing and preserve r70 unchanged."
+  }
+}

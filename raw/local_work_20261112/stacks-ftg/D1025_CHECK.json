@@ -1,0 +1,169 @@
+{
+  "schema": "tohoku-stacks-d1025-check-v1",
+  "formalization_id": "D1025",
+  "status": "STRICT_PASS_PREREQUISITES_R69_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T06:45:14Z",
+  "finalized_utc": "2026-08-24T06:45:14Z",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:term:category",
+    "source_state": "active_derived_index",
+    "source_locator": "sem/r18/nodes.csv:5",
+    "predecessor_decision": "D000003",
+    "predecessor_disposition": "extend_existing",
+    "predecessor_dossier": "tohoku_r68"
+  },
+  "source_claim": {
+    "summary": "The derived term category is anchored by the p. 121 contents entry and the p. 122 definition: a nonempty possibly proper class of objects, Hom sets, associative composition, identities, and pairwise-disjoint Hom sets as a source/target convention.",
+    "occurrence_treatment": "This derived-index term has no occurrence row; its admitted body coordinate is the already audited p. 122 category-definition unit.",
+    "source_repair_required": false,
+    "transcription_or_translation_repair_required": false
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "bytes": 7305283,
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+      "relevant_printed_pages": [121, 122],
+      "relevant_pdf_pages": [3, 4]
+    },
+    "semantic_file": {
+      "path": "sem/r18/nodes.csv",
+      "bytes": 585012,
+      "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D"
+    },
+    "semantic_row_with_lf": {
+      "physical_line": 5,
+      "bytes": 190,
+      "sha256": "32891063DA69A8BEBCF8B09A8511720DE8A2208205FBA4BD2246D17DEE5F6E71"
+    },
+    "source_anchors": {
+      "p121_contents_diplomatic_french": {
+        "bytes": 41,
+        "sha256": "8C72785ACE9D124867E8A1969484B5626C431DD7402508DA78F9561CE4BD7FE2"
+      },
+      "p121_contents_english": {
+        "bytes": 40,
+        "sha256": "3338BA06E693E283CA064D9B226AA1957EDB1052DDDEE13697141F4E6B5CB9AE"
+      },
+      "p122_body_diplomatic_and_corrected_french": {
+        "bytes": 1078,
+        "sha256": "6B3CB609486A78966DFC2B784FC37DF3A625870E2BE644A900D7E47C183BC9C2"
+      },
+      "p122_body_english": {
+        "bytes": 987,
+        "sha256": "3EB75C8F12BB187861B4BEF8A2BB5DDF46466F1984F3EE7F2B431CD35754D065"
+      }
+    }
+  },
+  "predecessor_evidence": {
+    "map_file": {
+      "path": "tohoku_r68/map.csv",
+      "bytes": 487490,
+      "sha256": "1EDF4CFB722D6EFFC601FA64E1EB3E801BF2C63D8CC973B6467FA68C647E5ED2"
+    },
+    "map_row_with_lf": {
+      "physical_line": 5,
+      "bytes": 585,
+      "sha256": "03277917DC707D59D2663A36687CD6449F4D1FB9511F07B0E781606D3DF9F8E1"
+    },
+    "decision_file": {
+      "path": "tohoku_r68/dec.csv",
+      "bytes": 390012,
+      "sha256": "0532BAB5CD37951A0885E841EF4881CBAF6A6F8C4C010F2289AFA1A03BB1DBC6"
+    },
+    "decision_row_with_lf": {
+      "decision_id": "D000003",
+      "physical_line": 4,
+      "bytes": 457,
+      "sha256": "26B6AD2DDBDA4262CD3822BA7F4A0C25DB49A68343450F4B8F47C34E5738899F"
+    },
+    "sealed_receipt": {
+      "path": "tohoku_r68/r68-check.json",
+      "bytes": 11900,
+      "sha256": "1FD05FEBBDF081DEF558736D34FDC78846EE5F34F9E5730CE1D34E19B91C671B",
+      "status": "PASS"
+    }
+  },
+  "coverage_finding": {
+    "labels": [
+      "categories-definition-category",
+      "categories-remark-category-convention-boundary"
+    ],
+    "official_tag": "0014",
+    "result": "The definition supplies the categorical axioms and the convention-boundary remark records the source's nonemptiness, object-size, and disjoint-Hom choices, including the explicitly isomorphic tagged-arrow implementation.",
+    "live_convention_remark": {
+      "path": "categories.tex",
+      "lines": "117-152",
+      "lf_bytes": 1634,
+      "lf_sha256": "8AA72971AB351F6C90D49E161D9E13F993C5F53327CCD170B7F0353D67A05EF8"
+    },
+    "live_edit_required": false,
+    "pdf_rebuild_required": false
+  },
+  "independent_review": {
+    "path": "tmp/d1025_d1026_source_mapping_review.json",
+    "bytes": 7625,
+    "sha256": "3E19B7FF578240254832EC5FE3E6B36B493218FB8F96CB9EFAB753CEC5D9074A",
+    "status": "STRICT_PASS",
+    "mode": "mapping_only_no_live_source_edit"
+  },
+  "shared_scanner_probe": {
+    "status": "PASS_BYTE_IDENTICAL_REPLAY",
+    "oracle_path": "tmp/d1027_scan_probe_r1",
+    "replay_path": "tmp/d1027_scan_probe_replay_r1",
+    "inventory": {
+      "files": 6,
+      "bytes": 5873866,
+      "surface_bytes": 483,
+      "surface_sha256": "98CA0B13CC826020BF5A631A8E4B358758202D779649C334B7AA017DACBD2CF2"
+    },
+    "counts": {
+      "tex_files": 119,
+      "labels": 22112,
+      "official_tags_joined": 21437,
+      "topics": 13,
+      "topic_candidates": 1287,
+      "direct_topic_coverage": 13,
+      "warnings": 684,
+      "errors": 0
+    },
+    "files": {
+      "cfg.json": {"bytes": 5151, "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"},
+      "check.json": {"bytes": 83727, "sha256": "C65DA64B135E1A17179F8DED6880226DE9ECEA62E149B00C8FEE79CB354F343E"},
+      "stx.csv": {"bytes": 5290391, "sha256": "3083041A38A704D6A8815B21D42AC8E617AFA8D404B289586A820D1C80AE3346"},
+      "tcand.csv": {"bytes": 489720, "sha256": "69156C767922272E47416C2471DD2EC5B9A905B4E1964B56806145892A7FECC9"},
+      "tmap.csv": {"bytes": 2424, "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"},
+      "topics.csv": {"bytes": 2453, "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"}
+    }
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_FOR_BUNDLED_NO_OVERWRITE_R69_TRANSACTION",
+    "predecessor": "tohoku_r68",
+    "successor": "tohoku_r69",
+    "decision": {
+      "decision_id": "D001049",
+      "unit_id": "tohoku:term:category",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "categories-definition-category;categories-remark-category-convention-boundary",
+      "official_tags": "0014",
+      "rationale": "The derived category term is fully represented by the Stacks category definition together with the source-specific convention-boundary remark; the admitted p. 122 body coordinate supplies the exact source content and no additional live statement is needed.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000003"
+    },
+    "issue_append": null,
+    "source_repair_append": null,
+    "changed_map_rows": [5],
+    "projected_counts_after_this_decision": {
+      "decisions": 1049,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 392,
+      "extend_existing": 8,
+      "new_statement": 2,
+      "remaining_gap_class_dispositions": 17
+    }
+  }
+}

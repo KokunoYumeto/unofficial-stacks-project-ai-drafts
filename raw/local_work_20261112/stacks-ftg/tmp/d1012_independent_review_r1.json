@@ -1,0 +1,337 @@
+{
+  "schema": "tohoku-stacks-d1012-independent-review-r1-v1",
+  "unit": "D1012",
+  "overall_result": "STRICT_PASS",
+  "pass_scope": "formalization and source-repair design",
+  "production_state": "NOT_APPLIED",
+  "production_readiness": "READY_AFTER_REQUIRED_OPERATIONAL_AMENDMENTS_AND_ORDERED_GATES",
+  "write_boundary": {
+    "created": [
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_independent_review_r1.json"
+    ],
+    "not_modified": [
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_design_audit.json",
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_source_repair_design.json",
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_independent_review.json",
+      "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "all canonical source layers",
+      "all decision and issue ledgers",
+      "all mapping successors and cursors"
+    ],
+    "build_or_scan_run": false,
+    "git_used": false,
+    "cleanup_run": false
+  },
+  "input_identities": {
+    "revised_candidate": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+      "bytes": 14479,
+      "sha256": "47846682E4B789557EDAA8F5DADAC4F927267394FAC57ACED0590210F039311D",
+      "lf_count": 352,
+      "labels": 6,
+      "unique_labels": 6,
+      "official_tags": 0
+    },
+    "updated_design": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_design_audit.json",
+      "bytes": 11187,
+      "sha256": "450F5797010AEA550A0AA972AD1DA27C6A03AD1910777489352B222FC27FF8BC",
+      "lf_count": 215,
+      "status": "STRICT_DESIGN_PASS_SOURCE_REPAIR_REQUIRED"
+    },
+    "source_repair_design": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_source_repair_design.json",
+      "bytes": 11812,
+      "sha256": "9F282268F4496469D2601BE25523EF6276F9CF15722D6F50A71B202F32E80B82",
+      "lf_count": 199,
+      "status": "DESIGN_PASS_NOT_APPLIED"
+    },
+    "prior_independent_review": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_independent_review.json",
+      "bytes": 13029,
+      "sha256": "1AFD6DCC6476E9B4F381E200E10FB55713215CD30A36A228CAB904B626480F85",
+      "overall_result": "BLOCKED",
+      "sole_blocker": "D1012-R001"
+    },
+    "live_source": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 895363,
+      "sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C",
+      "candidate_label_collisions": 0
+    }
+  },
+  "source_authority_replayed": [
+    {
+      "page": 179,
+      "layer": "dip",
+      "bytes": 4413,
+      "sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182"
+    },
+    {
+      "page": 179,
+      "layer": "fr",
+      "bytes": 4347,
+      "sha256": "C3B0470AC85B9A34A0DFAAF5A0325690756C7FB541B12421CC651A29C7410CC7"
+    },
+    {
+      "page": 179,
+      "layer": "en",
+      "bytes": 4144,
+      "sha256": "3CD9D83B12C0B48B94577F0BBDA2E632B8E6EE8E7778B1B9442D5054D8505FE1"
+    },
+    {
+      "page": 180,
+      "layer": "dip",
+      "bytes": 4626,
+      "sha256": "8AB7B01C86B798D9E5E9E0ECF7AB3791688EF7C8902A311DBFC0E5C93FED6A31"
+    },
+    {
+      "page": 180,
+      "layer": "fr",
+      "bytes": 5138,
+      "sha256": "2F68D547A44E47A0F9CA5B602C440454D0244B3CA8EA62430DA0D6AAA9F83D18"
+    },
+    {
+      "page": 180,
+      "layer": "en",
+      "bytes": 4928,
+      "sha256": "F7D39A2F78D45C9CEA5A00360B96EBF6F1A5CBC656A8AB075DDE7B6093735961"
+    },
+    {
+      "page": 181,
+      "layer": "dip",
+      "bytes": 4151,
+      "sha256": "4E79B6D13131BF504B0AF63C5001D1297D2C1640F1F3A88FFD0817F73C080431"
+    },
+    {
+      "page": 181,
+      "layer": "fr",
+      "bytes": 4097,
+      "sha256": "B0335E067B6405E3AB7A0BC621E80828F0917AFCE0C8BF8201D4FF6A838F7D27"
+    },
+    {
+      "page": 181,
+      "layer": "en",
+      "bytes": 3850,
+      "sha256": "B88E5CE78F19532500B47905EAF2DD0D0B15F38A820E6DFE730217E84E1F6BFE"
+    }
+  ],
+  "prior_candidate_reconstruction": {
+    "result": "PASS",
+    "revised_fragment_occurrences": 1,
+    "operation": "Replace only revised candidate lines 199-201 by the prior self-trace axiom in memory.",
+    "reconstructed_bytes": 14449,
+    "reconstructed_sha256": "5399ABB0D931203A2CAC2A4B5E643342AE8D3EB93B78F9B85F2EEC9EA2E6FE45",
+    "conclusion": "The revised candidate differs from the independently reviewed predecessor only in the intended 30-byte cross-cover quantifier strengthening."
+  },
+  "d1012_r001_discharge": {
+    "result": "PASS",
+    "defect_id": "D1012-R001",
+    "candidate_assumption_lines": [199, 201],
+    "candidate_use_lines": [255, 258],
+    "revised_axiom": "For R,R' in the assigned covering family of A and B a member of R, the trace R'|_B belongs to the assigned covering family of B.",
+    "exact_instantiation": {
+      "R": "R^1",
+      "R_prime": "R^i for each i=2,...,k",
+      "B": "an arbitrary member of R^1",
+      "consequence": "R^i|_B belongs to R(B), exactly as required by candidate lines 256-257."
+    },
+    "sufficiency": "Axiom (1) already puts B in S. Each traced covering retains the applicable open, finite-closed, or paracompact locally-finite-closed condition, so the induction hypothesis applies on B.",
+    "minimality": "The repair adds only the missing independent-cover quantifier. Taking R'=R recovers the printed self-trace case, and no theorem conclusion or A(n)/B(n-1) condition changes."
+  },
+  "projected_source_repair_replay": {
+    "result": "PASS",
+    "method": "Exact in-memory LF-preserving replacement on the bound p179 preimages; no source file was written.",
+    "corrected_french": {
+      "replacement_count": 1,
+      "preimage_bytes": 4347,
+      "preimage_sha256": "C3B0470AC85B9A34A0DFAAF5A0325690756C7FB541B12421CC651A29C7410CC7",
+      "projected_bytes": 4375,
+      "projected_sha256": "27C6C84EEE0B74133B6376453801DF451B892FF782B7AC09E72146C4A7834C48",
+      "matches_design": true
+    },
+    "english": {
+      "replacement_count": 1,
+      "preimage_bytes": 4144,
+      "preimage_sha256": "3CD9D83B12C0B48B94577F0BBDA2E632B8E6EE8E7778B1B9442D5054D8505FE1",
+      "projected_bytes": 4173,
+      "projected_sha256": "A7491524DBAC64EA345B36384DE39F503A2F4680B995779DEB826D7C21443D73",
+      "matches_design": true
+    },
+    "diplomatic_french": {
+      "action": "NO_CHANGE",
+      "current_and_projected_bytes": 4413,
+      "current_and_projected_sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182",
+      "invariance": "BYTE_IDENTICAL"
+    },
+    "scope_proof": "Each corrected-language preimage contains the specified old LF-wrapped fragment exactly once. The projection replaces only that fragment; diplomatic content is not an input to either replacement."
+  },
+  "ledger_audit": {
+    "source_family_ledger": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p179_r1\\decisions.jsonl",
+      "bytes": 3068,
+      "sha256": "0832EF49568DAC6A7335E7C8251BC16031C1BD7B065CAF329EE690BA389FA02C",
+      "lines": 5,
+      "json_parse_errors": 0,
+      "duplicate_decision_ids": 0,
+      "active_predecessor": "TOH-P179-COR-001",
+      "proposed_id": "TOH-P179-COR-002",
+      "proposed_id_occurrences": 0,
+      "result": "PASS"
+    },
+    "root_source_corrections_ledger": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\SOURCE_CORRECTIONS.jsonl",
+      "bytes": 209932,
+      "sha256": "0C9A8424C88DCF4F474ACF5EE7F8C0F8F51D0B1D1F1482E04B57ECD43DC80429",
+      "lines": 379,
+      "json_parse_errors": 0,
+      "duplicate_decision_ids": 0,
+      "active_p179_ids": [
+        "TOH-SRC-P179-001",
+        "TOH-SRC-P179-002",
+        "TOH-SRC-P179-003",
+        "TOH-SRC-P179-004",
+        "TOH-SRC-P179-005",
+        "TOH-SRC-P179-006",
+        "TOH-SRC-P179-007",
+        "TOH-SRC-P179-008"
+      ],
+      "proposed_id": "TOH-SRC-P179-009",
+      "proposed_id_occurrences": 0,
+      "result": "PASS"
+    },
+    "sealed_mapping_r54": {
+      "decisions_path": "user\\Documents\\stacks-ftg\\tohoku_r54\\dec.csv",
+      "decisions_bytes": 377152,
+      "decisions_sha256": "1B9A6A95DC3C50C04E5754AA7E8890827111D51350E124D6E0220C23FA77B679",
+      "decision_rows": 1030,
+      "maximum_decision_id": "D001030",
+      "issues_path": "user\\Documents\\stacks-ftg\\tohoku_r54\\issues.csv",
+      "issues_bytes": 31413,
+      "issues_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503",
+      "issue_rows": 30,
+      "maximum_issue_id": "I000030",
+      "r54_source_repairs_appended": 0
+    },
+    "reserved_r55": {
+      "purpose": "mapping-only closure of D000639",
+      "decision_id": "D001031",
+      "issue_append": false,
+      "effect": "D1012 must not use r55 or D001031."
+    },
+    "d1012_corrected_mapping_allocation": {
+      "successor": "tohoku_r56",
+      "predecessor": "sealed tohoku_r55",
+      "decision_ids": [
+        "D001032",
+        "D001033",
+        "D001034",
+        "D001035",
+        "D001036"
+      ],
+      "all_ids_absent_from_r54": true,
+      "issue_id": "I000031",
+      "issue_id_absent_from_r54": true,
+      "source_repairs_appended": 1,
+      "result": "PASS_WITH_REQUIRED_DESIGN_AMENDMENT"
+    }
+  },
+  "mandatory_formalization_predicates": [
+    {
+      "id": "P01_FINITE_CLOSED_COVER_SPECTRAL_SEQUENCE",
+      "result": "PASS",
+      "evidence": "The revised candidate is byte-identical to the previously audited candidate in lines 1-198 and 202-352. The augmented closed-cover resolution, exact closed direct images, finite products, and E1 identification remain unchanged and valid."
+    },
+    {
+      "id": "P02_PARACOMPACT_LOCALLY_FINITE_CLOSED_COVER_SPECTRAL_SEQUENCE",
+      "result": "PASS",
+      "evidence": "The locally finite intersection families, stalkwise finite products, soft restrictions to closed intersections, soft product columns, Gamma-acyclicity, and exact product calculation remain unchanged and valid."
+    },
+    {
+      "id": "P03_EDGE_REFINEMENT_TRACE_PRISM_NATURALITY",
+      "result": "PASS",
+      "evidence": "The augmentation identifies both edges; the vanishing strip gives the stated edge exactness; refinement restriction and the prism homotopy give E2-independence; trace agrees with restriction on abutments."
+    },
+    {
+      "id": "P04_CROSS_COVER_TRACE_AXIOM",
+      "result": "PASS",
+      "evidence": "The revised candidate axiom exactly licenses every trace used in the induction on |L| and discharges D1012-R001 without changing any other candidate content."
+    },
+    {
+      "id": "P05_SOURCE_REPAIR_AUTHORITY",
+      "result": "PASS",
+      "evidence": "The p180 proof itself forces the missing quantifier. The design preserves printed diplomatic French and makes the narrow correction only in corrected French and English. Both projected identities replay exactly."
+    },
+    {
+      "id": "P06_LABEL_AND_TAG_POLICY",
+      "result": "PASS",
+      "evidence": "The six labels are unique in the candidate and absent from the bound live source; no official tag is asserted."
+    },
+    {
+      "id": "P07_PAGE_181_SEAM",
+      "result": "PASS",
+      "evidence": "The Proposition 3.9.2 continuation, application, and nonabelian remark remain unclaimed subordinate units; Section 3.10 begins cleanly on p181."
+    }
+  ],
+  "supersession_review": [
+    {
+      "new_decision_id": "D001032",
+      "supersedes": "D000446",
+      "unit_id": "tohoku:theorem:3.9.1",
+      "target_label": "cohomology-lemma-covering-acyclicity-local-killing",
+      "result": "PASS_AT_DESIGN_LEVEL",
+      "reason": "D1012-R001 is exactly discharged; the double induction and edge argument are now licensed."
+    },
+    {
+      "new_decision_id": "D001033",
+      "supersedes": "D000378",
+      "unit_id": "tohoku:corollary:3.9.1:1",
+      "target_label": "cohomology-lemma-covering-acyclicity-conditions",
+      "result": "PASS_AT_DESIGN_LEVEL",
+      "reason": "Both directions follow from the valid spectral sequence and repaired local-killing theorem."
+    },
+    {
+      "new_decision_id": "D001034",
+      "supersedes": "D000379",
+      "unit_id": "tohoku:corollary:3.9.1:2",
+      "target_label": "cohomology-lemma-special-coverings-compute-acyclicity",
+      "result": "PASS_AT_DESIGN_LEVEL",
+      "reason": "The open-cover local-killing lemma supplies every B(m), and the repaired preceding equivalence applies."
+    },
+    {
+      "new_decision_id": "D001035",
+      "supersedes": "D000380",
+      "unit_id": "tohoku:corollary:3.9.1:3",
+      "target_label": "cohomology-lemma-bounded-nerve-special-coverings-acyclic",
+      "result": "PASS_AT_DESIGN_LEVEL",
+      "reason": "Alternating normalization kills covering cohomology above the nerve dimension; the repaired preceding equivalence gives all positive-degree derived vanishing."
+    },
+    {
+      "new_decision_id": "D001036",
+      "supersedes": "D000329",
+      "unit_id": "tohoku:section:3.9",
+      "target_label": "cohomology-section-covering-acyclicity-criteria",
+      "result": "PASS_AT_DESIGN_LEVEL",
+      "reason": "The section LayerTarget and scoped subject are represented; separately targeted p180-p181 subordinate units remain unclaimed."
+    }
+  ],
+  "required_operational_amendments": [
+    {
+      "id": "D1012-A001",
+      "blocking_for_production": true,
+      "blocking_for_mathematical_design_pass": false,
+      "artifact_lines": "d1012_source_repair_design.json lines 190 and 195; d1012_design_audit.json line 95",
+      "required_change": "Replace the stale r53/r54-to-r55 mapping plan by a sealed-r55-to-r56 plan. Reserve D001031 for r55, assign D001032-D001036 to the five D1012 transitions, append resolved issue I000031 for the source quantifier omission, and require source_repairs_appended=1."
+    },
+    {
+      "id": "D1012-A002",
+      "blocking_for_production": true,
+      "blocking_for_mathematical_design_pass": false,
+      "artifact_line": "d1012_source_repair_design.json line 97",
+      "required_change": "When serializing TOH-SRC-P179-009 into SOURCE_CORRECTIONS.jsonl, use the established ledger layer token fr_corrected;en instead of the design-only token fr_corrected_and_english. The latter has zero occurrences in the exact ledger; fr_corrected;en is the established current spelling."
+    }
+  ],
+  "blocking_defects": [],
+  "terminal_instruction": "The revised formalization and narrow source-repair design pass independently. Before any production mutation, apply D1012-A001 and D1012-A002 to the execution plan, then execute the source-ledger, exact-source, reader, visual, semantic, live integration, build, scanner, r56 mapping, and receipt gates in order."
+}

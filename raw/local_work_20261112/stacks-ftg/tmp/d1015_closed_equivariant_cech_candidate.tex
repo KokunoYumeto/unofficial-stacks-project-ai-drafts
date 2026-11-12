@@ -1,0 +1,159 @@
+\begin{definition}[Equivariant \v Cech complex for a closed covering]
+\label{definition-equivariant-cech-closed-covering}
+\begin{reference}
+\cite[Chapter V, \S 5.5, pp. 208--209]{Tohoku}
+\end{reference}
+Let $G$ act on a topological space $X$, and let
+$\mathcal U=(U_i)_{i\in I}$ be a closed $G$-covering.  Thus every $U_i$ is
+closed, $gU_i=U_{gi}$, and the $U_i$ cover $X$.  Put
+$U_{i_0\ldots i_p}=U_{i_0}\cap\cdots\cap U_{i_p}$.  If $\mathcal P$ is an
+abelian $G$-equivariant coefficient system on these finite intersections,
+write
+$$
+C^p_{\mathrm{cl}}(\mathcal U,\mathcal P)=
+\prod_{(i_0,\ldots,i_p)\in I^{p+1}}
+\mathcal P(U_{i_0\ldots i_p}).
+$$
+Here $\mathcal P(U_{\mathbf i})$ means
+$\Gamma(U_{\mathbf i},\mathcal P|_{U_{\mathbf i}})$ when $\mathcal P$ is a
+sheaf; the coefficient-system transport maps carry this group to the group
+on $gU_{\mathbf i}$.  The alternating restriction maps make this a complex
+of $G$-modules.  We define
+$$
+\check H^n_{\mathrm{cl}}(\mathcal U;G,\mathcal P)=
+H^n\left(R\Gamma_G\bigl(
+C^\bullet_{\mathrm{cl}}(\mathcal U,\mathcal P)\bigr)\right).
+$$
+For a $G$-sheaf $\mathcal A$, the coefficient system used below is
+$$
+\underline H^q_{\mathrm{cl}}(\mathcal A)(U_{i_0\ldots i_p})
+ =H^q(U_{i_0\ldots i_p},\mathcal A|_{U_{i_0\ldots i_p}}),
+$$
+with transport induced by the action.  This is the same derived-invariants
+construction as Definition \ref{definition-equivariant-cech-cohomology};
+the subscript only records that the covering members need not be open.
+\end{definition}
+
+\begin{lemma}[Equivariant \v Cech spectral sequence for closed coverings]
+\label{lemma-equivariant-cech-spectral-sequence-closed-covering}
+\begin{reference}
+\cite[Chapter V, \S 5.5, Theorem 5.5.3 and Corollary 2,
+pp. 208--209]{Tohoku}
+\end{reference}
+Let $G$ act on a topological space $X$, let
+$\mathcal U=(U_i)_{i\in I}$ be a closed $G$-covering, and let $\mathcal A$ be
+an abelian $G$-sheaf on $X$.  Assume either that $I$ is finite, or that $X$
+is paracompact and $\mathcal U$ is locally finite.  There is a first-quadrant
+spectral sequence, additive and functorial in $\mathcal A$ from the
+$E_2$-page onward,
+$$
+E_2^{p,q}=\check H^p_{\mathrm{cl}}
+ (\mathcal U;G,\underline H^q_{\mathrm{cl}}(\mathcal A))
+ \Longrightarrow H^{p+q}(X;G,\mathcal A),
+$$
+with a finite filtration in each total degree.  Its bottom edge maps are
+canonical functorial homomorphisms
+$$
+\check H^n_{\mathrm{cl}}(\mathcal U;G,\mathcal A)
+ \longrightarrow H^n(X;G,\mathcal A).
+$$
+They are isomorphisms for $n=0$ and injective for $n=1$, and the associated
+five-term exact sequence begins
+$$
+\begin{aligned}
+0\longrightarrow{}&\check H^1_{\mathrm{cl}}(\mathcal U;G,\mathcal A)
+\longrightarrow H^1(X;G,\mathcal A)
+\longrightarrow \check H^0_{\mathrm{cl}}
+ (\mathcal U;G,\underline H^1_{\mathrm{cl}}(\mathcal A))\\
+\longrightarrow{}&\check H^2_{\mathrm{cl}}(\mathcal U;G,\mathcal A)
+\longrightarrow H^2(X;G,\mathcal A).
+\end{aligned}
+$$
+\end{lemma}
+
+\begin{proof}
+For a tuple $\mathbf i=(i_0,\ldots,i_r)$ let
+$j_{\mathbf i}:U_{\mathbf i}\hookrightarrow X$ be the closed inclusion and
+put
+$$
+\mathcal K^r(\mathcal U,\mathcal A)=
+\prod_{\mathbf i\in I^{r+1}}
+(j_{\mathbf i})_*(\mathcal A|_{U_{\mathbf i}}),
+$$
+with the alternating restriction differential.  The augmentation
+$$
+\mathcal A[0]\longrightarrow
+\mathcal K^\bullet(\mathcal U,\mathcal A)
+$$
+is equivariant, where $G$ acts by transport and permutation of the factors.
+It is a quasi-isomorphism.  Indeed, the stalk argument in the proof of Lemma
+\ref{lemma-cech-spectral-sequence-closed-covering} applies unchanged: in the
+finite case, and locally in the locally finite case, the nonzero factors are
+the augmented cochain complex of a nonempty simplex.
+
+Let $F$ be global sections from abelian $G$-sheaves to $G$-modules and let
+$G_0$ be the invariant-module functor.  If $\mathcal I$ is an injective
+abelian $G$-sheaf, then $F(\mathcal I)$ is right acyclic for $G_0$ by
+Injectives, Lemma
+\ref{injectives-lemma-equivariant-injective-sections-invariants}.  Apply
+Derived Categories, Lemma
+\ref{derived-lemma-hyperderived-composite-functor-spectral-sequence-resolution}
+to the displayed equivariant resolution.  Its $E_2$-page is
+$$
+H^p\left(RG_0\bigl(
+(R^qF)(\mathcal K^\bullet(\mathcal U,\mathcal A))\bigr)\right)
+$$
+and it converges to $R^{p+q}(G_0\circ F)(\mathcal A)$.
+
+It remains to identify the complex inside $RG_0$.  The cohomology
+calculation in the proof of Lemma
+\ref{lemma-cech-spectral-sequence-closed-covering} is functorial and
+equivariant.  Injectives, Lemma
+\ref{injectives-lemma-equivariant-injective-underlying} identifies the
+underlying groups of $R^qF$ with ordinary sheaf cohomology, carrying the
+induced $G$-action.  In the finite case the closed-cover calculation uses
+exact direct image and finite products for closed inclusions; in the locally
+finite paracompact case it uses the soft resolution and locally finite
+products.  It gives
+$$
+(R^qF)(\mathcal K^\bullet(\mathcal U,\mathcal A))
+\cong
+C^\bullet_{\mathrm{cl}}(
+\mathcal U,\underline H^q_{\mathrm{cl}}(\mathcal A))
+$$
+as complexes of $G$-modules.  Definition
+\ref{definition-equivariant-cech-closed-covering} now identifies the
+$E_2$-page with the one in the statement, while Definition
+\ref{definition-orbit-space-equivariant-cohomology} identifies the abutment
+with $H^{p+q}(X;G,\mathcal A)$.  The general edge and convergence statements
+give the finite filtrations, the bottom edge maps, and the five-term exact
+sequence asserted above.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-equivariant-cech-spectral-sequence-closed-acyclic-cover}
+\begin{reference}
+\cite[Chapter V, \S 5.5, Corollaries 1 and 2 to Theorem 5.5.3,
+pp. 208--209]{Tohoku}
+\end{reference}
+In the situation of Lemma
+\ref{lemma-equivariant-cech-spectral-sequence-closed-covering}, assume in
+addition that
+$$
+H^q(U_{i_0\ldots i_p},\mathcal A|_{U_{i_0\ldots i_p}})=0
+\quad\text{for every }q>0\text{ and every }(i_0,\ldots,i_p).
+$$
+Then all bottom edge maps
+$$
+\check H^n_{\mathrm{cl}}(\mathcal U;G,\mathcal A)
+\longrightarrow H^n(X;G,\mathcal A)
+$$
+are isomorphisms.
+\end{lemma}
+
+\begin{proof}
+The $E_2$-page of Lemma
+\ref{lemma-equivariant-cech-spectral-sequence-closed-covering} is
+concentrated in the row $q=0$.  The spectral sequence therefore degenerates,
+and its bottom edge maps are isomorphisms in every degree.
+\end{proof}

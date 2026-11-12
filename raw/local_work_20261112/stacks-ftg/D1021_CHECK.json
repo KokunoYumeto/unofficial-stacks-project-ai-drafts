@@ -1,0 +1,190 @@
+{
+  "schema": "tohoku-stacks-d1021-check-v1",
+  "formalization_id": "D1021",
+  "status": "STRICT_PASS_PREREQUISITES_R65_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T03:11:36.2014884Z",
+  "finalized_utc": "2026-08-24T03:11:36.2014884Z",
+  "change_class": "mapping_only_from_already_sealed_d1020_formalization",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:equivalence:holomorphic-bundles-locally-free-sheaves",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:562",
+    "predecessor_decision": "D000615",
+    "predecessor_disposition": "new_statement",
+    "predecessor_dossier": "tohoku_r64",
+    "predecessor_map_row_with_lf": {
+      "physical_line": 562,
+      "bytes": 441,
+      "sha256": "69B76A64CA7578CCF175FF4CDB5FD0C48BBF246A76FC03770CAC457D33F73C88"
+    }
+  },
+  "source_claim": {
+    "summary": "For n>0, sending a rank-n holomorphic vector bundle E to its sheaf O(E) gives the natural correspondence with coherent analytic O_X-modules locally isomorphic to O_X^n; the inverse bundle has fibre L_x tensor_{O_{X,x}} C through residue or evaluation.",
+    "scope_boundary": [
+      "the equivariant correspondence is the separate D1020/r64 unit D000614",
+      "coherent and equivariant extension classification and H^1 are separate",
+      "quotient descent, compactness, finite dimensionality, and GAGA are not asserted"
+    ],
+    "source_repair_required": false,
+    "transcription_or_translation_repair_required": false
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "printed_page": 219,
+      "authority_pdf_page": 35,
+      "local_witness": 101,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "semantic_row_with_lf": {
+      "path": "sem/r18/nodes.csv:562",
+      "bytes": 900,
+      "sha256": "2A09FF0387AB16F0E32F39A03C8854446228E63BE9D2D65F17E4D61576094CE6"
+    },
+    "occurrence_row_with_lf": {
+      "path": "sem/r18/occ.csv:984",
+      "occurrence_id": "tohoku:occ:p219:o003",
+      "bytes": 559,
+      "sha256": "4F5DB366A98DF2B434B5A5A9DF27D67FB5295F707E19E16E6F09805099BCE712"
+    },
+    "layers": {
+      "diplomatic_segment": {
+        "bytes": 517,
+        "sha256": "3F09D73C2B8428B8C3146448BAE88712932792975A24B135BC96A8A0E1120610"
+      },
+      "corrected_french_segment": {
+        "bytes": 518,
+        "sha256": "3613A370EF22582612BFBD33365D66C00ABBD06F3020D39AA609742C65BB36D9"
+      },
+      "english_segment": {
+        "bytes": 482,
+        "sha256": "B5CA96ACFE5D5A2B367D784BEABDD185A7B542DC2C328BE7768EF61D1D7DBBE0"
+      }
+    }
+  },
+  "mapping_review": {
+    "path": "tmp/d1021_mapping_review.json",
+    "bytes": 4585,
+    "sha256": "BAC136EED314E3E1A07CD7A1154D33E79B413A83A746E3A1460AF2D14ECFA8B6",
+    "status_before_predecessor_guard": "STRICT_PASS_CONDITIONAL_ON_BYTE_IDENTICAL_R64_PREIMAGE",
+    "source_fidelity": "PASS",
+    "mathematical_coverage": "PASS",
+    "scope_separation": "PASS",
+    "predecessor_guard_now_satisfied": true
+  },
+  "formalization_evidence": {
+    "target_label": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+    "official_tag": "",
+    "result": "The live lemma proves the equivalence, full faithfulness, essential surjectivity by analytic gluing, coherence by Oka coherence, and the canonical residue-field fibre formula.",
+    "live_tex": {
+      "path": "cohomology.tex",
+      "bytes": 927351,
+      "sha256": "934223B83092E38F7184DE6B739569002BFCBE9F934A5AA9212EBF78AD8424CA"
+    },
+    "lemma_block": {
+      "source_lines": "20276--20340",
+      "bytes": 2807,
+      "sha256": "8640B3C62049EFC5B4BC868DFEFCF3160152475467C02C089C436F7BEC82C14D"
+    },
+    "live_pdf": {
+      "path": "cohomology.pdf",
+      "bytes": 2020550,
+      "sha256": "4B55BF958522964140AD364EF911F71DEA72455DA709E80176AC707381786C2E",
+      "pages": 242
+    },
+    "scanner_label_row_with_lf": {
+      "source": "tohoku_r64/stx.csv:3629",
+      "bytes": 315,
+      "sha256": "386B6923A5C3B9A4801AEF64A1F5CA9512A131A2A1A839121D794C321FD91A44",
+      "text_sha256": "0D6D69B427976C318544F4D967CB82A6A6E8EED3F138133AFB2B155B12F66467"
+    },
+    "originating_d1020_audit": {
+      "path": "D1020_CHECK.json",
+      "bytes": 14789,
+      "sha256": "E03C0BDB19BB564CEC782124367D6CD053624551F847F64885E6ECC1A7E4B083",
+      "status": "STRICT_PASS_PREREQUISITES_R64_MAPPING_AUTHORIZED"
+    },
+    "new_source_edit_required": false,
+    "new_pdf_build_required": false,
+    "new_visual_render_required": false,
+    "new_scanner_run_required": false,
+    "reason_no_new_production_gate": "D1021 maps a source unit to a separately labelled lemma already built, rendered, independently reviewed, scanned, and sealed in D1020/r64 without changing any live artifact."
+  },
+  "sealed_predecessor": {
+    "path": "tohoku_r64",
+    "status": "PASS",
+    "receipt": {
+      "path": "tohoku_r64/r64-check.json",
+      "bytes": 10148,
+      "sha256": "2133F7D0C6CC875A196394308233C5DF1FC120AB764C8AB45D2999AE7FCC7E93"
+    },
+    "oracle": "PASS_REPLAY",
+    "preflight": "PASS",
+    "execute": "PASS_COMMITTED",
+    "post_promotion_replays": 2,
+    "post_promotion_replay_status": "PASS_REPLAY",
+    "stage_absent": true,
+    "counts": {
+      "decisions": 1044,
+      "existing_equivalent": 387,
+      "new_statement": 4,
+      "remaining_gap_class_dispositions": 22,
+      "issues": 32,
+      "active_issues": 0,
+      "scanner_tex_files": 119,
+      "scanner_labels": 22106,
+      "scanner_official_tags_joined": 21437,
+      "scanner_topic_candidates": 1286,
+      "scanner_warnings": 678,
+      "scanner_errors": 0
+    }
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_FOR_NO_OVERWRITE_R65_TRANSACTION",
+    "predecessor": "tohoku_r64",
+    "successor": "tohoku_r65",
+    "decision": {
+      "decision_id": "D001045",
+      "unit_id": "tohoku:equivalence:holomorphic-bundles-locally-free-sheaves",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+      "official_tags": "",
+      "rationale": "Stacks now proves the natural equivalence between rank-n holomorphic vector bundles and analytic O_X-modules locally isomorphic to O_X^n, proves that these modules are coherent, and identifies the inverse bundle fibre as L_x tensor_{O_{X,x}} C through the residue or evaluation map. Equivariance, extension classification and H^1, quotient descent, compactness, finite dimensionality, and GAGA are separate units and are not mapped here.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000615"
+    },
+    "issue_append": null,
+    "source_repair_append": null,
+    "map_replacement": {
+      "physical_line": 562,
+      "source_locator_preserved": "sem/r18/nodes.csv:562",
+      "only_fields_changed": [
+        "decision_id",
+        "disposition",
+        "review_state",
+        "stacks_labels",
+        "official_tags",
+        "rationale"
+      ]
+    },
+    "projected_counts": {
+      "decisions": 1045,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 388,
+      "new_statement": 3,
+      "remaining_gap_class_dispositions": 21,
+      "source_repairs_appended": 0,
+      "mapping_closures": 1,
+      "changed_map_rows": 1
+    }
+  },
+  "external_constraints": {
+    "github": "AVAILABLE_BY_DIRECT_USER_UPDATE; NO GIT OR REMOTE ACTION REQUIRED FOR THIS BOUNDED LOCAL TRANSACTION"
+  },
+  "remaining_work": [
+    "construct, validate, promote, and replay tohoku_r65 exactly as authorized here; do not mutate this frozen prerequisite audit afterward"
+  ]
+}

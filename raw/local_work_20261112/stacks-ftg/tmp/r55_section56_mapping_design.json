@@ -1,0 +1,739 @@
+{
+  "schema": "tohoku-stacks-r55-section56-mapping-design-v1",
+  "status": "STRICT_PASS",
+  "mode": "read_only_plus_design",
+  "planned_successor": "tohoku_r55",
+  "target_unit": "tohoku:section:5.6-equivariant-ext",
+  "planned_decision_id": "D001031",
+  "predecessor_decision_id": "D000639",
+  "predecessor_condition": {
+    "required_dossier": "tohoku_r54",
+    "state_at_design_time": "not yet present",
+    "gate": "Do not build or promote r55 unless r54 is sealed and its dec.csv, map.csv, and issues.csv exactly match the contingent identities below; D000639 must remain the unique active predecessor row with the frozen r53 fields; D001031 must be unused.",
+    "contingent_r54_identities": {
+      "dec.csv": {
+        "bytes": 377152,
+        "sha256": "1B9A6A95DC3C50C04E5754AA7E8890827111D51350E124D6E0220C23FA77B679"
+      },
+      "map.csv": {
+        "bytes": 480773,
+        "sha256": "B6D7482C57477FB8360514487AC16FD2298DD05B3CE1AC76BAC8E5F0220A0F60"
+      },
+      "issues.csv": {
+        "bytes": 31413,
+        "sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503"
+      }
+    },
+    "provenance": {
+      "design_path": "user/Documents/stacks-ftg/tmp/d1011_mapping_design.json",
+      "bytes": 8047,
+      "sha256": "2DAAC51DFD5039C6F1B47B277BED34FECA5D76CEFB44BDE1045FB0365E2DBA4E",
+      "condition": "These projected identities become authoritative only after the sealed r54 receipt independently confirms them."
+    }
+  },
+  "frozen_r53_evidence": {
+    "files": {
+      "dec.csv": {
+        "path": "user/Documents/stacks-ftg/tohoku_r53/dec.csv",
+        "bytes": 375251,
+        "sha256": "84639B0A99BDDC58980FEEA5E221D249B3B898956DA79F4D41DEFE79297C71D9"
+      },
+      "map.csv": {
+        "path": "user/Documents/stacks-ftg/tohoku_r53/map.csv",
+        "bytes": 479894,
+        "sha256": "7BF8C6794D743ACE1334F5979B820E955C70C14537F0B00A0E6A679376668BAE"
+      },
+      "units.csv": {
+        "path": "user/Documents/stacks-ftg/tohoku_r53/units.csv",
+        "bytes": 393225,
+        "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+      },
+      "issues.csv": {
+        "path": "user/Documents/stacks-ftg/tohoku_r53/issues.csv",
+        "bytes": 31413,
+        "sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503"
+      },
+      "r53-check.json": {
+        "path": "user/Documents/stacks-ftg/tohoku_r53/r53-check.json",
+        "bytes": 51359,
+        "sha256": "A8034901EAD767CF98BEE95F28E509539D86EA999FC649C5439981117DA140B6"
+      }
+    },
+    "source_unit_row": {
+      "canonical_json_bytes": 564,
+      "canonical_json_sha256": "C4EDE0239BDF446C9D4D743092EE7C61EE0C136226FE3AD9609ECC4AD93976FC",
+      "fields": {
+        "id": "tohoku:section:5.6-equivariant-ext",
+        "work": "Tohoku",
+        "item": "213",
+        "unit_type": "section",
+        "parent_id": "tohoku:section:5.6",
+        "source_start": "213",
+        "source_end": "213",
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "source_file": "sem/r18/nodes.csv",
+        "source_line": "930",
+        "topics": "abelian;ext"
+      }
+    },
+    "predecessor_decision_row": {
+      "canonical_json_bytes": 464,
+      "canonical_json_sha256": "C75407185AB3688E181FC1F519C83BFDCF7E70751867D261FA73499C88580AF2",
+      "fields": {
+        "decision_id": "D000639",
+        "unit_id": "tohoku:section:5.6-equivariant-ext",
+        "action": "set",
+        "disposition": "new_section",
+        "stacks_labels": "derived-section-ext;groupoids-definition-equivariant-module",
+        "rationale": "The section develops Ext in the abelian category of G-O-sheaves, including sheaf-valued versions and several spectral sequences. The local ingredients exist separately but not as this integrated theory.",
+        "review_state": "reviewed_new_section",
+        "supersedes": ""
+      }
+    },
+    "predecessor_map_row": {
+      "canonical_json_bytes": 864,
+      "canonical_json_sha256": "37C561A012EB721057100F5D2DEB738EFCB62180CDF1A81B62EAADA94116A7B7",
+      "key_fields": {
+        "unit_id": "tohoku:section:5.6-equivariant-ext",
+        "decision_id": "D000639",
+        "disposition": "new_section",
+        "review_state": "reviewed_new_section",
+        "source_loc": "sem/r18/nodes.csv:930",
+        "source_start": "213",
+        "source_end": "213",
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "stacks_labels": "derived-section-ext;groupoids-definition-equivariant-module",
+        "stacks_tags": "06XP;03LF"
+      }
+    }
+  },
+  "source_authority": {
+    "article_part_ii": {
+      "doi": "10.2748/tmj/1178244774",
+      "printed_pages": "185--221",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "corrected_bilingual_pages_213_218": {
+      "en": [
+        {
+          "page": 213,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p213.tex",
+          "bytes": 3612,
+          "sha256": "09B6B23B02C9678CB7CB995068B6BCFBB3F70F6A660A870F9A76BA1512C96F64"
+        },
+        {
+          "page": 214,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p214.tex",
+          "bytes": 4011,
+          "sha256": "8CFFB05104DA4BB64C1AE7340C36D3FAC977A459C4BF8A8DFD6EFB1461B539F1"
+        },
+        {
+          "page": 215,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p215.tex",
+          "bytes": 4468,
+          "sha256": "0DA8E1C00F154542963645DC1EDB339ED5E35A14B3B1ABFAFE44DFA478AF1852"
+        },
+        {
+          "page": 216,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p216.tex",
+          "bytes": 4811,
+          "sha256": "3951AAC47B72955E898EA09A384D4E3DBCDF1BC02C9C808C60BAD57A447C8E60"
+        },
+        {
+          "page": 217,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p217.tex",
+          "bytes": 3980,
+          "sha256": "DFEBFBAF2E60058DCD9729C10F384690242413C7EC3E71630E8769B6BC0B25CD"
+        },
+        {
+          "page": 218,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p218.tex",
+          "bytes": 4090,
+          "sha256": "027E05FCC689384035C778F1BC0CE747259F406E8711A245493553BDBD6D8F29"
+        }
+      ],
+      "fr": [
+        {
+          "page": 213,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p213.tex",
+          "bytes": 3837,
+          "sha256": "C88A204796AF296AB163FE3F604DB3AAE2BD477E9D73278DF8257FDC38D2DADD"
+        },
+        {
+          "page": 214,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p214.tex",
+          "bytes": 4215,
+          "sha256": "90416161FE153DE6E14DDF9F854AB9EDA38292BB8158A6318D410498D8068CC9"
+        },
+        {
+          "page": 215,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p215.tex",
+          "bytes": 4669,
+          "sha256": "A361CDE261DDA6A09E8EC24E5A73BB5E643944AB3AC43ECAC2AE01C54500FD13"
+        },
+        {
+          "page": 216,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p216.tex",
+          "bytes": 4983,
+          "sha256": "FC6B0BEFF6CEB471B09D17ECAF35272248929CE3E272AC7491FBB819D1BB7CD1"
+        },
+        {
+          "page": 217,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p217.tex",
+          "bytes": 4199,
+          "sha256": "26C5ECC9DA83B99E00CF74E0DF8274B8713C8247F7E99EE491A79ADF20752BDB"
+        },
+        {
+          "page": 218,
+          "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p218.tex",
+          "bytes": 4269,
+          "sha256": "528F180778FCC379279F7C0B90AE88BFD671B99698762FD64A18079C865586EF"
+        }
+      ]
+    }
+  },
+  "integrated_formalization": {
+    "live_source": {
+      "path": "user/Documents/stacks-ftg/cohomology.tex",
+      "bytes": 895363,
+      "sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+    },
+    "scanner_oracle": {
+      "path": "user/Documents/stacks-ftg/tmp/d1011_scan",
+      "stx.csv": {
+        "bytes": 5283396,
+        "sha256": "5E22D3B8B976E5BD845BA0CF69D7AB7685C619D39CDEB53DADCF9A269798BB9D"
+      },
+      "check.json": {
+        "bytes": 80879,
+        "sha256": "798607A517735BC50C77356894D9089D9218DC0A2B5D49DB073347C455615EDD",
+        "status": "PASS",
+        "cohomology_tex_sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+      }
+    },
+    "coverage_matrix": [
+      {
+        "claim_family": "section aggregate",
+        "source_pages": "213--218",
+        "labels": [
+          "cohomology-section-ext"
+        ],
+        "role": "Existing Ext-sheaves section containing the integrated theory; sole authoritative official tag 0BQP."
+      },
+      {
+        "claim_family": "internal Hom and four degree-zero Hom functors",
+        "source_pages": "213--214",
+        "labels": [
+          "cohomology-lemma-equivariant-internal-hom",
+          "cohomology-lemma-equivariant-hom-functors"
+        ],
+        "details": [
+          "mathbf h_{O,A}",
+          "h_{O,A}",
+          "mathbf h_{O,G,A}",
+          "h_{O,G,A}"
+        ]
+      },
+      {
+        "claim_family": "derived global and sheaf Ext",
+        "source_pages": "214",
+        "labels": [
+          "cohomology-definition-equivariant-ext",
+          "cohomology-lemma-equivariant-ext-properties"
+        ]
+      },
+      {
+        "claim_family": "locality and slice restriction",
+        "source_pages": "214",
+        "labels": [
+          "cohomology-lemma-localize-equivariant-ext",
+          "cohomology-lemma-equivariant-ext-slice"
+        ]
+      },
+      {
+        "claim_family": "injective stalks and Ext stalk comparison",
+        "source_pages": "214--215",
+        "labels": [
+          "cohomology-lemma-equivariant-hom-injective-stalk",
+          "cohomology-lemma-equivariant-ext-stalk"
+        ]
+      },
+      {
+        "claim_family": "injective acyclicity infrastructure",
+        "source_pages": "215--216",
+        "labels": [
+          "cohomology-lemma-skew-group-hom-injective-acyclic",
+          "cohomology-lemma-equivariant-product-internal-hom",
+          "cohomology-lemma-equivariant-hom-injective-acyclic",
+          "cohomology-lemma-equivariant-higher-invariant-direct-image-modules"
+        ]
+      },
+      {
+        "claim_family": "underlying ordinary Ext identifications",
+        "source_pages": "216--217",
+        "labels": [
+          "cohomology-lemma-equivariant-underlying-ext"
+        ]
+      },
+      {
+        "claim_family": "spectral sequences I--III",
+        "source_pages": "216--217",
+        "labels": [
+          "cohomology-lemma-equivariant-ext-spectral-sequences"
+        ]
+      },
+      {
+        "claim_family": "sheaf-valued Grothendieck spectral sequence",
+        "source_pages": "214--215",
+        "labels": [
+          "cohomology-lemma-equivariant-sheaf-ext-spectral-sequence"
+        ]
+      },
+      {
+        "claim_family": "locally-free degeneration",
+        "source_pages": "218",
+        "labels": [
+          "cohomology-lemma-equivariant-ext-locally-free"
+        ]
+      },
+      {
+        "claim_family": "spectral sequence IV",
+        "source_pages": "218",
+        "labels": [
+          "cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence"
+        ]
+      },
+      {
+        "claim_family": "spectral sequence V",
+        "source_pages": "218",
+        "labels": [
+          "cohomology-lemma-equivariant-ext-trivial-action-spectral-sequence"
+        ]
+      }
+    ],
+    "label_inventory": [
+      {
+        "full_label": "cohomology-section-ext",
+        "short_label": "section-ext",
+        "file": "cohomology.tex",
+        "line": 14676,
+        "kind": "section",
+        "section_label": "section-ext",
+        "section_title": "Ext sheaves",
+        "official_tag": "0BQP",
+        "text_sha256": "B399F70D557470FE1A964954BE0B6F05ADE1BD886B9E238F5E57F03C02A841AF"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-internal-hom",
+        "short_label": "lemma-equivariant-internal-hom",
+        "file": "cohomology.tex",
+        "line": 18317,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "CEADBE54826590E0D79225E5F6B0D768E8621E5AC20DBB4D40B47DA5BA393C88"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-hom-functors",
+        "short_label": "lemma-equivariant-hom-functors",
+        "file": "cohomology.tex",
+        "line": 18400,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "F10B2666C61E225E5030FD6AA6E9D3A820C3388417C5A67813C261EF7B332FD8"
+      },
+      {
+        "full_label": "cohomology-definition-equivariant-ext",
+        "short_label": "definition-equivariant-ext",
+        "file": "cohomology.tex",
+        "line": 18473,
+        "kind": "definition",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "127D74C056006E05B944C8150B57D259CA0C2FBD16D6BF9A426C1A681ABBEA57"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-properties",
+        "short_label": "lemma-equivariant-ext-properties",
+        "file": "cohomology.tex",
+        "line": 18504,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "B6771DF349D66E8AB599D6037C36D4FFB309F0D13F1FD78D143994740B6C2D65"
+      },
+      {
+        "full_label": "cohomology-lemma-localize-equivariant-ext",
+        "short_label": "lemma-localize-equivariant-ext",
+        "file": "cohomology.tex",
+        "line": 18605,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "CDBB116838DB1D906B22041EBDAB0A1A7DEB0DF4413A12CBA5173F40DFE33521"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-slice",
+        "short_label": "lemma-equivariant-ext-slice",
+        "file": "cohomology.tex",
+        "line": 18649,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "F9694B677DB67CA63815F933D3A764225B530F35B1F660B43CB8AE450F7E96BA"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-hom-injective-stalk",
+        "short_label": "lemma-equivariant-hom-injective-stalk",
+        "file": "cohomology.tex",
+        "line": 18734,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "C629C98FE2C45D09B6F3B1FFD03E1AD515B079B93BA495F93560C73ACF683D47"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-stalk",
+        "short_label": "lemma-equivariant-ext-stalk",
+        "file": "cohomology.tex",
+        "line": 18931,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "95D4DEBCF70B94B6A3CC1A1C068FD5B2824569344777B531C19020FD296B9689"
+      },
+      {
+        "full_label": "cohomology-lemma-skew-group-hom-injective-acyclic",
+        "short_label": "lemma-skew-group-hom-injective-acyclic",
+        "file": "cohomology.tex",
+        "line": 19005,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "74C5A6E46BF95BA62BB07321F18D319A33D86DC00905CA884844D831B9F12642"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-product-internal-hom",
+        "short_label": "lemma-equivariant-product-internal-hom",
+        "file": "cohomology.tex",
+        "line": 19122,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "DEE45310A33EAB3D8A82C63A55194C336379EBFF0E6EBFD22E22F79828073EFE"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-hom-injective-acyclic",
+        "short_label": "lemma-equivariant-hom-injective-acyclic",
+        "file": "cohomology.tex",
+        "line": 19260,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "A4BFF7C2F646E76F7ACAF793CB2244AA6419328B4771D9CCA6AC19FC2E2FA065"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-higher-invariant-direct-image-modules",
+        "short_label": "lemma-equivariant-higher-invariant-direct-image-modules",
+        "file": "cohomology.tex",
+        "line": 19358,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "A45C5B574D09407063E87D2E86F22913035F0BA80E173C77D5479C536CECEE15"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-underlying-ext",
+        "short_label": "lemma-equivariant-underlying-ext",
+        "file": "cohomology.tex",
+        "line": 19436,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "E49BD46056AE536E7E05E552FFFEB198E0B894961E14A0DDF93DF1B9ACC9D6B0"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-spectral-sequences",
+        "short_label": "lemma-equivariant-ext-spectral-sequences",
+        "file": "cohomology.tex",
+        "line": 19483,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "88BD4BF895F18E6F4EE845FC4024B8F9D48590913958B6A1EA9F5E775EE63CED"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-sheaf-ext-spectral-sequence",
+        "short_label": "lemma-equivariant-sheaf-ext-spectral-sequence",
+        "file": "cohomology.tex",
+        "line": 19582,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "E886D038EDB5350AFF44AEB92EAF0F9F56B7FA94690EC3F554F4AAAF0B600C11"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-locally-free",
+        "short_label": "lemma-equivariant-ext-locally-free",
+        "file": "cohomology.tex",
+        "line": 19639,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "6C546C2525CB43F02D09C11995E2C618AF3D6844449F733ADDA3D36E3DB12EA4"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence",
+        "short_label": "lemma-equivariant-ext-crossed-product-spectral-sequence",
+        "file": "cohomology.tex",
+        "line": 19687,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "3F91FD775BFF8BE515378E3F00861B0D0DEBEAB7C24D4788B445287BD2416E10"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-ext-trivial-action-spectral-sequence",
+        "short_label": "lemma-equivariant-ext-trivial-action-spectral-sequence",
+        "file": "cohomology.tex",
+        "line": 19781,
+        "kind": "lemma",
+        "section_label": "section-cohomology-group-actions",
+        "section_title": "Cohomology with group actions",
+        "official_tag": "",
+        "text_sha256": "B9E957D15590125B8401206834494BA7759E345B5C8AA5E0CD34243457BDBB6D"
+      }
+    ],
+    "label_checks": {
+      "expected": 19,
+      "found_once_each": true,
+      "all_in_cohomology_tex": true,
+      "only_authoritative_official_tag": {
+        "label": "cohomology-section-ext",
+        "tag": "0BQP"
+      },
+      "other_labels_have_empty_official_tag": true
+    }
+  },
+  "open_p219_complex_analytic_gap_units": [
+    {
+      "unit_id": "tohoku:classification:coherent-extension-classes",
+      "decision_id": "D000564",
+      "disposition": "extend_existing",
+      "review_state": "reviewed_gap",
+      "source_loc": "sem/r18/nodes.csv:92",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "stacks_labels": "stacks-cohomology-lemma-extension-coherent;homology-definition-ext-group;derived-lemma-ext-1",
+      "stacks_tags": "0GRA;010K;06XV",
+      "rationale": "Stacks proves coherence is preserved under extensions on locally Noetherian algebraic stacks and identifies Ext^1 with extension classes generally. The source's coherent analytic equivariant classification is a distinct setting.",
+      "r55_action": "unchanged_open"
+    },
+    {
+      "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+      "decision_id": "D000565",
+      "disposition": "new_statement",
+      "review_state": "reviewed_new_statement",
+      "source_loc": "sem/r18/nodes.csv:93",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "stacks_labels": "homology-definition-ext-group;derived-lemma-ext-1;groupoids-definition-equivariant-module",
+      "stacks_tags": "010K;06XV;03LF",
+      "rationale": "General extension classes and algebraic equivariant modules are present locally, but the asserted classification of equivariant holomorphic-bundle extensions by this analytic equivariant Ext group is not.",
+      "r55_action": "unchanged_open"
+    },
+    {
+      "unit_id": "tohoku:descent:discontinuous-action-characteristic-zero",
+      "decision_id": "D000613",
+      "disposition": "new_statement",
+      "review_state": "reviewed_new_statement",
+      "source_loc": "sem/r18/nodes.csv:353",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "stacks_labels": "etale-cohomology-section-group-cohomology;stacks-cohomology-lemma-extension-coherent",
+      "stacks_tags": "0A2H;0GRA",
+      "rationale": "The characteristic-zero descent from equivariant coherent analytic sheaves to the quotient uses the source's free/discontinuous action theorem. The listed local results do not establish this analytic descent.",
+      "r55_action": "unchanged_open"
+    },
+    {
+      "unit_id": "tohoku:equivalence:equivariant-holomorphic-bundles",
+      "decision_id": "D000614",
+      "disposition": "new_statement",
+      "review_state": "reviewed_new_statement",
+      "source_loc": "sem/r18/nodes.csv:561",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "stacks_labels": "groupoids-definition-equivariant-module",
+      "stacks_tags": "03LF",
+      "rationale": "The correspondence between holomorphic vector bundles with a G-action and locally free analytic G-O-modules is not the algebraic equivariant-module definition and has no exact local target.",
+      "r55_action": "unchanged_open"
+    },
+    {
+      "unit_id": "tohoku:equivalence:holomorphic-bundles-locally-free-sheaves",
+      "decision_id": "D000615",
+      "disposition": "new_statement",
+      "review_state": "reviewed_new_statement",
+      "source_loc": "sem/r18/nodes.csv:562",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "stacks_labels": "",
+      "stacks_tags": "",
+      "rationale": "This is the analytic equivalence between holomorphic vector bundles and locally free coherent analytic sheaves. No verified labelled target in the admitted Stacks surface states that analytic theorem.",
+      "r55_action": "unchanged_open"
+    },
+    {
+      "unit_id": "tohoku:finiteness:compact-quotient-extension-classes",
+      "decision_id": "D000617",
+      "disposition": "new_statement",
+      "review_state": "reviewed_new_statement",
+      "source_loc": "sem/r18/nodes.csv:590",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "stacks_labels": "homology-definition-ext-group;stacks-cohomology-lemma-extension-coherent",
+      "stacks_tags": "010K;0GRA",
+      "rationale": "Finite dimensionality of analytic equivariant extension classes over a compact quotient is not implied by the local coherence-of-extensions result or the abstract Ext classification.",
+      "r55_action": "unchanged_open"
+    }
+  ],
+  "other_p219_non_gap_units_unchanged": [
+    {
+      "unit_id": "tohoku:analogue:abstract-algebraic-geometry",
+      "decision_id": "D000560",
+      "disposition": "example_or_remark",
+      "review_state": "reviewed_example_or_remark",
+      "r55_action": "unchanged"
+    },
+    {
+      "unit_id": "tohoku:equation:holomorphic-equivariant-ext-h1",
+      "decision_id": "",
+      "disposition": "structural_only",
+      "review_state": "inherits_parent",
+      "r55_action": "unchanged"
+    },
+    {
+      "unit_id": "tohoku:example:holomorphic-equivariant-sheaves",
+      "decision_id": "D000616",
+      "disposition": "example_or_remark",
+      "review_state": "reviewed_example_or_remark",
+      "r55_action": "unchanged"
+    }
+  ],
+  "planned_decision": {
+    "decision_id": "D001031",
+    "unit_id": "tohoku:section:5.6-equivariant-ext",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-section-ext;cohomology-lemma-equivariant-internal-hom;cohomology-lemma-equivariant-hom-functors;cohomology-definition-equivariant-ext;cohomology-lemma-equivariant-ext-properties;cohomology-lemma-localize-equivariant-ext;cohomology-lemma-equivariant-ext-slice;cohomology-lemma-equivariant-hom-injective-stalk;cohomology-lemma-equivariant-ext-stalk;cohomology-lemma-skew-group-hom-injective-acyclic;cohomology-lemma-equivariant-product-internal-hom;cohomology-lemma-equivariant-hom-injective-acyclic;cohomology-lemma-equivariant-higher-invariant-direct-image-modules;cohomology-lemma-equivariant-underlying-ext;cohomology-lemma-equivariant-ext-spectral-sequences;cohomology-lemma-equivariant-sheaf-ext-spectral-sequence;cohomology-lemma-equivariant-ext-locally-free;cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence;cohomology-lemma-equivariant-ext-trivial-action-spectral-sequence",
+    "rationale": "The integrated Stacks cohomology chapter now contains the p. 213--218 abstract equivariant Hom/Ext theory: the four degree-zero Hom functors and their factorizations; derived global and sheaf Ext in the abelian category of G-O-modules; locality, slice restriction, and stalk comparison; the injective-acyclicity lemmas required for invariant direct image, invariants, and equivariant global sections; the underlying Ext identifications; spectral sequences I--V and the sheaf-valued Grothendieck spectral sequence; and the locally-free degeneration. The p. 219 complex-analytic applications remain separately open and are not used for this section-level closure. Only the existing Ext-sheaves aggregate carries authoritative official tag 0BQP; the integrated local labels carry no official tags.",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000639"
+  },
+  "canonical_decision_row": {
+    "json_encoding": "json.dumps(row,ensure_ascii=True,sort_keys=True,separators=(',',':'))",
+    "json_bytes": 1950,
+    "json_sha256": "A229F0C67ED6DAC1733F6071956C889D4D7FB912CE401F6B0D2048540A519CAA",
+    "csv_schema": [
+      "decision_id",
+      "unit_id",
+      "action",
+      "disposition",
+      "stacks_labels",
+      "rationale",
+      "review_state",
+      "supersedes"
+    ],
+    "csv_encoding": "csv.writer(...,lineterminator='\\n'), UTF-8 without BOM, no header",
+    "csv_bytes": 1832,
+    "csv_sha256": "4911BD911C6D081C5F6E9F6AD73154BA46BA5D57188080BE83E46686AE824CFC"
+  },
+  "tag_control": {
+    "planned_stacks_tags": "0BQP",
+    "authoritative_tag_source": "cohomology-section-ext",
+    "local_integrated_label_tags": "",
+    "prohibited_claims": [
+      "No local integrated label is assigned or claimed to have an official tag.",
+      "No analytic unit inherits tag 0BQP from the section aggregate.",
+      "No topic-evidence tag is promoted into a mapping target tag."
+    ]
+  },
+  "expected_r55_delta": {
+    "changed_units": 1,
+    "unchanged_units": 990,
+    "decision_rows_appended": 1,
+    "issues_csv_change": "none",
+    "source_change": "none",
+    "scanner_change": "none",
+    "changed_fields": [
+      "decision_id",
+      "disposition",
+      "rationale",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags"
+    ],
+    "remaining_gap_class_dispositions_before": 35,
+    "remaining_gap_class_dispositions_after": 34
+  },
+  "projected_counts": {
+    "decisions": 1031,
+    "units": 991,
+    "decided_units": 679,
+    "candidate_units": 0,
+    "review_units": 0,
+    "active_graph_corrections": 0,
+    "active_source_issues": 0,
+    "dispositions": {
+      "example_or_remark": 84,
+      "existing_equivalent": 375,
+      "existing_stronger": 41,
+      "existing_weaker": 6,
+      "extend_existing": 13,
+      "historical_reference": 33,
+      "new_section": 4,
+      "new_statement": 11,
+      "structural_only": 424
+    }
+  },
+  "audit_checks": {
+    "exact_live_source_identity": true,
+    "exact_source_pages_213_218_bound": true,
+    "exact_r53_source_decision_map_rows_bound": true,
+    "r54_contingency_explicit": true,
+    "integrated_labels_found_once_each": true,
+    "four_hom_functors_covered": true,
+    "derived_ext_covered": true,
+    "locality_covered": true,
+    "stalks_covered": true,
+    "injective_acyclicity_covered": true,
+    "spectral_sequences_I_through_V_covered": true,
+    "sheaf_ext_spectral_sequence_covered": true,
+    "locally_free_case_covered": true,
+    "section_aggregate_covered": true,
+    "official_tag_boundary_enforced": true,
+    "six_p219_complex_analytic_gaps_left_open": true,
+    "projected_gap_delta_exact": true,
+    "result": "STRICT_PASS"
+  },
+  "nonclaims": [
+    "This design does not assert any theorem about holomorphic spaces, coherent analytic sheaves, holomorphic vector bundles, compact analytic quotients, analytic descent, or finite-dimensional analytic extension spaces.",
+    "The six listed p.219 complex-analytic gap units remain open with their current dispositions and rationales.",
+    "The p.219 analogy and holomorphic example remain example_or_remark, and the embedded holomorphic Ext equation remains structural_only; none is used to justify D001031.",
+    "The section-level existing_equivalent disposition refers only to the abstract equivariant Hom/Ext theory integrated from pp.213--218.",
+    "No official tag is claimed for any newly integrated local label. Only the pre-existing section aggregate cohomology-section-ext carries authoritative tag 0BQP.",
+    "No source correction, source edit, mapping mutation, cursor update, build, scanner run, Git/GitHub action, publication, cleanup, or archive action is performed by this design."
+  ],
+  "errors": []
+}

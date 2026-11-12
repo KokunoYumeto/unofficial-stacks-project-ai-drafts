@@ -1,0 +1,507 @@
+{
+  "schema": "tohoku-stacks-d1029-mapping-issue-design-v1",
+  "formalization_id": "D1029",
+  "status": "DESIGN_COMPLETE_CONDITIONAL_NO_APPEND_EXECUTED",
+  "purpose": "Define the exact append-only issue and mapping closure for the p.188 Ext-center source defect without allocating a mapping decision ID or assuming that the still-running source repair has succeeded.",
+  "write_scope": {
+    "written": [
+      "tmp/d1029_mapping_issue_design.json"
+    ],
+    "not_written": [
+      "live TeX or PDF",
+      "canonical source layers or ledgers",
+      "semantic inventories",
+      "mapping dossiers",
+      "builders or contracts",
+      "scanner outputs"
+    ],
+    "git_used": false,
+    "build_or_scanner_run": false
+  },
+  "design_inputs": {
+    "candidate": {
+      "path": "tmp/d1029_ext_center_actions_candidate.tex",
+      "bytes": 3189,
+      "sha256": "6B6566697F349854C1866661952A7AC5487FAFEB473354D4403E27886B3287FA",
+      "raw_label": "lemma-ext-center-actions-left-modules",
+      "full_label": "cohomology-lemma-ext-center-actions-left-modules"
+    },
+    "math_source_audit": {
+      "path": "tmp/d1029_ext_center_math_source_audit.json",
+      "bytes": 14637,
+      "sha256": "35C3ECBD18B1F06036C58723D0B59E1CAD48BE29890E8E0026C0A99280A3EC64",
+      "schema": "tohoku-stacks-d1029-ext-center-math-source-audit-v1",
+      "verdict": "STRICT_PASS",
+      "role": "This authorizes the mathematics, proposed correction, issue class, and conditional mapping shape. It is not evidence that the no-overwrite source repair, live insertion, build, review, or scanner gates have completed."
+    }
+  },
+  "sealed_r69_baseline": {
+    "dossier": "tohoku_r69",
+    "receipt": {
+      "path": "tohoku_r69/r69-check.json",
+      "bytes": 14442,
+      "sha256": "81987ECCB8D7020484FCE74B286D51DE374D8F18727CCDB237EA382F1ED8BBAD",
+      "schema": "tohoku-stacks-mapping-successor-r69-v1",
+      "status": "PASS"
+    },
+    "counts": {
+      "units": 991,
+      "decisions": 1051,
+      "decided_units": 679,
+      "source_issues": 32,
+      "active_source_issues": 0,
+      "existing_equivalent": 394,
+      "existing_weaker": 3,
+      "remaining_gap_class_dispositions": 15
+    },
+    "decision_csv_schema": {
+      "path": "tohoku_r69/dec.csv",
+      "bytes": 391385,
+      "sha256": "E7AA26C9073717E418FCB2BC0ADC20E1AE89762BEF55D69C260A0BE3909FD837",
+      "header": "decision_id,unit_id,action,disposition,stacks_labels,rationale,review_state,supersedes",
+      "fields": [
+        "decision_id",
+        "unit_id",
+        "action",
+        "disposition",
+        "stacks_labels",
+        "rationale",
+        "review_state",
+        "supersedes"
+      ],
+      "data_rows": 1051,
+      "sequence": "D000001 through D001051, contiguous",
+      "tail": "D001051"
+    },
+    "issue_csv_schema": {
+      "path": "tohoku_r69/issues.csv",
+      "bytes": 34015,
+      "sha256": "2D60F1DB762808C5EFCD62AAB74394D8772C190DCB3150F3F82984DE3B9D7EB1",
+      "header": "issue_id,unit_id,status,kind,claim,evidence_labels,evidence,control,resolution_decision",
+      "fields": [
+        "issue_id",
+        "unit_id",
+        "status",
+        "kind",
+        "claim",
+        "evidence_labels",
+        "evidence",
+        "control",
+        "resolution_decision"
+      ],
+      "data_rows": 32,
+      "sequence": "I000001 through I000032, contiguous",
+      "tail": "I000032",
+      "I000033_occurrences": 0
+    },
+    "map_csv_schema": {
+      "path": "tohoku_r69/map.csv",
+      "bytes": 487554,
+      "sha256": "0427AEA97444BC58E7C3823B91FDFCD84CC531DAB4D6C93F38C8EE9D52BB3A00",
+      "header": "unit_id,item,unit_type,parent_id,source_start,source_end,source_loc,authority_sha256,source_topics,topic_evidence_labels,topic_evidence_tags,decision_id,disposition,review_state,stacks_labels,stacks_tags,rationale",
+      "fields": [
+        "unit_id",
+        "item",
+        "unit_type",
+        "parent_id",
+        "source_start",
+        "source_end",
+        "source_loc",
+        "authority_sha256",
+        "source_topics",
+        "topic_evidence_labels",
+        "topic_evidence_tags",
+        "decision_id",
+        "disposition",
+        "review_state",
+        "stacks_labels",
+        "stacks_tags",
+        "rationale"
+      ],
+      "data_rows": 991
+    },
+    "source_repair_representation": {
+      "rule": "The mapping dossier has no source-repair CSV. A source repair is an externally completed no-overwrite source chain bound in the successor receipt, with deltas.source_repairs_appended incremented by one.",
+      "r69_receipt_source_chain_keys": [
+        "authority_part_i",
+        "authority_part_ii",
+        "sem_r18_nodes",
+        "sem_r18_occ"
+      ],
+      "proven_source_repair_receipt_reference": {
+        "path": "tohoku_r61/r61-check.json",
+        "bytes": 10568,
+        "sha256": "D882C7AE62252BC94DA8D7D442A84507FCFC9F5E8E4C77CA988399E7EB835B80",
+        "schema": "tohoku-stacks-mapping-successor-r61-v1",
+        "source_chain_keys": [
+          "source_admission",
+          "source_decisions",
+          "source_ledger",
+          "reader_receipt",
+          "reader_french_pdf",
+          "reader_english_pdf",
+          "qa_receipt",
+          "qa_structural",
+          "sem_r21_manifest",
+          "sem_r21_validation",
+          "sem_r21_nodes"
+        ],
+        "deltas_contract": {
+          "source_repairs_appended": 1,
+          "issues_appended": [
+            "I000032"
+          ],
+          "mapping_closures_appended": 1
+        }
+      },
+      "proven_builder_schema_reference": {
+        "path": "srcmap/build_tohoku_r61.py",
+        "bytes": 40313,
+        "sha256": "37D3CBB4C5E940F98F57F7AD9DF93CBCDC54F0E432E35EA18331FB05D1DD78EB"
+      },
+      "source_decision_jsonl_field_order": [
+        "decision_id",
+        "timestamp_utc",
+        "printed_page",
+        "kind",
+        "decision",
+        "evidence",
+        "state"
+      ],
+      "source_correction_jsonl_field_order": [
+        "decision_id",
+        "timestamp_utc",
+        "corpus",
+        "printed_page",
+        "layer",
+        "kind",
+        "source",
+        "selected_editorial_correction",
+        "rationale",
+        "evidence_channel",
+        "state"
+      ],
+      "d1029_required_extension": "Retain the r69 canonical source bindings and add exact identities for the frozen p.188 source-admission receipt, source decisions JSONL, global source ledger, reader receipt, corrected-French and English reader PDFs, QA receipt, structural QA, semantic successor manifest, validation, nodes, and occurrence inventory."
+    }
+  },
+  "exact_current_rows": {
+    "target_map_row": {
+      "path": "tohoku_r69/map.csv",
+      "physical_line": 825,
+      "row_bytes_with_lf": 475,
+      "row_sha256_with_lf": "AF01F68A22C7C6B985B939FD87CE229668445BA0499A1AC906950DEB0DC5C430",
+      "fields": {
+        "unit_id": "tohoku:remark:ext-center-modules",
+        "item": "188",
+        "unit_type": "remark",
+        "parent_id": "tohoku:section:4.2",
+        "source_start": "188",
+        "source_end": "188",
+        "source_loc": "sem/r18/nodes.csv:825",
+        "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+        "source_topics": "ext",
+        "topic_evidence_labels": "cohomology-section-ext;derived-section-ext",
+        "topic_evidence_tags": "06XP;0BQP",
+        "decision_id": "D000539",
+        "disposition": "existing_weaker",
+        "review_state": "reviewed_weaker",
+        "stacks_labels": "cohomology-section-ext;cohomology-section-global-RHom",
+        "stacks_tags": "0BQP;0B6A",
+        "rationale": "Stacks' derived internal and global Hom provide the ambient module structures, but do not isolate the stated actions of the centres as a labelled result."
+      }
+    },
+    "predecessor_decision_row": {
+      "path": "tohoku_r69/dec.csv",
+      "physical_line": 540,
+      "row_bytes_with_lf": 288,
+      "row_sha256_with_lf": "9E4AC3099D798D6F586CD5FCA68C3EC81CF6C7A20E826823A2B3EDB66CFDCD6D",
+      "fields": {
+        "decision_id": "D000539",
+        "unit_id": "tohoku:remark:ext-center-modules",
+        "action": "set",
+        "disposition": "existing_weaker",
+        "stacks_labels": "cohomology-section-ext;cohomology-section-global-RHom",
+        "rationale": "Stacks' derived internal and global Hom provide the ambient module structures, but do not isolate the stated actions of the centres as a labelled result.",
+        "review_state": "reviewed_weaker",
+        "supersedes": ""
+      }
+    },
+    "protected_issue_row": {
+      "path": "tohoku_r69/issues.csv",
+      "physical_line": 33,
+      "row_bytes_with_lf": 1149,
+      "row_sha256_with_lf": "4FA57A4C3AF9AFF324A04008CCB5FDBE49275ACD0AEDC554D7ADDB7B33AA311E",
+      "fields": {
+        "issue_id": "I000032",
+        "unit_id": "tohoku:definition:hom-o-and-local-hom",
+        "status": "resolved",
+        "kind": "global_center_does_not_restrict_to_local_centers",
+        "claim": "The printed p. 185 sentence makes Hom_O(A,B) a module over Z(Gamma(X,O)), but a globally central section can restrict to a noncentral local section, so its multiplication need not be O-linear. The canonical scalar ring is Gamma(X,Z_O)=Gamma(O^natural).",
+        "evidence_labels": "modules-definition-hom-left-modules;modules-lemma-sheaf-hom-left-modules",
+        "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 185. On the Sierpinski space take O(X)=Q[t], O(U)=M_2(Q), with t restricting to e_11: t is globally central but e_11 is not locally central. D1017 formalizes the correct Gamma(X,Z_O)-action, and production/p185_fix2, reader v068c3r20, QA v68r42, and sem/r21 bind the repaired source statement.",
+        "control": "Preserve the printed scalar-ring sentence in diplomatic French. Use TOH-P185-COR-002 and TOH-SRC-P185-002 only in corrected French and English; bind the exact reader, visual QA, semantic successor, and final D1017 prerequisite audit before replacing D000404. Do not merge the following sheaf-Hom source unit.",
+        "resolution_decision": "D001041"
+      },
+      "d1029_rule": "This row and every byte before the new append must remain unchanged. D1029 must not alter, reopen, broaden, supersede, or reinterpret I000032."
+    },
+    "semantic_node": {
+      "canonical_root": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1",
+      "path": "sem/r18/nodes.csv",
+      "file_bytes": 585012,
+      "file_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+      "physical_line": 825,
+      "row_bytes_with_lf": 574,
+      "row_sha256_with_lf": "84E77DF6450E17768A9E0024666A46BB9B5056B61170EB0B30CDBD92336832A4",
+      "unit_id": "tohoku:remark:ext-center-modules"
+    },
+    "semantic_occurrence": {
+      "path": "sem/r18/occ.csv",
+      "file_bytes": 515084,
+      "file_sha256": "54E545121F4D108E5C88B7039C39E3814F71F03332592C3F3965BD49B7FACED5",
+      "physical_line": 625,
+      "row_bytes_with_lf": 498,
+      "row_sha256_with_lf": "1E431DD98740D4ECB5DA74508ACE0F3D986ABD93CEC4633449B822A722F4113E",
+      "occurrence_id": "tohoku:occ:p188:o002"
+    }
+  },
+  "sealed_scanner_evidence": {
+    "path": "tohoku_r69/stx.csv",
+    "bytes": 5290391,
+    "sha256": "3083041A38A704D6A8815B21D42AC8E617AFA8D404B289586A820D1C80AE3346",
+    "candidate_label_occurrences": 0,
+    "dependency_rows": [
+      {
+        "full_label": "modules-lemma-sheaf-hom-left-modules",
+        "physical_line": 10926,
+        "row_bytes_with_lf": 208,
+        "row_sha256_with_lf": "BC81CFA94EB41305C55EAFFEF7DD877D971C9D8B2F56148B6BD3B51532CDDE55",
+        "tag": "",
+        "file": "modules.tex",
+        "line": "4063",
+        "text_sha256": "CEE1FBBC8E2D14FE1AB9CC52AA0E07291C19A5A0507E5C62EA225958DD7DC492"
+      },
+      {
+        "full_label": "modules-lemma-abelian",
+        "physical_line": 10799,
+        "row_bytes_with_lf": 206,
+        "row_sha256_with_lf": "66283B6C320149D535ED7EB8889E6BB72F5309027C5A1F2E4DB3AC78D3EC65E3",
+        "tag": "01AG",
+        "file": "modules.tex",
+        "line": "149",
+        "text_sha256": "6D5DF7B29D0D6EB2390B0655C276C76195E1D5F940D343A6F0403D86A48DB9A1"
+      },
+      {
+        "full_label": "injectives-lemma-sheaves-modules-space",
+        "physical_line": 10168,
+        "row_bytes_with_lf": 240,
+        "row_sha256_with_lf": "BAF5BD4B8DA52AB9DB2CA22E7814D43FF769507376B2B4B1CDBD6322074E8C07",
+        "tag": "01DI",
+        "file": "injectives.tex",
+        "line": "630",
+        "text_sha256": "5E805BB41D0591A2422A78775142E403E9CEFC2AD1F2690EC0E36C7047935C52"
+      },
+      {
+        "full_label": "derived-lemma-left-exact-higher-derived",
+        "physical_line": 5061,
+        "row_bytes_with_lf": 231,
+        "row_sha256_with_lf": "F3C6A1BD367ABFFC988FD5EF3F8630F8130D65328DE1EACABF51011C19E36D77",
+        "tag": "05TD",
+        "file": "derived.tex",
+        "line": "5589",
+        "text_sha256": "9021F0B844C475AA53DA6456B5AFAF89B1295C89D9D43D8C435B4085014C793C"
+      },
+      {
+        "full_label": "derived-lemma-compute-ext-resolutions",
+        "physical_line": 5181,
+        "row_bytes_with_lf": 204,
+        "row_sha256_with_lf": "08552530680EEC53677BF1FA951F93B0393806055D0B07DFEB185D0818F483CC",
+        "tag": "06XR",
+        "file": "derived.tex",
+        "line": "10447",
+        "text_sha256": "3CD49FD527D6E0780D03646AED13B0DED5E6963A5D8485B0F9668C1FB286F51C"
+      }
+    ]
+  },
+  "required_source_repair": {
+    "state_at_design_time": "NOT_ASSUMED_COMPLETE",
+    "authorization_condition": "A later transaction may proceed only after a separately frozen deterministic source-repair audit reports PASS and binds every output identity. The present STRICT_PASS math/source audit is not that completion audit.",
+    "source_decision": {
+      "decision_id": "TOH-P188-COR-002",
+      "namespace": "p188 source-production decision namespace, not the mapping D-number namespace",
+      "required_pre_append_occurrences": 0,
+      "required_post_append_occurrences": 1,
+      "printed_page": 188,
+      "kind": "authorial_correction_family",
+      "state": "active"
+    },
+    "source_correction": {
+      "decision_id": "TOH-SRC-P188-003",
+      "namespace": "global source-correction ledger namespace, not the mapping D-number namespace",
+      "required_pre_append_occurrences": 0,
+      "required_post_append_occurrences": 1,
+      "corpus": "tohoku",
+      "printed_page": 188,
+      "layer": "fr_corrected;en",
+      "kind": "source_internal_scalar_ring_correction",
+      "state": "active"
+    },
+    "exact_minimal_replacements": {
+      "corrected_french_from": "le centre de $\\Gamma(O)$",
+      "corrected_french_to": "$\\Gamma(O^\\natural)$",
+      "english_from": "the center of $\\Gamma(O)$",
+      "english_to": "$\\Gamma(O^\\natural)$"
+    },
+    "diplomatic_control": "Preserve the printed French segment byte-for-byte, including the false center-of-Gamma(O) phrase; record it as the source defect.",
+    "semantic_control": "In a no-overwrite semantic successor, change only corrected French, English, and their provenance for tohoku:remark:ext-center-modules and tohoku:occ:p188:o002. Preserve IDs, ordering, authority binding, diplomatic content, and the mapping locator sem/r18/nodes.csv:825.",
+    "frozen_audit_must_bind": [
+      "source-admission receipt with PASS and no errors",
+      "exact source-production decisions JSONL identity and TOH-P188-COR-002 row",
+      "exact global SOURCE_CORRECTIONS.jsonl identity and TOH-SRC-P188-003 row",
+      "collision counts before and exact single occurrences after append",
+      "diplomatic, corrected-French, and English p.188 layer identities and exact deltas",
+      "reader receipt and corrected-French and English PDF identities",
+      "visual and structural QA receipts with PASS and no errors",
+      "semantic successor manifest, validation, nodes, and occurrence identities",
+      "one-row semantic changes only for the named unit and occurrence, with no row allocation",
+      "byte preservation of all unrelated source and reader targets"
+    ],
+    "failure_rule": "If the frozen source-repair audit is absent, mutable, non-PASS, internally inconsistent, or shows an ID collision or scope drift, append nothing to decisions, issues, or mapping and do not count a source repair."
+  },
+  "required_live_and_scanner_gates": {
+    "cohomology_preimage_expected_by_math_source_audit": {
+      "path": "cohomology.tex",
+      "bytes": 942159,
+      "sha256": "9468C6AB79D0610AE395AB0E3FC415F43AE4473C7D09DC2808F94E6E7D947D7A",
+      "candidate_occurrences": 0,
+      "placement_anchor_occurrences": 1
+    },
+    "live_insertion": "Recheck the actual live preimage immediately before writing; insert the candidate byte sequence exactly once at the audited anchor and change no unrelated live TeX.",
+    "build": "The exact postimage must build successfully with deterministic diagnostics and rendered-page QA; bind TeX, PDF, auxiliary, log, and raster identities.",
+    "independent_review": "A post-live independent mathematical/source review must be frozen, internally valid, and STRICT_PASS with no required edits.",
+    "scanner": "Run a fresh bounded scanner oracle and independent replay against the final live postimage. The two six-file inventories must be byte-identical, errors must be zero, and cohomology-lemma-ext-center-actions-left-modules must occur exactly once with its exact line, kind, file, tag, and statement text hash bound.",
+    "failure_rule": "Any preimage, occurrence, build, review, scanner, replay, or inventory defect aborts the mapping/issue append."
+  },
+  "conditional_mapping_decision": {
+    "decision_id": "@D1029_MAPPING_DECISION_ID@",
+    "id_state": "UNASSIGNED_BY_THIS_DESIGN",
+    "unit_id": "tohoku:remark:ext-center-modules",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-ext-center-actions-left-modules;modules-lemma-sheaf-hom-left-modules",
+    "rationale": "Stacks proves the canonical Gamma(X,Z_A)-module structure on global Ext and the Z_A-module structure on sheaf Ext for left modules over an arbitrary ring sheaf, and recovers Z(Gamma(X,A)) only under equality with Gamma(X,Z_A). The p.188 diplomatic wording is preserved as a recorded source error; corrected French and English replace the false larger scalar ring. No larger-center action is asserted in general.",
+    "review_state": "integrated_source_repair_semantic_stacks_and_independent_review",
+    "supersedes": "D000539",
+    "official_tags": "",
+    "id_allocation_rule": "Only the final successor builder may replace @D1029_MAPPING_DECISION_ID@, after r70 and every earlier authorized decision are sealed. It must allocate exactly the next contiguous mapping decision ID from the actual final predecessor. This design intentionally does not reserve D001052 or any other D-number."
+  },
+  "exact_new_issue": {
+    "append_timing": "Append only in the final successful mapping transaction. During source and live production the defect is logically open but no provisional issue row is written; the appended final row is resolved because all gates have already passed.",
+    "row": {
+      "issue_id": "I000033",
+      "unit_id": "tohoku:remark:ext-center-modules",
+      "status": "resolved",
+      "kind": "global_ext_center_does_not_restrict_to_local_centers",
+      "claim": "The printed p.188 sentence makes global Ext_A^p a module over Z(Gamma(X,A)), but a globally central section can restrict to a noncentral local section. The canonical general scalar ring is Gamma(X,Z_A); the printed ring is recovered only when the canonical inclusion is an equality.",
+      "evidence_labels": "modules-lemma-sheaf-hom-left-modules;cohomology-lemma-ext-center-actions-left-modules",
+      "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p.188. On the Sierpinski space take A(X)=Q[t], A(U)=M_2(Q), with t restricting to e_11: t is globally central but e_11 is not locally central, and for F=G=A the claimed action already fails in degree zero. D1029 formalizes the canonical Gamma(X,Z_A)-action on global Ext and the Z_A-action on sheaf Ext; the transaction receipt binds the frozen p.188 source-repair audit, corrected-source successor, reader/QA/semantic successor, live build, independent review, and scanner replay.",
+      "control": "Preserve the printed p.188 scalar-ring sentence byte-for-byte in diplomatic French. Use TOH-P188-COR-002 and TOH-SRC-P188-003 only in the no-overwrite corrected French and English successor; bind the frozen source-repair audit, exact reader/QA/semantic successor, live build, independent review, and scanner replay before replacing D000539. Do not alter, reopen, or broaden I000032.",
+      "resolution_decision": "@D1029_MAPPING_DECISION_ID@"
+    },
+    "id_rule": "I000033 is exact and authorized because it is absent and sequential after sealed r69. The final predecessor must still end at I000032. If r70 or any intervening transaction uses I000033, stop: do not overwrite, duplicate, silently renumber, or mutate I000032; obtain a newly frozen issue authorization."
+  },
+  "exact_map_replacement": {
+    "replace_only_unit": "tohoku:remark:ext-center-modules",
+    "physical_line_in_r69": 825,
+    "predecessor_decision": "D000539",
+    "source_locator_preserved": "sem/r18/nodes.csv:825",
+    "authority_sha256_preserved": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+    "fields_changed": [
+      "decision_id",
+      "disposition",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags",
+      "rationale"
+    ],
+    "replacement_values": {
+      "decision_id": "@D1029_MAPPING_DECISION_ID@",
+      "disposition": "existing_equivalent",
+      "review_state": "integrated_source_repair_semantic_stacks_and_independent_review",
+      "stacks_labels": "cohomology-lemma-ext-center-actions-left-modules;modules-lemma-sheaf-hom-left-modules",
+      "stacks_tags": "",
+      "rationale": "Stacks proves the canonical Gamma(X,Z_A)-module structure on global Ext and the Z_A-module structure on sheaf Ext for left modules over an arbitrary ring sheaf, and recovers Z(Gamma(X,A)) only under equality with Gamma(X,Z_A). The p.188 diplomatic wording is preserved as a recorded source error; corrected French and English replace the false larger scalar ring. No larger-center action is asserted in general."
+    },
+    "all_other_fields": "byte-for-byte preserved from the bound predecessor row",
+    "all_other_map_rows": "byte-for-byte preserved",
+    "map_replacement_count": 1
+  },
+  "sequential_transaction_requirements": [
+    {
+      "order": 1,
+      "requirement": "Complete and freeze the no-overwrite p.188 source repair. Verify its admission, two source-ledger appends, reader outputs, QA, semantic successor, exact single-ID occurrences, and byte preservation. No mapping-dossier append occurs at this stage."
+    },
+    {
+      "order": 2,
+      "requirement": "Complete the single live candidate insertion, build, deterministic page QA, independent post-live review, and byte-identical scanner oracle/replay. Freeze every evidence identity."
+    },
+    {
+      "order": 3,
+      "requirement": "After r70 and all earlier authorized mapping decisions are sealed, select the actual immediate mapping predecessor. Require its receipt PASS, contiguous decision and issue sequences, the bound D000539 history row, and a target map row byte-identical to r69 physical line 825 except for changes explicitly and independently authorized before D1029. Any overlap on the target unit requires a new design."
+    },
+    {
+      "order": 4,
+      "requirement": "Allocate the next contiguous mapping decision ID from that actual predecessor and substitute it identically into conditional_mapping_decision.decision_id, exact_new_issue.row.resolution_decision, and exact_map_replacement.replacement_values.decision_id. Do not use a D-number reserved by or present in r70."
+    },
+    {
+      "order": 5,
+      "requirement": "Require the actual predecessor issue tail to be I000032 and I000033 to occur zero times. Serialize exactly one I000033 row using the r69 issue schema. Preserve I000032 and every predecessor issue byte."
+    },
+    {
+      "order": 6,
+      "requirement": "Serialize exactly one mapping decision row using the r69 decision schema, append it after the actual predecessor decision bytes, replace exactly the named map row, and project all other mapping payload files byte-identically except scanner-derived outputs and the successor status/receipt."
+    },
+    {
+      "order": 7,
+      "requirement": "Preflight a no-overwrite successor contract that binds the actual predecessor receipt and full inventory, this design, the frozen source-repair audit and source chain, live/build/review evidence, and scanner oracle/replay. It must compute all projected bytes and reject any collision, drift, unexpected append, or extra changed map row."
+    },
+    {
+      "order": 8,
+      "requirement": "Execute through an exclusive staging directory and atomic directory rename only after preflight PASS, then independently replay the builder/contract against the promoted bytes and verify the complete inventory and receipt. On any failure, append nothing or roll back the unverified successor without touching the predecessor."
+    }
+  ],
+  "relative_successor_deltas": {
+    "relative_to_actual_final_predecessor_after_r70": {
+      "decisions": 1,
+      "source_issues": 1,
+      "active_source_issues": 0,
+      "source_repairs_appended": 1,
+      "mapping_closures_appended": 1,
+      "changed_map_rows": 1,
+      "decided_units": 0,
+      "existing_equivalent": 1,
+      "existing_weaker": -1,
+      "remaining_gap_class_dispositions": -1
+    },
+    "receipt_lists": {
+      "decisions_appended": [
+        "@D1029_MAPPING_DECISION_ID@"
+      ],
+      "issues_appended": [
+        "I000033"
+      ]
+    },
+    "note": "Absolute successor counts and the successor dossier number are intentionally unassigned until r70 and any earlier decisions are frozen."
+  },
+  "authorization": {
+    "design_verdict": "STRICT_PASS_CONDITIONAL_DESIGN",
+    "authorized_now": "The exact conditional row templates and append sequence may be used to construct a future contract after all gates are frozen.",
+    "not_authorized_now": [
+      "allocation of a mapping D-number",
+      "claiming source-repair completion",
+      "appending I000033",
+      "replacing D000539",
+      "building or promoting a mapping successor"
+    ],
+    "terminal_rule": "The future transaction is authorized only when every source, live, review, scanner, predecessor, sequence, collision, no-overwrite, atomicity, and replay gate above passes. Otherwise the operation is append-nothing."
+  }
+}

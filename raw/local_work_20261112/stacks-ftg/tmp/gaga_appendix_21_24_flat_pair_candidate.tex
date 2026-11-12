@@ -1,0 +1,39 @@
+\begin{remark}
+\label{remark-flat-pairs-not-two-out-of-three}
+\begin{reference}
+\cite[Appendix, nos. 22--23]{GAGA}
+\end{reference}
+Call an inclusion of rings $R \subset S$ a \emph{flat pair} if $S/R$ is a
+flat $R$-module. Flat pairs compose: if $A \subset B \subset C$ and
+$(A, B)$ and $(B, C)$ are flat pairs, then $(A, C)$ is a flat pair.
+Indeed, Lemma \ref{lemma-flat-ses} shows that $B$ is flat over $A$ and
+that $C$ is flat over $B$, and hence $C$ is flat over $A$ by
+Lemma \ref{lemma-composition-flat}. The inclusions $A \to B$ and
+$B \to C$ are universally injective by
+Lemma \ref{lemma-flat-universally-injective}; hence $A \to C$ is universally
+injective by Lemma \ref{lemma-composition-universally-injective}.
+Applying Lemma \ref{lemma-ui-flat-domain} to
+$0 \to A \to C \to C/A \to 0$ shows that $C/A$ is flat over $A$.
+
+The other two-out-of-three implication fails. Let $k$ be a field, put
+$B = k[t]$ and $C = B \times k$, and use the inclusions
+$$
+k = A \longrightarrow B \longrightarrow C,
+\qquad
+a \longmapsto a,
+\qquad
+b \longmapsto (b, b(0)).
+$$
+Both $(A, B)$ and $(A, C)$ are flat pairs because their quotients are
+$k$-vector spaces. On the other hand, the $B$-linear map
+$$
+C \longrightarrow k,
+\qquad
+(b, c) \longmapsto c - b(0)
+$$
+has kernel $B$ embedded as above. Thus $C/B \cong k = B/(t)$ as a
+$B$-module. This module is not flat: tensoring the injection $(t) \to B$
+with $B/(t)$ gives the zero map from the nonzero module
+$(t) \otimes_B B/(t) \cong B/(t)$ to $B/(t)$. See
+Lemma \ref{lemma-flat}. Therefore $(B, C)$ is not a flat pair.
+\end{remark}

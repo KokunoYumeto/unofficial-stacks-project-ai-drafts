@@ -1,0 +1,184 @@
+{
+  "schema": "tohoku-stacks-d1030-independent-review-v1",
+  "formalization_id": "D1030",
+  "review_round": 1,
+  "reviewed_utc": "2026-08-24T07:17:06Z",
+  "verdict": "STRICT_PASS",
+  "actionable_edits": [],
+  "scope_observed": {
+    "live_tex_edited": false,
+    "source_edited": false,
+    "mapping_edited": false,
+    "build_performed": false,
+    "scanner_run": false,
+    "git_used": false
+  },
+  "inputs": {
+    "design": {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_design.json",
+      "bytes": 5668,
+      "sha256": "0A23502F52B25BE644B13473817E8FCA1969DD561BE89437C1B3D2F1461CB776",
+      "json_parse": "PASS",
+      "identity": "PASS"
+    },
+    "candidate": {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_candidate.tex",
+      "bytes": 1894,
+      "sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E",
+      "identity": "PASS"
+    }
+  },
+  "source_evidence": {
+    "unit_id": "tohoku:prop:3.4.1",
+    "printed_page": 161,
+    "source_locator": "sem/r18/nodes.csv:761",
+    "authority_sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+    "semantic_row": {
+      "path": "sem/r18/nodes.csv",
+      "file_bytes": 585012,
+      "file_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+      "physical_line": 761,
+      "row_bytes_with_lf": 824,
+      "row_sha256_with_lf": "C1C25DFC3F30B4C6B0F530118F8F14D43696B25E94A0E713AFD7C4AFCDC22F08"
+    },
+    "occurrence_row": {
+      "path": "sem/r18/occ.csv",
+      "file_bytes": 515084,
+      "file_sha256": "54E545121F4D108E5C88B7039C39E3814F71F03332592C3F3965BD49B7FACED5",
+      "physical_line": 318,
+      "occurrence_id": "tohoku:occ:p161:o004",
+      "row_bytes_with_lf": 472,
+      "row_sha256_with_lf": "EA4CBCFFD27093EE68AD035EBA46203FCF2A41797EEF2E820F836977C703916C",
+      "parity": "PASS"
+    },
+    "reader_layers": {
+      "revision": "v068c3r20",
+      "diplomatic": {
+        "path": "build/v068c3r20/src/dip/p161.tex",
+        "bytes": 4280,
+        "sha256": "FF34B9B75C398583923F8D9AD806EAD7B436BBC40CA170A7CF408625F2154C68",
+        "segment_lines": "37-45",
+        "segment_bytes_with_lf": 610,
+        "segment_sha256_with_lf": "E3011493BE5E2652F2E0A71D9C3D704870825A765492D328741DAE1D9DF3F2B2"
+      },
+      "corrected_french": {
+        "path": "build/v068c3r20/src/fr/p161.tex",
+        "bytes": 4335,
+        "sha256": "A3AADEA6BCA00308E9332D7942EF043E1173FABB451C18D3BC9AD9EC964711A6",
+        "segment_lines": "38-46",
+        "segment_bytes_with_lf": 610,
+        "segment_sha256_with_lf": "E3011493BE5E2652F2E0A71D9C3D704870825A765492D328741DAE1D9DF3F2B2"
+      },
+      "english": {
+        "path": "build/v068c3r20/src/en/p161.tex",
+        "bytes": 4171,
+        "sha256": "14F14A7D9AB5CE5B4B83A5D1458100EDD79435958670CFB0B7175E9162A9223E",
+        "segment_lines": "39-47",
+        "segment_bytes_with_lf": 577,
+        "segment_sha256_with_lf": "BC6FC02795349E780BEE1944DCD93B0263DE33D574494EDEAD92DD078E988D9A"
+      }
+    },
+    "exact_claim": "For an irreducible algebraic variety over an algebraically closed field with factorial local rings, H^i(X,O_X^*) vanishes for i>=2; a locally trivial algebraic bundle with structure group GP(n-1,k) is associated to one with structure group GL(n,k).",
+    "fidelity_result": "PASS"
+  },
+  "predecessor_evidence": {
+    "decision_id": "D000306",
+    "unit_id": "tohoku:prop:3.4.1",
+    "disposition": "new_statement",
+    "review_state": "reviewed_new_statement",
+    "map_row": {
+      "path": "tohoku_r68/map.csv",
+      "file_bytes": 487490,
+      "file_sha256": "1EDF4CFB722D6EFFC601FA64E1EB3E801BF2C63D8CC973B6467FA68C647E5ED2",
+      "physical_line": 761,
+      "row_bytes_with_lf": 375,
+      "row_sha256_with_lf": "961D0FF52FD939AD46E48F2FF07B89C55EB790555DFBBA2CF36CA6F10FD6491C"
+    },
+    "decision_row": {
+      "path": "tohoku_r68/dec.csv",
+      "file_bytes": 390012,
+      "file_sha256": "0532BAB5CD37951A0885E841EF4881CBAF6A6F8C4C010F2289AFA1A03BB1DBC6",
+      "physical_line": 307,
+      "row_bytes_with_lf": 262,
+      "row_sha256_with_lf": "41ADB8D27D655C3FF88369C3991E66467EF86E1E23CAE3E01BB3EC277E5BA208"
+    }
+  },
+  "live_dependency_evidence": {
+    "divisor_resolution": {
+      "label": "divisors-lemma-locally-UFD-divisor-resolution",
+      "raw_label": "lemma-locally-UFD-divisor-resolution",
+      "file": "divisors.tex",
+      "label_line": 6803,
+      "statement_text_sha256": "6B706E1A7596D6BD20D26ECB40D4490F1CAF3ECC40F0FD4660984F0043A50814",
+      "verified_claim": "For a Noetherian integral locally UFD scheme, H^p(X,O_X^*)=0 for every p>=2."
+    },
+    "degree_two_obstruction": {
+      "label": "cohomology-lemma-pointwise-envelope-degree-two-boundary",
+      "raw_label": "lemma-pointwise-envelope-degree-two-boundary",
+      "file": "cohomology.tex",
+      "label_line": 2615,
+      "statement_text_sha256": "C66CA97D52849BB6E15FD4D3A3D59FC8B515030CB7178728686A044A3C77A436",
+      "verified_claim": "For an exact sheaf-group extension with abelian kernel, an H-torsor has a canonical degree-two obstruction in the twisted kernel, vanishing exactly when it lifts to a G-torsor."
+    },
+    "divisors_live_preimage": {
+      "path": "divisors.tex",
+      "bytes": 396388,
+      "sha256": "362CBBFD9653DB1CC18EB05FF7A7C7AB4B7B14AD4B74CB7F2AA3F3B7D43BC569"
+    }
+  },
+  "label_and_placement_checks": {
+    "new_raw_label": "lemma-locally-UFD-projective-linear-torsors-lift",
+    "new_full_label": "divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+    "live_occurrences_before_insertion": 0,
+    "placement_anchor": "lemma-locally-UFD-divisor-resolution",
+    "placement_anchor_occurrences": 1,
+    "intended_placement": "Immediately after divisors-lemma-locally-UFD-divisor-resolution.",
+    "status": "PASS"
+  },
+  "mathematical_review": {
+    "hypotheses": {
+      "status": "PASS",
+      "finding": "Noetherian integral with every local ring a UFD is exactly the hypothesis of the live vanishing lemma and is a valid strengthening of the source's irreducible locally factorial variety over an algebraically closed field. Neither algebraic closedness nor smoothness is needed for the conclusion."
+    },
+    "zariski_exact_sequence": {
+      "status": "PASS",
+      "finding": "Scalar matrices identify the central kernel with G_m. The quotient GL_n -> PGL_n is a G_m-torsor and is Zariski locally trivial, equivalently because G_m-torsors are line bundles with their zero sections removed. Thus the displayed sequence is exact as sheaves on the Zariski site."
+    },
+    "obstruction_coefficient": {
+      "status": "PASS",
+      "finding": "The live obstruction lemma normally yields H^2 in the kernel twisted by the PGL_n-torsor. Because G_m is central in GL_n, the conjugation action of PGL_n on the kernel is trivial, so this twist is canonically O_X^*. The candidate records centrality before using the untwisted group."
+    },
+    "vanishing_and_lift": {
+      "status": "PASS",
+      "finding": "The divisor-resolution lemma gives H^2(X,O_X^*)=0, so every obstruction vanishes. This proves surjectivity of the map of nonabelian H^1 pointed sets."
+    },
+    "bundle_interpretation": {
+      "status": "PASS",
+      "finding": "Zariski GL_n-torsors are frame torsors of rank-n vector bundles. Extending structure group through GL_n -> PGL_n gives the associated projective-space bundle, hence projectivization up to the standard lines-versus-quotients convention. The explicit structure-group qualification prevents any claim about non-Zariski Brauer-Severi forms."
+    },
+    "edge_cases": {
+      "status": "PASS",
+      "finding": "For n=1, PGL_1 is trivial and the statement remains valid. The proof makes no etale/fppf lifting claim and does not assert vanishing of the cohomological Brauer group in those topologies."
+    },
+    "references": {
+      "status": "PASS",
+      "finding": "Both cited live labels exist with the required statements, the Tohoku proposition locator is exact, and raw/full cross-chapter label usage is correct."
+    }
+  },
+  "source_scope_guards": {
+    "zariski_only": "PASS",
+    "no_arbitrary_etale_or_fppf_pgl_torsors": "PASS",
+    "no_general_brauer_vanishing": "PASS",
+    "no_smoothness_converse": "PASS",
+    "no_algebraic_closedness_dependency_claim": "PASS",
+    "no_analytic_or_gaga_claim": "PASS"
+  },
+  "mapping_review": {
+    "proposed_replace_only": "D000306",
+    "proposed_disposition": "existing_equivalent",
+    "proposed_labels": "divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+    "status": "JUSTIFIED_AFTER_LIVE_INSERTION_AND_DETERMINISTIC_GATES",
+    "finding": "The existing label supplies the complete higher O_X^*-cohomology vanishing, while the new label supplies the exact PGL_n-to-GL_n lifting and projective-bundle consequence. Their hypotheses strictly include the source setting, so the two-label mapping is substantively equivalent rather than weaker. No source repair or issue append is needed."
+  },
+  "strict_preinsertion_status": "APPROVED_FOR_EXACT_PREIMAGE_RECHECK_SINGLE_INSERTION_BUILD_AND_POST_LIVE_AUDIT"
+}

@@ -1,0 +1,178 @@
+\begin{lemma}[Coherent cohomology on a compact complex analytic space]
+\label{lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}
+\begin{reference}
+\cite[Hauptsatz I, p. 57]{Grauert-direct-image}
+\end{reference}
+Let $Y$ be a compact complex analytic space and let $\mathcal M$ be a
+coherent analytic $\mathcal O_Y$-module. Then
+$$
+H^p(Y,\mathcal M)
+$$
+is a finite dimensional complex vector space for every $p\geq 0$.
+\end{lemma}
+
+\begin{proof}
+The structure morphism
+$$
+\pi:Y\longrightarrow \mathop{\rm pt}
+$$
+is proper. Grauert's proper direct-image theorem shows that
+$R^p\pi_*\mathcal M$ is a coherent analytic module on the point. Its module
+of sections is $H^p(Y,\mathcal M)$. Since
+$\mathcal O_{\mathop{\rm pt}}=\mathbf C$, coherence on the point is precisely
+finite dimensionality over $\mathbf C$.
+\end{proof}
+
+\begin{lemma}[Coherence of analytic sheaf Ext]
+\label{lemma-coherent-analytic-sheaf-ext}
+Let $X$ be a complex analytic space and let $\mathcal A,\mathcal B$ be
+coherent analytic $\mathcal O_X$-modules. Then
+$$
+\SheafExt^q_{\mathcal O_X}(\mathcal A,\mathcal B)
+$$
+is a coherent analytic $\mathcal O_X$-module for every $q\geq 0$.
+\end{lemma}
+
+\begin{proof}
+The assertion is local on $X$. Fix $q$ and a point of $X$. Oka coherence for
+complex spaces and coherence of $\mathcal A$ allow us, after shrinking, to
+construct as long a finite-free resolution as is needed in degree $q$,
+$$
+\mathcal P_{q+1}\longrightarrow\mathcal P_q\longrightarrow\cdots
+\longrightarrow\mathcal P_0\longrightarrow\mathcal A\longrightarrow 0,
+$$
+where every $\mathcal P_i$ has finite rank and every successive syzygy is
+coherent. No termination of this resolution is asserted.
+
+Applying $\SheafHom_{\mathcal O_X}(-,\mathcal B)$ computes sheaf Ext through
+degree $q$, since internal Hom from a finite locally free module is exact.
+Every term of the resulting complex is a finite direct sum of $\mathcal B$
+and hence is coherent. Its kernels, images, and cohomology sheaves are
+coherent by Modules, Lemma \ref{modules-lemma-coherent-abelian}. Thus the
+degree-$q$ cohomology sheaf is coherent near the chosen point. Since the point
+and $q$ were arbitrary, the result follows.
+\end{proof}
+
+\begin{lemma}[Finiteness of equivariant analytic Ext over a compact quotient]
+\label{lemma-compact-analytic-quotient-equivariant-ext-finite-dimensional}
+\begin{reference}
+\cite[Chapter V, \S 5.6, p. 219]{Tohoku}
+\cite[Hauptsatz I, p. 57]{Grauert-direct-image}
+\end{reference}
+\begin{history}
+Compactness is imposed on the quotient $Y=X/G$, not on $X$. The conclusion
+is finite dimensionality of the vector space of extension classes, not
+finiteness of the set. No global finiteness or properness of $q$, freeness or
+finiteness of $G$, algebraization, or GAGA assertion is made.
+\end{history}
+Let $X$ be a complex analytic space and let $G$ act discontinuously on $X$
+by analytic automorphisms. Let
+$$
+q:X\longrightarrow Y=X/G
+$$
+be the separated complex analytic quotient with the local finite-quotient
+structure of Lemma
+\ref{lemma-discontinuous-analytic-invariant-direct-image-coherent}, and
+assume that $Y$ is compact. If $\mathcal A$ and $\mathcal B$ are coherent
+analytic $G$-$\mathcal O_X$-modules, then
+$$
+\Ext^n_{\mathcal O_X,G}(X;\mathcal A,\mathcal B)
+$$
+is a finite dimensional complex vector space for every $n\geq 0$.
+
+If $E$ and $F$ are holomorphic vector bundles on $X$ with compatible
+$G$-actions, write $\operatorname{ExtBun}^1_G(E,F)$ for equivalence classes,
+with fixed endpoints, of equivariant short exact sequences of holomorphic
+vector bundles
+$$
+0\longrightarrow F\longrightarrow V\longrightarrow E\longrightarrow 0.
+$$
+This set has a canonical complex vector space structure, is finite
+dimensional, and there are canonical isomorphisms
+$$
+\begin{aligned}
+\operatorname{ExtBun}^1_G(E,F)
+&\longrightarrow
+\Ext^1_{\mathcal O_X,G}
+  (X;\mathcal O(E),\mathcal O(F)) \\
+&\longrightarrow
+H^1\left(Y,q_*^G\mathcal O(E^\vee\otimes F)\right).
+\end{aligned}
+$$
+\end{lemma}
+
+\begin{proof}
+Put
+$$
+\mathcal C^q=
+\SheafExt^q_{\mathcal O_X}(\mathcal A,\mathcal B).
+$$
+This is a coherent analytic $\mathcal O_X$-module by Lemma
+\ref{lemma-coherent-analytic-sheaf-ext}, and Lemma
+\ref{lemma-equivariant-underlying-ext} gives it its canonical
+$G$-$\mathcal O_X$-module structure. For $x\in X$, multiplication by the
+finite stabilizer order $|G_x|$ is an automorphism of the complex vector
+space $\mathcal C^q_x$. Lemmas
+\ref{lemma-finite-group-cohomology-invertible-order} and
+\ref{lemma-higher-invariant-direct-image-stalk} therefore give
+$$
+R^p q_*^G\mathcal C^q=0
+\quad\text{for }p>0.
+$$
+The spectral sequence of Lemma
+\ref{lemma-equivariant-sheaf-ext-spectral-sequence} consequently degenerates
+and its edge map gives a canonical isomorphism
+$$
+q_*^G\mathcal C^q
+\longrightarrow
+\SheafExt^q_{\mathcal O_X,G}(\mathcal A,\mathcal B).
+$$
+The left hand side is coherent by Lemma
+\ref{lemma-discontinuous-analytic-invariant-direct-image-coherent}; hence so
+is the sheaf on the right.
+
+The first spectral sequence of Lemma
+\ref{lemma-equivariant-ext-spectral-sequences} has
+$$
+E_2^{p,q}=
+H^p\left(Y,
+\SheafExt^q_{\mathcal O_X,G}(\mathcal A,\mathcal B)\right)
+\Longrightarrow
+\Ext^{p+q}_{\mathcal O_X,G}(X;\mathcal A,\mathcal B).
+$$
+Every term on the $E_2$-page is finite dimensional by Lemma
+\ref{lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}.
+For each total degree there are only finitely many terms, and the abutment
+has the finite filtration supplied by that spectral sequence. Its successive
+quotients are subquotients of finite dimensional vector spaces. This proves
+the first assertion.
+
+We finish with the bundle assertion. The section sheaves $\mathcal O(E)$ and
+$\mathcal O(F)$ are finite locally free coherent analytic
+$G$-$\mathcal O_X$-modules. Conversely, in an extension of
+$\mathcal O(E)$ by $\mathcal O(F)$ the quotient $\mathcal O(E)$ is locally
+free, so the underlying module sequence splits locally. The middle term is
+therefore finite locally free. Varying the rank in Lemmas
+\ref{lemma-holomorphic-vector-bundles-locally-free-analytic-modules} and
+\ref{lemma-equivariant-holomorphic-vector-bundles-locally-free-modules}, and
+using the same local-matrix full-faithfulness argument for maps of different
+ranks, identifies module extensions and their equivalences with equivariant
+holomorphic bundle extensions with fixed endpoints.
+
+Lemma \ref{lemma-equivariant-extension-classes-finite-locally-free} now gives
+the first displayed isomorphism and identifies its target with
+$$
+H^1\left(X;G,
+\mathcal O(E)^\vee\otimes_{\mathcal O_X}\mathcal O(F)\right).
+$$
+The local trivializations used in the bundle--module equivalence identify the
+coefficient module canonically with $\mathcal O(E^\vee\otimes F)$. Since its
+stalks are complex vector spaces, Lemma
+\ref{lemma-orbit-space-equivariant-cohomology-stabilizer-orders} gives the
+second displayed isomorphism. Finally,
+$q_*^G\mathcal O(E^\vee\otimes F)$ is coherent by Lemma
+\ref{lemma-discontinuous-analytic-invariant-direct-image-coherent}, so its
+first cohomology is finite dimensional by Lemma
+\ref{lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}.
+\end{proof}
+

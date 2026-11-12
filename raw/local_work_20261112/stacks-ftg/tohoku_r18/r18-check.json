@@ -1,0 +1,446 @@
+{
+  "cohomology_build": {
+    "log": {
+      "bytes": 47423,
+      "name": "cohomology.log",
+      "sha256": "8E8A43EB98930EBB1C093FB594FC53CBF92D40D711C3D1BC912381FFF5FB9A74"
+    },
+    "new_block_overfull_boxes": 0,
+    "pdf": {
+      "bytes": 1781813,
+      "name": "cohomology.pdf",
+      "sha256": "3FB124656E6318FAB7D76C3810F474E302D1F1E3574B03D7D28B49008E848429"
+    },
+    "pdf_pages": 205,
+    "rerun_notices": 0,
+    "tex": {
+      "bytes": 785594,
+      "name": "cohomology.tex",
+      "sha256": "0C999110415695106C726E5CCAC342E3DA4E1E045DF7B153884AF0A1259E2DA9"
+    },
+    "undefined_citations": 0,
+    "undefined_references": 0,
+    "visual_reviewed_pages": [
+      166,
+      167,
+      168,
+      169,
+      170
+    ]
+  },
+  "deltas": {
+    "decisions": [
+      {
+        "action": "replace",
+        "decision_id": "D000939",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs all Grothendieck spectral sequences supplied by the two equivariant Hom factorizations (5.6.4) and (5.6.5): the three global sequences were integrated earlier, while the new module-valued comparison and acyclicity lemma gives the remaining sheaf sequence from higher invariant direct images of ordinary sheaf Ext to equivariant sheaf Ext. This exactly closes the source's p. 215 composite-functor assertion; the separately numbered p. 218 sequences IV and V are not included.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-higher-invariant-direct-image-modules;cohomology-lemma-equivariant-sheaf-ext-spectral-sequence;cohomology-lemma-equivariant-ext-spectral-sequences",
+        "supersedes": "D000647",
+        "unit_id": "tohoku:spectral-sequence:equivariant-ext-composite-functors"
+      }
+    ],
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 3,
+      "candidate_units": 0,
+      "decided_units": 678,
+      "decisions": 939,
+      "dispositions": {
+        "example_or_remark": 82,
+        "existing_equivalent": 307,
+        "existing_stronger": 38,
+        "existing_weaker": 19,
+        "extend_existing": 50,
+        "historical_reference": 33,
+        "new_section": 10,
+        "new_statement": 35,
+        "structural_only": 416
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 22,
+      "unit_candidates": 0,
+      "units": 990
+    },
+    "new_labels": [
+      "cohomology-lemma-equivariant-higher-invariant-direct-image-modules",
+      "cohomology-lemma-equivariant-sheaf-ext-spectral-sequence"
+    ],
+    "remaining_gap_class_dispositions": 114,
+    "scan_counts": {
+      "labels": 22000,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1239,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13
+    },
+    "source_issues": [],
+    "substantive_map_changes": [
+      "tohoku:spectral-sequence:equivariant-ext-composite-functors"
+    ]
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "contract": "read_once_then_execute_builder_same_bytes",
+        "path": "srcmap/start_build_tohoku_r18.py"
+      },
+      "builder": {
+        "bytes": 40305,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r18.py",
+        "sha256": "14796865719E5DCC8AD4937333562CDB9A45E7A16394B492A5A551E6344CDC23"
+      }
+    },
+    "bootstrap": {
+      "bytes": 1330,
+      "name": "start_build_tohoku_r18.py",
+      "sha256": "33FDA531403C1FB9CAD3B8B6C01B1614CF71F889C7792075E42A513006F23C5C"
+    },
+    "contract": "same_bytes_bootstrap; exact_inputs_locked_against_write_delete_through_generation_replay_and_promotion",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "powershell_envelope": {
+      "bytes": 722,
+      "name": "start_build_tohoku_r18.ps1",
+      "sha256": "E0581059DB36839295B22FFA02F6A26B261C2ACABFF450AD425AD2C988B5A43F"
+    }
+  },
+  "files": [
+    {
+      "bytes": 734,
+      "name": "STATUS.md",
+      "sha256": "6089E3FB4FE41D7B00A7C328F2B6B8D7FE6246AFD29A344C15CF86C4476424B8"
+    },
+    {
+      "bytes": 5193,
+      "name": "cfg.json",
+      "sha256": "71305363EE0DAFCCD5DDE4CB626ECD012BFB93EAB596C8193872DB8E17520F88"
+    },
+    {
+      "bytes": 71140,
+      "name": "check.json",
+      "sha256": "CD898FAD71A731795B39C29E9A36B6A7F5CCD5C92BDE72B267F31247E315E084"
+    },
+    {
+      "bytes": 320926,
+      "name": "dec.csv",
+      "sha256": "E7050746F44BC77FA4DEFCE7F0FAD63646C44D58477CBA66EFC14DFC7A3819DB"
+    },
+    {
+      "bytes": 1877,
+      "name": "intake.json",
+      "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+    },
+    {
+      "bytes": 18227,
+      "name": "issues.csv",
+      "sha256": "AABA123C53D04D9DF99FC693BFB3C21222973BB5194C16F4B48B9C90BDA2AA69"
+    },
+    {
+      "bytes": 454858,
+      "name": "map.csv",
+      "sha256": "4C983F6591952A22C9305BDBB47ABE0EB6D81CDA52E959996D403800597FE426"
+    },
+    {
+      "bytes": 60969,
+      "name": "mcheck.json",
+      "sha256": "4401D825EE32A2007BC41697D82AAF8EBD9D8CDD5538656C14619A78D81350DD"
+    },
+    {
+      "bytes": 5259422,
+      "name": "stx.csv",
+      "sha256": "080E4D060021E08B173A69DC88FF227FEA34ABDDBBF2DA78AFBD2C81561F5FA8"
+    },
+    {
+      "bytes": 472642,
+      "name": "tcand.csv",
+      "sha256": "79979375DBCFA7C32A81150EC8DEE59840215E760FE0DD4C35CEE301603883F9"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 391651,
+      "name": "units.csv",
+      "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+    }
+  ],
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 18922,
+      "path": "tohoku_r17/r17-check.json",
+      "sha256": "F19ADD12AE9904142E870CF4D2BEA5F7AE1E1064B7A471B1AFDA704E1F7EC699"
+    },
+    "reason": "Workspace machine-safety policy forbids repository-wide Git inspection.",
+    "remote_server_freshness_verified": false
+  },
+  "nonclaims": [
+    "No Git command is executed by this ledger-only successor.",
+    "No Git commit or push is made by this receipt.",
+    "No remote-server freshness check is performed.",
+    "The Stacks scan binds the exact live integrated worktree, not the frozen HEAD tree.",
+    "The transaction denies write/delete access to every existing consumed file; hostile same-user mutation of directory namespaces is outside this lock contract.",
+    "No release, publication, upload, DOI, Zenodo, rights, or whole-paper gate is closed.",
+    "114 Tohoku gap-class dispositions remain after D000939.",
+    "Three confirmed source-formula or source-correction issues remain open for the translation phase."
+  ],
+  "predecessor_dossier": {
+    "aggregate_sha256": "A7B9871D1745052477F9B890B141B3CB72351CC5814DAF754A10BDCDC9694BE2",
+    "bytes": 7079450,
+    "file_count": 15,
+    "files": [
+      {
+        "bytes": 862,
+        "name": "STATUS.md",
+        "sha256": "3EA6FA3928F14DDF50B98F8F80544A041D81AE90D4C63059EAE501F0752BA01E"
+      },
+      {
+        "bytes": 5193,
+        "name": "cfg.json",
+        "sha256": "AFB25A5C6A2136C3C4991F8849785A4AA0FF5AF2ED262D14263615450A637BD3"
+      },
+      {
+        "bytes": 70906,
+        "name": "check.json",
+        "sha256": "B67AD3D7915FE266C688153A7DBA34AB5DA0E98B4ED578A27B57C5D3C1DA2E6D"
+      },
+      {
+        "bytes": 320098,
+        "name": "dec.csv",
+        "sha256": "2CBC59EA2BCD37EE173612F993C4FF0435EE3E0EB005A482367DA95C96588056"
+      },
+      {
+        "bytes": 1877,
+        "name": "intake.json",
+        "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+      },
+      {
+        "bytes": 18227,
+        "name": "issues.csv",
+        "sha256": "AABA123C53D04D9DF99FC693BFB3C21222973BB5194C16F4B48B9C90BDA2AA69"
+      },
+      {
+        "bytes": 454503,
+        "name": "map.csv",
+        "sha256": "A746FB8B4E7EC43624AB36B5A1234A2CE964545F4E86D227591BDC9E5AC7926B"
+      },
+      {
+        "bytes": 60735,
+        "name": "mcheck.json",
+        "sha256": "5FD17764A0A2D58AA79E46391B8B19836BA813C78E997DE600ECB4E6AFB05242"
+      },
+      {
+        "bytes": 18922,
+        "name": "r17-check.json",
+        "sha256": "F19ADD12AE9904142E870CF4D2BEA5F7AE1E1064B7A471B1AFDA704E1F7EC699"
+      },
+      {
+        "bytes": 5258840,
+        "name": "stx.csv",
+        "sha256": "E38CC984023D33EA735FD647BC79061950E0E93D9D9D3FD5EFF2A7219EA185A6"
+      },
+      {
+        "bytes": 472639,
+        "name": "tcand.csv",
+        "sha256": "2E9423D994A0CD0C2946BBA0B56D1CACA250B9780E4C9051C6F0ED825E506FE3"
+      },
+      {
+        "bytes": 2424,
+        "name": "tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      {
+        "bytes": 2453,
+        "name": "topics.csv",
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      },
+      {
+        "bytes": 120,
+        "name": "ucand.csv",
+        "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+      },
+      {
+        "bytes": 391651,
+        "name": "units.csv",
+        "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+      }
+    ],
+    "name": "tohoku_r17"
+  },
+  "schema": "tohoku-stacks-mapping-successor-r18-v1",
+  "semantic_source": {
+    "aggregate_sha256": "80A41130E5797219568E87AC0E15F7AF5F996EFE2895A159FC807C0356DCC33D",
+    "bytes": 2020949,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 10421,
+        "name": "bib.csv",
+        "sha256": "B8DBAF65161B60DC973DFAB6F57037185F8808274BB9618D27FE8BC65AD0B695"
+      },
+      {
+        "bytes": 768,
+        "name": "catalog.csv",
+        "sha256": "69896FB82FDAFD0AB0AEEC1D3387262F67740F952AAD102E5DA662CD9DA15AF9"
+      },
+      {
+        "bytes": 260771,
+        "name": "edges.csv",
+        "sha256": "5DCC1F11489A88AC02351103A6B5987877F55424CFFB066EAB9404EA5FA38BB1"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 6402,
+        "name": "manifest.json",
+        "sha256": "F314863C1F6586FBEBC91ADBF7256C3C3B3B32307F72C5726DD5DB916C758D52"
+      },
+      {
+        "bytes": 582572,
+        "name": "nodes.csv",
+        "sha256": "0F656565E4F4732E7DF1CE1ABA910A6A68BE4CC6896B325ED562E8CD573CF7A8"
+      },
+      {
+        "bytes": 106247,
+        "name": "objects.csv",
+        "sha256": "5BBAB7CD31239A509E4E927BE6D827285FE07CD8DED6180DC60DDB90A6AF7133"
+      },
+      {
+        "bytes": 513504,
+        "name": "occ.csv",
+        "sha256": "478BF2F1A3FC211E6D888A5D0E3DA8EAF20E44CC6439ACDD838678A1B221FFDB"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2190,
+        "name": "README.md",
+        "sha256": "61CFC939C8D65180675226D65B05C444ED8AE25D554A8A90D0168B4C886A11B8"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 159814,
+        "name": "refs.csv",
+        "sha256": "723B0C2B06713607EE39A78A33991C7E92CAB6A13BD5503ACA51F6C727C49C76"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325273,
+        "name": "terms.csv",
+        "sha256": "5E416E9CDC6983745E6D907110F4E91B5DD9EE273FF613FD70A0CC34CE8C4B12"
+      },
+      {
+        "bytes": 3744,
+        "name": "validation.json",
+        "sha256": "CBD612B566B2517A854A841154391E62C01EE0AE02834AB5BE7C48926673C9D2"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r10",
+    "sem_check": {
+      "bytes": 6395,
+      "name": "qa/v68r24/sem-check.json",
+      "sha256": "A425DDAA035F9E00D01579039F0E3786BCB0B52B079D614A7421D8828D837ADB"
+    },
+    "sem_input": {
+      "bytes": 299780,
+      "name": "qa/v68r24/sem-input.json",
+      "sha256": "42437BDDF7BE9AAB14869FD4B1F741191C8BCC9EDE1FFCDA3EB04964F8F1FB26"
+    }
+  },
+  "source_correction_ledger": {
+    "bound_for": "active TOH-SRC-P217-001 cited by I000022",
+    "bytes": 192672,
+    "name": "SOURCE_CORRECTIONS.jsonl",
+    "sha256": "39F17F1414A2C4047700D752A9BE1F23BC25C79F7E7EEFE1D52094886B048643"
+  },
+  "status": "PASS"
+}

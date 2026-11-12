@@ -1,0 +1,387 @@
+{
+  "schema": "tohoku-stacks-d1008-audit-v1",
+  "created_at": "2026-08-22T22:12:27.2187556+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1008",
+  "primary_units": [
+    "tohoku:comparison:equivariant-hom-stalk-to-fiber",
+    "tohoku:comparison:equivariant-ext-stalk-to-fiber"
+  ],
+  "source_reference": "Tohoku, Chapter V, Section 5.6, formulas (5.6.9) and (5.6.10), pp. 214--215, with the stabilizer skew group ring defined on p. 197",
+  "mapping": {
+    "status": "PENDING_NO_OVERWRITE_SUCCESSOR",
+    "current_mapping_state": "UNCHANGED_R50",
+    "planned_successor": "tohoku_r51",
+    "planned_decisions": [
+      {
+        "decision_id": "D001017",
+        "unit_id": "tohoku:comparison:equivariant-hom-stalk-to-fiber",
+        "supersedes": "D000570",
+        "disposition": "existing_stronger",
+        "stacks_label": "cohomology-lemma-equivariant-hom-injective-stalk"
+      },
+      {
+        "decision_id": "D001018",
+        "unit_id": "tohoku:comparison:equivariant-ext-stalk-to-fiber",
+        "supersedes": "D000569",
+        "disposition": "existing_stronger",
+        "stacks_label": "cohomology-lemma-equivariant-ext-stalk"
+      }
+    ],
+    "classification_reason": "The new fixed-point statements recover the source under its coherent-left-module and left-Noetherian-stalk hypotheses, but require those hypotheses only locally at the selected orbit and also cover associative noncommutative unital rings as abelian-group-valued Hom and Ext comparisons.",
+    "nonclaim": "This receipt does not mutate or promote the mapping ledger; the two mapping transitions belong to a separately validated no-overwrite r51 transaction."
+  },
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "authority_pdf": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\authority_snapshot\\jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "repair": {
+      "global_decision_id": "TOH-SRC-P214-005",
+      "local_decision_id": "TOH-P214-STABILIZER-MATH-001",
+      "receipt": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p214_fix1\\check.json",
+        "bytes": 5865,
+        "sha256": "516012842CD8F6026ABE418370229A1AAB91C6087DDC6C921931DF0716122B1B"
+      },
+      "decisions": {
+        "bytes": 4708,
+        "sha256": "7E077B3C73B3FFEBA178F24E82495FC8FEEFE686136C401A67129BF9AD94636D"
+      },
+      "source_corrections_ledger": {
+        "bytes": 208551,
+        "sha256": "2D99ED4D9F4697A6991405BEFFA5EF755F58F42AFAA17FB4198DA30D806AEF90",
+        "rows": 378,
+        "unique_decision_ids": true,
+        "selected_decision_occurrences": 1
+      },
+      "layers": {
+        "english": {
+          "path": "production/p214_fix1/tex/en/p214.tex",
+          "bytes": 4011,
+          "sha256": "8CFFB05104DA4BB64C1AE7340C36D3FAC977A459C4BF8A8DFD6EFB1461B539F1"
+        },
+        "corrected_french": {
+          "path": "production/p214_fix1/tex/fr_corrected/p214.tex",
+          "bytes": 4215,
+          "sha256": "90416161FE153DE6E14DDF9F854AB9EDA38292BB8158A6318D410498D8068CC9"
+        },
+        "diplomatic_french": {
+          "path": "production/p214_fix1/tex/fr_diplomatic/p214.tex",
+          "bytes": 4198,
+          "sha256": "94A45ECBA2E990F4D84C60A662219B35AD483F8B4EAC3A8E6ACDAA3B013D72D7"
+        }
+      },
+      "exact_delta_replay": {
+        "english_successor_is_unique_ZG_to_ZGx_replacement": true,
+        "corrected_french_successor_is_unique_ZG_to_ZGx_replacement": true,
+        "diplomatic_french_byte_identical": true,
+        "other_source_changes": 0,
+        "layer_targets_per_layer": 16
+      }
+    },
+    "sealed_reader_layers": {
+      "english_p214": {
+        "path": "build/v068c3r17/src/en/p214.tex",
+        "bytes": 4011,
+        "sha256": "8CFFB05104DA4BB64C1AE7340C36D3FAC977A459C4BF8A8DFD6EFB1461B539F1"
+      },
+      "english_p215": {
+        "path": "build/v068c3r17/src/en/p215.tex",
+        "bytes": 4468,
+        "sha256": "0DA8E1C00F154542963645DC1EDB339ED5E35A14B3B1ABFAFE44DFA478AF1852"
+      },
+      "french_p214": {
+        "path": "build/v068c3r17/src/fr/p214.tex",
+        "bytes": 4215,
+        "sha256": "90416161FE153DE6E14DDF9F854AB9EDA38292BB8158A6318D410498D8068CC9"
+      },
+      "french_p215": {
+        "path": "build/v068c3r17/src/fr/p215.tex",
+        "bytes": 4669,
+        "sha256": "A361CDE261DDA6A09E8EC24E5A73BB5E643944AB3AC43ECAC2AE01C54500FD13"
+      }
+    },
+    "semantic_boundary": "The Hom comparison is formula (5.6.9) and its p. 214--215 continuation; the Ext comparison is formula (5.6.10) on p. 215. The stabilizer group is G_x, not the whole group G.",
+    "source_repair_required": true,
+    "source_repair_reason": "The printed p. 214 parenthetical says Z(G), but the p. 197 definition and the stalk action use G_x. Corrected French and English therefore use Z(G_x), while diplomatic French preserves the print."
+  },
+  "reader_audit": {
+    "status": "STRICT_PASS",
+    "revision": "v068c3r17",
+    "build_receipt": {
+      "path": "build/v068c3r17/build.json",
+      "bytes": 30957,
+      "sha256": "6A7E647F3BEDCBAC4E7538D56F83830CB2BC134F124AC257D9E64662A8D0C380"
+    },
+    "source_transition": {
+      "staged_files": 543,
+      "byte_identical_files": 541,
+      "changed_files": [
+        "en/p214.tex",
+        "fr/p214.tex"
+      ],
+      "other_changed_files": 0
+    },
+    "english_pdf": {
+      "path": "output/pdf/en-p119-221-v068c3r17.pdf",
+      "bytes": 1380477,
+      "sha256": "4E692072301E46CF910FA2C73C6B4B9FB594895B73305F4368298A34D75BAE24",
+      "pages": 90,
+      "strict_parse": "PASS"
+    },
+    "french_pdf": {
+      "path": "output/pdf/fr-p119-221-v068c3r17.pdf",
+      "bytes": 1415621,
+      "sha256": "914EA7C087A07727D2F0C24A8CB646378A3B714C8CFADDF4FDF7854733BFB51E",
+      "pages": 93,
+      "strict_parse": "PASS"
+    },
+    "independent_qa": {
+      "path": "qa/v68r39/check.json",
+      "bytes": 4928,
+      "sha256": "8257A31037F1A6B38F4EACD52CF2AF1E0A0685542D90B61FF34D3B30DE6B9C08",
+      "structural": {
+        "bytes": 7308,
+        "sha256": "9F82C5C75CC4F173B91F7CD001368AB7CF4BB27A4C697862E71BA0D97ECB55DC"
+      },
+      "page_inventory": {
+        "bytes": 28157,
+        "sha256": "D2BAA767743D678D677808A5ACC5576AF2070EC0AB0033F0ADCB2952C1023FD9",
+        "rows": 387,
+        "physical_page_rows": 183,
+        "source_anchor_rows": 204
+      },
+      "visual_pages": {
+        "english": [83],
+        "french": [85, 86]
+      },
+      "visual_result": "Corrected Z(G_x) is visible, correctly subscripted, and unclipped in both readers; the p. 214 pages have no overlap, missing glyph, or layout defect."
+    }
+  },
+  "semantic_audit": {
+    "status": "STRICT_PASS",
+    "generation": "sem/r18",
+    "binding_state": "local_unpublished",
+    "manifest": {
+      "path": "sem/r18/manifest.json",
+      "bytes": 38138,
+      "sha256": "40596FD03A707CF8AC3C1D825D0FEAD4447663F6A57E7BD16735021F14B520AB"
+    },
+    "validation": {
+      "path": "sem/r18/validation.json",
+      "bytes": 6102,
+      "sha256": "2972E56494357AD0ABDB765057E20CA99777E6A6AA73B5AF7571EA1F715AA3D4",
+      "errors": []
+    },
+    "data_surface": {
+      "files": 16,
+      "bytes": 2015783,
+      "aggregate_manifest_bytes": 1297,
+      "aggregate_sha256": "71906EBD41B1777C661B904510BAC999FB5827E018CD1C606CE5007DFD0B9EB7"
+    },
+    "complete_surface": {
+      "files": 18,
+      "bytes": 2060023,
+      "aggregate_manifest_bytes": 1468,
+      "aggregate_sha256": "76B6EBA7042FCFF59306E6178AC702BFDEDA392D2ADD754DDE932EBFAA6E6302"
+    },
+    "exact_table_delta": {
+      "changed_tables": [
+        "catalog.csv",
+        "nodes.csv",
+        "occ.csv"
+      ],
+      "changed_fields": 18,
+      "fields_per_changed_table": 6,
+      "unchanged_inherited_data_files": 13,
+      "catalog": {
+        "bytes": 772,
+        "sha256": "12C8C0D5EB10157AB1DBCD170AFF2147103AB848A3D28A8CA9EDF1C15186540A"
+      },
+      "nodes": {
+        "bytes": 585012,
+        "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D"
+      },
+      "occurrences": {
+        "bytes": 515084,
+        "sha256": "54E545121F4D108E5C88B7039C39E3814F71F03332592C3F3965BD49B7FACED5"
+      }
+    },
+    "replayed_repairs": [
+      "production/p169_r3 local decision TOH-SRC-P169-011 at tohoku:subitem:3.6.2:b / tohoku:occ:p169:o005",
+      "production/p214_fix1 decisions TOH-P214-STABILIZER-MATH-001 and TOH-SRC-P214-005 at tohoku:equation:5.6.9 / tohoku:occ:p214:o016"
+    ],
+    "stable_surfaces": {
+      "nodes": 991,
+      "occurrences": 1036,
+      "edges": 1475,
+      "references": 436,
+      "new_ids": 0,
+      "id_order_preserved": true,
+      "terms_byte_identical": true,
+      "objects_byte_identical": true
+    },
+    "input_entries": 28,
+    "atomic_no_overwrite_promotion": true,
+    "postpromotion_reconstruction_and_readback": "STRICT_PASS",
+    "stage_remnants": 0,
+    "qualification": "TOH-SRC-P169-011 is local to p169_r3 and is not retroactively inserted into SOURCE_CORRECTIONS.jsonl; the global ledger is required to contain only the p. 214 global decision TOH-SRC-P214-005 for this successor."
+  },
+  "artifacts": {
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 859582,
+      "sha256": "A7421C2A20D1D2E9DEE9CB85D7EEA352CE72A22FC87D1CB0AE2DAE95EB6F087D",
+      "new_block_lines": [18451, 18719],
+      "hom_lemma_lines": [18451, 18645],
+      "ext_lemma_lines": [18648, 18719],
+      "label_lines": [18452, 18649]
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.aux",
+      "bytes": 52735,
+      "sha256": "C79B4B893964006BD4D0925BEED17647FF45E24385352124BC872AC3398275B8"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.log",
+      "bytes": 47357,
+      "sha256": "72BB25C32FF9ADF9495726C10B148589089B5B0BC1CC84F3B421E4F327CE7947"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+      "bytes": 1894087,
+      "sha256": "FEC0804EAEAE6AB3243EA1D7CB32EB0A791D05C4EE4A786A39B647D2951B2CAF",
+      "pages": 225,
+      "media_box": [0, 0, 612, 792],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_labels": [
+    "\\newlabel{lemma-equivariant-hom-injective-stalk}{{45.51}{177}{Equivariant Hom and injective stalks}{subsection.45.51}{}}",
+    "\\newlabel{lemma-equivariant-ext-stalk}{{45.52}{179}{Equivariant Ext at a stalk}{subsection.45.52}{}}"
+  ],
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "independent_reviews": 2,
+    "checks": [
+      "The statements explicitly override the commutative convention only for the two new lemmas and use associative unital rings, unital left modules, and the finite stabilizer H=G_x.",
+      "The degree-zero comparison is only an isomorphism of abelian groups; no natural left-R module structure on noncommutative internal Hom is asserted.",
+      "Local finite presentation of the first Hom argument identifies the internal-Hom stalk with Hom over R_x, and H-fixed maps are exactly U_x-linear maps.",
+      "Because H is finite, U_x is finite free as a left R_x-module; left Noetherianity of R_x therefore makes U_x left Noetherian.",
+      "The equivariant local generator L(T)=Ind_G(j_{T!}R|T) has stalk U_x. The h-summand map is m to rho^R_{h,x}(m)[h], with the semilinear coefficient action and left multiplication on [h].",
+      "For left generators a_i of a left ideal, the stalk map is (u_i) to sum u_i a_i. Right multiplication by each chosen generator is the correct orientation for a left U_x-linear map from the free left module.",
+      "The local image is finitely presented under the stated left-coherence hypothesis, so the degree-zero comparison represents the Baer map on an orbit neighbourhood.",
+      "Equivariant extension by zero is exact and left adjoint to restriction; injectivity extends the represented ideal map to U_x, proving left injectivity by the left Baer criterion.",
+      "An equivariant injective resolution remains an injective U_x-resolution after taking the stalk, and the termwise Hom comparison gives the all-degree Ext comparison.",
+      "In the commutative case, forgetting the module structure on equivariant SheafExt is exact and both derived functors use the same injective resolution.",
+      "The local fixed-point hypotheses strictly strengthen the source's global coherent-R, coherent-A, and left-Noetherian-stalk formulation.",
+      "No whole-group G skew ring, right-module, two-sided-ideal, semisimplicity, stabilizer-order inversion, free-action, or unrestricted stalk-preservation claim is made."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.29 (MiKTeX 26.5)",
+    "command": "pdflatex -interaction=nonstopmode -halt-on-error cohomology.tex",
+    "final_passes": 2,
+    "hom_label": "Lemma 45.51",
+    "hom_label_page": 177,
+    "ext_label": "Lemma 45.52",
+    "ext_label_page": 179,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0,
+    "out_of_block_overfull_diagnostics": 33,
+    "out_of_block_underfull_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_parser": "pypdf PdfReader(strict=True), every xref object, page content stream, text, media box, and rotation inspected",
+    "xref_objects_swept": 4072,
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 4278952,
+    "extracted_text_characters": 491080,
+    "uniform_media_box": true,
+    "uniform_rotation": true,
+    "poppler_full_text_interpretation": "PASS",
+    "visual_pages": [177, 178, 179, 180],
+    "visual_render_sha256": [
+      "2989F58BD4B1945C52E46BB728A2FEE2E2C9EEC8EF40371939CFFBAA97CE113B",
+      "FAB39887AF68A6C1AD53A2EC3738AF23707FD3A3C79107A5BF49B51305E2F6F3",
+      "37B81EA6ED0C286428F5C4623F1C0305EDF1EC9E6EC39236A85E9958B0C0A92E",
+      "6A7233C9E08C770B8F4DD2885ECA1DC19D8D6FD9FE8AB7EAD7CDF8249FB3C8F3"
+    ],
+    "visual_result": "The incoming seam, both complete lemma statements and proofs, displayed skew-group-ring maps, left-ideal orientation, page breaks, proof markers, outgoing seam, typography, margins, headers, page numbers, links, and mathematical glyphs render cleanly with no clipping, overlap, crowding, malformed symbols, or bad page breaks."
+  },
+  "scanner_audit": {
+    "status": "STRICT_PASS",
+    "counts": {
+      "labels": 22064,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1270,
+      "topics": 13,
+      "warnings": 636,
+      "errors": 0
+    },
+    "outputs": {
+      "stx.csv": {
+        "bytes": 5276647,
+        "sha256": "CF7E76DE52766F75E7174A1D6B56FC5466BA6D0521BAAC317856EDBF8047A1DB"
+      },
+      "tcand.csv": {
+        "bytes": 485239,
+        "sha256": "2CA303980441ABDB51890EA1A2DA3544D604262589A546ACF2DE60F04391916E"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "check.json": {
+        "bytes": 78159,
+        "sha256": "0CCE4F7131C6EEA4C5EE27849F91271CF31F6FF868DC16060B537B1B8CD32472"
+      }
+    },
+    "delta_from_r50": {
+      "new_labels": [
+        "cohomology-lemma-equivariant-hom-injective-stalk",
+        "cohomology-lemma-equivariant-ext-stalk"
+      ],
+      "removed_labels": 0,
+      "existing_label_rows_line_number_only": 109,
+      "existing_label_other_changes": 0,
+      "candidate_keys_added": 0,
+      "candidate_keys_removed": 0,
+      "candidate_rows_line_number_only": 16,
+      "candidate_other_changes": 0,
+      "official_tag_changes": 0
+    }
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "authority": "user reported that the account was suspended after VPN use and that a support ticket is filed.",
+      "effect": "No GitHub inspection, synchronization, push, or publication was attempted. This does not block local D1008 production, semantic sealing, or the r51 successor."
+    }
+  },
+  "nonclaims": [
+    "No statement is made for right modules, right ideals, or two-sided ideals.",
+    "No right-Noetherian or two-sided-Noetherian hypothesis is substituted for left Noetherianity.",
+    "The internal Hom is used only as a sheaf of abelian groups in the noncommutative statement.",
+    "The skew group ring at x uses the finite stabilizer G_x, not the whole group G.",
+    "No stabilizer-order inversion, averaging, semisimplicity, or free-action hypothesis or conclusion is asserted.",
+    "Stalks are not claimed to preserve injectives without the stated local left-coherence and left-Noetherian hypotheses.",
+    "No source layer outside corrected English and French p. 214 is changed by the p214_fix1 repair, and diplomatic French remains byte-identical.",
+    "Semantic r18 is local and unpublished and changes no stable ID, official tag, mapping disposition, release, or publication state.",
+    "No mapping promotion, Git operation, GitHub action, release, or publication is claimed by this receipt."
+  ],
+  "errors": []
+}

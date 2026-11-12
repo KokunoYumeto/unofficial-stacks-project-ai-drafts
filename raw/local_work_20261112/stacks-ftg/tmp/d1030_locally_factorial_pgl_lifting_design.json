@@ -1,0 +1,100 @@
+{
+  "schema": "tohoku-stacks-d1030-design-v1",
+  "formalization_id": "D1030",
+  "status": "LOCAL_PREINSERTION_DESIGN_AWAITING_INDEPENDENT_REVIEW",
+  "scope": {
+    "unit": "tohoku:prop:3.4.1",
+    "printed_page": 161,
+    "source_locator": "sem/r18/nodes.csv:761",
+    "predecessor_decision": "D000306",
+    "predecessor_disposition": "new_statement",
+    "operation": "insert one bounded lemma in divisors.tex",
+    "dependent_parent_after_success": "tohoku:section:3.4 at map line 914",
+    "source_repair_required": false,
+    "issue_append_required": false,
+    "live_write_performed": false
+  },
+  "source_claim": {
+    "summary": "For an irreducible algebraic variety over an algebraically closed field with factorial local rings, H^i(X,O_X^*) vanishes for i at least 2, and every Zariski locally trivial projective-linear bundle lifts to a general-linear bundle.",
+    "proof_route": "The already live divisor-sheaf resolution supplies H^2(X,O_X^*)=0. The central sheaf extension 1 -> O_X^* -> GL_n -> PGL_n -> 1 gives a degree-two obstruction whose vanishing is equivalent to lifting the torsor.",
+    "scope_guards": [
+      "Zariski locally trivial PGL_n torsors only",
+      "no claim about arbitrary etale or fppf PGL_n torsors or Brauer classes",
+      "no smoothness converse or algebraically closed-field dependence is asserted",
+      "no analytic or GAGA statement"
+    ]
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "bytes": 7305283,
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+      "printed_page": 161,
+      "pdf_page": 43
+    },
+    "semantic_row": {
+      "path": "sem/r18/nodes.csv",
+      "physical_line": 761,
+      "bytes_with_lf": 824,
+      "sha256_with_lf": "C1C25DFC3F30B4C6B0F530118F8F14D43696B25E94A0E713AFD7C4AFCDC22F08"
+    },
+    "occurrence_row": {
+      "path": "sem/r18/occ.csv",
+      "physical_line": 318,
+      "occurrence_id": "tohoku:occ:p161:o004",
+      "bytes_with_lf": 472,
+      "sha256_with_lf": "EA4CBCFFD27093EE68AD035EBA46203FCF2A41797EEF2E820F836977C703916C",
+      "parity": "PASS"
+    },
+    "reader_layers": {
+      "diplomatic": {"path": "build/v068c3r20/src/dip/p161.tex", "file_bytes": 4280, "file_sha256": "FF34B9B75C398583923F8D9AD806EAD7B436BBC40CA170A7CF408625F2154C68", "segment_lines": "37-45", "segment_bytes_with_lf": 610, "segment_sha256_with_lf": "E3011493BE5E2652F2E0A71D9C3D704870825A765492D328741DAE1D9DF3F2B2"},
+      "corrected_french": {"path": "build/v068c3r20/src/fr/p161.tex", "file_bytes": 4335, "file_sha256": "A3AADEA6BCA00308E9332D7942EF043E1173FABB451C18D3BC9AD9EC964711A6", "segment_lines": "38-46", "segment_bytes_with_lf": 610, "segment_sha256_with_lf": "E3011493BE5E2652F2E0A71D9C3D704870825A765492D328741DAE1D9DF3F2B2"},
+      "english": {"path": "build/v068c3r20/src/en/p161.tex", "file_bytes": 4171, "file_sha256": "14F14A7D9AB5CE5B4B83A5D1458100EDD79435958670CFB0B7175E9162A9223E", "segment_lines": "39-47", "segment_bytes_with_lf": 577, "segment_sha256_with_lf": "BC6FC02795349E780BEE1944DCD93B0263DE33D574494EDEAD92DD078E988D9A"}
+    }
+  },
+  "predecessor_evidence": {
+    "dossier": "tohoku_r68",
+    "map_row": {"physical_line": 761, "bytes_with_lf": 375, "sha256_with_lf": "961D0FF52FD939AD46E48F2FF07B89C55EB790555DFBBA2CF36CA6F10FD6491C"},
+    "decision_row": {"physical_line": 307, "decision_id": "D000306", "bytes_with_lf": 262, "sha256_with_lf": "41ADB8D27D655C3FF88369C3991E66467EF86E1E23CAE3E01BB3EC277E5BA208"}
+  },
+  "live_coverage": {
+    "existing_vanishing_label": "divisors-lemma-locally-UFD-divisor-resolution",
+    "existing_obstruction_label": "cohomology-lemma-pointwise-envelope-degree-two-boundary",
+    "finding": "The higher O_X^*-cohomology vanishing and general central obstruction theorem are already proved, but no labeled specialization states the PGL_n-to-GL_n lifting consequence and projective-bundle interpretation.",
+    "divisors_preimage": {"path": "divisors.tex", "bytes": 396388, "sha256": "362CBBFD9653DB1CC18EB05FF7A7C7AB4B7B14AD4B74CB7F2AA3F3B7D43BC569"},
+    "divisors_pdf_preimage": {"path": "divisors.pdf", "bytes": 1131224, "sha256": "D8FF702EF09DF45E6A2B0FCB71A8D1C1374AC14F3F78F7533A2F1CA5FA061B7E"}
+  },
+  "candidate": {
+    "path": "tmp/d1030_locally_factorial_pgl_lifting_candidate.tex",
+    "bytes": 1894,
+    "sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E",
+    "new_raw_label": "lemma-locally-UFD-projective-linear-torsors-lift",
+    "new_full_label": "divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+    "placement": "immediately after divisors-lemma-locally-UFD-divisor-resolution",
+    "dependencies": [
+      "divisors-lemma-locally-UFD-divisor-resolution",
+      "cohomology-lemma-pointwise-envelope-degree-two-boundary"
+    ]
+  },
+  "projected_mapping": {
+    "replace_only": "D000306",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+    "official_tags": "",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "issue_append": null,
+    "source_repair_append": null,
+    "dependent_parent": {
+      "unit": "tohoku:section:3.4",
+      "predecessor": "D000324",
+      "authorization": "audit and close only after this child is sealed"
+    }
+  },
+  "remaining_gates": [
+    "independent source and mathematical review",
+    "live preimage and label collision recheck",
+    "single apply_patch insertion",
+    "divisors.pdf build, diagnostics, and visual QA",
+    "scanner oracle/replay and frozen final audit"
+  ]
+}

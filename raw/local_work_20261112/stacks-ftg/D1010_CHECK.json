@@ -1,0 +1,715 @@
+{
+  "schema": "tohoku-stacks-d1010-audit-v1",
+  "created_at": "2026-08-23T02:08:04.5376084+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1010",
+  "primary_units": [
+    "tohoku:construction:extension-by-zero-support-limit",
+    "tohoku:spectral-sequence:ii-a-u",
+    "tohoku:construction:inductive-system-of-spectral-sequences",
+    "tohoku:comparison:cohomology-and-filtered-limit"
+  ],
+  "source_reference": "Tohoku, Chapter V, Section 5.7, p. 220, formulae (5.7.5)--(5.7.7 bis)",
+  "primary_evidence": {
+    "mapping_design": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_mapping_design.json",
+      "bytes": 10091,
+      "sha256": "09990111965AC15BAB4A0855BD1771AB9CB7F2BBF07A1768692EADE46EC9FDFA",
+      "status": "STRICT_PASS"
+    },
+    "formalization_evidence": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_formalization_evidence.json",
+      "bytes": 10908,
+      "sha256": "301A3458391FAAC4754DECA03E3C7F5C4B10CB9887B00B0F53FC1144D34994CF",
+      "status": "STRICT_PASS"
+    }
+  },
+  "mapping": {
+    "status": "PENDING_NO_OVERWRITE_SUCCESSOR",
+    "current_mapping_state": "UNCHANGED_R52",
+    "predecessor": {
+      "path": "user\\Documents\\stacks-ftg\\tohoku_r52",
+      "receipt": {
+        "path": "user\\Documents\\stacks-ftg\\tohoku_r52\\r52-check.json",
+        "bytes": 26245,
+        "sha256": "D8E8D6EE5C83ABE8B3ADA89AF34F19EFD5F4BC66B69052280C9B3BBDFEAF3438",
+        "status": "PASS"
+      },
+      "decisions": 1023,
+      "source_issues": 29,
+      "remaining_gap_class_dispositions": 42
+    },
+    "planned_successor": "tohoku_r53",
+    "planned_decisions": [
+      {
+        "decision_id": "D001024",
+        "unit_id": "tohoku:construction:extension-by-zero-support-limit",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero",
+        "rationale": "Stacks now proves the directed extension-by-zero presentation of supported invariant sections for abelian G-sheaves. Its derived colimit comparison is asserted only under the separately stated Gamma_X^G-acyclicity condition for extension by zero, and its ordinary supported-cohomology comparison additionally assumes that Phi is paracompactifying; neither extra condition is inferred from the neighbourhood hypothesis.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000585"
+      },
+      {
+        "decision_id": "D001025",
+        "unit_id": "tohoku:spectral-sequence:ii-a-u",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "rationale": "Stacks now constructs the additive first-quadrant filtered second spectral sequence for abelian G-sheaves, with the displayed colimit E_2-page and finite abutment filtration. The abutment identification uses the explicit extension-by-zero acyclicity condition; the usual H^p(G,H^q_Phi) page additionally requires Phi to be paracompactifying and one of the three alternative interchange criteria.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000648"
+      },
+      {
+        "decision_id": "D001026",
+        "unit_id": "tohoku:construction:inductive-system-of-spectral-sequences",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "rationale": "Stacks now constructs the compatible directed system from the E_2-pages onward, takes exact filtered colimits pagewise, proves stabilization and finite convergence, and identifies the abutment through the preceding conditional extension-by-zero comparison. It does not assert an unconditional second Grothendieck spectral sequence.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000587"
+      },
+      {
+        "decision_id": "D001027",
+        "unit_id": "tohoku:comparison:cohomology-and-filtered-limit",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "rationale": "Stacks now proves the comparison colim_U H^p(G,M_U^q) to H^p(G,colim_U M_U^q) under each of the source's three alternative criteria: finite G; trivial actions with every H_r(G,Z) finitely generated; or an essentially constant cofinal subsystem. The resulting usual E_2-page still assumes that Phi is paracompactifying and retains the standing extension-by-zero acyclicity hypothesis.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000568"
+      }
+    ],
+    "canonical_decision_rows": {
+      "encoding": "json.dumps(rows,ensure_ascii=True,sort_keys=True,separators=(',',':'))",
+      "bytes": 2852,
+      "sha256": "7166D021F6B01A9FFDEE2CD47907C34FF98640D49D2F7FD9E6B1AAA8A556643C",
+      "csv_suffix_bytes": 2375,
+      "csv_suffix_sha256": "356F82A3CC0B582CE40042D29D429B5292C556F5D9328E1375639FC522EA6085",
+      "expected_dec_csv_bytes": 375251,
+      "expected_dec_csv_sha256": "84639B0A99BDDC58980FEEA5E221D249B3B898956DA79F4D41DEFE79297C71D9"
+    },
+    "planned_issue_append": {
+      "transaction_state": "PENDING_ATOMIC_R53",
+      "issue_id": "I000030",
+      "unit_id": "tohoku:construction:extension-by-zero-support-limit",
+      "status": "resolved",
+      "kind": "source_missing_derived_functor_hypotheses",
+      "claim": "The p. 220 passage passes from the degree-zero supported-section colimit to the derived formula (5.7.6) under only the neighbourhood condition on Psi, and later identifies colim_U H^q(X,A_U) with H^q_Phi(X,A). The first derived identification additionally requires Gamma_X^G-acyclicity of extension by zero on injective G-sheaves, while the ordinary supported-cohomology identification requires Phi to be paracompactifying; the three subsequent group-cohomology criteria supply neither hypothesis.",
+      "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero;cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+      "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 220, formulae (5.7.5)--(5.7.7 bis), states the neighbourhood condition before passing from the section colimit to (5.7.6) and later invokes the ordinary supported-cohomology colimit. The exact D1010 formalization block, 15171 bytes, SHA-256 EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4, separates Gamma_X^G-acyclicity of I_U for injective G-sheaves from the paracompactifying hypothesis on Phi and proves that conditions (a)--(c) concern only group-cohomology/filtered-colimit interchange.",
+      "control": "Preserve the printed wording diplomatically. In corrected exposition and formalization, state the extension-by-zero acyclicity requirement for (5.7.6), state the paracompactifying requirement for the ordinary supported-cohomology comparison, and identify (a)--(c) as alternative criteria only for commuting group cohomology with the filtered colimit. D001024 resolves the missing-hypotheses issue; D001025--D001027 resolve the downstream spectral-sequence and interchange gaps without weakening either gate.",
+      "resolution_decision": "D001024",
+      "predecessor_rows": 29,
+      "postsuccessor_rows": 30,
+      "csv_suffix_bytes": 1878,
+      "csv_suffix_sha256": "EB1C26F293F662C1CF6728036789D6436C4075DF81BF1445887F5886C07E8CD1",
+      "expected_issues_csv_bytes": 31413,
+      "expected_issues_csv_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503"
+    },
+    "expected_map_csv": {
+      "bytes": 479894,
+      "sha256": "7BF8C6794D743ACE1334F5979B820E955C70C14537F0B00A0E6A679376668BAE"
+    },
+    "expected_postsuccessor_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 679,
+      "decisions": 1027,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 371,
+        "existing_stronger": 41,
+        "existing_weaker": 6,
+        "extend_existing": 16,
+        "historical_reference": 33,
+        "new_section": 5,
+        "new_statement": 11,
+        "structural_only": 424
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 30,
+      "unit_candidates": 0,
+      "units": 991,
+      "remaining_gap_class_dispositions": 38
+    },
+    "expected_map_delta": {
+      "changed_units": 4,
+      "unchanged_units": 987,
+      "changed_fields_per_unit": [
+        "decision_id",
+        "disposition",
+        "rationale",
+        "review_state",
+        "stacks_labels",
+        "stacks_tags"
+      ]
+    },
+    "classification_reason": "The two D1010 lemmas formalize the p. 220 filtered extension-by-zero and second-spectral-sequence block for abelian G-sheaves. The first separates the degree-zero consequence of the neighbourhood hypothesis from the additional extension-by-zero acyclicity and paracompactifying gates. The second constructs the compatible filtered spectral sequence and proves the three source criteria as alternative conditions only for group-cohomology/filtered-colimit interchange. At exactly this conditional scope, the four previously gap-classified units become existing_equivalent.",
+    "atomicity": "D001024--D001027 and I000030 are canonical planned rows only. They remain absent from the live r52 mapping and issue ledgers until a separately validated atomic no-overwrite r53 transaction."
+  },
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "authority_pdf": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\authority_snapshot\\jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "printed_page": 220
+    },
+    "p220_fix2": {
+      "root": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p220_fix2",
+      "receipt": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p220_fix2\\check.json",
+        "bytes": 9828,
+        "sha256": "86AA03D898D68C419317BD02FC6C99968CECFE98365AFEE5FBBF253F71582EA3",
+        "status": "PASS"
+      },
+      "decision_id": "TOH-P220-DERIVED-QUAL-001",
+      "source_correction_id": "TOH-SRC-P220-005",
+      "layers": {
+        "diplomatic_french": {
+          "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p220_fix2\\tex\\fr_diplomatic\\p220.tex",
+          "bytes": 4088,
+          "sha256": "9AB038F98FD8FB3E8677E39C6CC2E81FAF936B8F74CF0E73B200CFB483198581",
+          "predecessor_byte_exact": true
+        },
+        "corrected_french": {
+          "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p220_fix2\\tex\\fr_corrected\\p220.tex",
+          "bytes": 4742,
+          "sha256": "A8FF1CA419080A8E77CF8A71F4A80D2E43D7A321D4684D03DA8A1AF63FBC0F95",
+          "qualification_occurrences": 1
+        },
+        "english": {
+          "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p220_fix2\\tex\\en\\p220.tex",
+          "bytes": 4530,
+          "sha256": "D57E4BAFF9848AEFD2B942A424ABC23A01376F6159C0896AEF5933BCF282CEC5",
+          "qualification_occurrences": 1
+        }
+      },
+      "layer_targets": 18,
+      "new_layer_targets": 0,
+      "decisions_prefix_exact_plus_one": true,
+      "correction_ledger_prefix_exact_plus_one": true
+    },
+    "source_corrections_ledger": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\SOURCE_CORRECTIONS.jsonl",
+      "bytes": 209932,
+      "sha256": "0C9A8424C88DCF4F474ACF5EE7F8C0F8F51D0B1D1F1482E04B57ECD43DC80429",
+      "rows": 379,
+      "TOH-SRC-P220-005_occurrences": 1
+    },
+    "reader": {
+      "revision": "v068c3r18",
+      "build_receipt": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\build.json",
+        "bytes": 32685,
+        "sha256": "287CF9B793BE34598878AD63546B081C27ACEE10C722AF82FBDE03251C92EADB",
+        "status": "PASS"
+      },
+      "qa_receipt": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\qa\\v68r40\\check.json",
+        "bytes": 10374,
+        "sha256": "9969A37D8CDDE716A29C03EF268C5394A13F967BD4C706A0EB8F59CA9695769F",
+        "status": "PASS"
+      },
+      "structural_receipt": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\qa\\v68r40\\structural.json",
+        "bytes": 13015,
+        "sha256": "352C82546CA0E6110267718F5DCC413CCC5099C70B7ACFD4764A2A8EAD664A00"
+      },
+      "page_inventory": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\qa\\v68r40\\page-inventory.csv",
+        "bytes": 28257,
+        "sha256": "CFCBD2BBF9DCCBCFA8C36B802D5266DEB84990E90130A01A06C61AFE90C32AEE",
+        "rows": 388
+      },
+      "english_pdf": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\output\\pdf\\en-p119-221-v068c3r18.pdf",
+        "bytes": 1381057,
+        "sha256": "58A7F14A50D92CA0EAF9EEC04CE3399D4282144FF618C4887318C962CC9A5DB9",
+        "pages": 90
+      },
+      "corrected_french_pdf": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\output\\pdf\\fr-p119-221-v068c3r18.pdf",
+        "bytes": 1417469,
+        "sha256": "24EA55FFA0CA94CBD089053B5A0BA2495E2553F798561DB059E77D4F6F724429",
+        "pages": 94
+      },
+      "staged_source_manifest": {
+        "rows": 543,
+        "total_file_bytes": 11855901,
+        "manifest_bytes": 62845,
+        "sha256": "F69327761FFFD393108E352EB8C7E86C7C992720FF20E703BBE6EAB990CFAE6E"
+      },
+      "visual_gate": "Every successor page containing p.220 plus both adjacent source seams was inspected; all 13 predecessor/successor comparison rasters passed."
+    }
+  },
+  "semantic_audit": {
+    "status": "STRICT_REPLAY_PASS",
+    "generation": "sem/r19",
+    "binding_state": "local_unpublished",
+    "validation": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\validation.json",
+      "bytes": 5946,
+      "sha256": "61D05C5E62515F097CDF098412CD93B394CE8F9A9C616943DCB1B1AB7C4302B1",
+      "status": "PASS"
+    },
+    "manifest": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\manifest.json",
+      "bytes": 36480,
+      "sha256": "CED21E8761F781885600C609683DAA2110232012EEF742C657386655CBC4FAC6"
+    },
+    "replay_tool": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\tools\\replay_sem_r19.py",
+      "bytes": 7862,
+      "sha256": "A210D0339252E36943A983FA879BD0DA720F877ADB7AD14A99400A81267B7787",
+      "result": "STRICT_REPLAY_PASS"
+    },
+    "payload_surface": {
+      "files": 16,
+      "bytes": 2018791,
+      "aggregate_manifest_bytes": 1297,
+      "aggregate_sha256": "A0BC270B0F26F9E8E26515FCDDE49E5BBEEEE3D6A370CBEAD275B727A1D6497F"
+    },
+    "complete_surface": {
+      "files": 18,
+      "bytes": 2061217,
+      "aggregate_manifest_bytes": 1468,
+      "aggregate_sha256": "58DEFA91A60771FB427AB152394CA5BB0D9B289F632F735FD4BE0E68361B649F"
+    },
+    "counts": {
+      "source_target_occurrences": 1036,
+      "source_logical_ids": 951,
+      "derived_term_nodes": 40,
+      "merged_nodes": 991,
+      "physical_page_rows": 103,
+      "identity_aliases": 2,
+      "edges": 1479,
+      "reference_candidates": 440,
+      "resolved_reference_candidates": 440,
+      "open_reference_candidates": 0,
+      "reference_adjudications": 12,
+      "inherited_residuals_closed": 34,
+      "open_residuals": 0,
+      "bibliography_entries": 22,
+      "future_conversion_concepts": 35,
+      "cross_work_candidates_held": 6,
+      "term_rows": 909,
+      "mathematical_objects": 234,
+      "subject_rows": 17,
+      "catalog_rows": 1
+    },
+    "changed_tables": {
+      "catalog.csv": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\catalog.csv",
+        "rows": 1,
+        "bytes": 772,
+        "sha256": "FC0D201FB3BE414D132EC10ED4D00FF2DE16B6F2C90BEADF72213B597113AA20",
+        "delta": "six existing fields: French/English reader paths and hashes, version, and page_state"
+      },
+      "nodes.csv": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\nodes.csv",
+        "rows": 991,
+        "bytes": 585600,
+        "sha256": "301172BC3D1DD0D4D518E14B96C6E24A380060F31A09987AAE8EC74812DC80A0",
+        "delta": "one existing terminal p.220 node: fr_label, en_label, and provenance"
+      },
+      "occ.csv": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\occ.csv",
+        "rows": 1036,
+        "bytes": 515084,
+        "sha256": "2F657244FB211F4B5680DFDFC247167BCFD3C011F622930CC409872DEF3370BB",
+        "delta": "tohoku:occ:p220:o018 only: decision_path, fr_sha256, and en_sha256"
+      },
+      "refs.csv": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\refs.csv",
+        "rows": 440,
+        "bytes": 161519,
+        "sha256": "2BB0DC3356C0C4B18E82F7C168334D450DF541586EE89F94FB254C3296ACDE3D",
+        "appended_ids": [
+          "TOH-RC-INT-0336",
+          "TOH-RC-INT-0337",
+          "TOH-RC-INT-0338",
+          "TOH-RC-INT-0339"
+        ]
+      },
+      "edges.csv": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\sem\\r19\\edges.csv",
+        "rows": 1479,
+        "bytes": 261660,
+        "sha256": "5B924BF4E9D0E7CAFF51D3C75D0C85045E985AE21152744ABD38929A87E622D5",
+        "appended_ids": [
+          "TOH-E-01507",
+          "TOH-E-01508",
+          "TOH-E-01509",
+          "TOH-E-01510"
+        ]
+      }
+    },
+    "delta_contract": {
+      "changed_table_count": 5,
+      "changed_existing_field_count": 12,
+      "appended_row_count": 8,
+      "unchanged_table_count": 10,
+      "new_nodes": 0,
+      "new_occurrences": 0,
+      "new_layer_targets": 0,
+      "layer_target_count": 18,
+      "all_991_predecessor_node_ids_reused": true,
+      "all_1036_predecessor_occurrence_ids_reused": true,
+      "all_436_predecessor_reference_ids_reused": true,
+      "all_1475_predecessor_edge_ids_reused": true,
+      "terminal_segments": {
+        "diplomatic": {
+          "bytes": 267,
+          "sha256": "C9BAD3A4913D3D32012BB505403559A653104CFCF3A19E062C396D8BAB566CF5",
+          "unchanged": true
+        },
+        "corrected_french": {
+          "bytes": 924,
+          "sha256": "3847D810F95F64685E761130CCDE0DAE81110A95A20378F442EBBB5465169EDA"
+        },
+        "english": {
+          "bytes": 824,
+          "sha256": "2B2D3B29E9969CF4B74B0EB73F16AC85E88E2CA2EC64EF0F6FA222B3BFB3A4B6"
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "predecessor_audit": {
+      "path": "user\\Documents\\stacks-ftg\\D1009_CHECK.json",
+      "bytes": 16871,
+      "sha256": "B23A19372E6F055FE2D24FB59B89689651697CFAE1AC77B3878D4CADF2827E80"
+    },
+    "reviewed_candidate": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_block_candidate.tex",
+      "lines": 393,
+      "bytes": 15171,
+      "sha256": "EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4"
+    },
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "lines": 24001,
+      "bytes": 884397,
+      "sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914",
+      "predecessor_bytes": 869226,
+      "predecessor_sha256": "31E9F1607073933C2159AE5D1595A451CB298FFD3BB9E006B4DB28B7B5CD48D0",
+      "inserted_lines": [
+        19936,
+        20328
+      ],
+      "candidate_byte_sequence_occurrences": 1,
+      "candidate_and_live_line_arrays_identical": true,
+      "remove_exact_candidate_reconstructs_predecessor": true,
+      "incoming_seam": "preceding end{remark} at line 19934",
+      "outgoing_seam": "following section{Ext with support} at line 20330"
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.aux",
+      "bytes": 55054,
+      "sha256": "5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7"
+    },
+    "out": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.out",
+      "bytes": 12488,
+      "sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"
+    },
+    "toc": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.toc",
+      "bytes": 5477,
+      "sha256": "FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.log",
+      "bytes": 47435,
+      "sha256": "99E4DF956F8ED3304F9FEAE4EE72FED8733FB996B19EC26069045BD81EFA2AB0"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+      "bytes": 1934650,
+      "sha256": "209BF500D3F352EDDE4527879638941164841A14EB76E30B098D897638BA5B64",
+      "pages": 231,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_labels": [
+    "\\newlabel{lemma-equivariant-support-filtered-extension-by-zero}{{46.5}{192}{Filtered extension by zero for equivariant supports}{subsection.46.5}{}}",
+    "\\newlabel{equation-equivariant-support-extension-zero-acyclic}{{46.5.1}{192}{Filtered extension by zero for equivariant supports}{equation.46.5.1}{}}",
+    "\\newlabel{equation-equivariant-support-sections-colimit}{{46.5.2}{193}{Equivariant cohomology with supports}{equation.46.5.2}{}}",
+    "\\newlabel{equation-equivariant-support-derived-extension-zero}{{46.5.3}{193}{Equivariant cohomology with supports}{equation.46.5.3}{}}",
+    "\\newlabel{equation-equivariant-support-ordinary-all-opens-colimit}{{46.5.4}{193}{Equivariant cohomology with supports}{equation.46.5.4}{}}",
+    "\\newlabel{lemma-equivariant-support-filtered-second-spectral-sequence}{{46.6}{194}{Filtered second spectral sequence with supports}{subsection.46.6}{}}",
+    "\\newlabel{equation-equivariant-support-filtered-second-spectral-sequence}{{46.6.1}{194}{Filtered second spectral sequence with supports}{equation.46.6.1}{}}",
+    "\\newlabel{equation-equivariant-support-usual-second-page}{{46.6.2}{194}{Filtered second spectral sequence with supports}{equation.46.6.2}{}}",
+    "\\newlabel{equation-equivariant-support-local-second-spectral-sequence}{{46.6.3}{194}{Equivariant cohomology with supports}{equation.46.6.3}{}}",
+    "\\newlabel{equation-equivariant-support-group-colimit-comparison}{{46.6.4}{195}{Equivariant cohomology with supports}{equation.46.6.4}{}}",
+    "\\newlabel{equation-equivariant-support-group-universal-coefficient}{{46.6.5}{195}{Equivariant cohomology with supports}{equation.46.6.5}{}}"
+  ],
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The neighbourhood hypothesis is used only for the degree-zero supported-section union.",
+      "The derived extension-by-zero comparison separately assumes that each eligible exact extension-by-zero functor sends injective abelian G-sheaves to Gamma_X^G-acyclic objects.",
+      "The ordinary supported-cohomology comparison separately assumes that Phi is paracompactifying.",
+      "The filtered first-quadrant spectral sequences are functorial from E_2 onward and have finite abutment filtrations.",
+      "For finite G, a finite-rank bar resolution proves commutation with filtered colimits.",
+      "For trivial actions with finitely generated integral group homology, universal coefficients and Ext commuting with filtered colimits prove the comparison.",
+      "The essentially constant alternative is imposed degreewise on a cofinal subsystem.",
+      "None of the three group-cohomology criteria is used to infer extension-by-zero acyclicity or paracompactifying supports."
+    ],
+    "mapping_classification_review": "STRICT_PASS",
+    "source_reader_semantic_binding_review": "STRICT_PASS",
+    "root_receipt_replay": "STRICT_PASS"
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.29 (MiKTeX 26.5)",
+    "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cohomology.tex",
+    "passes": 4,
+    "fixed_point_pass": 4,
+    "fixed_point_before_after": {
+      "cohomology.aux": {
+        "bytes": 55054,
+        "before_sha256": "5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7",
+        "after_sha256": "5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7"
+      },
+      "cohomology.out": {
+        "bytes": 12488,
+        "before_sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD",
+        "after_sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"
+      },
+      "cohomology.toc": {
+        "bytes": 5477,
+        "before_sha256": "FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564",
+        "after_sha256": "FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564"
+      }
+    },
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "multiply_defined_labels": 0,
+    "new_block_box_diagnostics": 0,
+    "out_of_block_overfull_diagnostics": 34,
+    "out_of_block_underfull_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_parser": "pypdf 6.12.2 PdfReader(strict=True), every page content stream, text extraction, media box, rotation, and cross-reference object inspected",
+    "xref_objects_swept": 4176,
+    "strict_pages_parsed": 231,
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 4383593,
+    "extracted_text_characters": 505124,
+    "uniform_media_and_crop_boxes": true,
+    "uniform_rotation": true,
+    "poppler_full_text_interpretation": {
+      "status": "PASS",
+      "bytes": 591314,
+      "sha256": "80C839E673838D3B81D3B52951D78517B271EE8BBD57368E7687C051AA8766EB"
+    },
+    "visual_pages": [
+      191,
+      192,
+      193,
+      194,
+      195,
+      196
+    ],
+    "visual_renders": [
+      {
+        "page": 191,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-191.png",
+        "bytes": 297879,
+        "sha256": "5A3446952368627C293091AD96F25112BE7A5B1C58816635B57F53004E4B9B47"
+      },
+      {
+        "page": 192,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-192.png",
+        "bytes": 302421,
+        "sha256": "B3D62A011C7E8335AE1DF60CEE7C2E42456527CC77E1F5203FD89F807A08898F"
+      },
+      {
+        "page": 193,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-193.png",
+        "bytes": 274940,
+        "sha256": "065A78EC47FCBFD053A0FFDB2FB9960F6EBF4BEAAC31EFA9A65C4956D719B925"
+      },
+      {
+        "page": 194,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-194.png",
+        "bytes": 319546,
+        "sha256": "6CA6837D8B545C7CF1F658F1BBCBE0610AEE4E57C742236F54471426718EA9CC"
+      },
+      {
+        "page": 195,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-195.png",
+        "bytes": 319959,
+        "sha256": "D2C88DB263F40B5DE2F54C072692CD1A7CD3053726280664987864D6229AE3A5"
+      },
+      {
+        "page": 196,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-196.png",
+        "bytes": 317148,
+        "sha256": "824151FFD4E5B8E91CE434D39D4B30E3A8DF0EEDA7BFA62BA5D16C2D11FA5AC6"
+      }
+    ],
+    "visual_result": "Pages 191--196 were inspected. The incoming obstruction seam, complete two-lemma D1010 block, extension-by-zero and spectral-sequence displays, all three interchange cases, proof endings, outgoing Ext-with-support seam, typography, margins, headers, page numbers, links, and mathematical glyphs render cleanly without clipping, overlap, crowding, malformed symbols, or a bad page break."
+  },
+  "scanner_audit": {
+    "status": "STRICT_PASS",
+    "bounded_scan_path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan",
+    "deterministic_replay_identical": true,
+    "counts": {
+      "labels": 22080,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topics": 13,
+      "warnings": 652,
+      "errors": 0
+    },
+    "outputs": {
+      "stx.csv": {
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan\\stx.csv",
+        "bytes": 5281636,
+        "sha256": "A6A16E837DF3B59C348CB88348FA9FC88F6C0703B78AF97FBACFA7B8254CFEC1"
+      },
+      "tcand.csv": {
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan\\tcand.csv",
+        "bytes": 489206,
+        "sha256": "C07DE868C2A467B75DB00C31DE10A6AE5C1AD5F71D629641CF1840B151FDB22A"
+      },
+      "tmap.csv": {
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan\\tmap.csv",
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "check.json": {
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan\\check.json",
+        "bytes": 80068,
+        "sha256": "648438CCAB8D80F28B80E36BFA44378A1655AAB51CD4B0EE347CBA6B2121459B"
+      }
+    },
+    "delta_from_d1009": {
+      "new_labels": 11,
+      "removed_labels": 0,
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "stx_bytes": 3460,
+      "candidate_additions": 21,
+      "candidate_cap_evictions": 10,
+      "candidate_net_rows": 11,
+      "candidate_rows_line_number_only": 15,
+      "tmap_byte_identical": true,
+      "warning_delta": 11,
+      "changed_tex_files": [
+        "cohomology.tex"
+      ]
+    },
+    "new_label_rows": [
+      {
+        "full_label": "cohomology-lemma-equivariant-support-filtered-extension-by-zero",
+        "line": 19937,
+        "kind": "lemma",
+        "text_sha256": "34E2430BA0DD759FB7D021AF71A698D811D1A6A605C64A3FECBCA621306D883D"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-extension-zero-acyclic",
+        "line": 19996,
+        "kind": "equation",
+        "text_sha256": "C29960585391A146B3D63420BB620AEB54FB37283A81650A9C782F7D9E77AC8E"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-sections-colimit",
+        "line": 20060,
+        "kind": "equation",
+        "text_sha256": "5A1A8AE0D0A6F3B95A5D4B007D9CA25851B48E1BFDF7B882F47C435C37039324"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-derived-extension-zero",
+        "line": 20095,
+        "kind": "equation",
+        "text_sha256": "54A2E8C7A63335EB01593692666C02C8D330976D1F46E2D204DF91B718911F34"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-ordinary-all-opens-colimit",
+        "line": 20120,
+        "kind": "equation",
+        "text_sha256": "A75AA3C440E30AC6D2382CA40398B507AF014FA519EAFF514A9CE4465A97C904"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "line": 20151,
+        "kind": "lemma",
+        "text_sha256": "20C7D480F9FE49259451C3834F95C0BD67D829DFD94408851487CE406F1E32AD"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-filtered-second-spectral-sequence",
+        "line": 20174,
+        "kind": "equation",
+        "text_sha256": "A8FF2A5222DBA8794D4CD2547A6410BD10801E80335AF6566CEE7439DC293F1F"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-usual-second-page",
+        "line": 20189,
+        "kind": "equation",
+        "text_sha256": "FED0CEC9634B0E815C2D7FC117328F3722B06BCC8DBCF613A28AEE7622FAD8A4"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-local-second-spectral-sequence",
+        "line": 20214,
+        "kind": "equation",
+        "text_sha256": "15D6305D783336D0A8369908146B12FFC1350D49E26E34CD47732596F6688124"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-group-colimit-comparison",
+        "line": 20275,
+        "kind": "equation",
+        "text_sha256": "48CB4596A8D2584607F0851345EC769C4D18F3A407B1629B5B65067DC7DBB6AD"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-group-universal-coefficient",
+        "line": 20292,
+        "kind": "equation",
+        "text_sha256": "CCDC500BBD8B61DF13972F8BBF28C749D19B73361DC1CDB3A66582364A6F8BAA"
+      }
+    ]
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "authority": "Direct user report: the account was suspended after VPN use and a support ticket is filed.",
+      "effect": "No GitHub inspection, synchronization, push, or publication was attempted. This does not block the local D1010 audit or a separately validated local r53 successor."
+    }
+  },
+  "nonclaims": [
+    "D1010 is restricted to abelian G-sheaves and makes no module-valued extension over a general equivariant sheaf of rings.",
+    "The neighbourhood hypothesis on Psi proves the degree-zero supported-section colimit but does not by itself imply the derived formula (5.7.6).",
+    "Exactness of extension by zero does not by itself imply Gamma_X^G-acyclicity of the extension-by-zero terms of an injective G-sheaf.",
+    "The derived identification colim_U H^n(X;G,A_U)=H^n_Phi(X;G,A) is claimed only under the explicit extension-by-zero acyclicity hypothesis.",
+    "The ordinary identification colim_U H^q(X,A_U)=H^q_Phi(X,A), and hence the usual E_2-page H^p(G,H^q_Phi(X,A)), is claimed only when Phi is paracompactifying.",
+    "The finite-group, trivial-action plus finitely generated group-homology, and essentially-constant-system conditions are alternative sufficient criteria only for commuting group cohomology with the filtered colimit; none supplies extension-by-zero acyclicity or paracompactifying supports.",
+    "The essentially constant criterion is asserted separately for each q on a cofinal subsystem and is not a claim that the original sheaf system is constant.",
+    "Functoriality of the filtered second spectral sequence is claimed from the E_2-page onward, not from an unconstructed E_1-page.",
+    "No official Stacks tag is claimed for either decision target or for any of the eleven new D1010 local labels.",
+    "I000030 records and controls the source's missing hypotheses; its resolved status does not mean that those hypotheses appeared in the printed source.",
+    "No mapping promotion, issue-ledger mutation, Git operation, GitHub action, release, publication, remote-freshness check, or whole-paper completion is claimed by the D1010 audit receipt."
+  ],
+  "errors": []
+}

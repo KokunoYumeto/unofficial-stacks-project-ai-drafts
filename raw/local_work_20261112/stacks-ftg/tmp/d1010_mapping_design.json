@@ -1,0 +1,144 @@
+{
+  "schema": "tohoku-stacks-d1010-mapping-design-v1",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1010",
+  "predecessor": {
+    "dossier": "tohoku_r52",
+    "receipt_bytes": 26245,
+    "receipt_sha256": "D8E8D6EE5C83ABE8B3ADA89AF34F19EFD5F4BC66B69052280C9B3BBDFEAF3438",
+    "decisions": 1023,
+    "source_issues": 29,
+    "remaining_gap_class_dispositions": 42
+  },
+  "planned_successor": "tohoku_r53",
+  "decision_csv_schema": [
+    "decision_id",
+    "unit_id",
+    "action",
+    "disposition",
+    "stacks_labels",
+    "rationale",
+    "review_state",
+    "supersedes"
+  ],
+  "planned_decisions": [
+    {
+      "decision_id": "D001024",
+      "unit_id": "tohoku:construction:extension-by-zero-support-limit",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero",
+      "rationale": "Stacks now proves the directed extension-by-zero presentation of supported invariant sections for abelian G-sheaves. Its derived colimit comparison is asserted only under the separately stated Gamma_X^G-acyclicity condition for extension by zero, and its ordinary supported-cohomology comparison additionally assumes that Phi is paracompactifying; neither extra condition is inferred from the neighbourhood hypothesis.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000585"
+    },
+    {
+      "decision_id": "D001025",
+      "unit_id": "tohoku:spectral-sequence:ii-a-u",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+      "rationale": "Stacks now constructs the additive first-quadrant filtered second spectral sequence for abelian G-sheaves, with the displayed colimit E_2-page and finite abutment filtration. The abutment identification uses the explicit extension-by-zero acyclicity condition; the usual H^p(G,H^q_Phi) page additionally requires Phi to be paracompactifying and one of the three alternative interchange criteria.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000648"
+    },
+    {
+      "decision_id": "D001026",
+      "unit_id": "tohoku:construction:inductive-system-of-spectral-sequences",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+      "rationale": "Stacks now constructs the compatible directed system from the E_2-pages onward, takes exact filtered colimits pagewise, proves stabilization and finite convergence, and identifies the abutment through the preceding conditional extension-by-zero comparison. It does not assert an unconditional second Grothendieck spectral sequence.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000587"
+    },
+    {
+      "decision_id": "D001027",
+      "unit_id": "tohoku:comparison:cohomology-and-filtered-limit",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+      "rationale": "Stacks now proves the comparison colim_U H^p(G,M_U^q) to H^p(G,colim_U M_U^q) under each of the source's three alternative criteria: finite G; trivial actions with every H_r(G,Z) finitely generated; or an essentially constant cofinal subsystem. The resulting usual E_2-page still assumes that Phi is paracompactifying and retains the standing extension-by-zero acyclicity hypothesis.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000568"
+    }
+  ],
+  "canonical_decision_rows": {
+    "encoding": "json.dumps(rows,ensure_ascii=True,sort_keys=True,separators=(',',':'))",
+    "bytes": 2852,
+    "sha256": "7166D021F6B01A9FFDEE2CD47907C34FF98640D49D2F7FD9E6B1AAA8A556643C",
+    "csv_suffix_bytes": 2375,
+    "csv_suffix_sha256": "356F82A3CC0B582CE40042D29D429B5292C556F5D9328E1375639FC522EA6085",
+    "expected_dec_csv_bytes": 375251,
+    "expected_dec_csv_sha256": "84639B0A99BDDC58980FEEA5E221D249B3B898956DA79F4D41DEFE79297C71D9",
+    "expected_map_csv_bytes": 479894,
+    "expected_map_csv_sha256": "7BF8C6794D743ACE1334F5979B820E955C70C14537F0B00A0E6A679376668BAE"
+  },
+  "planned_issue_append": {
+    "issue_id": "I000030",
+    "unit_id": "tohoku:construction:extension-by-zero-support-limit",
+    "status": "resolved",
+    "kind": "source_missing_derived_functor_hypotheses",
+    "claim": "The p. 220 passage passes from the degree-zero supported-section colimit to the derived formula (5.7.6) under only the neighbourhood condition on Psi, and later identifies colim_U H^q(X,A_U) with H^q_Phi(X,A). The first derived identification additionally requires Gamma_X^G-acyclicity of extension by zero on injective G-sheaves, while the ordinary supported-cohomology identification requires Phi to be paracompactifying; the three subsequent group-cohomology criteria supply neither hypothesis.",
+    "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero;cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+    "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 220, formulae (5.7.5)--(5.7.7 bis), states the neighbourhood condition before passing from the section colimit to (5.7.6) and later invokes the ordinary supported-cohomology colimit. The exact D1010 formalization block, 15171 bytes, SHA-256 EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4, separates Gamma_X^G-acyclicity of I_U for injective G-sheaves from the paracompactifying hypothesis on Phi and proves that conditions (a)--(c) concern only group-cohomology/filtered-colimit interchange.",
+    "control": "Preserve the printed wording diplomatically. In corrected exposition and formalization, state the extension-by-zero acyclicity requirement for (5.7.6), state the paracompactifying requirement for the ordinary supported-cohomology comparison, and identify (a)--(c) as alternative criteria only for commuting group cohomology with the filtered colimit. D001024 resolves the missing-hypotheses issue; D001025--D001027 resolve the downstream spectral-sequence and interchange gaps without weakening either gate.",
+    "resolution_decision": "D001024",
+    "predecessor_rows": 29,
+    "postsuccessor_rows": 30,
+    "csv_suffix_bytes": 1878,
+    "csv_suffix_sha256": "EB1C26F293F662C1CF6728036789D6436C4075DF81BF1445887F5886C07E8CD1",
+    "expected_issues_csv_bytes": 31413,
+    "expected_issues_csv_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503"
+  },
+  "expected_postsuccessor_counts": {
+    "active_graph_corrections": 0,
+    "active_source_issues": 0,
+    "candidate_units": 0,
+    "decided_units": 679,
+    "decisions": 1027,
+    "dispositions": {
+      "example_or_remark": 84,
+      "existing_equivalent": 371,
+      "existing_stronger": 41,
+      "existing_weaker": 6,
+      "extend_existing": 16,
+      "historical_reference": 33,
+      "new_section": 5,
+      "new_statement": 11,
+      "structural_only": 424
+    },
+    "graph_corrections": 0,
+    "review_units": 0,
+    "source_issues": 30,
+    "unit_candidates": 0,
+    "units": 991,
+    "remaining_gap_class_dispositions": 38
+  },
+  "expected_map_delta": {
+    "changed_units": 4,
+    "unchanged_units": 987,
+    "changed_fields_per_unit": [
+      "decision_id",
+      "disposition",
+      "rationale",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags"
+    ]
+  },
+  "classification_reason": "The two D1010 lemmas formalize the p. 220 filtered extension-by-zero and second-spectral-sequence block for abelian G-sheaves. The first separates the degree-zero consequence of the neighbourhood hypothesis from the additional extension-by-zero acyclicity and paracompactifying gates. The second constructs the compatible filtered spectral sequence and proves the three source criteria as alternative conditions only for group-cohomology/filtered-colimit interchange. At exactly this conditional scope, the four previously gap-classified units become existing_equivalent.",
+  "nonclaims": [
+    "D1010 is restricted to abelian G-sheaves and makes no module-valued extension over a general equivariant sheaf of rings.",
+    "The neighbourhood hypothesis on Psi proves the degree-zero supported-section colimit but does not by itself imply the derived formula (5.7.6).",
+    "Exactness of extension by zero does not by itself imply Gamma_X^G-acyclicity of the extension-by-zero terms of an injective G-sheaf.",
+    "The derived identification colim_U H^n(X;G,A_U)=H^n_Phi(X;G,A) is claimed only under the explicit extension-by-zero acyclicity hypothesis.",
+    "The ordinary identification colim_U H^q(X,A_U)=H^q_Phi(X,A), and hence the usual E_2-page H^p(G,H^q_Phi(X,A)), is claimed only when Phi is paracompactifying.",
+    "The finite-group, trivial-action plus finitely generated group-homology, and essentially-constant-system conditions are alternative sufficient criteria only for commuting group cohomology with the filtered colimit; none supplies extension-by-zero acyclicity or paracompactifying supports.",
+    "The essentially constant criterion is asserted separately for each q on a cofinal subsystem and is not a claim that the original sheaf system is constant.",
+    "Functoriality of the filtered second spectral sequence is claimed from the E_2-page onward, not from an unconstructed E_1-page.",
+    "No official Stacks tag is claimed for either decision target or for any of the eleven new D1010 local labels.",
+    "I000030 records and controls the source's missing hypotheses; its resolved status does not mean that those hypotheses appeared in the printed source.",
+    "No mapping promotion, issue-ledger mutation, Git operation, GitHub action, release, publication, remote-freshness check, or whole-paper completion is claimed by the D1010 audit receipt."
+  ]
+}

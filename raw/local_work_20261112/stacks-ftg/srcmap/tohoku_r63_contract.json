@@ -1,0 +1,142 @@
+{
+  "schema": "tohoku-r63-transaction-contract-v1",
+  "contract_id": "D1019-r63-D001043-v1",
+  "purpose": "No-overwrite D1019 mapping successor from sealed tohoku_r62 after exact live-source, bibliography, PDF, audit, and scanner admission.",
+  "script": {
+    "path": "srcmap/build_tohoku_r63.py",
+    "bytes": 40798,
+    "sha256": "1E9A7181BC25D5797794D80EB68D63150AE9C5673EDE666A3A082F358DA46CF4"
+  },
+  "engine": {
+    "path": "srcmap/build_tohoku_r62.py",
+    "bytes": 31929,
+    "sha256": "4283B6FBFE10BF5189C9B6B654467448E0A2F044FA60BCF27F6737C6E96C8D79"
+  },
+  "predecessor": {
+    "path": "tohoku_r62/r62-check.json",
+    "bytes": 9694,
+    "sha256": "1477CC18698FEEE1CA390319C1771447FA36C38261429F0644FE11978A2EFC73"
+  },
+  "frozen_prerequisite": {
+    "path": "D1019_CHECK.json",
+    "bytes": 12205,
+    "sha256": "1E22CCF026626318F4CC97CC1E186F6A3633055B5F82A085AA52D5E37F888E07"
+  },
+  "bound_inputs": {
+    "audit": {
+      "path": "D1019_CHECK.json",
+      "bytes": 12205,
+      "sha256": "1E22CCF026626318F4CC97CC1E186F6A3633055B5F82A085AA52D5E37F888E07"
+    },
+    "candidate": {
+      "path": "tmp/d1019_analytic_descent_candidate.tex",
+      "bytes": 3303,
+      "sha256": "497B3D12B59EB8DF3D77B0FF6BA4161A20B1D450E735C63CD47A381A700C943A"
+    },
+    "design": {
+      "path": "tmp/d1019_analytic_descent_design.json",
+      "bytes": 8307,
+      "sha256": "86599B850BCE94517AB47464B22EC9364D9F6D4C2B20978DBFAA1CCC4221FB3B"
+    },
+    "review": {
+      "path": "tmp/d1019_independent_review_r2.json",
+      "bytes": 2648,
+      "sha256": "EFF3B1F16662DABCD9F5F65F7E40BC3644BDB80872351C64C44099EC0ACE662F"
+    },
+    "cohomology_tex": {
+      "path": "cohomology.tex",
+      "bytes": 922413,
+      "sha256": "AEC4A47B15E55D4BB99267EE03E961FB1288E69F8911A13310C59DA81354653F"
+    },
+    "bibliography": {
+      "path": "my.bib",
+      "bytes": 220625,
+      "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE"
+    },
+    "cohomology_pdf": {
+      "path": "cohomology.pdf",
+      "bytes": 2013727,
+      "sha256": "167DFFEA7D1B9009B0672714150BE613A9F1C1E5FF5207EBB6C68EF0E67B3EC6"
+    }
+  },
+  "scanner_probe": {
+    "oracle_path": "tmp/d1019_scan_probe_r1",
+    "replay_path": "tmp/d1019_scan_probe_replay_r1",
+    "files": {
+      "cfg.json": {
+        "bytes": 5151,
+        "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+      },
+      "check.json": {
+        "bytes": 82761,
+        "sha256": "57643A9EE276EC4ABE1ECD8955E4FAC84FFB52504CBA0C5D60992986811F0726"
+      },
+      "stx.csv": {
+        "bytes": 5288027,
+        "sha256": "681364D9AFF58762102B89B5DFA018A3D38F8012C59DFA33544DBF7DC94B7542"
+      },
+      "tcand.csv": {
+        "bytes": 489256,
+        "sha256": "00D7DA1CBFFE74EC58F7149CB9EB335FF6CE1DBA05BED1EEFCED9921D5047101"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "topics.csv": {
+        "bytes": 2453,
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      }
+    },
+    "counts": {
+      "labels": 22104,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 676,
+      "errors": 0
+    }
+  },
+  "decision": {
+    "decision_id": "D001043",
+    "unit_id": "tohoku:descent:discontinuous-action-characteristic-zero",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-orbit-space-equivariant-cohomology-stabilizer-orders;cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "official_tags": "",
+    "rationale": "Stacks now proves the characteristic-zero quotient-cohomology comparison for a discontinuous action by the stabilizer-order criterion, and the analytic quotient lemma proves that invariant direct image preserves coherence for coherent analytic modules. Together these give H^1(X;G,L)=H^1(Y,L^G) and coherence of L^G, including O(E^vee tensor F)^G, exactly as in the source. No categorical descent for nontrivial stabilizers, GAGA, compactness, or finite-dimensionality claim is made.",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000613"
+  },
+  "projected_counts": {
+    "decisions": 1043,
+    "decided_units": 679,
+    "issues": 32,
+    "active_issues": 0,
+    "existing_equivalent": 386,
+    "new_statement": 5,
+    "remaining_gap_class_dispositions": 23,
+    "source_repairs_appended": 0,
+    "mapping_closures": 1,
+    "changed_map_rows": 1
+  },
+  "target": "tohoku_r63",
+  "transaction": {
+    "source": "tohoku_r62",
+    "stage": ".tohoku-r63-txn",
+    "no_overwrite": true,
+    "atomic_directory_rename": true,
+    "post_promotion_replay": true
+  },
+  "write_boundary": [
+    ".tohoku-r63-txn",
+    "tohoku_r63"
+  ],
+  "external_constraints": {
+    "git": "GitHub availability was restored by direct user update; this bounded local transaction requires no Git or GitHub operation."
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "tohoku-stacks-d1028-independent-review-v1",
+  "formalization_id": "D1028",
+  "review_round": 1,
+  "reviewed_utc": "2026-08-24T06:59:17Z",
+  "verdict": "STRICT_PASS",
+  "live_tex_edited": false,
+  "build_performed": false,
+  "mapping_mutated": false,
+  "inputs": {
+    "candidate": {
+      "path": "tmp/d1028_coherent_equivariant_extensions_candidate.tex",
+      "bytes": 2708,
+      "sha256": "77F46B392C42FF7A6C5537F785FF3460907BFC155EB423321F7BA05495CF7509",
+      "identity_check": "PASS"
+    },
+    "design": {
+      "path": "tmp/d1028_coherent_equivariant_extensions_design.json",
+      "bytes": 7321,
+      "sha256": "57B79BE0C651531A20CE0BE6F6DEFC234CD4259131B580C358912B41D6BB8AF8",
+      "json_parse_check": "PASS",
+      "identity_check": "PASS"
+    }
+  },
+  "source_identity": {
+    "unit_id": "tohoku:classification:coherent-extension-classes",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:92",
+    "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+    "semantic_file_bytes": 585012,
+    "semantic_file_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+    "semantic_row_bytes_with_lf": 822,
+    "semantic_row_sha256_with_lf": "B2E2C583588D83239FD55866C394677F9A7B0A3EA866C43F22DC85CB9455670D",
+    "occurrence_id": "tohoku:occ:p219:o002",
+    "occurrence_locator": "sem/r18/occ.csv:983",
+    "occurrence_row_bytes_with_lf": 540,
+    "occurrence_row_sha256_with_lf": "72BEBE5DC4C18FF0FEF8D1CC28DF4EBD580DDB7B7185F60BDC20C518BCBB2CBE",
+    "aligned_english_sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+    "identity_check": "PASS"
+  },
+  "predecessor_identity": {
+    "decision_id": "D000564",
+    "unit_id": "tohoku:classification:coherent-extension-classes",
+    "dossier": "tohoku_r68",
+    "map_locator": "tohoku_r68/map.csv:92",
+    "map_file_bytes": 487490,
+    "map_file_sha256": "1EDF4CFB722D6EFFC601FA64E1EB3E801BF2C63D8CC973B6467FA68C647E5ED2",
+    "map_row_bytes_with_lf": 612,
+    "map_row_sha256_with_lf": "BAF87171EF9028F9A235082CE738EBCA2027FCC201A6922925BDAE976A497945",
+    "decision_locator": "tohoku_r68/dec.csv:565",
+    "decision_file_bytes": 390012,
+    "decision_file_sha256": "0532BAB5CD37951A0885E841EF4881CBAF6A6F8C4C010F2289AFA1A03BB1DBC6",
+    "decision_row_bytes_with_lf": 415,
+    "decision_row_sha256_with_lf": "814D13B3976F0E2D839F963D319F43B6549B45E0E0D7C8A97CA2E4AF4AC83D39",
+    "predecessor_disposition": "extend_existing",
+    "identity_check": "PASS"
+  },
+  "candidate_label": {
+    "raw": "lemma-coherent-equivariant-analytic-extension-classes",
+    "full": "cohomology-lemma-coherent-equivariant-analytic-extension-classes"
+  },
+  "mathematical_audit": {
+    "source_fidelity": {
+      "status": "PASS",
+      "finding": "The statement exactly covers coherent analytic G-O_X endpoints, coherence of every extension middle term, fixed-endpoint extension classes, Ext^1_{O_X,G}(X;A,B), and the resulting complex vector space structure."
+    },
+    "middle_term_coherence": {
+      "status": "PASS",
+      "finding": "The forgetful functor creates kernels and cokernels, so exactness survives forgetting G. Modules Lemma modules-lemma-coherent-abelian, part (4), explicitly gives the required two-out-of-three coherence conclusion for the underlying O_X-modules."
+    },
+    "yoneda_and_baer": {
+      "status": "PASS",
+      "finding": "For 0 -> B -> M -> A -> 0 the variable order Ext^1(A,B) is correct. Derived Lemma derived-lemma-ext-1 identifies degree-one Ext with fixed-endpoint Yoneda extensions and their Baer group law. The inverse of the canonical comparison arrow in cohomology-lemma-equivariant-ext-properties gives the displayed direction, so no direction mismatch remains."
+    },
+    "complex_vector_space": {
+      "status": "PASS",
+      "finding": "Holomorphic automorphisms fix C, hence scalar multiplication on every G-O_X-module is equivariant. Hom(A,I^bullet) is naturally a complex of complex vector spaces, so H^1 and the equivariant Ext group inherit a natural C-vector-space structure. Naturality in B identifies multiplication by lambda with pushout along lambda id_B."
+    },
+    "citation_dependencies": {
+      "status": "PASS",
+      "resolved_labels": [
+        "modules-lemma-AB5-AB3-star-generator-G-O-modules",
+        "modules-lemma-coherent-abelian",
+        "derived-lemma-ext-1",
+        "cohomology-lemma-equivariant-ext-properties"
+      ],
+      "finding": "All four labels exist and their live statements/proofs supply the exact claims for which they are cited. The enough-injectives input is also present in the proof chain of the equivariant Ext properties lemma."
+    },
+    "overclaim_guards": {
+      "status": "PASS",
+      "finding": "The candidate does not assert compactness, finite dimensionality, discontinuity, quotient descent, invariant-direct-image coherence, bundle classification, GAGA, or higher Ext. Baer compatibility is an intrinsic precision of the Yoneda identification, not an unsupported expansion."
+    }
+  },
+  "design_audit": {
+    "status": "PASS",
+    "finding": "The design records the exact source, predecessor, candidate identities, intended one-label replacement, scope exclusions, placement, and remaining deterministic gates. Its projected mapping supersedes only D000564 and does not conflate the neighboring bundle-extension or compact-quotient units."
+  },
+  "actionable_edits": [],
+  "strict_preinsertion_status": "APPROVED_FOR_R69_PREIMAGE_RECHECK_AND_SINGLE_INSERTION"
+}

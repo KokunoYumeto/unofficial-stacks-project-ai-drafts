@@ -1,0 +1,194 @@
+{
+  "schema": "tohoku-d1022-compact-quotient-ext-finiteness-design-v1",
+  "status": "DRAFT_READY_FOR_INDEPENDENT_REVIEW",
+  "errors": [],
+  "formalization": {
+    "id": "D1022",
+    "unit": "tohoku:finiteness:compact-quotient-extension-classes",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:590",
+    "predecessor": {
+      "dossier": "tohoku_r65",
+      "decision_id": "D000617",
+      "disposition": "new_statement",
+      "stacks_labels": "homology-definition-ext-group;stacks-cohomology-lemma-extension-coherent",
+      "official_tags": "010K;0GRA",
+      "map_row_with_lf": {
+        "physical_line": 590,
+        "bytes": 608,
+        "sha256": "458DE83AF4821C29C07DB5183FA803CE8926232B2775DB848E3C39D77A2D2266"
+      }
+    }
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "printed_page": 219,
+      "authority_pdf_page": 35,
+      "local_witness": 101,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "authority_raster": {
+      "path": "production/p219_r1/qa/src.png",
+      "bytes": 5928647,
+      "sha256": "1B518A5A872E6145F512CCD14CADC31E2D0B075E5AD51DA271ABAC8CC6DCE330"
+    },
+    "focused_crop": {
+      "path": "hi05_compact_5000.png",
+      "bytes": 361849,
+      "sha256": "EF0E7FEB8A9615669623BAD271810DB5ACCCD574A20523B9052B6B604F462827"
+    },
+    "semantic_row_with_lf": {
+      "path": "sem/r18/nodes.csv:590",
+      "bytes": 884,
+      "sha256": "F6CE83C5D2CCE09E88C38E452412C1A47A7918139E5002D7E1F429BFEF941EBA"
+    },
+    "occurrence_row_with_lf": {
+      "path": "sem/r18/occ.csv:989",
+      "occurrence_id": "tohoku:occ:p219:o008",
+      "bytes": 544,
+      "sha256": "ED859ED739F74DC83CC74DB374AE45E6B8A135E08CD7A05CA557F7C2D03F022F"
+    },
+    "layers": {
+      "diplomatic_segment": {
+        "lines": "54--60",
+        "bytes": 394,
+        "sha256": "D95FEF98E467F1E2609142A9F93A6B1EED2111816F8DBDBCC33C501FB0CA56C1"
+      },
+      "corrected_french_segment": {
+        "lines": "54--60",
+        "bytes": 393,
+        "sha256": "86F781806E2410850450B213A02E67F22E6E4765F92D2DE4790E2B1CA2C5B2B8"
+      },
+      "english_segment": {
+        "lines": "51--57",
+        "bytes": 389,
+        "sha256": "50DBA2527159209849CCC0168559EA6133A1F3E903BA1CAFC95256E2C7702D62"
+      }
+    },
+    "claim": [
+      "if the analytic quotient Y=X/G is compact, equivariant holomorphic vector-bundle extension classes of E by F form a finite-dimensional complex vector space",
+      "more generally, for coherent analytic sheaves with operators A and B, Ext^i_{O,G}(X;A,B) is finite-dimensional for every i"
+    ],
+    "repair_status": "No new repair. Existing admitted correction TOH-P219-COR-001 changes diplomatic `Y est compacte` to corrected `Y est compact`; the English is faithful."
+  },
+  "coverage_audit": {
+    "current_positive_labels": [
+      {
+        "label": "homology-definition-ext-group",
+        "tag": "010K",
+        "text_sha256": "3DF5C0A0921FB64B09C93041E7FEC1ADCA35C8F2D8A3B1BFFC95C42C6B11111E",
+        "verdict": "abstract degree-one Ext definition only"
+      },
+      {
+        "label": "stacks-cohomology-lemma-extension-coherent",
+        "tag": "0GRA",
+        "text_sha256": "0A364B37F0C0486600B387313908A202DE23CA84B3162C9BADF095E452430EEF",
+        "verdict": "coherent extensions on locally Noetherian algebraic stacks, not compact analytic finiteness"
+      }
+    ],
+    "existing_bridges": [
+      "cohomology-lemma-equivariant-ext-spectral-sequences",
+      "cohomology-lemma-equivariant-sheaf-ext-spectral-sequence",
+      "cohomology-lemma-equivariant-underlying-ext",
+      "cohomology-lemma-equivariant-extension-classes-finite-locally-free",
+      "cohomology-lemma-orbit-space-equivariant-cohomology-stabilizer-orders",
+      "cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+      "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+      "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules"
+    ],
+    "missing_inputs": [
+      "finite-dimensional coherent analytic cohomology on a compact complex analytic space",
+      "coherence of ordinary analytic sheaf Ext in every fixed degree",
+      "the combined compact-quotient equivariant Ext and bundle-extension finiteness conclusion"
+    ],
+    "verdict": "NEW_BOUNDED_ANALYTIC_FORMALIZATION_REQUIRED"
+  },
+  "candidate": {
+    "path": "tmp/d1022_compact_quotient_ext_finiteness_candidate.tex",
+    "bytes": 7182,
+    "sha256": "588852F97DE8FA516791E264A37EB2C77BC7D1E07BB0CF1DC4382A9CEC293D26",
+    "target_file": "cohomology.tex",
+    "target_anchor": "cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "placement": "immediately after the D1019 quotient-coherence lemma and before the following constant-sheaf spectral-sequence lemma",
+    "new_labels": [
+      "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+      "cohomology-lemma-coherent-analytic-sheaf-ext",
+      "cohomology-lemma-compact-analytic-quotient-equivariant-ext-finite-dimensional"
+    ],
+    "mapping_label": "cohomology-lemma-compact-analytic-quotient-equivariant-ext-finite-dimensional",
+    "new_tags": ["", "", ""]
+  },
+  "proof_obligations": [
+    {
+      "id": "P1",
+      "claim": "Compact coherent analytic cohomology is finite-dimensional in every degree.",
+      "closure": "Apply Grauert proper direct image to Y→point; coherent modules on the analytic point are finite-dimensional complex vector spaces."
+    },
+    {
+      "id": "P2",
+      "claim": "Ordinary internal sheaf Ext of coherent analytic modules is coherent in every fixed degree.",
+      "closure": "Construct an arbitrarily long local finite-free partial resolution using coherent syzygies; compute fixed-degree Ext and use the abelian category of coherent modules. No finite projective dimension is claimed."
+    },
+    {
+      "id": "P3",
+      "claim": "Equivariant sheaf Ext is the invariant direct image of ordinary sheaf Ext in characteristic zero for the discontinuous action.",
+      "closure": "The ordinary sheaf-Ext stalks are complex vector spaces, so higher stabilizer cohomology and higher invariant direct image vanish; the existing sheaf-Ext spectral sequence collapses."
+    },
+    {
+      "id": "P4",
+      "claim": "Every sheaf on the E2 page of spectral sequence I is coherent on Y.",
+      "closure": "P2 and P3 reduce it to invariant direct image of a coherent analytic G-module; D1019 proves that direct image coherent."
+    },
+    {
+      "id": "P5",
+      "claim": "Every global equivariant Ext group is finite-dimensional.",
+      "closure": "P1 makes the E2 terms finite-dimensional; the first-quadrant spectral sequence has finitely many terms per total degree and a finite abutment filtration."
+    },
+    {
+      "id": "P6",
+      "claim": "Bundle extensions with fixed endpoints agree with module Yoneda extensions.",
+      "closure": "A module extension has locally free middle term because the locally free quotient splits locally; varying-rank analytic bundle/module full faithfulness reconstructs the equivariant bundle maps and equivalences."
+    },
+    {
+      "id": "P7",
+      "claim": "The canonical H1(Y,q_*^G O(E^vee tensor F)) identification and finiteness follow.",
+      "closure": "Use the existing finite-locally-free extension lemma, local bundle/module tensor identification, stabilizer-order quotient comparison, D1019 coherence, and P1."
+    },
+    {
+      "id": "P8",
+      "claim": "Source scope remains exact.",
+      "closure": "Compactness is only on Y; no X-compactness, global q properness, G finite/free, Ext vanishing, finite set, moduli, algebraic analogue, or GAGA claim is made."
+    }
+  ],
+  "conditional_mapping_projection": {
+    "decision_id": "D001046",
+    "unit_id": "tohoku:finiteness:compact-quotient-extension-classes",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-compact-analytic-quotient-equivariant-ext-finite-dimensional",
+    "official_tags": "",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000617",
+    "predecessor": "tohoku_r65",
+    "successor": "tohoku_r66",
+    "issue_append": null,
+    "source_repair_append": null,
+    "projected_after_r66": {
+      "decisions": 1046,
+      "existing_equivalent": 389,
+      "new_statement": 2,
+      "remaining_gap_class_dispositions": 20,
+      "issues": 32,
+      "active_issues": 0,
+      "changed_map_rows": 1
+    }
+  },
+  "scope_exclusions": [
+    "the following abstract algebraic-geometry analogue and its characteristic hypotheses",
+    "noncompact quotients",
+    "global finiteness or properness of q",
+    "finiteness of the set of extensions rather than finite vector-space dimension",
+    "Ext vanishing or finite projective dimension on singular analytic spaces",
+    "moduli representability, algebraization, or GAGA"
+  ]
+}

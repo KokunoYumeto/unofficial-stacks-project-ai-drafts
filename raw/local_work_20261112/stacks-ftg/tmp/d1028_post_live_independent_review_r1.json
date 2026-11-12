@@ -1,0 +1,165 @@
+{
+  "schema": "tohoku-stacks-d1028-post-live-independent-review-v1",
+  "formalization_id": "D1028",
+  "status": "STRICT_PASS",
+  "verdict": "STRICT_PASS",
+  "errors": [],
+  "required_edits": [],
+  "review_scope": {
+    "unit": "tohoku:classification:coherent-extension-classes",
+    "operation": "independent post-live mathematical, source, build, visual, and scanner review",
+    "reviewer_role": "independent_subagent",
+    "live_or_mapping_writes_by_reviewer": false
+  },
+  "candidate_identity": {
+    "path": "tmp/d1028_coherent_equivariant_extensions_candidate.tex",
+    "bytes": 2708,
+    "sha256": "77F46B392C42FF7A6C5537F785FF3460907BFC155EB423321F7BA05495CF7509"
+  },
+  "live_identity": {
+    "path": "cohomology.tex",
+    "bytes": 944867,
+    "sha256": "BDAA9A64E5C0FC52A3B55E57E912624591AD093F8B9933EB8200F08EFC9D7F16",
+    "candidate_exact_occurrences": 1,
+    "candidate_byte_offset": 752340,
+    "candidate_lines": "20528-20587",
+    "new_raw_label": "lemma-coherent-equivariant-analytic-extension-classes",
+    "new_raw_label_occurrences": 1,
+    "new_raw_label_line": 20529
+  },
+  "mathematical_review": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "forgetting the G-action preserves the displayed short exact sequence",
+      "coherent analytic modules satisfy the required two-of-three extension closure",
+      "Yoneda Ext^1 classifies fixed-endpoint extensions and carries Baer addition",
+      "the existing equivariant Ext comparison gives the claimed global equivariant Ext group",
+      "constant holomorphic scalars give the natural complex vector space structure",
+      "the statement does not overclaim compactness, finite-dimensionality, quotient descent, GAGA, or higher Ext"
+    ]
+  },
+  "source_review": {
+    "status": "STRICT_PASS",
+    "printed_page": 219,
+    "semantic_locator": "sem/r18/nodes.csv:92",
+    "source_repair_required": false,
+    "issue_append_required": false
+  },
+  "numbering_review": {
+    "aux": {
+      "path": "cohomology.aux",
+      "bytes": 58735,
+      "sha256": "E45B1F519A78C5398F21234208C02A22664D3B48B3C0BAE7AA301556CF8BB27F"
+    },
+    "new_label": {
+      "aux_line": 513,
+      "number": "46.68",
+      "page": 198
+    },
+    "sequence": [
+      "46.67 on page 197",
+      "46.68 on page 198",
+      "46.69 on page 198",
+      "46.70 on page 199",
+      "46.71 on page 200",
+      "46.72 on page 200",
+      "46.73 on page 201"
+    ],
+    "status": "STRICT_PASS_CONTIGUOUS"
+  },
+  "build_review": {
+    "pdf": {
+      "path": "cohomology.pdf",
+      "bytes": 2046160,
+      "sha256": "FA395E530DE8AA0C40126D4478384DCDCA7B6FD2B23046AA88E485082A60129D",
+      "pages": 247
+    },
+    "log": {
+      "path": "cohomology.log",
+      "bytes": 48473,
+      "sha256": "31124DECC9DCED08661DB4E8DCAA992CE45EC1BB2B5AF756C2E72A161DF784C7"
+    },
+    "diagnostics": {
+      "fatal_or_emergency_errors": 0,
+      "latex_or_pdftex_errors": 0,
+      "undefined_controls_references_or_citations": 0,
+      "rerun_or_label_change_requests": 0,
+      "multiply_defined_labels": 0,
+      "overfull_hboxes_total": 35,
+      "overfull_hboxes_in_candidate_interval": 0,
+      "document_level_overfull_vboxes": 3,
+      "vbox_visual_defects": 0
+    },
+    "status": "STRICT_PASS"
+  },
+  "visual_review": {
+    "status": "STRICT_PASS",
+    "defects": [],
+    "checks": [
+      "the full new lemma and proof render legibly on page 198",
+      "the transition to the following bundle-extension lemma is continuous",
+      "pages 199-201 have no clipping, collision, missing glyph, or abnormal whitespace"
+    ],
+    "rasters": [
+      {"path": "tmp/d1028_pdf_qa/page-198.png", "bytes": 399654, "sha256": "4D438B84EC8E7ADA5399C7A108B424D3A42CC3CDB10227EE1E25FD913A2B28F5"},
+      {"path": "tmp/d1028_pdf_qa/page-199.png", "bytes": 367754, "sha256": "D9717ADE879030B7701F344F9E72A0AC1FA75F562F71638A4304AFE819FCD270"},
+      {"path": "tmp/d1028_pdf_qa/page-200.png", "bytes": 348547, "sha256": "13EC2299AF41968C476A4DEAC854151E1C120A469DCFAFF315208746479D8AC7"},
+      {"path": "tmp/d1028_pdf_qa/page-201.png", "bytes": 370333, "sha256": "9C102742BF00B0A0C9AE58CB944FCD024CDB23EDE5F80594A187A71D16FF7119"}
+    ]
+  },
+  "scanner_review": {
+    "status": "PASS_BYTE_IDENTICAL_REPLAY",
+    "oracle_path": "tmp/d1028_scan_probe_r1",
+    "replay_path": "tmp/d1028_scan_probe_replay_r1",
+    "inventory": {
+      "files": 6,
+      "bytes_each": 5874391
+    },
+    "counts": {
+      "tex_files": 119,
+      "labels": 22113,
+      "official_tags_joined": 21437,
+      "topics": 13,
+      "topic_candidates": 1287,
+      "direct_topic_coverage": 13,
+      "warnings": 685,
+      "errors": 0
+    },
+    "expected_new_warning": "TeX label has no official tag in this snapshot: cohomology-lemma-coherent-equivariant-analytic-extension-classes",
+    "files": {
+      "cfg.json": {"bytes": 5151, "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"},
+      "check.json": {"bytes": 83847, "sha256": "07C5D80259067698B473D2D9A0B7EE95FCAA10081F8F2258BE73BC83AA7C3258"},
+      "stx.csv": {"bytes": 5290688, "sha256": "86D4B13F8189D71ABC67EB7C40A79EE6F1AC86D564812F120506A2F4321C01DC"},
+      "tcand.csv": {"bytes": 489828, "sha256": "6811DEB4478A0EDCEF25B6742920E9DC65878BDAD7436D79D419E0D7CF1B2320"},
+      "tmap.csv": {"bytes": 2424, "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"},
+      "topics.csv": {"bytes": 2453, "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"}
+    },
+    "new_label_row": {
+      "physical_line": 3633,
+      "row_bytes_with_lf": 297,
+      "row_sha256_with_lf": "F33486888B565CC9B6A47DF23D83E2DFA8B71579DC0142FDE7A21C764485DC6D",
+      "full_label": "cohomology-lemma-coherent-equivariant-analytic-extension-classes",
+      "file": "cohomology.tex",
+      "source_line": 20529,
+      "text_sha256": "DC5B7775DD09B49DD737F2E6C9752E962CE1387CF3577E97B57B22369319F55D"
+    },
+    "new_topic_candidate_row": {
+      "physical_line": 730,
+      "row_bytes_with_lf": 448,
+      "row_sha256_with_lf": "13171BC3495A1D5949CC7949E58358AF341F77A7F9B6FD037C7EF835DFF97B17",
+      "topic": "ext",
+      "score": 113,
+      "status": "lexical_candidate_only"
+    }
+  },
+  "final_authorization": {
+    "status": "AUTHORIZED_FOR_APPEND_ONLY_MAPPING_AFTER_FROZEN_AUDIT",
+    "replace_only": "D000564",
+    "unit": "tohoku:classification:coherent-extension-classes",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-coherent-equivariant-analytic-extension-classes",
+    "official_tags": "",
+    "issue_append": null,
+    "source_repair_append": null
+  }
+}

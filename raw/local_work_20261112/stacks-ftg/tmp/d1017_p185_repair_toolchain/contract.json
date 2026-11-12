@@ -1,0 +1,90 @@
+{
+  "schema": "d1017-p185-repair-toolchain-contract-v1",
+  "contract_id": "D1017-R001-p185-r20-r42-sem21-v1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "defect_id": "D1017-R001",
+  "printed_page": 185,
+  "authority": {
+    "design": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_p185_formalization_design.json",
+      "bytes": 8424,
+      "sha256": "C1E54BDFB4F52D6761248992D8C669CFB43FB21976A2539063FD893BDEAF43DC"
+    },
+    "independent_stacks_review": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_stacks_independent_review_r1.json",
+      "bytes": 12100,
+      "sha256": "E446CBFC413104F7D0D888F795DDB9C3100C87E615CBC1845667E4830A2A15BC",
+      "status": "STRICT_PASS_STACKS_FORMALIZATION"
+    }
+  },
+  "scripts": {
+    "source_admission": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_p185_repair_toolchain/source_admission.py",
+      "bytes": 25963,
+      "sha256": "99F1872F3F8FB5E51146999321DF054C9638EF1CACE6293B0832F7D7D5A88A8F"
+    },
+    "reader_v068c3r20": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_p185_repair_toolchain/reader_v068c3r20.py",
+      "bytes": 23708,
+      "sha256": "AE7160C819B8ED2AE5C37F9D6DCFA2E0775128952C4B97A856E0E7332A3EA710"
+    },
+    "qa_v68r42": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_p185_repair_toolchain/qa_v68r42.py",
+      "bytes": 26197,
+      "sha256": "78A3BC5E388440A61DC31B2900096FDBE22D926A658F574F90EBB4AC13B38D7D"
+    }
+  },
+  "launcher": {
+    "path": "user/Documents/stacks-ftg/tmp/d1017_p185_repair_toolchain/run.py",
+    "bytes": 5951,
+    "sha256": "A84774181C8A3553B15AEFD967E46888598ADA43828D0A2D7EC063F72B89E250"
+  },
+  "write_token": "D1017-R001-EXPLICIT-LOCAL-EXECUTION",
+  "source_admission": {
+    "predecessor": "production/p185_r1",
+    "successor": "production/p185_fix2",
+    "root_ledger_append": "TOH-SRC-P185-002",
+    "family_decision_append": "TOH-P185-COR-002",
+    "diplomatic_french_unchanged": true,
+    "corrected_layers": ["fr_corrected", "en"],
+    "no_overwrite": true
+  },
+  "reader": {
+    "predecessor": "build/v068c3r19",
+    "successor": "build/v068c3r20",
+    "changed_staged_paths": ["en/p185.tex", "fr/p185.tex"],
+    "staged_files": 543,
+    "byte_identical_staged_files": 541,
+    "projected_manifest": {
+      "rows": 543,
+      "total_file_bytes": 11855949,
+      "bytes": 62845,
+      "sha256": "52559D18F2A77C82A3BBAB69E4949C3A17C7DA1593034719F5B72584E9540310"
+    }
+  },
+  "qa": {
+    "revision": "v68r42",
+    "reader_revision": "v068c3r20",
+    "requires_actual_post_build_binding": true,
+    "requires_hash_bound_visual_attestation": true,
+    "visual_pages": {
+      "en": [52, 53, 54],
+      "fr": [54, 55, 56]
+    }
+  },
+  "semantic": {
+    "successor": "sem/r21",
+    "status": "PENDING_COMMITTED_R20_AND_R42_IDENTITY_PINS",
+    "target_node": "tohoku:definition:hom-o-and-local-hom",
+    "target_occurrence": "tohoku:occ:p185:o003",
+    "rule": "Instantiate and freeze the r21 semantic transaction only after the actual r20 PDFs/build receipt and v68r42 QA receipt exist."
+  },
+  "artifact_operation_marker": "ALREADY_RUN_EXACTLY_ONCE_FOR_THE_ACTIVE_PDF_EDIT_WORKFLOW_DO_NOT_RERUN",
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "action": "Continue locally and perform no Git or GitHub operation."
+    }
+  },
+  "errors": []
+}

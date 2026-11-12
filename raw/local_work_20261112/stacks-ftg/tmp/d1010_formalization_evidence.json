@@ -1,0 +1,148 @@
+{
+  "schema": "tohoku-stacks-d1010-formalization-evidence-v1",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1010",
+  "integration": {
+    "candidate": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_block_candidate.tex",
+      "bytes": 15171,
+      "sha256": "EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4",
+      "lines": 393
+    },
+    "predecessor": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 869226,
+      "sha256": "31E9F1607073933C2159AE5D1595A451CB298FFD3BB9E006B4DB28B7B5CD48D0"
+    },
+    "live": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 884397,
+      "sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914",
+      "lines": 24001,
+      "inserted_lines": [19936, 20328]
+    },
+    "candidate_byte_sequence_occurrences": 1,
+    "candidate_and_live_line_arrays_identical": true,
+    "remove_exact_candidate_reconstructs_predecessor": true,
+    "incoming_seam": "preceding end{remark} at line 19934",
+    "outgoing_seam": "following section{Ext with support} at line 20330"
+  },
+  "labels": [
+    {"full_label":"cohomology-lemma-equivariant-support-filtered-extension-by-zero","short_label":"lemma-equivariant-support-filtered-extension-by-zero","line":19937,"kind":"lemma","text_sha256":"34E2430BA0DD759FB7D021AF71A698D811D1A6A605C64A3FECBCA621306D883D","number":"46.5","page":192},
+    {"full_label":"cohomology-equation-equivariant-support-extension-zero-acyclic","short_label":"equation-equivariant-support-extension-zero-acyclic","line":19996,"kind":"equation","text_sha256":"C29960585391A146B3D63420BB620AEB54FB37283A81650A9C782F7D9E77AC8E","number":"46.5.1","page":192},
+    {"full_label":"cohomology-equation-equivariant-support-sections-colimit","short_label":"equation-equivariant-support-sections-colimit","line":20060,"kind":"equation","text_sha256":"5A1A8AE0D0A6F3B95A5D4B007D9CA25851B48E1BFDF7B882F47C435C37039324","number":"46.5.2","page":193},
+    {"full_label":"cohomology-equation-equivariant-support-derived-extension-zero","short_label":"equation-equivariant-support-derived-extension-zero","line":20095,"kind":"equation","text_sha256":"54A2E8C7A63335EB01593692666C02C8D330976D1F46E2D204DF91B718911F34","number":"46.5.3","page":193},
+    {"full_label":"cohomology-equation-equivariant-support-ordinary-all-opens-colimit","short_label":"equation-equivariant-support-ordinary-all-opens-colimit","line":20120,"kind":"equation","text_sha256":"A75AA3C440E30AC6D2382CA40398B507AF014FA519EAFF514A9CE4465A97C904","number":"46.5.4","page":193},
+    {"full_label":"cohomology-lemma-equivariant-support-filtered-second-spectral-sequence","short_label":"lemma-equivariant-support-filtered-second-spectral-sequence","line":20151,"kind":"lemma","text_sha256":"20C7D480F9FE49259451C3834F95C0BD67D829DFD94408851487CE406F1E32AD","number":"46.6","page":194},
+    {"full_label":"cohomology-equation-equivariant-support-filtered-second-spectral-sequence","short_label":"equation-equivariant-support-filtered-second-spectral-sequence","line":20174,"kind":"equation","text_sha256":"A8FF2A5222DBA8794D4CD2547A6410BD10801E80335AF6566CEE7439DC293F1F","number":"46.6.1","page":194},
+    {"full_label":"cohomology-equation-equivariant-support-usual-second-page","short_label":"equation-equivariant-support-usual-second-page","line":20189,"kind":"equation","text_sha256":"FED0CEC9634B0E815C2D7FC117328F3722B06BCC8DBCF613A28AEE7622FAD8A4","number":"46.6.2","page":194},
+    {"full_label":"cohomology-equation-equivariant-support-local-second-spectral-sequence","short_label":"equation-equivariant-support-local-second-spectral-sequence","line":20214,"kind":"equation","text_sha256":"15D6305D783336D0A8369908146B12FFC1350D49E26E34CD47732596F6688124","number":"46.6.3","page":194},
+    {"full_label":"cohomology-equation-equivariant-support-group-colimit-comparison","short_label":"equation-equivariant-support-group-colimit-comparison","line":20275,"kind":"equation","text_sha256":"48CB4596A8D2584607F0851345EC769C4D18F3A407B1629B5B65067DC7DBB6AD","number":"46.6.4","page":195},
+    {"full_label":"cohomology-equation-equivariant-support-group-universal-coefficient","short_label":"equation-equivariant-support-group-universal-coefficient","line":20292,"kind":"equation","text_sha256":"CCDC500BBD8B61DF13972F8BBF28C749D19B73361DC1CDB3A66582364A6F8BAA","number":"46.6.5","page":195}
+  ],
+  "mathematical_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The neighbourhood hypothesis is used only for the degree-zero supported-section union.",
+      "The derived extension-by-zero comparison separately assumes that each eligible exact extension-by-zero functor sends injective abelian G-sheaves to Gamma_X^G-acyclic objects.",
+      "The ordinary supported-cohomology comparison separately assumes that Phi is paracompactifying.",
+      "The filtered first-quadrant spectral sequences are functorial from E_2 onward and have finite abutment filtrations.",
+      "For finite G, a finite-rank bar resolution proves commutation with filtered colimits.",
+      "For trivial actions with finitely generated integral group homology, universal coefficients and Ext commuting with filtered colimits prove the comparison.",
+      "The essentially constant alternative is imposed degreewise on a cofinal subsystem.",
+      "None of the three group-cohomology criteria is used to infer extension-by-zero acyclicity or paracompactifying supports."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.29 (MiKTeX 26.5)",
+    "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cohomology.tex",
+    "passes": 4,
+    "fixed_point_pass": 4,
+    "fixed_point_before_after": {
+      "cohomology.aux": {"bytes":55054,"before_sha256":"5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7","after_sha256":"5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7"},
+      "cohomology.out": {"bytes":12488,"before_sha256":"B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD","after_sha256":"B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"},
+      "cohomology.toc": {"bytes":5477,"before_sha256":"FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564","after_sha256":"FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564"}
+    },
+    "artifacts": {
+      "aux": {"path":"user\\Documents\\stacks-ftg\\cohomology.aux","bytes":55054,"sha256":"5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7"},
+      "out": {"path":"user\\Documents\\stacks-ftg\\cohomology.out","bytes":12488,"sha256":"B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"},
+      "toc": {"path":"user\\Documents\\stacks-ftg\\cohomology.toc","bytes":5477,"sha256":"FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564"},
+      "log": {"path":"user\\Documents\\stacks-ftg\\cohomology.log","bytes":47435,"sha256":"99E4DF956F8ED3304F9FEAE4EE72FED8733FB996B19EC26069045BD81EFA2AB0"},
+      "pdf": {"path":"user\\Documents\\stacks-ftg\\cohomology.pdf","bytes":1934650,"sha256":"209BF500D3F352EDDE4527879638941164841A14EB76E30B098D897638BA5B64","pages":231}
+    },
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "multiply_defined_labels": 0,
+    "new_block_box_diagnostics": 0,
+    "out_of_block_overfull_diagnostics": 34,
+    "out_of_block_underfull_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_pages_parsed": 231,
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 4383593,
+    "extracted_text_characters": 505124,
+    "media_box": [0,0,612,792],
+    "crop_box": [0,0,612,792],
+    "rotation": 0,
+    "uniform_media_and_crop_boxes": true,
+    "uniform_rotation": true,
+    "trailer_root_valid": true,
+    "eof_marker_valid": true,
+    "visual_result": "PASS",
+    "visual_renders": [
+      {"page":191,"path":"user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-191.png","bytes":297879,"sha256":"5A3446952368627C293091AD96F25112BE7A5B1C58816635B57F53004E4B9B47"},
+      {"page":192,"path":"user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-192.png","bytes":302421,"sha256":"B3D62A011C7E8335AE1DF60CEE7C2E42456527CC77E1F5203FD89F807A08898F"},
+      {"page":193,"path":"user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-193.png","bytes":274940,"sha256":"065A78EC47FCBFD053A0FFDB2FB9960F6EBF4BEAAC31EFA9A65C4956D719B925"},
+      {"page":194,"path":"user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-194.png","bytes":319546,"sha256":"6CA6837D8B545C7CF1F658F1BBCBE0610AEE4E57C742236F54471426718EA9CC"},
+      {"page":195,"path":"user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-195.png","bytes":319959,"sha256":"D2C88DB263F40B5DE2F54C072692CD1A7CD3053726280664987864D6229AE3A5"},
+      {"page":196,"path":"user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-196.png","bytes":317148,"sha256":"824151FFD4E5B8E91CE434D39D4B30E3A8DF0EEDA7BFA62BA5D16C2D11FA5AC6"}
+    ]
+  },
+  "scanner_audit": {
+    "status": "STRICT_PASS",
+    "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan",
+    "deterministic_replay_identical": true,
+    "inputs": {
+      "cfg.json": {"bytes":5151,"sha256":"17AE218F11DEF95A76ADF0BD2A447B21150A3BAFF9D1209EC1C1FDFAA51D110A"},
+      "topics.csv": {"bytes":2453,"sha256":"AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"}
+    },
+    "outputs": {
+      "stx.csv": {"bytes":5281636,"sha256":"A6A16E837DF3B59C348CB88348FA9FC88F6C0703B78AF97FBACFA7B8254CFEC1"},
+      "tcand.csv": {"bytes":489206,"sha256":"C07DE868C2A467B75DB00C31DE10A6AE5C1AD5F71D629641CF1840B151FDB22A"},
+      "tmap.csv": {"bytes":2424,"sha256":"DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"},
+      "check.json": {"bytes":80068,"sha256":"648438CCAB8D80F28B80E36BFA44378A1655AAB51CD4B0EE347CBA6B2121459B"}
+    },
+    "counts": {
+      "labels": 22080,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topics": 13,
+      "warnings": 652,
+      "errors": 0
+    },
+    "delta_from_d1009": {
+      "new_labels": 11,
+      "removed_labels": 0,
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "stx_bytes": 3460,
+      "candidate_additions": 21,
+      "candidate_cap_evictions": 10,
+      "candidate_net_rows": 11,
+      "candidate_rows_line_number_only": 15,
+      "tmap_byte_identical": true,
+      "warning_delta": 11,
+      "changed_tex_files": ["cohomology.tex"]
+    }
+  },
+  "errors": []
+}

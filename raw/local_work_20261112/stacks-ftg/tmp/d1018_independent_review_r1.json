@@ -1,0 +1,121 @@
+{
+  "schema": "tohoku-stacks-d1018-independent-review-v1",
+  "formalization_id": "D1018",
+  "review_id": "D1018-IR1",
+  "status": "STRICT_PASS_MAPPING_ONLY",
+  "final_verdict": "STRICT_PASS_NO_LIVE_SOURCE_CHANGE",
+  "errors": [],
+  "review_scope": {
+    "design_path": "tmp/d1018_p185_mapping_design.json",
+    "design_bytes": 6317,
+    "design_sha256": "9A309C2905D5A8A1CBE0E03E0F0A52728D0E4BFCA09FF8102304E05AFB7AFE21",
+    "source_unit": "tohoku:definition:sheaf-hom-o",
+    "source_page": 185,
+    "predecessor": "tohoku_r61",
+    "new_tex_required": false,
+    "new_pdf_required": false,
+    "new_source_repair_required": false
+  },
+  "inputs": {
+    "official_part_ii": {
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "corrected_source_segment_fr": {
+      "bytes": 341,
+      "sha256": "C2F07807B17FFB7D3F87E95AA18BA40ABD9F52767E36A346C16EF8DD9705F7AE"
+    },
+    "source_segment_en": {
+      "bytes": 319,
+      "sha256": "7028A96F2FCA91F8A1299EA4673C773AB0C525C1356C8FFC3A6B5A9200767EB7"
+    },
+    "sem_r21_node_row": {
+      "physical_line": 351,
+      "bytes": 704,
+      "sha256": "D57BC824E2828791245220CAD081447037640BAF36200495B7F4B2863234B15C"
+    },
+    "modules_tex": {
+      "bytes": 232828,
+      "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+    },
+    "d1017_candidate": {
+      "bytes": 5063,
+      "sha256": "FB6278770580656A6904DC4505A7E69DAB222710D62633937125C557A2E75190"
+    },
+    "r61_receipt": {
+      "bytes": 10568,
+      "sha256": "D882C7AE62252BC94DA8D7D442A84507FCFC9F5E8E4C77CA988399E7EB835B80"
+    }
+  },
+  "predicates": [
+    {
+      "id": "P001",
+      "claim": "The source unit boundary contains the natural restriction and sheaf-definition assertions but excludes the following numbered equations and center-module remark.",
+      "result": "PASS"
+    },
+    {
+      "id": "P002",
+      "claim": "The cited Stacks definition applies to sheaves of not necessarily commutative unital rings and left modules.",
+      "result": "PASS"
+    },
+    {
+      "id": "P003",
+      "claim": "The cited definition constructs the exact Hom group on every arbitrary subspace by inverse image.",
+      "result": "PASS"
+    },
+    {
+      "id": "P004",
+      "claim": "For V contained in U, inverse-image pseudofunctoriality canonically restricts a morphism on U to one on V; no extra mathematical hypothesis is required.",
+      "result": "PASS"
+    },
+    {
+      "id": "P005",
+      "claim": "The cited lemma proves the open-set Hom rule satisfies sheaf gluing as stated, rather than merely constructing its sheafification.",
+      "result": "PASS"
+    },
+    {
+      "id": "P006",
+      "claim": "The lemma identifies the sheaf sections on every open U with the already defined subspace Hom group.",
+      "result": "PASS"
+    },
+    {
+      "id": "P007",
+      "claim": "The corrected p.185 source segment is already sealed; the existing semicolon repair is sufficient and no new source or semantic successor is needed.",
+      "result": "PASS"
+    },
+    {
+      "id": "P008",
+      "claim": "Replacing D000407 by D001042 as existing_equivalent closes exactly this one gap without changing TeX, PDF, source layers, semantic rows, or adjacent source-unit decisions.",
+      "result": "PASS"
+    }
+  ],
+  "predicate_summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "mapping_verdict": {
+    "decision_id": "D001042",
+    "unit_id": "tohoku:definition:sheaf-hom-o",
+    "action": "replace",
+    "supersedes": "D000407",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "modules-definition-hom-left-modules;modules-lemma-sheaf-hom-left-modules",
+    "stacks_tags": "",
+    "rationale": "The D1017 noncommutative left-module definition gives Hom on every subspace by inverse image. For V contained in U, inverse-image functoriality supplies the natural restriction. The following lemma proves that the open-set rule is already a sheaf and identifies its sections with subspace Hom. Thus it gives the complete corrected source definition; equations (4.1.1)--(4.1.2) and the center-sheaf remark remain separate source units.",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "gap_delta": "25 to 24",
+    "issue_append": false,
+    "result": "PASS"
+  },
+  "nonclaims": [
+    "This review does not merge the equation targets or the center-module remark into D1018.",
+    "This review does not claim a new source repair, semantic successor, TeX edit, PDF build, GAGA result, release, or publication."
+  ],
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "effect": "No Git or GitHub operation is required or attempted."
+    }
+  }
+}

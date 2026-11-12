@@ -1,0 +1,124 @@
+{
+  "schema": "tohoku-stacks-d1002-audit-v1",
+  "created_at": "2026-08-22T03:52:25.0882873+02:00",
+  "status": "STRICT_PASS",
+  "decision": "D001002",
+  "unit": "tohoku:claim:3.4.2:H1-bijection",
+  "stacks_label": "cohomology-lemma-pointwise-envelope-torsor-bijection",
+  "source_reference": "Tohoku, Chapter III, Section 3.4, proof of Proposition 3.4.2, pp. 162-163",
+  "primary_source_files": [
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p162.tex",
+      "bytes": 3498,
+      "sha256": "82F7A58962A5FA010CB19C89524056A75024632F41F4EB6EFB47043332C155D0"
+    },
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p163.tex",
+      "bytes": 3810,
+      "sha256": "448C65DA46D80D8E230BDED9EC399F0C75F8813EAC6D7B89E0398DA7959AA6ED"
+    }
+  ],
+  "artifacts": {
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 834157,
+      "sha256": "F4F65D273459C98E1F5ACA9B29F929C7BD5F2384B17327290D609D7776EF63EE"
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.aux",
+      "bytes": 52217,
+      "sha256": "BD8ECC2E1552C1FB09A81CB2FD398CFE4D7B6D9925D8D24713B98DB0BBA7B6ED"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.log",
+      "bytes": 47334,
+      "sha256": "691B0A79302DB90890D361C4E72441FBA742916FB6BF0CEAEDABF69BA03A6CD1"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+      "bytes": 1856980,
+      "sha256": "09993F4670E57353989005D326AE6495741A63B5D8A027733BD5FF89B1D7C332",
+      "pages": 218,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_label": "\\newlabel{lemma-pointwise-envelope-torsor-bijection}{{12.5}{24}{Pointwise envelopes lift torsors uniquely}{subsection.12.5}{}}",
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "B(U) to C(U) is sectionwise surjective with kernel A(U).",
+      "P equals the fibre product B times_C H.",
+      "The H-actions on F and A use consistent conjugation conventions.",
+      "The canonical twist isomorphism A^E to Pi(F^E) does not identify the stalks of Pi(F) with the stalks of F.",
+      "The left-torsor formulas e_i=h_ij e_j, h_ij=c_i^{-1}c_j, and p_ij=b_i^{-1}b_j have the correct orientation and cocycle law.",
+      "Extension of structure group proves surjectivity on torsor classes.",
+      "The isomorphism sheaf in the injectivity proof is an A^E-torsor; the possible opposite-group parametrization is harmless because A^E is abelian.",
+      "The proof avoids the false general assertion that flasqueness is local and proves the special twisted kernel flasque by identifying it with a pointwise envelope.",
+      "The result matches the source H1-bijection and associated-P-bundle assertion, with uniqueness only up to isomorphism."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "label": "Lemma 12.5",
+    "label_page": 24,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "visual_pages": [
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "render_records": [
+      {
+        "page": 23,
+        "bytes": 276354,
+        "sha256": "FBEE76700B004065FABF625A9E90D905C0A4B945B4C25924266E0E6B5F7E2F0E"
+      },
+      {
+        "page": 24,
+        "bytes": 256513,
+        "sha256": "C541A0E538545369B2B71970AFA8293A81989949219DC9E9CD65B8CD9BE2E6C9"
+      },
+      {
+        "page": 25,
+        "bytes": 313059,
+        "sha256": "6A66959766306D008E069184100FE4910413676AEFC9B61B30B43A235E77D969"
+      },
+      {
+        "page": 26,
+        "bytes": 330469,
+        "sha256": "70D519AE50C2B7962036F4894DCE15AC62A5CF7CFD50265AB679F1550DB94036"
+      },
+      {
+        "page": 27,
+        "bytes": 222955,
+        "sha256": "5EBE1B359D56C480A54666FFE3ACECF41031AF7D866FE6CC55404986129C9FA4"
+      }
+    ],
+    "visual_result": "No literal control words, bad glyphs, clipping, overlap, malformed formula, broken page transition, or header/footer defect."
+  },
+  "nonclaims": [
+    "No group structure is asserted on noncommutative torsor classes.",
+    "No general local-to-global flasqueness principle is asserted.",
+    "The lift is unique only up to isomorphism class, not as a canonical chosen torsor.",
+    "This receipt does not map D001002; mapping promotion belongs to the r45 successor."
+  ],
+  "errors": []
+}

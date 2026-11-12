@@ -1,0 +1,393 @@
+\begin{lemma}[Filtered extension by zero for equivariant supports]
+\label{lemma-equivariant-support-filtered-extension-by-zero}
+\begin{reference}
+\cite[Chapter V, \S 5.7, formulae (5.7.5) and (5.7.6),
+p. 220]{Tohoku}
+\end{reference}
+\begin{history}
+The cited passage assumes that every member of the support family on the
+orbit space has a neighbourhood in that family and then asserts the derived
+filtered-colimit formula (5.7.6). The neighbourhood hypothesis proves the
+degree-zero formula (5.7.5), but by itself it does not prove (5.7.6).
+Indeed, the filtered-colimit theorem for right derived functors produces
+the right derived functors of the composites
+$\mathcal A\mapsto\Gamma_X^G(\mathcal A_U)$. Identifying these with
+$H^n(X;G,\mathcal A_U)$ requires the extension-by-zero acyclicity stated
+explicitly below. Exactness of extension by zero alone does not supply that
+acyclicity. Moreover, the ordinary supported-cohomology comparison invoked
+later in the cited passage follows from Corollary 1 to Proposition 3.10.1
+under the additional hypothesis that the induced family on $X$ is
+paracompactifying. We keep these two requirements separate and make no
+claim that either follows from the neighbourhood hypothesis.
+\end{history}
+Let $G$ act on a topological space $X$, let $Y=X/G$, and let
+$q:X\to Y$ be the orbit map. Let $\Psi$ be a family of supports on $Y$,
+put
+$$
+\Phi=q^\dagger\Psi,
+$$
+as in Lemma
+\ref{lemma-orbit-space-equivariant-support-spectral-sequence}, and assume
+that every $C\in\Psi$ has a closed neighbourhood belonging to $\Psi$; in
+other words, there is a $B\in\Psi$ such that
+$$
+C\subset\mathop{\rm Int}_Y(B).
+$$
+Let $\mathcal U_\Psi$ be the set of open subsets $U\subset Y$ such that
+$\overline U\in\Psi$, ordered by inclusion. For $U\in\mathcal U_\Psi$ put
+$$
+X_U=q^{-1}(U),\qquad j_U:X_U\longrightarrow X,
+\qquad
+E_U(\mathcal A)=\mathcal A_U=(j_U)_!(\mathcal A|_{X_U}).
+$$
+Then:
+\begin{enumerate}
+\item The set $\mathcal U_\Psi$ is directed. Each $E_U$ is an exact
+endofunctor of $\textit{Mod}_G(\underline{\mathbf Z}_X)$, and for
+$U\subset V$ there is a functorial monomorphism
+$E_U\to E_V$.
+\item For every abelian $G$-sheaf $\mathcal A$ on $X$, there is a
+functorial equality
+$$
+\Gamma^G_\Phi(X,\mathcal A)
+=
+\colim_{U\in\mathcal U_\Psi}\Gamma_X^G(\mathcal A_U).
+$$
+\item Assume the following extension-by-zero acyclicity condition:
+for every $U\in\mathcal U_\Psi$ and every injective abelian $G$-sheaf
+$\mathcal I$ on $X$, the sheaf $\mathcal I_U$ is right acyclic for
+$\Gamma_X^G$, or equivalently
+\begin{equation}
+\label{equation-equivariant-support-extension-zero-acyclic}
+H^n(X;G,\mathcal I_U)=0
+\quad\text{for all }n>0.
+\end{equation}
+Then the canonical maps
+$$
+\colim_{U\in\mathcal U_\Psi}H^n(X;G,\mathcal A_U)
+\longrightarrow
+H^n_\Phi(X;G,\mathcal A)
+$$
+are isomorphisms for every $n\in\mathbf Z$. In nonnegative degrees these
+isomorphisms form an isomorphism of cohomological $\delta$-functors.
+\item If, in addition, $\Phi$ is paracompactifying, then the canonical
+maps of $G$-modules
+$$
+\colim_{U\in\mathcal U_\Psi}H^q(X,\mathcal A_U)
+\longrightarrow
+H^q_\Phi(X,\mathcal A)
+$$
+are isomorphisms for every $q\in\mathbf Z$, functorially in $\mathcal A$
+and compatibly with connecting maps.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The empty set belongs to $\mathcal U_\Psi$. If
+$U,V\in\mathcal U_\Psi$, then
+$$
+\overline{U\cup V}=\overline U\cup\overline V\in\Psi,
+$$
+so $U\cup V\in\mathcal U_\Psi$. Thus this set is directed.
+The open subset $X_U$ is $G$-invariant, and hence extension by zero gives
+$\mathcal A_U$ its natural $G$-sheaf structure. Restriction and extension
+by zero are exact; for the latter assertion see Lemma
+\ref{lemma-extension-by-zero-locally-closed}. If $U\subset V$, the
+canonical map $\mathcal A_U\to\mathcal A_V$ is a monomorphism, as is seen
+on stalks. This proves (1).
+
+The counit maps $\mathcal A_U\to\mathcal A$ give an injective map
+$$
+\colim_{U\in\mathcal U_\Psi}\Gamma(X,\mathcal A_U)
+\longrightarrow
+\Gamma(X,\mathcal A),
+$$
+because all transition maps are injective. A section in the source which
+comes from $U$ has support $S\subset X_U$. Consequently
+$$
+\overline{q(S)}\subset\overline U\in\Psi,
+$$
+so $S\in\Phi$.
+
+Conversely, let $s\in\Gamma_\Phi(X,\mathcal A)$, put
+$S=\text{Supp}_X(s)$, and set $C=\overline{q(S)}$. Thus $C\in\Psi$.
+Choose a closed neighbourhood $B\in\Psi$ of $C$ and put
+$U=\mathop{\rm Int}_Y(B)$. Then
+$$
+C\subset U,
+\qquad
+\overline U\subset B,
+$$
+and hence $U\in\mathcal U_\Psi$ and $S\subset X_U$. The section $s$
+therefore comes from a unique section of $\mathcal A_U$. We have proved a
+functorial equality of $G$-modules
+\begin{equation}
+\label{equation-equivariant-support-sections-colimit}
+\Gamma_\Phi(X,\mathcal A)
+=
+\colim_{U\in\mathcal U_\Psi}\Gamma(X,\mathcal A_U).
+\end{equation}
+The system on the right has injective transition maps. It may therefore be
+viewed as a directed union of $G$-submodules. Taking invariants commutes
+with such a union for an arbitrary group $G$: an element of the union is
+fixed if and only if it is already fixed in any member containing it.
+Taking invariants in
+(\ref{equation-equivariant-support-sections-colimit}) proves (2).
+
+For $U\in\mathcal U_\Psi$ consider the additive functor
+$$
+F_U:
+\textit{Mod}_G(\underline{\mathbf Z}_X)\longrightarrow\textit{Ab},
+\qquad
+F_U(\mathcal A)=\Gamma_X^G(E_U(\mathcal A)).
+$$
+These functors form a directed system, and part (2) says that their
+pointwise colimit is $\Gamma_\Phi^G(X,-)$. Let
+$\mathcal A\to\mathcal I^\bullet$ be a nonnegative injective resolution in
+$\textit{Mod}_G(\underline{\mathbf Z}_X)$. Such resolutions exist by
+Injectives, Lemma
+\ref{injectives-lemma-equivariant-modules-enough-injectives}.
+Exactness of $E_U$ gives a resolution
+$$
+\mathcal A_U\longrightarrow E_U(\mathcal I^\bullet).
+$$
+Under hypothesis
+(\ref{equation-equivariant-support-extension-zero-acyclic}) its terms are
+right acyclic for $\Gamma_X^G$.
+Leray's acyclicity lemma, Derived Categories, Lemma
+\ref{derived-lemma-leray-acyclicity}, therefore gives
+\begin{equation}
+\label{equation-equivariant-support-derived-extension-zero}
+R^nF_U(\mathcal A)
+=
+H^n(X;G,\mathcal A_U).
+\end{equation}
+The source category has enough injectives and abelian groups satisfy AB5.
+Derived Categories, Lemma
+\ref{derived-lemma-filtered-colimit-right-derived-functors}, applied to the
+system $(F_U)$, now gives
+$$
+\begin{aligned}
+\colim_{U\in\mathcal U_\Psi}H^n(X;G,\mathcal A_U)
+&=\colim_{U\in\mathcal U_\Psi}R^nF_U(\mathcal A)\\
+&=R^n\Gamma_\Phi^G(X,\mathcal A)\\
+&=H^n_\Phi(X;G,\mathcal A).
+\end{aligned}
+$$
+The same lemma supplies functoriality and compatibility with connecting
+maps. This proves (3).
+
+Assume finally that $\Phi$ is paracompactifying. Let $\mathcal V_\Phi$ be
+the directed set of open subsets $V\subset X$ such that
+$\overline V\in\Phi$. Lemma
+\ref{lemma-family-supports-colimit-extension-by-zero} gives
+\begin{equation}
+\label{equation-equivariant-support-ordinary-all-opens-colimit}
+\colim_{V\in\mathcal V_\Phi}H^q(X,\mathcal A_V)
+=H^q_\Phi(X,\mathcal A).
+\end{equation}
+The opens $X_U$, for $U\in\mathcal U_\Psi$, form a cofinal subsystem of
+$\mathcal V_\Phi$. First,
+$$
+q\left(\overline{q^{-1}(U)}\right)\subset\overline U,
+$$
+so $\overline{q^{-1}(U)}\in\Phi$. Conversely, let
+$V\in\mathcal V_\Phi$ and put
+$$
+C=\overline{q(\overline V)}\in\Psi.
+$$
+Choose a closed neighbourhood $B\in\Psi$ of $C$ and put
+$U=\mathop{\rm Int}_Y(B)$. Then $U\in\mathcal U_\Psi$ and
+$$
+V\subset q^{-1}(U).
+$$
+Thus cofinality changes the left hand side of
+(\ref{equation-equivariant-support-ordinary-all-opens-colimit}) into the
+colimit asserted in part (4).
+Every $X_U$ is $G$-invariant, all transition maps are equivariant, and the
+isomorphism
+(\ref{equation-equivariant-support-ordinary-all-opens-colimit}) is natural
+for the action isomorphisms defining the $G$-sheaf $\mathcal A$. Hence the
+cofinality isomorphism is an isomorphism of $G$-modules. This proves (4).
+\end{proof}
+
+
+\begin{lemma}[Filtered second spectral sequence with supports]
+\label{lemma-equivariant-support-filtered-second-spectral-sequence}
+\begin{reference}
+\cite[Chapter V, \S 5.7, formulae (5.7.7) and (5.7.7 bis),
+p. 220]{Tohoku}
+\end{reference}
+\begin{history}
+The three conditions listed after formula (5.7.7 bis) in the cited source
+are three alternative sufficient conditions for commuting group cohomology
+with the indicated filtered colimit; they are not simultaneous hypotheses.
+They concern the identification of the $E_2$-page only and do not imply the
+extension-by-zero acyclicity
+(\ref{equation-equivariant-support-extension-zero-acyclic}) of Lemma
+\ref{lemma-equivariant-support-filtered-extension-by-zero}. Accordingly,
+the latter acyclicity remains an explicit hypothesis here.
+\end{history}
+In the situation of Lemma
+\ref{lemma-equivariant-support-filtered-extension-by-zero}, assume its
+extension-by-zero acyclicity condition
+(\ref{equation-equivariant-support-extension-zero-acyclic}). For every
+abelian $G$-sheaf $\mathcal A$ on $X$, there is an additive first-quadrant
+spectral sequence,
+functorial in $\mathcal A$ from the $E_2$-page onward, with
+\begin{equation}
+\label{equation-equivariant-support-filtered-second-spectral-sequence}
+{}^{\mathrm {II}}E_2^{p,q}(\mathcal A)
+=
+\colim_{U\in\mathcal U_\Psi}
+H^p\bigl(G,H^q(X,\mathcal A_U)\bigr)
+\quad\Longrightarrow\quad
+H^{p+q}_\Phi(X;G,\mathcal A).
+\end{equation}
+It induces a finite filtration on every abutment group.
+
+Assume in addition that $\Phi$ is paracompactifying. Then the $E_2$-page
+in
+(\ref{equation-equivariant-support-filtered-second-spectral-sequence}) has
+the usual form
+\begin{equation}
+\label{equation-equivariant-support-usual-second-page}
+{}^{\mathrm {II}}E_2^{p,q}(\mathcal A)
+=
+H^p\bigl(G,H^q_\Phi(X,\mathcal A)\bigr)
+\end{equation}
+if any one of the following three conditions holds:
+\begin{enumerate}
+\item $G$ is finite;
+\item for every $q\geq 0$ and $U\in\mathcal U_\Psi$, the action of $G$
+on $H^q(X,\mathcal A_U)$ is trivial, and every group
+$H_r(G,\mathbf Z)$ is finitely generated;
+\item for every $q\geq 0$, there is a cofinal subsystem of
+$\mathcal U_\Psi$ on which all transition maps
+$$
+H^q(X,\mathcal A_U)\longrightarrow H^q(X,\mathcal A_V)
+$$
+are isomorphisms.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For each $U\in\mathcal U_\Psi$, apply the second spectral sequence of
+Lemma \ref{lemma-orbit-space-equivariant-spectral-sequences} to the
+abelian $G$-sheaf $\mathcal A_U$. This gives
+\begin{equation}
+\label{equation-equivariant-support-local-second-spectral-sequence}
+{}^{\mathrm {II}}E_2^{p,q}(\mathcal A,U)
+=H^p\bigl(G,H^q(X,\mathcal A_U)\bigr)
+\quad\Longrightarrow\quad
+H^{p+q}(X;G,\mathcal A_U).
+\end{equation}
+For $U\subset V$, the equivariant monomorphism
+$\mathcal A_U\to\mathcal A_V$ and functoriality of that lemma give a
+morphism from the spectral sequence for $U$ to the one for $V$. Hence the
+spectral sequences
+(\ref{equation-equivariant-support-local-second-spectral-sequence}) form a
+directed system from their $E_2$-pages onward.
+
+For $r\geq 2$, take the filtered colimit of the $r$th pages and their
+differentials. Filtered colimits of abelian groups are exact by Algebra,
+Lemma \ref{algebra-lemma-directed-colimit-exact}; consequently they commute
+with kernels, images, and the cohomology of complexes. Therefore
+$$
+H\left(\colim_U{}^{\mathrm {II}}E_r(\mathcal A,U),
+\colim_U d_r\right)
+=
+\colim_U{}^{\mathrm {II}}E_{r+1}(\mathcal A,U).
+$$
+These colimit pages and differentials thus form a spectral sequence, and
+its $E_2$-page is the one displayed in
+(\ref{equation-equivariant-support-filtered-second-spectral-sequence}).
+
+We spell out convergence. In a first-quadrant cohomological spectral
+sequence, the incoming differential at $(p,q)$ is zero for $r>p$, and the
+outgoing differential is zero for $r>q+1$. Hence the terms at $(p,q)$
+stabilize, uniformly in $U$, once
+$$
+r>\max\{p,q+1\}.
+$$
+It follows that the stable term of the colimit spectral sequence is the
+colimit of the stable terms. For a fixed total degree $n$, let
+$F_U^pH^n(X;G,\mathcal A_U)$ be the finite filtration supplied by
+(\ref{equation-equivariant-support-local-second-spectral-sequence}),
+and set
+$$
+F^p\left(\colim_UH^n(X;G,\mathcal A_U)\right)
+=
+\colim_UF_U^pH^n(X;G,\mathcal A_U).
+$$
+Exactness of filtered colimits identifies the successive quotients with
+the corresponding colimits of the successive quotients, hence with
+${}^{\mathrm {II}}E_\infty^{p,n-p}(\mathcal A)$. The filtration is finite,
+since $0\leq p\leq n$. Part (3) of Lemma
+\ref{lemma-equivariant-support-filtered-extension-by-zero} identifies its
+underlying abutment with $H^n_\Phi(X;G,\mathcal A)$. This proves convergence
+and the filtration assertion. Additivity and functoriality are inherited
+from
+(\ref{equation-equivariant-support-local-second-spectral-sequence}) and
+from filtered colimits.
+
+It remains to prove the three interchange criteria. Put
+$$
+M_U^q=H^q(X,\mathcal A_U).
+$$
+For every $p,q$ there is a canonical comparison map
+\begin{equation}
+\label{equation-equivariant-support-group-colimit-comparison}
+\colim_UH^p(G,M_U^q)
+\longrightarrow
+H^p\left(G,\colim_UM_U^q\right).
+\end{equation}
+
+If $G$ is finite, its bar resolution has in every degree a finitely
+generated free $\mathbf Z[G]$-module. Applying
+$\Hom_{\mathbf Z[G]}(-,M)$ gives a cochain complex whose terms commute with
+filtered colimits. Exactness of filtered colimits then shows that its
+cohomology commutes with filtered colimits. Thus
+(\ref{equation-equivariant-support-group-colimit-comparison}) is an
+isomorphism in case (1).
+
+Assume (2). For a trivial $G$-module $M$, the universal coefficient
+sequence gives, naturally in $M$,
+\begin{equation}
+\label{equation-equivariant-support-group-universal-coefficient}
+0\longrightarrow
+\Ext^1_{\mathbf Z}(H_{p-1}(G,\mathbf Z),M)
+\longrightarrow H^p(G,M)
+\longrightarrow
+\Hom_{\mathbf Z}(H_p(G,\mathbf Z),M)
+\longrightarrow0,
+\end{equation}
+where the first term is zero for $p=0$. A finitely generated abelian group
+is finitely presented, and both $\Hom_{\mathbf Z}(N,-)$ and
+$\Ext^1_{\mathbf Z}(N,-)$ commute with filtered colimits when $N$ is
+finitely generated. Taking filtered colimits of
+(\ref{equation-equivariant-support-group-universal-coefficient}), and using
+their exactness, proves that
+(\ref{equation-equivariant-support-group-colimit-comparison}) is an
+isomorphism in case (2).
+
+Assume (3). On the stated cofinal subsystem every map $M_U^q\to M_V^q$
+is an isomorphism. The map from any one of its terms to its colimit is
+therefore an isomorphism, and the same is true after applying
+$H^p(G,-)$. Thus
+(\ref{equation-equivariant-support-group-colimit-comparison}) is an
+isomorphism in case (3), without any condition on $G$.
+
+Under any one of the three conditions,
+(\ref{equation-equivariant-support-group-colimit-comparison}) identifies
+the $E_2$-page in
+(\ref{equation-equivariant-support-filtered-second-spectral-sequence}) with
+$$
+H^p\left(G,\colim_UM_U^q\right).
+$$
+Part (4) of Lemma
+\ref{lemma-equivariant-support-filtered-extension-by-zero} identifies the
+inner colimit, as a $G$-module, with $H^q_\Phi(X,\mathcal A)$. This gives
+(\ref{equation-equivariant-support-usual-second-page}) and completes the
+proof.
+\end{proof}

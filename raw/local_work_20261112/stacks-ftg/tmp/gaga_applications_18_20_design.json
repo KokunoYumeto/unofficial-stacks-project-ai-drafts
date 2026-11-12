@@ -1,0 +1,258 @@
+{
+  "schema": "gaga-stacks-applications-18-20-design-v1",
+  "audit_date": "2026-08-24",
+  "status": "INDEPENDENT_AUDIT_CORRECTED_STATIC_PASS",
+  "scope": {
+    "repository": "user/Documents/stacks-ftg",
+    "source_section": "GAGA Section 4, nos. 18-20",
+    "unit_ids": [
+      "gaga:no:18",
+      "gaga:prop:12",
+      "gaga:prop:12:cor",
+      "gaga:remark:18",
+      "gaga:no:19",
+      "gaga:prop:13",
+      "gaga:prop:14",
+      "gaga:prop:15",
+      "gaga:prop:15:cor",
+      "gaga:no:20",
+      "gaga:prop:16",
+      "gaga:prop:17",
+      "gaga:prop:18",
+      "gaga:prop:18:remarks",
+      "gaga:prop:19",
+      "gaga:prop:20",
+      "gaga:condition:R"
+    ],
+    "write_boundary": [
+      "user/Documents/stacks-ftg/tmp/gaga_applications_18_20_design.json",
+      "user/Documents/stacks-ftg/tmp/gaga_applications_18_20_candidate.tex"
+    ]
+  },
+  "evidence": {
+    "controlling_source_component": {
+      "path": "user/Documents/stacks-ftg/gaga_source_r1/english_source_aligned_workpass/components/05_applications_nos18_20.tex",
+      "bytes": 16586,
+      "sha256": "57A91545836BD1CF09BB66BA8C1BE02227E46D0DEB20B8F4A27D55D4086402F3"
+    },
+    "predecessor_map": {
+      "path": "user/Documents/stacks-ftg/gaga_r2/map.csv",
+      "bytes": 66689,
+      "sha256": "9A94D3697176BCB177D830A1856ADB5F7E131FC3C91BE3DD8593E9F417DBA3B2"
+    },
+    "predecessor_units": {
+      "path": "user/Documents/stacks-ftg/gaga_r2/units.csv",
+      "bytes": 60100,
+      "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+    },
+    "candidate": {
+      "path": "user/Documents/stacks-ftg/tmp/gaga_applications_18_20_candidate.tex",
+      "bytes": 16516,
+      "sha256": "393BBF45B93F0CC25AD267DB2E7ED2502B5943887E82A2CCEDBB95B71FF67F8F",
+      "labels": 20,
+      "lines": 422
+    }
+  },
+  "independent_audit": {
+    "result": "PASS_AFTER_CORRECTION",
+    "mapping_coverage": {
+      "current_map_needs_review_rows": 17,
+      "projected_rows": 17,
+      "unique_unit_ids": 17,
+      "missing_unit_ids": [],
+      "extra_unit_ids": [],
+      "excluded_structural_row": "gaga:section:4"
+    },
+    "source_spans_checked": {
+      "gaga:no:18": "3-79",
+      "gaga:prop:12": "16-63",
+      "gaga:prop:12:cor": "68-74",
+      "gaga:remark:18": "76-79",
+      "gaga:no:19": "81-128",
+      "gaga:prop:13": "85-100",
+      "gaga:prop:14": "104-116",
+      "gaga:prop:15": "118-125",
+      "gaga:prop:15:cor": "127-128",
+      "gaga:no:20": "130-376",
+      "gaga:prop:16": "158-183",
+      "gaga:prop:17": "198-203",
+      "gaga:prop:18": "205-233",
+      "gaga:prop:18:remarks": "235-250",
+      "gaga:prop:19": "262-311",
+      "gaga:prop:20": "316-376",
+      "gaga:condition:R": "320-321"
+    },
+    "used_predecessor_contract_labels": {
+      "component_01_live": [
+        "gaga-theorem-oka-cartan-coherence"
+      ],
+      "component_02_sealed": [
+        "gaga-theorem-analytification-local-faithfully-flat",
+        "gaga-proposition-proper-if-and-only-if-compact-analytification",
+        "gaga-proposition-image-closure",
+        "gaga-proposition-algebraic-graph-holomorphic-regular"
+      ],
+      "component_03_proposed": [
+        "gaga-theorem-gaga-cohomology",
+        "gaga-theorem-gaga-fully-faithful",
+        "gaga-theorem-gaga-essential-surjectivity"
+      ],
+      "component_04_integration_anchor": "gaga-section-completion-gaga-essential-surjectivity"
+    },
+    "exact_live_stacks_labels": [
+      "coherent-lemma-flat-base-change-cohomology",
+      "flat-theorem-nagata",
+      "limits-lemma-chow-finite-type",
+      "sites-cohomology-section-h1-torsors",
+      "cohomology-lemma-torsors-h1",
+      "algebra-proposition-ffdescent-finite-projectivity",
+      "algebra-theorem-projective-free-over-local-ring"
+    ],
+    "static_checks": {
+      "environment_pairs": "corollary 2/2; definition 2/2; proof 11/11; proposition 8/8; reference 13/13; remark 3/3; theorem 1/1",
+      "double_dollar_tokens": 38,
+      "brace_final_depth": 0,
+      "labels_total": 20,
+      "labels_unique": 20,
+      "unresolved_references": 0,
+      "live_full_label_collisions": 0
+    },
+    "corrected_claims": [
+      "Replaced the false attribution of the Betti-number formula to Dolbeault theory for arbitrary compact complex manifolds by projective analytification being compact Kahler and Hodge decomposition, and stated the comparison of algebraic and holomorphic differential forms.",
+      "Descended radicality and equality of embedded reduced subspaces through the faithfully flat analytic local rings in Chow's theorem.",
+      "Reduced the Chow-lemma alteration explicitly, proved it projective, and used the sealed image-closure result plus uniqueness of reduced analytic structure on a closed analytic set.",
+      "Used the sealed algebraic-graph regularity proposition for algebraization of holomorphic maps and the compactness criterion for properness in the uniqueness corollary.",
+      "Restricted the GL_n stalk argument to closed points, descended finite projectivity, used freeness over a local ring, and globalized through the Jacobson property.",
+      "Restored the omitted second remark after Proposition 18 and the open bijectivity boundary attached to Proposition 20."
+    ]
+  },
+  "conclusion": {
+    "needs_review_units": 17,
+    "substantive_units": 17,
+    "true_statement_gaps_before": 12,
+    "historical_or_container_units": 5,
+    "true_statement_gaps_after_integration": 0,
+    "recommendation": "Append the candidate after the completed proofs of GAGA Theorems 1-3 and before the unique terminal input of the chapter list; then build, render, scan, and project all seventeen decisions in one no-overwrite mapping successor."
+  },
+  "explicit_external_inputs": [
+    "Compatibility of algebraic Kahler differentials with holomorphic differential forms on smooth analytifications.",
+    "Projective analytifications are compact Kahler and satisfy Hodge decomposition; the Betti-number formula is not asserted for arbitrary compact complex manifolds.",
+    "Compatibility of analytification with finite limits, graphs, proper images, and associated bundles.",
+    "The elementary analytic fact that a compact subset of a Hausdorff compactification is closed.",
+    "A reduced closed analytic subspace is determined by its underlying closed analytic set.",
+    "The extension theorem for embeddings of fields algebraic over Q into C.",
+    "Rosenlicht's rational-section theorem and rational symplectic Gram-Schmidt occur only in the examples remark and are not used by the comparison propositions."
+  ],
+  "projected_mapping_transaction": [
+    {
+      "unit_id": "gaga:no:18",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-subsection-gaga-betti-numbers", "gaga-proposition-conjugate-smooth-projective-betti-numbers"],
+      "rationale": "The application section defines conjugation and proves invariance of Betti numbers via flat base change, GAGA cohomology, and Dolbeault."
+    },
+    {
+      "unit_id": "gaga:prop:12",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-conjugate-smooth-projective-betti-numbers"],
+      "rationale": "Exact modern scheme-theoretic form of Proposition 12 with all analytic input named."
+    },
+    {
+      "unit_id": "gaga:prop:12:cor",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-corollary-number-field-embeddings-betti-numbers"],
+      "rationale": "The number-field embedding corollary follows from conjugation by an automorphism of C."
+    },
+    {
+      "unit_id": "gaga:remark:18",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-remark-conjugate-varieties-historical"],
+      "rationale": "The historical non-isomorphism observation and homeomorphism question are preserved and isolated from the proof."
+    },
+    {
+      "unit_id": "gaga:no:19",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-subsection-gaga-chow", "gaga-theorem-chow-closed-analytic-projective"],
+      "rationale": "The Chow and algebraicity subsection assembles Propositions 13-15 and their corollary."
+    },
+    {
+      "unit_id": "gaga:prop:13",
+      "disposition": "existing_stronger",
+      "labels": ["gaga-theorem-chow-closed-analytic-projective"],
+      "rationale": "The candidate proves the source theorem for every projective algebraic variety, not only projective space; a coherent analytic ideal is algebraized by essential surjectivity and full faithfulness."
+    },
+    {
+      "unit_id": "gaga:prop:14",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-compact-analytic-subspace-algebraic"],
+      "rationale": "Compact analytic subspaces are reduced to projective Chow by compactification and Chow's lemma."
+    },
+    {
+      "unit_id": "gaga:prop:15",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-holomorphic-map-from-proper-is-regular"],
+      "rationale": "The graph of a holomorphic map from a proper variety is compact analytic and hence algebraic."
+    },
+    {
+      "unit_id": "gaga:prop:15:cor",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-corollary-compact-analytic-space-unique-algebraization"],
+      "rationale": "An analytic isomorphism between proper algebraizations and its inverse are regular."
+    },
+    {
+      "unit_id": "gaga:no:20",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-subsection-gaga-principal-bundles", "gaga-definition-principal-bundle-analytification-map"],
+      "rationale": "The algebraic and analytic H1 pointed sets and the analytification map are defined using torsors."
+    },
+    {
+      "unit_id": "gaga:prop:16",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-principal-bundle-analytification-injective"],
+      "rationale": "An analytic bundle isomorphism is a holomorphic section of an algebraic Isom bundle and hence regular."
+    },
+    {
+      "unit_id": "gaga:prop:17",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-additive-principal-bundles-gaga"],
+      "rationale": "Additive torsors are H1 of the structure sheaf and are compared by GAGA cohomology."
+    },
+    {
+      "unit_id": "gaga:prop:18",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-general-linear-principal-bundles-gaga"],
+      "rationale": "GL_n torsors are vector bundles; coherent essential surjectivity plus faithfully flat descent recovers local freeness."
+    },
+    {
+      "unit_id": "gaga:prop:18:remarks",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-remark-line-bundles-gaga"],
+      "rationale": "The Picard consequence and historical Kodaira-Spencer formulation are retained."
+    },
+    {
+      "unit_id": "gaga:prop:19",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-algebraize-reduction-structure-group"],
+      "rationale": "A reduction of an algebraic extended bundle is a section of the associated G/H-bundle and algebraizes by regularity."
+    },
+    {
+      "unit_id": "gaga:prop:20",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-proposition-rational-section-principal-bundles-gaga", "gaga-remark-rational-section-condition-examples"],
+      "rationale": "GL_n algebraization and the reduction proposition prove bijectivity; Serre's examples are recorded separately."
+    },
+    {
+      "unit_id": "gaga:condition:R",
+      "disposition": "existing_equivalent",
+      "labels": ["gaga-definition-rational-section-condition"],
+      "rationale": "Condition (R) is stated as the existence of a rational section of GL_n to GL_n/G."
+    }
+  ],
+  "terminal_condition": {
+    "all_seventeen_units_have_exact_successor_labels": true,
+    "candidate_requires_preceding_components_01_04": true,
+    "integration_anchor": "after gaga-section-completion-gaga-essential-surjectivity and before the unique terminal input of chapters",
+    "live_integration_performed": false,
+    "build_performed": false,
+    "mapping_mutated": false
+  }
+}

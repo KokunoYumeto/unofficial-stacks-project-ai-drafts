@@ -1,0 +1,61 @@
+{
+  "schema": "tohoku-stacks-d1015-independent-review-v1",
+  "formalization_id": "D1015",
+  "status": "STRICT_PASS_FINAL_PROOF",
+  "review_scope": {
+    "unit_id": "tohoku:corollary:2-theorem-5.5.3",
+    "source_page": 209,
+    "candidate_path": "user/Documents/stacks-ftg/tmp/d1015_closed_equivariant_cech_candidate.tex",
+    "candidate_bytes": 6317,
+    "candidate_sha256": "9B9054551D83A227717282F4833AC3D7A764CE39F3994E8C3A6191AD6E638A6A",
+    "design_path": "user/Documents/stacks-ftg/tmp/d1015_p209_formalization_design.json",
+    "design_bytes": 7972,
+    "design_sha256": "57EC230D2B2B64190997BD7CC2D930B167FFC94827CF5D5D1BFA6FEEF6A4B07A"
+  },
+  "authority": {
+    "english_p209_sha256": "62DD780BB16E8B4EC6ABD61FE3CFC097514B4594E597F12A6379074825B348D7",
+    "french_p209_sha256": "1F71BA0E31689B071A44478FDB4B5DB3432ED1012B33D6D0355ADD0A6EB7DB2A",
+    "semantic_r18_nodes_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+    "source_authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+  },
+  "review_history": [
+    {
+      "gate": "independent_type_check",
+      "result": "REJECTED_SUPERSEDED_DRAFT",
+      "finding": "A superseded draft incorrectly claimed that restriction along a closed inclusion preserves injectives by an adjunction. That route and its downstream K(I)-vanishing argument were rejected before live insertion."
+    },
+    {
+      "gate": "independent_hyperderived_proof_check",
+      "result": "STRICT_PASS",
+      "finding": "The final proof instead uses the equivariant sheaf-valued closed-cover resolution, the hyperderived composite-functor spectral-sequence resolution theorem, the ordinary finite/locally-finite closed-cover cohomology calculation, and invariant-acyclic global sections of equivariant injectives. The argument is type-correct and source-faithful."
+    },
+    {
+      "gate": "independent_source_mapping_check",
+      "result": "STRICT_PASS",
+      "finding": "The statement uses exactly the source alternatives: finite closed G-covering, or locally finite closed G-covering on a paracompact space. It includes the spectral sequence, edge behavior, and the formal acyclic degeneration without claiming arbitrary closed-cover cofinality."
+    }
+  ],
+  "mathematical_verdict": {
+    "closed_cover_resolution": "PASS",
+    "hyperderived_type_integrity": "PASS",
+    "equivariant_actions": "PASS",
+    "finite_case": "PASS",
+    "locally_finite_paracompact_case": "PASS",
+    "edge_maps_and_five_term_sequence": "PASS",
+    "acyclic_degeneration": "PASS",
+    "arbitrary_infinite_closed_cover_claim": false,
+    "global_closed_cover_cofinality_claim": false,
+    "analytic_gaga_or_descent_claim": false
+  },
+  "mapping_verdict": {
+    "decision_id": "D001039",
+    "supersedes": "D000593",
+    "disposition": "existing_equivalent",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-definition-equivariant-cech-closed-covering;cohomology-lemma-equivariant-cech-spectral-sequence-closed-covering;cohomology-lemma-equivariant-cech-spectral-sequence-closed-acyclic-cover",
+    "stacks_tags": "",
+    "gap_delta": "28 to 27",
+    "result": "PASS"
+  },
+  "final_verdict": "STRICT_PASS"
+}

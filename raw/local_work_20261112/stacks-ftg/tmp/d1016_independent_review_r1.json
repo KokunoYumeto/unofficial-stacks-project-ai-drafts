@@ -1,0 +1,80 @@
+{
+  "schema": "tohoku-stacks-d1016-independent-review-v1",
+  "formalization_id": "D1016",
+  "status": "STRICT_PASS_MAPPING_ONLY",
+  "review_scope": {
+    "unit_id": "tohoku:corollary:fixed-point-free-g-covering",
+    "source_page": 210,
+    "design_path": "user/Documents/stacks-ftg/tmp/d1016_p210_mapping_design.json",
+    "design_bytes": 7286,
+    "design_sha256": "3F26F8427C2B017E9EC0484160898AC3E3B763D1CBD44A32564B3B267D2765D0",
+    "live_tex_path": "user/Documents/stacks-ftg/cohomology.tex",
+    "live_tex_bytes": 919109,
+    "live_tex_sha256": "81D07AAE646D776C3F0CBAA090EE311100634A2F57EBFC98719C1EC79F4A3082",
+    "new_tex_required": false,
+    "new_pdf_required": false
+  },
+  "authority": {
+    "english_p210_sha256": "58B07E4FC86BEAECC2171136231750A64BD10A5C029844DD54E00E8C89EDDD47",
+    "english_excerpt_sha256": "A48613AF83F96E30BE6E141C1CA22319946EDAB096E85850606ED911B39585C5",
+    "french_p210_sha256": "C459F2FDD52597817AFFA895184F286034F5B24905FB381945AD74850B028A99",
+    "french_excerpt_sha256": "12DB368682FF61DB2D26B15026E28B8E62B4D2F84675ABA0DA4B599314BC84D9",
+    "semantic_r18_nodes_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+    "semantic_row": 246,
+    "semantic_row_sha256": "757CBEC4E1FB3AE94A650029A76BBBB832D1AFCA10031374891730B85843573B",
+    "source_authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+    "predecessor_map_sha256": "776A4553AAC800F8C315EBD13DAFA5F264B814F01783B1945902403CB140978A",
+    "predecessor_receipt_sha256": "68D02635D8DBEB96A3CE2ECDDD11EF7F281F654AB3D8EA9735A476F6133B8D49"
+  },
+  "independent_gates": [
+    {
+      "gate": "source_identity_and_scope",
+      "result": "STRICT_PASS",
+      "finding": "The English and French p.210 units agree on the fixed-point-free hypothesis, intersection acyclicity, three cover alternatives, and canonical cohomology isomorphism. The finite alternative is the finite closed branch inherited from the preceding p.209 closed-cover corollary."
+    },
+    {
+      "gate": "mathematical_derivation",
+      "result": "STRICT_PASS_AFTER_DESIGN_CORRECTION",
+      "finding": "The free-index comparison followed by the appropriate open or closed acyclic-cover edge map is a canonical isomorphism from invariant-cochain cohomology to equivariant sheaf cohomology; its inverse is the source-displayed direction. An earlier design sentence reversed one arrow, and the final design corrects it."
+    },
+    {
+      "gate": "mapping_and_counts",
+      "result": "STRICT_PASS",
+      "finding": "D001040 is the next decision, supersedes D000907, preserves the prior two labels while appending the D1015 closed-acyclic label, changes existing_weaker to existing_equivalent, and reduces gap-class dispositions from 27 to 26."
+    },
+    {
+      "gate": "write_boundary",
+      "result": "STRICT_PASS",
+      "finding": "The exact source corollary is already a formal consequence of bound live statements. No TeX, PDF, render, bilingual source, semantic-node, or source-correction mutation is warranted."
+    }
+  ],
+  "dependency_verdict": {
+    "open_acyclic_cover": {
+      "label": "cohomology-lemma-equivariant-cech-spectral-sequence-acyclic-cover",
+      "block_sha256": "8A33199D8B55FD566EE9545D12169D4D997E2956B1B5615146FC827B92C74A4C",
+      "result": "PASS"
+    },
+    "free_index": {
+      "label": "cohomology-lemma-equivariant-cech-free-index",
+      "block_sha256": "CC3010C8DAF60E918BB5C12958FEE5CF17C8EBFE6AEC7FDEB3C795F465AF8C96",
+      "result": "PASS"
+    },
+    "closed_acyclic_cover": {
+      "label": "cohomology-lemma-equivariant-cech-spectral-sequence-closed-acyclic-cover",
+      "block_sha256": "8EBECB185A3B5D2EEE5D29FD008E2256B230C360F34A6656F12321E13143D180",
+      "result": "PASS"
+    }
+  },
+  "mapping_verdict": {
+    "decision_id": "D001040",
+    "supersedes": "D000907",
+    "unit_id": "tohoku:corollary:fixed-point-free-g-covering",
+    "disposition": "existing_equivalent",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-lemma-equivariant-cech-spectral-sequence-acyclic-cover;cohomology-lemma-equivariant-cech-free-index;cohomology-lemma-equivariant-cech-spectral-sequence-closed-acyclic-cover",
+    "stacks_tags": "",
+    "gap_delta": "27 to 26",
+    "result": "PASS"
+  },
+  "final_verdict": "STRICT_PASS_NO_LIVE_SOURCE_CHANGE"
+}

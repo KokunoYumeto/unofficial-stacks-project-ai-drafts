@@ -1,0 +1,744 @@
+{
+  "schema": "tohoku-stacks-d1011-formalization-check-v1",
+  "formalization_id": "D1011",
+  "overall_result": "STRICT_PASS",
+  "serialization": {
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "indentation": 2,
+    "terminal_newline": true
+  },
+  "scope": {
+    "source_reference": "Tohoku, Chapter IV, Section 4.3, printed p. 193",
+    "live_inserted_lines": {
+      "start": 15130,
+      "end": 15411
+    },
+    "authority_boundary": "This receipt binds the corrected p.193 bilingual source, its existing admitted repair, the independently audited D1011 design, the exact revised TeX insertion, fixed-point build products, strict PDF QA, the final scanner oracle, and the three intended successor mapping closures.",
+    "exclusions": [
+      "No mapping ledger mutation is claimed by this receipt.",
+      "No new source repair is claimed.",
+      "No Git, GitHub, publication, cleanup, archive, or broad-scan action is claimed."
+    ]
+  },
+  "corrected_source": {
+    "english_p193": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/en/p193.tex",
+      "bytes": 4186,
+      "sha256": "E12D0413BAB9D7C66916AFCACF28757C5D4BE8A569AF0892D79AF9F6B67D4858"
+    },
+    "corrected_french_p193": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r18/src/fr/p193.tex",
+      "bytes": 4381,
+      "sha256": "9EB244D7FC0BA1C69C778560677BE83F48880E027905A4E34D197FF5EA1B6906"
+    },
+    "corrected_initial_term": "\\mathrm{Ext}_K^p(\\mathrm{Tor}_{q'}^O(K,M),H^{q''}(U,A)).",
+    "corrected_initial_term_occurrences": {
+      "english": 1,
+      "french": 1
+    }
+  },
+  "existing_source_repair": {
+    "family": {
+      "decision_id": "TOH-P193-COR-001",
+      "state": "active",
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p193_r1/decisions.jsonl",
+      "bytes": 4460,
+      "sha256": "DB247240625B2A3606364FF65873293DA7C41C2B28A9907576C46DFA461D4C39",
+      "exact_id_records": 1
+    },
+    "root_corrections": {
+      "decision_ids": [
+        "TOH-SRC-P193-001",
+        "TOH-SRC-P193-002",
+        "TOH-SRC-P193-003",
+        "TOH-SRC-P193-004",
+        "TOH-SRC-P193-005"
+      ],
+      "required_state": "active",
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/SOURCE_CORRECTIONS.jsonl",
+      "bytes": 209932,
+      "sha256": "0C9A8424C88DCF4F474ACF5EE7F8C0F8F51D0B1D1F1482E04B57ECD43DC80429",
+      "exact_id_records_each": 1
+    },
+    "mathematical_binding": "The quotient spectral-sequence initial term uses Tor over the original ring, represented in the formalization as Tor_a^R(S,M), not the diplomatic erroneous quotient-ring superscript.",
+    "new_source_repair_required": false
+  },
+  "design_inputs": {
+    "design_audit": {
+      "path": "user/Documents/stacks-ftg/tmp/d1011_design_audit.json",
+      "bytes": 6027,
+      "sha256": "74D76A31F65848F8B995E31CB5221427603EADB5B04A08157527E4DBCC64E327",
+      "schema": "tohoku-stacks-d1011-design-audit-v1",
+      "status": "STRICT_PASS"
+    },
+    "mapping_design": {
+      "path": "user/Documents/stacks-ftg/tmp/d1011_mapping_design.json",
+      "bytes": 8047,
+      "sha256": "2DAAC51DFD5039C6F1B47B277BED34FECA5D76CEFB44BDE1045FB0365E2DBA4E",
+      "schema": "tohoku-stacks-d1011-mapping-design-v1",
+      "status": "STRICT_PASS"
+    },
+    "design_candidate_identity": {
+      "bytes": 10924,
+      "sha256": "EC0D7CDD7E3D04925D992EBA671835AD46004D029DDDA0AAEAD8BEE92E3F800D",
+      "lines": 278
+    },
+    "layout_only_revision": {
+      "reason": "The fixed-point PDF audit found a 15.01082 pt overfull display; only that display was split with an aligned environment.",
+      "design_fragment": {
+        "lines": [
+          "$$",
+          "\\colim_{U \\in \\mathcal{N}_x}",
+          "\\Ext_S^p(\\text{Tor}_a^R(S, M), H^b(U, \\mathcal{A}))",
+          "\\longrightarrow",
+          "\\Ext_S^p\\left(\\text{Tor}_a^R(S, M),",
+          "\\colim_{U \\in \\mathcal{N}_x}H^b(U, \\mathcal{A})\\right)",
+          "$$"
+        ],
+        "bytes": 194,
+        "sha256": "281866D2FBC4AA4F10B5689C36219FBBF7131006A0D6CAD3E5F45D10CBF592D8"
+      },
+      "revised_fragment": {
+        "lines": [
+          "$$",
+          "\\begin{aligned}",
+          "&",
+          "\\colim_{U \\in \\mathcal{N}_x}",
+          "\\Ext_S^p(\\text{Tor}_a^R(S, M), H^b(U, \\mathcal{A}))",
+          "\\\\",
+          "&\\qquad\\longrightarrow",
+          "\\Ext_S^p\\left(\\text{Tor}_a^R(S, M),",
+          "\\colim_{U \\in \\mathcal{N}_x}H^b(U, \\mathcal{A})\\right)",
+          "\\end{aligned}",
+          "$$"
+        ],
+        "bytes": 236,
+        "sha256": "F31FD3343B8418F816F43249C8145F5B1D95E80EE33DABA01E0B50E48CEF55EE"
+      },
+      "revised_fragment_occurrences": 1,
+      "reverse_reconstruction": {
+        "bytes": 10924,
+        "sha256": "EC0D7CDD7E3D04925D992EBA671835AD46004D029DDDA0AAEAD8BEE92E3F800D",
+        "lines": 278
+      }
+    }
+  },
+  "formalization_artifacts": {
+    "revised_candidate": {
+      "path": "user/Documents/stacks-ftg/tmp/d1011_block_candidate.tex",
+      "bytes": 10966,
+      "sha256": "4AD32E4AB5A76973B0175663578654BB410714709BC720815286FC2EB185C90F",
+      "lines": 282,
+      "terminal_lf": true
+    },
+    "live_source": {
+      "path": "user/Documents/stacks-ftg/cohomology.tex",
+      "bytes": 895363,
+      "sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C",
+      "lines": 24283,
+      "terminal_lf": true
+    },
+    "exact_insertion": {
+      "candidate_occurrences_in_live": 1,
+      "start_line": 15130,
+      "end_line": 15411,
+      "extracted_line_array_exact": true,
+      "predecessor_after_exact_removal": {
+        "bytes": 884397,
+        "sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914"
+      },
+      "live_size_equals_predecessor_plus_candidate": true
+    },
+    "tex_audit": {
+      "labels": [
+        "lemma-constant-sheaf-ext-stalk-spectral-sequences",
+        "equation-constant-sheaf-ext-stalk-first-spectral-sequence",
+        "equation-constant-sheaf-ext-stalk-quotient-spectral-sequence",
+        "equation-constant-sheaf-ext-stalk-colimit",
+        "lemma-constant-sheaf-ext-stalk-comparison",
+        "equation-constant-sheaf-ext-stalk-comparison",
+        "lemma-constant-sheaf-ext-stalk-noetherian-quotient"
+      ],
+      "labels_count": 7,
+      "labels_unique": true,
+      "candidate_definitions_each": 1,
+      "live_definitions_each": 1,
+      "total_references": 13,
+      "unique_references": 11,
+      "unresolved_references": 0,
+      "begin_environments": 16,
+      "end_environments": 16,
+      "environment_nesting_errors": 0,
+      "display_math_delimiters": 32,
+      "display_math_parity_even": true
+    }
+  },
+  "fixed_point_build": {
+    "aux": {
+      "path": "user/Documents/stacks-ftg/cohomology.aux",
+      "bytes": 55737,
+      "sha256": "B1FEE5DE94943B31172924636BC993DA20810B39A6870DB657E524922F276A5A"
+    },
+    "out": {
+      "path": "user/Documents/stacks-ftg/cohomology.out",
+      "bytes": 12488,
+      "sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"
+    },
+    "toc": {
+      "path": "user/Documents/stacks-ftg/cohomology.toc",
+      "bytes": 5477,
+      "sha256": "11C1E5D0C1E3C64A0FA0E7F99A39E039AA9A1BE18BD251BBDAD3C9DEAB5F390B"
+    },
+    "pdf": {
+      "path": "user/Documents/stacks-ftg/cohomology.pdf",
+      "bytes": 1952425,
+      "sha256": "0A8435C4E6D6FD17CEEC99E19AD67040270EE1BEE66DBA109E68D1D0414D0244",
+      "pages": 234
+    },
+    "log": {
+      "path": "user/Documents/stacks-ftg/cohomology.log",
+      "bytes": 47609,
+      "sha256": "984DC85A8873891F9AD3CE236D9602F75A66B0192CF85F55A5F26DB8A6E3EAE1"
+    },
+    "aux_label_pages": {
+      "lemma-constant-sheaf-ext-stalk-spectral-sequences": 145,
+      "equation-constant-sheaf-ext-stalk-first-spectral-sequence": 145,
+      "equation-constant-sheaf-ext-stalk-quotient-spectral-sequence": 145,
+      "equation-constant-sheaf-ext-stalk-colimit": 146,
+      "lemma-constant-sheaf-ext-stalk-comparison": 146,
+      "equation-constant-sheaf-ext-stalk-comparison": 146,
+      "lemma-constant-sheaf-ext-stalk-noetherian-quotient": 147
+    },
+    "next_section_page": 148,
+    "fixed_point_log_evidence": "Package rerunfilecheck Info: File `cohomology.out' has not changed."
+  },
+  "pdf_and_log_qa": {
+    "parser": {
+      "engine": "pypdf",
+      "version": "6.12.2",
+      "strict": true,
+      "pdf_header": "%PDF-1.5",
+      "encrypted": false,
+      "pages": 234,
+      "page_tree_count": 234,
+      "pages_parsed": 234,
+      "content_streams_parsed": 234,
+      "content_decoded_bytes": 4437426,
+      "text_pages_parsed": 234,
+      "text_chars": 512205,
+      "all_pages_have_text": true,
+      "uniform_media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotations": [
+        0
+      ],
+      "xref_objects_parsed": 4213,
+      "xref_stream_objects_decoded": 298,
+      "trailer_keys": [
+        "/ID",
+        "/Info",
+        "/Root",
+        "/Size"
+      ],
+      "trailer_size": 4224,
+      "root_type": "/Catalog",
+      "eof_marker_count": 1,
+      "trailing_whitespace_bytes": 1,
+      "startxref": 1867778,
+      "startxref_target_valid": true,
+      "page_errors": 0,
+      "content_stream_errors": 0,
+      "text_errors": 0,
+      "box_errors": 0,
+      "rotation_errors": 0,
+      "xref_errors": 0,
+      "result": "STRICT_PASS"
+    },
+    "log_audit": {
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "rerun_requests": 0,
+      "fatal_or_latex_errors": 0,
+      "multiply_defined": 0,
+      "total_box_diagnostics": 36,
+      "overfull": 36,
+      "underfull": 0,
+      "source_located_box_diagnostics": 33,
+      "d1011_intersecting_box_diagnostics": 0,
+      "range": {
+        "start": 15130,
+        "end": 15411
+      },
+      "result": "STRICT_PASS"
+    },
+    "visual_audit": {
+      "render_method": "pdftoppm 180 dpi PNG followed by view_image inspection of every page",
+      "pages": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "width": 1530,
+      "height": 1980,
+      "dpi": 180,
+      "files": [
+        {
+          "page": 144,
+          "path": "user/Documents/stacks-ftg/tmp/d1011_render/cohomology-d1011-144.png",
+          "bytes": 382629,
+          "sha256": "7AB7F944D486500B4198FB2D3773DA4161A2A7199113B5E2D799026227D311DA"
+        },
+        {
+          "page": 145,
+          "path": "user/Documents/stacks-ftg/tmp/d1011_render/cohomology-d1011-145.png",
+          "bytes": 375673,
+          "sha256": "04147619760482E3CDF05B5A4E756DF157D2CFB6802EB036D00BB1AACB7136BA"
+        },
+        {
+          "page": 146,
+          "path": "user/Documents/stacks-ftg/tmp/d1011_render/cohomology-d1011-146.png",
+          "bytes": 387064,
+          "sha256": "D277E081B535E9771E4F97BA701719B926B2577DD949FFD72D01F046C74E09A9"
+        },
+        {
+          "page": 147,
+          "path": "user/Documents/stacks-ftg/tmp/d1011_render/cohomology-d1011-147.png",
+          "bytes": 425290,
+          "sha256": "0357C7A5D6983A8D88989E5C1FF6CC8C6CB3F02F01491A915A0397C24A8FC7BF"
+        },
+        {
+          "page": 148,
+          "path": "user/Documents/stacks-ftg/tmp/d1011_render/cohomology-d1011-148.png",
+          "bytes": 336245,
+          "sha256": "C61BEC5B4A0306EF39BA7323F615DBD333F9C5FA205C3DE204A474E4D1ECFCD1"
+        },
+        {
+          "page": 149,
+          "path": "user/Documents/stacks-ftg/tmp/d1011_render/cohomology-d1011-149.png",
+          "bytes": 391281,
+          "sha256": "52BDF0F31FB6BB721E9C12BBF8F946DD21052D5342BB45C71108B6D21B616FD2"
+        }
+      ],
+      "total_bytes": 2298182,
+      "manifest_serialization": "filename,bytes,SHA256 joined by LF in ascending filename order",
+      "manifest_sha256": "90E06341B4EC52C21F82DE3C8C6A986A80077AB4596A0F0E74D9F4023822C4DC",
+      "checks": {
+        "clipping": 0,
+        "overlap": 0,
+        "broken_glyphs": 0,
+        "equation_overflow": 0,
+        "margin_violations": 0,
+        "bad_page_breaks": 0,
+        "seam_defects": 0
+      },
+      "corrected_display_page": 146,
+      "result": "STRICT_PASS"
+    }
+  },
+  "scanner_oracle": {
+    "baseline": {
+      "path": "user/Documents/stacks-ftg/tmp/d1010_scan",
+      "files": {
+        "cfg.json": {
+          "bytes": 5151,
+          "sha256": "17AE218F11DEF95A76ADF0BD2A447B21150A3BAFF9D1209EC1C1FDFAA51D110A"
+        },
+        "check.json": {
+          "bytes": 80068,
+          "sha256": "648438CCAB8D80F28B80E36BFA44378A1655AAB51CD4B0EE347CBA6B2121459B"
+        },
+        "stx.csv": {
+          "bytes": 5281636,
+          "sha256": "A6A16E837DF3B59C348CB88348FA9FC88F6C0703B78AF97FBACFA7B8254CFEC1"
+        },
+        "tcand.csv": {
+          "bytes": 489206,
+          "sha256": "C07DE868C2A467B75DB00C31DE10A6AE5C1AD5F71D629641CF1840B151FDB22A"
+        },
+        "tmap.csv": {
+          "bytes": 2424,
+          "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+        },
+        "topics.csv": {
+          "bytes": 2453,
+          "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+        }
+      },
+      "counts": {
+        "labels": 22080,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topic_coverage_direct": 13,
+        "topics": 13,
+        "warnings": 652,
+        "errors": 0
+      },
+      "cohomology_tex_sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914"
+    },
+    "final": {
+      "path": "user/Documents/stacks-ftg/tmp/d1011_scan",
+      "files": {
+        "cfg.json": {
+          "bytes": 5151,
+          "sha256": "17AE218F11DEF95A76ADF0BD2A447B21150A3BAFF9D1209EC1C1FDFAA51D110A"
+        },
+        "check.json": {
+          "bytes": 80879,
+          "sha256": "798607A517735BC50C77356894D9089D9218DC0A2B5D49DB073347C455615EDD"
+        },
+        "stx.csv": {
+          "bytes": 5283396,
+          "sha256": "5E22D3B8B976E5BD845BA0CF69D7AB7685C619D39CDEB53DADCF9A269798BB9D"
+        },
+        "tcand.csv": {
+          "bytes": 488729,
+          "sha256": "4AA8FDD23C221B7663B1FDB5B61F7F6F4B65BEA89346D2881713C5A5AFDB8DAC"
+        },
+        "tmap.csv": {
+          "bytes": 2424,
+          "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+        },
+        "topics.csv": {
+          "bytes": 2453,
+          "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+        }
+      },
+      "status": "PASS",
+      "counts": {
+        "labels": 22087,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topic_coverage_direct": 13,
+        "topics": 13,
+        "warnings": 659,
+        "errors": 0
+      },
+      "cohomology_tex_sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+    },
+    "deltas": {
+      "labels": 7,
+      "official_tags_joined": 0,
+      "tex_files": 0,
+      "topic_candidates": 0,
+      "topic_coverage_direct": 0,
+      "topics": 0,
+      "warnings": 7,
+      "errors": 0,
+      "check.json_bytes": 811,
+      "stx.csv_bytes": 1760,
+      "tcand.csv_bytes": -477,
+      "tmap.csv_bytes": 0,
+      "topics.csv_bytes": 0
+    },
+    "new_scanner_labels": [
+      "cohomology-lemma-constant-sheaf-ext-stalk-spectral-sequences",
+      "cohomology-equation-constant-sheaf-ext-stalk-first-spectral-sequence",
+      "cohomology-equation-constant-sheaf-ext-stalk-quotient-spectral-sequence",
+      "cohomology-equation-constant-sheaf-ext-stalk-colimit",
+      "cohomology-lemma-constant-sheaf-ext-stalk-comparison",
+      "cohomology-equation-constant-sheaf-ext-stalk-comparison",
+      "cohomology-lemma-constant-sheaf-ext-stalk-noetherian-quotient"
+    ],
+    "new_scanner_label_occurrences_each": 1,
+    "new_warnings": [
+      "TeX label has no official tag in this snapshot: cohomology-lemma-constant-sheaf-ext-stalk-spectral-sequences",
+      "TeX label has no official tag in this snapshot: cohomology-equation-constant-sheaf-ext-stalk-first-spectral-sequence",
+      "TeX label has no official tag in this snapshot: cohomology-equation-constant-sheaf-ext-stalk-quotient-spectral-sequence",
+      "TeX label has no official tag in this snapshot: cohomology-equation-constant-sheaf-ext-stalk-colimit",
+      "TeX label has no official tag in this snapshot: cohomology-lemma-constant-sheaf-ext-stalk-comparison",
+      "TeX label has no official tag in this snapshot: cohomology-equation-constant-sheaf-ext-stalk-comparison",
+      "TeX label has no official tag in this snapshot: cohomology-lemma-constant-sheaf-ext-stalk-noetherian-quotient"
+    ],
+    "removed_warnings": [],
+    "unchanged_artifacts": [
+      "cfg.json",
+      "tmap.csv",
+      "topics.csv"
+    ]
+  },
+  "intended_mapping_closures": [
+    {
+      "decision_id": "D001028",
+      "supersedes": "D000476",
+      "unit_id": "tohoku:construction:stalk-spectral-sequence-limits",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-constant-sheaf-ext-stalk-spectral-sequences"
+    },
+    {
+      "decision_id": "D001029",
+      "supersedes": "D000490",
+      "unit_id": "tohoku:criterion:stalk-ext-limit-transfer",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-constant-sheaf-ext-stalk-comparison;cohomology-lemma-constant-sheaf-ext-stalk-noetherian-quotient"
+    },
+    {
+      "decision_id": "D001030",
+      "supersedes": "D000332",
+      "unit_id": "tohoku:section:4.3",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-section-ext"
+    }
+  ],
+  "predicates": [
+    {
+      "id": "P001",
+      "claim": "The corrected English and French p.193 source pages have the exact admitted identities and each contains the repaired initial Tor-over-original-ring term once.",
+      "replay": {
+        "operation": "file_identity_and_exact_substring_count",
+        "section": "corrected_source"
+      },
+      "expected": {
+        "identities_match": true,
+        "english_occurrences": 1,
+        "french_occurrences": 1
+      },
+      "observed": {
+        "identities_match": true,
+        "english_occurrences": 1,
+        "french_occurrences": 1
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P002",
+      "claim": "The existing TOH-P193-COR-001 family repair and all five root p.193 corrections exist exactly once and remain active in the exact ledgers.",
+      "replay": {
+        "operation": "jsonl_exact_decision_ids_states_and_file_identities",
+        "section": "existing_source_repair"
+      },
+      "expected": {
+        "family_records": 1,
+        "root_records_each": 1,
+        "all_states": "active"
+      },
+      "observed": {
+        "family_records": 1,
+        "root_records_each": 1,
+        "all_states": "active"
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P003",
+      "claim": "The independent design audit and mapping design have exact identities, D1011 schemas, and STRICT_PASS status.",
+      "replay": {
+        "operation": "json_file_identity_schema_status",
+        "section": "design_inputs"
+      },
+      "expected": {
+        "design_status": "STRICT_PASS",
+        "mapping_status": "STRICT_PASS"
+      },
+      "observed": {
+        "design_status": "STRICT_PASS",
+        "mapping_status": "STRICT_PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P004",
+      "claim": "Reversing the single layout-only aligned fragment in the revised candidate reconstructs the exact independently audited 10,924-byte design candidate.",
+      "replay": {
+        "operation": "single_exact_fragment_reverse_reconstruction",
+        "section": "design_inputs.layout_only_revision",
+        "target": "formalization_artifacts.revised_candidate.path"
+      },
+      "expected": {
+        "fragment_occurrences": 1,
+        "reconstructed_bytes": 10924,
+        "reconstructed_sha256": "EC0D7CDD7E3D04925D992EBA671835AD46004D029DDDA0AAEAD8BEE92E3F800D",
+        "reconstructed_lines": 278
+      },
+      "observed": {
+        "fragment_occurrences": 1,
+        "reconstructed_bytes": 10924,
+        "reconstructed_sha256": "EC0D7CDD7E3D04925D992EBA671835AD46004D029DDDA0AAEAD8BEE92E3F800D",
+        "reconstructed_lines": 278
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P005",
+      "claim": "The revised candidate has its exact identity, balanced environments and math delimiters, seven unique labels, and no unresolved references against the live source.",
+      "replay": {
+        "operation": "tex_candidate_identity_labels_references_and_balance",
+        "section": "formalization_artifacts"
+      },
+      "expected": {
+        "labels": 7,
+        "unique_labels": 7,
+        "live_definitions_each": 1,
+        "unresolved_references": 0,
+        "environment_nesting_errors": 0,
+        "display_math_parity_even": true
+      },
+      "observed": {
+        "labels": 7,
+        "unique_labels": 7,
+        "live_definitions_each": 1,
+        "unresolved_references": 0,
+        "environment_nesting_errors": 0,
+        "display_math_parity_even": true
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P006",
+      "claim": "The revised candidate occurs exactly once in live cohomology.tex at lines 15130-15411, and exact removal reconstructs the 884,397-byte predecessor byte-for-byte.",
+      "replay": {
+        "operation": "exact_subsequence_line_range_and_predecessor_reconstruction",
+        "section": "formalization_artifacts"
+      },
+      "expected": {
+        "occurrences": 1,
+        "start_line": 15130,
+        "end_line": 15411,
+        "predecessor_bytes": 884397,
+        "predecessor_sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914"
+      },
+      "observed": {
+        "occurrences": 1,
+        "start_line": 15130,
+        "end_line": 15411,
+        "predecessor_bytes": 884397,
+        "predecessor_sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914"
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P007",
+      "claim": "The fixed-point aux/out/toc/PDF/log identities match and all seven D1011 labels resolve on pages 145-147 before the page-148 section seam.",
+      "replay": {
+        "operation": "fixed_point_file_identities_aux_labels_and_log_stability",
+        "section": "fixed_point_build"
+      },
+      "expected": {
+        "identities_match": true,
+        "label_pages_match": true,
+        "next_section_page": 148,
+        "out_unchanged_evidence": true
+      },
+      "observed": {
+        "identities_match": true,
+        "label_pages_match": true,
+        "next_section_page": 148,
+        "out_unchanged_evidence": true
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P008",
+      "claim": "The full final log has no undefined references or citations, rerun request, fatal error, multiply-defined label, or box diagnostic intersecting D1011 lines 15130-15411.",
+      "replay": {
+        "operation": "full_log_regex_and_box_range_audit",
+        "section": "pdf_and_log_qa.log_audit"
+      },
+      "expected": {
+        "blocking_diagnostics": 0,
+        "d1011_intersecting_box_diagnostics": 0
+      },
+      "observed": {
+        "blocking_diagnostics": 0,
+        "d1011_intersecting_box_diagnostics": 0
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P009",
+      "claim": "Strict pypdf parsing succeeds for every page, page content stream, text extraction, page box, rotation, trailer, xref object, stream object, startxref target, and terminal EOF.",
+      "replay": {
+        "operation": "strict_full_pdf_parse",
+        "section": "pdf_and_log_qa.parser"
+      },
+      "expected": {
+        "parser_errors": 0,
+        "pages": 234,
+        "xref_objects": 4213,
+        "eof_markers": 1
+      },
+      "observed": {
+        "parser_errors": 0,
+        "pages": 234,
+        "xref_objects": 4213,
+        "eof_markers": 1
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P010",
+      "claim": "The exact post-fix page 144-149 render set is bound to the completed view_image inspection with no clipping, overlap, broken glyph, equation overflow, margin, page-break, or seam defect.",
+      "replay": {
+        "operation": "render_file_identities_manifest_and_bound_manual_attestation",
+        "section": "pdf_and_log_qa.visual_audit"
+      },
+      "expected": {
+        "render_files": 6,
+        "manifest_sha256": "90E06341B4EC52C21F82DE3C8C6A986A80077AB4596A0F0E74D9F4023822C4DC",
+        "visual_defects": 0
+      },
+      "observed": {
+        "render_files": 6,
+        "manifest_sha256": "90E06341B4EC52C21F82DE3C8C6A986A80077AB4596A0F0E74D9F4023822C4DC",
+        "visual_defects": 0
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P011",
+      "claim": "The final D1011 scanner oracle has exact identities and differs from D1010 by exactly seven labels and their seven no-official-tag warnings, with no unrelated count drift.",
+      "replay": {
+        "operation": "scanner_file_identities_check_json_delta_warning_set_and_label_rows",
+        "section": "scanner_oracle"
+      },
+      "expected": {
+        "status": "PASS",
+        "new_labels": 7,
+        "new_warnings": 7,
+        "removed_warnings": 0,
+        "unrelated_count_drift": 0
+      },
+      "observed": {
+        "status": "PASS",
+        "new_labels": 7,
+        "new_warnings": 7,
+        "removed_warnings": 0,
+        "unrelated_count_drift": 0
+      },
+      "result": "PASS"
+    },
+    {
+      "id": "P012",
+      "claim": "Design audit and mapping design agree exactly on the three intended closures D001028, D001029, and D001030, including superseded decisions, units, dispositions, and target labels.",
+      "replay": {
+        "operation": "cross_json_planned_closure_consistency",
+        "section": "intended_mapping_closures"
+      },
+      "expected": {
+        "closures": 3,
+        "consistent": 3
+      },
+      "observed": {
+        "closures": 3,
+        "consistent": 3
+      },
+      "result": "PASS"
+    }
+  ],
+  "predicate_summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "rule": "overall_result is STRICT_PASS iff every predicate replays PASS from the bound live files"
+  },
+  "errors": []
+}

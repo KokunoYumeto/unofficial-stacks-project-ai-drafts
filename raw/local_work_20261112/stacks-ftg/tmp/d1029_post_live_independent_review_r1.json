@@ -1,0 +1,249 @@
+{
+  "schema": "tohoku-stacks-d1029-post-live-independent-review-v1",
+  "formalization_id": "D1029",
+  "review_kind": "independent_post_live_math_source_build_and_visual_review",
+  "verdict": "STRICT_PASS",
+  "errors": [],
+  "actionable_edits": [],
+  "write_scope": {
+    "written": [
+      "tmp/d1029_live_pdf_qa/cohomology-144.png",
+      "tmp/d1029_live_pdf_qa/cohomology-145.png",
+      "tmp/d1029_live_pdf_qa/cohomology-146.png",
+      "tmp/d1029_live_pdf_qa/cohomology-147.png",
+      "tmp/d1029_live_pdf_qa/cohomology-148.png",
+      "tmp/d1029_live_pdf_qa/cohomology-terminal-246.png",
+      "tmp/d1029_live_pdf_qa/cohomology-terminal-247.png",
+      "tmp/d1029_live_pdf_qa/cohomology-terminal-248.png",
+      "tmp/d1029_post_live_independent_review_r1.json"
+    ],
+    "live_source_or_mapping_edited": false,
+    "build_rerun": false,
+    "git_used": false,
+    "network_used": false
+  },
+  "bound_inputs": [
+    {
+      "path": "tmp/d1029_ext_center_actions_candidate.tex",
+      "bytes": 3189,
+      "sha256": "6B6566697F349854C1866661952A7AC5487FAFEB473354D4403E27886B3287FA"
+    },
+    {
+      "path": "tmp/d1029_ext_center_math_source_audit.json",
+      "bytes": 14637,
+      "sha256": "35C3ECBD18B1F06036C58723D0B59E1CAD48BE29890E8E0026C0A99280A3EC64",
+      "verdict": "STRICT_PASS"
+    },
+    {
+      "path": "D1029_SOURCE_REPAIR_CHECK.json",
+      "bytes": 23296,
+      "sha256": "E996D56A24B4BCF4776CFE9351F2932E66E9B7ACB3B0493C877DEDCD13C63E02",
+      "status": "PASS_FROZEN_SOURCE_REPAIR_CHAIN"
+    },
+    {
+      "path": "tmp/d1029_mapping_issue_design.json",
+      "bytes": 26920,
+      "sha256": "288CCE3CC12FCA4E499AA2A758BA8A84F95F9844A54A4B30687769E472FE33CC",
+      "design_verdict": "STRICT_PASS_CONDITIONAL_DESIGN"
+    },
+    {
+      "path": "D1028_CHECK.json",
+      "bytes": 14287,
+      "sha256": "82A608B907095F2FBFBBA3BDC2819BFE6AAEBC9294AE474A5A1FF925AFE93BA0",
+      "role": "immediate audited cohomology preimage and pagination baseline"
+    }
+  ],
+  "live_insertion": {
+    "status": "PASS_EXACT_ONCE_AND_CORRECTLY_PLACED",
+    "live_source": {
+      "path": "cohomology.tex",
+      "bytes": 948056,
+      "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+    },
+    "immediate_audited_preimage": {
+      "path": "cohomology.tex",
+      "bytes": 944867,
+      "sha256": "BDAA9A64E5C0FC52A3B55E57E912624591AD093F8B9933EB8200F08EFC9D7F16",
+      "bound_by": "D1028_CHECK.json"
+    },
+    "byte_delta": 3189,
+    "candidate_bytes": 3189,
+    "candidate_exact_text_occurrences": 1,
+    "candidate_byte_offset_zero_based": 559012,
+    "candidate_first_line": 15191,
+    "candidate_last_nonempty_line": 15267,
+    "raw_label": "lemma-ext-center-actions-left-modules",
+    "full_label": "cohomology-lemma-ext-center-actions-left-modules",
+    "label_occurrences": 1,
+    "label_line": 15192,
+    "placement": {
+      "section_anchor": "\\section{Ext sheaves}",
+      "section_anchor_occurrences": 1,
+      "section_anchor_before_candidate": true,
+      "next_anchor": "\\label{lemma-constant-sheaf-ext-double-complex}",
+      "next_anchor_occurrences": 1,
+      "next_anchor_after_candidate": true,
+      "bytes_between_candidate_and_next_lemma_begin": 1,
+      "finding": "The exact candidate follows the Ext-sheaves introduction and immediately precedes the constant-sheaf Ext double-complex lemma."
+    }
+  },
+  "source_correction_fidelity": {
+    "status": "PASS",
+    "canonical_root_relative_to_workspace": "../interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1",
+    "layers": [
+      {
+        "path": "../interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p188_fix1/tex/fr_diplomatic/p188.tex",
+        "bytes": 3890,
+        "sha256": "0C9D3A1133C014C9BB6687580DCFBDE40A87B7FE21E98838BFD820983334D9FF",
+        "printed_false_scalar_phrase_occurrences": 1,
+        "corrected_scalar_phrase_occurrences": 0,
+        "finding": "Diplomatic French preserves the printed centre-of-Gamma(O) wording."
+      },
+      {
+        "path": "../interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p188_fix1/tex/fr_corrected/p188.tex",
+        "bytes": 3619,
+        "sha256": "3CD7D1D8D50DD83627B24AC726EB244E09CAF483890071D68940C551A42ED0CC",
+        "printed_false_scalar_phrase_occurrences": 0,
+        "corrected_Gamma_O_natural_phrase_occurrences": 1
+      },
+      {
+        "path": "../interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p188_fix1/tex/en/p188.tex",
+        "bytes": 3498,
+        "sha256": "A171187600BB72B32FDB4E686D5AC994146BEC8DFC99571F0ACF3C3B1862FA5C",
+        "printed_false_scalar_phrase_occurrences": 0,
+        "corrected_Gamma_O_natural_phrase_occurrences": 1
+      }
+    ],
+    "candidate_fidelity": "The live history accurately records the printed defect; the theorem states Gamma(X,Z_A) globally and Z_A sheafwise, and permits Z(Gamma(X,A)) only under the explicit equality hypothesis."
+  },
+  "mathematical_review": {
+    "status": "STRICT_PASS",
+    "dependency_sources": [
+      {
+        "path": "modules.tex",
+        "bytes": 232828,
+        "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5",
+        "label": "modules-lemma-sheaf-hom-left-modules"
+      },
+      {
+        "path": "injectives.tex",
+        "bytes": 139285,
+        "sha256": "FEBCC2562AB17FEC850FD5FD88086DC3EB90017C007F348207ED93479895A283",
+        "label": "injectives-lemma-sheaves-modules-space"
+      }
+    ],
+    "checks": {
+      "canonical_global_scalar_ring": "PASS_Gamma(X,Z_A)",
+      "sheaf_scalar_ring": "PASS_Z_A",
+      "larger_global_center_guard": "PASS_EXPLICIT_EQUALITY_REQUIRED",
+      "termwise_center_action_and_cohomology": "PASS",
+      "global_Hom_complex_identification": "PASS",
+      "enough_injectives_for_left_modules": "PASS",
+      "naturality": "PASS_CONTRAVARIANT_IN_F_COVARIANT_IN_G",
+      "degree_zero_compatibility": "PASS",
+      "source_defect_not_overclaimed": "PASS"
+    },
+    "finding": "The proof derives the two center actions from the already formalized sheaf-Hom action through an injective resolution, preserves variance and degree-zero compatibility, and never asserts a general action of the larger ring Z(Gamma(X,A))."
+  },
+  "build_audit": {
+    "status": "PASS",
+    "artifacts": {
+      "tex": {
+        "path": "cohomology.tex",
+        "bytes": 948056,
+        "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+      },
+      "pdf": {
+        "path": "cohomology.pdf",
+        "bytes": 2051229,
+        "sha256": "146ADB22B666F2069B794535AA360D2F969F5BC0A2521CA7119AEE6AD728FF8D",
+        "pages": 248,
+        "page_size_pt": "612 x 792",
+        "pdf_version": "1.5",
+        "encrypted": false
+      },
+      "log": {
+        "path": "cohomology.log",
+        "bytes": 48479,
+        "sha256": "327A20C41FA6CF41EA2897F427E0DBB54A6A89E6F2D6B0A3AEFB7C15804E88F5"
+      },
+      "aux": {
+        "path": "cohomology.aux",
+        "bytes": 58856,
+        "sha256": "F05735AE5D9CB1966EE1A4DF4A0C643D3021566286B0F36333C090BF08EFDA50",
+        "label_occurrences": 1,
+        "label_physical_line": 409,
+        "label_row": "\\newlabel{lemma-ext-center-actions-left-modules}{{45.1}{145}{Centre actions on Ext for left modules}{subsection.45.1}{}}",
+        "label_row_bytes_with_lf": 121,
+        "label_row_sha256_with_lf": "BEEDA515338FFBE523F1B805ADFC6BFBEB9B939A37317C5E1A3FBC1874F2FB92"
+      }
+    },
+    "log_diagnostics": {
+      "output_written_summary_occurrences": 1,
+      "tex_bang_error_lines": 0,
+      "latex_errors": 0,
+      "undefined_control_sequences": 0,
+      "emergency_stops": 0,
+      "fatal_errors": 0,
+      "latex_warnings": 0,
+      "package_warnings": 0,
+      "undefined_reference_or_citation_mentions": 0,
+      "rerun_cross_reference_requests": 0,
+      "overfull_hboxes_total": 35,
+      "underfull_hboxes_total": 0,
+      "overfull_vboxes_total": 3,
+      "underfull_vboxes_total": 0,
+      "box_diagnostics_overlapping_source_lines_15191_15267": 0,
+      "baseline_comparison": "D1028_CHECK records the same 35 overfull hboxes and 3 document-level overfull vboxes; D1029 introduced no new box diagnostic."
+    },
+    "strict_reopen": {
+      "pdfinfo_exit_code": 0,
+      "pdftotext_pages_145_146_exit_code": 0,
+      "lemma_title_occurrences_in_extracted_pages": 1,
+      "next_lemma_45_2_occurrences_in_extracted_pages": 1
+    }
+  },
+  "visual_qa": {
+    "status": "STRICT_PASS",
+    "renderer": "pdftoppm 24.04.0",
+    "resolution_dpi": 180,
+    "dimensions_px": "1530x1980",
+    "inserted_lemma_content_pages": [145, 146],
+    "inspected_pages": [144, 145, 146, 147, 148, 246, 247, 248],
+    "terminal_inspection_reason": "The bound D1028 baseline had 247 pages and the current PDF has 248 pages.",
+    "checks": {
+      "clipping": 0,
+      "overlap": 0,
+      "bad_page_breaks": 0,
+      "missing_or_garbled_glyphs": 0,
+      "malformed_math": 0,
+      "header_footer_or_page_number_defects": 0,
+      "terminal_spillover_defects": 0
+    },
+    "render_inventory": {
+      "files": 8,
+      "total_file_bytes": 2969577,
+      "aggregate_algorithm": "filename+NUL+decimal_bytes+NUL+uppercase_sha256+LF in ordinal filename order",
+      "aggregate_manifest_bytes": 755,
+      "aggregate_sha256": "4F935C8CBE5588CDC8702E0D61E3283946053F014A2BD49E2B6D4E76928604FA",
+      "pages": [
+        {"page": 144, "path": "tmp/d1029_live_pdf_qa/cohomology-144.png", "bytes": 357651, "sha256": "9B8F697B7415DE5C22531BD7BECF652003B8317341F50E439DF2D84039A80945"},
+        {"page": 145, "path": "tmp/d1029_live_pdf_qa/cohomology-145.png", "bytes": 330518, "sha256": "54032D8A7BDB8C50CB4F8D5A97A27C6BADF1ED41200C95BE038CD5202055D4EB"},
+        {"page": 146, "path": "tmp/d1029_live_pdf_qa/cohomology-146.png", "bytes": 352087, "sha256": "9CD3CC4BC8B07B6E721EE09C42E41695E01F05495AB077593962ADE3524AA271"},
+        {"page": 147, "path": "tmp/d1029_live_pdf_qa/cohomology-147.png", "bytes": 360653, "sha256": "483B1CD79195C99095864A4F0CAEB08709A45A2C9B10EAD03AE828ECAA7B360A"},
+        {"page": 148, "path": "tmp/d1029_live_pdf_qa/cohomology-148.png", "bytes": 357629, "sha256": "CFFC21E1739BFAE462534A18105CB1167D3B17F4AF5C73FC4EC70ACD758FFDA9"},
+        {"page": 246, "path": "tmp/d1029_live_pdf_qa/cohomology-terminal-246.png", "bytes": 430964, "sha256": "661B0A7075A61F285B0C95FDB4FC737A21117903AF75ABB0B7007F79BCE444E4"},
+        {"page": 247, "path": "tmp/d1029_live_pdf_qa/cohomology-terminal-247.png", "bytes": 554341, "sha256": "7AD16795BEB70A5F8E024119A2617CD5EDA91A9E365C0451844AEA6D86C9524F"},
+        {"page": 248, "path": "tmp/d1029_live_pdf_qa/cohomology-terminal-248.png", "bytes": 225734, "sha256": "759A94BA31FF400A7986D4A2E59C26C731D97EAA3FD747838E51BED1FC6775C6"}
+      ]
+    },
+    "finding": "Pages 144-148 show a clean section transition, complete lemma statement and proof, and normal continuation into Lemma 45.2. Pages 246-248 show complete terminal chapter lists and references after the one-page pagination shift."
+  },
+  "authorization": {
+    "post_live_review_gate": "PASS",
+    "mapping_use": "The final successor may bind this review, subject to its separately required scanner, predecessor, collision, and atomic replay gates.",
+    "terminal_conclusion": "The exact D1029 candidate is present once at the authorized anchor; its corrected source semantics and mathematics are exact; the current cohomology build is clean; and every affected and pagination-sensitive rendered page passes visual inspection."
+  }
+}
+
+

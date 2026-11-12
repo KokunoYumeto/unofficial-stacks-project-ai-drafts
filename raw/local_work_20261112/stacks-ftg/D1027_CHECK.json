@@ -1,0 +1,262 @@
+{
+  "schema": "tohoku-stacks-d1027-check-v1",
+  "formalization_id": "D1027",
+  "status": "STRICT_PASS_PREREQUISITES_R69_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T06:45:14Z",
+  "finalized_utc": "2026-08-24T06:45:14Z",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:classification:equivariant-bundle-extensions",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:93",
+    "predecessor_decision": "D001037",
+    "predecessor_disposition": "new_statement",
+    "predecessor_dossier": "tohoku_r68"
+  },
+  "source_claim": {
+    "summary": "For equivariant holomorphic vector bundles E and F on X, extension classes of E by F correspond naturally to Ext^1_{O_X,G}(X;O(E),O(F)), canonically H^1(X;G,O(E^dual tensor F)).",
+    "structural_refinement": "Compatibility with Baer sum is proved from the additive bundle-module equivalence and is not an unsupported source expansion.",
+    "scope_boundary": [
+      "no quotient descent or quotient-coherence claim",
+      "no compactness or finite-dimensionality claim",
+      "no GAGA comparison",
+      "no higher-Ext classification",
+      "the structural equation child inherits this parent decision and receives no separate decision row"
+    ],
+    "source_repair_required": false,
+    "transcription_or_translation_repair_required": false
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "printed_page": 219,
+      "pdf_page": 35
+    },
+    "semantic_file": {
+      "path": "sem/r18/nodes.csv",
+      "bytes": 585012,
+      "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D"
+    },
+    "semantic_row_with_lf": {
+      "physical_line": 93,
+      "bytes": 752,
+      "sha256": "F0D6F1EB8BD4D8F1ED311FDF6A8E8EEA3ED4A883CF8B5270ED85D09060F494A2"
+    },
+    "occurrence_row_with_lf": {
+      "path": "sem/r18/occ.csv",
+      "physical_line": 986,
+      "bytes": 546,
+      "sha256": "ADF231005630B903E6F8B011EFF5E11943B735DA4E19B0A46B67EE95C827B3CD",
+      "parity": "PASS"
+    },
+    "source_segments": {
+      "diplomatic_and_corrected_french": {
+        "bytes": 285,
+        "sha256": "33D479E6F4EB0F5C1BADADBD5763ADE0EC98CFD76D8F22FB255F1F795E2AD762"
+      },
+      "english": {
+        "bytes": 271,
+        "sha256": "394B7B4FCAFC23447C410306472FA529906BD649DF0C0870873FF59C1ADED325"
+      }
+    }
+  },
+  "predecessor_evidence": {
+    "map_file": {
+      "path": "tohoku_r68/map.csv",
+      "bytes": 487490,
+      "sha256": "1EDF4CFB722D6EFFC601FA64E1EB3E801BF2C63D8CC973B6467FA68C647E5ED2"
+    },
+    "map_row_with_lf": {
+      "physical_line": 93,
+      "bytes": 715,
+      "sha256": "F798388A5354116FF750531A1086C5E0BE1DD7B1BA999DABBE189ACB2A80CABA"
+    },
+    "decision_file": {
+      "path": "tohoku_r68/dec.csv",
+      "bytes": 390012,
+      "sha256": "0532BAB5CD37951A0885E841EF4881CBAF6A6F8C4C010F2289AFA1A03BB1DBC6"
+    },
+    "decision_row_with_lf": {
+      "decision_id": "D001037",
+      "physical_line": 1038,
+      "bytes": 541,
+      "sha256": "35C349ADA85CEEE0A2079BA10EA3BD48D49304B6BA7B235EF69A5DCF48EA7D38"
+    },
+    "sealed_receipt": {
+      "path": "tohoku_r68/r68-check.json",
+      "bytes": 11900,
+      "sha256": "1FD05FEBBDF081DEF558736D34FDC78846EE5F34F9E5730CE1D34E19B91C671B",
+      "status": "PASS"
+    }
+  },
+  "design_and_independent_review": {
+    "candidate": {
+      "path": "tmp/d1027_equivariant_bundle_extensions_candidate.tex",
+      "bytes": 2966,
+      "sha256": "198DC455A69B126F3C0DF9EB21A551316ACBDB09AFA493419011D2CFA99398CC"
+    },
+    "independent_math_source_post_live_review": {
+      "path": "tmp/d1027_independent_review_r1.json",
+      "bytes": 9644,
+      "sha256": "1C8E62B24C02DAC9C83C1AB77952AFFC2ABD7DF4082B2DB9E509359C95570AC2",
+      "status": "STRICT_PASS"
+    },
+    "mathematical_checks": [
+      "the equivariant bundle-module equivalence transports extensions and their equivalences in both directions",
+      "finite locally free endpoints force the middle module to remain finite locally free after forgetting G",
+      "the additive equivalence preserves pullback-pushout Baer addition",
+      "the existing finite-locally-free Yoneda lemma gives Ext^1 classification",
+      "the locally-free edge isomorphism and equivariant evaluation identify the exact coefficient O(E^dual tensor F)"
+    ]
+  },
+  "stacks_edit": {
+    "path": "cohomology.tex",
+    "preimage": {
+      "bytes": 939192,
+      "sha256": "2B665E090457B701C2BF906517CFA30C6628FD8EA3F1462E2CEA90E54171286A"
+    },
+    "postimage": {
+      "bytes": 942159,
+      "sha256": "9468C6AB79D0610AE395AB0E3FC415F43AE4473C7D09DC2808F94E6E7D947D7A"
+    },
+    "placement": "immediately after the equivariant holomorphic bundle/module lemma and before the discontinuous quotient lemma",
+    "new_block": {
+      "lines": "20528-20604",
+      "line_endings": "LF",
+      "bytes": 2966,
+      "sha256": "198DC455A69B126F3C0DF9EB21A551316ACBDB09AFA493419011D2CFA99398CC",
+      "byte_identical_to_candidate": true,
+      "exact_occurrences": 1
+    },
+    "new_raw_label": {
+      "label": "lemma-equivariant-holomorphic-vector-bundle-extension-classes",
+      "line": 20529,
+      "occurrences": 1
+    },
+    "bibliography_changes": 0,
+    "source_layer_changes": 0
+  },
+  "pdf_build": {
+    "target": "cohomology.pdf",
+    "driver": "mingw32-make cohomology.pdf",
+    "exit_code": 0,
+    "preimage": {
+      "bytes": 2037628,
+      "sha256": "3016226B78BAED6DA3011AEA66C7838FC27498BD3993645D9AC1F50014E1C54F",
+      "pages": 245
+    },
+    "postimage": {
+      "path": "cohomology.pdf",
+      "bytes": 2042133,
+      "sha256": "AF8D5785D37BEB7853B77E797CE1EB16F31C20B14A261FD4462AA4EF95F5F482",
+      "pages": 246,
+      "page_size": "612 x 792 pt",
+      "pdf_version": "1.5"
+    },
+    "diagnostics": {
+      "fatal_errors": 0,
+      "latex_warnings": 0,
+      "package_warnings": 0,
+      "undefined_references_or_citations": 0,
+      "multiply_defined_labels": 0,
+      "rerun_requests": 0,
+      "bibtex_warnings": 0,
+      "changed_source_range_warning_hits": 0,
+      "preexisting_or_unrelated_overfull_hboxes": 35,
+      "preexisting_or_unrelated_overfull_vboxes": 1
+    },
+    "supporting_files": {
+      "cohomology.aux": {"bytes": 58587, "sha256": "3F7E39A29A4B0C23DE60D2C1B6B8809F84B7B8E3D2E6C8989EE59CEED31D4E21"},
+      "cohomology.bbl": {"bytes": 2313, "sha256": "B549EC2BF6A2D441ABC2587AEB0D81AAB800C65A0F4461EC39573EACB228034A"},
+      "cohomology.blg": {"bytes": 1037, "sha256": "AD428028D6914435597B90AC92610E926BBA25B968AC3102678A58B633397428"},
+      "cohomology.log": {"bytes": 48310, "sha256": "E18469FCFCBC8DA36DE4F49168C9ACE205FDC80EB9F0FC8A6845ECBCEEC31E99"}
+    },
+    "numbering": {
+      "prerequisite_bundle_module_lemma": "46.67 on page 197",
+      "new_lemma": "46.68 on page 198",
+      "following_quotient_lemma": "46.69 on page 199"
+    }
+  },
+  "visual_qa": {
+    "status": "STRICT_PASS",
+    "inspected_pdf_pages": [196, 197, 198, 199, 200, 201],
+    "defects": [],
+    "checks": [
+      "the prerequisite Ext and bundle-module lemmas render cleanly",
+      "all three displayed classifications in the new lemma are legible",
+      "the proof transition from page 198 to page 199 is continuous",
+      "the following quotient-coherence and finiteness lemmas begin after a clean close",
+      "cross-references are resolved and no clipping, collision, missing glyph, or abnormal whitespace is present"
+    ],
+    "rasters": [
+      {"path": "tmp/d1027_pdf_qa/page-196.png", "bytes": 309907, "sha256": "55AA5025B978658FDCD652B601FC89B5994B1EC44A0225CF7A32867C8AC9B4E8"},
+      {"path": "tmp/d1027_pdf_qa/page-197.png", "bytes": 297237, "sha256": "C0D65F5C90A1A9A484530163F7E3C3D2157B1EF0B871366AF697B5A4103316E2"},
+      {"path": "tmp/d1027_pdf_qa/page-198.png", "bytes": 289279, "sha256": "EC8431B2240E00BD059E8E8E0473AEB4AFBD656F38B4F1BC8890D736E9A208FA"},
+      {"path": "tmp/d1027_pdf_qa/page-199.png", "bytes": 283764, "sha256": "92DF8E5719882BED628B7CF3C92115AF9555DC3EC639EEE25DC4BE0453C4C5C6"},
+      {"path": "tmp/d1027_pdf_qa/page-200.png", "bytes": 286724, "sha256": "1BBD39ECC922A568A6D563A0F534D871BDE9F9AA49ADB72405FFD27F7C6D3B49"},
+      {"path": "tmp/d1027_pdf_qa/page-201.png", "bytes": 319438, "sha256": "A8C7632883269003A72D7765A6A8598F8A879454922713D590CE55F17DFF6F6F"}
+    ]
+  },
+  "shared_scanner_probe": {
+    "status": "PASS_BYTE_IDENTICAL_REPLAY",
+    "oracle_path": "tmp/d1027_scan_probe_r1",
+    "replay_path": "tmp/d1027_scan_probe_replay_r1",
+    "inventory": {"files": 6, "bytes": 5873866, "surface_bytes": 483, "surface_sha256": "98CA0B13CC826020BF5A631A8E4B358758202D779649C334B7AA017DACBD2CF2"},
+    "counts": {"tex_files": 119, "labels": 22112, "official_tags_joined": 21437, "topics": 13, "topic_candidates": 1287, "direct_topic_coverage": 13, "warnings": 684, "errors": 0},
+    "new_label_row": {
+      "full_label": "cohomology-lemma-equivariant-holomorphic-vector-bundle-extension-classes",
+      "physical_line": 3633,
+      "source_line": 20529,
+      "row_bytes_with_lf": 313,
+      "row_sha256_with_lf": "6561D2B4A7093DA49039EE40ECE90752FF17E2657323DD65194AF6E97E6CC540",
+      "text_sha256": "7EB638B91935D0B604E920CF2D1DBD8C0ADCC501DFFA4A553DF037CA4A1E3881"
+    },
+    "topic_candidate_delta": {
+      "count_before": 1287,
+      "count_after": 1287,
+      "added_label": "cohomology-lemma-equivariant-holomorphic-vector-bundle-extension-classes",
+      "added_row_bytes_with_lf": 456,
+      "added_row_sha256_with_lf": "A9086E057D6ACC7C2033FAC4D1AA9D0064F792DA59C7C9DC6891B2A8CE4498A5",
+      "cap_displaced_label": "etale-cohomology-lemma-base-change-field-extension",
+      "cap_displaced_row_sha256_with_lf": "B0BA48188CEDC9840B0A8BE5C2E33FFAA51D6FE2CCD0131DC6573E59F9FC4C34"
+    }
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_FOR_BUNDLED_NO_OVERWRITE_R69_TRANSACTION",
+    "predecessor": "tohoku_r68",
+    "successor": "tohoku_r69",
+    "decision": {
+      "decision_id": "D001051",
+      "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-equivariant-holomorphic-vector-bundle-extension-classes",
+      "official_tags": "",
+      "rationale": "The new lemma proves that the equivariant holomorphic bundle-module equivalence identifies fixed-endpoint bundle extensions with Yoneda Ext^1, preserves Baer sum, and then applies the locally-free edge isomorphism and evaluation to obtain exactly H^1(X;G,O(E^dual tensor F)).",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D001037"
+    },
+    "structural_child": {
+      "unit_id": "tohoku:equation:holomorphic-equivariant-ext-h1",
+      "treatment": "inherited from parent; no separate decision or changed map row"
+    },
+    "issue_append": null,
+    "source_repair_append": null,
+    "changed_map_rows": [93],
+    "projected_counts_after_bundled_r69": {
+      "decisions": 1051,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 394,
+      "extend_existing": 7,
+      "new_statement": 1,
+      "remaining_gap_class_dispositions": 15,
+      "source_repairs_appended": 0,
+      "mapping_closures": 3,
+      "changed_map_rows": 3
+    }
+  }
+}

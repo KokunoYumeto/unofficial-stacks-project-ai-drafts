@@ -1,0 +1,113 @@
+{
+  "schema": "tohoku-d1021-mapping-review-v1",
+  "created_at": "2026-08-24T03:07:00Z",
+  "formalization_id": "D1021",
+  "unit": "tohoku:equivalence:holomorphic-bundles-locally-free-sheaves",
+  "source_locator": "sem/r18/nodes.csv:562",
+  "status": "STRICT_PASS_CONDITIONAL_ON_BYTE_IDENTICAL_R64_PREIMAGE",
+  "errors": [],
+  "source_review": {
+    "verdict": "PASS",
+    "claim": "For n>0, sending a rank-n holomorphic vector bundle E to its sheaf O(E) gives the natural correspondence with coherent analytic O_X-modules locally isomorphic to O_X^n; the inverse bundle has fibre L_x tensor_{O_{X,x}} C through the residue or evaluation map.",
+    "source_evidence": {
+      "authority_pdf_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "semantic_row_with_lf": {
+        "bytes": 900,
+        "sha256": "2A09FF0387AB16F0E32F39A03C8854446228E63BE9D2D65F17E4D61576094CE6"
+      },
+      "occurrence_row_with_lf": {
+        "path": "sem/r18/occ.csv:984",
+        "occurrence_id": "tohoku:occ:p219:o003",
+        "bytes": 559,
+        "sha256": "4F5DB366A98DF2B434B5A5A9DF27D67FB5295F707E19E16E6F09805099BCE712"
+      },
+      "diplomatic_segment": {
+        "bytes": 517,
+        "sha256": "3F09D73C2B8428B8C3146448BAE88712932792975A24B135BC96A8A0E1120610"
+      },
+      "corrected_french_segment": {
+        "bytes": 518,
+        "sha256": "3613A370EF22582612BFBD33365D66C00ABBD06F3020D39AA609742C65BB36D9"
+      },
+      "english_segment": {
+        "bytes": 482,
+        "sha256": "B5CA96ACFE5D5A2B367D784BEABDD185A7B542DC2C328BE7768EF61D1D7DBBE0"
+      }
+    },
+    "repair_required": false
+  },
+  "mathematical_review": {
+    "verdict": "PASS",
+    "target_label": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+    "predicates": [
+      "the section-sheaf functor is exactly E to O(E) and is fully faithful",
+      "GL_n(O)-valued transition cocycles give essential surjectivity",
+      "every locally O_X^n analytic module is coherent by Oka coherence",
+      "the inverse fibre is canonically L_x tensor_{O_{X,x}} C with C=O_{X,x}/m_x through residue or evaluation",
+      "the proof is independent of bases and coverings",
+      "the lemma does not assert equivariance, extension classification, descent, compactness, finite dimensionality, or GAGA"
+    ],
+    "missing_obligations": []
+  },
+  "formalization_evidence": {
+    "live_tex": {
+      "bytes": 927351,
+      "sha256": "934223B83092E38F7184DE6B739569002BFCBE9F934A5AA9212EBF78AD8424CA"
+    },
+    "lemma_block": {
+      "source_lines": "20276--20340",
+      "bytes": 2807,
+      "sha256": "8640B3C62049EFC5B4BC868DFEFCF3160152475467C02C089C436F7BEC82C14D"
+    },
+    "scanner_label_row_with_lf": {
+      "physical_line": 3629,
+      "bytes": 315,
+      "sha256": "386B6923A5C3B9A4801AEF64A1F5CA9512A131A2A1A839121D794C321FD91A44",
+      "text_sha256": "0D6D69B427976C318544F4D967CB82A6A6E8EED3F138133AFB2B155B12F66467",
+      "official_tag": ""
+    },
+    "d1020_audit": {
+      "bytes": 14789,
+      "sha256": "E03C0BDB19BB564CEC782124367D6CD053624551F847F64885E6ECC1A7E4B083",
+      "status": "STRICT_PASS_PREREQUISITES_R64_MAPPING_AUTHORIZED"
+    }
+  },
+  "predecessor_guard": {
+    "required_dossier": "tohoku_r64",
+    "r63_reference_row_with_lf": {
+      "physical_line": 562,
+      "decision": "D000615",
+      "disposition": "new_statement",
+      "bytes": 441,
+      "sha256": "69B76A64CA7578CCF175FF4CDB5FD0C48BBF246A76FC03770CAC457D33F73C88"
+    },
+    "requirement": "Before authorization, prove that r64 preserves this row byte-for-byte and that r64 is sealed and independently replayed."
+  },
+  "conditional_mapping": {
+    "decision_id": "D001045",
+    "action": "replace",
+    "supersedes": "D000615",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+    "official_tags": "",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "issue_append": null,
+    "source_repair_append": null,
+    "projected_counts_after_r65": {
+      "decisions": 1045,
+      "existing_equivalent": 388,
+      "new_statement": 3,
+      "remaining_gap_class_dispositions": 21,
+      "issues": 32,
+      "active_issues": 0,
+      "changed_map_rows": 1
+    }
+  },
+  "scope_exclusions": [
+    "the equivariant correspondence D000614 already belongs to D1020/r64",
+    "coherent and equivariant extension classification and H^1",
+    "quotient descent and invariant direct-image coherence",
+    "compactness and finite dimensionality",
+    "GAGA"
+  ]
+}

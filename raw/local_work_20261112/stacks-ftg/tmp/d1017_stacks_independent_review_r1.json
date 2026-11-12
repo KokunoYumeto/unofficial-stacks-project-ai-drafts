@@ -1,0 +1,295 @@
+{
+  "schema": "tohoku-stacks-d1017-independent-review-v1",
+  "formalization_id": "D1017",
+  "review_id": "D1017-STACKS-IR-001",
+  "status": "STRICT_PASS_STACKS_FORMALIZATION",
+  "overall_result": "STRICT_PASS_STACKS_FORMALIZATION",
+  "errors": [],
+  "review_scope": {
+    "kind": "independent_stacks_side_formalization_review",
+    "source_pipeline_mutated": false,
+    "mapping_outputs_mutated": false,
+    "build_executed_by_this_review": false,
+    "git_or_github_operation_executed": false,
+    "reviewed_live_line_range": [
+      4021,
+      4186
+    ],
+    "placement_boundary": {
+      "after": "modules-section-internal-hom introductory block ending at line 4019",
+      "before": "modules-lemma-internal-hom beginning at line 4188 with its label at line 4189"
+    }
+  },
+  "inputs": {
+    "amended_design": {
+      "path": "tmp/d1017_p185_formalization_design.json",
+      "bytes": 8424,
+      "sha256": "C1E54BDFB4F52D6761248992D8C669CFB43FB21976A2539063FD893BDEAF43DC",
+      "schema": "tohoku-stacks-d1017-formalization-design-v1",
+      "status": "STACKS_BUILD_PASS_SOURCE_REPAIR_AND_MAPPING_REQUIRED",
+      "production_successor": "production/p185_fix2"
+    },
+    "candidate": {
+      "path": "tmp/d1017_noncommutative_internal_hom_candidate.tex",
+      "bytes": 5063,
+      "sha256": "FB6278770580656A6904DC4505A7E69DAB222710D62633937125C557A2E75190"
+    },
+    "live_source": {
+      "path": "modules.tex",
+      "bytes": 232828,
+      "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5",
+      "candidate_exact_occurrences": 1,
+      "candidate_start_line": 4021,
+      "candidate_end_line": 4186
+    },
+    "pdf": {
+      "path": "modules.pdf",
+      "bytes": 767323,
+      "sha256": "A35B4D3FDD5A8A106A24570FA6E8890BACF45E83BD01B2F949A838F33D311638",
+      "pages": 60,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "encrypted": false,
+      "javascript": false,
+      "pdf_version": "1.5"
+    },
+    "log": {
+      "path": "modules.log",
+      "bytes": 35923,
+      "sha256": "862702CB6A31FDCCCE60E025BF894C60E20E53C5F32A80DE19C1D65EF4B01514",
+      "output_line": "Output written on modules.pdf (60 pages, 767323 bytes).",
+      "fatal_errors": 0,
+      "undefined_control_sequences": 0,
+      "undefined_references": 0,
+      "multiply_defined_labels": 0,
+      "rerun_reference_requests": 0,
+      "overfull_hbox_diagnostics": 5,
+      "overfull_hbox_source_lines": [
+        "4341--4380",
+        "4341--4380",
+        "4341--4380",
+        "4488",
+        "4698--4705"
+      ],
+      "d1017_block_overfull_hbox_diagnostics": 0,
+      "qualification": "The five overfull-box diagnostics occur after the reviewed D1017 block, whose live source ends at line 4186."
+    },
+    "visual_rasters": [
+      {
+        "path": "tmp/pdfs/d1017_modules/modules-35.png",
+        "bytes": 353575,
+        "sha256": "C0C64D172C846126CB71C5FE5302E075555FF140BDC023CA5C5C6DB6AB23C959",
+        "pdf_page": 35
+      },
+      {
+        "path": "tmp/pdfs/d1017_modules/modules-36.png",
+        "bytes": 338459,
+        "sha256": "475701F331313BC4EFDDF32F10A9709CA5E489B479466D28683AD103E9163731",
+        "pdf_page": 36
+      },
+      {
+        "path": "tmp/pdfs/d1017_modules/modules-37.png",
+        "bytes": 387930,
+        "sha256": "DB29C0557D121155D271BCFCCE70A29D6BCD99A53241EC2ACBE52CF1F4500B87",
+        "pdf_page": 37
+      }
+    ]
+  },
+  "mathematical_defect_review": {
+    "defect_id": "D1017-R001",
+    "classification": "global_center_does_not_restrict_to_local_centers",
+    "printed_claim": "Hom_O(A,B) is canonically a module over Z(Gamma(X,O)) for an arbitrary sheaf of possibly noncommutative rings O.",
+    "verdict": "FALSE_AS_STATED",
+    "reason": "A globally central section need not restrict to a section commuting with every local section, because local sections need not extend globally. Left multiplication by that restriction can therefore fail to be O-linear.",
+    "counterexample_replay": {
+      "space": "The Sierpinski space with opens empty, U, and X.",
+      "rings": "O(X)=Q[t] and O(U)=M_2(Q), with t restricting to diag(1,0).",
+      "failure": "For the left regular module and the identity morphism, multiplication by diag(1,0) is not M_2(Q)-linear; with s=E_12 and m=I, D(sm)=E_12 while sD(m)=0.",
+      "result": "PASS"
+    },
+    "correct_replacement": "Use Gamma(X,O^natural), where O^natural is the sheaf-theoretic center consisting of sections that remain central after restriction to every smaller open subset.",
+    "maximality_scope": "Gamma(X,O^natural) is the maximal scalar subring acting by the displayed pointwise multiplication formula on Hom_O(A,B) for every pair of left O-modules.",
+    "special_case": "The printed formula is valid when restriction maps preserve centers, in particular when O is commutative.",
+    "result": "PASS"
+  },
+  "formalization_review": {
+    "definition_label": {
+      "full_label": "modules-definition-hom-left-modules",
+      "local_label": "definition-hom-left-modules",
+      "live_line": 4026,
+      "cardinality": 1,
+      "coverage": [
+        "sheaves of left modules over a not necessarily commutative sheaf of unital rings",
+        "global Hom as the abelian group of module morphisms",
+        "restricted Hom on every arbitrary subspace via inverse-image sheaves",
+        "agreement with ordinary restriction when the subspace is open"
+      ],
+      "result": "PASS"
+    },
+    "lemma_label": {
+      "full_label": "modules-lemma-sheaf-hom-left-modules",
+      "local_label": "lemma-sheaf-hom-left-modules",
+      "live_line": 4063,
+      "cardinality": 1,
+      "coverage": [
+        "the open-set Hom rule is a sheaf of abelian groups",
+        "the section formula recovers restricted Hom on opens",
+        "the locally central rule defines a sheaf of commutative rings",
+        "the center-sheaf action is module-linear and restriction-compatible",
+        "Gamma(X,Z_A) is included in Z(Gamma(X,A)) and equality can fail"
+      ],
+      "result": "PASS"
+    },
+    "proof_checks": {
+      "hom_sheaf_gluing": "Morphisms glue sectionwise, and additivity and module-linearity are local.",
+      "center_sheaf_gluing": "Centrality against every section on every smaller open can be checked on an open cover.",
+      "scalar_action": "Local centrality supplies the commutation step z a phi(s)=a z phi(s) needed for left-module linearity.",
+      "global_center_comparison": "The proof asserts only the always-valid inclusion and supplies an explicit strictness example.",
+      "result": "PASS"
+    },
+    "repository_integration": {
+      "candidate_is_exact_live_subsequence": true,
+      "candidate_occurrence_count": 1,
+      "placement_preserves_existing_internal_hom_section": true,
+      "following_existing_label": "modules-lemma-internal-hom",
+      "new_official_tags": 0,
+      "result": "PASS"
+    }
+  },
+  "mapping_scope": {
+    "unit_id": "tohoku:definition:hom-o-and-local-hom",
+    "planned_decision": "D001041",
+    "supersedes": "D000404",
+    "planned_disposition": "existing_equivalent",
+    "required_labels_in_order": [
+      "modules-definition-hom-left-modules",
+      "modules-lemma-sheaf-hom-left-modules"
+    ],
+    "stacks_tags": "",
+    "why_two_labels": "The definition label supplies global and arbitrary-subspace Hom for noncommutative left modules; the lemma label supplies the corrected sheaf-theoretic-center scalar action and its proof. Neither label alone covers the complete corrected target claim.",
+    "qualification": "Equivalent only to the corrected sem/r21 statement associated with production/p185_fix2. The diplomatic printed Z(Gamma(X,O)) claim remains a recorded source error and is not validated by this mapping.",
+    "excluded_claims": [
+      "No Ext or derived-functor assertion.",
+      "No exactness, stalk comparison, finite-type, or pseudo-coherent assertion.",
+      "No weakening of arbitrary subspaces to open subspaces.",
+      "No claim that Gamma(X,Z_A)=Z(Gamma(X,A)) in general."
+    ],
+    "result": "PASS"
+  },
+  "build_and_visual_review": {
+    "build_result": "PASS",
+    "log_result": "PASS_WITH_FIVE_OUT_OF_SCOPE_OVERFULL_DIAGNOSTICS",
+    "visual_result": "PASS",
+    "pages": [
+      {
+        "pdf_page": 35,
+        "finding": "The Internal Hom section transition, Definition 23.1, arbitrary-subspace formula, and start of Lemma 23.2 are legible, correctly numbered, and free of clipping or overlap.",
+        "result": "PASS"
+      },
+      {
+        "pdf_page": 36,
+        "finding": "The locally central sheaf, scalar action, proof, inclusion, and Sierpinski strictness example are fully legible with balanced spacing and no broken formula or page-boundary defect.",
+        "result": "PASS"
+      },
+      {
+        "pdf_page": 37,
+        "finding": "The document returns cleanly to pre-existing Lemma 23.3 and subsequent material; numbering, margins, references, and section continuity remain intact.",
+        "result": "PASS"
+      }
+    ]
+  },
+  "source_and_mapping_dependencies": {
+    "production_successor": "production/p185_fix2",
+    "reader_successor": "build/v068c3r20",
+    "reader_qa_successor": "qa/v68r42",
+    "semantic_successor": "sem/r21",
+    "status": "EXTERNAL_TO_THIS_STACKS_SIDE_REVIEW",
+    "gate": "This review proves the Stacks formalization only. Source admission, reader/QA, semantic replay, and r61 sealing remain separate deterministic gates."
+  },
+  "predicates": [
+    {
+      "id": "P001",
+      "claim": "The amended D1017 design is byte-bound and names production/p185_fix2.",
+      "result": "PASS"
+    },
+    {
+      "id": "P002",
+      "claim": "The candidate TeX is byte-bound.",
+      "result": "PASS"
+    },
+    {
+      "id": "P003",
+      "claim": "The candidate occurs byte-exactly once at the intended live placement.",
+      "result": "PASS"
+    },
+    {
+      "id": "P004",
+      "claim": "Each planned local label occurs exactly once and precedes the existing internal-Hom lemma.",
+      "result": "PASS"
+    },
+    {
+      "id": "P005",
+      "claim": "The definition preserves arbitrary-subspace Hom via inverse images.",
+      "result": "PASS"
+    },
+    {
+      "id": "P006",
+      "claim": "The formalization replaces the false global center by the sheaf-theoretic center.",
+      "result": "PASS"
+    },
+    {
+      "id": "P007",
+      "claim": "The Hom sheaf and center sheaf gluing arguments are complete.",
+      "result": "PASS"
+    },
+    {
+      "id": "P008",
+      "claim": "The locally central scalar action is proved left-module linear.",
+      "result": "PASS"
+    },
+    {
+      "id": "P009",
+      "claim": "The strict inclusion counterexample is mathematically valid and matches D1017-R001.",
+      "result": "PASS"
+    },
+    {
+      "id": "P010",
+      "claim": "The PDF and log identities agree on 60 pages and 767323 output bytes without fatal or reference errors.",
+      "result": "PASS"
+    },
+    {
+      "id": "P011",
+      "claim": "Visual page 35 passes layout and legibility review.",
+      "result": "PASS"
+    },
+    {
+      "id": "P012",
+      "claim": "Visual page 36 passes layout and legibility review.",
+      "result": "PASS"
+    },
+    {
+      "id": "P013",
+      "claim": "Visual page 37 passes layout, numbering, and continuity review.",
+      "result": "PASS"
+    },
+    {
+      "id": "P014",
+      "claim": "The two-label mapping is exactly scoped to the corrected statement and does not validate the diplomatic defect.",
+      "result": "PASS"
+    }
+  ],
+  "predicate_summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "nonclaims": [
+    "This review does not claim that the source pipeline, sem/r21, or tohoku_r61 is complete.",
+    "This review does not mutate or validate production/p185_fix2 bytes; it records that exact successor name as the required external dependency.",
+    "This review does not assign official Stacks tags to the two new labels.",
+    "This review does not execute a build, Git operation, GitHub operation, publication, upload, cleanup, archive, or watcher."
+  ],
+  "final_verdict": "STRICT_PASS_STACKS_FORMALIZATION"
+}

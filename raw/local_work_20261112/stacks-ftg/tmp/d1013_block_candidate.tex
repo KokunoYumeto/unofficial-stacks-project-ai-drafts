@@ -1,0 +1,75 @@
+\begin{lemma}[Equivariant extension classes for finite locally free modules]
+\label{lemma-equivariant-extension-classes-finite-locally-free}
+\begin{reference}
+\cite[Chapter V, \S 5.6, pp. 218--219]{Tohoku}
+\end{reference}
+Let $(X,\mathcal O)$ be a commutative $G$-ringed space and let
+$\mathcal E,\mathcal F$ be $G$-$\mathcal O$-modules. Assume that the
+underlying $\mathcal O$-module $\mathcal E$ is locally isomorphic to
+$\mathcal O^r$ for some $r\geq 0$. Then equivalence classes of short exact
+sequences
+$$
+0 \longrightarrow \mathcal F \longrightarrow \mathcal V
+\longrightarrow \mathcal E \longrightarrow 0
+$$
+in $\textit{Mod}_G(\mathcal O)$ are canonically in bijection with
+$\Ext^1_{\mathcal O,G}(X;\mathcal E,\mathcal F)$. Moreover, there are
+canonical isomorphisms
+$$
+\Ext^1_{\mathcal O,G}(X;\mathcal E,\mathcal F)
+\longrightarrow
+H^1\left(X;G,\SheafHom_{\mathcal O}(\mathcal E,\mathcal F)\right)
+$$
+and
+$$
+\mathcal E^\vee\otimes_{\mathcal O}\mathcal F
+\longrightarrow
+\SheafHom_{\mathcal O}(\mathcal E,\mathcal F),
+\qquad
+\mathcal E^\vee=
+\SheafHom_{\mathcal O}(\mathcal E,\mathcal O),
+$$
+where the second arrow is the evaluation isomorphism. Consequently,
+$$
+\Ext^1_{\mathcal O,G}(X;\mathcal E,\mathcal F)
+\cong
+H^1\left(X;G,\mathcal E^\vee\otimes_{\mathcal O}\mathcal F\right).
+$$
+\end{lemma}
+
+\begin{proof}
+The category $\textit{Mod}_G(\mathcal O)$ is abelian and has enough
+injectives. The degree-one Yoneda description of Ext in an abelian
+category identifies its degree-one Ext group with equivalence classes of
+degree-one Yoneda extensions, which are exactly the displayed short exact sequences. The
+definition of $\Ext^1_{\mathcal O,G}$ and Lemma
+\ref{lemma-equivariant-ext-properties} identify that group with
+$\Ext^1_{\textit{Mod}_G(\mathcal O)}(\mathcal E,\mathcal F)$.
+
+\medskip\noindent
+Since $\mathcal E$ is locally isomorphic to $\mathcal O^r$, Lemma
+\ref{lemma-equivariant-ext-locally-free}, with $n=1$, gives the first
+displayed isomorphism. The internal-hom action of Lemma
+\ref{lemma-equivariant-internal-hom} makes
+$\mathcal E^\vee$ a $G$-$\mathcal O$-module. The evaluation map
+$$
+\mathcal E^\vee\otimes_{\mathcal O}\mathcal F
+\longrightarrow
+\SheafHom_{\mathcal O}(\mathcal E,\mathcal F),
+\qquad
+\lambda\otimes f\longmapsto(e\longmapsto\lambda(e)f),
+$$
+is $G$-equivariant by the conjugation formula in that lemma. Locally on
+$X$ it is the standard isomorphism
+$(\mathcal O^r)^\vee\otimes\mathcal F\cong
+\SheafHom_{\mathcal O}(\mathcal O^r,\mathcal F)$, hence it is an
+isomorphism globally. Applying $H^1(X;G,-)$ and composing with the first
+isomorphism proves the final assertion.
+\end{proof}
+
+\begin{remark}[Analytic boundary]
+This lemma records the abstract equivariant Ext bridge. Identifying
+holomorphic bundles with analytic $G$-$\mathcal O$-modules, or invoking
+GAGA, requires separate analytic hypotheses and is not claimed here.
+\label{remark-equivariant-extension-classes-analytic-boundary}
+\end{remark}

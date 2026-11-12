@@ -1,0 +1,60 @@
+\begin{lemma}[Coherent equivariant analytic extension classes]
+\label{lemma-coherent-equivariant-analytic-extension-classes}
+\begin{reference}
+\cite[Chapter V, \S 5.6, p. 219]{Tohoku}
+\end{reference}
+Let $X$ be a complex analytic space on which a group $G$ acts by analytic
+automorphisms. Let $\mathcal A$ and $\mathcal B$ be $G$-$\mathcal O_X$-modules
+whose underlying $\mathcal O_X$-modules are coherent. For every short exact
+sequence
+$$
+0 \longrightarrow \mathcal B \longrightarrow \mathcal M
+\longrightarrow \mathcal A \longrightarrow 0
+$$
+in $\textit{Mod}_G(\mathcal O_X)$, the underlying $\mathcal O_X$-module
+$\mathcal M$ is coherent. Moreover, equivalence classes of these extensions,
+with fixed endpoints $\mathcal A$ and $\mathcal B$, are canonically identified
+with
+$$
+\Ext^1_{\mathcal O_X,G}(X;\mathcal A,\mathcal B).
+$$
+This identification is compatible with Baer addition. The group on the right,
+and hence the set of extension classes, is naturally a complex vector space.
+\end{lemma}
+
+\begin{proof}
+By Modules, Lemma
+\ref{modules-lemma-AB5-AB3-star-generator-G-O-modules}, kernels and cokernels
+in $\textit{Mod}_G(\mathcal O_X)$ are computed on the underlying
+$\mathcal O_X$-modules. Thus the displayed sequence remains exact after
+forgetting $G$. Since its two endpoints are coherent, Modules, Lemma
+\ref{modules-lemma-coherent-abelian} shows that $\mathcal M$ is coherent.
+
+The category $\textit{Mod}_G(\mathcal O_X)$ is abelian and has enough
+injectives. Derived Categories, Lemma \ref{derived-lemma-ext-1} identifies
+degree-one Ext with equivalence classes of fixed-endpoint short exact
+sequences, with the group law given by Baer addition. Cohomology, Lemma
+\ref{lemma-equivariant-ext-properties} gives the canonical isomorphism
+$$
+\Ext^1_{\textit{Mod}_G(\mathcal O_X)}(\mathcal A,\mathcal B)
+\cong
+\Ext^1_{\mathcal O_X,G}(X;\mathcal A,\mathcal B),
+$$
+which proves the classification and its compatibility with addition.
+
+Finally, analytic automorphisms fix the constant holomorphic functions. Hence
+multiplication by every $\lambda\in\mathbf C$ is an equivariant
+$\mathcal O_X$-linear endomorphism of any $G$-$\mathcal O_X$-module. If
+$\mathcal B[0]\to\mathcal I^\bullet$ is an injective resolution, then
+$$
+\Hom_{\textit{Mod}_G(\mathcal O_X)}
+(\mathcal A,\mathcal I^\bullet)
+$$
+is consequently a complex of complex vector spaces with complex-linear
+differentials. Its first cohomology is the displayed equivariant Ext group by
+the proof of Lemma \ref{lemma-equivariant-ext-properties}. This supplies the
+asserted complex vector space structure; under the Yoneda identification,
+scalar multiplication is equivalently pushout along
+$\lambda\operatorname{id}_{\mathcal B}$.
+\end{proof}
+

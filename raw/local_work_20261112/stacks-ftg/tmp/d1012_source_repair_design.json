@@ -1,0 +1,199 @@
+{
+  "schema": "tohoku-source-repair-design-v1",
+  "status": "DESIGN_PASS_NOT_APPLIED",
+  "defect_id": "D1012-R001",
+  "printed_page": 179,
+  "layer_target": "tohoku:setup:acyclicity-cover-families",
+  "defect_class": "source-internal_quantifier_omission",
+  "finding": "The p179 setup licenses only the self-trace of a covering on one of its own members. The p180 induction uses the trace of each different covering R^i on a member B of R^1. The theorem therefore requires cross-cover trace closure, which is not implied by the printed sentence.",
+  "authority_chain": {
+    "diplomatic_evidence": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\dip\\p179.tex",
+      "bytes": 4413,
+      "sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182",
+      "action": "PRESERVE_BYTE_IDENTICAL"
+    },
+    "corrected_french_preimage": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p179.tex",
+      "bytes": 4347,
+      "sha256": "C3B0470AC85B9A34A0DFAAF5A0325690756C7FB541B12421CC651A29C7410CC7"
+    },
+    "english_preimage": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p179.tex",
+      "bytes": 4144,
+      "sha256": "3CD9D83B12C0B48B94577F0BBDA2E632B8E6EE8E7778B1B9442D5054D8505FE1"
+    },
+    "proof_evidence": [
+      {
+        "layer": "dip",
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\dip\\p180.tex",
+        "bytes": 4626,
+        "sha256": "8AB7B01C86B798D9E5E9E0ECF7AB3791688EF7C8902A311DBFC0E5C93FED6A31",
+        "lines": "48-55"
+      },
+      {
+        "layer": "fr",
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p180.tex",
+        "bytes": 5138,
+        "sha256": "2F68D547A44E47A0F9CA5B602C440454D0244B3CA8EA62430DA0D6AAA9F83D18",
+        "lines": "48-55"
+      },
+      {
+        "layer": "en",
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p180.tex",
+        "bytes": 4928,
+        "sha256": "F7D39A2F78D45C9CEA5A00360B96EBF6F1A5CBC656A8AB075DDE7B6093735961",
+        "lines": "49-56"
+      }
+    ],
+    "proof_evidence_text_en": "For i=2,...,k, the trace R_B^i of R^i on B belongs to R(B), where B is a member of R^1.",
+    "authority_reason": "The correction is forced by the source's own proof and changes no conclusion. It supplies the missing quantifier needed to make the induction valid."
+  },
+  "exact_replacement": {
+    "diplomatic_french": {
+      "before": "On suppose que si $B\\in\\mathbf R\\in\\mathfrak R(A)$, alors la trace $\\mathbf R_B$ de $\\mathbf R$ sur $B$ appartient à $\\mathfrak R(B)$.",
+      "after": null,
+      "action": "NO_CHANGE"
+    },
+    "corrected_french": {
+      "before": "On suppose que si $B\\in\\mathbf R\\in\\mathfrak R(A)$, alors la trace $\\mathbf R_B$ de $\\mathbf R$ sur $B$ appartient à $\\mathfrak R(B)$.",
+      "after": "On suppose que si $\\mathbf R,\\mathbf R'\\in\\mathfrak R(A)$ et $B\\in\\mathbf R$, alors la trace $\\mathbf R'_B$ de $\\mathbf R'$ sur $B$ appartient à $\\mathfrak R(B)$.",
+      "replacement_count_required": 1,
+      "projected_bytes_preserving_specified_line_wrap": 4375,
+      "projected_sha256_preserving_specified_line_wrap": "27C6C84EEE0B74133B6376453801DF451B892FF782B7AC09E72146C4A7834C48"
+    },
+    "english": {
+      "before": "Assume that if $B\\in\\mathbf R\\in\\mathfrak R(A)$, then the trace $\\mathbf R_B$ of $\\mathbf R$ on $B$ belongs to $\\mathfrak R(B)$.",
+      "after": "Assume that if $\\mathbf R,\\mathbf R'\\in\\mathfrak R(A)$ and $B\\in\\mathbf R$, then the trace $\\mathbf R'_B$ of $\\mathbf R'$ on $B$ belongs to $\\mathfrak R(B)$.",
+      "replacement_count_required": 1,
+      "projected_bytes_preserving_specified_line_wrap": 4173,
+      "projected_sha256_preserving_specified_line_wrap": "A7491524DBAC64EA345B36384DE39F503A2F4680B995779DEB826D7C21443D73"
+    },
+    "specified_line_wrap": {
+      "corrected_french_replacement_fragment": "suppose que si $\\mathbf R,\\mathbf R'\\in\\mathfrak R(A)$ et\n$B\\in\\mathbf R$, alors la trace $\\mathbf R'_B$ de $\\mathbf R'$ sur $B$\nappartient à $\\mathfrak R(B)$.",
+      "english_replacement_fragment": "Assume that if $\\mathbf R,\\mathbf R'\\in\\mathfrak R(A)$ and\n$B\\in\\mathbf R$, then the trace $\\mathbf R'_B$ of $\\mathbf R'$ on $B$\nbelongs to $\\mathfrak R(B)$."
+    }
+  },
+  "proposed_decisions": {
+    "family": {
+      "decision_id": "TOH-P179-COR-002",
+      "predecessor_active_decision_id": "TOH-P179-COR-001",
+      "kind": "authorial_correction_family",
+      "decision": "Preserve the printed self-trace sentence diplomatically; in corrected French and English, quantify a second covering and require its trace on a member of the first covering to remain in the assigned covering family.",
+      "state": "proposed"
+    },
+    "root": {
+      "decision_id": "TOH-SRC-P179-009",
+      "predecessor_page_decision_ids": [
+        "TOH-SRC-P179-001",
+        "TOH-SRC-P179-002",
+        "TOH-SRC-P179-003",
+        "TOH-SRC-P179-004",
+        "TOH-SRC-P179-005",
+        "TOH-SRC-P179-006",
+        "TOH-SRC-P179-007",
+        "TOH-SRC-P179-008"
+      ],
+      "layer": "fr_corrected_and_english",
+      "rationale": "The printed setup's self-trace quantifier does not license the cross-cover traces used in the induction on the number of coverings. The corrected sentence supplies exactly that missing quantifier.",
+      "state": "proposed"
+    }
+  },
+  "ledger_preimages": {
+    "family": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p179_r1\\decisions.jsonl",
+      "bytes": 3068,
+      "sha256": "0832EF49568DAC6A7335E7C8251BC16031C1BD7B065CAF329EE690BA389FA02C",
+      "bound_active_id": "TOH-P179-COR-001"
+    },
+    "root": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\SOURCE_CORRECTIONS.jsonl",
+      "bytes": 209932,
+      "sha256": "0C9A8424C88DCF4F474ACF5EE7F8C0F8F51D0B1D1F1482E04B57ECD43DC80429",
+      "bound_active_page_ids": [
+        "TOH-SRC-P179-001",
+        "TOH-SRC-P179-002",
+        "TOH-SRC-P179-003",
+        "TOH-SRC-P179-004",
+        "TOH-SRC-P179-005",
+        "TOH-SRC-P179-006",
+        "TOH-SRC-P179-007",
+        "TOH-SRC-P179-008"
+      ]
+    }
+  },
+  "semantic_impact": {
+    "classification": "NARROW_STRENGTHENING_OF_SETUP",
+    "changed_meaning": "For any two assigned coverings R and R' of A and any member B of R, the trace of R' on B is assigned to B.",
+    "unchanged": [
+      "the three topological cases",
+      "conditions A(n) and B(n-1)",
+      "the statement and conclusions of Theorem 3.9.1",
+      "all three corollaries",
+      "the diplomatic transcription"
+    ],
+    "proof_effect": "The induction on |L| is now licensed: for B in R^1, every R^i|_B with i>=2 belongs to the family R(B).",
+    "mapping_effect": "The same five D1012 closures remain valid; no sixth source unit or official tag is introduced."
+  },
+  "revised_formalization_candidate": {
+    "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+    "bytes": 14479,
+    "sha256": "47846682E4B789557EDAA8F5DADAC4F927267394FAC57ACED0590210F039311D",
+    "change": "The family axiom now explicitly quantifies R,R' in R(A), takes B in R, and requires R'|_B in R(B).",
+    "labels": 6,
+    "official_tags": 0
+  },
+  "downstream_rebuild_and_qa_gates": [
+    {
+      "order": 1,
+      "gate": "append_source_decisions",
+      "required": "Reverify both ledger preimage hashes, append exactly TOH-P179-COR-002 and TOH-SRC-P179-009, validate every JSONL line, and prove all prior lines are byte-identical prefixes."
+    },
+    {
+      "order": 2,
+      "gate": "apply_exact_source_repair",
+      "required": "Leave dip/p179.tex at 4413 bytes and SHA-256 3B4424E9...; replace the corrected-French fragment exactly once to obtain 4375 bytes and SHA-256 27C6C84E...; replace the English fragment exactly once to obtain 4173 bytes and SHA-256 A7491524.... No other p179 or source-layer bytes may change."
+    },
+    {
+      "order": 3,
+      "gate": "canonical_source_validation",
+      "required": "Run the canonical source/LayerTarget/continuation validators; require the p179 target inventory and p178->p179->p180 seams to remain stable, with only the corrected FR/EN setup sentence changed."
+    },
+    {
+      "order": 4,
+      "gate": "reader_successor_v068c3r19",
+      "required": "Build a new immutable reader successor v068c3r19 from v068c3r18; bind a complete file inventory and hashes; prove diplomatic p179 and every unrelated page/source file are unchanged."
+    },
+    {
+      "order": 5,
+      "gate": "reader_qa_successor_v68r41",
+      "required": "Build QA successor v68r41; require fixed-point TeX auxiliaries, strict parse of every final PDF page, zero local box diagnostics on the repaired p179 setup, and visual inspection of p178-p180 in every affected language/view."
+    },
+    {
+      "order": 6,
+      "gate": "semantic_successor_sem_r20",
+      "required": "Rebuild semantic successor sem/r20 from the repaired reader; require stable node IDs/count/order, an exact one-node text delta at tohoku:setup:acyclicity-cover-families, regenerated authority hashes, and explicit proof-dependency binding to the p180 induction."
+    },
+    {
+      "order": 7,
+      "gate": "append_and_build_D1012",
+      "required": "Independently rehash the revised candidate, append it exactly once to cohomology.tex, prove exact predecessor reconstruction, reach a fixed-point cohomology build, parse every PDF page, audit the local log span, and visually inspect the new section and both seams."
+    },
+    {
+      "order": 8,
+      "gate": "scanner_replay",
+      "required": "Run two replay-identical scanner passes; require exactly the six designed labels, zero official tags, zero scanner errors, and only expected line-only deltas outside the new block."
+    },
+    {
+      "order": 9,
+      "gate": "D1012_audit_and_mapping_successor",
+      "required": "Create a strict D1012 audit binding TOH-P179-COR-002, TOH-SRC-P179-009, v068c3r19, v68r41, sem/r20, revised candidate/live/build/PDF/scanner identities, and the five decisions D000446/D000378/D000379/D000380/D000329; then create atomic tohoku_r55 from sealed r54 with source_repairs_appended=1 and no issues append."
+    },
+    {
+      "order": 10,
+      "gate": "independent_receipt_replay",
+      "required": "Run the r55 validator independently with receipt generation; require replay-identical counts/hashes and a strict PASS before treating the five closures as sealed."
+    }
+  ],
+  "terminal_condition": "The review blocker D1012-R001 is discharged at design level now. Production closure requires every ordered downstream gate above; no canonical source or ledger has been edited by this design."
+}

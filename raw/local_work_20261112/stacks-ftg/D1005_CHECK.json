@@ -1,0 +1,146 @@
+{
+  "schema": "tohoku-stacks-d1005-audit-v1",
+  "created_at": "2026-08-22T07:03:58.3212068+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1005",
+  "primary_unit": "tohoku:construction:diagram-category-resolution",
+  "related_units": [
+    "tohoku:construction:inductive-injective-resolutions",
+    "tohoku:eq:diagram-injective-resolution",
+    "tohoku:eq:component-injective-complex"
+  ],
+  "stacks_label": "injectives-lemma-filtered-diagram-injective-resolutions",
+  "source_reference": "Tohoku, Chapter III, Section 3.6, proof of Proposition 3.6.2, p. 169",
+  "mapping_authority_sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+  "primary_source_files": [
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p169.tex",
+      "bytes": 5133,
+      "sha256": "01E2B58B2EBC1CC3A1C494AB4D65EA1B41BAB89C6554CEA80B10988D29EAA423"
+    }
+  ],
+  "artifacts": {
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.tex",
+      "bytes": 135243,
+      "sha256": "FE126B54B6B22511976AF99D61F561280A66FFFCD135F97634962C8C2F7576CE",
+      "new_block_lines": [
+        2205,
+        2321
+      ]
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.aux",
+      "bytes": 10363,
+      "sha256": "A9EDF69C8722FA0F62928176E1FF0767C047D6D5EE5E1480B315031A71AA8CCE"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.log",
+      "bytes": 35033,
+      "sha256": "557F9408127E99ACDAB0711F6F19D48768526FE397CC6E5479DE924F48A5FD40"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.pdf",
+      "bytes": 641346,
+      "sha256": "B32C26C9A021FD5C454B87972802667576F33B49B32B50175631EF5D714409B1",
+      "pages": 39,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_label": "\\newlabel{lemma-filtered-diagram-injective-resolutions}{{12.8}{23}{Compatible injective resolutions of filtered systems}{subsection.12.8}{}}",
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The citation and formalization scope are limited to the compatible-resolution construction on canonical English p. 169.",
+      "The history limits the defect to the printed invocation of Proposition 1.9.2's generator assertion and preserves the compatible-resolution claim.",
+      "The repair uses the exact left adjoints F_i, their set-indexed generator coproduct, and evaluation preserving injectives.",
+      "No colimit resolution, T-acyclicity argument, or derived-colimit conclusion from Proposition 3.6.2 is imported."
+    ]
+  },
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The category A^I is explicitly the category of covariant systems over the small filtered poset I.",
+      "The transition morphisms of F_i cover exactly the identity B-to-B case and the unique morphism with zero source; an impossible B-to-zero boundary is not introduced.",
+      "The natural bijection Hom(F_i(B),M)=Hom(B,M_i) has the correct left-adjoint direction.",
+      "Exactness, kernels, cokernels, sums, filtered colimits, and AB5 are used pointwise.",
+      "The proper-component argument proves that the set-indexed family (F_i(U)) generates A^I.",
+      "Evaluation is the right adjoint with exact left adjoint and therefore preserves injectives.",
+      "Resolving inside A^I and evaluating gives compatible componentwise injective resolutions."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "label": "Lemma 12.8",
+    "label_page": 23,
+    "stable_aux_sha256": "A9EDF69C8722FA0F62928176E1FF0767C047D6D5EE5E1480B315031A71AA8CCE",
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0,
+    "existing_out_of_scope_box_diagnostics": 2
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 635138,
+    "content_stream_bytes_min": 5148,
+    "content_stream_bytes_max": 26109,
+    "visual_pages": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "render_records": [
+      {
+        "page": 22,
+        "bytes": 254084,
+        "sha256": "2FCBD7CD98784EB2D38ED412C47F436499E8329F53F334C360DBE664C7019298"
+      },
+      {
+        "page": 23,
+        "bytes": 261115,
+        "sha256": "6101ADD682EB2E796147BBA1F439274C299A0FF92FE6A83917528315EEF1DAAF"
+      },
+      {
+        "page": 24,
+        "bytes": 325242,
+        "sha256": "430C2B87DB8ED903B4545D7C8C751CCFFE57352113213F28884AEED4F966E2DB"
+      },
+      {
+        "page": 25,
+        "bytes": 325146,
+        "sha256": "90812792B6A94AF247C992C64947EDBDBD1096FC70BFF52B78EC81497917AA7E"
+      },
+      {
+        "page": 26,
+        "bytes": 303051,
+        "sha256": "6D78DCD9CE8338646570E73C37C23925D3F2D578DCA89C7FBDD984DA41B41B73"
+      }
+    ],
+    "visual_result": "The incoming Theorem 12.7 seam, complete Lemma 12.8 statement and proof, outgoing Section 13 seam, equations, list indentation, reference boxes, margins, proof marker, headers, page numbers, and glyphs render cleanly with no clipping, overlap, crowding, malformed symbols, or bad page breaks.",
+    "independent_full_pdf_result": "All 39 pages passed strict pypdf decompression, MuPDF interpretation, and Poppler rasterization; pages 23-24 also passed independent visual inspection."
+  },
+  "nonclaims": [
+    "No assertion is made for a large indexing category.",
+    "No generator assertion is made for arbitrary diagram schemes with relations.",
+    "No converse from objectwise injectivity to injectivity in A^I is asserted.",
+    "No claim is made that filtered colimits of the resolution terms are injective.",
+    "No derived-colimit comparison or conclusion of Proposition 3.6.2 is asserted.",
+    "This receipt does not update the Tohoku mapping ledger; mapping promotion belongs to the next no-overwrite successor."
+  ],
+  "errors": []
+}

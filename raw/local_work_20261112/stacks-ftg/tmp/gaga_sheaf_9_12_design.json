@@ -1,0 +1,1050 @@
+{
+  "schema_version": "gaga_sheaf_9_12_design_v1",
+  "status": "design_and_candidate_complete_static_pass",
+  "workspace_root": "user\\Documents\\stacks-ftg",
+  "write_boundary": {
+    "allowed": [
+      "tmp\\gaga_sheaf_9_12_design.json",
+      "tmp\\gaga_sheaf_9_12_candidate.tex"
+    ],
+    "written": [
+      "tmp\\gaga_sheaf_9_12_design.json",
+      "tmp\\gaga_sheaf_9_12_candidate.tex"
+    ],
+    "live_source_or_dossier_edited": false,
+    "git_used": false,
+    "build_run": false,
+    "publication_attempted": false
+  },
+  "scope": {
+    "work": "GAGA",
+    "component": "03_sheaf_correspondence_nos09_12",
+    "source_numbers": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sealed_needs_review_count": 10,
+    "sealed_needs_review_ids": [
+      "gaga:no:9",
+      "gaga:def:2",
+      "gaga:prop:10",
+      "gaga:no:10",
+      "gaga:prop:11",
+      "gaga:no:11",
+      "gaga:no:12",
+      "gaga:thm:1",
+      "gaga:thm:2",
+      "gaga:thm:3"
+    ],
+    "excluded_structural_subitems_already_sealed_as_inherits_parent": [
+      "gaga:prop:10:item:a",
+      "gaga:prop:10:item:b",
+      "gaga:prop:10:item:c"
+    ]
+  },
+  "source_evidence": {
+    "component_path": "gaga_source_r1\\english_source_aligned_workpass\\components\\03_sheaf_correspondence_nos09_12.tex",
+    "bytes": 11808,
+    "line_count": 191,
+    "expected_sha256": "2A454DDF3F34EC17E71B7889CE59E2D64D422BE3CFD7AABF79E549E90BCC7447",
+    "observed_sha256": "2A454DDF3F34EC17E71B7889CE59E2D64D422BE3CFD7AABF79E549E90BCC7447",
+    "sha256_verified": true,
+    "sealed_ledger_authority_sha256": "9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98",
+    "sealed_inputs": [
+      {
+        "path": "gaga_r1\\map.csv",
+        "bytes": 64686,
+        "sha256": "B1332587032EA06E3FCCA3C595CDBA8CAEA825D7B8F278035E688B84CD84BE91"
+      },
+      {
+        "path": "gaga_r1\\units.csv",
+        "bytes": 60100,
+        "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+      },
+      {
+        "path": "gaga_r1\\R1_CHECK.json",
+        "bytes": 11536,
+        "sha256": "90ABB05D7CDCA4710370E354F40DCF08429B2A7E4949BFCAC2C7DF2BE4CAC06B"
+      },
+      {
+        "path": "gaga_r1\\check.json",
+        "bytes": 84524,
+        "sha256": "662F0128D4B3B96F97E58F96371675B4DB4106A80B8C5238698C53FAB1E2F473"
+      },
+      {
+        "path": "gaga_source_r1\\SOURCE_RECEIPT.json",
+        "bytes": 5267,
+        "sha256": "92563794355BBDA3889CFB70CD9CC9AF8E6443A8E69E752FA293196514A44831"
+      }
+    ]
+  },
+  "audit_semantics": {
+    "structural_only": "A numbered source container whose independent mathematical payload is exhausted by nested target units plus exposition or remarks. Its prose still belongs in the chapter, but it is not counted as a separate statement gap.",
+    "existing_stronger_framework": "A live general result specializes to an essential part of the source unit after the analytification-specific hypotheses have been supplied, but no live result states the complete source-specific assertion.",
+    "existing_weaker_or_partial": "Live results cover only one side, a consequence, or general machinery; they do not discharge the source claim.",
+    "none": "No live result states a logically comparable direct assertion.",
+    "required_new_formal_assembly": "A new local definition, construction, or lemma is required in gaga.tex, but its proof is a deterministic assembly of live general Stacks results and already-planned earlier GAGA analytic inputs.",
+    "required_new_core_theorem": "A genuinely new GAGA comparison theorem is required; the current tree contains neither it nor a stronger result.",
+    "true_gap_definition": "Count every non-structural sealed unit for which no current exact or stronger source-specific result discharges the claim. Formal assembly gaps and core theorem gaps both count."
+  },
+  "unit_decisions": [
+    {
+      "unit_id": "gaga:no:9",
+      "unit_type": "numbered_unit",
+      "ledger_source_start": 3,
+      "ledger_source_end": 3,
+      "recovered_container_span": "3-65",
+      "recovered_exclusive_spans": [
+        "5-7",
+        "19-33",
+        "65"
+      ],
+      "source_claim": "Introduce the inverse-image sheaf on X^an, the structural map from inverse-image regular functions to holomorphic functions, the scalar-extension functor F -> F^an, its canonical unit map, functoriality on morphisms, and the ideal-sheaf consequence surrounding Definition 2 and Proposition 10.",
+      "best_live_relation": "structural_only",
+      "live_evidence_labels": [
+        "sheaves-lemma-stalk-pullback",
+        "sheaves-definition-pushforward",
+        "modules-lemma-exactness-pushforward-pullback"
+      ],
+      "production_disposition": "structural_only",
+      "rationale": "Definition 2 and Proposition 10 are the nested substantive targets. The remaining assertions are necessary setup, functoriality, and a formal ideal-sheaf consequence and must be retained around the planned blocks, but should not be double-counted as an eleventh theorem gap.",
+      "planned_blocks": [
+        "section-analytification-modules",
+        "definition-analytification-module",
+        "lemma-analytification-module-stalks",
+        "lemma-analytification-exact-faithful-coherent",
+        "remark-analytification-ideal-sheaf"
+      ]
+    },
+    {
+      "unit_id": "gaga:def:2",
+      "unit_type": "definition",
+      "ledger_source_start": 9,
+      "ledger_source_end": 9,
+      "recovered_statement_span": "9-17",
+      "recovered_consequence_span": "19-33",
+      "source_claim": "For the canonical morphism of ringed spaces a_X : X^an -> X, define F^an = a_X^*F = O_{X^an} tensor_{a_X^{-1}O_X} a_X^{-1}F; define the unit a_X^{-1}F -> F^an and functorial scalar extension of module maps.",
+      "best_live_relation": "existing_stronger_framework",
+      "live_evidence_labels": [
+        "sheaves-definition-pushforward",
+        "sheaves-lemma-adjoint-pullback-pushforward-modules",
+        "sheaves-lemma-stalk-pullback-modules"
+      ],
+      "production_disposition": "required_new_formal_assembly",
+      "rationale": "The live pullback definition is more general than the formula, but the tree has no complete analytification-module specialization or notation. Add the specialization after the upstream construction of a_X; do not cite etale-lemma-etale-analytification-local-isomorphism or pione-section-comparison-complex as coverage because they merely use analytification terminology in unrelated comparisons.",
+      "planned_blocks": [
+        "definition-analytification-module",
+        "lemma-analytification-module-stalks"
+      ]
+    },
+    {
+      "unit_id": "gaga:prop:10",
+      "unit_type": "proposition",
+      "ledger_source_start": 35,
+      "ledger_source_end": 35,
+      "recovered_statement_span": "35-39",
+      "recovered_proof_and_consequence_span": "41-65",
+      "source_claim": "Analytification of modules is exact; a_X^{-1}F -> F^an is injective for every module F; and coherent algebraic modules analytify to coherent analytic modules. Consequently, an ideal sheaf analytifies to the generated holomorphic ideal.",
+      "best_live_relation": "existing_stronger_framework",
+      "live_evidence_labels": [
+        "modules-lemma-pullback-flat",
+        "algebra-lemma-faithfully-flat-universally-injective",
+        "modules-lemma-pullback-finite-presentation",
+        "modules-lemma-coherent-structure-sheaf",
+        "gaga-theorem-oka-cartan-coherence"
+      ],
+      "required_upstream_gaga_labels": [
+        "gaga-theorem-analytification-local-faithfully-flat"
+      ],
+      "production_disposition": "required_new_formal_assembly",
+      "rationale": "The exactness and injectivity are formal after the upstream faithful-flat local-ring theorem. Coherence follows because pullback preserves finite presentation and Oka--Cartan makes O_{X^an} coherent. No current single label packages all three analytification assertions, so the local lemma remains required.",
+      "planned_blocks": [
+        "lemma-analytification-exact-faithful-coherent",
+        "remark-analytification-ideal-sheaf"
+      ]
+    },
+    {
+      "unit_id": "gaga:no:10",
+      "unit_type": "numbered_unit",
+      "ledger_source_start": 67,
+      "ledger_source_end": 67,
+      "recovered_container_span": "67-98",
+      "recovered_exclusive_spans": [
+        "69",
+        "98"
+      ],
+      "source_claim": "Set up extension by zero/direct image for a coherent module on a closed subvariety and explain that Proposition 11 is compatibility of analytification with this identification.",
+      "best_live_relation": "structural_only",
+      "live_evidence_labels": [
+        "coherent-lemma-i-star-equivalence",
+        "coherent-lemma-finite-pushforward-coherent"
+      ],
+      "production_disposition": "structural_only",
+      "rationale": "The sole independent source assertion is Proposition 11. The algebraic extension-by-zero setup is already exact in coherent-lemma-i-star-equivalence; retain the analytic notation and compatibility explanation around the planned Proposition 11 lemma without counting a second gap.",
+      "planned_blocks": [
+        "section-analytification-closed-immersions",
+        "lemma-analytification-pushforward-closed-immersion"
+      ]
+    },
+    {
+      "unit_id": "gaga:prop:11",
+      "unit_type": "proposition",
+      "ledger_source_start": 71,
+      "ledger_source_end": 71,
+      "recovered_statement_span": "71",
+      "recovered_proof_span": "73-96",
+      "source_claim": "For a closed immersion i : Z -> X and a coherent O_Z-module F, there is a canonical isomorphism (i_*F)^an -> i^an_* (F^an), equivalently analytification commutes with extension by zero along the closed immersion.",
+      "best_live_relation": "existing_weaker_or_partial",
+      "live_evidence_labels": [
+        "coherent-lemma-i-star-equivalence",
+        "sheaves-lemma-stalk-pullback-modules"
+      ],
+      "required_upstream_gaga_labels": [
+        "gaga-lemma-analytification-locally-closed",
+        "gaga-proposition-analytification-closed-ideal"
+      ],
+      "production_disposition": "required_new_formal_assembly",
+      "rationale": "The live tree has the algebraic closed-immersion equivalence and general stalk formula, but not the algebraic-to-analytic compatibility. Construct the canonical sheaf map and check it on stalks using O_{Z^an,z} = O_{X^an,z}/I_zO_{X^an,z} = O_{Z,z} tensor_{O_{X,z}} O_{X^an,z}; this is canonical and avoids the source's insufficient phrase that pointwise maps 'vary continuously'.",
+      "planned_blocks": [
+        "lemma-analytification-pushforward-closed-immersion"
+      ]
+    },
+    {
+      "unit_id": "gaga:no:11",
+      "unit_type": "numbered_unit",
+      "ledger_source_start": 100,
+      "ledger_source_end": 100,
+      "recovered_statement_and_construction_span": "100-157",
+      "source_claim": "Construct canonical comparison maps epsilon_F^q : H^q(X,F) -> H^q(X^an,F^an), identify degree zero with s -> 1 tensor s, prove functoriality in F, and prove compatibility with connecting homomorphisms for short exact sequences with coherent first term.",
+      "best_live_relation": "existing_weaker_or_partial",
+      "live_evidence_labels": [
+        "modules-lemma-pullback-flat",
+        "cohomology-lemma-describe-higher-direct-images"
+      ],
+      "required_upstream_gaga_labels": [
+        "gaga-proposition-analytification",
+        "gaga-theorem-analytification-local-faithfully-flat"
+      ],
+      "production_disposition": "required_new_formal_assembly",
+      "rationale": "The current cohomology chapter supplies derived functor machinery but no analytification comparison natural transformation. Define epsilon from the derived adjunction unit F -> Ra_{X,*}a_X^*F, using flatness to identify La_X^*F with a_X^*F and RGamma(X,Ra_{X,*}(-)) with RGamma(X^an,-). Naturality in the derived category gives compatibility with all connecting maps, stronger than the source's affine-Cech verification and without a finite-cover hypothesis.",
+      "planned_blocks": [
+        "section-analytification-cohomology-map",
+        "construction-analytification-cohomology-map",
+        "lemma-analytification-cohomology-map-functorial"
+      ]
+    },
+    {
+      "unit_id": "gaga:no:12",
+      "unit_type": "numbered_unit",
+      "ledger_source_start": 159,
+      "ledger_source_end": 159,
+      "recovered_container_span": "159-191",
+      "recovered_exclusive_spans": [
+        "161",
+        "179-191"
+      ],
+      "source_claim": "Set the projective-variety hypothesis, explain that Theorems 1--3 identify coherent algebraic and analytic theories, record failure without projectivity, and factor epsilon through cohomology of the inverse-image sheaf with a warning that the first factor need not be an isomorphism.",
+      "best_live_relation": "structural_only",
+      "live_evidence_labels": [
+        "morphisms-definition-projective",
+        "morphisms-definition-proper",
+        "gaga-proposition-proper-if-and-only-if-compact-analytification"
+      ],
+      "production_disposition": "structural_only",
+      "rationale": "The three comparison claims are separately represented by Theorems 1--3. The remaining material is hypothesis setup and two mathematically useful remarks; retain it, including the easy affine counterexample using non-polynomial entire functions, but do not count it as a fourth comparison theorem.",
+      "planned_blocks": [
+        "section-gaga-statements",
+        "remark-gaga-projectivity-essential",
+        "remark-gaga-comparison-factorization"
+      ]
+    },
+    {
+      "unit_id": "gaga:thm:1",
+      "unit_type": "theorem",
+      "ledger_source_start": 163,
+      "ledger_source_end": 163,
+      "recovered_statement_span": "163-171",
+      "recovered_degree_zero_consequence_span": "173",
+      "source_claim": "For a projective algebraic variety X over C, a coherent algebraic module F, and q >= 0, epsilon_F^q : H^q(X,F) -> H^q(X^an,F^an) is an isomorphism; in particular global sections agree.",
+      "best_live_relation": "existing_weaker_or_partial",
+      "live_evidence_labels": [
+        "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional"
+      ],
+      "production_disposition": "required_new_core_theorem",
+      "rationale": "Finite-dimensionality of analytic coherent cohomology on a compact analytic space is only a consequence-level finiteness input and is explicitly not a GAGA comparison. No live exact or stronger cohomology comparison exists.",
+      "planned_blocks": [
+        "theorem-gaga-cohomology"
+      ]
+    },
+    {
+      "unit_id": "gaga:thm:2",
+      "unit_type": "theorem",
+      "ledger_source_start": 175,
+      "ledger_source_end": 175,
+      "recovered_statement_span": "175",
+      "source_claim": "For coherent algebraic modules F and G on a projective algebraic variety X over C, analytification induces a bijection Hom_X(F,G) -> Hom_{X^an}(F^an,G^an).",
+      "best_live_relation": "none",
+      "live_supporting_but_not_covering_labels": [
+        "coherent-lemma-tensor-hom-coherent",
+        "modules-lemma-pullback-internal-hom",
+        "cohomology-lemma-coherent-analytic-sheaf-ext"
+      ],
+      "production_disposition": "required_new_core_theorem",
+      "rationale": "The live internal-Hom coherence and flat base-change results reduce this theorem to degree zero of Theorem 1, but none states full faithfulness of analytification. The untagged analytic sheaf-Ext lemma is not a comparison theorem and must not be mapped as coverage.",
+      "planned_blocks": [
+        "theorem-gaga-fully-faithful"
+      ]
+    },
+    {
+      "unit_id": "gaga:thm:3",
+      "unit_type": "theorem",
+      "ledger_source_start": 177,
+      "ledger_source_end": 177,
+      "recovered_statement_span": "177",
+      "source_claim": "Every coherent analytic module M on X^an for projective X is isomorphic to F^an for a coherent algebraic module F on X, and F is unique up to isomorphism.",
+      "best_live_relation": "none",
+      "live_supporting_but_not_covering_labels": [
+        "cohomology-lemma-coherent-analytic-sheaf-ext",
+        "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional"
+      ],
+      "production_disposition": "required_new_core_theorem",
+      "rationale": "The live analytic coherence and finiteness lemmas do not algebraize an analytic module. No exact or stronger essential-surjectivity theorem exists. Uniqueness will follow from Theorem 2 after existence is proved, but existence is a genuine GAGA gap.",
+      "planned_blocks": [
+        "theorem-gaga-essential-surjectivity"
+      ]
+    }
+  ],
+  "decision_histograms": {
+    "production_disposition_over_10": {
+      "structural_only": 3,
+      "required_new_formal_assembly": 4,
+      "required_new_core_theorem": 3
+    },
+    "best_live_relation_over_7_substantive_units": {
+      "existing_exact": 0,
+      "existing_stronger_framework_but_incomplete_specialization": 2,
+      "existing_weaker_or_partial": 3,
+      "none": 2
+    },
+    "true_gap_count": 7,
+    "deep_core_theorem_gap_count": 3,
+    "chapter_text_blocks_still_required_for_all_units": 10
+  },
+  "live_tree_observation": {
+    "narrow_snapshot_note": "gaga.tex was absent at the first narrow path check and appeared during this audit as concurrent upstream component-01 work. It was read only. The hash below is the exact observed snapshot and is not treated as sealed input.",
+    "gaga_tex": {
+      "observed_exists": true,
+      "observed_bytes": 14067,
+      "observed_sha256": "8D4C4D9C9CF3E7386077E6E00E99415E69696BFC4708C37DAFB1DD7A46FF8800",
+      "observed_line_count": 373,
+      "observed_last_write_utc": "2026-08-24T15:14:21.6984337Z",
+      "terminal_anchor_line_at_snapshot": 368,
+      "terminal_anchor_text": "\\input{chapters}",
+      "existing_required_local_label": "theorem-oka-cartan-coherence",
+      "existing_required_full_label": "gaga-theorem-oka-cartan-coherence"
+    },
+    "chapter_registration": {
+      "chapters_tex_line": 70,
+      "chapters_tex_text": "\\item \\hyperref[gaga-section-phantom]{Complex Analytic Spaces and GAGA}",
+      "makefile_line": 19,
+      "makefile_contains_chapter_name": true,
+      "registration_action_required": false
+    },
+    "files_hashed": [
+      {
+        "path": "algebra.tex",
+        "bytes": 1851008,
+        "sha256": "1AD1C80E33CA42280B09915B7A0D15A91A9F9740C04545ADB7BFAD9B49E3BA37"
+      },
+      {
+        "path": "modules.tex",
+        "bytes": 232828,
+        "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+      },
+      {
+        "path": "sheaves.tex",
+        "bytes": 215623,
+        "sha256": "78A727DA8893E4FB2362CC6343BD6B2E66FEBD1519328CA84835BF5E2C225B9F"
+      },
+      {
+        "path": "coherent.tex",
+        "bytes": 365621,
+        "sha256": "802D88F603D79F9AFC4E098EDD555E86446EC53054D0A3C7BDE70F096B18DF90"
+      },
+      {
+        "path": "morphisms.tex",
+        "bytes": 605523,
+        "sha256": "31A65A4C73778740F7D66030AE5D21D9670B9DF251EDBA367DF793399B6B9519"
+      },
+      {
+        "path": "cohomology.tex",
+        "bytes": 948056,
+        "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+      },
+      {
+        "path": "pione.tex",
+        "bytes": 344238,
+        "sha256": "D725E01F5B388D5C3EA38EB9075C5AB93EAFB6C9B5B0C4331FCBE6D757A04DDD"
+      },
+      {
+        "path": "etale.tex",
+        "bytes": 112726,
+        "sha256": "E87F2A92F8FE668037ED225F11D5BFE42DFEDDF52A164975CE5BB54DE2ABF991"
+      },
+      {
+        "path": "chapters.tex",
+        "bytes": 8735,
+        "sha256": "C79BC934FA6DD52DB2A8AF11EECF3667CC3C682FA30239408679D62C4D49B299"
+      },
+      {
+        "path": "Makefile",
+        "bytes": 7935,
+        "sha256": "5F185F219D5DCCD96483F6BADA73B4C450A208F2916CFE89C76433A59FD28C4C"
+      }
+    ]
+  },
+  "exact_live_label_evidence": [
+    {
+      "full_label": "sheaves-lemma-stalk-pullback",
+      "local_label": "lemma-stalk-pullback",
+      "tag": "008H",
+      "path": "sheaves.tex",
+      "line": 2411,
+      "use": "(a_X^{-1}F)_x = F_{a_X(x)}"
+    },
+    {
+      "full_label": "sheaves-definition-pushforward",
+      "local_label": "definition-pushforward",
+      "tag": "0095",
+      "path": "sheaves.tex",
+      "line": 3873,
+      "use": "general ringed-space pullback formula O_X tensor_{f^{-1}O_Y} f^{-1}G"
+    },
+    {
+      "full_label": "sheaves-lemma-adjoint-pullback-pushforward-modules",
+      "local_label": "lemma-adjoint-pullback-pushforward-modules",
+      "tag": "0096",
+      "path": "sheaves.tex",
+      "line": 3913,
+      "use": "adjunction unit underlying the degree-zero and derived comparison maps"
+    },
+    {
+      "full_label": "sheaves-lemma-stalk-pullback-modules",
+      "local_label": "lemma-stalk-pullback-modules",
+      "tag": "0098",
+      "path": "sheaves.tex",
+      "line": 4000,
+      "use": "stalk formula for F^an"
+    },
+    {
+      "full_label": "modules-lemma-exactness-pushforward-pullback",
+      "local_label": "lemma-exactness-pushforward-pullback",
+      "tag": "01AJ",
+      "path": "modules.tex",
+      "line": 301,
+      "use": "exactness of inverse image on abelian sheaves and right exactness of module pullback"
+    },
+    {
+      "full_label": "modules-lemma-pullback-flat",
+      "local_label": "lemma-pullback-flat",
+      "tag": "02N4",
+      "path": "modules.tex",
+      "line": 3679,
+      "use": "exactness of module pullback for flat ringed-space morphisms"
+    },
+    {
+      "full_label": "modules-lemma-pullback-finite-presentation",
+      "local_label": "lemma-pullback-finite-presentation",
+      "tag": "01BQ",
+      "path": "modules.tex",
+      "line": 1894,
+      "use": "finite presentation survives analytification"
+    },
+    {
+      "full_label": "modules-lemma-coherent-structure-sheaf",
+      "local_label": "lemma-coherent-structure-sheaf",
+      "tag": "01BZ",
+      "path": "modules.tex",
+      "line": 2170,
+      "use": "over coherent O_{X^an}, finite presentation is equivalent to coherence"
+    },
+    {
+      "full_label": "modules-lemma-pullback-internal-hom",
+      "local_label": "lemma-pullback-internal-hom",
+      "tag": "0C6I",
+      "path": "modules.tex",
+      "line": 4383,
+      "use": "internal Hom commutes with flat pullback for finitely presented first argument"
+    },
+    {
+      "full_label": "algebra-lemma-faithfully-flat-universally-injective",
+      "local_label": "lemma-faithfully-flat-universally-injective",
+      "tag": "05CK",
+      "path": "algebra.tex",
+      "line": 20802,
+      "use": "F_x -> F_x tensor O_{X^an,x} is injective"
+    },
+    {
+      "full_label": "coherent-lemma-tensor-hom-coherent",
+      "local_label": "lemma-tensor-hom-coherent",
+      "tag": "01Y2",
+      "path": "coherent.tex",
+      "line": 2491,
+      "use": "algebraic internal Hom of coherent modules is coherent"
+    },
+    {
+      "full_label": "coherent-lemma-i-star-equivalence",
+      "local_label": "lemma-i-star-equivalence",
+      "tag": "087T",
+      "path": "coherent.tex",
+      "line": 2575,
+      "use": "algebraic coherent extension by zero along a closed immersion"
+    },
+    {
+      "full_label": "coherent-lemma-finite-pushforward-coherent",
+      "local_label": "lemma-finite-pushforward-coherent",
+      "tag": "01Y6",
+      "path": "coherent.tex",
+      "line": 2619,
+      "use": "coherence of algebraic closed-immersion direct image"
+    },
+    {
+      "full_label": "cohomology-lemma-describe-higher-direct-images",
+      "local_label": "lemma-describe-higher-direct-images",
+      "tag": "01E4",
+      "path": "cohomology.tex",
+      "line": 825,
+      "use": "derived direct-image/cohomology identification supporting the comparison construction"
+    },
+    {
+      "full_label": "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+      "local_label": "lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+      "tag": "",
+      "path": "cohomology.tex",
+      "line": 20826,
+      "use": "strictly weaker finiteness input; not GAGA coverage"
+    },
+    {
+      "full_label": "cohomology-lemma-coherent-analytic-sheaf-ext",
+      "local_label": "lemma-coherent-analytic-sheaf-ext",
+      "tag": "",
+      "path": "cohomology.tex",
+      "line": 20851,
+      "use": "supporting analytic coherence only; not full faithfulness or algebraization"
+    },
+    {
+      "full_label": "morphisms-definition-proper",
+      "local_label": "definition-proper",
+      "tag": "01W1",
+      "path": "morphisms.tex",
+      "line": 9875,
+      "use": "algebraic properness terminology"
+    },
+    {
+      "full_label": "morphisms-definition-projective",
+      "local_label": "definition-projective",
+      "tag": "01W8",
+      "path": "morphisms.tex",
+      "line": 10509,
+      "use": "algebraic projectivity terminology"
+    }
+  ],
+  "rejected_lexical_candidates": [
+    {
+      "full_label": "etale-lemma-etale-analytification-local-isomorphism",
+      "path": "etale.tex",
+      "line": 2067,
+      "reason": "Compares etaleness with analytic local isomorphisms; it neither defines module analytification nor proves a coherent-sheaf comparison."
+    },
+    {
+      "full_label": "pione-section-comparison-complex",
+      "path": "pione.tex",
+      "line": 1602,
+      "reason": "Introduces analytification for Riemann existence and fundamental groups, not GAGA sheaves or coherent cohomology."
+    },
+    {
+      "full_label": "cohomology-remark-equivariant-extension-classes-analytic-boundary",
+      "path": "cohomology.tex",
+      "line": 20485,
+      "reason": "The remark explicitly says that invoking GAGA requires separate analytic hypotheses and is not claimed there."
+    }
+  ],
+  "planned_local_and_full_labels": [
+    {
+      "kind": "section",
+      "local": "section-analytification-modules",
+      "full": "gaga-section-analytification-modules"
+    },
+    {
+      "kind": "definition",
+      "local": "definition-analytification-module",
+      "full": "gaga-definition-analytification-module"
+    },
+    {
+      "kind": "lemma",
+      "local": "lemma-analytification-module-stalks",
+      "full": "gaga-lemma-analytification-module-stalks"
+    },
+    {
+      "kind": "lemma",
+      "local": "lemma-analytification-exact-faithful-coherent",
+      "full": "gaga-lemma-analytification-exact-faithful-coherent"
+    },
+    {
+      "kind": "remark",
+      "local": "remark-analytification-ideal-sheaf",
+      "full": "gaga-remark-analytification-ideal-sheaf"
+    },
+    {
+      "kind": "section",
+      "local": "section-analytification-closed-immersions",
+      "full": "gaga-section-analytification-closed-immersions"
+    },
+    {
+      "kind": "lemma",
+      "local": "lemma-analytification-pushforward-closed-immersion",
+      "full": "gaga-lemma-analytification-pushforward-closed-immersion"
+    },
+    {
+      "kind": "section",
+      "local": "section-analytification-cohomology-map",
+      "full": "gaga-section-analytification-cohomology-map"
+    },
+    {
+      "kind": "construction",
+      "local": "construction-analytification-cohomology-map",
+      "full": "gaga-construction-analytification-cohomology-map"
+    },
+    {
+      "kind": "lemma",
+      "local": "lemma-analytification-cohomology-map-functorial",
+      "full": "gaga-lemma-analytification-cohomology-map-functorial"
+    },
+    {
+      "kind": "section",
+      "local": "section-gaga-statements",
+      "full": "gaga-section-gaga-statements"
+    },
+    {
+      "kind": "theorem",
+      "local": "theorem-gaga-cohomology",
+      "full": "gaga-theorem-gaga-cohomology"
+    },
+    {
+      "kind": "theorem",
+      "local": "theorem-gaga-fully-faithful",
+      "full": "gaga-theorem-gaga-fully-faithful"
+    },
+    {
+      "kind": "theorem",
+      "local": "theorem-gaga-essential-surjectivity",
+      "full": "gaga-theorem-gaga-essential-surjectivity"
+    },
+    {
+      "kind": "remark",
+      "local": "remark-gaga-projectivity-essential",
+      "full": "gaga-remark-gaga-projectivity-essential"
+    },
+    {
+      "kind": "remark",
+      "local": "remark-gaga-comparison-factorization",
+      "full": "gaga-remark-gaga-comparison-factorization"
+    }
+  ],
+  "upstream_component_02_label_contract": {
+    "status": "received_from_parallel_component_02_audit; names are planned and must be rechecked at integration time",
+    "predecessor_tail_local_label": "lemma-total-fractions-reduced",
+    "predecessor_tail_full_label": "gaga-lemma-total-fractions-reduced",
+    "required_labels": [
+      {
+        "local": "proposition-analytification",
+        "full": "gaga-proposition-analytification",
+        "role": "existence, uniqueness, functorial analytification, and the canonical locally ringed-space morphism a_X : X^an -> X"
+      },
+      {
+        "local": "lemma-analytification-locally-closed",
+        "full": "gaga-lemma-analytification-locally-closed",
+        "role": "analytification of locally closed reduced subspaces and products"
+      },
+      {
+        "local": "proposition-analytification-closed-ideal",
+        "full": "gaga-proposition-analytification-closed-ideal",
+        "role": "J_Z O_{X^an} is the analytic vanishing ideal and gives the quotient structure sheaf"
+      },
+      {
+        "local": "theorem-analytification-local-faithfully-flat",
+        "full": "gaga-theorem-analytification-local-faithfully-flat",
+        "role": "faithful flatness O_{X,x} -> O_{X^an,x}"
+      },
+      {
+        "local": "proposition-proper-if-and-only-if-compact-analytification",
+        "full": "gaga-proposition-proper-if-and-only-if-compact-analytification",
+        "role": "compactness of projective analytification via projective implies proper"
+      }
+    ]
+  },
+  "external_analytic_dependency_register": [
+    {
+      "id": "A1",
+      "input": "Oka--Cartan coherence for holomorphic structure sheaves and analytic ideal sheaves",
+      "chapter_discharge_label": "gaga-theorem-oka-cartan-coherence",
+      "current_status": "present in observed live gaga.tex",
+      "required_here_for": [
+        "gaga:prop:10"
+      ]
+    },
+    {
+      "id": "A2",
+      "input": "Local analytic-algebra comparison yielding faithful flatness O_{X,x} -> O_{X^an,x}",
+      "chapter_discharge_label": "gaga-theorem-analytification-local-faithfully-flat",
+      "current_status": "planned upstream component 02",
+      "required_here_for": [
+        "gaga:prop:10",
+        "gaga:no:11"
+      ]
+    },
+    {
+      "id": "A3",
+      "input": "Analytification of a closed algebraic subvariety is the closed analytic subspace cut out by the extended ideal, including O_{Z^an} = O_{X^an}/I O_{X^an}",
+      "chapter_discharge_label": "gaga-proposition-analytification-closed-ideal",
+      "current_status": "planned upstream component 02",
+      "required_here_for": [
+        "gaga:prop:11"
+      ]
+    },
+    {
+      "id": "A4",
+      "input": "Proper algebraic variety over C has compact analytification, and conversely in the source's reduced setting",
+      "chapter_discharge_label": "gaga-proposition-proper-if-and-only-if-compact-analytification",
+      "current_status": "planned upstream component 02",
+      "required_here_for": [
+        "gaga:no:12",
+        "later proofs of gaga:thm:1 through gaga:thm:3"
+      ]
+    }
+  ],
+  "dependency_order": [
+    {
+      "order": 1,
+      "block": "section-analytification-modules",
+      "depends_on": [
+        "gaga-proposition-analytification"
+      ]
+    },
+    {
+      "order": 2,
+      "block": "definition-analytification-module",
+      "depends_on": [
+        "section-analytification-modules",
+        "sheaves-definition-pushforward"
+      ]
+    },
+    {
+      "order": 3,
+      "block": "lemma-analytification-module-stalks",
+      "depends_on": [
+        "definition-analytification-module",
+        "sheaves-lemma-stalk-pullback-modules"
+      ]
+    },
+    {
+      "order": 4,
+      "block": "lemma-analytification-exact-faithful-coherent",
+      "depends_on": [
+        "definition-analytification-module",
+        "lemma-analytification-module-stalks",
+        "gaga-theorem-analytification-local-faithfully-flat",
+        "gaga-theorem-oka-cartan-coherence",
+        "modules-lemma-pullback-flat",
+        "algebra-lemma-faithfully-flat-universally-injective",
+        "modules-lemma-pullback-finite-presentation",
+        "modules-lemma-coherent-structure-sheaf"
+      ]
+    },
+    {
+      "order": 5,
+      "block": "remark-analytification-ideal-sheaf",
+      "depends_on": [
+        "definition-analytification-module",
+        "lemma-analytification-exact-faithful-coherent"
+      ]
+    },
+    {
+      "order": 6,
+      "block": "section-analytification-closed-immersions",
+      "depends_on": [
+        "remark-analytification-ideal-sheaf"
+      ]
+    },
+    {
+      "order": 7,
+      "block": "lemma-analytification-pushforward-closed-immersion",
+      "depends_on": [
+        "section-analytification-closed-immersions",
+        "gaga-lemma-analytification-locally-closed",
+        "gaga-proposition-analytification-closed-ideal",
+        "coherent-lemma-i-star-equivalence",
+        "sheaves-lemma-stalk-pullback-modules"
+      ]
+    },
+    {
+      "order": 8,
+      "block": "section-analytification-cohomology-map",
+      "depends_on": [
+        "lemma-analytification-exact-faithful-coherent"
+      ]
+    },
+    {
+      "order": 9,
+      "block": "construction-analytification-cohomology-map",
+      "depends_on": [
+        "section-analytification-cohomology-map",
+        "gaga-proposition-analytification",
+        "modules-lemma-pullback-flat",
+        "sheaves-lemma-adjoint-pullback-pushforward-modules"
+      ]
+    },
+    {
+      "order": 10,
+      "block": "lemma-analytification-cohomology-map-functorial",
+      "depends_on": [
+        "construction-analytification-cohomology-map"
+      ]
+    },
+    {
+      "order": 11,
+      "block": "section-gaga-statements",
+      "depends_on": [
+        "lemma-analytification-cohomology-map-functorial",
+        "morphisms-definition-projective"
+      ]
+    },
+    {
+      "order": 12,
+      "block": "theorem-gaga-cohomology",
+      "depends_on": [
+        "section-gaga-statements",
+        "construction-analytification-cohomology-map"
+      ],
+      "proof_location": "subsequent component 04"
+    },
+    {
+      "order": 13,
+      "block": "theorem-gaga-fully-faithful",
+      "depends_on": [
+        "theorem-gaga-cohomology",
+        "coherent-lemma-tensor-hom-coherent",
+        "modules-lemma-pullback-internal-hom"
+      ],
+      "proof_location": "subsequent component 04"
+    },
+    {
+      "order": 14,
+      "block": "theorem-gaga-essential-surjectivity",
+      "depends_on": [
+        "theorem-gaga-fully-faithful"
+      ],
+      "proof_location": "subsequent component 04; uniqueness follows from full faithfulness but existence requires algebraization"
+    },
+    {
+      "order": 15,
+      "block": "remark-gaga-projectivity-essential",
+      "depends_on": [
+        "theorem-gaga-cohomology"
+      ]
+    },
+    {
+      "order": 16,
+      "block": "remark-gaga-comparison-factorization",
+      "depends_on": [
+        "construction-analytification-cohomology-map",
+        "theorem-gaga-cohomology"
+      ]
+    }
+  ],
+  "production_blueprint": [
+    {
+      "block": "definition-analytification-module",
+      "required_content": [
+        "Fix the canonical locally ringed-space morphism a_X : X^an -> X from gaga-proposition-analytification.",
+        "Define F^an = a_X^*F = O_{X^an} tensor_{a_X^{-1}O_X} a_X^{-1}F.",
+        "Define eta_F : a_X^{-1}F -> F^an by s -> 1 tensor s.",
+        "State functoriality for O_X-linear maps and identify O_X^an with O_{X^an}."
+      ]
+    },
+    {
+      "block": "lemma-analytification-module-stalks",
+      "required_content": [
+        "For x in X^an with algebraic image x_alg, give (F^an)_x = F_{x_alg} tensor_{O_{X,x_alg}} O_{X^an,x}.",
+        "Identify the stalk of eta_F with m -> m tensor 1."
+      ]
+    },
+    {
+      "block": "lemma-analytification-exact-faithful-coherent",
+      "statement_parts": [
+        "The functor (-)^an on O_X-modules is exact.",
+        "eta_F is injective for every O_X-module F.",
+        "If F is coherent algebraic, then F^an is coherent analytic."
+      ],
+      "proof_requirements": [
+        "Use gaga-theorem-analytification-local-faithfully-flat and modules-lemma-pullback-flat for exactness.",
+        "Check eta on stalks and apply algebra-lemma-faithfully-flat-universally-injective.",
+        "Use coherence -> finite presentation algebraically, pullback finite presentation, gaga-theorem-oka-cartan-coherence, and modules-lemma-coherent-structure-sheaf."
+      ]
+    },
+    {
+      "block": "lemma-analytification-pushforward-closed-immersion",
+      "required_statement": "For i : Z -> X closed and coherent F on Z, the canonical base-change map a_X^*i_*F -> i^an_*a_Z^*F is an isomorphism.",
+      "proof_requirements": [
+        "Construct the sheaf map canonically from the commutative analytification square; do not define unrelated pointwise maps and claim they glue.",
+        "Outside Z^an both stalks vanish.",
+        "At z in Z^an compare F_z tensor_{O_{X,z}} O_{X^an,z} with F_z tensor_{O_{Z,z}} O_{Z^an,z}.",
+        "Use O_{Z^an,z} = O_{Z,z} tensor_{O_{X,z}} O_{X^an,z}, supplied by gaga-proposition-analytification-closed-ideal, and associativity of tensor product."
+      ]
+    },
+    {
+      "block": "construction-analytification-cohomology-map",
+      "required_content": [
+        "Use the derived adjunction unit F -> Ra_{X,*}a_X^*F; flatness makes La_X^*F = a_X^*F.",
+        "Apply RGamma(X,-) and the canonical equality RGamma(X,Ra_{X,*}G) = RGamma(X^an,G).",
+        "Define epsilon_F^q on cohomology.",
+        "Check explicitly that q = 0 sends s to 1 tensor s and agrees with the source construction."
+      ]
+    },
+    {
+      "block": "lemma-analytification-cohomology-map-functorial",
+      "required_content": [
+        "State naturality in F.",
+        "For every short exact sequence to which exact analytification applies, give the morphism of long exact cohomology sequences and hence commutation with connecting maps.",
+        "This may be stated for all O_X-modules because (-)^an is exact; the source's coherence hypothesis on the first term is then a special case."
+      ]
+    },
+    {
+      "block": "theorem-gaga-cohomology",
+      "required_statement": "Let X be a projective algebraic variety over C and F a coherent O_X-module. For every q >= 0, epsilon_F^q is an isomorphism. Include the q = 0 consequence.",
+      "proof_deferred": true
+    },
+    {
+      "block": "theorem-gaga-fully-faithful",
+      "required_statement": "For coherent F,G on projective X, Hom_X(F,G) -> Hom_{X^an}(F^an,G^an) is bijective.",
+      "later_proof_route": "Apply theorem-gaga-cohomology in degree zero to coherent SheafHom_X(F,G) and modules-lemma-pullback-internal-hom."
+    },
+    {
+      "block": "theorem-gaga-essential-surjectivity",
+      "required_statement": "Every coherent analytic O_{X^an}-module is F^an for some coherent algebraic F; uniqueness up to isomorphism follows from theorem-gaga-fully-faithful.",
+      "proof_deferred": true
+    },
+    {
+      "block": "remark-gaga-projectivity-essential",
+      "required_content": "State that projectivity is essential and give the deterministic affine counterexample X = A^1_C, F = O_X: Gamma(X,O_X)=C[z] while Gamma(X^an,O)=entire functions, so degree-zero comparison is not surjective."
+    },
+    {
+      "block": "remark-gaga-comparison-factorization",
+      "required_content": "Display H^q(X,F) -> H^q(X^an,a_X^{-1}F) -> H^q(X^an,F^an), and state that the first arrow need not be an isomorphism. If retaining the source rational-function argument, state irreducibility/connectedness and identify a_X^{-1}C(X) with the constant sheaf before invoking Betti cohomology."
+    }
+  ],
+  "integration_anchor": {
+    "target_path": "gaga.tex",
+    "mode": "insert inside the standalone document body",
+    "predecessor_semantic_anchor": "immediately after the completed proof carrying local label lemma-total-fractions-reduced from component 02",
+    "predecessor_full_label": "gaga-lemma-total-fractions-reduced",
+    "terminal_text_anchor": "the unique terminal line \\input{chapters}",
+    "operation": "insert all component-03 blocks after the predecessor and before \\input{chapters}; leave preamble, bibliography, and end document in place",
+    "successor_source": {
+      "path": "gaga_source_r1\\english_source_aligned_workpass\\components\\04_proofs_theorems1_3_nos13_17.tex",
+      "bytes": 22613,
+      "sha256": "167DE10CD53AB8A2C4609DE4276B970B51A6C8D8169D2D5930EB45A77762D5A0",
+      "first_line": "\\GAGASubsection{13. Proof of Theorem 1}{gaga:no:13}"
+    },
+    "component_03_tail_local_label": "remark-gaga-comparison-factorization",
+    "component_03_tail_full_label": "gaga-remark-gaga-comparison-factorization",
+    "concurrency_guard": "Re-hash gaga.tex immediately before integration. Do not require the observed concurrent hash to remain fixed; instead require the predecessor label and unique terminal anchor to exist and all planned component-03 labels to be absent."
+  },
+  "candidate_artifact": {
+    "path": "user/Documents/stacks-ftg/tmp/gaga_sheaf_9_12_candidate.tex",
+    "bytes": 9254,
+    "sha256": "4F9776E16E447171EDCF11AEB94FDBBF9A984559F582541F838CD439F531D446",
+    "line_count": 262,
+    "begin_environment_count": 24,
+    "end_environment_count": 24,
+    "local_label_count": 16,
+    "unique_local_label_count": 16,
+    "reference_count": 11,
+    "unresolved_reference_count": 0,
+    "implementation_note": "Primary-agent implementation of the sealed production blueprint after the design audit; theorem proofs remain in the separate nos. 13--17 fragment."
+  },
+  "deterministic_static_checks": [
+    {
+      "id": "S01-source-hash",
+      "check": "SHA-256 of the exact component source equals 2A454DDF3F34EC17E71B7889CE59E2D64D422BE3CFD7AABF79E549E90BCC7447.",
+      "expected": true
+    },
+    {
+      "id": "S02-target-set",
+      "check": "Filtering sealed gaga_r1/map.csv by this component and disposition needs_review yields set equality with sealed_needs_review_ids and cardinality 10.",
+      "expected": true
+    },
+    {
+      "id": "S03-span-bounds",
+      "check": "Every recovered numeric span is contained in source lines 1 through 191; statement spans for nested units lie inside their numbered-unit container spans.",
+      "expected": true
+    },
+    {
+      "id": "S04-histogram",
+      "check": "3 structural_only + 4 required_new_formal_assembly + 3 required_new_core_theorem = 10; true_gap_count = 4 + 3 = 7.",
+      "expected": true
+    },
+    {
+      "id": "S05-label-shape",
+      "check": "Every planned local label matches ^(section|definition|lemma|construction|theorem|remark)-[a-z0-9-]+$, all are unique, and each full label is exactly 'gaga-' plus its local label.",
+      "expected": true
+    },
+    {
+      "id": "S06-live-label-resolution",
+      "check": "Each exact_live_label_evidence local label occurs exactly once as a literal \\label{...} in its recorded path, at the recorded line in the hashed snapshot.",
+      "expected": true
+    },
+    {
+      "id": "S07-rejected-candidates",
+      "check": "No rejected_lexical_candidates label appears in any unit's covering-label field; it may appear only as rejected evidence.",
+      "expected": true
+    },
+    {
+      "id": "S08-dependency-dag",
+      "check": "Dependency_order values are strictly increasing and the graph induced by local planned blocks is acyclic; every external dependency resolves to exact_live_label_evidence, the observed live Oka label, or upstream_component_02_label_contract.",
+      "expected": true
+    },
+    {
+      "id": "S09-integration-anchor",
+      "check": "At integration time gaga.tex contains exactly one terminal \\input{chapters}, contains predecessor local label lemma-total-fractions-reduced exactly once, and contains none of the 16 planned local labels.",
+      "expected": true
+    },
+    {
+      "id": "S10-mathematical-formula-presence",
+      "check": "The integrated block contains the pullback formula for F^an, the stalk tensor formula, the faithful-flat unit injection, the closed-immersion base-change isomorphism, and the derived-unit definition of epsilon.",
+      "expected": true
+    },
+    {
+      "id": "S11-theorem-quantifiers",
+      "check": "theorem-gaga-cohomology includes projective X, coherent F, and every q >= 0; theorem-gaga-fully-faithful includes coherent F and G; theorem-gaga-essential-surjectivity includes every coherent analytic module and uniqueness up to isomorphism.",
+      "expected": true
+    },
+    {
+      "id": "S12-tex-structure",
+      "check": "After integration, brace count outside comments is balanced, begin/end environment stacks agree, every new ref resolves locally or to a verified full external label, and no local label is duplicated.",
+      "expected": true
+    },
+    {
+      "id": "S13-source-preservation",
+      "check": "Recompute hashes of the exact source component, gaga_r1/map.csv, and gaga_r1/units.csv; all equal source_evidence values.",
+      "expected": true
+    },
+    {
+      "id": "S14-no-scope-expansion",
+      "check": "The component introduces no nonreduced analytic-space generalization and states theorems for the same reduced/projective-variety scope as the live chapter and sealed source.",
+      "expected": true
+    }
+  ]
+}

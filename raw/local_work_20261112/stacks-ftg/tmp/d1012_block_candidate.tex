@@ -1,0 +1,352 @@
+\section{Acyclicity criteria by coverings}
+\label{section-covering-acyclicity-criteria}
+
+\noindent
+We first extend the notation for the \v Cech complex to the coverings by
+subsets which occur below. Let $A$ be a topological space, let
+$\mathcal R=(R_i)_{i\in I}$ be an indexed covering of $A$ by subsets, and
+let $\mathcal F$ be an abelian sheaf on $A$. Put
+$$
+R_{i_0\ldots i_p}=R_{i_0}\cap\ldots\cap R_{i_p}
+$$
+and define
+\begin{align*}
+C^p(\mathcal R,\underline H^q(\mathcal F))
+&=
+\prod_{(i_0,\ldots,i_p)\in I^{p+1}}
+H^q(R_{i_0\ldots i_p},
+\mathcal F|_{R_{i_0\ldots i_p}}),\\
+H^p(\mathcal R,\underline H^q(\mathcal F))
+&=
+H^p(C^\bullet(\mathcal R,\underline H^q(\mathcal F))).
+\end{align*}
+The differential is the alternating sum of the restriction maps, as in
+Equation (\ref{equation-d-cech}). For $q=0$ we abbreviate these groups to
+$C^p(\mathcal R,\mathcal F)$ and $H^p(\mathcal R,\mathcal F)$.
+If $A\subset X$ and $\mathcal F$ is a sheaf on $X$, this notation always
+means that the construction is applied to $\mathcal F|_A$.
+
+If $L$ is a finite collection of coverings of $A$, then
+$\mathcal R^L$ denotes their common intersection covering: its members are
+the nonempty intersections obtained by choosing one member of every
+covering in $L$. We use the convention that $\mathcal R^\emptyset$ is the
+one-member covering $(A)$. The nerve of $\mathcal R$ has dimension at most
+$d$ if no $d+2$ distinct members of $\mathcal R$ have nonempty
+intersection.
+
+\begin{lemma}[Leray--Cartan spectral sequence for closed coverings]
+\label{lemma-cech-spectral-sequence-closed-covering}
+\begin{reference}
+\cite[Chapter III, \S 3.8, Theorem 3.8.1 and the following
+remark]{Tohoku}
+\end{reference}
+Let $A$ be a topological space and let
+$\mathcal R=(R_i)_{i\in I}$ be a covering. Assume one of the following.
+\begin{enumerate}
+\item Every $R_i$ is open in $A$.
+\item The set $I$ is finite and every $R_i$ is closed in $A$.
+\item The space $A$ is paracompact and $(R_i)_{i\in I}$ is a locally
+finite covering by closed subsets.
+\end{enumerate}
+For every abelian sheaf $\mathcal F$ on $A$ there is a functorial first
+quadrant spectral sequence
+$$
+E_1^{p,q}=
+\prod_{(i_0,\ldots,i_p)\in I^{p+1}}
+H^q(R_{i_0\ldots i_p},
+\mathcal F|_{R_{i_0\ldots i_p}}),
+\qquad
+E_2^{p,q}=H^p(\mathcal R,\underline H^q(\mathcal F))
+\Longrightarrow H^{p+q}(A,\mathcal F).
+$$
+Its bottom edge maps are canonical maps
+$$
+H^n(\mathcal R,\mathcal F)\longrightarrow H^n(A,\mathcal F),
+$$
+and its other edge maps are the restriction maps
+$$
+H^n(A,\mathcal F)\longrightarrow
+H^0(\mathcal R,\underline H^n(\mathcal F)).
+$$
+
+These spectral sequences and both edge maps are natural for refinement of
+coverings and for trace on a subset, whenever the source and target
+coverings satisfy one of the three conditions above. A refinement function
+$c:J\to I$ with $V_j\subset R_{c(j)}$ induces the usual restriction map,
+independently of $c$ from the $E_2$-page onward, and induces the identity on
+$H^*(A,\mathcal F)$. If $B\subset A$, trace induces the restriction map
+$H^*(A,\mathcal F)\to H^*(B,\mathcal F|_B)$ on the abutments.
+
+If $n>0$ and
+$$
+H^q(R_{i_0\ldots i_p},
+\mathcal F|_{R_{i_0\ldots i_p}})=0
+\quad\text{for }0<q<n,
+$$
+for all $p$ and all tuples of indices, then the edge maps give an exact
+sequence
+$$
+H^n(\mathcal R,\mathcal F)\longrightarrow H^n(A,\mathcal F)
+\longrightarrow H^0(\mathcal R,\underline H^n(\mathcal F)).
+$$
+\end{lemma}
+
+\begin{proof}
+In the open case this is Lemma \ref{lemma-cech-spectral-sequence}, using the
+covering resolution of Lemma \ref{lemma-covering-resolution}. We give the
+closed-cover argument because it is needed below.
+
+For a tuple $\mathbf i=(i_0,\ldots,i_p)$, let
+$j_{\mathbf i}:R_{\mathbf i}\to A$ be the closed inclusion. Define
+$$
+\mathcal K^p(\mathcal R,\mathcal F)=
+\prod_{\mathbf i\in I^{p+1}}
+(j_{\mathbf i})_*(\mathcal F|_{R_{\mathbf i}})
+$$
+with the alternating restriction differential. There is an augmentation
+$$
+\mathcal F\longrightarrow
+\mathcal K^\bullet(\mathcal R,\mathcal F).
+$$
+This is a quasi-isomorphism. Indeed, in the finite case, and locally in the
+locally finite case, stalks commute with the displayed products. At a point
+$x$, the nonzero factors form the augmented cochain complex of the simplex
+on the nonempty set
+$$
+I_x=\{i\in I\mid x\in R_i\}
+$$
+with coefficients in $\mathcal F_x$. Choosing one element of $I_x$ gives
+the usual contracting homotopy.
+
+We recall a convenient construction of the hypercohomology spectral
+sequence of this resolution. Apply the exact Godement resolution functor of
+Lemma \ref{lemma-godement-resolution} to every term
+$\mathcal K^p(\mathcal R,\mathcal F)$. For each Godement degree its
+exactness turns the augmented covering resolution above into a flasque
+resolution of the corresponding Godement term of $\mathcal F$. Hence one
+spectral sequence of the resulting double complex of global sections
+collapses to the complex of global sections of the Godement resolution of
+$\mathcal F$, and its total cohomology is $H^*(A,\mathcal F)$. The other
+spectral sequence has
+$$
+E_1^{p,q}=H^q(A,\mathcal K^p(\mathcal R,\mathcal F)).
+$$
+
+Suppose first that $I$ is finite. Direct image by a closed inclusion is
+exact, it sends injectives to injectives, and its global sections are the
+global sections on the closed subset. Finite products commute with
+cohomology. Consequently
+$$
+H^q(A,\mathcal K^p(\mathcal R,\mathcal F))=
+\prod_{\mathbf i\in I^{p+1}}
+H^q(R_{\mathbf i},\mathcal F|_{R_{\mathbf i}}).
+$$
+
+Suppose next that $A$ is paracompact and the closed covering is locally
+finite. Choose a flasque resolution
+$\mathcal F\to\mathcal I^\bullet$. Every $\mathcal I^r$ is soft by
+Lemma \ref{lemma-flasque-soft-family-supports}, and its restriction to a
+closed subset is soft. For fixed $p$, the family of closed subsets
+$R_{\mathbf i}$, indexed by $I^{p+1}$, is locally finite. It follows
+directly from the extension property that
+$\mathcal K^p(\mathcal R,\mathcal I^r)$ is soft: a section over a closed
+subset is a locally finite family of sections over its intersections with
+the $R_{\mathbf i}$, and the members of this family can be extended one by
+one. These sheaves are acyclic by Lemma
+\ref{lemma-family-supports-flasque-soft-acyclic}.
+
+The functor $\mathcal K^p(\mathcal R,-)$ is exact in this case, as is seen
+on stalks where only finitely many factors occur. Thus
+$\mathcal K^p(\mathcal R,\mathcal I^\bullet)$ computes the cohomology of
+$\mathcal K^p(\mathcal R,\mathcal F)$. Each closed subspace
+$R_{\mathbf i}$ is paracompact, and
+$\mathcal I^\bullet|_{R_{\mathbf i}}$ is a soft resolution. Since products
+of abelian groups are exact, we again obtain
+$$
+H^q(A,\mathcal K^p(\mathcal R,\mathcal F))=
+\prod_{\mathbf i\in I^{p+1}}
+H^q(R_{\mathbf i},\mathcal F|_{R_{\mathbf i}}).
+$$
+This proves the displayed spectral sequence.
+
+The augmentation identifies the bottom and vertical edge maps with the
+maps in the statement. In particular, the vertical edge sends a class to
+the compatible family of its restrictions to the $R_i$. A refinement
+function gives a morphism of the covering resolutions by restriction.
+Two refinement functions give homotopic morphisms by the usual prism
+homotopy, so the induced maps agree from $E_2$ onward. The augmentation
+shows that the map on the common abutment is the identity. Restricting all
+terms to $B$ gives the trace map and the restriction map on the abutments.
+This also proves all asserted naturality.
+
+Finally, under the last vanishing hypothesis the terms with
+$0<q<n$ cannot contribute in total degree $n$. Thus the filtration in that
+degree gives the asserted exact edge sequence.
+\end{proof}
+
+\begin{lemma}[Coverwise local killing]
+\label{lemma-covering-acyclicity-local-killing}
+\begin{reference}
+\cite[Chapter III, \S 3.9, Theorem 3.9.1, pp. 179--180]{Tohoku}
+\end{reference}
+Let $X$ be a topological space and let $\mathcal S$ be a nonempty
+collection of subsets of $X$. For every $A\in\mathcal S$, let
+$\mathfrak R(A)$ be a nonempty collection of indexed coverings of $A$.
+Assume the following.
+\begin{enumerate}
+\item The members of every $\mathcal R\in\mathfrak R(A)$ and all their
+nonempty finite intersections belong to $\mathcal S$.
+\item If $\mathcal R,\mathcal R'\in\mathfrak R(A)$ and $B$ is a member of
+$\mathcal R$, then the trace $\mathcal R'|_B$ belongs to
+$\mathfrak R(B)$.
+\item One of the following three alternatives holds: all members of
+$\mathcal S$ are open in $X$; all members are closed and all coverings in
+the collections $\mathfrak R(A)$ are finite; or all members are closed,
+$X$ is paracompact, and all those coverings are locally finite.
+\end{enumerate}
+Let $\mathcal F$ be an abelian sheaf on $X$ and let $n\geq0$. Suppose
+\begin{enumerate}
+\item[$A(n)$] $H^i(\mathcal R,\mathcal F)=0$ for
+$1\leq i\leq n$, every $A\in\mathcal S$, and every
+$\mathcal R\in\mathfrak R(A)$.
+\item[$B(n-1)$] For $A\in\mathcal S$, $1\leq i\leq n-1$, and
+$c\in H^i(A,\mathcal F|_A)$, there is a finite
+$L\subset\mathfrak R(A)$ such that $c$ restricts to zero on every member
+of $\mathcal R^L$.
+\end{enumerate}
+Then
+$$
+H^i(A,\mathcal F|_A)=0
+\quad\text{for }A\in\mathcal S\text{ and }1\leq i\leq n-1.
+$$
+Moreover, a class $c\in H^n(A,\mathcal F|_A)$ is zero if and only if
+there is a finite $L\subset\mathfrak R(A)$ such that $c$ restricts to
+zero on every member of $\mathcal R^L$.
+\end{lemma}
+
+\begin{proof}
+We argue by induction on $n$. The assertion for $n=0$ follows from the
+convention $\mathcal R^\emptyset=(A)$, or directly by checking germs.
+Suppose $n>0$. Applying the induction hypothesis in degree $n-1$ and using
+$B(n-1)$ shows that
+$$
+H^i(A,\mathcal F|_A)=0
+\quad\text{for }1\leq i\leq n-1
+$$
+and every $A\in\mathcal S$.
+
+It remains to prove the characterization in degree $n$. The forward
+implication follows by taking $L=\emptyset$. For the converse, suppose
+$c\in H^n(A,\mathcal F|_A)$ is killed on the members of
+$\mathcal R^L$. We use induction on $|L|$. The case $|L|=0$ is immediate.
+If $L=\{\mathcal R\}$, all the nonzero intersections of members of
+$\mathcal R$ belong to $\mathcal S$, so their cohomology vanishes in
+degrees $1,\ldots,n-1$. Lemma
+\ref{lemma-cech-spectral-sequence-closed-covering} therefore gives the exact
+sequence
+$$
+H^n(\mathcal R,\mathcal F)\longrightarrow
+H^n(A,\mathcal F|_A)\longrightarrow
+H^0(\mathcal R,\underline H^n(\mathcal F)).
+$$
+The first group is zero by $A(n)$, and the image of $c$ in the last group
+is its family of restrictions to the members of $\mathcal R$. Hence $c=0$.
+
+Now let $L=\{\mathcal R^1,\ldots,\mathcal R^k\}$ with $k>1$. For a member
+$B$ of $\mathcal R^1$, the trace coverings
+$\mathcal R^2|_B,\ldots,\mathcal R^k|_B$ belong to $\mathfrak R(B)$.
+Trace naturality in the preceding lemma says that $c|_B$ is killed on their
+common intersection covering. The induction on $k$ gives $c|_B=0$ for
+every member $B$ of $\mathcal R^1$. The case $|L|=1$ now gives $c=0$.
+\end{proof}
+
+\begin{lemma}[Equivalent covering acyclicity conditions]
+\label{lemma-covering-acyclicity-conditions}
+\begin{reference}
+\cite[Chapter III, \S 3.9, Corollary 1 to Theorem 3.9.1,
+p. 179]{Tohoku}
+\end{reference}
+In the situation of Lemma
+\ref{lemma-covering-acyclicity-local-killing}, the following are equivalent.
+\begin{enumerate}
+\item $H^i(A,\mathcal F|_A)=0$ for every $A\in\mathcal S$ and
+$1\leq i\leq n$.
+\item Conditions $A(n)$ and $B(n)$ hold.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Assume (1). Then $B(n)$ is immediate. In the spectral sequence of Lemma
+\ref{lemma-cech-spectral-sequence-closed-covering}, every finite
+intersection of members of a covering belongs to $\mathcal S$. Thus, in
+total degrees at most $n$, only the row $q=0$ can be nonzero, and the bottom
+edge maps identify
+$$
+H^i(\mathcal R,\mathcal F)=H^i(A,\mathcal F|_A)
+\quad\text{for }0\leq i\leq n.
+$$
+This proves $A(n)$.
+
+Conversely, apply Lemma \ref{lemma-covering-acyclicity-local-killing} using
+$A(n)$ and $B(n-1)$. It gives the vanishing through degree $n-1$ and says
+that a degree $n$ class is zero exactly when it is killed on a common
+intersection covering. Condition $B(n)$ kills every such class.
+\end{proof}
+
+\begin{lemma}[Special coverings compute acyclicity]
+\label{lemma-special-coverings-compute-acyclicity}
+\begin{reference}
+\cite[Chapter III, \S 3.9, Corollary 2 to Theorem 3.9.1,
+p. 179]{Tohoku}
+\end{reference}
+In the situation of Lemma
+\ref{lemma-covering-acyclicity-local-killing}, assume in addition that for
+every $A\in\mathcal S$ and every open covering $\mathcal U$ of $A$, there
+is a finite $L\subset\mathfrak R(A)$ such that $\mathcal R^L$ refines
+$\mathcal U$. Then the following are equivalent.
+\begin{enumerate}
+\item $H^i(A,\mathcal F|_A)=0$ for every $A\in\mathcal S$ and
+$1\leq i\leq n$.
+\item $H^i(\mathcal R,\mathcal F)=0$ for every $A\in\mathcal S$,
+$\mathcal R\in\mathfrak R(A)$, and $1\leq i\leq n$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Lemma \ref{lemma-kill-cohomology-class-on-covering}, applied on the
+ringed space $(A,\underline{\mathbf Z}_A)$, gives an open covering on which
+any positive-degree class becomes zero. By hypothesis a common intersection
+covering $\mathcal R^L$ refines that open covering. Thus $B(m)$ holds for
+every $m$. The result is now Lemma
+\ref{lemma-covering-acyclicity-conditions}.
+\end{proof}
+
+\begin{lemma}[Bounded nerves and acyclicity]
+\label{lemma-bounded-nerve-special-coverings-acyclic}
+\begin{reference}
+\cite[Chapter III, \S 3.9, Corollary 3 to Theorem 3.9.1,
+p. 180]{Tohoku}
+\end{reference}
+In the situation of Lemma
+\ref{lemma-special-coverings-compute-acyclicity}, suppose there is a
+$d\geq0$ such that every $\mathcal R\in\mathfrak R(A)$ has nerve of
+dimension at most $d$. If the equivalent conditions of that lemma hold for
+$1\leq i\leq d$, then
+$$
+H^i(A,\mathcal F|_A)=0
+\quad\text{for every }A\in\mathcal S\text{ and every }i>0.
+$$
+\end{lemma}
+
+\begin{proof}
+Choose a total ordering on the index set of $\mathcal R$. The usual
+projection to alternating cochains and its simplicial homotopy inverse, as
+in Lemma \ref{lemma-alternating-usual}, use only restriction maps and hence
+apply to the subset covering considered here. The alternating complex is
+zero in degrees greater than $d$. Consequently
+$H^i(\mathcal R,\mathcal F)=0$ for $i>d$. By hypothesis it also vanishes
+for $1\leq i\leq d$, so $A(m)$ holds for every $m$. The proof of Lemma
+\ref{lemma-special-coverings-compute-acyclicity} shows that $B(m)$ holds for
+every $m$. Applying Lemma \ref{lemma-covering-acyclicity-conditions} for
+arbitrary $m$ proves the assertion.
+\end{proof}

@@ -1,0 +1,61 @@
+{
+  "schema": "tohoku-d1020-independent-review-v1",
+  "created_at": "2026-08-24T04:46:24.1117730+02:00",
+  "formalization_id": "D1020",
+  "primary_unit": "tohoku:equivalence:equivariant-holomorphic-bundles",
+  "status": "STRICT_PASS_FOR_LIVE_INSERTION_AND_BUILD",
+  "candidate": {
+    "path": "tmp/d1020_equivariant_holomorphic_bundles_candidate.tex",
+    "bytes": 4937,
+    "sha256": "CBF6FA0EE8451F0CBC8793EBDE2C2D7377696E92A2ABCBF39B4595734C34CF3E"
+  },
+  "design": {
+    "path": "tmp/d1020_equivariant_holomorphic_bundles_design.json",
+    "bytes": 7209,
+    "sha256": "E83A9DD2C0C3F8D82371330F214BB2804D0B44D8CB3C2CB33C7127568B65AFF6"
+  },
+  "reviews": [
+    {
+      "reviewer": "d1018_source",
+      "scope": "source fidelity, source-unit separation, and inverse-fibre formula",
+      "verdict": "PASS",
+      "predicates": [
+        "the non-equivariant lemma states the exact p.219 fibre formula through the residue map",
+        "the equivariant lemma exactly matches D000614",
+        "the two source units have separate labels in source order",
+        "extension classification, H^1, descent, compactness, finite dimensionality, and GAGA remain excluded"
+      ]
+    },
+    {
+      "reviewer": "d1018_math",
+      "scope": "analytic gluing, coherence, semilinearity, and categorical equivalence",
+      "verdict": "PASS",
+      "predicates": [
+        "local holomorphic matrices prove full faithfulness",
+        "GL_n(O)-cocycles prove essential surjectivity and the canonical fibre formula",
+        "Oka coherence closes the locally free coherence clause",
+        "bundle actions induce the exact varying-open semilinear module convention",
+        "semilinear module actions reconstruct basis-independent holomorphic bundle actions",
+        "the constructions and equivariant morphisms are mutually inverse"
+      ]
+    }
+  ],
+  "predicate_summary": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0
+  },
+  "mapping_boundary": {
+    "authorized_after_live_gates": "D001044 replaces only D000614",
+    "not_yet_authorized": "D000615 requires its own later mapping transaction even though its prerequisite lemma is formalized here"
+  },
+  "remaining_gates": [
+    "seal the current r63 predecessor before changing live Stacks inputs",
+    "insert the candidate exactly once at the audited analytic-boundary anchor",
+    "run the narrow cohomology build and close all reference and BibTeX diagnostics",
+    "render and visually inspect every changed PDF page",
+    "run a new scanner oracle and byte-exact transaction replay",
+    "replace only D000614 if every deterministic gate passes"
+  ],
+  "errors": []
+}

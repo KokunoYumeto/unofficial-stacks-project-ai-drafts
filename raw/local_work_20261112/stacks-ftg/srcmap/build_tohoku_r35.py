@@ -1,0 +1,1061 @@
+#!/usr/bin/env python3
+"""Build the no-overwrite Tohoku Stacks mapping successor D000985--D000987."""
+
+from __future__ import annotations
+
+import contextlib
+import csv
+import hashlib
+import io
+import json
+import os
+import re
+import subprocess
+import sys
+from collections.abc import Iterator
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parent.parent
+SOURCE = ROOT / "tohoku_r34"
+TARGET = ROOT / "tohoku_r35"
+STAGE = ROOT / ".tohoku-r35-txn"
+PROJECT = Path(
+    r"user\Documents\interlanguage\03_projects\language_management"
+    r"\english_germanic\03_working_translations"
+    r"\tohoku_bilingual_canonical_stacks_20260804_r1"
+)
+SEM = PROJECT / "sem" / "r12"
+QA = PROJECT / "qa" / "v68r28"
+AUTHORITY = PROJECT / "authority_snapshot"
+
+EXPECTED_GIT_NONCLAIM = {
+    "inspection_performed": False,
+    "reason": "Workspace machine-safety policy forbids Git inspection without separate exact authorization.",
+    "predecessor_receipt": {
+        "path": "tohoku_r34/r34-check.json",
+        "bytes": 18002,
+        "sha256": "D109EBEEEB12398DF25DAC97014EEAC281DB91343EE8BFE21ED958B0CB68595B",
+    },
+    "remote_server_freshness_verified": False,
+}
+
+EXPECTED_SOURCE = {
+    "cfg.json": (5193, "D8CA68993024E64C315EF6E6986BAB09A84BD6A0E775AA36C36B3AD3B27BA5CC"),
+    "check.json": (73755, "12FE89809554051B1A27B80DEC9E9056A1BBA69FF1289BB43EF105FA562B1AE8"),
+    "dec.csv": (347149, "B95C6971240F085102EF8285FB4E5EDE3CDF05A362026C33AD800213AD7240B7"),
+    "intake.json": (1877, "7F2A3787C6A60653A0FAEB4DA4A5D3BE93A39D437FC73BD0EF8A8F4C82F3FAE4"),
+    "issues.csv": (21785, "586B29854BD4C754FB5AB96E07A7EF1FD6C0DAB9EF584319FEFC0480A68B4327"),
+    "map.csv": (465836, "D898F246ED5A8AD53533DC67FDAAFC3469DB41540860B74271201AEF010678C0"),
+    "mcheck.json": (63583, "34D574B001DF05F83185CBDE5F707225AA06E8BF9129122FAE875CED23A41FB5"),
+    "r34-check.json": (18002, "D109EBEEEB12398DF25DAC97014EEAC281DB91343EE8BFE21ED958B0CB68595B"),
+    "STATUS.md": (631, "2EF8288AB3B5EC6F4DE91EB67F4B519D94C54DDBD35F994224B03E180F9DC76C"),
+    "stx.csv": (5265685, "DA5B34DE1AFFC6440ACBDC30008C2733FD2B35AF82B700D931CA117A98A57859"),
+    "tcand.csv": (473070, "7455CF970E29D38B03B426535A881E9AB7F931F5619391273AF3F68E5C2480CB"),
+    "tmap.csv": (2424, "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"),
+    "topics.csv": (2453, "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"),
+    "ucand.csv": (120, "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"),
+    "units.csv": (391679, "6F00CF4EDB9095FBE15EBC9428DBA1ECDF4F8D34484AB8F910072A3528F19CFB"),
+}
+
+EXPECTED_TOOLS = {
+    "srcmap/intake.py": (9923, "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"),
+    "srcmap/scan.py": (3403, "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"),
+    "srcmap/map.py": (27167, "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"),
+    "fga/mkidx.py": (14844, "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"),
+    "fga/mkmap.py": (22213, "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"),
+    "fga/__pycache__/mkidx.cpython-313.pyc": (21123, "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"),
+    "fga/__pycache__/mkmap.cpython-313.pyc": (26471, "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"),
+    "tags/tags": (991506, "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"),
+}
+
+EXPECTED_QA = {
+    "sem-input.json": (330107, "6C02F64A84747026BB7732B5CC066A309EE676DB76ADFB6670FD10FB32C759D8"),
+    "sem-check.json": (6528, "CDD157630C633D68ED5CEFBA55F56DFDD027FDDCE39B6EA91A451ABAC110DF78"),
+}
+
+EXPECTED_AUTHORITY = {
+    "jstage_part_I_9_2_119.pdf": (7305283, "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"),
+    "jstage_part_II_9_3_185.pdf": (3984260, "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"),
+}
+
+EXPECTED_ARTIFACTS = {
+    "homology.tex": (336200, "419C745E12D6C2B8DB0C345F67C4B04FEABBC0CFBDBAC31E5CA8E797E9D83813"),
+    "homology.log": (38743, "15D592FF9D5CB4967E04F009D55728213D944F27A87C419CE763FCD8FB45FD23"),
+    "homology.pdf": (994977, "B0F259589F1708DFAA28758B6E9561B44FD9699EF776B4E1082A69325EF3AD2E"),
+    "modules.tex": (227768, "6BDE2852FFC50945A781FE7598FE96EC69D8B650EEF5C4C608C440D9E7E53BC0"),
+    "modules.log": (35913, "D2989C27651EACA9A5AA4BD22FCF67E7273EF67D0CC0DA9606C23844E7D94BE1"),
+    "modules.pdf": (758941, "1254E015413AFF83541031659835E3B02998D1F43550FB83D00D07A5DE3CB3E9"),
+    "cohomology.tex": (814928, "C120A56D9C3788BE467DDDBA310F8A2FDDE0AB3326ED7B9183E8B16337418AD4"),
+    "cohomology.log": (47485, "95EFD946BDA79140BBA240055142E4F13E2F8E53A690DD5B74690D6449A386D2"),
+    "cohomology.pdf": (1832179, "50DE21B2916AF71A8B05774FCBAB754A750F599CC34C0E2B62CE069526E29822"),
+    "injectives.tex": (130520, "5BC898D7A1A1017D28C6C28CA5F318D3E96A12A333CE6684FF13600316DA5D22"),
+    "injectives.log": (35028, "5F0474FCF38F15F733CEF9DCA12044FB54D9E87BFAE5FD2B219E830AA46CC404"),
+    "injectives.pdf": (633384, "7D651B4DB0A9D03D24195CCF3BCD726817867057BC082F8A996A30AD8E858D58"),
+}
+
+BUILD_SPECS = {
+    "homology": {"pdf_pages": 100, "visual_reviewed_pages": [37, 38, 39, 40]},
+    "modules": {"pdf_pages": 58, "visual_reviewed_pages": [5, 6]},
+    "cohomology": {
+        "pdf_pages": 214,
+        "visual_reviewed_pages": [162, 163, 164],
+    },
+    "injectives": {"pdf_pages": 38, "visual_reviewed_pages": [18, 19, 20]},
+}
+
+NEW_LOCAL_LABELS = (
+    "homology-definition-graded-connecting-functor",
+    "homology-definition-exact-graded-connecting-functor",
+    "homology-remark-one-sided-two-sided-delta-functors",
+    "homology-lemma-graded-connecting-functor-dualities",
+)
+
+DECISION_ROWS = [
+    {
+        "decision_id": "D000985",
+        "unit_id": "tohoku:def:delta-star-and-variance",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": ";".join((NEW_LOCAL_LABELS[0], NEW_LOCAL_LABELS[3])),
+        "rationale": (
+            "Stacks now packages all four source conventions uniformly: covariance or "
+            "contravariance, an arbitrary interval a < i < b, and step epsilon = +1 or -1, "
+            "with the corresponding boundary direction, naturality, and complex string. "
+            "The duality lemma proves that degree reindexing i maps to -i preserves variance "
+            "and reverses the step, that passage to the target opposite reverses both "
+            "variance and step with boundary (partial_T^{i-epsilon})^opp, and that passage "
+            "to the source opposite changes variance; hence every case reduces to the "
+            "covariant step +1 convention."
+        ),
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000154",
+    },
+    {
+        "decision_id": "D000986",
+        "unit_id": "tohoku:def:exact-delta-functor",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": ";".join(
+            (NEW_LOCAL_LABELS[0], NEW_LOCAL_LABELS[1], NEW_LOCAL_LABELS[2])
+        ),
+        "rationale": (
+            "Stacks now defines exactness for the same arbitrary interval and both steps "
+            "once the target is abelian, requiring exactness at every term of the actual "
+            "unpadded string having both adjacent arrows. This matches the source without "
+            "adding endpoint zero objects that it does not supply, and gives the source's "
+            "all-degree cohomological step +1 and homological step -1 terminology. The "
+            "comparison remark separately explains the stronger initial left-exactness "
+            "condition in the pre-existing nonnegative delta-functor convention."
+        ),
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000156",
+    },
+    {
+        "decision_id": "D000987",
+        "unit_id": "tohoku:def:delta-functor:p1",
+        "action": "replace",
+        "disposition": "existing_equivalent",
+        "stacks_labels": NEW_LOCAL_LABELS[0],
+        "rationale": (
+            "Stacks now specializes exactly to the source's covariant partial-functor: "
+            "additive functors T^i for every a < i < b, boundary maps T^i(A'') to "
+            "T^{i+1}(A') whenever both degrees occur, naturality in morphisms of short exact "
+            "sequences, and the requirement that the associated string be a complex. The "
+            "generalized statement also records the contravariant and degree-lowering "
+            "variants without changing this case."
+        ),
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "supersedes": "D000153",
+    },
+]
+
+SEMANTIC_SURFACE = (18, 2022604, "1FFB9D0BB60E32937A66F3AE43E22793B5594C0A039AD5F7062E3FC7F135A219")
+
+STATUS_BYTES = (
+    "# Tohoku Stacks mapping status\n\n"
+    "- Semantic source: sealed local-unpublished `sem/r12`.\n"
+    "- Stable source inventory: 990 units.\n"
+    "- Append-only decisions `D000985`--`D000987` bind the pp. 139--140 graded connecting-functor, exactness, variance, and duality definitions to equivalent labelled Stacks statements.\n"
+    "- All 25 recorded source issues remain resolved.\n"
+    "- The pinned live Stacks index adds the audited graded connecting-functor, exactness, interval, and duality labels; the four chapter builds are pinned.\n"
+    "- 70 gap-class dispositions remain.\n"
+    "- This local checkpoint makes no release, publication, remote-freshness, DOI, rights, or completion claim.\n"
+).encode("utf-8")
+
+PAYLOAD = {
+    "cfg.json", "intake.json", "units.csv", "topics.csv", "dec.csv",
+    "issues.csv", "check.json", "stx.csv", "tcand.csv", "tmap.csv",
+    "map.csv", "ucand.csv", "mcheck.json", "STATUS.md",
+}
+
+
+def digest(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest().upper()
+
+
+def identity(path: Path) -> tuple[int, str]:
+    data = path.read_bytes()
+    return len(data), digest(data)
+
+
+def record(path: Path, name: str | None = None) -> dict[str, object]:
+    size, sha256 = identity(path)
+    return {"name": name or path.name, "bytes": size, "sha256": sha256}
+
+
+def aggregate(records: list[dict[str, object]]) -> str:
+    data = b"".join(
+        f"{item['name']}\0{item['bytes']}\0{item['sha256']}\n".encode("utf-8")
+        for item in sorted(records, key=lambda value: str(value["name"]))
+    )
+    return digest(data)
+
+
+def json_bytes(value: object) -> bytes:
+    return (json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+
+
+def no_duplicate_pairs(pairs: list[tuple[str, object]]) -> dict[str, object]:
+    output: dict[str, object] = {}
+    for key, value in pairs:
+        if key in output:
+            raise ValueError(f"Duplicate JSON key: {key}")
+        output[key] = value
+    return output
+
+
+def strict_json(path: Path) -> dict:
+    data = path.read_bytes()
+    if b"\r" in data or not data.endswith(b"\n"):
+        raise RuntimeError(f"Noncanonical JSON: {path}")
+    value = json.loads(data.decode("utf-8"), object_pairs_hook=no_duplicate_pairs)
+    if not isinstance(value, dict):
+        raise RuntimeError(f"Expected JSON object: {path}")
+    return value
+
+
+def load_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
+    return load_csv_bytes(path.read_bytes(), str(path))
+
+
+def load_csv_bytes(data: bytes, source: str = "memory") -> tuple[list[str], list[dict[str, str]]]:
+    if b"\r" in data or not data.endswith(b"\n"):
+        raise RuntimeError(f"Noncanonical CSV: {source}")
+    reader = csv.DictReader(data.decode("utf-8-sig").splitlines())
+    rows = list(reader)
+    if reader.fieldnames is None or any(None in row or None in row.values() for row in rows):
+        raise RuntimeError(f"Malformed CSV: {source}")
+    return list(reader.fieldnames), rows
+
+
+def csv_bytes(fields: list[str], rows: list[dict[str, str]]) -> bytes:
+    stream = io.StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(rows)
+    return stream.getvalue().encode("utf-8")
+
+
+def exclusive_write(path: Path, data: bytes) -> None:
+    with path.open("xb") as handle:
+        handle.write(data)
+        handle.flush()
+        os.fsync(handle.fileno())
+    if path.read_bytes() != data:
+        raise RuntimeError(f"Write readback mismatch: {path}")
+
+
+def is_reparse(path: Path) -> bool:
+    return bool(path.stat(follow_symlinks=False).st_file_attributes & 0x400)
+
+
+def require_plain_file(path: Path) -> None:
+    if not path.is_file() or path.is_symlink() or is_reparse(path):
+        raise RuntimeError(f"Expected plain file: {path}")
+
+
+def require_plain_directory(path: Path) -> None:
+    if not path.is_dir() or path.is_symlink() or is_reparse(path):
+        raise RuntimeError(f"Expected plain directory: {path}")
+
+
+def require_identity(path: Path, expected: tuple[int, str]) -> None:
+    require_plain_file(path)
+    if identity(path) != expected:
+        raise RuntimeError(f"Input identity drift: {path}")
+
+
+@contextlib.contextmanager
+def deny_write_delete(paths: list[Path]) -> Iterator[None]:
+    """Hold Windows read handles that deny write and delete."""
+    if os.name != "nt":
+        raise RuntimeError("This transaction requires Windows file locks")
+    import ctypes
+    from ctypes import wintypes
+
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    create_file = kernel32.CreateFileW
+    create_file.argtypes = [
+        wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, wintypes.LPVOID,
+        wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE,
+    ]
+    create_file.restype = wintypes.HANDLE
+    close_handle = kernel32.CloseHandle
+    close_handle.argtypes = [wintypes.HANDLE]
+    close_handle.restype = wintypes.BOOL
+    handles: list[object] = []
+    invalid = ctypes.c_void_p(-1).value
+    try:
+        for path in sorted(set(paths), key=lambda item: str(item).casefold()):
+            require_plain_file(path)
+            handle = create_file(
+                str(path), 0x80000000, 0x00000001, None, 3, 0x00000080, None
+            )
+            if handle in (None, invalid):
+                raise OSError(ctypes.get_last_error(), f"Cannot lock {path}")
+            handles.append(handle)
+        yield
+    finally:
+        for handle in reversed(handles):
+            close_handle(handle)
+
+
+@contextlib.contextmanager
+def single_writer_mutex() -> Iterator[None]:
+    if os.name != "nt":
+        raise RuntimeError("This transaction requires a Windows mutex")
+    import ctypes
+    from ctypes import wintypes
+
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    create_file = kernel32.CreateFileW
+    create_file.argtypes = [
+        wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, wintypes.LPVOID,
+        wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE,
+    ]
+    create_file.restype = wintypes.HANDLE
+    close_handle = kernel32.CloseHandle
+    close_handle.argtypes = [wintypes.HANDLE]
+    close_handle.restype = wintypes.BOOL
+    dotgit = ROOT / ".git"
+    if not dotgit.is_file():
+        raise RuntimeError("Expected explicit .git worktree pointer is absent")
+    pointer = dotgit.read_text(encoding="utf-8").strip()
+    if not pointer.startswith("gitdir: "):
+        raise RuntimeError("Malformed explicit .git worktree pointer")
+    git_directory = Path(pointer.removeprefix("gitdir: "))
+    if not git_directory.is_absolute():
+        git_directory = (dotgit.parent / git_directory).resolve()
+    mutex = git_directory / "tohoku-r35-dossier.lock"
+    if not mutex.parent.is_dir():
+        raise RuntimeError("Resolved explicit worktree Git directory is absent")
+    mutex.parent.mkdir(parents=True, exist_ok=True)
+    handle = create_file(str(mutex), 0xC0000000, 0, None, 4, 0x00000100, None)
+    invalid = ctypes.c_void_p(-1).value
+    if handle in (None, invalid):
+        raise RuntimeError("Another Tohoku r35 transaction is active")
+    try:
+        yield
+    finally:
+        close_handle(handle)
+
+
+def sem_records() -> list[dict[str, object]]:
+    check = strict_json(QA / "sem-check.json")
+    surface = check.get("semantic_surface")
+    if not isinstance(surface, dict) or (
+        surface.get("file_count"), surface.get("bytes"), surface.get("aggregate_sha256")
+    ) != SEMANTIC_SURFACE:
+        raise RuntimeError("Semantic surface receipt drift")
+    records = surface.get("files")
+    if not isinstance(records, list) or len(records) != 18:
+        raise RuntimeError("Semantic file records are malformed")
+    return records
+
+
+def expected_tex_hashes() -> dict[str, str]:
+    hashes = dict(strict_json(SOURCE / "check.json")["tex_sha256"])
+    if len(hashes) != 119:
+        raise RuntimeError("Predecessor TeX surface drift")
+    hashes["homology.tex"] = EXPECTED_ARTIFACTS["homology.tex"][1]
+    return hashes
+
+
+def lock_paths(fresh: bool) -> list[Path]:
+    sem = [SEM / str(item["name"]) for item in sem_records()]
+    paths = [
+        Path(__file__), ROOT / "srcmap" / "start_build_tohoku_r35.py",
+        ROOT / "srcmap" / "start_build_tohoku_r35.ps1",
+        *[SOURCE / name for name in EXPECTED_SOURCE],
+        *[QA / name for name in EXPECTED_QA],
+        *[AUTHORITY / name for name in EXPECTED_AUTHORITY],
+        *sem,
+    ]
+    if fresh:
+        paths.extend(ROOT / name for name in EXPECTED_TOOLS)
+        paths.extend(ROOT / name for name in expected_tex_hashes())
+        paths.extend(ROOT / name for name in EXPECTED_ARTIFACTS)
+    elif TARGET.exists():
+        paths.extend(path for path in TARGET.iterdir() if path.is_file())
+    return paths
+
+
+def verify_execution_attestation() -> dict[str, object]:
+    attestation = globals().get("EXECUTION_ATTESTATION")
+    if not isinstance(attestation, dict) or set(attestation) != {"bootstrap", "builder"}:
+        raise RuntimeError("Run through start_build_tohoku_r35.py")
+    bootstrap = attestation.get("bootstrap")
+    if bootstrap != {
+        "path": "srcmap/start_build_tohoku_r35.py",
+        "contract": "read_once_then_execute_builder_same_bytes",
+    }:
+        raise RuntimeError("Bootstrap attestation drift")
+    builder = attestation.get("builder")
+    if not isinstance(builder, dict) or set(builder) != {
+        "path", "bytes", "sha256", "contract"
+    }:
+        raise RuntimeError("Builder attestation shape drift")
+    if (
+        builder.get("path") != "srcmap/build_tohoku_r35.py"
+        or builder.get("contract") != "read_hash_compile_and_exec_same_payload"
+        or identity(Path(__file__)) != (builder.get("bytes"), builder.get("sha256"))
+    ):
+        raise RuntimeError("Same-bytes builder attestation drift")
+    return attestation
+
+
+def verify_inputs(fresh: bool) -> tuple[dict[str, object], bytes]:
+    require_plain_directory(SOURCE)
+    source_names = {path.name for path in SOURCE.iterdir() if path.is_file()}
+    if source_names != set(EXPECTED_SOURCE) or any(path.is_dir() for path in SOURCE.iterdir()):
+        raise RuntimeError("Predecessor dossier surface drift")
+    for name, expected in EXPECTED_SOURCE.items():
+        require_identity(SOURCE / name, expected)
+    predecessor = strict_json(SOURCE / "r34-check.json")
+    if predecessor.get("status") != "PASS" or predecessor.get("errors") != []:
+        raise RuntimeError("Predecessor receipt is not PASS")
+    if fresh:
+        for name, expected in EXPECTED_TOOLS.items():
+            require_identity(ROOT / name, expected)
+    for name, expected in EXPECTED_QA.items():
+        require_identity(QA / name, expected)
+    for name, expected in EXPECTED_AUTHORITY.items():
+        require_identity(AUTHORITY / name, expected)
+    if fresh:
+        for name, expected in EXPECTED_ARTIFACTS.items():
+            require_identity(ROOT / name, expected)
+
+    sem_check = strict_json(QA / "sem-check.json")
+    if sem_check.get("status") != "PASS" or sem_check.get("errors") != []:
+        raise RuntimeError("Semantic check is not PASS")
+    sem_validation = strict_json(SEM / "validation.json")
+    if sem_validation.get("status") != "PASS" or sem_validation.get("errors") != []:
+        raise RuntimeError("Semantic validation is not PASS")
+    sem = sem_records()
+    if {path.name for path in SEM.iterdir() if path.is_file()} != {
+        str(item["name"]) for item in sem
+    } or any(path.is_dir() for path in SEM.iterdir()):
+        raise RuntimeError("Semantic directory surface drift")
+    current_sem: list[dict[str, object]] = []
+    for item in sem:
+        path = SEM / str(item["name"])
+        require_identity(path, (int(item["bytes"]), str(item["sha256"])))
+        current_sem.append(record(path))
+    if aggregate(current_sem) != SEMANTIC_SURFACE[2]:
+        raise RuntimeError("Semantic aggregate drift")
+
+    if fresh:
+        tex_hashes = expected_tex_hashes()
+        live_names = {path.name for path in ROOT.glob("*.tex")}
+        if live_names != set(tex_hashes):
+            raise RuntimeError("Live TeX filename surface drift")
+        for name, sha256 in tex_hashes.items():
+            require_plain_file(ROOT / name)
+            if identity(ROOT / name)[1] != sha256:
+                raise RuntimeError(f"Live TeX identity drift: {name}")
+
+    if fresh and (
+        sys.version_info[:3] != (3, 13, 9)
+        or sys.implementation.cache_tag != "cpython-313"
+    ):
+        raise RuntimeError("Python runtime drift")
+    return dict(EXPECTED_GIT_NONCLAIM), b""
+
+
+def make_config() -> dict:
+    cfg = strict_json(SOURCE / "cfg.json")
+    cfg["dossier_id"] = "tohoku_r35"
+    cfg["inputs"]["primary"] = {
+        **record(SEM / "nodes.csv", "nodes.csv"),
+        "filename": "nodes.csv",
+        "source_file": "sem/r12/nodes.csv",
+    }
+    for key, filename in (
+        ("edges", "edges.csv"),
+        ("terms", "terms.csv"),
+        ("stacks", "stacks.csv"),
+    ):
+        cfg["inputs"][key] = {
+            **record(SEM / filename, filename),
+            "filename": filename,
+        }
+    cfg["inputs"]["sem_manifest"] = {
+        **record(SEM / "manifest.json", "sem/r12 manifest"),
+        "filename": "manifest.json",
+    }
+    cfg["inputs"]["sem_validation"] = {
+        **record(SEM / "validation.json", "sem/r12 validation"),
+        "filename": "validation.json",
+    }
+    cfg["inputs"]["sem_input"] = {
+        **record(QA / "sem-input.json", "v68r28 sem input"),
+        "filename": "sem-input.json",
+    }
+    cfg["inputs"]["sem_check"] = {
+        **record(QA / "sem-check.json", "v68r28 sem check"),
+        "filename": "sem-check.json",
+    }
+    cfg["semantic_successor"] = {
+        "generation": "sem/r12",
+        "surface_files": SEMANTIC_SURFACE[0],
+        "surface_bytes": SEMANTIC_SURFACE[1],
+        "surface_sha256": SEMANTIC_SURFACE[2],
+        "receipt": record(QA / "sem-check.json", "qa/v68r28/sem-check.json"),
+    }
+    return cfg
+
+
+def make_decisions() -> bytes:
+    fields, rows = load_csv(SOURCE / "dec.csv")
+    if [row["decision_id"] for row in rows] != [
+        f"D{number:06d}" for number in range(1, 985)
+    ]:
+        raise RuntimeError("Predecessor decision sequence drift")
+    if rows[-1]["decision_id"] != "D000984":
+        raise RuntimeError("Unexpected predecessor decision tail")
+    appended = csv_bytes(fields, DECISION_ROWS)
+    return (SOURCE / "dec.csv").read_bytes() + appended[appended.index(b"\n") + 1 :]
+
+
+def make_issues() -> bytes:
+    _, rows = load_csv(SOURCE / "issues.csv")
+    if [row["issue_id"] for row in rows] != [
+        f"I{number:06d}" for number in range(1, 26)
+    ]:
+        raise RuntimeError("Predecessor source-issue sequence drift")
+    active = [row["issue_id"] for row in rows if row["status"] != "resolved"]
+    if active:
+        raise RuntimeError(f"Unexpected predecessor active source issues: {active}")
+    return (SOURCE / "issues.csv").read_bytes()
+
+
+def run_tool(name: str, *args: str) -> None:
+    relative = f"srcmap/{name}"
+    require_identity(ROOT / relative, EXPECTED_TOOLS[relative])
+    subprocess.run([sys.executable, "-I", "-B", str(ROOT / relative), *args], cwd=ROOT, check=True)
+    require_identity(ROOT / relative, EXPECTED_TOOLS[relative])
+
+
+def intake_args() -> list[str]:
+    specs = [
+        ("part_i", AUTHORITY / "jstage_part_I_9_2_119.pdf"),
+        ("part_ii", AUTHORITY / "jstage_part_II_9_3_185.pdf"),
+        ("edges", SEM / "edges.csv"), ("terms", SEM / "terms.csv"),
+        ("stacks", SEM / "stacks.csv"), ("sem_manifest", SEM / "manifest.json"),
+        ("sem_validation", SEM / "validation.json"),
+        ("sem_input", QA / "sem-input.json"), ("sem_check", QA / "sem-check.json"),
+    ]
+    output: list[str] = []
+    for key, path in specs:
+        output += ["--extra", f"{key}={path}"]
+    return output
+
+
+def verify_builds() -> dict[str, object]:
+    forbidden = [
+        r"(?m)^!", r"(?m)^LaTeX Warning:", r"(?m)^Package .* Warning:",
+        r"undefined references", r"undefined citations",
+        r"Rerun to get cross-references right", r"Label\(s\) may have changed",
+    ]
+    builds: dict[str, object] = {}
+    for chapter, spec in BUILD_SPECS.items():
+        text = (ROOT / f"{chapter}.log").read_text(
+            encoding="utf-8", errors="replace"
+        )
+        hits = [pattern for pattern in forbidden if re.search(pattern, text)]
+        if hits:
+            raise RuntimeError(f"{chapter} build diagnostics failed: {hits}")
+        builds[chapter] = {
+            "tex": record(ROOT / f"{chapter}.tex"),
+            "log": record(ROOT / f"{chapter}.log"),
+            "pdf": record(ROOT / f"{chapter}.pdf"),
+            "pdf_pages": spec["pdf_pages"],
+            "undefined_references": 0,
+            "undefined_citations": 0,
+            "rerun_notices": 0,
+            "new_block_overfull_boxes": 0,
+            "visual_reviewed_pages": spec["visual_reviewed_pages"],
+        }
+    return builds
+
+
+def verify_deltas(root: Path) -> dict[str, object]:
+    intake = strict_json(root / "intake.json")
+    check = strict_json(root / "check.json")
+    mcheck = strict_json(root / "mcheck.json")
+    for name, receipt in (("intake", intake), ("scan", check), ("map", mcheck)):
+        if receipt.get("status") != "PASS" or receipt.get("errors") != []:
+            raise RuntimeError(f"{name} receipt is not PASS")
+    if mcheck.get("outputs_promoted") is not True:
+        raise RuntimeError("Mapping outputs were not promoted")
+
+    if strict_json(root / "cfg.json") != make_config():
+        raise RuntimeError("Configuration does not exactly bind sem/r12")
+    if identity(root / "cfg.json") != (
+        5193,
+        "DEA83BA2AD039F74591F06E809BD40A5F63DB5331EF6D694A70F3F215A607D30",
+    ):
+        raise RuntimeError("Configuration canonical-byte identity drift")
+    if identity(root / "intake.json") != (
+        1877,
+        "7F2A3787C6A60653A0FAEB4DA4A5D3BE93A39D437FC73BD0EF8A8F4C82F3FAE4",
+    ):
+        raise RuntimeError("Intake receipt canonical-byte identity drift")
+    if (root / "STATUS.md").read_bytes() != STATUS_BYTES or identity(
+        root / "STATUS.md"
+    ) != (
+        650,
+        "4D0EFBB442D7983EE8B395FB68FFBF04225F26A4E607352FFCCC32F01BB9BEC3",
+    ):
+        raise RuntimeError("Status canonical-byte identity drift")
+    for name in (
+        "units.csv", "topics.csv", "issues.csv", "tmap.csv", "ucand.csv",
+    ):
+        if (root / name).read_bytes() != (SOURCE / name).read_bytes():
+            raise RuntimeError(f"Unexpected byte drift: {name}")
+    if identity(root / "units.csv") != (
+        391679,
+        "6F00CF4EDB9095FBE15EBC9428DBA1ECDF4F8D34484AB8F910072A3528F19CFB",
+    ):
+        raise RuntimeError("Unit inventory canonical-byte identity drift")
+    if identity(root / "stx.csv") != (
+        5266760,
+        "491C33310A94B6352415E375BDD15687325D8DAD3A852AF3655DE6F181A876F8",
+    ):
+        raise RuntimeError("Stacks index canonical-byte identity drift")
+    if identity(root / "tcand.csv") != (
+        475021,
+        "510F6098CB6EDF39956A4392CB6586FA5AD49E3D1CA4A2DA855A01EA97F72B6D",
+    ):
+        raise RuntimeError("Topic-candidate canonical-byte identity drift")
+    if identity(root / "tmap.csv") != (
+        2424,
+        "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1",
+    ):
+        raise RuntimeError("Topic-map canonical-byte identity drift")
+
+    old_dec = (SOURCE / "dec.csv").read_bytes()
+    new_dec = (root / "dec.csv").read_bytes()
+    if not new_dec.startswith(old_dec):
+        raise RuntimeError("Decision ledger is not an exact append-only successor")
+    if new_dec != make_decisions():
+        raise RuntimeError("Decision ledger bytes differ from the canonical successor")
+    if identity(root / "dec.csv") != (
+        349308,
+        "7F07D40E76A047DF49DB662480F601F738584439E98A382C7982FAB642E432CC",
+    ):
+        raise RuntimeError("Decision ledger canonical-byte identity drift")
+    _, decisions = load_csv(root / "dec.csv")
+    if [row["decision_id"] for row in decisions] != [
+        f"D{number:06d}" for number in range(1, 988)
+    ]:
+        raise RuntimeError("Decision sequence is not D000001..D000987")
+    if decisions[-3:] != DECISION_ROWS:
+        raise RuntimeError("D000985--D000987 differ from the frozen rows")
+
+    if (root / "issues.csv").read_bytes() != make_issues():
+        raise RuntimeError("Source-issue ledger is not the exact predecessor")
+    if identity(root / "issues.csv") != (
+        21785,
+        "586B29854BD4C754FB5AB96E07A7EF1FD6C0DAB9EF584319FEFC0480A68B4327",
+    ):
+        raise RuntimeError("Source-issue ledger canonical-byte identity drift")
+    _, issues = load_csv(root / "issues.csv")
+    if [row["issue_id"] for row in issues] != [
+        f"I{number:06d}" for number in range(1, 26)
+    ]:
+        raise RuntimeError("Source-issue sequence drift")
+    active_issues = [row["issue_id"] for row in issues if row["status"] != "resolved"]
+    if active_issues:
+        raise RuntimeError(f"Unexpected active source issues: {active_issues}")
+
+    expected_scan_counts = {
+        "labels": 22027,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1243,
+        "topic_coverage": {"direct": 13},
+        "topics": 13,
+    }
+    if check.get("counts") != expected_scan_counts:
+        raise RuntimeError(f"Scan counts drift: {check.get('counts')}")
+    if check.get("tex_sha256") != expected_tex_hashes():
+        raise RuntimeError("TeX hash dictionary drift")
+    if check.get("sha256", {}).get("tags/tags") != EXPECTED_TOOLS["tags/tags"][1]:
+        raise RuntimeError("Tags hash drift in scan receipt")
+    old_check = strict_json(SOURCE / "check.json")
+    expected_check = json.loads(json.dumps(old_check))
+    expected_check["counts"] = expected_scan_counts
+    expected_check["warnings"] = [
+        *old_check["warnings"][:9],
+        *sorted([
+            *old_check["warnings"][9:],
+            *[
+                f"TeX label has no official tag in this snapshot: {label}"
+                for label in NEW_LOCAL_LABELS
+            ],
+        ]),
+    ]
+    expected_check["tex_sha256"] = expected_tex_hashes()
+    expected_check["sha256"] = {
+        key.replace("tohoku_r34/", "tohoku_r35/"): value
+        for key, value in old_check["sha256"].items()
+    }
+    expected_check["sha256"].update({
+        "tohoku_r35/stx.csv":
+            "491C33310A94B6352415E375BDD15687325D8DAD3A852AF3655DE6F181A876F8",
+        "tohoku_r35/tcand.csv":
+            "510F6098CB6EDF39956A4392CB6586FA5AD49E3D1CA4A2DA855A01EA97F72B6D",
+    })
+    if check != expected_check:
+        raise RuntimeError("Scan receipt is not the exact bounded four-label successor")
+    if identity(root / "check.json") != (
+        74175,
+        "BA3A558CF1D2496746691FE31AE1E8C5D6319DACE78619BEA1676BA01F653D94",
+    ):
+        raise RuntimeError("Scan receipt canonical-byte identity drift")
+
+    _, old_stx = load_csv(SOURCE / "stx.csv")
+    _, new_stx = load_csv(root / "stx.csv")
+    old_labels = [row["full_label"] for row in old_stx]
+    new_labels = [row["full_label"] for row in new_stx]
+    if len(old_labels) != len(set(old_labels)) or len(new_labels) != len(set(new_labels)):
+        raise RuntimeError("Stacks index full-label uniqueness drift")
+    if set(new_labels) - set(old_labels) != set(NEW_LOCAL_LABELS):
+        raise RuntimeError("Stacks index added-label surface drift")
+    if set(old_labels) - set(new_labels):
+        raise RuntimeError("Stacks index unexpectedly dropped labels")
+
+    old_map_fields, old_map = load_csv(SOURCE / "map.csv")
+    new_map_fields, new_map = load_csv(root / "map.csv")
+    if old_map_fields != new_map_fields:
+        raise RuntimeError("Map field surface drift")
+    if [row["unit_id"] for row in new_map] != [row["unit_id"] for row in old_map]:
+        raise RuntimeError("Map unit ID/order drift")
+    decisions_by_unit = {row["unit_id"]: row for row in DECISION_ROWS}
+    exact_changed_fields = {
+        "tohoku:def:delta-functor:p1": {
+            "decision_id", "disposition", "review_state", "stacks_labels",
+            "stacks_tags", "rationale",
+        },
+        "tohoku:def:delta-star-and-variance": {
+            "decision_id", "disposition", "review_state", "stacks_labels",
+            "rationale",
+        },
+        "tohoku:def:exact-delta-functor": {
+            "decision_id", "disposition", "review_state", "stacks_labels",
+            "stacks_tags", "rationale",
+        },
+    }
+    substantive: list[str] = []
+    for old_row, new_row in zip(old_map, new_map, strict=True):
+        changed = {field for field in old_row if old_row[field] != new_row[field]}
+        decision = decisions_by_unit.get(new_row["unit_id"])
+        if decision is None:
+            if changed:
+                raise RuntimeError(
+                    f"Unexpected map delta {new_row['unit_id']}: {sorted(changed)}"
+                )
+            continue
+        expected_values = {
+            "decision_id": decision["decision_id"],
+            "disposition": decision["disposition"],
+            "review_state": decision["review_state"],
+            "stacks_labels": decision["stacks_labels"],
+            "stacks_tags": "",
+            "rationale": decision["rationale"],
+        }
+        if changed != exact_changed_fields[new_row["unit_id"]]:
+            raise RuntimeError(
+                f"Unexpected {decision['decision_id']} map fields: {sorted(changed)}"
+            )
+        if any(new_row[field] != value for field, value in expected_values.items()):
+            raise RuntimeError(
+                f"Map row does not exactly realize {decision['decision_id']}"
+            )
+        substantive.append(new_row["unit_id"])
+    if substantive != [
+        "tohoku:def:delta-functor:p1",
+        "tohoku:def:delta-star-and-variance",
+        "tohoku:def:exact-delta-functor",
+    ]:
+        raise RuntimeError("Unexpected substantive map change order")
+    if identity(root / "map.csv") != (
+        467019,
+        "556D3E9F0B9027FCC05A7EB80BB7C26E9468C5BF23B68F09C26696A5A1786AE8",
+    ):
+        raise RuntimeError("Map canonical-byte identity drift")
+
+    expected_counts = {
+        "active_graph_corrections": 0,
+        "active_source_issues": 0,
+        "candidate_units": 0,
+        "decided_units": 678,
+        "decisions": 987,
+        "dispositions": {
+            "example_or_remark": 84,
+            "existing_equivalent": 339,
+            "existing_stronger": 38,
+            "existing_weaker": 13,
+            "extend_existing": 25,
+            "historical_reference": 33,
+            "new_section": 6,
+            "new_statement": 26,
+            "structural_only": 426,
+        },
+        "graph_corrections": 0,
+        "review_units": 0,
+        "source_issues": 25,
+        "unit_candidates": 0,
+        "units": 990,
+    }
+    if mcheck.get("counts") != expected_counts:
+        raise RuntimeError(f"Mapping counts drift: {mcheck.get('counts')}")
+    if mcheck.get("warnings") != check.get("warnings"):
+        raise RuntimeError("Mapping warning surface differs from scan warnings")
+    old_mcheck = strict_json(SOURCE / "mcheck.json")
+    expected_mcheck = json.loads(json.dumps(old_mcheck))
+    expected_mcheck["counts"] = expected_counts
+    expected_mcheck["warnings"] = expected_check["warnings"]
+    expected_mcheck["sha256"] = {
+        key.replace("tohoku_r34/", "tohoku_r35/"): value
+        for key, value in old_mcheck["sha256"].items()
+    }
+    expected_mcheck["sha256"].update({
+        "tohoku_r35/cfg.json":
+            "DEA83BA2AD039F74591F06E809BD40A5F63DB5331EF6D694A70F3F215A607D30",
+        "tohoku_r35/dec.csv":
+            "7F07D40E76A047DF49DB662480F601F738584439E98A382C7982FAB642E432CC",
+        "tohoku_r35/map.csv":
+            "556D3E9F0B9027FCC05A7EB80BB7C26E9468C5BF23B68F09C26696A5A1786AE8",
+    })
+    if mcheck != expected_mcheck:
+        raise RuntimeError("Mapping receipt is not the exact bounded successor")
+    if identity(root / "mcheck.json") != (
+        64003,
+        "A0FE526CDE36971F37B128542E1FD2F7E6D4227AD9D1E9D3E64D4481A0DB7A55",
+    ):
+        raise RuntimeError("Mapping receipt canonical-byte identity drift")
+    _, candidates = load_csv(root / "ucand.csv")
+    if candidates:
+        raise RuntimeError("Unexpected undecided unit candidates")
+    gap_count = sum(
+        expected_counts["dispositions"][name]
+        for name in ("existing_weaker", "extend_existing", "new_statement", "new_section")
+    )
+    if gap_count != 70:
+        raise RuntimeError(f"Gap-class arithmetic drift: {gap_count}")
+    return {
+        "decisions": DECISION_ROWS,
+        "resolved_source_issues": [],
+        "active_source_issues": active_issues,
+        "semantic_title_changes": [],
+        "scan_counts": check["counts"],
+        "mapping_counts": mcheck["counts"],
+        "substantive_map_changes": substantive,
+        "topic_candidate_churn": {"added": [], "dropped": []},
+        "remaining_gap_class_dispositions": gap_count,
+    }
+
+
+def output_records(root: Path) -> list[dict[str, object]]:
+    return [record(root / name) for name in sorted(PAYLOAD)]
+
+
+def source_records() -> list[dict[str, object]]:
+    return [record(SOURCE / name) for name in sorted(EXPECTED_SOURCE)]
+
+
+def receipt_payload(
+    root: Path,
+    git: dict[str, object],
+    attestation: dict[str, object],
+    deltas: dict[str, object],
+    builds: dict[str, object] | None = None,
+    execution: dict[str, object] | None = None,
+) -> dict[str, object]:
+    sources = source_records()
+    semantic = [record(SEM / str(item["name"])) for item in sem_records()]
+    return {
+        "schema": "tohoku-stacks-mapping-successor-r35-v1",
+        "status": "PASS",
+        "errors": [],
+        "predecessor_dossier": {
+            "name": "tohoku_r34",
+            "files": sources,
+            "file_count": len(sources),
+            "bytes": sum(int(item["bytes"]) for item in sources),
+            "aggregate_sha256": aggregate(sources),
+        },
+        "semantic_source": {
+            "generation": "sem/r12",
+            "files": semantic,
+            "file_count": len(semantic),
+            "bytes": sum(int(item["bytes"]) for item in semantic),
+            "aggregate_sha256": aggregate(semantic),
+            "sem_input": record(QA / "sem-input.json", "qa/v68r28/sem-input.json"),
+            "sem_check": record(QA / "sem-check.json", "qa/v68r28/sem-check.json"),
+        },
+        "execution": execution if execution is not None else {
+            "attestation": attestation,
+            "bootstrap": record(ROOT / "srcmap" / "start_build_tohoku_r35.py"),
+            "powershell_envelope": record(ROOT / "srcmap" / "start_build_tohoku_r35.ps1"),
+            "dependencies": {name: record(ROOT / name) for name in sorted(EXPECTED_TOOLS)},
+            "contract": "same_bytes_bootstrap; exact_inputs_locked_against_write_delete_through_generation_replay_and_promotion",
+        },
+        "git": git,
+        "builds": verify_builds() if builds is None else builds,
+        "deltas": deltas,
+        "files": output_records(root),
+        "nonclaims": [
+            "No Git command is executed by this mapping successor.",
+            "No Git commit or push is made by this receipt.",
+            "No remote-server freshness check is performed.",
+            "Existing-target replay treats the live Stacks TeX and build artifacts as creation-time evidence bound by the receipt; it does not assert that those external files remain byte-identical later.",
+            "The outer-envelope sentinel prevents accidental direct-bootstrap use but is not cryptographic provenance against a same-user forged invocation.",
+            "The Stacks scan binds the exact live integrated worktree, not the frozen HEAD tree.",
+            "The transaction denies write/delete access to every existing consumed file; hostile same-user mutation of directory namespaces is outside this lock contract.",
+            "No release, publication, upload, DOI, Zenodo, rights, or whole-paper gate is closed.",
+            "70 Tohoku gap-class dispositions remain after D000987.",
+            "All 25 recorded source issues are resolved; no active source issue remains.",
+        ],
+    }
+
+
+def verify_existing(
+    git: dict[str, object], attestation: dict[str, object]
+) -> dict[str, object]:
+    require_plain_directory(TARGET)
+    names = {path.name for path in TARGET.iterdir() if path.is_file()}
+    if names != PAYLOAD | {"r35-check.json"} or any(path.is_dir() for path in TARGET.iterdir()):
+        raise RuntimeError("Existing r35 dossier surface drift")
+    deltas = verify_deltas(TARGET)
+    receipt = strict_json(TARGET / "r35-check.json")
+    if receipt.get("git") != EXPECTED_GIT_NONCLAIM:
+        raise RuntimeError("Existing receipt Git nonclaim drift")
+    builds = receipt.get("builds")
+    if not isinstance(builds, dict):
+        raise RuntimeError("Existing builds receipt is malformed")
+    expected_builds: dict[str, object] = {}
+    for chapter, spec in BUILD_SPECS.items():
+        expected_builds[chapter] = {
+            "tex": {
+                "name": f"{chapter}.tex",
+                "bytes": EXPECTED_ARTIFACTS[f"{chapter}.tex"][0],
+                "sha256": EXPECTED_ARTIFACTS[f"{chapter}.tex"][1],
+            },
+            "log": {
+                "name": f"{chapter}.log",
+                "bytes": EXPECTED_ARTIFACTS[f"{chapter}.log"][0],
+                "sha256": EXPECTED_ARTIFACTS[f"{chapter}.log"][1],
+            },
+            "pdf": {
+                "name": f"{chapter}.pdf",
+                "bytes": EXPECTED_ARTIFACTS[f"{chapter}.pdf"][0],
+                "sha256": EXPECTED_ARTIFACTS[f"{chapter}.pdf"][1],
+            },
+            "pdf_pages": spec["pdf_pages"],
+            "undefined_references": 0,
+            "undefined_citations": 0,
+            "rerun_notices": 0,
+            "new_block_overfull_boxes": 0,
+            "visual_reviewed_pages": spec["visual_reviewed_pages"],
+        }
+    if builds != expected_builds:
+        raise RuntimeError("Existing builds receipt drift")
+    execution = receipt.get("execution")
+    if not isinstance(execution, dict):
+        raise RuntimeError("Existing execution receipt is malformed")
+    expected_execution = {
+        "attestation": attestation,
+        "bootstrap": record(ROOT / "srcmap" / "start_build_tohoku_r35.py"),
+        "powershell_envelope": record(ROOT / "srcmap" / "start_build_tohoku_r35.ps1"),
+        "dependencies": {
+            name: {
+                "name": Path(name).name,
+                "bytes": expected[0],
+                "sha256": expected[1],
+            }
+            for name, expected in sorted(EXPECTED_TOOLS.items())
+        },
+        "contract": "same_bytes_bootstrap; exact_inputs_locked_against_write_delete_through_generation_replay_and_promotion",
+    }
+    if execution != expected_execution:
+        raise RuntimeError("Existing execution receipt drift")
+    expected = receipt_payload(
+        TARGET, receipt["git"], attestation, deltas, builds, execution
+    )
+    if receipt != expected:
+        raise RuntimeError("Existing r35 receipt replay mismatch")
+    return receipt
+
+
+def main_locked(attestation: dict[str, object]) -> int:
+    target_entry = os.path.lexists(TARGET)
+    stage_entry = os.path.lexists(STAGE)
+    if target_entry and stage_entry:
+        raise RuntimeError("Target and unresolved transaction coexist")
+    if stage_entry:
+        raise FileExistsError(f"Unresolved transaction exists: {STAGE}")
+    fresh = not target_entry
+    with deny_write_delete(lock_paths(fresh)):
+        git, _ = verify_inputs(fresh)
+        if target_entry:
+            receipt = verify_existing(git, attestation)
+            print(json.dumps(receipt, ensure_ascii=False, indent=2))
+            return 0
+        STAGE.mkdir()
+        exclusive_write(STAGE / "cfg.json", json_bytes(make_config()))
+        exclusive_write(STAGE / "topics.csv", (SOURCE / "topics.csv").read_bytes())
+        exclusive_write(STAGE / "dec.csv", make_decisions())
+        exclusive_write(STAGE / "issues.csv", make_issues())
+        run_tool("intake.py", str(STAGE), str(SEM / "nodes.csv"), *intake_args())
+        run_tool("scan.py", str(STAGE))
+        run_tool("map.py", str(STAGE))
+        exclusive_write(STAGE / "STATUS.md", STATUS_BYTES)
+        deltas = verify_deltas(STAGE)
+        receipt = receipt_payload(STAGE, git, attestation, deltas)
+        exclusive_write(STAGE / "r35-check.json", json_bytes(receipt))
+        if (
+            {path.name for path in STAGE.iterdir() if path.is_file()}
+            != PAYLOAD | {"r35-check.json"}
+            or any(path.is_dir() for path in STAGE.iterdir())
+        ):
+            raise RuntimeError("Staged dossier surface mismatch")
+        verify_inputs(True)
+        os.rename(STAGE, TARGET)
+        with deny_write_delete([path for path in TARGET.iterdir() if path.is_file()]):
+            final = verify_existing(git, attestation)
+        print(json.dumps(final, ensure_ascii=False, indent=2))
+        return 0
+
+
+def main() -> int:
+    attestation = verify_execution_attestation()
+    with single_writer_mutex():
+        return main_locked(attestation)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

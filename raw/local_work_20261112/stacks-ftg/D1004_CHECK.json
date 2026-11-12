@@ -1,0 +1,167 @@
+{
+  "schema": "tohoku-stacks-d1004-audit-v1",
+  "created_at": "2026-08-22T06:09:42.6214476+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1004",
+  "primary_unit": "tohoku:def:adjoint-obstruction-class",
+  "related_units": [
+    "tohoku:remark:3.4.2:3:p1",
+    "tohoku:eq:adjoint-logarithmic-derivative",
+    "tohoku:construction:constant-transition-reduction:p1",
+    "tohoku:remark:3.4.2:3:p2"
+  ],
+  "stacks_label": "cohomology-lemma-holomorphic-logarithmic-derivative-obstruction",
+  "source_reference": "Tohoku, Chapter III, Section 3.4, Remark 3, pp. 165-166",
+  "mapping_authority_sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+  "primary_source_files": [
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p165.tex",
+      "bytes": 3955,
+      "sha256": "8428BDCCCFAD48BA788782899AC60C8A3FC9BE0509C622BFA5E6E09ACEEA8CF7"
+    },
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p166.tex",
+      "bytes": 3738,
+      "sha256": "4B1DD2B7BA30DF8773F812000C0DF20C854BF96F19138BD04F352E74C888C287"
+    }
+  ],
+  "source_witness_files": [
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\fr\\p165.tex",
+      "bytes": 4191,
+      "sha256": "00ACD19E39AB30D2B62FEB89F88DCF55AE7E85C3C81366A4722DD3CDB1C7260E"
+    },
+    {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\fr\\p166.tex",
+      "bytes": 4092,
+      "sha256": "96BF6351734FB38AA30BAF3A9EC2D16ACC3FE168C41121C1B10ED9625CC3FF59"
+    }
+  ],
+  "artifacts": {
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 849241,
+      "sha256": "863C78940658ADD63752C7901BCA0C345FC0AEFF302AFB4AC12BB615BA0113FD",
+      "new_block_lines": [
+        2823,
+        2992
+      ]
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.aux",
+      "bytes": 52513,
+      "sha256": "311FB0FDFF40B68B94630362843074ED9B012BD570151A954C6BF880F2ED4DD6"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.log",
+      "bytes": 47344,
+      "sha256": "2565E2CE95F6012525384649E994864F6C1EA6938342508BC236F06C9B4DCEF5"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+      "bytes": 1880395,
+      "sha256": "E0745A118B58F2FA450E04155AAD9DCE58175B10BA44366D429767BDD9422AE3",
+      "pages": 222,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_label": "\\newlabel{lemma-holomorphic-logarithmic-derivative-obstruction}{{12.9}{28}{The holomorphic logarithmic-derivative obstruction}{subsection.12.9}{}}",
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The pp. 165-166 source scope and the unique local label are exact.",
+      "The history records both Weil's introduction of d(E) and Atiyah's geometric connection interpretation.",
+      "The source's constant-transition reduction is stated as equivalent to an integrable holomorphic connection, with both directions proved.",
+      "The dimension-one surjectivity statement is limited to an epimorphism of sheaves.",
+      "All cited local dependencies resolve uniquely and the insertion seams are intact."
+    ]
+  },
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The right logarithmic derivative satisfies u(gg')=u(g)+Ad_g(u(g')) under the adopted left-torsor convention.",
+      "The kernel of u is the sheaf of locally constant G-valued maps.",
+      "The linear twist glues by alpha_i=Ad(g_ij)(alpha_j) and is Omega_X^1(ad(E)).",
+      "The affine twist glues by alpha_i=(dg_ij)g_ij^{-1}+Ad(g_ij)(alpha_j) and is the torsor of holomorphic connection forms.",
+      "The Stacks Cech convention gives the positive cocycle [e_i,u(g_ij)], so no inverse adjoint action or extra minus sign is present.",
+      "Neutrality is equivalent to a holomorphic connection.",
+      "Locally constant transition functions give a flat connection; conversely, holomorphic Frobenius supplies local horizontal frames for an integrable connection, producing locally constant transitions.",
+      "On a complex curve, the local holomorphic ODE g'=dR_g(a) proves that u is a sheaf epimorphism, and holomorphic 2-forms vanish."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "label": "Lemma 12.9",
+    "label_page": 28,
+    "stable_aux_sha256": "311FB0FDFF40B68B94630362843074ED9B012BD570151A954C6BF880F2ED4DD6",
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "content_stream_bytes_min": 4493,
+    "content_stream_bytes_max": 32460,
+    "visual_pages": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "render_records": [
+      {
+        "page": 27,
+        "bytes": 378618,
+        "sha256": "0712C99819A2DF8879C63D059475499D43C467ED0588616B35ACE206845913B5"
+      },
+      {
+        "page": 28,
+        "bytes": 339240,
+        "sha256": "F77DF28B093B3886FA0E32AD059E8B975E704794B23053704E8C2CD7421692F4"
+      },
+      {
+        "page": 29,
+        "bytes": 372773,
+        "sha256": "2F6D6B6F81E12E6416E6848CE633EE7A6F1D33E8E1FA4162C13F875F77ACBCFD"
+      },
+      {
+        "page": 30,
+        "bytes": 360485,
+        "sha256": "5C4F114B19D0B452D3B00DAD4D1D7D64D801EDC89FE8F7674B36271F8D3720AC"
+      },
+      {
+        "page": 31,
+        "bytes": 266737,
+        "sha256": "16BD0150F4077EE510A8889E475BD0CBCB590046E74AD89F3A8154C15B1E9C21"
+      },
+      {
+        "page": 32,
+        "bytes": 392499,
+        "sha256": "D8F4F5DEF8F0F54D8238FDDF77761A8B030E81BE4EBB9A36DB10197C3B06EE5A"
+      }
+    ],
+    "visual_result": "The incoming D1003 seam, complete D1004 statement and proof, outgoing Lemma 12.10 and Section 13 seams, equations, list indentation, hyperlink boxes, margins, proof markers, and glyphs render cleanly with no clipping, overlap, crowding, or malformed symbols."
+  },
+  "nonclaims": [
+    "No epimorphism assertion is made for the logarithmic derivative in complex dimension greater than one.",
+    "No surjectivity assertion is made on global sections.",
+    "No implication from an arbitrary holomorphic connection to integrability is made outside complex dimension one.",
+    "No comparison with the derived Atiyah class in cotangent.tex is asserted.",
+    "This receipt does not update the Tohoku mapping ledger; mapping promotion belongs to the next no-overwrite successor."
+  ],
+  "errors": []
+}

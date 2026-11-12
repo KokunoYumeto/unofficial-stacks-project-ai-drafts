@@ -1,0 +1,187 @@
+{
+  "schema": "tohoku-stacks-d1031-post-live-independent-review-v1",
+  "formalization_id": "D1031",
+  "verdict": "STRICT_PASS",
+  "status": "PASS_LIVE_SOURCE_BUILD_DEPENDENCIES_AND_VISUAL_QA",
+  "inputs": {
+    "candidate": {
+      "path": "tmp/d1031_projective_effacement_duality_candidate.tex",
+      "bytes": 2165,
+      "sha256": "4E53BD2ED92771A52F78C3010566CF548975E4F7400A19046339EE1445163D5D"
+    },
+    "design": {
+      "path": "tmp/d1031_projective_effacement_duality_design.json",
+      "bytes": 5881,
+      "sha256": "8B1E576D2A777F0FA7A7BA1270D2EEB483F0CFBD16ACE3101BC47E963F18D538"
+    },
+    "pre_live_review_r1": {
+      "path": "tmp/d1031_independent_review_r1.json",
+      "bytes": 11698,
+      "sha256": "347BAFD8EC782FD1FB6FC347962F1C828DF957B36E80502AFF75102A3E00D013"
+    },
+    "pre_live_review_r2": {
+      "path": "tmp/d1031_independent_review_r2.json",
+      "bytes": 5323,
+      "sha256": "3D1325BC240B9E4B4F0E90426CAD82D36B0C84730E420414B8801263795110C7"
+    }
+  },
+  "live_source_audit": {
+    "homology_tex": {
+      "path": "homology.tex",
+      "bytes": 384334,
+      "sha256": "7520BDAD32E68DB449A671802A5D0B2EFAA6EE4EDEC94206F313AB23AB1B6908"
+    },
+    "candidate_exact_occurrences": 1,
+    "raw_label": "lemma-projective-effacement-opposite-category",
+    "raw_label_occurrences": 1,
+    "candidate_utf8_byte_offset_zero_based": 354843,
+    "candidate_lines": "10314-10358",
+    "new_label_line": 10315,
+    "predecessor_label": "lemma-projective-effacement",
+    "predecessor_label_line": 10289,
+    "successor_label": "lemma-characterize-projectives",
+    "successor_label_line": 10364,
+    "placement": "PASS_IMMEDIATELY_AFTER_PROJECTIVE_EFFACEMENT_PROOF_AND_BEFORE_PROJECTIVE_CHARACTERIZATION",
+    "candidate_byte_identity": "PASS_EXACT_ONCE",
+    "label_collision": "PASS_NONE"
+  },
+  "mathematical_and_dependency_audit": {
+    "verdict": "STRICT_PASS",
+    "categorical_duality": "PASS_PROJECTIVE_IN_A_IFF_INJECTIVE_IN_A_OPPOSITE",
+    "effacement_duality": "PASS_SURJECTIVE_PROJECTIVE_EFFACEMENT_SQUARE_DUALIZES_TO_INJECTIVE_EFFACEMENT_SQUARE",
+    "enough_objects_duality": "PASS_ENOUGH_PROJECTIVES_IN_A_IFF_ENOUGH_INJECTIVES_IN_A_OPPOSITE",
+    "functorial_construction": "PASS_APPLYING_THE_INJECTIVE_EMBEDDING_THEOREM_TO_A_OPPOSITE_AND_REVERSING_ARROWS_GIVES_A_NATURAL_SURJECTION_FROM_PROJECTIVES",
+    "hypothesis_guard": "PASS_A_OPPOSITE_IS_EXPLICITLY_ASSUMED_GROTHENDIECK_AND_IS_NOT_INFERRED_FROM_A",
+    "scope_guards": "PASS_NO_UNRESTRICTED_ENOUGH_PROJECTIVES_OR_PROJECTIVE_COVER_MINIMALITY_CLAIM",
+    "dependencies": {
+      "local_projective_effacement": {
+        "source_label_occurrences": 1,
+        "aux_number": "29.3",
+        "aux_page": 107,
+        "rendered_reference": "29.3"
+      },
+      "external_functorial_injective_embedding": {
+        "source": {
+          "path": "injectives.tex",
+          "bytes": 139285,
+          "sha256": "FEBCC2562AB17FEC850FD5FD88086DC3EB90017C007F348207ED93479895A283",
+          "label_occurrences": 1
+        },
+        "aux": {
+          "path": "injectives.aux",
+          "bytes": 10350,
+          "sha256": "7A4A59DD5C1F646BA49ACF41FBA8B8AC618492AE3C51F3B2E1FB9D28A1BCF87D",
+          "label_occurrences": 1,
+          "number": "12.7",
+          "page": 23
+        },
+        "rendered_reference": "12.7"
+      }
+    }
+  },
+  "build_audit": {
+    "aux": {
+      "path": "homology.aux",
+      "bytes": 29132,
+      "sha256": "323BA831A639224363DBFA30BE162C180A7738E7B6BA72CC75CADCBC8BF1B072",
+      "new_label_occurrences": 1,
+      "new_label_number": "29.4",
+      "new_label_page": 107,
+      "successor_label_number": "29.5",
+      "successor_label_page": 108
+    },
+    "log": {
+      "path": "homology.log",
+      "bytes": 39303,
+      "sha256": "5775DE0E18D045D0D780ED8D7259A854C84F95AC287A5C626AE8B21B6E9B7197",
+      "terminal_evidence": "Output written on homology.pdf (117 pages, 1086437 bytes).",
+      "tex_errors": 0,
+      "latex_warnings": 0,
+      "package_warnings": 0,
+      "undefined_reference_diagnostics": 0,
+      "rerun_warning_diagnostics": 0,
+      "missing_character_diagnostics": 0,
+      "overfull_hbox_total": 7,
+      "overfull_hbox_source_ranges": [
+        "654-657",
+        "6708-6723",
+        "7066",
+        "7972",
+        "9640",
+        "9724-9727",
+        "10894-10897"
+      ],
+      "overfull_hbox_intersecting_candidate_lines": 0,
+      "underfull_hbox_total": 0,
+      "overfull_vbox_total": 0,
+      "underfull_vbox_total": 2,
+      "diagnostics_in_candidate_source_range": 0
+    },
+    "pdf": {
+      "path": "homology.pdf",
+      "bytes": 1086437,
+      "sha256": "75AAB417A5EB5E39C3D29A3FEF2DA824A19FC58E0132FA0092C3A47F72D2CE67",
+      "pages": 117,
+      "page_size_points": "612x792",
+      "encrypted": false,
+      "forms": "none"
+    },
+    "verdict": "PASS_CURRENT_SOURCE_AUX_LOG_AND_PDF_ARE_COHERENT"
+  },
+  "visual_qa": {
+    "render_command": "pdftoppm -f 106 -l 109 -png -r 150 homology.pdf tmp/d1031_live_pdf_qa/page",
+    "rendered_pages": [
+      {
+        "pdf_page": 106,
+        "path": "tmp/d1031_live_pdf_qa/page-106.png",
+        "pixels": "1275x1650",
+        "bytes": 253618,
+        "sha256": "B861D8E0F45372001AB7D47A64372CC41EBEADA56B16989085761029A0173EE7",
+        "finding": "PASS_PRECEDING_CONTEXT_AND_SECTION_TRANSITION_CLEAN"
+      },
+      {
+        "pdf_page": 107,
+        "path": "tmp/d1031_live_pdf_qa/page-107.png",
+        "pixels": "1275x1650",
+        "bytes": 302313,
+        "sha256": "D58594F77B142D463971EC49CF95573992BC81A6616C9115B57B1ABC72921543",
+        "finding": "PASS_NEW_LEMMA_START_ENUMERATION_DISPLAY_AND_PROOF_START_CLEAN"
+      },
+      {
+        "pdf_page": 108,
+        "path": "tmp/d1031_live_pdf_qa/page-108.png",
+        "pixels": "1275x1650",
+        "bytes": 251414,
+        "sha256": "D5D80473E656376B6633EB953E5B0CF96FCAABBD770F2C38DCB5872239AC12EC",
+        "finding": "PASS_PROOF_CONTINUATION_REFERENCES_SUCCESSOR_LEMMA_AND_NEXT_SECTION_CLEAN"
+      },
+      {
+        "pdf_page": 109,
+        "path": "tmp/d1031_live_pdf_qa/page-109.png",
+        "pixels": "1275x1650",
+        "bytes": 358171,
+        "sha256": "3046244D5739D7DDABC3B5588DC86F8E90DF09DF31077D38E3B5F10B9B37B64B",
+        "finding": "PASS_FOLLOWING_SECTION_CONTINUITY_CLEAN"
+      }
+    ],
+    "pages_inspected": 4,
+    "clipping": 0,
+    "overlap": 0,
+    "bad_page_breaks": 0,
+    "missing_glyphs": 0,
+    "malformed_math": 0,
+    "unresolved_reference_rendering": 0,
+    "terminal_pages_required": false,
+    "terminal_pages_reason": "THE_NEW_LEMMA_AND_PROOF_END_ON_PAGE_108_AND_FOLLOWING_UNAFFECTED_CONTENT_IS_VISIBLE_THROUGH_PAGE_109",
+    "verdict": "STRICT_PASS"
+  },
+  "write_scope": [
+    "tmp/d1031_post_live_independent_review_r1.json",
+    "tmp/d1031_live_pdf_qa/page-106.png",
+    "tmp/d1031_live_pdf_qa/page-107.png",
+    "tmp/d1031_live_pdf_qa/page-108.png",
+    "tmp/d1031_live_pdf_qa/page-109.png"
+  ],
+  "live_source_or_mapping_mutated": false,
+  "final": "STRICT_PASS_D1031_READY_FOR_FROZEN_AUDIT_AND_MAPPING_TRANSACTION"
+}

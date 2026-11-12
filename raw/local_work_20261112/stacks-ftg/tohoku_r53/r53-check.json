@@ -1,0 +1,1282 @@
+{
+  "authority_inputs": {
+    "part_i": {
+      "bytes": 7305283,
+      "name": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    "part_ii": {
+      "bytes": 3984260,
+      "name": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    }
+  },
+  "decision_audit": {
+    "mapping_design": {
+      "bytes": 10091,
+      "name": "tmp/d1010_mapping_design.json",
+      "sha256": "09990111965AC15BAB4A0855BD1771AB9CB7F2BBF07A1768692EADE46EC9FDFA"
+    },
+    "planned_decisions": [
+      {
+        "action": "replace",
+        "decision_id": "D001024",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the directed extension-by-zero presentation of supported invariant sections for abelian G-sheaves. Its derived colimit comparison is asserted only under the separately stated Gamma_X^G-acyclicity condition for extension by zero, and its ordinary supported-cohomology comparison additionally assumes that Phi is paracompactifying; neither extra condition is inferred from the neighbourhood hypothesis.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero",
+        "supersedes": "D000585",
+        "unit_id": "tohoku:construction:extension-by-zero-support-limit"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001025",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs the additive first-quadrant filtered second spectral sequence for abelian G-sheaves, with the displayed colimit E_2-page and finite abutment filtration. The abutment identification uses the explicit extension-by-zero acyclicity condition; the usual H^p(G,H^q_Phi) page additionally requires Phi to be paracompactifying and one of the three alternative interchange criteria.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "supersedes": "D000648",
+        "unit_id": "tohoku:spectral-sequence:ii-a-u"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001026",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs the compatible directed system from the E_2-pages onward, takes exact filtered colimits pagewise, proves stabilization and finite convergence, and identifies the abutment through the preceding conditional extension-by-zero comparison. It does not assert an unconditional second Grothendieck spectral sequence.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "supersedes": "D000587",
+        "unit_id": "tohoku:construction:inductive-system-of-spectral-sequences"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001027",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the comparison colim_U H^p(G,M_U^q) to H^p(G,colim_U M_U^q) under each of the source's three alternative criteria: finite G; trivial actions with every H_r(G,Z) finitely generated; or an essentially constant cofinal subsystem. The resulting usual E_2-page still assumes that Phi is paracompactifying and retains the standing extension-by-zero acyclicity hypothesis.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "supersedes": "D000568",
+        "unit_id": "tohoku:comparison:cohomology-and-filtered-limit"
+      }
+    ],
+    "planned_issue_append": {
+      "claim": "The p. 220 passage passes from the degree-zero supported-section colimit to the derived formula (5.7.6) under only the neighbourhood condition on Psi, and later identifies colim_U H^q(X,A_U) with H^q_Phi(X,A). The first derived identification additionally requires Gamma_X^G-acyclicity of extension by zero on injective G-sheaves, while the ordinary supported-cohomology identification requires Phi to be paracompactifying; the three subsequent group-cohomology criteria supply neither hypothesis.",
+      "control": "Preserve the printed wording diplomatically. In corrected exposition and formalization, state the extension-by-zero acyclicity requirement for (5.7.6), state the paracompactifying requirement for the ordinary supported-cohomology comparison, and identify (a)--(c) as alternative criteria only for commuting group cohomology with the filtered colimit. D001024 resolves the missing-hypotheses issue; D001025--D001027 resolve the downstream spectral-sequence and interchange gaps without weakening either gate.",
+      "csv_suffix_bytes": 1878,
+      "csv_suffix_sha256": "EB1C26F293F662C1CF6728036789D6436C4075DF81BF1445887F5886C07E8CD1",
+      "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 220, formulae (5.7.5)--(5.7.7 bis), states the neighbourhood condition before passing from the section colimit to (5.7.6) and later invokes the ordinary supported-cohomology colimit. The exact D1010 formalization block, 15171 bytes, SHA-256 EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4, separates Gamma_X^G-acyclicity of I_U for injective G-sheaves from the paracompactifying hypothesis on Phi and proves that conditions (a)--(c) concern only group-cohomology/filtered-colimit interchange.",
+      "expected_issues_csv_bytes": 31413,
+      "expected_issues_csv_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503",
+      "issue_id": "I000030",
+      "kind": "source_missing_derived_functor_hypotheses",
+      "postsuccessor_rows": 30,
+      "predecessor_rows": 29,
+      "resolution_decision": "D001024",
+      "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero;cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+      "status": "resolved",
+      "unit_id": "tohoku:construction:extension-by-zero-support-limit"
+    },
+    "receipt": {
+      "bytes": 37425,
+      "name": "D1010_CHECK.json",
+      "sha256": "A73F16F4951CA5E04A6796586D7F522A22343164FC8AC5276CF5E64D4D8AC1E5"
+    },
+    "status": "STRICT_PASS"
+  },
+  "deltas": {
+    "decisions": 1027,
+    "decisions_appended": [
+      {
+        "action": "replace",
+        "decision_id": "D001024",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the directed extension-by-zero presentation of supported invariant sections for abelian G-sheaves. Its derived colimit comparison is asserted only under the separately stated Gamma_X^G-acyclicity condition for extension by zero, and its ordinary supported-cohomology comparison additionally assumes that Phi is paracompactifying; neither extra condition is inferred from the neighbourhood hypothesis.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero",
+        "supersedes": "D000585",
+        "unit_id": "tohoku:construction:extension-by-zero-support-limit"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001025",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs the additive first-quadrant filtered second spectral sequence for abelian G-sheaves, with the displayed colimit E_2-page and finite abutment filtration. The abutment identification uses the explicit extension-by-zero acyclicity condition; the usual H^p(G,H^q_Phi) page additionally requires Phi to be paracompactifying and one of the three alternative interchange criteria.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "supersedes": "D000648",
+        "unit_id": "tohoku:spectral-sequence:ii-a-u"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001026",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now constructs the compatible directed system from the E_2-pages onward, takes exact filtered colimits pagewise, proves stabilization and finite convergence, and identifies the abutment through the preceding conditional extension-by-zero comparison. It does not assert an unconditional second Grothendieck spectral sequence.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "supersedes": "D000587",
+        "unit_id": "tohoku:construction:inductive-system-of-spectral-sequences"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D001027",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the comparison colim_U H^p(G,M_U^q) to H^p(G,colim_U M_U^q) under each of the source's three alternative criteria: finite G; trivial actions with every H_r(G,Z) finitely generated; or an essentially constant cofinal subsystem. The resulting usual E_2-page still assumes that Phi is paracompactifying and retains the standing extension-by-zero acyclicity hypothesis.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "supersedes": "D000568",
+        "unit_id": "tohoku:comparison:cohomology-and-filtered-limit"
+      }
+    ],
+    "errors": [],
+    "inherited_unit_inventory": "BYTE_IDENTICAL_R52",
+    "issue_appended": {
+      "claim": "The p. 220 passage passes from the degree-zero supported-section colimit to the derived formula (5.7.6) under only the neighbourhood condition on Psi, and later identifies colim_U H^q(X,A_U) with H^q_Phi(X,A). The first derived identification additionally requires Gamma_X^G-acyclicity of extension by zero on injective G-sheaves, while the ordinary supported-cohomology identification requires Phi to be paracompactifying; the three subsequent group-cohomology criteria supply neither hypothesis.",
+      "control": "Preserve the printed wording diplomatically. In corrected exposition and formalization, state the extension-by-zero acyclicity requirement for (5.7.6), state the paracompactifying requirement for the ordinary supported-cohomology comparison, and identify (a)--(c) as alternative criteria only for commuting group cohomology with the filtered colimit. D001024 resolves the missing-hypotheses issue; D001025--D001027 resolve the downstream spectral-sequence and interchange gaps without weakening either gate.",
+      "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 220, formulae (5.7.5)--(5.7.7 bis), states the neighbourhood condition before passing from the section colimit to (5.7.6) and later invokes the ordinary supported-cohomology colimit. The exact D1010 formalization block, 15171 bytes, SHA-256 EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4, separates Gamma_X^G-acyclicity of I_U for injective G-sheaves from the paracompactifying hypothesis on Phi and proves that conditions (a)--(c) concern only group-cohomology/filtered-colimit interchange.",
+      "evidence_labels": "cohomology-lemma-equivariant-support-filtered-extension-by-zero;cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+      "issue_id": "I000030",
+      "kind": "source_missing_derived_functor_hypotheses",
+      "resolution_decision": "D001024",
+      "status": "resolved",
+      "unit_id": "tohoku:construction:extension-by-zero-support-limit"
+    },
+    "map_delta": {
+      "changed_units": 4,
+      "changes": {
+        "tohoku:comparison:cohomology-and-filtered-limit": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ],
+        "tohoku:construction:extension-by-zero-support-limit": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ],
+        "tohoku:construction:inductive-system-of-spectral-sequences": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ],
+        "tohoku:spectral-sequence:ii-a-u": [
+          "decision_id",
+          "disposition",
+          "rationale",
+          "review_state",
+          "stacks_labels",
+          "stacks_tags"
+        ]
+      },
+      "unchanged_units": 987
+    },
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 679,
+      "decisions": 1027,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 371,
+        "existing_stronger": 41,
+        "existing_weaker": 6,
+        "extend_existing": 16,
+        "historical_reference": 33,
+        "new_section": 5,
+        "new_statement": 11,
+        "structural_only": 424
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 30,
+      "unit_candidates": 0,
+      "units": 991
+    },
+    "remaining_gap_class_dispositions": 38,
+    "scan_counts": {
+      "errors": 0,
+      "labels": 22080,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 652
+    },
+    "scanner_check_delta": {
+      "changed_fields": [
+        "sha256"
+      ],
+      "namespace_keys_only": 4,
+      "normalized_equal": true
+    },
+    "scanner_delta": {
+      "candidate_additions": 21,
+      "candidate_cap_evictions": 10,
+      "candidate_net_rows": 11,
+      "candidate_rows_line_number_only": 15,
+      "changed_tex_files": [
+        "cohomology.tex"
+      ],
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "new_labels": 11,
+      "removed_labels": 0,
+      "stx_bytes": 3460,
+      "tmap_byte_identical": true,
+      "warning_delta": 11
+    },
+    "semantic_generation": "sem/r19",
+    "source_repairs_appended": 1,
+    "status": "PASS"
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "bytes": 3723,
+        "contract": "one_read_hash_compile_exec_builder_and_pin_validator",
+        "path": "srcmap/start_build_tohoku_r53.py",
+        "sha256": "704D7AB34E53E2E93B26F285CF8B4303FCF2B28E1478B803BE0F7E64A57FD7AE"
+      },
+      "builder": {
+        "bytes": 15226,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r53.py",
+        "sha256": "F3E4383370CBCCE5876F937EDB760AAD9317F9729775932FE424159BFC5B6EEE"
+      },
+      "driver": {
+        "bytes": 4126,
+        "contract": "self_read_hash_then_one_shot_bootstrap_envelope",
+        "path": "srcmap/start_build_tohoku_r53.ps1",
+        "sha256": "AF33993EA0405FA332E5906660484829652818F6A437247F579973590502022C"
+      },
+      "validator": {
+        "bytes": 47440,
+        "contract": "independent_same_bytes_stage_and_receipt_replay",
+        "path": "srcmap/validate_tohoku_r53.py",
+        "sha256": "32A1034F21CA79F5C695339E18BA64449CA6B601670C6561A64AB40112781B81"
+      }
+    },
+    "contract": "one_shot_self_attested_driver_bootstrap_builder_validator; exact_inputs_locked_through_atomic_no_overwrite_promotion_with_rollback",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    }
+  },
+  "files": [
+    {
+      "bytes": 1208,
+      "name": "STATUS.md",
+      "sha256": "C6D8834BE3F1612EAA0576F05240CEA3D365CEA7A959A7A9E55E8D86E0AEC587"
+    },
+    {
+      "bytes": 5151,
+      "name": "cfg.json",
+      "sha256": "10FC41C2DDE6B23B12B6E816DEA07B72A9D1FFF18AC4A45F55D22FF769E9CE53"
+    },
+    {
+      "bytes": 80068,
+      "name": "check.json",
+      "sha256": "DE603D525A2F84DEC79A18D8044FCEC1F0933D43886720D64BE31052F8CD0CAE"
+    },
+    {
+      "bytes": 375251,
+      "name": "dec.csv",
+      "sha256": "84639B0A99BDDC58980FEEA5E221D249B3B898956DA79F4D41DEFE79297C71D9"
+    },
+    {
+      "bytes": 1578,
+      "name": "intake.json",
+      "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F"
+    },
+    {
+      "bytes": 31413,
+      "name": "issues.csv",
+      "sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503"
+    },
+    {
+      "bytes": 479894,
+      "name": "map.csv",
+      "sha256": "7BF8C6794D743ACE1334F5979B820E955C70C14537F0B00A0E6A679376668BAE"
+    },
+    {
+      "bytes": 69896,
+      "name": "mcheck.json",
+      "sha256": "AA378FE65E548E7AC0174F24F8750B89269FF7162AA43E746274B28BB2FB5825"
+    },
+    {
+      "bytes": 5281636,
+      "name": "stx.csv",
+      "sha256": "A6A16E837DF3B59C348CB88348FA9FC88F6C0703B78AF97FBACFA7B8254CFEC1"
+    },
+    {
+      "bytes": 489206,
+      "name": "tcand.csv",
+      "sha256": "C07DE868C2A467B75DB00C31DE10A6AE5C1AD5F71D629641CF1840B151FDB22A"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 393225,
+      "name": "units.csv",
+      "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+    }
+  ],
+  "formalization": {
+    "build_audit": {
+      "artifacts": {
+        "aux": {
+          "bytes": 55054,
+          "path": "user\\Documents\\stacks-ftg\\cohomology.aux",
+          "sha256": "5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7"
+        },
+        "log": {
+          "bytes": 47435,
+          "path": "user\\Documents\\stacks-ftg\\cohomology.log",
+          "sha256": "99E4DF956F8ED3304F9FEAE4EE72FED8733FB996B19EC26069045BD81EFA2AB0"
+        },
+        "out": {
+          "bytes": 12488,
+          "path": "user\\Documents\\stacks-ftg\\cohomology.out",
+          "sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"
+        },
+        "pdf": {
+          "bytes": 1934650,
+          "pages": 231,
+          "path": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+          "sha256": "209BF500D3F352EDDE4527879638941164841A14EB76E30B098D897638BA5B64"
+        },
+        "toc": {
+          "bytes": 5477,
+          "path": "user\\Documents\\stacks-ftg\\cohomology.toc",
+          "sha256": "FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564"
+        }
+      },
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cohomology.tex",
+      "engine": "pdfTeX 3.141592653-2.6-1.40.29 (MiKTeX 26.5)",
+      "fatal_errors": 0,
+      "fixed_point_before_after": {
+        "cohomology.aux": {
+          "after_sha256": "5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7",
+          "before_sha256": "5ABBF4F396B270FDA8DECD105B86D5058438D2011F47A12BC52B88A71B1B66C7",
+          "bytes": 55054
+        },
+        "cohomology.out": {
+          "after_sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD",
+          "before_sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD",
+          "bytes": 12488
+        },
+        "cohomology.toc": {
+          "after_sha256": "FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564",
+          "before_sha256": "FB735089D38D0CEF2E7E85BBB0F1570E166CDB5D33B38A868BC6D21D7C5A5564",
+          "bytes": 5477
+        }
+      },
+      "fixed_point_pass": 4,
+      "multiply_defined_labels": 0,
+      "new_block_box_diagnostics": 0,
+      "out_of_block_overfull_diagnostics": 34,
+      "out_of_block_underfull_diagnostics": 0,
+      "passes": 4,
+      "rerun_notices": 0,
+      "status": "STRICT_PASS",
+      "undefined_citations": 0,
+      "undefined_references": 0
+    },
+    "integration": {
+      "candidate": {
+        "bytes": 15171,
+        "lines": 393,
+        "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_block_candidate.tex",
+        "sha256": "EDED8F6FD2B6A1EF0CC0DDA6823219763EF51ED80D34FE3E56D51A4C116C84A4"
+      },
+      "candidate_and_live_line_arrays_identical": true,
+      "candidate_byte_sequence_occurrences": 1,
+      "incoming_seam": "preceding end{remark} at line 19934",
+      "live": {
+        "bytes": 884397,
+        "inserted_lines": [
+          19936,
+          20328
+        ],
+        "lines": 24001,
+        "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+        "sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914"
+      },
+      "outgoing_seam": "following section{Ext with support} at line 20330",
+      "predecessor": {
+        "bytes": 869226,
+        "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+        "sha256": "31E9F1607073933C2159AE5D1595A451CB298FFD3BB9E006B4DB28B7B5CD48D0"
+      },
+      "remove_exact_candidate_reconstructs_predecessor": true
+    },
+    "labels": [
+      {
+        "full_label": "cohomology-lemma-equivariant-support-filtered-extension-by-zero",
+        "kind": "lemma",
+        "line": 19937,
+        "number": "46.5",
+        "page": 192,
+        "short_label": "lemma-equivariant-support-filtered-extension-by-zero",
+        "text_sha256": "34E2430BA0DD759FB7D021AF71A698D811D1A6A605C64A3FECBCA621306D883D"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-extension-zero-acyclic",
+        "kind": "equation",
+        "line": 19996,
+        "number": "46.5.1",
+        "page": 192,
+        "short_label": "equation-equivariant-support-extension-zero-acyclic",
+        "text_sha256": "C29960585391A146B3D63420BB620AEB54FB37283A81650A9C782F7D9E77AC8E"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-sections-colimit",
+        "kind": "equation",
+        "line": 20060,
+        "number": "46.5.2",
+        "page": 193,
+        "short_label": "equation-equivariant-support-sections-colimit",
+        "text_sha256": "5A1A8AE0D0A6F3B95A5D4B007D9CA25851B48E1BFDF7B882F47C435C37039324"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-derived-extension-zero",
+        "kind": "equation",
+        "line": 20095,
+        "number": "46.5.3",
+        "page": 193,
+        "short_label": "equation-equivariant-support-derived-extension-zero",
+        "text_sha256": "54A2E8C7A63335EB01593692666C02C8D330976D1F46E2D204DF91B718911F34"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-ordinary-all-opens-colimit",
+        "kind": "equation",
+        "line": 20120,
+        "number": "46.5.4",
+        "page": 193,
+        "short_label": "equation-equivariant-support-ordinary-all-opens-colimit",
+        "text_sha256": "A75AA3C440E30AC6D2382CA40398B507AF014FA519EAFF514A9CE4465A97C904"
+      },
+      {
+        "full_label": "cohomology-lemma-equivariant-support-filtered-second-spectral-sequence",
+        "kind": "lemma",
+        "line": 20151,
+        "number": "46.6",
+        "page": 194,
+        "short_label": "lemma-equivariant-support-filtered-second-spectral-sequence",
+        "text_sha256": "20C7D480F9FE49259451C3834F95C0BD67D829DFD94408851487CE406F1E32AD"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-filtered-second-spectral-sequence",
+        "kind": "equation",
+        "line": 20174,
+        "number": "46.6.1",
+        "page": 194,
+        "short_label": "equation-equivariant-support-filtered-second-spectral-sequence",
+        "text_sha256": "A8FF2A5222DBA8794D4CD2547A6410BD10801E80335AF6566CEE7439DC293F1F"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-usual-second-page",
+        "kind": "equation",
+        "line": 20189,
+        "number": "46.6.2",
+        "page": 194,
+        "short_label": "equation-equivariant-support-usual-second-page",
+        "text_sha256": "FED0CEC9634B0E815C2D7FC117328F3722B06BCC8DBCF613A28AEE7622FAD8A4"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-local-second-spectral-sequence",
+        "kind": "equation",
+        "line": 20214,
+        "number": "46.6.3",
+        "page": 194,
+        "short_label": "equation-equivariant-support-local-second-spectral-sequence",
+        "text_sha256": "15D6305D783336D0A8369908146B12FFC1350D49E26E34CD47732596F6688124"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-group-colimit-comparison",
+        "kind": "equation",
+        "line": 20275,
+        "number": "46.6.4",
+        "page": 195,
+        "short_label": "equation-equivariant-support-group-colimit-comparison",
+        "text_sha256": "48CB4596A8D2584607F0851345EC769C4D18F3A407B1629B5B65067DC7DBB6AD"
+      },
+      {
+        "full_label": "cohomology-equation-equivariant-support-group-universal-coefficient",
+        "kind": "equation",
+        "line": 20292,
+        "number": "46.6.5",
+        "page": 195,
+        "short_label": "equation-equivariant-support-group-universal-coefficient",
+        "text_sha256": "CCDC500BBD8B61DF13972F8BBF28C749D19B73361DC1CDB3A66582364A6F8BAA"
+      }
+    ],
+    "mathematical_audit": {
+      "checks": [
+        "The neighbourhood hypothesis is used only for the degree-zero supported-section union.",
+        "The derived extension-by-zero comparison separately assumes that each eligible exact extension-by-zero functor sends injective abelian G-sheaves to Gamma_X^G-acyclic objects.",
+        "The ordinary supported-cohomology comparison separately assumes that Phi is paracompactifying.",
+        "The filtered first-quadrant spectral sequences are functorial from E_2 onward and have finite abutment filtrations.",
+        "For finite G, a finite-rank bar resolution proves commutation with filtered colimits.",
+        "For trivial actions with finitely generated integral group homology, universal coefficients and Ext commuting with filtered colimits prove the comparison.",
+        "The essentially constant alternative is imposed degreewise on a cofinal subsystem.",
+        "None of the three group-cohomology criteria is used to infer extension-by-zero acyclicity or paracompactifying supports."
+      ],
+      "status": "STRICT_PASS"
+    },
+    "pdf_audit": {
+      "content_stream_decode_errors": 0,
+      "contentless_pages": 0,
+      "crop_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "decoded_content_stream_bytes_total": 4383593,
+      "eof_marker_valid": true,
+      "extracted_text_characters": 505124,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "status": "STRICT_PASS",
+      "strict_page_parse_errors": 0,
+      "strict_pages_parsed": 231,
+      "textless_pages": 0,
+      "trailer_root_valid": true,
+      "uniform_media_and_crop_boxes": true,
+      "uniform_rotation": true,
+      "visual_renders": [
+        {
+          "bytes": 297879,
+          "page": 191,
+          "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-191.png",
+          "sha256": "5A3446952368627C293091AD96F25112BE7A5B1C58816635B57F53004E4B9B47"
+        },
+        {
+          "bytes": 302421,
+          "page": 192,
+          "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-192.png",
+          "sha256": "B3D62A011C7E8335AE1DF60CEE7C2E42456527CC77E1F5203FD89F807A08898F"
+        },
+        {
+          "bytes": 274940,
+          "page": 193,
+          "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-193.png",
+          "sha256": "065A78EC47FCBFD053A0FFDB2FB9960F6EBF4BEAAC31EFA9A65C4956D719B925"
+        },
+        {
+          "bytes": 319546,
+          "page": 194,
+          "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-194.png",
+          "sha256": "6CA6837D8B545C7CF1F658F1BBCBE0610AEE4E57C742236F54471426718EA9CC"
+        },
+        {
+          "bytes": 319959,
+          "page": 195,
+          "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-195.png",
+          "sha256": "D2C88DB263F40B5DE2F54C072692CD1A7CD3053726280664987864D6229AE3A5"
+        },
+        {
+          "bytes": 317148,
+          "page": 196,
+          "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_render\\d1010-196.png",
+          "sha256": "824151FFD4E5B8E91CE434D39D4B30E3A8DF0EEDA7BFA62BA5D16C2D11FA5AC6"
+        }
+      ],
+      "visual_result": "PASS"
+    },
+    "receipt": {
+      "bytes": 10908,
+      "name": "tmp/d1010_formalization_evidence.json",
+      "sha256": "301A3458391FAAC4754DECA03E3C7F5C4B10CB9887B00B0F53FC1144D34994CF"
+    },
+    "scanner_audit": {
+      "counts": {
+        "errors": 0,
+        "labels": 22080,
+        "official_tags_joined": 21437,
+        "tex_files": 119,
+        "topic_candidates": 1286,
+        "topics": 13,
+        "warnings": 652
+      },
+      "delta_from_d1009": {
+        "candidate_additions": 21,
+        "candidate_cap_evictions": 10,
+        "candidate_net_rows": 11,
+        "candidate_rows_line_number_only": 15,
+        "changed_tex_files": [
+          "cohomology.tex"
+        ],
+        "existing_label_rows_line_number_only": 99,
+        "existing_label_text_hash_changes": 0,
+        "new_labels": 11,
+        "removed_labels": 0,
+        "stx_bytes": 3460,
+        "tmap_byte_identical": true,
+        "warning_delta": 11
+      },
+      "deterministic_replay_identical": true,
+      "inputs": {
+        "cfg.json": {
+          "bytes": 5151,
+          "sha256": "17AE218F11DEF95A76ADF0BD2A447B21150A3BAFF9D1209EC1C1FDFAA51D110A"
+        },
+        "topics.csv": {
+          "bytes": 2453,
+          "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+        }
+      },
+      "outputs": {
+        "check.json": {
+          "bytes": 80068,
+          "sha256": "648438CCAB8D80F28B80E36BFA44378A1655AAB51CD4B0EE347CBA6B2121459B"
+        },
+        "stx.csv": {
+          "bytes": 5281636,
+          "sha256": "A6A16E837DF3B59C348CB88348FA9FC88F6C0703B78AF97FBACFA7B8254CFEC1"
+        },
+        "tcand.csv": {
+          "bytes": 489206,
+          "sha256": "C07DE868C2A467B75DB00C31DE10A6AE5C1AD5F71D629641CF1840B151FDB22A"
+        },
+        "tmap.csv": {
+          "bytes": 2424,
+          "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+        }
+      },
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1010_scan",
+      "status": "STRICT_PASS"
+    }
+  },
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 26245,
+      "name": "tohoku_r52/r52-check.json",
+      "sha256": "D8E8D6EE5C83ABE8B3ADA89AF34F19EFD5F4BC66B69052280C9B3BBDFEAF3438"
+    },
+    "reason": "Direct user report: the account was suspended after VPN use and a support ticket is filed; no Git operation is needed for this bounded local successor.",
+    "remote_server_freshness_verified": false,
+    "status": "temporarily_unavailable"
+  },
+  "nonclaims": [
+    "No Git command, GitHub action, recursive workspace scan, cleanup audit, or watcher is executed by this mapping successor.",
+    "The scanner is confined to the exact 119 top-level TeX filenames in the D1010 oracle.",
+    "Exactly D001024 through D001027 are appended; the r52 decision prefix is byte-identical.",
+    "Exactly I000030 is appended; the r52 issue prefix is byte-identical.",
+    "The r52 unit inventory is retained byte-for-byte and sem/r19 is bound as independently sealed successor evidence.",
+    "D1010 remains restricted to abelian G-sheaves and does not claim a module-valued extension.",
+    "The neighbourhood hypothesis alone is not claimed to imply extension-by-zero acyclicity or paracompactifying supports.",
+    "The three group-cohomology criteria are not claimed to supply either missing derived-functor hypothesis.",
+    "No official Stacks tag is claimed for either D1010 decision label.",
+    "No live selector or pointer is changed.",
+    "No release, publication, upload, DOI, Zenodo, rights, remote-freshness, or whole-paper completion claim is made.",
+    "38 Tohoku gap-class dispositions remain."
+  ],
+  "predecessor_dossier": {
+    "complete_surface": {
+      "aggregate_sha256": "A0C10FE6A36F40F442841D3C237EB74BFF226DBDF2A506C84CC90C60A301935A",
+      "bytes": 7226917,
+      "files": 15
+    },
+    "decision_count": 1023,
+    "historical_live_validator_replay": "NOT_APPLICABLE_AFTER_D1010_TEX_AND_SEMANTIC_SUCCESSORS",
+    "independent_sealed_surface_replay": "PASS",
+    "name": "tohoku_r52",
+    "payload_surface": {
+      "aggregate_sha256": "AAE89727CE1A5A2D5AFAAFFD7265C0ECED5223928BB285492B99F6C762495661",
+      "bytes": 7200672,
+      "files": 14
+    },
+    "receipt": {
+      "bytes": 26245,
+      "name": "tohoku_r52/r52-check.json",
+      "sha256": "D8E8D6EE5C83ABE8B3ADA89AF34F19EFD5F4BC66B69052280C9B3BBDFEAF3438"
+    },
+    "remaining_gap_class_dispositions": 42,
+    "source_issue_count": 29,
+    "validator": {
+      "bytes": 43213,
+      "name": "srcmap/validate_tohoku_r52.py",
+      "sha256": "6CB3D35DB2DFDEE1843CCD02B102085BA9C612052764D50DC19C1A1D9554C78C"
+    }
+  },
+  "reader": {
+    "build_receipt": {
+      "bytes": 32685,
+      "name": "build/v068c3r18/build.json",
+      "sha256": "287CF9B793BE34598878AD63546B081C27ACEE10C722AF82FBDE03251C92EADB"
+    },
+    "deterministic_build_replay": {
+      "compiled_to_final_byte_identity": {
+        "en": true,
+        "fr": true
+      },
+      "logs_replayed": {
+        "en": [
+          {
+            "bytes": 25660,
+            "path": "build/v068c3r18/en/command-output.log",
+            "sha256": "3A387C36ADB7073CCDAD1CA6EF4A6D5F57CC318745DB2DD2EDF2D46AC7005C30"
+          },
+          {
+            "bytes": 34932,
+            "path": "build/v068c3r18/en/main-en.log",
+            "sha256": "CF699F90882E1A0CD739E51A7F3D62369D438DEC5C772CFE83E4F2826EFE7FDF"
+          }
+        ],
+        "fr": [
+          {
+            "bytes": 25700,
+            "path": "build/v068c3r18/fr/command-output.log",
+            "sha256": "E55BA1A41FC98233D598B91C746EE2AC7C6B9A6A9623EFC199AAADCB3F0D14C8"
+          },
+          {
+            "bytes": 35062,
+            "path": "build/v068c3r18/fr/main-fr.log",
+            "sha256": "5078E998426627818381076B4D0EF854B8008EC1D7E9A39BDF05D0A5A9967D80"
+          }
+        ]
+      },
+      "method": "recompute staged manifest, replay every pinned compile log, and require byte identity between each compiled PDF and its promoted final",
+      "receipt_semantics": "PASS",
+      "staged_manifest_recomputed": "PASS"
+    },
+    "english_pdf": {
+      "bytes": 1381057,
+      "name": "output/pdf/en-p119-221-v068c3r18.pdf",
+      "sha256": "58A7F14A50D92CA0EAF9EEC04CE3399D4282144FF618C4887318C962CC9A5DB9"
+    },
+    "french_pdf": {
+      "bytes": 1417469,
+      "name": "output/pdf/fr-p119-221-v068c3r18.pdf",
+      "sha256": "24EA55FFA0CA94CBD089053B5A0BA2495E2553F798561DB059E77D4F6F724429"
+    },
+    "p220_visual_review": {
+      "english": {
+        "adjacent_seam_successor_pdf_pages": [
+          88,
+          90
+        ],
+        "all_successor_visual_pdf_pages": [
+          88,
+          89,
+          90
+        ],
+        "lead_review": "Pages 88 and 90 preserve the p219 and p221 seams exactly. Page 89 contains the complete English qualification, with correct mathematics and no clipping, overlap, missing glyph, broken header, or footer collision.",
+        "p220_successor_pdf_pages": [
+          89
+        ],
+        "predecessor_rasters": [
+          {
+            "pdf_page": 88,
+            "raster": {
+              "bytes": 552332,
+              "path": "qa/v68r40/en-r17-page-88.png",
+              "sha256": "B313ACE3E03F97FE60EA25E9B12A1CF3A07223C066C8C5C3C97DE3B952D9B754"
+            }
+          },
+          {
+            "pdf_page": 89,
+            "raster": {
+              "bytes": 442786,
+              "path": "qa/v68r40/en-r17-page-89.png",
+              "sha256": "9B74588BE2809A94D342F80B382BCCF9EAF7848A4F1C8822178AAA20E2D460F7"
+            }
+          },
+          {
+            "pdf_page": 90,
+            "raster": {
+              "bytes": 376824,
+              "path": "qa/v68r40/en-r17-page-90.png",
+              "sha256": "5D42404C65EB74ADB92639CBC0DCC98E315702515E264D4B806BD274967103D6"
+            }
+          }
+        ],
+        "printed_page": 220,
+        "raster_comparisons": {
+          "r17_page_88_to_r18_page_88": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_89_to_r18_page_89": {
+            "changed_fraction": 0.08532126341824764,
+            "changed_pixels": 399328,
+            "difference_bbox": [
+              259,
+              362,
+              1561,
+              2319
+            ],
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": false,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_90_to_r18_page_90": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          }
+        },
+        "successor_rasters": [
+          {
+            "pdf_page": 88,
+            "raster": {
+              "bytes": 552332,
+              "path": "qa/v68r40/en-r18-page-88.png",
+              "sha256": "B313ACE3E03F97FE60EA25E9B12A1CF3A07223C066C8C5C3C97DE3B952D9B754"
+            }
+          },
+          {
+            "pdf_page": 89,
+            "raster": {
+              "bytes": 530279,
+              "path": "qa/v68r40/en-r18-page-89.png",
+              "sha256": "E5D8C91DCBADBEFEED585509C47893BCD06CA182543D69234F62F2178A8AC134"
+            }
+          },
+          {
+            "pdf_page": 90,
+            "raster": {
+              "bytes": 376824,
+              "path": "qa/v68r40/en-r18-page-90.png",
+              "sha256": "5D42404C65EB74ADB92639CBC0DCC98E315702515E264D4B806BD274967103D6"
+            }
+          }
+        ]
+      },
+      "french": {
+        "adjacent_seam_successor_pdf_pages": [
+          91,
+          94
+        ],
+        "all_successor_visual_pdf_pages": [
+          91,
+          92,
+          93,
+          94
+        ],
+        "lead_review": "Pages 91 and 92 preserve the p219 seam and first p220 page exactly. Page 93 contains the complete French qualification without a layout defect. Page 94 begins p221 cleanly after the added page; its parity-adjusted header, margins, and footer are correct.",
+        "p220_successor_pdf_pages": [
+          92,
+          93
+        ],
+        "predecessor_rasters": [
+          {
+            "pdf_page": 91,
+            "raster": {
+              "bytes": 571294,
+              "path": "qa/v68r40/fr-r17-page-91.png",
+              "sha256": "77BF1E234809C52413465BBED690233560E71E490BE74647BF13EC9FE110559F"
+            }
+          },
+          {
+            "pdf_page": 92,
+            "raster": {
+              "bytes": 445781,
+              "path": "qa/v68r40/fr-r17-page-92.png",
+              "sha256": "BDF8CA4656708788D6FEB0ACBF7937B6CA6EB3A3C0083661B50EA3E56FE2AA7C"
+            }
+          },
+          {
+            "pdf_page": 93,
+            "raster": {
+              "bytes": 376803,
+              "path": "qa/v68r40/fr-r17-page-93.png",
+              "sha256": "6C5C5A16E67F3C7D9CCE6B9BD980E6A7E9EE35CFB8F43311FE5B567665C9434E"
+            }
+          }
+        ],
+        "printed_page": 220,
+        "raster_comparisons": {
+          "p221_r17_page_93_to_r18_page_94": {
+            "changed_fraction": 0.002313746998848575,
+            "changed_pixels": 10829,
+            "difference_bbox": [
+              102,
+              172,
+              1737,
+              2390
+            ],
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": false,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_91_to_r18_page_91": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          },
+          "r17_page_92_to_r18_page_92": {
+            "changed_fraction": 0.0,
+            "changed_pixels": 0,
+            "difference_bbox": null,
+            "dimensions": [
+              1819,
+              2573
+            ],
+            "identical": true,
+            "mode": "RGB",
+            "total_pixels": 4680287
+          }
+        },
+        "successor_rasters": [
+          {
+            "pdf_page": 91,
+            "raster": {
+              "bytes": 571294,
+              "path": "qa/v68r40/fr-r18-page-91.png",
+              "sha256": "77BF1E234809C52413465BBED690233560E71E490BE74647BF13EC9FE110559F"
+            }
+          },
+          {
+            "pdf_page": 92,
+            "raster": {
+              "bytes": 445781,
+              "path": "qa/v68r40/fr-r18-page-92.png",
+              "sha256": "BDF8CA4656708788D6FEB0ACBF7937B6CA6EB3A3C0083661B50EA3E56FE2AA7C"
+            }
+          },
+          {
+            "pdf_page": 93,
+            "raster": {
+              "bytes": 127737,
+              "path": "qa/v68r40/fr-r18-page-93.png",
+              "sha256": "6CEC8F755B7D0E261AF93F4E4102DE58DADF5F78903F96075E7720A17007830C"
+            }
+          },
+          {
+            "pdf_page": 94,
+            "raster": {
+              "bytes": 376671,
+              "path": "qa/v68r40/fr-r18-page-94.png",
+              "sha256": "7C852AE0E6F94B92A5FF91DFACAAE21D75DE593B7D8F7A2A29ABC0B328A81801"
+            }
+          }
+        ]
+      },
+      "review_scope": "every successor reader page containing corrected p.220 plus both adjacent source seams: English pages 88--90 and corrected-French pages 91--94; all corresponding predecessor comparison rasters were also inspected",
+      "status": "PASS"
+    },
+    "page_inventory": {
+      "bytes": 28257,
+      "name": "qa/v68r40/page-inventory.csv",
+      "sha256": "CFCBD2BBF9DCCBCFA8C36B802D5266DEB84990E90130A01A06C61AFE90C32AEE"
+    },
+    "qa_receipt": {
+      "bytes": 10374,
+      "name": "qa/v68r40/check.json",
+      "sha256": "9969A37D8CDDE716A29C03EF268C5394A13F967BD4C706A0EB8F59CA9695769F"
+    },
+    "qa_revision": "v68r40",
+    "reader_revision": "v068c3r18",
+    "structural_receipt": {
+      "bytes": 13015,
+      "name": "qa/v68r40/structural.json",
+      "sha256": "352C82546CA0E6110267718F5DCC413CCC5099C70B7ACFD4764A2A8EAD664A00"
+    }
+  },
+  "runtime": {
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "python": {
+      "bytes": 104264,
+      "name": "user\\miniconda3\\python.exe",
+      "sha256": "7679E53FA969789309E81FDAD0D52B8CDA5F83C9ABF7CB31A3C58BF24B31E264"
+    }
+  },
+  "scanner_oracle": {
+    "counts": {
+      "errors": 0,
+      "labels": 22080,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topics": 13,
+      "warnings": 652
+    },
+    "delta_from_d1009": {
+      "candidate_additions": 21,
+      "candidate_cap_evictions": 10,
+      "candidate_net_rows": 11,
+      "candidate_rows_line_number_only": 15,
+      "changed_tex_files": [
+        "cohomology.tex"
+      ],
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "new_labels": 11,
+      "removed_labels": 0,
+      "stx_bytes": 3460,
+      "tmap_byte_identical": true,
+      "warning_delta": 11
+    },
+    "outputs": {
+      "check.json": {
+        "bytes": 80068,
+        "name": "tmp/d1010_scan/check.json",
+        "sha256": "648438CCAB8D80F28B80E36BFA44378A1655AAB51CD4B0EE347CBA6B2121459B"
+      },
+      "stx.csv": {
+        "bytes": 5281636,
+        "name": "tmp/d1010_scan/stx.csv",
+        "sha256": "A6A16E837DF3B59C348CB88348FA9FC88F6C0703B78AF97FBACFA7B8254CFEC1"
+      },
+      "tcand.csv": {
+        "bytes": 489206,
+        "name": "tmp/d1010_scan/tcand.csv",
+        "sha256": "C07DE868C2A467B75DB00C31DE10A6AE5C1AD5F71D629641CF1840B151FDB22A"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "name": "tmp/d1010_scan/tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      }
+    }
+  },
+  "schema": "tohoku-stacks-mapping-successor-r53-v1",
+  "semantic_source": {
+    "aggregate_sha256": "58DEFA91A60771FB427AB152394CA5BB0D9B289F632F735FD4BE0E68361B649F",
+    "bytes": 2061217,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 2585,
+        "name": "README.md",
+        "sha256": "66D4CF92728AF7FF10E82CDFD97AFCD9D26B55CE9FBC985932FFBCD597DD64B4"
+      },
+      {
+        "bytes": 10422,
+        "name": "bib.csv",
+        "sha256": "93F5A934ADDE0CD92BBB21AF70EFD81BA128CCD2EDF51EB19428B83437EC3516"
+      },
+      {
+        "bytes": 772,
+        "name": "catalog.csv",
+        "sha256": "FC0D201FB3BE414D132EC10ED4D00FF2DE16B6F2C90BEADF72213B597113AA20"
+      },
+      {
+        "bytes": 261660,
+        "name": "edges.csv",
+        "sha256": "5B924BF4E9D0E7CAFF51D3C75D0C85045E985AE21152744ABD38929A87E622D5"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 36480,
+        "name": "manifest.json",
+        "sha256": "CED21E8761F781885600C609683DAA2110232012EEF742C657386655CBC4FAC6"
+      },
+      {
+        "bytes": 585600,
+        "name": "nodes.csv",
+        "sha256": "301172BC3D1DD0D4D518E14B96C6E24A380060F31A09987AAE8EC74812DC80A0"
+      },
+      {
+        "bytes": 106319,
+        "name": "objects.csv",
+        "sha256": "82FF34C19C6D17D80DC3A617FD106ED324099CC9D0F2FE752757D0642ED31999"
+      },
+      {
+        "bytes": 515084,
+        "name": "occ.csv",
+        "sha256": "2F657244FB211F4B5680DFDFC247167BCFD3C011F622930CC409872DEF3370BB"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 161519,
+        "name": "refs.csv",
+        "sha256": "2BB0DC3356C0C4B18E82F7C168334D450DF541586EE89F94FB254C3296ACDE3D"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325587,
+        "name": "terms.csv",
+        "sha256": "6D93CBBD2D6CF3E354FE90DC51605ACD9C7B0932CEF216FB9D606AD97D666E5D"
+      },
+      {
+        "bytes": 5946,
+        "name": "validation.json",
+        "sha256": "61D05C5E62515F097CDF098412CD93B394CE8F9A9C616943DCB1B1AB7C4302B1"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r19",
+    "manifest_payload_surface": {
+      "aggregate_sha256": "A0BC270B0F26F9E8E26515FCDDE49E5BBEEEE3D6A370CBEAD275B727A1D6497F",
+      "bytes": 2018791,
+      "file_count": 16
+    },
+    "stable_node_ids": 991,
+    "stable_surfaces": {
+      "edges": 1479,
+      "nodes": 991,
+      "occurrences": 1036,
+      "references": 440
+    },
+    "validation_status": "PASS"
+  },
+  "status": "PASS"
+}

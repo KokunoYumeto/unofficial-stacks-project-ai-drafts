@@ -1,0 +1,45 @@
+\begin{lemma}[Projective effacements by passage to the opposite category]
+\label{lemma-projective-effacement-opposite-category}
+\begin{reference}
+\cite[Chapter I, \S 1.10, Remark 4, p. 137]{Tohoku}
+\end{reference}
+Let $\mathcal A$ be an abelian category.
+\begin{enumerate}
+\item An object $P$ is projective in $\mathcal A$ if and only if it is
+injective as an object of $\mathcal A^{opp}$.
+\item A surjection $p:M\to A$ is a projective effacement of $A$ in
+$\mathcal A$ if and only if the injection $p^{opp}:A\to M$ is an injective
+effacement of $A$ in $\mathcal A^{opp}$.
+\item The category $\mathcal A$ has enough projectives if and only if
+$\mathcal A^{opp}$ has enough injectives.
+\item If $\mathcal A^{opp}$ is a Grothendieck abelian category, then there
+are a functor $P:\mathcal A\to\mathcal A$ and a natural transformation
+\[
+P\longrightarrow\operatorname{id}_{\mathcal A}
+\]
+whose component $P(A)\to A$ is a surjection from a projective object for
+every $A\in\mathcal A$. In particular, these components are functorial
+projective effacements.
+\end{enumerate}
+Thus statements about injective objects, injective effacements, and enough
+injectives have the corresponding projective statements after passage to
+the opposite category.
+\end{lemma}
+
+\begin{proof}
+The opposite of an abelian category is abelian; monomorphisms and
+epimorphisms, kernels and cokernels, and all commutative diagrams are
+interchanged. Reversing the arrows in the lifting property for an injective
+object gives exactly the lifting property for a projective object. Reversing
+the arrows in the defining square for an injective effacement gives exactly
+the defining square for a projective effacement. This proves (1) and (2),
+and (3) follows by reversing an injective embedding of each object.
+
+For (4), apply Injectives, Theorem
+\ref{injectives-theorem-injective-embedding-grothendieck} to
+$\mathcal A^{opp}$. Its functorial injective embeddings become, after
+reversing arrows, the asserted functorial surjections in $\mathcal A$.
+Their sources are projective by (1), and Lemma
+\ref{lemma-projective-effacement} shows that every such surjection
+is a projective effacement.
+\end{proof}

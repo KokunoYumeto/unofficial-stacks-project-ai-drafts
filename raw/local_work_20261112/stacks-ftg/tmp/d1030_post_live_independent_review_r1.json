@@ -1,0 +1,164 @@
+{
+  "schema": "tohoku-stacks-d1030-post-live-independent-review-v1",
+  "formalization_id": "D1030",
+  "review_round": 1,
+  "verdict": "STRICT_PASS",
+  "actionable_findings": [],
+  "scope": {
+    "live_source_edited": false,
+    "mapping_edited": false,
+    "pdf_rebuilt": false,
+    "qa_artifact_written": "tmp/d1030_post_live_independent_review_r1.json",
+    "render_directory": "tmp/d1030_live_pdf_qa"
+  },
+  "reviewed_inputs": {
+    "candidate": {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_candidate.tex",
+      "bytes": 1894,
+      "sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E"
+    },
+    "design": {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_design.json",
+      "bytes": 5668,
+      "sha256": "0A23502F52B25BE644B13473817E8FCA1969DD561BE89437C1B3D2F1461CB776",
+      "json_parse": "PASS"
+    },
+    "pre_live_review": {
+      "path": "tmp/d1030_independent_review_r1.json",
+      "bytes": 9132,
+      "sha256": "6E3811EAC77F0036B248DC98421D3CEEE03564B822354E27285C1D141BC5EFF7",
+      "json_parse": "PASS",
+      "verdict": "STRICT_PASS"
+    }
+  },
+  "live_insertion": {
+    "path": "divisors.tex",
+    "bytes": 398282,
+    "sha256": "6AFD21925A593A1D302776825ABB176768BDB7E5966982EC04542FAF637AF86C",
+    "line_count": 9845,
+    "exact_candidate_occurrences": 1,
+    "candidate_line_range_including_trailing_blank": "6868-6915",
+    "candidate_first_character_offset_zero_based": 269865,
+    "candidate_character_count": 1894,
+    "new_raw_label": "lemma-locally-UFD-projective-linear-torsors-lift",
+    "new_raw_label_definition_occurrences": 1,
+    "new_raw_label_line": 6869,
+    "anchor_raw_label": "lemma-locally-UFD-divisor-resolution",
+    "anchor_definition_occurrences": 1,
+    "anchor_label_line": 6803,
+    "anchor_proof_end_line": 6866,
+    "next_raw_label": "lemma-meromorphic-quotient-divisor-germs",
+    "next_definition_occurrences": 1,
+    "next_label_line": 6917,
+    "placement": "PASS: the exact candidate begins immediately after the completed anchor proof and ends immediately before the successor lemma"
+  },
+  "mathematical_and_dependency_review": {
+    "verdict": "PASS",
+    "dependency_definitions": [
+      {
+        "label": "divisors-lemma-locally-UFD-divisor-resolution",
+        "source": "divisors.tex:6803",
+        "definition_occurrences": 1,
+        "required_claim": "H^p(X,O_X^*)=0 for p>=2 under the stated Noetherian integral locally-UFD hypotheses",
+        "status": "PASS"
+      },
+      {
+        "label": "cohomology-lemma-pointwise-envelope-degree-two-boundary",
+        "source": "cohomology.tex:2615",
+        "definition_occurrences": 1,
+        "required_claim": "the degree-two torsor obstruction vanishes exactly when a lift exists",
+        "status": "PASS"
+      }
+    ],
+    "checks": {
+      "zariski_exactness": "PASS: GL_n -> PGL_n is a G_m-torsor and hence is locally split on the Zariski site",
+      "coefficient_identification": "PASS: centrality makes the conjugation twist of G_m trivial, so the obstruction lies in H^2(X,O_X^*)",
+      "vanishing_implication": "PASS: the divisor-resolution lemma kills that obstruction and gives surjectivity on nonabelian H^1 pointed sets",
+      "bundle_interpretation": "PASS: GL_n-torsors are frame torsors and extension along GL_n -> PGL_n is projectivization",
+      "scope": "PASS: the statement is explicitly limited to Zariski-locally-trivial PGL_n torsors; n=1 is harmless; no etale, fppf, or general Brauer assertion is made"
+    }
+  },
+  "compiled_artifacts": {
+    "source_modified_utc": "2026-08-24T08:05:37.1871087Z",
+    "aux": {
+      "path": "divisors.aux",
+      "bytes": 32505,
+      "sha256": "23DC6F62141F7D600615F6673C2849411CCE97A1F4AF0065A3D0805BBDC02AB3",
+      "modified_utc": "2026-08-24T08:07:00.5805949Z",
+      "line_count": 400,
+      "anchor_newlabel": {
+        "line": 295,
+        "bytes_with_lf": 107,
+        "sha256_with_lf": "1EA4A44BD8CC20040B970675D91C19C10BB353AFD71DE74C22453C2FB69E8F28",
+        "number": "27.10",
+        "page": 66
+      },
+      "new_newlabel": {
+        "line": 297,
+        "bytes_with_lf": 150,
+        "sha256_with_lf": "0844BC95A05040E6EBD603733E720E803BAD783B29BF52AA2EFC1DABB8CFC34F",
+        "number": "27.11",
+        "page": 66
+      }
+    },
+    "log": {
+      "path": "divisors.log",
+      "bytes": 36901,
+      "sha256": "84F46095D7F49E0FDA6D94CB5A5EE575FBFB91950877D0CFCEF552B702966646",
+      "modified_utc": "2026-08-24T08:07:00.6632607Z",
+      "line_count": 834,
+      "fatal_or_tex_errors": 0,
+      "latex_warnings": 0,
+      "package_warnings": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "rerun_requests": 0,
+      "overfull_hbox_count": 6,
+      "overfull_hbox_source_ranges": ["231-243", "231-243", "540-544", "967-975", "4727-4730", "5441-5456"],
+      "overfull_hboxes_in_candidate_lines_6868_6914": 0,
+      "underfull_hbox_count": 0,
+      "overfull_vbox_count": 0,
+      "underfull_vbox_count": 1,
+      "underfull_vbox_location": "log line 777, between output markers [52] and [53], outside the insertion",
+      "output_record": "divisors.pdf (98 pages, 1135218 bytes)"
+    },
+    "pdf": {
+      "path": "divisors.pdf",
+      "bytes": 1135218,
+      "sha256": "6B480E31B285358CDFB03BCEADB556F602112F2B43DAD7ACC5504C4DFF666487",
+      "modified_utc": "2026-08-24T08:07:00.6632607Z",
+      "pdfinfo_open": "PASS",
+      "render": "PASS",
+      "pages": 98,
+      "page_size_points": "612x792",
+      "encrypted": false,
+      "forms": "none",
+      "pdf_version": "1.5"
+    },
+    "build_status": "PASS: aux, log, and PDF are newer than the live source; the log records a successful 98-page output with no unresolved-reference or rerun condition"
+  },
+  "visual_qa": {
+    "renderer": "MiKTeX pdftoppm at 180 dpi",
+    "physical_pages_inspected": [65, 66, 67, 68],
+    "page_images": [
+      {"page": 65, "path": "tmp/d1030_live_pdf_qa/divisors-d1030-65.png", "bytes": 364236, "sha256": "EE59C192F2A1E3EF2BAC5A37632FFBF8F00B096646BAFC6675794A71BA2D9DD4", "status": "PASS"},
+      {"page": 66, "path": "tmp/d1030_live_pdf_qa/divisors-d1030-66.png", "bytes": 386196, "sha256": "FDD5C8FA4EB03853E812CC6721EA26144AD51F9B3A08280ABBE5CCF919191DA1", "status": "PASS"},
+      {"page": 67, "path": "tmp/d1030_live_pdf_qa/divisors-d1030-67.png", "bytes": 364845, "sha256": "B21705F71E3D982F6D69C40F84FB808215301CAA047E4D97C5A85E44C1645714", "status": "PASS"},
+      {"page": 68, "path": "tmp/d1030_live_pdf_qa/divisors-d1030-68.png", "bytes": 422961, "sha256": "D3831C56E6E6F7A15B51B193341B7B4688F827BB44BF9C489EDA86F105062D8A", "status": "PASS"}
+    ],
+    "findings": {
+      "page_65": "PASS: preceding divisor material is intact and the page break is clean",
+      "page_66": "PASS: Lemma 27.11 begins legibly after Lemma 27.10; displays, subscripts, superscripts, and hyperlink borders are well formed",
+      "page_67": "PASS: the full proof, references 12.8 and 27.10, conclusion, and successor Lemma 27.12 render cleanly",
+      "page_68": "PASS: the successor material and Section 28 transition are intact"
+    },
+    "clipping": 0,
+    "overlap": 0,
+    "bad_breaks": 0,
+    "missing_or_corrupt_glyphs": 0,
+    "malformed_math": 0,
+    "terminal_pages_rendered": false,
+    "terminal_page_reason": "not necessary: the insertion, its full proof, its immediate successor, and the following section transition were all inspected through page 68, while PDF open/build diagnostics are clean"
+  },
+  "strict_post_live_status": "PASS_AUTHORIZED_FOR_SCANNER_REPLAY_FROZEN_D1030_AUDIT_AND_MAPPING_TRANSACTION"
+}

@@ -1,0 +1,134 @@
+{
+  "schema": "tohoku-stacks-d1016-mapping-closure-design-v1",
+  "formalization_id": "D1016",
+  "status": "STRICT_DESIGN_PASS_NO_TEX_CHANGE",
+  "selection": {
+    "unit_id": "tohoku:corollary:fixed-point-free-g-covering",
+    "source_pages": [210],
+    "map_row_zero_based": 244,
+    "current_decision": "D000907",
+    "current_disposition": "existing_weaker",
+    "planned_decision": "D001040",
+    "planned_disposition": "existing_equivalent",
+    "supersedes": "D000907",
+    "reason": "D1015 supplied the previously missing finite and locally-finite paracompact closed-cover comparison. Combining that comparison, the existing open-cover comparison, and the existing free-index invariant-cochain calculation now gives the exact p.210 canonical isomorphism without another live TeX statement."
+  },
+  "authority": {
+    "authority_pdf": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "english_p210": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/en/p210.tex",
+      "bytes": 3827,
+      "sha256": "58B07E4FC86BEAECC2171136231750A64BD10A5C029844DD54E00E8C89EDDD47",
+      "target_lines": [12, 23],
+      "target_excerpt_bytes": 559,
+      "target_excerpt_sha256": "A48613AF83F96E30BE6E141C1CA22319946EDAB096E85850606ED911B39585C5"
+    },
+    "french_p210": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/fr/p210.tex",
+      "bytes": 4024,
+      "sha256": "C459F2FDD52597817AFFA895184F286034F5B24905FB381945AD74850B028A99",
+      "target_lines": [13, 24],
+      "target_excerpt_bytes": 557,
+      "target_excerpt_sha256": "12DB368682FF61DB2D26B15026E28B8E62B4D2F84675ABA0DA4B599314BC84D9"
+    },
+    "semantic_node": {
+      "id": "tohoku:corollary:fixed-point-free-g-covering",
+      "generation": "sem/r18",
+      "node_row": 246,
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/sem/r18/nodes.csv",
+      "bytes": 585012,
+      "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "predecessor_mapping": {
+      "path": "user/Documents/stacks-ftg/tohoku_r59/map.csv",
+      "bytes": 484334,
+      "sha256": "776A4553AAC800F8C315EBD13DAFA5F264B814F01783B1945902403CB140978A"
+    },
+    "predecessor_receipt": {
+      "path": "user/Documents/stacks-ftg/tohoku_r59/r59-check.json",
+      "bytes": 8587,
+      "sha256": "68D02635D8DBEB96A3CE2ECDDD11EF7F281F654AB3D8EA9735A476F6133B8D49"
+    }
+  },
+  "live_dependencies": {
+    "cohomology_tex": {
+      "path": "user/Documents/stacks-ftg/cohomology.tex",
+      "bytes": 919109,
+      "sha256": "81D07AAE646D776C3F0CBAA090EE311100634A2F57EBFC98719C1EC79F4A3082"
+    },
+    "open_acyclic_cover": {
+      "label": "cohomology-lemma-equivariant-cech-spectral-sequence-acyclic-cover",
+      "lines": [17767, 17788],
+      "bytes": 728,
+      "sha256": "8A33199D8B55FD566EE9545D12169D4D997E2956B1B5615146FC827B92C74A4C"
+    },
+    "closed_acyclic_cover": {
+      "label": "cohomology-lemma-equivariant-cech-spectral-sequence-closed-acyclic-cover",
+      "lines": [17739, 17765],
+      "bytes": 842,
+      "sha256": "8EBECB185A3B5D2EEE5D29FD008E2256B230C360F34A6656F12321E13143D180"
+    },
+    "free_index": {
+      "label": "cohomology-lemma-equivariant-cech-free-index",
+      "lines": [17791, 17880],
+      "bytes": 2964,
+      "sha256": "CC3010C8DAF60E918BB5C12958FEE5CF17C8EBFE6AEC7FDEB3C795F465AF8C96"
+    }
+  },
+  "derivation": {
+    "fixed_point_free_meaning": "The index G-set is free, exactly the hypothesis of the free-index lemma.",
+    "open_case": "The open acyclic-cover lemma identifies derived equivariant Cech cohomology with H^n(X;G,A); the free-index lemma identifies the former with H^n(C(U,A)^G).",
+    "closed_paracompact_case": "The closed acyclic-cover lemma applies to a locally finite closed G-covering on a paracompact X; the free-index lemma applies to its nonalternating coefficient complex.",
+    "finite_case": "In context this is the finite alternative inside the closed-cover branch inherited from Corollary 2 to Theorem 5.5.3. The finite branch of the closed acyclic-cover lemma and the free-index lemma give the same canonical isomorphism.",
+    "canonical_isomorphism": "The canonical free-index comparison followed by the canonical acyclic-cover edge map is an isomorphism H^n(C(U,A)^G) to H^n(X;G,A); its inverse is the source's displayed canonical isomorphism.",
+    "excluded_reading": "No assertion is made for an arbitrary finite covering by subsets that are neither open nor closed.",
+    "new_tex_required": false,
+    "new_pdf_required": false
+  },
+  "mapping_projection": {
+    "decision_id": "D001040",
+    "supersedes": "D000907",
+    "unit_id": "tohoku:corollary:fixed-point-free-g-covering",
+    "disposition": "existing_equivalent",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-lemma-equivariant-cech-spectral-sequence-acyclic-cover;cohomology-lemma-equivariant-cech-free-index;cohomology-lemma-equivariant-cech-spectral-sequence-closed-acyclic-cover",
+    "stacks_tags": "",
+    "rationale": "Stacks now proves the complete source corollary. The open-cover acyclic comparison and the new closed-cover acyclic comparison cover respectively the open branch and the finite/locally-finite paracompact closed branches, while the fixed-point-free index lemma identifies derived invariants of the nonalternating Cech complex with the cohomology of its invariant subcomplex.",
+    "gap_projection": {
+      "before": 27,
+      "after": 26,
+      "reason": "The only deficiency recorded by D000907 was the missing closed-cover comparison, and D1015 has supplied it."
+    },
+    "projected_counts": {
+      "units": 991,
+      "decisions": 1040,
+      "decided_units": 679,
+      "source_issues": 31,
+      "active_source_issues": 0,
+      "existing_equivalent": 383,
+      "existing_weaker": 5,
+      "new_statement": 6,
+      "remaining_gap_class_dispositions": 26,
+      "scanner_warnings": 673,
+      "scanner_errors": 0
+    }
+  },
+  "write_boundaries": {
+    "allowed": [
+      "This mapping design and independent review artifacts",
+      "A bounded D1016 mapping audit",
+      "The no-overwrite tohoku_r60 successor and its exact scanner replay"
+    ],
+    "forbidden": [
+      "cohomology.tex or any other live TeX source",
+      "Any final PDF or visual render",
+      "Bilingual source pages, semantic nodes, or source corrections",
+      "Git, GitHub, publication, upload, cleanup, archive, ZIP, watcher, or broad filesystem operations"
+    ]
+  }
+}

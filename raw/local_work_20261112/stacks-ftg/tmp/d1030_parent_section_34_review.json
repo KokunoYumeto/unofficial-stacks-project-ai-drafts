@@ -1,0 +1,325 @@
+{
+  "schema": "tohoku-stacks-d1030-parent-section-3-4-review-v1",
+  "formalization_id": "D1030_PARENT_SECTION_3_4",
+  "verdict": "STRICT_PASS",
+  "status": "STRICT_PASS_CONDITIONAL_PARENT_CLOSURE_AUTHORIZED_AFTER_D1030_SEALS",
+  "errors": [],
+  "scope": {
+    "unit": "tohoku:section:3.4",
+    "physical_map_line": 914,
+    "predecessor_decision": "D000324",
+    "dependent_child": "tohoku:prop:3.4.1",
+    "dependent_formalization": "D1030",
+    "live_or_source_edit_performed": false,
+    "map_or_build_edit_performed": false,
+    "scanner_or_git_used": false
+  },
+  "input_identities": {
+    "semantic_nodes": {
+      "path": "sem/r18/nodes.csv",
+      "bytes": 585012,
+      "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D"
+    },
+    "sealed_r69_map": {
+      "path": "tohoku_r69/map.csv",
+      "bytes": 487554,
+      "sha256": "0427AEA97444BC58E7C3823B91FDFCD84CC531DAB4D6C93F38C8EE9D52BB3A00"
+    },
+    "sealed_r69_decisions": {
+      "path": "tohoku_r69/dec.csv",
+      "bytes": 391385,
+      "sha256": "E7AA26C9073717E418FCB2BC0ADC20E1AE89762BEF55D69C260A0BE3909FD837"
+    },
+    "sealed_r69_label_index": {
+      "path": "tohoku_r69/stx.csv",
+      "bytes": 5290391,
+      "sha256": "3083041A38A704D6A8815B21D42AC8E617AFA8D404B289586A820D1C80AE3346"
+    },
+    "d1030_design": {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_design.json",
+      "bytes": 5668,
+      "sha256": "0A23502F52B25BE644B13473817E8FCA1969DD561BE89437C1B3D2F1461CB776"
+    },
+    "d1030_candidate": {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_candidate.tex",
+      "bytes": 1894,
+      "sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E"
+    },
+    "d1030_independent_review": {
+      "path": "tmp/d1030_independent_review_r1.json",
+      "bytes": 9132,
+      "sha256": "6E3811EAC77F0036B248DC98421D3CEEE03564B822354E27285C1D141BC5EFF7",
+      "verdict": "STRICT_PASS"
+    }
+  },
+  "parent_preimage": {
+    "semantic_row": {
+      "physical_line": 914,
+      "bytes_with_lf": 823,
+      "sha256_with_lf": "FE9FFA6F814796743EB4E66FA80BA2D9E3F04B8F4A53DD814CF9767767CAEFBB"
+    },
+    "map_row": {
+      "physical_line": 914,
+      "bytes_with_lf": 464,
+      "sha256_with_lf": "4BF61AD01B5600B461DA90A8DE4EDB5D82A06987351449C973C8EEC34295460D",
+      "decision_id": "D000324",
+      "disposition": "new_section",
+      "review_state": "reviewed_new_section",
+      "stacks_labels": "cohomology-section-h1-torsors;divisors-section-Weil-divisors",
+      "stacks_tags": "02FN;0BE0",
+      "source_locator": "sem/r18/nodes.csv:914"
+    },
+    "decision_row": {
+      "physical_line": 325,
+      "bytes_with_lf": 340,
+      "sha256_with_lf": "2D4BC67C691E472C3AD8066CFDE25ACDF931CDE9F5EA9B222939A00AB64D736A"
+    }
+  },
+  "direct_child_evidence": {
+    "field_order": [
+      "node_physical_line",
+      "map_physical_line",
+      "unit_id",
+      "node_class",
+      "node_type",
+      "decision_id",
+      "disposition",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags",
+      "node_row_bytes_with_lf",
+      "node_row_sha256_with_lf",
+      "map_row_bytes_with_lf",
+      "map_row_sha256_with_lf",
+      "decision_physical_line",
+      "decision_row_bytes_with_lf",
+      "decision_row_sha256_with_lf"
+    ],
+    "rows": [
+      [41,41,"tohoku:term:structure-group-lifting","derived_index","term","D000234","structural_only","reviewed_structural","","",261,"5417BAED2AE89421B873ADAAB1F1B7E773C0CCE7A80A72CAB2E503FF33D1F8F2",392,"50F5C4AE4795F8A911CAE77AD0DE5D1B9BB7FC83EF004CD85AA778B2E475690E",235,281,"6CAC5092E85BE0ECD9A2B8A187B745F8E5D9F1BBA0B3D8794077201ACE12DFB8"],
+      [42,42,"tohoku:action:3.4.2:P-actions","source_target","action","D000235","structural_only","reviewed_structural","","",841,"CF350D7CD66E16E9DC19230C2920894F018E49A17D8CEAA5C9E5BDEC8F646868",360,"41EE65153F21D763CF65FB433A1948639E153C914408DFA9BE3A9C8178032D2C",236,253,"ABE7E31DB45193908D5F08FA146A60A4C52C3BA6ACD289DA4F163A56383E9709"],
+      [87,87,"tohoku:claim:3.4.2:H1-bijection","source_target","claim","D001002","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-torsor-bijection","",626,"CBB6362911D3070553A56FE1CCBCC385FF2874C5F69EDCA8B41148593DB2827F",736,"957E00495BABD1DE30C29F2C5BFEB9BDE3105B8C57AAF2FEC0AE7E8A54082446",1003,625,"796357EE16B7EDAFC77A20233DC9A87D8BB2F7A6E416A8FD55489BD2D1F21130"],
+      [88,88,"tohoku:claim:3.4.2:H1-bijection:surjectivity","source_target","claim","D000237","structural_only","reviewed_structural","","",870,"6328A63CDA2694A1DD3297725916C2EE4CBCE25F3C64A289E7781925D0F63D20",437,"B840E41C1A0A94F29CB673D0E245C254696FD827C0581FFF96CEF3299554D12A",238,247,"3C02FC9341E141D6D5C41697A867441FE7542CC1724ACECBC436FDC582847508"],
+      [89,89,"tohoku:claim:3.4.2:u-properties","source_target","claim","D001001","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-crossed-homomorphism","",847,"58CB2BC6C712D10AD183943C87E2E54C0CCB24FEBACE18A4E478038322C3FE45",757,"2CB9C2081A769D5E3F6C5B04083CAE852789104553160D2360D9B7029C3FE309",1002,646,"387FE409E8E1A33755A03815D8A5ADA9D1F45A895CDDAEEA98D8B79B03E322D9"],
+      [95,95,"tohoku:comparison:cech-derived-h1","source_target","comparison","D000239","existing_equivalent","reviewed_equivalent","cohomology-lemma-cech-always","09V1",838,"633B1E5655140CDB9A5175FF6659549EC655EA8FAF452418527C11DD32B91199",478,"16A57248BEC5DDF336101ED990825FCC84C9955DC6E8BC4C1B34F2F62A2FE580",240,281,"39EB2580DFDEC2E56E11B7DC07AA5C0992587ECBBB828CAC57175B60C8CA4958"],
+      [119,119,"tohoku:construction:3.4.2:P-Fprime","source_target","construction","D000240","structural_only","reviewed_structural","","",205,"A6C85908ED1FF33DE5B37CD0315C0685215C12ED639E3B5FEF3E5425F83E82D3",354,"375B4BD1E183C47F4667FA86C97F87AE4110C95BDA476BBE3CE09CAC5ACD9780",241,240,"0F71F2911DC5B77CA5617D5BDE6AA4E4B8197267C11385BB424C7DE5926A25F4"],
+      [120,120,"tohoku:construction:3.4.2:associated-P-bundle","source_target","construction","D001003","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-torsor-bijection","",604,"FA4CEDA36DBB006C3BB7072B67F5F1089CE6A9BC080DB9F5BF06B9461ED18117",607,"93308BA1F5B324B39C7E36281123674639ED0BE5F28AA6B31CCB3131A4D5EF10",1004,488,"23A3CF28D3154AC087F05D4B415C1A8AD0911B60A45B083840E2AD98C6532560"],
+      [121,121,"tohoku:construction:3.4.2:dQ-obstruction","source_target","construction","D001004","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-crossed-homomorphism-torsor-obstruction","",875,"100C586FD5B7BD6C1356482A24ACBCCA602B874748FEF4139271D7114E647366",676,"30175C5ADF697F6736C89FA39B43B3FFC68EB4CC78EAC8C235DCFC8B17C56538",1005,557,"2174FC698CF27A9C6E2547A13E5F53B066670CD8933840EBA9A3E1FD0F1096D9"],
+      [124,124,"tohoku:construction:associated-rho-torsor","source_target","construction","D000955","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-crossed-homomorphism-torsor-obstruction","",826,"213A73BB8F44503F42D04C3E0EBD8D06BBF499A349531585AC6C8E4CB4A6D250",556,"9B1AE423D4D5D127F563550B6EBD7B3AB4B10E82485858A7FEA9EBD5D46B5208",956,437,"751AB9416B4018A9FF6E145E2F40C80FB97CF4F678519D725BBC8AE1BF786559"],
+      [146,146,"tohoku:construction:constant-transition-reduction:p1","source_target","construction","D001011","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-holomorphic-logarithmic-derivative-obstruction","",559,"D3761BE5E581A92AD14A230C2EABE53D7A0B1AC929015D621CA6E4436E384F74",612,"33EA567C3E18D011D0FD03C08C1D56DED9E7A157578F18E1B1E2EEF78E6FF427",1012,493,"D950697AFE225903A41AE6EC77BAFD100A98B8D586062F45A9ABFF18B88AB64D"],
+      [148,148,"tohoku:construction:crossed-homomorphism-general","source_target","construction","D000950","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-crossed-homomorphism-affine-action","",880,"3E952D1CB72CCF8E342D22BD4AD3638AAD60D260FEBE198BC4343956187DF45A",691,"B5D1C12F902D64EC30EE919F6C2C777C0696E4F675A07A767B8F191BD3E6287E",951,572,"D2F16FC93C24C7CA7CB7C54371C57581CF22DAD65088B2A0D6801E773FBC9DDF"],
+      [155,155,"tohoku:construction:divisor-sequence:p1","source_target","construction","D001038","existing_equivalent","integrated_source_stacks_and_independent_review","divisors-lemma-meromorphic-quotient-divisor-germs;divisors-section-meromorphic-functions;divisors-section-Weil-divisors","01X1;0BE0",858,"A737A7FF80BE9B48807DD932761D4AFD898301A6E056C977F05FE628F18CD43C",691,"0148C06164036ADC9953BED0BA7653B103BF9266C8CAD301CA015B431D081401",1039,563,"D09CCD8B8A2B7927B14EF8229E550878FDF49216D6947FC9565C99FFED424763"],
+      [156,156,"tohoku:construction:divisor-sequence:p2","source_target","construction","D000999","existing_equivalent","integrated_source_stacks_and_independent_review","divisors-definition-sheaf-Weil-divisors;divisors-lemma-sheaf-Weil-divisors-flasque;divisors-lemma-locally-UFD-divisor-resolution","",1004,"DB361DB75FD67A4388243FA7D0D3AA0287407548A293A241988552409BEE764F",873,"0D71BEE63CEDD91F91491EDB8D33B8B6FD593A4C56A77DD29B412F60356612C6",1000,639,"620067F83BB717481E4991C5C6C5FFC1D011BB36E9D1468DA7417EA9C31C223A"],
+      [168,168,"tohoku:construction:flabby-envelope","source_target","construction","D001000","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-flasque-envelope-groups;cohomology-lemma-flasque-group-torsors-trivial","",856,"208E5FFCE3B760F8E895930BF08F90EA2CFACE14434D4DB13E3EB7DF95B781C8",1010,"1D226F467831E8CE693F170179468296190D2C2147C82D3EFF19A485543DC88D",1001,891,"616B1169422DD68B9852885D98ACE3337C2285DEA0397C19209DAC562E3E0B09"],
+      [217,217,"tohoku:cor:3.4.2","source_target","corollary","D001006","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-degree-two-boundary","",593,"85BD822D86DAB494C7D19FCD6CB21877D0ED91BD05EE522A1D9F023BA02A294F",540,"2E6B1D6CC605D24B90EEF48F2E4EE0B0C7558512103BB52796AA535EA0A94F17",1007,424,"F07361E544ED902B31BCAABB44BF735A8E1CB69180BB5860001AB99CE6633F2B"],
+      [260,260,"tohoku:def:adjoint-obstruction-class","source_target","definition","D001010","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-holomorphic-logarithmic-derivative-obstruction","",623,"35DDCC8174788902CF0482CA0B3AC4CEC2AC206B1F4B0BC1961F7ECECCE08F2A",592,"61529BFD3843BF550FBFC2C1628B00AFEA2A2B4D88BA8104F7B4F63D168D780F",1011,475,"C96E9BF6210094BE273827F9BE981C064885472168DD6E96E53BCCC06E33C223"],
+      [275,275,"tohoku:def:dE-obstruction","source_target","definition","D000956","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-crossed-homomorphism-torsor-obstruction","",830,"CE42BE0887131F0717711B436761D5BDF39D4C9D2F74419A00B6AB72D4A4F46B",577,"1C0B11F475414D53E316E834D6696D21291F89D3AFA0C8BEFE23A75232F254AD",957,460,"6C14C8B46A0D496AD9E465222238BB3081175B64757CDB4EE9349562EC69599F"],
+      [355,355,"tohoku:diagram:3.4.2:H1-square","source_target","diagram","","structural_only","inherits_parent","","",308,"606A09473DB82037D16088AEDAE54666E608E874EEC4CBC7326F8CF918DEB812",254,"C2051F641AD88110D5A567F7D5B9EF6B66858D36B6753131DBC4A69C43A2677D",null,null,null],
+      [356,356,"tohoku:diagram:3.4.2:boundary-anticommutative-square","source_target","diagram","","structural_only","inherits_parent","","",358,"F7C256E127B97B2CC1D42F887E3EBB9366FE7F8E5719AF47A89F143B3661F40A",276,"63719A8737629A3A327ED9E382E9B8637EFE6F81551432397C5B9655BB1BDD0F",null,null,null],
+      [357,357,"tohoku:diagram:3.4.2:exact-sequence-grid","source_target","diagram","","structural_only","inherits_parent","","",785,"43008AA96D8F6B5F6534A9DB8865539DCE012DD17FCABA0C20A9E4421DE05E2B",264,"EE7209893F900B33706D4BE3A23C270EF273FE26C4F12C0D5D528C0A07C40BE1",null,null,null],
+      [358,358,"tohoku:diagram:3.4.2:flabby-embedding","source_target","diagram","","structural_only","inherits_parent","","",629,"84F9331EE019A3710BE0D7658216716566C2E9165D167C7DC826A3FE69FD9233",261,"FF6EEFDBC4B6F211596310CD6799E1866CED6C2882BE1BF1489EC8A3D574C558",null,null,null],
+      [379,379,"tohoku:eq:3.4.2:P-extension","source_target","equation","","structural_only","inherits_parent","","",207,"4FCCE2E234D3096250B9CF5405DBE3F2B38C403CE40CEC67058139763FE50F71",306,"22BF059DA81A5E7BBC36EC37B76ADCB58972F3B1D644931012D83F22C537096D",null,null,null],
+      [380,380,"tohoku:eq:3.4.2:boundary-as-minus-dQ","source_target","equation","","structural_only","inherits_parent","","",785,"6BD0D6434A5842EC98E42A0BFB4B0D79C4438DAF851560E38AED94D08C2B46DC",261,"D97343AE9FB4286C42D692C338FD0DC0E6F8E9AE2E4C6E58D08C31E4AFB20916",null,null,null],
+      [381,381,"tohoku:eq:3.4.2:crossed-extension","source_target","equation","","structural_only","inherits_parent","","",229,"547D327A85A5BBEAF2C960763CC872504E8F51DAF697C9921DF05A2E3C8231F1",312,"63F70A6FCC1BA56737C84E19513004B68F594F9FEBE3998C1B57A39E1B8839D6",null,null,null],
+      [382,382,"tohoku:eq:3.4.2:dQ-minus-boundary-cE","source_target","equation","","structural_only","inherits_parent","","",738,"E7A86C16289BC45E1F213538AECE051CC31843E68F03A5CCF09E185C539190A2",261,"36A4DB8F39B79165C3CF6B2A61228C622E4C3A493872C918C8ABF64C7F14DFEC",null,null,null],
+      [383,383,"tohoku:eq:3.4.2:obstruction-cohomology","source_target","equation","","structural_only","inherits_parent","","",535,"6446B245D49D3DBB6B602C4FFF7058861891C6C6091A36D862F29E9975501960",263,"9B43FBF6BA9AD0F91AC60BE7DA85919D9E8905CB5110A7B2F1CFF263C20F3E83",null,null,null],
+      [384,384,"tohoku:eq:3.4.2:quotients","source_target","equation","","structural_only","inherits_parent","","",382,"C19BDCE79EFF4104A867488500B9E8AB5B4D66FE779E1773BEE907843B507279",250,"75101CCF19C69AB3688289CAE0C46C893526935B8C395E9B11ACE2DD699167E3",null,null,null],
+      [385,385,"tohoku:eq:3.4.2:twisted-flabby-sequence","source_target","equation","","structural_only","inherits_parent","","",535,"98D26D241ED81F301A0139810D138A897001161808064B9FDBE23A6B33FBC5BF",264,"8B867637D6E2BE170EBF3766522E0BA03881E2D94B4D21E3091134488D8BD9F0",null,null,null],
+      [419,419,"tohoku:eq:adjoint-logarithmic-derivative","source_target","equation","","structural_only","inherits_parent","","",421,"E08C4839DE18F7F7D55352ADF6731C0759A6F9B9198777CC6BCC12DA720714AD",265,"65B6AE0859D9C677C76C63C4EFE33FF193218465A610C6C8A4674A7C8891871F",null,null,null],
+      [421,421,"tohoku:eq:associated-quotient-monomorphism","source_target","equation","","structural_only","inherits_parent","","",342,"8CB8337F95C1EA6FCF386B09B450D984203693AE62C92478BF5B649531BBCFF1",267,"A5CA2D586FBCACAF8AF0AEFE095F4322A905D70782A557088EF2A6C8816187A4",null,null,null],
+      [429,429,"tohoku:eq:central-extension","source_target","equation","","structural_only","inherits_parent","","",830,"F87E405FDF49928C92E7020DFC8CF13AAB96C9FAF5CC5F99E439BA5B90CA5A34",306,"2D17A823C6A56D0F400A73BEBD982446B2BBBD5C1558BC05D88400858A3AFF78",null,null,null],
+      [455,455,"tohoku:eq:divisor-class-cohomology","source_target","equation","","structural_only","inherits_parent","","",846,"9A1D5DF6D76077438650EE1C42656BC97FC198C670884E3CC9E91304D921D28E",341,"98AC3E8B62CC988029FDB4D9E62296515330A21F5A523B34E9DF4DF925DF573C",null,null,null],
+      [456,456,"tohoku:eq:divisor-resolution","source_target","equation","","structural_only","inherits_parent","","",725,"CC10F3A6D38D972FA475AD678F5ED3ACD59E7BC8A7D2E0FA52CDE5B90612198A",253,"25863AFD40E3C7696D0E7C303B3491CF3F1A9E62AC22FEB5F79CD90C2A6A8052",null,null,null],
+      [471,471,"tohoku:eq:pgl-lift-map","source_target","equation","","structural_only","inherits_parent","","",434,"D01A849D98ED5BBDC90CCFE8C8ACC45F2BD2B9505F9723F73E3E010D7E441648",247,"0078B6483524D5FB957F66D24824D5D3492413904398D502DF75ACADC5592E02",null,null,null],
+      [477,477,"tohoku:eq:rho-action","source_target","equation","","structural_only","inherits_parent","","",820,"317499EC5D81F3224A511D7F49C0A0EF11A88051D1E68F3264EBE5F8A185C003",245,"F0EB712B9F48CA1E1A01C7D857C6AC76BA945AB4FAFB7E642995867CBC47DB01",null,null,null],
+      [478,478,"tohoku:eq:rho-product-compatibility","source_target","equation","","structural_only","inherits_parent","","",252,"FB8EDD6B074F1FA8EAD30073CA479A4615F6FD794584F83B4A94FCC0CD209EEC",260,"8B5E2EBACA627667A22C733D419010A93D8EA5D0B982DA3BB223C385D70C810D",null,null,null],
+      [481,481,"tohoku:eq:sheaf-central-extension","source_target","equation","","structural_only","inherits_parent","","",788,"4BBF1B9B067433C31F5814EB5AB6622F85B1828EA16B1F32E510878E292C5153",312,"99E96593A6BD781BE35633DBD8C0BBDA9DC152089DC93A497A4072E0D5D691C7",null,null,null],
+      [587,587,"tohoku:example:projective-bundle-vector-lift","source_target","example","D000277","example_or_remark","reviewed_example_or_remark","","",871,"174B27424D83470FA486B0D79514ACE7423A77ED0B7D92FCABE91FF7389D680E",391,"AC7B29048CD02D2F51B50A74486B1B8954BDD2EF384B6F37A03E3A77DA87EBBE",278,282,"09706967B6919AA2D181DCEE79B8C1DCDAE98EB69EE1F02617D53C7B4CFA025B"],
+      [596,596,"tohoku:footnote:8","source_target","footnote","","structural_only","inherits_parent","","",308,"F859E85E38FED8A4F40D54CD4976D0CEA7DB86B3C081FF68D7E9CE7036ACE81E",246,"C2762DE3656121CAE312D431C878780BB5B65ABECAC76C33D8A38A2B0DE62C21",null,null,null],
+      [644,644,"tohoku:map:3.4.2:u","source_target","map","D000298","structural_only","reviewed_structural","","",674,"838DFE0DC90569DCE87BD60F9A2E33B2E5F840053465E5D84EAAB8DCA9BE2055",320,"3018D9C8336A80B8BCBA3C0CB0BD7BA0074E730320F7917147FC8ADAB6D1D14E",299,215,"7AE6BED6F9DC76FE4A2A229BB0DF43E71E5FD0E3A0B215FC9FEA6F58C9E9AE77"],
+      [656,656,"tohoku:proof:3.4.1","source_target","proof","","structural_only","inherits_parent","","",794,"5A2838BC505D97449F71C64E428E9B10057C6897A43B247BC08DB5FFDBF9F0D0",240,"63215F9D9A65C68BE1EBA00A58F4D35D7AF78F6625E083295DECD1E10C953427",null,null,null],
+      [657,657,"tohoku:proof:3.4.2:closure","source_target","proof","","structural_only","inherits_parent","","",831,"305C41AB532F5533185277DE06F32CA7D4D78BB1937B63129AEE5E9EAFD1EBB1",248,"C305EAA578A30C5EE70D4C74FBF5CE7E5A26F74396C4FDCF089B7FCB15E77184",null,null,null],
+      [658,658,"tohoku:proof:3.4.2:p1","source_target","proof","","structural_only","inherits_parent","","",428,"798E1CC43CC6BD8B8626140DA63AD887B3E1BB7F4D1C6B7753A2285231E7E3B7",243,"A4E9703B71319DEBF70E52E2F495B956E0D0373A1F4BC5B566EEE744229B609E",null,null,null],
+      [761,761,"tohoku:prop:3.4.1","source_target","proposition","D000306","new_statement","reviewed_new_statement","","",824,"C1C25DFC3F30B4C6B0F530118F8F14D43696B25E94A0E713AFD7C4AFCDC22F08",375,"961D0FF52FD939AD46E48F2FF07B89C55EB790555DFBBA2CF36CA6F10FD6491C",307,262,"41ADB8D27D655C3FF88369C3991E66467EF86E1E23CAE3E01BB3EC277E5BA208"],
+      [762,762,"tohoku:prop:3.4.2:p1","source_target","proposition","D000307","structural_only","reviewed_structural","","",320,"3881345E0DCA8B95D9E2C0D7CD02653679DE606E5792F8C0746CC997A319777D",342,"EC2F808F184C2D6D7A879069708FFFE4C07918C955154CA5A3DB8E618070D07A",308,229,"6D876B5A518205EB64D5CE3EE0DC460BE9416B8128703A4DB9EE5B445E83AE97"],
+      [763,763,"tohoku:prop:3.4.2:p2","source_target","proposition","D001005","existing_equivalent","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-degree-two-boundary","",831,"660357A8F3748368FD17550714B17EA8AE8D10ADE8380F7ADEA2DFBEE2E5A1E5",595,"6D08D239CEBCE8CAC177A376385A619F4E4560C44824E5E2573F356D44280671",1006,477,"5D78A2A823A95E1F4F9B370C8A5CAA0155B3C1EEF67936B80817B122CB6C9B76"],
+      [790,790,"tohoku:reduction:3.4.2:E-via-Q","source_target","reduction","D000310","structural_only","reviewed_structural","","",547,"355255E17CB99737107C202828E4A32C15FF15981BA0D7DA0EB34DF846A4AA55",353,"FCB20E08042215F0217A32417804804BEFD1AD3D8613D15E29DE56D05810A433",311,242,"A5390D255183B520E16887D4771C13C8317D808E6436BA448C3810E7DC21CC25"],
+      [802,802,"tohoku:remark:3.4.2:1:p1","source_target","remark","D001007","example_or_remark","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-degree-two-boundary","",310,"15268A28814FA42C48AD3B3DDB375260933DE0AC3919B5D0879F0D866116ADD6",538,"C2DC629CEF1308026D61B80AEA18164B572E12200C17B9376542956844D2A422",1008,425,"A25F7964D24DB83357CD0CFF4C79D326E390FF0CB892DD3AD475B5BB609AFBC2"],
+      [803,803,"tohoku:remark:3.4.2:1:p2","source_target","remark","D001008","example_or_remark","integrated_source_stacks_and_independent_review","cohomology-lemma-pointwise-envelope-degree-two-boundary","",751,"6EF03C0BEFD236B56BFDF469B44B22997C355CECB4DF35B3C0C486B94F02D168",553,"6BB60DDFF4B48BC990A35F57AA93C6A679EC4CDCC02758A0A7ED13F6E2BC0EC4",1009,440,"1F147D0FCB3EEB09CFBB6DD559E0154DAC91B87DCC3B3E025B5D322826A02400"],
+      [804,804,"tohoku:remark:3.4.2:2:local-triviality","source_target","remark","D000313","example_or_remark","reviewed_example_or_remark","","",779,"611503A162E435031B42BB88722253BD3DA4954F38BF58024E28F16552260588",364,"89DA82A37C5596A97B49D54063FE1477FCBFBD0D24672C5A3119254D3CB2553E",314,256,"EA3B79A7C207DB6C6AFBD2900C2A72FACCEE71912354F8B621BF4E1DAF36F39E"],
+      [805,805,"tohoku:remark:3.4.2:3:p1","source_target","remark","D001009","example_or_remark","integrated_source_stacks_and_independent_review","cohomology-lemma-holomorphic-logarithmic-derivative-obstruction","",829,"C4D0BD1E0A829515E729509B0EF4F5A3044A21E5AB592C86B5F23593286965C7",620,"E72B609467A12DBFC3F555140AE8659A70B98F1C429BD229BD7E57ACA05C3735",1010,507,"3F3CB75269723A2448E591DD4678F602845F6B03887602BC2DC4132080A213AE"],
+      [806,806,"tohoku:remark:3.4.2:3:p2","source_target","remark","D001012","example_or_remark","integrated_source_stacks_and_independent_review","cohomology-lemma-holomorphic-logarithmic-derivative-obstruction","",831,"231CB9058975570D9A962D768B6E32F6468BEEDD14445495A1876EC1BF8AC0B1",757,"25A7533F3D773191851C09B9496F251E79201CF377B7992A1FB1F85299EE9EDE",1013,644,"B151E242C6A6BCBC504A22271687E1475F7DA70B3F1EFC2E5908C196D998EEE0"]
+    ],
+    "current_summary": {
+      "direct_children": 53,
+      "node_classes": {
+        "derived_index": 1,
+        "source_target": 52
+      },
+      "dispositions": {
+        "existing_equivalent": 15,
+        "example_or_remark": 6,
+        "structural_only": 31,
+        "new_statement": 1
+      },
+      "embedded_structural_children_with_no_decision_id": 24,
+      "gap_class_children": [
+        {
+          "unit_id": "tohoku:prop:3.4.1",
+          "decision_id": "D000306",
+          "disposition": "new_statement",
+          "map_physical_line": 761
+        }
+      ]
+    },
+    "projected_after_d1030_seals": {
+      "direct_children": 53,
+      "dispositions": {
+        "existing_equivalent": 16,
+        "example_or_remark": 6,
+        "structural_only": 31,
+        "new_statement": 0
+      },
+      "remaining_gap_class_children": [],
+      "embedded_structural_children_with_no_decision_id": 24,
+      "embedded_child_decisions_appended": 0
+    }
+  },
+  "d1030_child_closure": {
+    "condition": "The D1030 candidate is inserted byte-exactly, all live build/visual/scanner gates pass, and the final D1030 audit seals tohoku:prop:3.4.1 as existing_equivalent.",
+    "current_child": {
+      "unit_id": "tohoku:prop:3.4.1",
+      "physical_map_line": 761,
+      "predecessor_decision": "D000306",
+      "predecessor_disposition": "new_statement",
+      "predecessor_row_bytes_with_lf": 375,
+      "predecessor_row_sha256_with_lf": "961D0FF52FD939AD46E48F2FF07B89C55EB790555DFBBA2CF36CA6F10FD6491C"
+    },
+    "authorized_projected_child": {
+      "disposition": "existing_equivalent",
+      "stacks_labels": "divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+      "official_tags": "",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "issue_append": null,
+      "source_repair_append": null
+    },
+    "independent_review_finding": "STRICT_PASS: the existing divisor-resolution lemma supplies H^i(X,O_X^*)=0 for i at least 2 and the new bounded lemma supplies the exact Zariski PGL_n-to-GL_n torsor lift and projective-bundle consequence."
+  },
+  "cited_live_label_evidence": {
+    "field_order": [
+      "full_label",
+      "physical_stx_line",
+      "row_bytes_with_lf",
+      "row_sha256_with_lf",
+      "file",
+      "source_line",
+      "kind",
+      "official_tag",
+      "text_sha256"
+    ],
+    "rows": [
+      ["cohomology-lemma-cech-always",3290,232,"6F88EF5A49FCDC5B97706CFCEFD40580B555D66BD028C45A6F6BFBE4BC3798C9","cohomology.tex",4420,"lemma","09V1","CBD9B33BD52C619430066FF0E8926A7C55A13AE3CB608021017972AADF0CC53A"],
+      ["cohomology-lemma-crossed-homomorphism-affine-action",3196,254,"5DB3FA63AC53F74B52A591DD66A76352B6F005F9E65F8C0D5F8C9788817061CB","cohomology.tex",271,"lemma","","73E9D29053604F6A6BACA7E227A742F1F5A060B2FD35434FB3D64117BDE6F0DA"],
+      ["cohomology-lemma-crossed-homomorphism-torsor-obstruction",3197,264,"DD8DA1B71B5ACBB218F53B4B2D8180207E382D07FD228ED1A8649A9C1AAA0CEE","cohomology.tex",348,"lemma","","4988F6BEBA93076DC196C4CF6E12F929889F97BC727E4138AB797631D08E4C56"],
+      ["cohomology-lemma-flasque-group-torsors-trivial",3244,229,"62CE7E628AA40A482CD4620F76ABEBABB6AC21D8FB76D5A2F738E044E93C93C2","cohomology.tex",2256,"lemma","","0D0BA09775F530C0DD7F96EF75B28712DB8D249F344015EE210A0D0688882E97"],
+      ["cohomology-lemma-holomorphic-logarithmic-derivative-obstruction",3250,263,"48FC577C93B8A3548278454E7D88A79AECFE68C69EFF67AE673AD37DF29CCADD","cohomology.tex",2824,"lemma","","D50806E3B497B6176EC5B5C98F43D2AA306C8F55B385AD3BAFBC11AE74C5FC5F"],
+      ["cohomology-lemma-pointwise-envelope-crossed-homomorphism",3245,249,"0F84A60D6833C055F104C815266659434ADC832AEC03AEE1F84BFBBACEE634A0","cohomology.tex",2294,"lemma","","2836B06CE436010E4F5D6893D6B4D8DAC8E3CE48B125D75FCBFC6D6EF132E425"],
+      ["cohomology-lemma-pointwise-envelope-degree-two-boundary",3249,247,"EDF59645D6DAFE7DC625B57CE6300035620B30F35E57443C2F2A61B8FF5C58E7","cohomology.tex",2615,"lemma","","C66CA97D52849BB6E15FD4D3A3D59FC8B515030CB7178728686A044A3C77A436"],
+      ["cohomology-lemma-pointwise-envelope-torsor-bijection",3246,241,"FFE71D9D3A0DD7240A1DF116BBFCE07B19D3A8CAD5222A793F0CA92E440396B1","cohomology.tex",2395,"lemma","","59032030733ABA5B2C5E8276BC700A7DF6B92711594E54E15BC31DE9C36E5AF2"],
+      ["cohomology-lemma-pointwise-flasque-envelope-groups",3243,237,"07FCA797ED0074FA68B97334D736D40747C15387EB5D7BAC07AC2B72A1CA943C","cohomology.tex",2210,"lemma","","3FFAF0C2DEAEDECD1B35B45013EFA07A4101144B2199F72238C6E9E7430F6131"],
+      ["cohomology-section-h1-torsors",3193,216,"4254EBB065477D8DE342ECE43E112F8FE8D854203E5DC14D5D3A7A9D6A2C2DC7","cohomology.tex",227,"section","02FN","B7AC384844A19720FB1F3A16E02C4663A72B91053294DF9F8F6C3F698E5A6782"],
+      ["divisors-definition-sheaf-Weil-divisors",6163,211,"E147DECD81EC8F2C1C7522F0957AC3E85818456824BFF8A05AA3D8B0145B3063","divisors.tex",6763,"definition","","06721532DE199BE461E95D7262183B41D4EDBF96B2B7B324D3DFA71E34A55AE8"],
+      ["divisors-lemma-locally-UFD-divisor-resolution",6165,218,"D957A621B7D2AC2E028B6F6335B6436EE1303584224CB90A870FACC87F63D121","divisors.tex",6803,"lemma","","6B706E1A7596D6BD20D26ECB40D4490F1CAF3ECC40F0FD4660984F0043A50814"],
+      ["divisors-lemma-meromorphic-quotient-divisor-germs",6167,226,"A96B30A6FB47D327CF046025A80457E8382D34C4989645814B83D530208BD85B","divisors.tex",6869,"lemma","","53C0C4AB58909F0737FE3111C1764D6D2337C394C17D400FDC1FAD7A219D8EAC"],
+      ["divisors-lemma-sheaf-Weil-divisors-flasque",6164,212,"6761517703A0DF0FC60C920BF54D6541D593CEFC90380462F5730AF57ED0F8D4","divisors.tex",6775,"lemma","","7DCEE6CD080EA8C2CA7DCE91FA5889A9514C08B04A55BDE49ADF054F33E2BD75"],
+      ["divisors-section-Weil-divisors",6154,194,"6B13AA46F23AA2116C19BA30DCBEE665BA99885E2A4334F4579CC91F9FD8691D","divisors.tex",6610,"section","0BE0","70E66C7275F964BD610EC059822B97306B51AA54594C1A0A3F809A9092A69CB2"],
+      ["divisors-section-meromorphic-functions",6131,239,"115434EEDA40D767D2CF659721DEA1A3A1B6E300D3E5E0A63D8D32EFCEEB3333","divisors.tex",5869,"section","01X1","4D521A559B1F75AEC11A7841FE4405A664C40813334723631C41AB1F43F72EBB"]
+    ],
+    "new_candidate_label": {
+      "full_label": "divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+      "raw_label": "lemma-locally-UFD-projective-linear-torsors-lift",
+      "candidate_occurrences": 1,
+      "live_occurrences_before_insertion": 0,
+      "projected_official_tag": "",
+      "candidate_sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E"
+    }
+  },
+  "derived_parent_union": {
+    "sort_rule": "ascending Unicode code-point order on exact full-label and tag strings",
+    "labels": [
+      "cohomology-lemma-cech-always",
+      "cohomology-lemma-crossed-homomorphism-affine-action",
+      "cohomology-lemma-crossed-homomorphism-torsor-obstruction",
+      "cohomology-lemma-flasque-group-torsors-trivial",
+      "cohomology-lemma-holomorphic-logarithmic-derivative-obstruction",
+      "cohomology-lemma-pointwise-envelope-crossed-homomorphism",
+      "cohomology-lemma-pointwise-envelope-degree-two-boundary",
+      "cohomology-lemma-pointwise-envelope-torsor-bijection",
+      "cohomology-lemma-pointwise-flasque-envelope-groups",
+      "cohomology-section-h1-torsors",
+      "divisors-definition-sheaf-Weil-divisors",
+      "divisors-lemma-locally-UFD-divisor-resolution",
+      "divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+      "divisors-lemma-meromorphic-quotient-divisor-germs",
+      "divisors-lemma-sheaf-Weil-divisors-flasque",
+      "divisors-section-Weil-divisors",
+      "divisors-section-meromorphic-functions"
+    ],
+    "stacks_labels": "cohomology-lemma-cech-always;cohomology-lemma-crossed-homomorphism-affine-action;cohomology-lemma-crossed-homomorphism-torsor-obstruction;cohomology-lemma-flasque-group-torsors-trivial;cohomology-lemma-holomorphic-logarithmic-derivative-obstruction;cohomology-lemma-pointwise-envelope-crossed-homomorphism;cohomology-lemma-pointwise-envelope-degree-two-boundary;cohomology-lemma-pointwise-envelope-torsor-bijection;cohomology-lemma-pointwise-flasque-envelope-groups;cohomology-section-h1-torsors;divisors-definition-sheaf-Weil-divisors;divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift;divisors-lemma-meromorphic-quotient-divisor-germs;divisors-lemma-sheaf-Weil-divisors-flasque;divisors-section-Weil-divisors;divisors-section-meromorphic-functions",
+    "tags": [
+      "01X1",
+      "02FN",
+      "09V1",
+      "0BE0"
+    ],
+    "official_tags": "01X1;02FN;09V1;0BE0",
+    "unresolved_live_labels": [],
+    "unbacked_official_tags": []
+  },
+  "parent_closure_finding": {
+    "status": "FULLY_CLOSED_AFTER_D1030_SEALS",
+    "current_exact_remaining_gap": {
+      "unit_id": "tohoku:prop:3.4.1",
+      "decision_id": "D000306",
+      "disposition": "new_statement"
+    },
+    "remaining_gap_after_condition": null,
+    "successor_disposition": "existing_equivalent",
+    "finding": "D1030 removes the only gap-class direct child. Every other direct child is already existing_equivalent, example_or_remark, or structural_only; the 24 embedded structural children with blank decision identifiers continue to inherit and receive no invented decisions."
+  },
+  "sole_parent_row_replacement_authorization": {
+    "status": "AUTHORIZED_ONLY_AFTER_D1030_CHILD_AND_ALL_DETERMINISTIC_GATES_SEAL",
+    "physical_map_line": 914,
+    "unit_id": "tohoku:section:3.4",
+    "action": "replace",
+    "supersedes": "D000324",
+    "decision_id": null,
+    "decision_id_assignment": "Assign the next sequential identifier in the final authorized transaction; this review does not invent one.",
+    "disposition": "existing_equivalent",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-lemma-cech-always;cohomology-lemma-crossed-homomorphism-affine-action;cohomology-lemma-crossed-homomorphism-torsor-obstruction;cohomology-lemma-flasque-group-torsors-trivial;cohomology-lemma-holomorphic-logarithmic-derivative-obstruction;cohomology-lemma-pointwise-envelope-crossed-homomorphism;cohomology-lemma-pointwise-envelope-degree-two-boundary;cohomology-lemma-pointwise-envelope-torsor-bijection;cohomology-lemma-pointwise-flasque-envelope-groups;cohomology-section-h1-torsors;divisors-definition-sheaf-Weil-divisors;divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift;divisors-lemma-meromorphic-quotient-divisor-germs;divisors-lemma-sheaf-Weil-divisors-flasque;divisors-section-Weil-divisors;divisors-section-meromorphic-functions",
+    "official_tags": "01X1;02FN;09V1;0BE0",
+    "rationale": "All 53 direct sem/r18 children are closed once D1030 seals: Proposition 3.4.1, the sole remaining gap-class child, is then represented by the locally-UFD divisor resolution and the bounded PGL_n-to-GL_n lifting lemma; the other substantive children are already existing_equivalent or example_or_remark, and all diagram, equation, footnote, proof, and other internal children remain structural_only with their existing or inherited decisions. The sorted parent/child label union covers the section's divisor resolution, Cech H^1 comparison, crossed-homomorphism and nonabelian torsor obstructions, structure-group lifting, and geometric applications. No etale/fppf lifting or general Brauer-vanishing claim is made.",
+    "source_locator_preserved": "sem/r18/nodes.csv:914",
+    "only_fields_changed": [
+      "decision_id",
+      "disposition",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags",
+      "rationale"
+    ],
+    "other_parent_or_child_map_rows_changed": 0,
+    "embedded_structural_decisions_appended": 0,
+    "issue_append": null,
+    "source_repair_append": null
+  },
+  "nonclaims": [
+    "The authorization is not effective before the D1030 insertion, build, visual QA, scanner replay, and final child audit pass.",
+    "No decision is created for any embedded diagram, equation, footnote, or proof child.",
+    "No etale or fppf PGL_n lifting, unrestricted Brauer vanishing, analytic comparison, or GAGA claim is made."
+  ],
+  "review_write_scope": [
+    "tmp/d1030_parent_section_34_review.json"
+  ]
+}

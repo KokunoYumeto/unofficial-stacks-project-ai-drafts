@@ -1,0 +1,188 @@
+{
+  "schema": "tohoku-stacks-d1007-audit-v1",
+  "created_at": "2026-08-22T18:05:13.2510889+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1007",
+  "primary_unit": "tohoku:proposition:4.1.2",
+  "related_source_units": [
+    "tohoku:question:injectivity-of-stalk",
+    "tohoku:lemma:4.1.1",
+    "tohoku:proof:lemma-4.1.1",
+    "tohoku:proposition:4.1.2"
+  ],
+  "stacks_label": "injectives-lemma-injective-left-module-stalks",
+  "preserved_corollary_label": "injectives-lemma-injective-module-stalks",
+  "source_reference": "Tohoku, Chapter IV, Section 4.1, Proposition 4.1.2, p. 187, with its setup and proof on pp. 185--187",
+  "mapping": {
+    "status": "PENDING_NO_OVERWRITE_SUCCESSOR",
+    "current_mapping_state": "UNCHANGED_R49",
+    "planned_successor": "tohoku_r50",
+    "planned_decision": "D001016",
+    "planned_disposition": "existing_stronger",
+    "planned_superseded_decision": "D000513",
+    "classification_reason": "The new fixed-point theorem needs left coherence only near x and left Noetherianity only of the single stalk, so it strictly strengthens the global Tohoku proposition while its explicit every-point consequence recovers the source statement.",
+    "nonclaim": "This receipt does not mutate or promote the mapping ledger; the mapping transition belongs to a separately validated no-overwrite r50 transaction."
+  },
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "authority_pdf_part_ii_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+    "layers": {
+      "english_p185": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p185.tex",
+        "bytes": 4183,
+        "sha256": "6D15A561E5FCE6D3071672663DE9969249A5D147F08D6DC61A7CD5F3E43A084D"
+      },
+      "english_p186": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p186.tex",
+        "bytes": 3667,
+        "sha256": "536B9C5C6C23BF8CEB0B783F065B5ED465411BA00EDE11F2B197C7217996013E"
+      },
+      "english_p187": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\en\\p187.tex",
+        "bytes": 3970,
+        "sha256": "62DB4D72074B9241C580B25C4B5FEBC9F449709AB84D7566B7056C222085FFA7"
+      },
+      "french_p185": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\fr\\p185.tex",
+        "bytes": 4302,
+        "sha256": "85D04A11FF28F109C9006A850A3D9176A6483C2CAC56AA9B849058934B65C54A"
+      },
+      "french_p186": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\fr\\p186.tex",
+        "bytes": 3904,
+        "sha256": "CD2E0A570004B73FEC05C8A8045D721811040275B05B39A2F81A7CC6B3EB3F91"
+      },
+      "french_p187": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r15\\src\\fr\\p187.tex",
+        "bytes": 4308,
+        "sha256": "A709B05718C7422DC3EA6C2D9A94699852EE4A1F36B60B28F190049734EABAA0"
+      }
+    },
+    "exact_english_statement": "Suppose that O is a coherent sheaf of left Noetherian rings. Then, for every injective O-module B and every x in X, B(x) is an injective O(x)-module.",
+    "exact_french_scope": "faisceau coherent d'anneaux noetheriens a gauche; O-modules are left modules in the section setup",
+    "semantic_boundary": "The prose 'Finally, we also record:' begins after the Proposition 4.1.2 LayerTarget and belongs to Proposition 4.1.3; it is not part of the D1007 source statement.",
+    "source_repair_required": false,
+    "source_repair_reason": "The corrected French and English layers accurately express the printed left-module and left-Noetherian scope. Existing page-level corrections are unrelated to Proposition 4.1.2, so no append-only source repair was needed."
+  },
+  "convention_audit": {
+    "status": "STRICT_PASS",
+    "path": "user\\Documents\\stacks-ftg\\conventions.tex",
+    "bytes": 1869,
+    "sha256": "B37BDC9188B005994D334222886A9C3D878D270F8BB2F79368F8351D12B50880",
+    "evidence": "Line 51 declares rings commutative in the surrounding Stacks text. D1007 therefore explicitly overrides that convention for its new lemma, whereas the preserved old label remains the commutative corollary."
+  },
+  "artifacts": {
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.tex",
+      "bytes": 139285,
+      "sha256": "FEBCC2562AB17FEC850FD5FD88086DC3EB90017C007F348207ED93479895A283",
+      "new_block_lines": [
+        486,
+        623
+      ],
+      "new_label_line": 487,
+      "preserved_corollary_label_line": 607
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.aux",
+      "bytes": 10440,
+      "sha256": "35EDCF13B22243EF0C6BE422314F78E22E599F7D7EB476E5E34A1C458BB8B233"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.log",
+      "bytes": 35038,
+      "sha256": "A88395A76DD870EEEA728154996211A8200B27FD9239161886D2687CDEEA9EB5"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\injectives.pdf",
+      "bytes": 647072,
+      "sha256": "B157CF029CA765F596C4C7620A7DFB731F5301E5DF41CB63FE20CA151EFFFB25",
+      "pages": 40,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_labels": [
+    "\\newlabel{lemma-injective-left-module-stalks}{{4.2}{6}{}{subsection.4.2}{}}",
+    "\\newlabel{lemma-injective-module-stalks}{{4.3}{8}{}{subsection.4.3}{}}"
+  ],
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "independent_reviews": 2,
+    "checks": [
+      "The theorem explicitly permits associative noncommutative rings with identity, unital restriction maps, and unital left modules; it does not silently inherit the commutative convention.",
+      "The self-contained left Baer argument uses the left ideal L={r in R | rz in M'} and the well-defined left-linear extension on M'+Rz.",
+      "For left generators a_i, the germ-lifting map is (r_i) -> sum r_i a_i, with coefficients on the left; the opposite product order is neither used nor claimed.",
+      "The local left coherence condition makes the image sheaf finitely presented after shrinking, and exactness of stalks identifies its stalk with the chosen left ideal.",
+      "The stalk-Hom comparison is proved only as an isomorphism of abelian groups by comparing kernels from a finite presentation; no nonexistent natural left-R action on internal Hom is asserted.",
+      "Extension by zero and its adjunction use only the left action. Stalkwise monicity embeds j_!F into R, and injectivity of I extends the local germ map to R.",
+      "The preserved commutative lemma follows because coherence is local under restriction and every finite-type submodule of a coherent module is coherent and finitely presented.",
+      "The fixed-point/local-hypothesis form implies the global Tohoku statement at every point and is strictly stronger."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "engine": "MiKTeX pdfTeX 1.40.29",
+    "command": "pdflatex -interaction=nonstopmode -halt-on-error injectives.tex",
+    "final_passes": 2,
+    "label": "Lemma 4.2",
+    "label_page": 6,
+    "preserved_corollary": "Lemma 4.3",
+    "preserved_corollary_page": 8,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0,
+    "out_of_block_overfull_diagnostics": 2,
+    "out_of_block_underfull_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_parser": "pypdf PdfReader(strict=True), every page content stream, text, media box, and rotation inspected",
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 655376,
+    "content_stream_bytes_min": 5148,
+    "content_stream_bytes_max": 26102,
+    "extracted_text_characters": 89518,
+    "uniform_media_box": true,
+    "uniform_rotation": true,
+    "poppler_full_text_interpretation": "PASS",
+    "visual_pages": [
+      6,
+      7,
+      8
+    ],
+    "visual_render_sha256": [
+      "EECF8B9F4A53F30B286E40876DA43CEAE32D23D3DA25B59766C97B5EA51E329E",
+      "16396477620966EC8806A81429A2AAA0A63A9A558AD3C9422645E6856C9175E2",
+      "CC72E34B4FE18F1D8297B7A0A6C305AB9F6E72CDF9E931A0422ECA762846C1E7"
+    ],
+    "visual_result": "The incoming seam, complete Lemma 4.2 statement and proof, displayed left-module maps, page break, proof marker, preserved Lemma 4.3 corollary, outgoing section seam, typography, margins, headers, page numbers, links, and mathematical glyphs render cleanly with no clipping, overlap, crowding, malformed symbols, or bad page breaks."
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "authority": "user reported that the account is suspended after VPN use and that a support ticket is filed.",
+      "effect": "No GitHub inspection, synchronization, push, or publication was attempted. This does not block local D1007 production or the r50 successor."
+    }
+  },
+  "nonclaims": [
+    "No statement is made for right modules, right ideals, or two-sided ideals.",
+    "No right-Noetherian or two-sided-Noetherian hypothesis is substituted for left Noetherianity.",
+    "The internal Hom used in the proof is only a sheaf of abelian groups; no left-module structure is claimed.",
+    "The theorem does not say that stalks preserve injective objects without the stated local coherence and left-Noetherian hypotheses.",
+    "No converse, necessity, arbitrary restriction theorem, functorial choice of extension, scheme-theoretic, quasi-coherent, or separation assertion is made.",
+    "No source repair, mapping promotion, GitHub action, release, or publication is claimed by this receipt."
+  ],
+  "errors": []
+}

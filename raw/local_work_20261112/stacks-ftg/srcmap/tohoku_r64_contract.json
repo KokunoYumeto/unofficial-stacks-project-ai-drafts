@@ -1,0 +1,142 @@
+{
+  "schema": "tohoku-r64-transaction-contract-v1",
+  "contract_id": "D1020-r64-D001044-v1",
+  "purpose": "No-overwrite D1020 mapping successor from sealed tohoku_r63 after exact live-source, PDF, audit, and scanner admission with no bibliography change.",
+  "script": {
+    "path": "srcmap/build_tohoku_r64.py",
+    "bytes": 41390,
+    "sha256": "F1FAAABFB4C633ED87F6E1AC04E409E8B8C16F772DB2EE5A3E68FFBF2DFFA513"
+  },
+  "engine": {
+    "path": "srcmap/build_tohoku_r63.py",
+    "bytes": 40798,
+    "sha256": "1E9A7181BC25D5797794D80EB68D63150AE9C5673EDE666A3A082F358DA46CF4"
+  },
+  "predecessor": {
+    "path": "tohoku_r63/r63-check.json",
+    "bytes": 10116,
+    "sha256": "0785CDEC7D385B8BDA435F37C05A169101C59F402C56B9610DD40683FD6ADE72"
+  },
+  "frozen_prerequisite": {
+    "path": "D1020_CHECK.json",
+    "bytes": 14789,
+    "sha256": "E03C0BDB19BB564CEC782124367D6CD053624551F847F64885E6ECC1A7E4B083"
+  },
+  "bound_inputs": {
+    "audit": {
+      "path": "D1020_CHECK.json",
+      "bytes": 14789,
+      "sha256": "E03C0BDB19BB564CEC782124367D6CD053624551F847F64885E6ECC1A7E4B083"
+    },
+    "candidate": {
+      "path": "tmp/d1020_equivariant_holomorphic_bundles_candidate.tex",
+      "bytes": 4937,
+      "sha256": "CBF6FA0EE8451F0CBC8793EBDE2C2D7377696E92A2ABCBF39B4595734C34CF3E"
+    },
+    "design": {
+      "path": "tmp/d1020_equivariant_holomorphic_bundles_design.json",
+      "bytes": 7209,
+      "sha256": "E83A9DD2C0C3F8D82371330F214BB2804D0B44D8CB3C2CB33C7127568B65AFF6"
+    },
+    "review": {
+      "path": "tmp/d1020_independent_review_r1.json",
+      "bytes": 2630,
+      "sha256": "25DF060091E9E63EF795DD862152877D2D3964510E41B3F13B71B164FBA13567"
+    },
+    "cohomology_tex": {
+      "path": "cohomology.tex",
+      "bytes": 927351,
+      "sha256": "934223B83092E38F7184DE6B739569002BFCBE9F934A5AA9212EBF78AD8424CA"
+    },
+    "bibliography": {
+      "path": "my.bib",
+      "bytes": 220625,
+      "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE"
+    },
+    "cohomology_pdf": {
+      "path": "cohomology.pdf",
+      "bytes": 2020550,
+      "sha256": "4B55BF958522964140AD364EF911F71DEA72455DA709E80176AC707381786C2E"
+    }
+  },
+  "scanner_probe": {
+    "oracle_path": "tmp/d1020_scan_probe_r1",
+    "replay_path": "tmp/d1020_scan_probe_replay_r1",
+    "files": {
+      "cfg.json": {
+        "bytes": 5151,
+        "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+      },
+      "check.json": {
+        "bytes": 83022,
+        "sha256": "CA4BD4D6C25E995CF422795472D17E039CBD260F1D17B16915DF5245B4CB272E"
+      },
+      "stx.csv": {
+        "bytes": 5288663,
+        "sha256": "01C9089B9AF31597C7FD787C37D31C7FCB5A052DED324EDB3648FEEAC083DAEC"
+      },
+      "tcand.csv": {
+        "bytes": 489256,
+        "sha256": "73C6BFD919058171C14E2CDEC94F47DDBFF389636BDA7250BE4B6BBE7BC29357"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "topics.csv": {
+        "bytes": 2453,
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      }
+    },
+    "counts": {
+      "labels": 22106,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1286,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 678,
+      "errors": 0
+    }
+  },
+  "decision": {
+    "decision_id": "D001044",
+    "unit_id": "tohoku:equivalence:equivariant-holomorphic-bundles",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "cohomology-lemma-equivariant-holomorphic-vector-bundles-locally-free-modules",
+    "official_tags": "",
+    "rationale": "The analytic vector-bundle/locally-free-module equivalence and its equivariant restriction are now proved in Stacks. Compatible holomorphic fibrewise-linear G-actions correspond exactly to semilinear G-O_X-module structures on locally free analytic modules, with full faithfulness and essential surjectivity. The adjacent nonequivariant source unit D000615, extension classification, H^1, quotient descent, compactness, finite dimensionality, and GAGA are not mapped here.",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000614"
+  },
+  "projected_counts": {
+    "decisions": 1044,
+    "decided_units": 679,
+    "issues": 32,
+    "active_issues": 0,
+    "existing_equivalent": 387,
+    "new_statement": 4,
+    "remaining_gap_class_dispositions": 22,
+    "source_repairs_appended": 0,
+    "mapping_closures": 1,
+    "changed_map_rows": 1
+  },
+  "target": "tohoku_r64",
+  "transaction": {
+    "source": "tohoku_r63",
+    "stage": ".tohoku-r64-txn",
+    "no_overwrite": true,
+    "atomic_directory_rename": true,
+    "post_promotion_replay": true
+  },
+  "write_boundary": [
+    ".tohoku-r64-txn",
+    "tohoku_r64"
+  ],
+  "external_constraints": {
+    "git": "GitHub availability was restored by direct user update; this bounded local transaction requires no Git or GitHub operation."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schema": "tohoku-stacks-d1031-independent-review-r2-v1",
+  "formalization_id": "D1031",
+  "verdict": "STRICT_PASS",
+  "status": "STRICT_PASS",
+  "errors": [],
+  "input_identities": {
+    "repaired_design": {
+      "path": "tmp/d1031_projective_effacement_duality_design.json",
+      "bytes": 5881,
+      "sha256": "8B1E576D2A777F0FA7A7BA1270D2EEB483F0CFBD16ACE3101BC47E963F18D538"
+    },
+    "unchanged_candidate": {
+      "path": "tmp/d1031_projective_effacement_duality_candidate.tex",
+      "bytes": 2165,
+      "sha256": "4E53BD2ED92771A52F78C3010566CF548975E4F7400A19046339EE1445163D5D"
+    },
+    "prior_review": {
+      "path": "tmp/d1031_independent_review_r1.json",
+      "bytes": 11698,
+      "sha256": "347BAFD8EC782FD1FB6FC347962F1C828DF957B36E80502AFF75102A3E00D013",
+      "verdict": "REQUIRED_EDITS"
+    }
+  },
+  "json_validation": {
+    "status": "PASS",
+    "schema": "tohoku-stacks-d1031-design-v1",
+    "formalization_id": "D1031",
+    "design_status": "LOCAL_PREINSERTION_DESIGN_AWAITING_INDEPENDENT_REVIEW"
+  },
+  "repair_verification": {
+    "status": "PASS_EXACT_REQUIRED_EDIT_SATISFIED",
+    "edit_id": "D1031-R1-E1",
+    "json_pointer": "/projected_mapping/stacks_labels",
+    "r1_required_value": "homology-definition-projective;homology-definition-projective-effacement;homology-lemma-projective-effacement;homology-lemma-characterize-projectives;homology-lemma-projective-effacement-opposite-category",
+    "repaired_value": "homology-definition-projective;homology-definition-projective-effacement;homology-lemma-projective-effacement;homology-lemma-characterize-projectives;homology-lemma-projective-effacement-opposite-category",
+    "values_byte_identical": true,
+    "prior_design_bytes": 5841,
+    "repaired_design_bytes": 5881,
+    "byte_delta": 40,
+    "inserted_label_token": "homology-lemma-characterize-projectives;",
+    "inserted_label_token_utf8_bytes": 40
+  },
+  "projected_mapping": {
+    "status": "PASS_LABEL_TAG_COHERENT",
+    "replace_only": "D000730",
+    "disposition": "existing_equivalent",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": [
+      "homology-definition-projective",
+      "homology-definition-projective-effacement",
+      "homology-lemma-projective-effacement",
+      "homology-lemma-characterize-projectives",
+      "homology-lemma-projective-effacement-opposite-category"
+    ],
+    "official_tags": [
+      "013B",
+      "013C"
+    ],
+    "nonblank_tags_derived_from_projected_labels": [
+      "013B",
+      "013C"
+    ],
+    "unbacked_official_tags": [],
+    "issue_append": null,
+    "source_repair_append": null,
+    "label_evidence": {
+      "homology-definition-projective": {
+        "state": "sealed_live_label",
+        "file": "homology.tex",
+        "line": 10255,
+        "tag": "013B",
+        "text_sha256": "A8C17D30C081D047010AB23113657B3DC35E659E163751A94098D350F249EA85"
+      },
+      "homology-definition-projective-effacement": {
+        "state": "sealed_live_label",
+        "file": "homology.tex",
+        "line": 10271,
+        "tag": "",
+        "text_sha256": "4F6B3F41688E2757E573FF1A6E6B015B4D38236CC7F26C2CC21985ACC4C0BAA5"
+      },
+      "homology-lemma-projective-effacement": {
+        "state": "sealed_live_label",
+        "file": "homology.tex",
+        "line": 10289,
+        "tag": "",
+        "text_sha256": "B52C1372E48DCDCE5AE6F34CC88B482AF81AB7F2DB3FA7FD9B34559483140B8D"
+      },
+      "homology-lemma-characterize-projectives": {
+        "state": "sealed_live_label",
+        "file": "homology.tex",
+        "line": 10318,
+        "tag": "013C",
+        "text_sha256": "C4D7B08BCACF5770085AAAF0CC7D57E3C63C461AA08C29D210B3AD0EFD038A76"
+      },
+      "homology-lemma-projective-effacement-opposite-category": {
+        "state": "candidate_new_label",
+        "candidate_raw_label_occurrences": 1,
+        "candidate_explicit_tag_occurrences": 0,
+        "live_raw_label_occurrences": 0,
+        "projected_tag": ""
+      }
+    }
+  },
+  "revalidated_candidate": {
+    "status": "STRICT_PASS_AS_WRITTEN",
+    "identity_unchanged_from_r1": true,
+    "design_binding_matches_candidate": true,
+    "categorical_duality": "PASS",
+    "a_opposite_grothendieck_hypothesis": "PASS_EXPLICIT_AND_NOT_INFERRED_FROM_A_GROTHENDIECK",
+    "functoriality": "PASS_OPPOSITE_ARROW_FUNCTOR_GIVES_NATURAL_PROJECTIVE_SURJECTIONS",
+    "source_fidelity": "PASS",
+    "labels_and_references": "PASS",
+    "candidate_edit_required": false
+  },
+  "live_preimage_recheck": {
+    "status": "PASS_UNCHANGED",
+    "homology_tex": {
+      "path": "homology.tex",
+      "bytes": 382168,
+      "sha256": "E9BF2AE74E2F0392A05A37405B12C97E590D12ADA1DA23D3B694E4AD782A30AF"
+    },
+    "sealed_scanner_index": {
+      "path": "tohoku_r69/stx.csv",
+      "bytes": 5290391,
+      "sha256": "3083041A38A704D6A8815B21D42AC8E617AFA8D404B289586A820D1C80AE3346"
+    }
+  },
+  "disposition_finding": "STRICT_PASS: after restoring the 013C-bearing projective-characterization label, the exact opposite-category lemma and retained live projective statements justify existing_equivalent with coherent official-tag evidence.",
+  "remaining_required_edits": [],
+  "issue_append_required": false,
+  "source_repair_append_required": false,
+  "review_write_scope": [
+    "tmp/d1031_independent_review_r2.json"
+  ]
+}

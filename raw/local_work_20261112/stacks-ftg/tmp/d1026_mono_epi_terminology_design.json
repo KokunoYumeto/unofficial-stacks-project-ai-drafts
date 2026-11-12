@@ -1,0 +1,163 @@
+{
+  "schema": "tohoku-stacks-d1026-design-v1",
+  "formalization_id": "D1026",
+  "status": "STRICT_PREINSERTION_PASS",
+  "scope": {
+    "operation": "replace_existing_history_block_only",
+    "live_target": "categories.tex",
+    "live_write_performed": false,
+    "source_repair_required": false,
+    "issue_append_required": false
+  },
+  "selection": {
+    "unit": "tohoku:section:1.1:p3",
+    "printed_page": 122,
+    "source_locator": "sem/r18/nodes.csv:863",
+    "predecessor_decision": "D000072",
+    "predecessor_disposition": "extend_existing",
+    "predecessor_review_state": "reviewed_gap",
+    "predecessor_dossier": "tohoku_r67"
+  },
+  "source_claim": {
+    "mathematical_content": [
+      "postcomposition by u is injective on every Hom(C,A) exactly when u is a monomorphism",
+      "precomposition by u is injective on every Hom(B,C) exactly when u is an epimorphism"
+    ],
+    "terminology": [
+      "the source also calls a monomorphism injective",
+      "the source also calls an epimorphism surjective",
+      "the source calls a morphism which is both a monomorphism and an epimorphism bijective"
+    ]
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "printed_page": 122,
+      "bytes": 7305283,
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    "semantic_inventory": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/sem/r18/nodes.csv",
+      "file_bytes": 585012,
+      "file_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+      "physical_line": 863,
+      "row_with_lf_bytes": 821,
+      "row_with_lf_sha256": "DF349B5BAA56DD4A1B90D533B86731AE6D613A5945E671AEB0412486A4F9C907"
+    },
+    "occurrence_inventory": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/sem/r18/occ.csv",
+      "file_bytes": 515084,
+      "file_sha256": "54E545121F4D108E5C88B7039C39E3814F71F03332592C3F3965BD49B7FACED5",
+      "occurrence_id": "tohoku:occ:p122:o017",
+      "physical_line": 73,
+      "row_with_lf_bytes": 475,
+      "row_with_lf_sha256": "EF3D4DFF75669E5905104E831CF71707A027AC423999311A50FA03A99517056A",
+      "diplomatic_segment_sha256": "28BFAA88F9660E88A2969582B2EC5FE955A426DB800E5A28E44F5ADD062C3882",
+      "corrected_french_segment_sha256": "28BFAA88F9660E88A2969582B2EC5FE955A426DB800E5A28E44F5ADD062C3882",
+      "english_segment_sha256": "3A3FDE59ADD151C4D0423448EA828C35721E58335FAA5B3503F34B7D56858A19",
+      "parity_state": "PASS"
+    }
+  },
+  "predecessor_evidence": {
+    "mapping_file": {
+      "path": "tohoku_r67/map.csv",
+      "file_bytes": 487180,
+      "file_sha256": "7D99ADBD373B8D8D251BAA4D7E8A258AE50358F5FEBEF147D07B13B6DE63750F",
+      "physical_line": 863,
+      "row_with_lf_bytes": 502,
+      "row_with_lf_sha256": "CAA2A54FC4D3D2721457B400F0B76C90224C47FB1007630AB92273361C13393E"
+    },
+    "decision_file": {
+      "path": "tohoku_r67/dec.csv",
+      "file_bytes": 389259,
+      "file_sha256": "F96B147AD9EBDBF386B41A4400CA132967003BF976E75311B81DA9CA3D77107E",
+      "physical_line": 73,
+      "row_with_lf_bytes": 289,
+      "row_with_lf_sha256": "E801854695200F22769010980168AC052B473C435D3B42AA1B2C7767D66A25FA"
+    }
+  },
+  "live_coverage": {
+    "path": "categories.tex",
+    "bytes": 377883,
+    "sha256": "985DF3DBDABAC4FDF1CD9378F41406B6620B577469F403EAE7C7323D459589C3",
+    "definition_block": {
+      "physical_lines": "1237-1249",
+      "crlf_bytes": 529,
+      "crlf_sha256": "05461E45D25B2362FDC26DB6E157B385472E69DC27037F4274D364EE65B034D9",
+      "lf_normalized_bytes": 516,
+      "lf_normalized_sha256": "8DF87F3E05060B6B4590C9F46F6055FC6A7CE8853BE8427C0C38D29A1708972B"
+    },
+    "replacement_target": {
+      "description": "the existing history block inside lemma-mono-epi-composition",
+      "physical_lines": "1256-1260",
+      "expected_exact_match_count": 1,
+      "crlf_bytes": 238,
+      "crlf_sha256": "5866E080D984864265A10F9052DD0AAED815A53C1280962BFD18CE0C0C39AA3B",
+      "lf_normalized_bytes": 233,
+      "lf_normalized_sha256": "4901F1920C6F39AEB549E6FF08A81911D114AAC6703BF6FE7C99F02F8A63DD7C"
+    },
+    "coverage_result": "The definition gives the exact mono/epi cancellation conditions. The history already records the source word bijective, but it does not yet record injective and surjective as the source's arbitrary-category synonyms."
+  },
+  "label_existence_checks": [
+    {
+      "raw_label": "definition-mono-epi",
+      "physical_line": 1238,
+      "count": 1,
+      "role": "projected mapping definition"
+    },
+    {
+      "raw_label": "lemma-mono-epi-composition",
+      "physical_line": 1252,
+      "count": 1,
+      "role": "projected mapping label containing the replacement history"
+    },
+    {
+      "raw_label": "example-mono-epi-not-isomorphism",
+      "physical_line": 1316,
+      "count": 1,
+      "role": "candidate reference proving mono plus epi need not imply isomorphism"
+    },
+    {
+      "raw_label": "example-mono-epi-sets",
+      "physical_line": 1323,
+      "count": 1,
+      "role": "candidate reference limiting injective and surjective map language to Sets"
+    }
+  ],
+  "candidate": {
+    "path": "tmp/d1026_mono_epi_terminology_candidate.tex",
+    "kind": "replacement_history_block_only",
+    "bytes": 608,
+    "sha256": "6863D0CC63ECC1019D3169DBBCE6770DBAB72D65E836045A1A68A6E0E73AC5EA",
+    "line_count": 11,
+    "newline": "LF",
+    "placement": "replace categories.tex physical lines 1256-1260 only after rechecking the exact replacement-target identity",
+    "mathematical_review": "STRICT_PASS",
+    "overclaim_guards": [
+      "do not identify monomorphisms with injective underlying-set maps outside a concrete category such as Sets",
+      "do not identify epimorphisms with surjective underlying-set maps outside a concrete category such as Sets",
+      "do not claim that a morphism which is both mono and epi is an isomorphism",
+      "record the source terminology without adopting it as general Stacks terminology"
+    ]
+  },
+  "projected_mapping": {
+    "expected_decision_if_D1025_consumes_D001049": "D001050",
+    "replace_only": "D000072",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "categories-definition-mono-epi;categories-lemma-mono-epi-composition",
+    "official_tags": "003B",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "issue_append": null,
+    "source_repair_append": null
+  },
+  "pre_insertion_gates": {
+    "source_identity": "PASS",
+    "predecessor_identity": "PASS",
+    "live_target_identity": "PASS",
+    "candidate_math": "PASS",
+    "referenced_example_labels_exist_exactly_once": "PASS",
+    "scope_and_overclaim_review": "PASS",
+    "live_write_authorized_in_this_task": false
+  },
+  "write_gate": "Do not edit categories.tex in this task. Before a later insertion, require the exact live file and replacement-target identities above, replace only the existing history block, then build, scan, and inspect the rendered affected page."
+}

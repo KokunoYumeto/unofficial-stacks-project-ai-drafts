@@ -1,0 +1,42 @@
+{
+  "schema": "tohoku-r61-transaction-contract-v1",
+  "contract_id": "D1017-r61-D001041-I000032-v1",
+  "purpose": "No-overwrite mapping successor for the corrected p.185 Hom scalar-ring unit, with independent r61-namespaced scanner oracle and deterministic replay.",
+  "script": {
+    "path": "srcmap/build_tohoku_r61.py",
+    "bytes": 40313,
+    "sha256": "37D3CBB4C5E940F98F57F7AD9DF93CBCDC54F0E432E35EA18331FB05D1DD78EB"
+  },
+  "predecessor": {
+    "path": "tohoku_r60/r60-check.json",
+    "bytes": 8055,
+    "sha256": "88952DD37BD81F11DF463BA351C779C68EEFD7270CA3D0AE94420A784C7446F0"
+  },
+  "frozen_prerequisite": {
+    "path": "D1017_CHECK.json",
+    "bytes": 14707,
+    "sha256": "28978CA9E62B68FB66934649F023E75F2B17F79EF0C1BD43411D5DA0BBBFCAD8"
+  },
+  "target": "tohoku_r61",
+  "transaction": {
+    "target_overwrite_allowed": false,
+    "stage": ".tohoku-r61-txn",
+    "promotion": "same-parent atomic directory rename after full staged validation",
+    "post_promotion_replay_required": true
+  },
+  "mapping_delta": {
+    "decision_id": "D001041",
+    "issue_id": "I000032",
+    "unit_id": "tohoku:definition:hom-o-and-local-hom",
+    "supersedes": "D000404",
+    "disposition": "existing_equivalent",
+    "changed_map_rows": 1,
+    "remaining_gap_class_dispositions": 25
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "effect": "Continue local production and QA; defer GitHub-only actions; this is not a local-work blocker."
+    }
+  }
+}

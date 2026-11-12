@@ -1,0 +1,422 @@
+\section{Applications of the comparison theorems}
+\label{section-gaga-applications}
+
+\subsection{Conjugation and Betti numbers}
+\label{subsection-gaga-betti-numbers}
+
+Let $\sigma\in\mathop{\rm Aut}(\mathbf C)$. For a scheme $X$ over
+$\mathbf C$, write
+$$
+X^\sigma=X\times_{\mathop{\rm Spec}(\mathbf C),\sigma}
+\mathop{\rm Spec}(\mathbf C).
+$$
+
+\begin{proposition}
+\label{proposition-conjugate-smooth-projective-betti-numbers}
+\begin{reference}
+\cite[\S 4, no. 18, Proposition 12]{GAGA}
+\end{reference}
+Let $X$ be a smooth projective algebraic variety over $\mathbf C$. Then $X^{\rm an}$
+and $(X^\sigma)^{\rm an}$ have the same Betti numbers.
+\end{proposition}
+
+\begin{proof}
+For $p,q\geq 0$, flat base change gives a $\sigma$-semilinear
+isomorphism
+$$
+H^q(X,\Omega^p_{X/\mathbf C})
+\longrightarrow
+H^q(X^\sigma,\Omega^p_{X^\sigma/\mathbf C});
+$$
+see Cohomology of Schemes, Lemma
+\ref{coherent-lemma-flat-base-change-cohomology}. In particular, the two
+vector spaces have the same dimension. For a smooth variety, local
+coordinates give the canonical comparison
+$$
+(\Omega^p_{X/\mathbf C})^{\rm an}
+\cong \Omega^p_{X^{\rm an}},
+$$
+where the module on the right is the module of holomorphic $p$-forms. Thus
+the cohomology comparison theorem \ref{theorem-gaga-cohomology} identifies
+these dimensions with
+$$
+h^{p,q}(X^{\rm an})
+\quad\hbox{and}\quad
+h^{p,q}((X^\sigma)^{\rm an}),
+$$
+respectively, where
+$$
+h^{p,q}(M)=\dim_{\mathbf C}H^q(M,\Omega^p_M).
+$$
+Finally, a smooth projective analytification is compact K\"ahler. Hodge
+decomposition (using the Dolbeault resolution and the K\"ahler identities),
+which is an external analytic input here, gives
+$$
+b_n(X^{\rm an})=\sum_{p+q=n}h^{p,q}(X^{\rm an})
+$$
+and the analogous formula for $X^\sigma$. The assertion follows.
+\end{proof}
+
+\begin{proposition}[Corollary]
+\label{corollary-number-field-embeddings-betti-numbers}
+\begin{reference}
+\cite[\S 4, no. 18, corollary to Proposition 12]{GAGA}
+\end{reference}
+Let $V$ be a smooth projective variety over a field $K$ algebraic over
+$\mathbf Q$. The Betti
+numbers of $V\times_{K,\iota}\mathbf C$ are independent of the embedding
+$\iota:K\longrightarrow\mathbf C$.
+\end{proposition}
+
+\begin{proof}
+The standard extension theorem for field embeddings shows that two
+embeddings of $K$ in $\mathbf C$ differ by an automorphism of $\mathbf C$.
+Apply Proposition
+\ref{proposition-conjugate-smooth-projective-betti-numbers}.
+\end{proof}
+
+\begin{remark}[Historical scope]
+\label{remark-conjugate-varieties-historical}
+Serre observed in \cite[\S 4, no. 18]{GAGA} that a conjugate pair need not be
+analytically isomorphic (elliptic curves already show this), and asked there
+whether such a pair must be homeomorphic. This historical question is not an
+input to Proposition
+\ref{proposition-conjugate-smooth-projective-betti-numbers}.
+\end{remark}
+
+
+\subsection{Chow's theorem and algebraicity}
+\label{subsection-gaga-chow}
+
+\begin{theorem}[Chow]
+\label{theorem-chow-closed-analytic-projective}
+\begin{reference}
+\cite[\S 4, no. 19, Proposition 13]{GAGA}
+\end{reference}
+Let $X$ be a projective algebraic variety over $\mathbf C$. Every closed reduced
+analytic subspace $Y\subset X^{\rm an}$ is the analytification of a unique
+closed reduced subscheme of $X$.
+\end{theorem}
+
+\begin{proof}
+The vanishing ideal $\mathcal J_Y\subset\mathcal O_{X^{\rm an}}$ is
+coherent by Theorem \ref{theorem-oka-cartan-coherence}. By Theorem
+\ref{theorem-gaga-essential-surjectivity}, there is a coherent
+$\mathcal O_X$-module $\mathcal F$ with
+$\mathcal F^{\rm an}\cong\mathcal J_Y$. Compose this isomorphism with the
+inclusion into $\mathcal O_{X^{\rm an}}$. The full-faithfulness theorem
+\ref{theorem-gaga-fully-faithful} algebraizes the composite to an
+$\mathcal O_X$-linear map
+$$
+u:\mathcal F\longrightarrow\mathcal O_X.
+$$
+Its image $\mathcal I$ is a coherent ideal. Exactness and faithfulness of
+analytification identify $\mathcal I^{\rm an}$ with $\mathcal J_Y$. Hence
+the ideal $\mathcal I$ is radical. Indeed, at every closed point
+$x\in X(\mathbf C)$, if $a^m\in\mathcal I_x$, then the image of $a$ in
+$\mathcal O_{X^{\rm an},x}$ belongs to the radical ideal
+$\mathcal J_{Y,x}=\mathcal I_x\mathcal O_{X^{\rm an},x}$. Faithful
+flatness in Theorem \ref{theorem-analytification-local-faithfully-flat}
+contracts this ideal back to $\mathcal I_x$. Since $X$ is Noetherian and
+Jacobson, radicality at all closed stalks implies that $\mathcal I$ is
+radical. The closed reduced subscheme defined by $\mathcal I$ therefore has
+analytic ideal $\mathcal J_Y$, and hence has analytification $Y$.
+
+If two reduced closed subschemes have analytification $Y$, their ideal
+sheaves have equal extensions at every analytic local ring. Faithful
+flatness contracts these extensions to equal stalks at every closed point;
+coherence and the Jacobson property then identify the ideal sheaves. This
+proves uniqueness.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-compact-analytic-subspace-algebraic}
+\begin{reference}
+\cite[\S 4, no. 19, Proposition 14]{GAGA}
+\end{reference}
+Let $X$ be an algebraic variety over $\mathbf C$. Every compact
+closed reduced analytic subspace $Y\subset X^{\rm an}$ is algebraic: there
+is a unique closed reduced subscheme $Z\subset X$ with
+$Z^{\rm an}=Y$.
+\end{proposition}
+
+\begin{proof}
+Nagata compactification and Chow's lemma (More on Flatness, Theorem
+\ref{flat-theorem-nagata} and Limits of Schemes, Lemma
+\ref{limits-lemma-chow-finite-type}) give an open immersion
+$X\subset\overline X$ with $\overline X$ proper and a proper surjection
+$p:X'\to\overline X$ together with an immersion
+$X'\to\mathbf P^n_{\mathbf C}$. Replacing $X'$ by its reduction preserves
+these properties. The resulting variety $X'$ is proper over $\mathbf C$,
+so its immersion is closed and $X'$ is projective. Since $Y$ is compact,
+it is closed in the Hausdorff space $\overline X^{\rm an}$. Its analytic structure on
+$X^{\rm an}$ glues with the empty closed analytic subspace on
+$\overline X^{\rm an}\setminus Y$, and therefore makes $Y$ a closed reduced
+analytic subspace of $\overline X^{\rm an}$.
+
+The reduced inverse image
+$$
+Y'=\left((X')^{\rm an}\times_{\overline X^{\rm an}}Y\right)_{\rm red}
+$$
+is a closed reduced analytic subspace of $(X')^{\rm an}$. Theorem
+\ref{theorem-chow-closed-analytic-projective} algebraizes it to a closed
+reduced subscheme $Z'\subset X'$. Let $Z\subset\overline X$ be the reduced
+Zariski closure of $p(Z')$. The analytic map sends $(Z')^{\rm an}=Y'$ onto
+$Y$. Since $Y$ is closed, Proposition \ref{proposition-image-closure}
+shows that the classical point set of $Z^{\rm an}$ is exactly $Y$.
+Reduced closed analytic subspaces are determined by their underlying
+analytic sets, so $Z^{\rm an}=Y$. All closed points of $Z$ lie in $X$;
+the Jacobson property therefore shows that $Z\subset X$.
+
+For uniqueness, if $Z_1,Z_2\subset X$ have analytification $Y$, their ideal
+stalks have equal extensions to every $\mathcal O_{X^{\rm an},x}$.
+Faithful flatness in Theorem
+\ref{theorem-analytification-local-faithfully-flat} contracts them to equal
+stalks at every closed point. Coherence and the Jacobson property give
+$Z_1=Z_2$.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-holomorphic-map-from-proper-is-regular}
+\begin{reference}
+\cite[\S 4, no. 19, Proposition 15]{GAGA}
+\end{reference}
+Let $X$ be a proper algebraic variety over $\mathbf C$ and let $Y$ be an
+algebraic variety over $\mathbf C$. Every holomorphic map
+$$
+f:X^{\rm an}\longrightarrow Y^{\rm an}
+$$
+is the analytification of a unique morphism $X\to Y$.
+\end{proposition}
+
+\begin{proof}
+The graph $\Gamma_f$ is a compact closed analytic subspace of
+$(X\times_{\mathbf C}Y)^{\rm an}$. Proposition
+\ref{proposition-compact-analytic-subspace-algebraic} makes it the
+analytification of a closed reduced subvariety of $X\times_{\mathbf C}Y$.
+Proposition \ref{proposition-algebraic-graph-holomorphic-regular} therefore
+defines the required algebraic map. For uniqueness, two candidate
+maps have closed reduced graphs with the same classical points; the graphs,
+and hence the maps, are equal.
+\end{proof}
+
+\begin{proposition}[Corollary]
+\label{corollary-compact-analytic-space-unique-algebraization}
+\begin{reference}
+\cite[\S 4, no. 19, corollary to Proposition 15]{GAGA}
+\end{reference}
+A compact reduced analytic space admits at most one algebraic-variety
+structure: any analytic isomorphism between two algebraizations is the
+analytification of a unique algebraic isomorphism.
+\end{proposition}
+
+\begin{proof}
+Every algebraization is proper by Proposition
+\ref{proposition-proper-if-and-only-if-compact-analytification}. Apply
+Proposition \ref{proposition-holomorphic-map-from-proper-is-regular} to the
+analytic isomorphism and to its inverse.
+\end{proof}
+
+
+\subsection{Algebraic and analytic principal bundles}
+\label{subsection-gaga-principal-bundles}
+
+\begin{definition}
+\label{definition-principal-bundle-analytification-map}
+\begin{reference}
+\cite[\S 4, no. 20]{GAGA}
+\end{reference}
+Let $G$ be an algebraic group over $\mathbf C$ and let $X$ be an algebraic
+variety over $\mathbf C$. Write
+$$
+H^1_{\rm Zar}(X,G)
+$$
+for the pointed set of isomorphism classes of Zariski locally trivial
+principal $G$-bundles and
+$$
+H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+for the pointed set of isomorphism classes of holomorphically locally
+trivial principal $G^{\rm an}$-bundles. Analytification defines a map
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an}).
+$$
+This is the torsor interpretation of first cohomology from Cohomology on
+Sites, Section \ref{sites-cohomology-section-h1-torsors}.
+\end{definition}
+
+\begin{proposition}
+\label{proposition-principal-bundle-analytification-injective}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 16]{GAGA}
+\end{reference}
+If $X$ is a proper algebraic variety over $\mathbf C$, then $\varepsilon_G$
+is injective. More
+precisely, every analytic isomorphism between the analytifications of two
+algebraic principal $G$-bundles is algebraic.
+\end{proposition}
+
+\begin{proof}
+For two algebraic principal $G$-bundles $P$ and $P'$ on $X$, the associated
+bundle
+$$
+\mathop{\rm Isom}\nolimits_G(P,P')
+$$
+is an algebraic fibre bundle over $X$, and its sections are precisely the
+$G$-equivariant isomorphisms $P\to P'$. An analytic isomorphism gives a
+holomorphic section of its analytification. Proposition
+\ref{proposition-holomorphic-map-from-proper-is-regular} makes the section
+algebraic.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-additive-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 17]{GAGA}
+\end{reference}
+If $X$ is a projective algebraic variety over $\mathbf C$ and
+$G=\mathbf G_a$, then
+$\varepsilon_G$ is bijective.
+\end{proposition}
+
+\begin{proof}
+Principal $\mathbf G_a$-bundles are torsors under the additive sheaf
+$\mathcal O_X$, and hence are classified by $H^1(X,\mathcal O_X)$; see
+Cohomology, Lemma \ref{cohomology-lemma-torsors-h1}. The analytic statement
+uses $H^1(X^{\rm an},\mathcal O_{X^{\rm an}})$. The comparison isomorphism
+of Theorem \ref{theorem-gaga-cohomology} identifies these groups.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-general-linear-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 18]{GAGA}
+\end{reference}
+If $X$ is a projective algebraic variety over $\mathbf C$ and
+$G=\mathop{\rm GL}_n$, then $\varepsilon_G$ is bijective.
+\end{proposition}
+
+\begin{proof}
+Principal $\mathop{\rm GL}_n$-bundles are equivalent to rank $n$ vector
+bundles. Let $\mathcal E$ be the locally free coherent analytic module
+associated with an analytic vector bundle. By Theorem
+\ref{theorem-gaga-essential-surjectivity}, it is isomorphic to
+$\mathcal F^{\rm an}$ for a coherent $\mathcal O_X$-module $\mathcal F$.
+For every closed point $x\in X(\mathbf C)$, the faithfully flat local map
+of Theorem \ref{theorem-analytification-local-faithfully-flat} makes
+$$
+\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\rm an},x}
+$$
+free of rank $n$. Faithfully flat descent for finite projectivity (Algebra,
+Proposition \ref{algebra-proposition-ffdescent-finite-projectivity}) shows
+that $\mathcal F_x$ is finite projective. Algebra, Theorem
+\ref{algebra-theorem-projective-free-over-local-ring} makes it free, and
+faithful base change fixes its rank as $n$. Since $X$ is Jacobson and
+$\mathcal F$ is coherent, local freeness at every closed point makes
+$\mathcal F$ locally free of rank $n$ everywhere. Its frame bundle
+algebraizes the given analytic principal bundle. Injectivity is Proposition
+\ref{proposition-principal-bundle-analytification-injective}.
+\end{proof}
+
+\begin{remark}[Line bundles and the historical formulation]
+\label{remark-line-bundles-gaga}
+For $n=1$, Proposition
+\ref{proposition-general-linear-principal-bundles-gaga} is the isomorphism
+$$
+\mathop{\rm Pic}(X)\longrightarrow\mathop{\rm Pic}(X^{\rm an}).
+$$
+Serre's remarks after Proposition 18 in \cite[\S 4, no. 20]{GAGA} express
+this in terms of divisor classes on a normal variety and record the earlier
+smooth result of Kodaira--Spencer. Those historical attributions are not
+additional hypotheses here. Serre also notes that Proposition 18 extends
+Kodaira's Theorems 7 and 8 to arbitrary projective varieties, possibly with
+singularities, without pursuing those applications.
+\end{remark}
+
+\begin{proposition}[Algebraizing a reduction of structure group]
+\label{proposition-algebraize-reduction-structure-group}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 19]{GAGA}
+\end{reference}
+Let $H\subset G$ be algebraic groups over $\mathbf C$. Assume that the
+quotient $G/H$ exists as an algebraic variety and that
+$G\to G/H$ has a rational section. Let $X$ be a proper algebraic variety
+over $\mathbf C$ and let $P$ be an analytic principal $H^{\rm an}$-bundle
+on $X^{\rm an}$. Then
+$P$ is algebraizable if and only if the extended bundle
+$$
+P\times^H G
+$$
+is algebraizable.
+\end{proposition}
+
+\begin{proof}
+A rational section over a nonempty open of $G/H$, and the translates of
+its domain by $G$, show that $G\to G/H$ is Zariski locally trivial as an
+$H$-bundle.
+Necessity is therefore immediate by extension of structure group.
+
+Conversely, choose an algebraic principal $G$-bundle $Q$ and an analytic
+isomorphism $Q^{\rm an}\cong P\times^H G$. Form the algebraic associated
+bundle
+$$
+E=Q\times^G(G/H).
+$$
+The analytic reduction $P$ determines a holomorphic section
+$s:X^{\rm an}\to E^{\rm an}$. By Proposition
+\ref{proposition-holomorphic-map-from-proper-is-regular}, this section is
+algebraic. Pulling the principal $H$-bundle $Q\to E$ back along $s$ gives an
+algebraic principal $H$-bundle whose analytification is $P$.
+\end{proof}
+
+\begin{definition}
+\label{definition-rational-section-condition}
+\begin{reference}
+\cite[\S 4, no. 20, condition (R)]{GAGA}
+\end{reference}
+A closed algebraic subgroup $G\subset\mathop{\rm GL}_n$ satisfies
+\textup{(R)} if the quotient exists and the projection
+$$
+\mathop{\rm GL}_n/G\longleftarrow\mathop{\rm GL}_n
+$$
+has a rational section.
+\end{definition}
+
+\begin{proposition}
+\label{proposition-rational-section-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 20]{GAGA}
+\end{reference}
+Let $G\subset\mathop{\rm GL}_n$ satisfy \textup{(R)}. For every projective
+algebraic variety $X$ over $\mathbf C$, the map
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+is bijective.
+\end{proposition}
+
+\begin{proof}
+Given an analytic principal $G$-bundle $P$, Proposition
+\ref{proposition-general-linear-principal-bundles-gaga} algebraizes
+$P\times^G\mathop{\rm GL}_n$. Proposition
+\ref{proposition-algebraize-reduction-structure-group}, with
+$H=G$ and the ambient group $\mathop{\rm GL}_n$, then algebraizes $P$.
+Injectivity is Proposition
+\ref{proposition-principal-bundle-analytification-injective}.
+\end{proof}
+
+\begin{remark}[Examples and historical boundary]
+\label{remark-rational-section-condition-examples}
+Condition \textup{(R)} holds for solvable subgroups by Rosenlicht's theorem,
+for $\mathop{\rm SL}_n$ via the determinant section, and for
+$\mathop{\rm Sp}_{2m}$ by rational symplectic Gram--Schmidt. Serre also
+records in \cite[\S 4, no. 20]{GAGA} the then-open simply connected
+semisimple conjecture and the failure of \textup{(R)} for the unimodular
+orthogonal group in dimensions at least $3$; in the latter case he leaves
+bijectivity of $\varepsilon_G$ open. These historical observations are not
+used in Proposition
+\ref{proposition-rational-section-principal-bundles-gaga}.
+\end{remark}

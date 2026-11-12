@@ -1,0 +1,78 @@
+\begin{lemma}[Centre actions on Ext for left modules]
+\label{lemma-ext-center-actions-left-modules}
+\begin{reference}
+\cite[Chapter IV, \S 4.2, p. 188]{Tohoku}
+\end{reference}
+\begin{history}
+The printed source makes the global Ext groups modules over
+$Z(\Gamma(X,\mathcal A))$. For a sheaf of noncommutative rings, a globally
+central section need not remain central after restriction, so that action is
+not defined in general. The canonical scalar ring is instead
+$\Gamma(X,\mathcal Z_{\mathcal A})$, where
+$\mathcal Z_{\mathcal A}$ is the sheaf-theoretic centre from Modules, Lemma
+\ref{modules-lemma-sheaf-hom-left-modules}. The two rings agree when
+$\mathcal A$ is commutative.
+\end{history}
+Let $X$ be a topological space, let $\mathcal A$ be a sheaf of not
+necessarily commutative rings with $1$, and let $\mathcal F,\mathcal G$ be
+sheaves of unital left $\mathcal A$-modules. Write
+$\mathcal Z_{\mathcal A}$ for the sheaf-theoretic centre of $\mathcal A$.
+For every $p\geq0$, the global Ext group
+\[
+\Ext^p_{\mathcal A}(X;\mathcal F,\mathcal G)
+=
+\Ext^p_{\textit{Mod}(\mathcal A)}(\mathcal F,\mathcal G)
+\]
+is canonically a $\Gamma(X,\mathcal Z_{\mathcal A})$-module, and the
+right-derived sheaf
+\[
+\SheafExt^p_{\mathcal A}(\mathcal F,\mathcal G)
+=
+R^p\SheafHom_{\mathcal A}(\mathcal F,-)(\mathcal G)
+\]
+is canonically a sheaf of $\mathcal Z_{\mathcal A}$-modules. These actions
+are functorial in both module arguments and agree in degree zero with the
+actions of Modules, Lemma
+\ref{modules-lemma-sheaf-hom-left-modules}.
+
+If the canonical inclusion
+\[
+\Gamma(X,\mathcal Z_{\mathcal A})
+\longrightarrow Z(\Gamma(X,\mathcal A))
+\]
+is an equality---in particular, if $\mathcal A$ is commutative---then the
+global Ext groups are modules over $Z(\Gamma(X,\mathcal A))$.
+\end{lemma}
+
+\begin{proof}
+The category of sheaves of unital left $\mathcal A$-modules is abelian and
+has enough injectives; the proof of Injectives, Lemma
+\ref{injectives-lemma-sheaves-modules-space} does not use commutativity.
+Choose an injective resolution
+\[
+\mathcal G[0]\longrightarrow\mathcal I^\bullet.
+\]
+For every $q$, Modules, Lemma
+\ref{modules-lemma-sheaf-hom-left-modules} makes
+$\SheafHom_{\mathcal A}(\mathcal F,\mathcal I^q)$ a sheaf of
+$\mathcal Z_{\mathcal A}$-modules. Since the differentials of
+$\mathcal I^\bullet$ are $\mathcal A$-linear, the induced differentials on
+these Hom sheaves are $\mathcal Z_{\mathcal A}$-linear. Their cohomology
+sheaves are therefore $\mathcal Z_{\mathcal A}$-modules, and they compute
+the displayed right-derived sheaves.
+
+Taking global sections gives a complex
+\[
+\Hom_{\mathcal A}(\mathcal F,\mathcal I^\bullet)
+=
+\Gamma\bigl(X,
+\SheafHom_{\mathcal A}(\mathcal F,\mathcal I^\bullet)\bigr)
+\]
+of $\Gamma(X,\mathcal Z_{\mathcal A})$-modules. Its degree-$p$ cohomology is
+$\Ext^p_{\textit{Mod}(\mathcal A)}(\mathcal F,\mathcal G)$, which gives the
+global action. The construction is natural in $\mathcal G$ by functoriality
+of derived functors, and natural in $\mathcal F$ by precomposition. Degree
+zero is exactly the action constructed in the cited Modules lemma. The final
+assertion follows by transporting scalars through the displayed equality.
+\end{proof}
+

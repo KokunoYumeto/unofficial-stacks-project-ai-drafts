@@ -1,0 +1,157 @@
+{
+  "schema": "tohoku-stacks-d1018-mapping-design-v1",
+  "formalization_id": "D1018",
+  "status": "STRICT_DESIGN_PASS_MAPPING_ONLY",
+  "created_utc": "2026-08-24T01:48:49.604Z",
+  "selection": {
+    "unit_id": "tohoku:definition:sheaf-hom-o",
+    "printed_page": 185,
+    "source_locator": "sem/r18/nodes.csv:351",
+    "predecessor_dossier": "tohoku_r61",
+    "predecessor_decision": "D000407",
+    "predecessor_disposition": "existing_weaker",
+    "predecessor_map_physical_line": 351,
+    "predecessor_map_row": {
+      "bytes": 429,
+      "sha256": "E03DD2209A9CA224E5D3F6F6FB2193D60F01D231336AE6F3301FA45B65465CC3"
+    }
+  },
+  "source_claim": {
+    "scope": "For arbitrary subsets V contained in U, local Hom groups have natural restriction maps; on open subsets U these groups form the sheaf denoted bold Hom_O(A,B).",
+    "corrected_layer_note": "The already admitted TOH-P185-COR-001 changes only the printed comma in Hom_O(V,A,B) to the defining semicolon in corrected French and English. D1018 requires no new source repair.",
+    "layer_segments": {
+      "diplomatic_french": {
+        "bytes": 341,
+        "sha256": "96F198E48170B81CDAF6F35BFF3DD965D55105F43FD55F3CDFB5113F5C2CAAD8"
+      },
+      "corrected_french": {
+        "bytes": 341,
+        "sha256": "C2F07807B17FFB7D3F87E95AA18BA40ABD9F52767E36A346C16EF8DD9705F7AE"
+      },
+      "english": {
+        "bytes": 319,
+        "sha256": "7028A96F2FCA91F8A1299EA4673C773AB0C525C1356C8FFC3A6B5A9200767EB7"
+      }
+    },
+    "semantic_row": {
+      "generation": "sem/r21",
+      "physical_line": 351,
+      "bytes": 704,
+      "sha256": "D57BC824E2828791245220CAD081447037640BAF36200495B7F4B2863234B15C",
+      "byte_identical_to_sem_r18": true
+    }
+  },
+  "source_authority": {
+    "official_part_ii": {
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "p185_successor_receipt": {
+      "path": "production/p185_fix2/check.json",
+      "bytes": 5291,
+      "sha256": "E54AE998A9D8AB863652521E329731789727DD064B48E6A52CAB83584C802EEA"
+    },
+    "reader_receipt": {
+      "path": "build/v068c3r20/build.json",
+      "bytes": 22216,
+      "sha256": "BA5D7BFDEA8F733CBA65703C5DA017E26A3FEB417297A975EBCAEFEA41D2BEA1"
+    },
+    "qa_receipt": {
+      "path": "qa/v68r42/check.json",
+      "bytes": 5375,
+      "sha256": "C3D039B399FDA3A2232F07A0D33ABB3E07ADEA431182FCEC26F3C8A9DFD703D0"
+    },
+    "semantic_manifest": {
+      "path": "sem/r21/manifest.json",
+      "bytes": 32119,
+      "sha256": "38275B0B2BB116467B3848F2E7EB1740F3692551E531E4130E72279F47F98C59"
+    },
+    "semantic_validation": {
+      "path": "sem/r21/validation.json",
+      "bytes": 9395,
+      "sha256": "D15C85751526EA144BFA02AFBB580540C93620C7AC12A6656D1C895EEA5A8BDB"
+    }
+  },
+  "stacks_evidence": {
+    "modules_tex": {
+      "bytes": 232828,
+      "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+    },
+    "modules_pdf": {
+      "bytes": 767323,
+      "sha256": "A35B4D3FDD5A8A106A24570FA6E8890BACF45E83BD01B2F949A838F33D311638",
+      "pages": 60
+    },
+    "candidate": {
+      "path": "tmp/d1017_noncommutative_internal_hom_candidate.tex",
+      "bytes": 5063,
+      "sha256": "FB6278770580656A6904DC4505A7E69DAB222710D62633937125C557A2E75190"
+    },
+    "labels": [
+      "modules-definition-hom-left-modules",
+      "modules-lemma-sheaf-hom-left-modules"
+    ],
+    "official_tags": ""
+  },
+  "equivalence_proof": [
+    {
+      "predicate": "arbitrary_subspace_hom",
+      "result": "PASS",
+      "evidence": "Definition modules-definition-hom-left-modules defines Hom_A(T;F,G) for every subset T by inverse-image ring and module sheaves."
+    },
+    {
+      "predicate": "restriction_for_V_subset_U",
+      "result": "PASS",
+      "evidence": "For V contained in U, inverse-image functoriality and i_V=i_U composed with V->U canonically restrict an i_U^{-1}A-linear morphism to an i_V^{-1}A-linear morphism."
+    },
+    {
+      "predicate": "open_rule_is_already_a_sheaf",
+      "result": "PASS",
+      "evidence": "Lemma modules-lemma-sheaf-hom-left-modules and its proof establish existence and uniqueness of gluing for U mapping to Hom_{A|U}(F|U,G|U); no sheafification is inserted."
+    },
+    {
+      "predicate": "sections_identify_with_subspace_hom",
+      "result": "PASS",
+      "evidence": "The lemma states Gamma(U,SheafHom_A(F,G))=Hom_A(U;F,G) for every open U."
+    },
+    {
+      "predicate": "noncommutative_left_module_scope",
+      "result": "PASS",
+      "evidence": "The definition assumes a sheaf of not necessarily commutative rings with 1 and left modules."
+    },
+    {
+      "predicate": "source_boundary_preserved",
+      "result": "PASS",
+      "evidence": "D1018 closes only the restriction-and-sheaf definition. Equation targets (4.1.1), (4.1.2), and the following center-module remark remain separate source units."
+    }
+  ],
+  "mapping_projection": {
+    "successor": "tohoku_r62",
+    "decision_id": "D001042",
+    "unit_id": "tohoku:definition:sheaf-hom-o",
+    "action": "replace",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "modules-definition-hom-left-modules;modules-lemma-sheaf-hom-left-modules",
+    "stacks_tags": "",
+    "rationale": "The D1017 noncommutative left-module definition gives Hom on every subspace by inverse image. For V contained in U, inverse-image functoriality supplies the natural restriction. The following lemma proves that the open-set rule is already a sheaf and identifies its sections with subspace Hom. Thus it gives the complete corrected source definition; equations (4.1.1)--(4.1.2) and the center-sheaf remark remain separate source units.",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "supersedes": "D000407",
+    "issue_append": false,
+    "source_repair_append": false,
+    "projected_remaining_gap_class_dispositions": 24
+  },
+  "change_class": {
+    "new_tex_required": false,
+    "new_pdf_required": false,
+    "new_source_repair_required": false,
+    "new_semantic_successor_required": false,
+    "mapping_successor_required": true
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "effect": "Continue local work; do not attempt Git or GitHub operations."
+    }
+  },
+  "errors": []
+}

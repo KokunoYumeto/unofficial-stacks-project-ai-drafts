@@ -1,0 +1,233 @@
+{
+  "schema": "d1012-p179-repair-toolchain-contract-v1",
+  "contract_id": "D1012-R001-p179-r19-r41-sem20-v1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "defect_id": "D1012-R001",
+  "printed_page": 179,
+  "authority": {
+    "design": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_source_repair_design.json",
+      "bytes": 11812,
+      "sha256": "9F282268F4496469D2601BE25523EF6276F9CF15722D6F50A71B202F32E80B82",
+      "status": "DESIGN_PASS_NOT_APPLIED"
+    },
+    "prior_pipeline_pattern": {
+      "path": "user/Documents/stacks-ftg/D1010_CHECK.json",
+      "bytes": 37425,
+      "sha256": "A73F16F4951CA5E04A6796586D7F522A22343164FC8AC5276CF5E64D4D8AC1E5",
+      "status": "STRICT_PASS"
+    }
+  },
+  "scripts": {
+    "source_admission": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_p179_repair_toolchain/source_admission.py",
+      "bytes": 27083,
+      "sha256": "5C4CCA65B8CF0984C0BD960E96E553743FA03C0EFCF4C77330BCBDE021CFEF75"
+    },
+    "reader_v068c3r19": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_p179_repair_toolchain/reader_v068c3r19.py",
+      "bytes": 23697,
+      "sha256": "1633E3EFD84D6775ABDAC4AAC68C7ADB86A9495737CFA01B49659370A1FFA65E"
+    },
+    "qa_v68r41": {
+      "path": "user/Documents/stacks-ftg/tmp/d1012_p179_repair_toolchain/qa_v68r41.py",
+      "bytes": 25594,
+      "sha256": "3FC17B81660C4351C0BCFBD5ED7CACAFDF4F0A6073614C88CDFDE4A6497D6F99"
+    }
+  },
+  "launcher": {
+    "path": "user/Documents/stacks-ftg/tmp/d1012_p179_repair_toolchain/run.py",
+    "bytes": 6002,
+    "sha256": "E6D39D9593DFBADF5EC91DABB22A7844B3BEC8F158F383FD7FC0CB79C9144226",
+    "contract": "reads and verifies each frozen step script before executing those same bytes in memory",
+    "write_token": "D1012-R001-EXPLICIT-LOCAL-EXECUTION"
+  },
+  "immutable_predecessors": [
+    "production/p179_r1",
+    "build/v068c3r18",
+    "qa/v68r40",
+    "sem/r19",
+    "output/pdf/fr-p119-221-v068c3r18.pdf",
+    "output/pdf/en-p119-221-v068c3r18.pdf"
+  ],
+  "source_admission": {
+    "production_successor": "production/p179_fix2",
+    "no_overwrite": true,
+    "family_decision": {
+      "id": "TOH-P179-COR-002",
+      "path": "production/p179_fix2/decisions.jsonl",
+      "append_bytes": 795,
+      "append_sha256": "1D77631D3CDB439D20AF6B90ADE7934EAF6D6DFDF1A730FBA80E1AED32A45DE6",
+      "postimage_bytes": 3863,
+      "postimage_sha256": "4B32C9521442CE2330068147C20ACE804A3D3C097E91FB83F02D501556D0200C",
+      "predecessor_prefix_exact": true
+    },
+    "root_decision": {
+      "id": "TOH-SRC-P179-009",
+      "path": "SOURCE_CORRECTIONS.jsonl",
+      "layer_exact": "fr_corrected;en",
+      "append_bytes": 1209,
+      "append_sha256": "893306E67DE4D30E642FEA990465EE6EDB3BF7C90A1CB6D7E9BDD2B3E915EA3D",
+      "postimage_bytes": 211141,
+      "postimage_sha256": "94F39C3058F24A0E8E43B3D3D98679C4EF265C23873ACE2B075F23F8810C262B",
+      "predecessor_prefix_exact": true
+    },
+    "layers": {
+      "dip": {
+        "path": "production/p179_fix2/tex/fr_diplomatic/p179.tex",
+        "bytes": 4413,
+        "sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182",
+        "unchanged": true
+      },
+      "fr": {
+        "path": "production/p179_fix2/tex/fr_corrected/p179.tex",
+        "bytes": 4375,
+        "sha256": "27C6C84EEE0B74133B6376453801DF451B892FF782B7AC09E72146C4A7834C48",
+        "exact_replacements": 1
+      },
+      "en": {
+        "path": "production/p179_fix2/tex/en/p179.tex",
+        "bytes": 4173,
+        "sha256": "A7491524DBAC64EA345B36384DE39F503A2F4680B995779DEB826D7C21443D73",
+        "exact_replacements": 1
+      }
+    },
+    "receipt": {
+      "path": "production/p179_fix2/check.json",
+      "schema": "tohoku-p179-cross-cover-trace-source-admission-v1",
+      "status": "PASS",
+      "bytes": 4425,
+      "sha256": "61AD974EC36B4FB525643EEABF7E12F57AC3FB2B80D7267D32DDCC83035D1D27"
+    },
+    "rollback": {
+      "recovery_path": "production/.p179_fix2.d1012.recovery",
+      "delete_on_failure": false,
+      "requires_exact_source_and_optional_receipt_readback_before_move": true,
+      "existing_recovery_namespace_hard_fails": true
+    }
+  },
+  "reader_successor": {
+    "revision": "v068c3r19",
+    "build_root": "build/v068c3r19",
+    "staged_source_manifest": {
+      "rows": 543,
+      "total_file_bytes": 11855958,
+      "bytes": 62845,
+      "sha256": "D49CC85CF58B08E28A73C71D7A868559AB0B8F6454763BF69861FDAEB7DB8944"
+    },
+    "changed_staged_paths": [
+      "en/p179.tex",
+      "fr/p179.tex"
+    ],
+    "diplomatic_p179_unchanged": true,
+    "intended_outputs": [
+      "build/v068c3r19/build.json",
+      "build/v068c3r19/src",
+      "build/v068c3r19/fr/main-fr.pdf",
+      "build/v068c3r19/en/main-en.pdf",
+      "output/pdf/fr-p119-221-v068c3r19.pdf",
+      "output/pdf/en-p119-221-v068c3r19.pdf"
+    ],
+    "future_output_identity_gate": {
+      "status": "PENDING_REAL_BUILD",
+      "required_schema": "d1012-r19-output-bindings-v1",
+      "required_status": "PINNED_POST_BUILD",
+      "required_explicit_launch_sha256": true,
+      "path": "user/Documents/stacks-ftg/tmp/d1012_p179_repair_toolchain/r19_output_bindings.json"
+    }
+  },
+  "reader_qa": {
+    "revision": "v68r41",
+    "root": "qa/v68r41",
+    "prepare_stage": "qa/.v68r41.stage",
+    "requires_post_build_binding": true,
+    "requires_strict_parse_of_every_page": true,
+    "requires_zero_compile_log_findings": true,
+    "requires_explicit_content_stream_delta": true,
+    "requires_visual_attestation_with_explicit_sha256": true,
+    "intended_outputs": [
+      "qa/v68r41/structural.json",
+      "qa/v68r41/page-inventory.csv",
+      "qa/v68r41/check.json",
+      "qa/v68r41/*-r18-page-*.png",
+      "qa/v68r41/*-r19-page-*.png"
+    ]
+  },
+  "semantic_successor": {
+    "generation": "sem/r20",
+    "status": "SCRIPT_GATE_PENDING_V068C3R19_AND_V68R41_IDENTITIES",
+    "decision_path_exact": "production/p179_fix2/decisions.jsonl",
+    "target_node": "tohoku:setup:acyclicity-cover-families",
+    "target_occurrence": "tohoku:occ:p179:o003",
+    "fr_segment": {
+      "bytes": 456,
+      "sha256": "CF94529FCEF9641FB6802626F0FF7C42936F88DD7B7928880EB71EE7EAA2C6F1"
+    },
+    "en_segment": {
+      "bytes": 467,
+      "sha256": "0981FB36C7BA18DCAFE49A20819BDD0264DF8659F9F4857A20E8E70358068D80"
+    },
+    "proof_dependency": {
+      "source_node": "tohoku:proof:theorem-3.9.1:induction-on-k",
+      "target_node": "tohoku:setup:acyclicity-cover-families",
+      "required": true
+    }
+  },
+  "downstream_mapping": {
+    "predecessor": {
+      "path": "user/Documents/stacks-ftg/tohoku_r55",
+      "receipt_path": "user/Documents/stacks-ftg/tohoku_r55/r55-check.json",
+      "receipt_bytes": 51881,
+      "receipt_sha256": "710219F6C9B79B9448E73209F2C3C129FB8D63FEDE134D12FA42643C78B9360B",
+      "status": "PASS"
+    },
+    "planned_successor": "tohoku_r56",
+    "planned_decisions": [
+      "D001032",
+      "D001033",
+      "D001034",
+      "D001035",
+      "D001036"
+    ],
+    "planned_issue": "I000031",
+    "source_repairs_appended": 1
+  },
+  "write_boundaries": {
+    "source_admission": [
+      "production/p179_fix2",
+      "SOURCE_CORRECTIONS.jsonl"
+    ],
+    "reader_build": [
+      "build/v068c3r19",
+      "output/pdf/fr-p119-221-v068c3r19.pdf",
+      "output/pdf/en-p119-221-v068c3r19.pdf"
+    ],
+    "reader_qa": [
+      "qa/v68r41"
+    ],
+    "semantic": [
+      "sem/r20"
+    ]
+  },
+  "missing_existing_commands": [
+    "No existing p179_fix2 source-admission command exists; source_admission.py supplies the narrow successor transaction.",
+    "No existing v068c3r19 builder exists; reader_v068c3r19.py composes the exact sealed r18 engine.",
+    "No existing v68r41 QA command exists; qa_v68r41.py requires explicit post-build and visual identity bindings.",
+    "The sem/r20 production command remains hard-blocked until v068c3r19 and v68r41 identities exist."
+  ],
+  "artifact_operation_marker": "ALREADY_RUN_EXACTLY_ONCE_AT_GOAL_LEVEL_DO_NOT_RERUN",
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "effect": "No GitHub inspection, synchronization, push, or publication is part of this toolchain."
+    }
+  },
+  "no_launch_evidence": {
+    "canonical_source_mutations": 0,
+    "canonical_ledger_mutations": 0,
+    "reader_builds_launched": 0,
+    "qa_renders_launched": 0,
+    "semantic_builds_launched": 0
+  },
+  "errors": []
+}

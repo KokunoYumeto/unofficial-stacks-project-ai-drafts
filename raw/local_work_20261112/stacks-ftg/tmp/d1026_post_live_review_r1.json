@@ -1,0 +1,164 @@
+{
+  "schema": "d1026-post-live-independent-review-v1",
+  "review_date": "2026-08-24",
+  "status": "STRICT_PASS",
+  "scope": "Bounded post-live audit of the D1026 history replacement, its deterministic categories.pdf rebuild, build diagnostics, and rendered pages 13-16.",
+  "source_mapping_review": {
+    "path": "tmp/d1025_d1026_source_mapping_review.json",
+    "bytes": 7625,
+    "sha256": "3E19B7FF578240254832EC5FE3E6B36B493218FB8F96CB9EFAB753CEC5D9074A",
+    "status": "STRICT_PASS"
+  },
+  "candidate": {
+    "path": "tmp/d1026_mono_epi_terminology_candidate.tex",
+    "bytes": 608,
+    "sha256": "6863D0CC63ECC1019D3169DBBCE6770DBAB72D65E836045A1A68A6E0E73AC5EA"
+  },
+  "live_source": {
+    "path": "categories.tex",
+    "bytes": 378258,
+    "sha256": "DFAA13F0F29E5DD2AAD961D2C054A4914C1EF6C7BF91D5E05E4D5737D1DE1A39",
+    "definition_block": {
+      "lines": "1237-1249",
+      "lf_normalized_bytes": 516,
+      "lf_normalized_sha256": "8DF87F3E05060B6B4590C9F46F6055FC6A7CE8853BE8427C0C38D29A1708972B",
+      "changed_by_d1026": false
+    },
+    "reference_block": {
+      "lines": "1253-1255",
+      "bytes": 81,
+      "sha256": "E85EADB30FF899280142F83FB7998F59049764976968722E0649A127BB6F132E",
+      "citation": "Tohoku, Chapter I, Section 1.1, pp. 122-123",
+      "changed_by_d1026": false
+    },
+    "replacement_history_block": {
+      "lines": "1256-1266",
+      "bytes": 608,
+      "sha256": "6863D0CC63ECC1019D3169DBBCE6770DBAB72D65E836045A1A68A6E0E73AC5EA",
+      "line_endings": "LF",
+      "exact_raw_match_to_candidate": true
+    },
+    "containing_lemma": {
+      "label": "categories-lemma-mono-epi-composition",
+      "scope_result": "The replacement is confined to the non-printing history environment. It does not alter the definition or any mathematical assertion or proof in the containing lemma."
+    }
+  },
+  "authorization_scope": {
+    "predecessor_decision": "D000072",
+    "authorized_unit_count": 1,
+    "authorized_change": "Replacement history wording inside categories-lemma-mono-epi-composition only.",
+    "deterministic_categories_pdf_rebuild_authorized": true,
+    "independent_pdf_content_edit_authorized": false,
+    "excluded": [
+      "No change to categories-definition-mono-epi.",
+      "No change to the mathematical statement or proof of categories-lemma-mono-epi-composition.",
+      "No remapping of inverse, isomorphism, split mono/epi, composition, example, source, issue, semantic, occurrence, or bibliography units."
+    ]
+  },
+  "build": {
+    "pdf": {
+      "path": "categories.pdf",
+      "bytes": 1099993,
+      "sha256": "01D6BCA5CFEFF76F17847A5DEB532C1551FA4E0947CE4B2C4651FA09810CA172",
+      "pages": 107,
+      "page_size_points": "612 x 792",
+      "pdf_version": "1.5"
+    },
+    "log": {
+      "path": "categories.log",
+      "bytes": 38413,
+      "sha256": "1059D51677274557BAAACAC875D0DDE14B7FC4198F3BE1DA837EA1773CE0F5E0",
+      "output_record": "Output written on categories.pdf (107 pages, 1099993 bytes)."
+    },
+    "support_identities": [
+      {
+        "path": "categories.aux",
+        "bytes": 31606,
+        "sha256": "93FA4AAC8F6C2B730B056AAAA6B0E30148A700BA5E826213530F5C729EA04A0D"
+      },
+      {
+        "path": "categories.out",
+        "bytes": 8361,
+        "sha256": "501FA65CDA4AC18B1B1BD7A487FC6DD8D5C20685B8A5E2CEAD7C9EECF5546703"
+      },
+      {
+        "path": "categories.toc",
+        "bytes": 3886,
+        "sha256": "062E67F9CF49906331C5DBCF149280BCF3FB2C39F0639EDC85A6EF6C51EDFD9C"
+      },
+      {
+        "path": "categories.blg",
+        "bytes": 1024,
+        "sha256": "FA3CA43F69ADEBFE9760E51A66109F5256BEF5645332B20965F2CE3D7236F185",
+        "bibtex_warning_count": 0
+      },
+      {
+        "path": "categories.bbl",
+        "bytes": 1482,
+        "sha256": "2D97AA0E9A1E329ADA1C2953203946178AD79D9577324891735B4DAA8F54C6F1"
+      }
+    ],
+    "diagnostics": {
+      "fatal_errors": 0,
+      "latex_warnings": 0,
+      "package_warnings": 0,
+      "undefined_references_or_citations": 0,
+      "multiply_defined_labels": 0,
+      "rerun_requests": 0,
+      "overfull_hbox_count": 4,
+      "overfull_hbox_source_ranges": [
+        "3609-3613",
+        "4248-4259",
+        "8915-8921",
+        "10037-10041"
+      ],
+      "overfull_vbox_count": 1,
+      "underfull_vbox_count": 1,
+      "changed_source_range_warning_hits": 0,
+      "assessment": "The source-located box diagnostics are outside lines 1237-1266. The two unlocated vbox diagnostics are visually cleared on the audited pages."
+    }
+  },
+  "visual_review": {
+    "method": "Original-resolution inspection of the existing PNG renders plus text extraction from PDF pages 13-16.",
+    "contains_unresolved_double_question_mark": false,
+    "pages": [
+      {
+        "page": 13,
+        "path": "tmp/d1026_pdf_qa/page-013.png",
+        "bytes": 198391,
+        "sha256": "C37AF2276828D4780227AB19981C2CEC2D8852BFAAD4C443287DCEFA901C07E9",
+        "status": "PASS"
+      },
+      {
+        "page": 14,
+        "path": "tmp/d1026_pdf_qa/page-014.png",
+        "bytes": 290703,
+        "sha256": "D24BF7EFC2AA508F6C1C4B4D915632A2540A86D38C6348FE003A6B0331EE397D",
+        "status": "PASS"
+      },
+      {
+        "page": 15,
+        "path": "tmp/d1026_pdf_qa/page-015.png",
+        "bytes": 340972,
+        "sha256": "8B9D61754FBA488D1696EB01AD411EB081D50C6C74D14F1171D01F08D4667548",
+        "status": "PASS"
+      },
+      {
+        "page": 16,
+        "path": "tmp/d1026_pdf_qa/page-016.png",
+        "bytes": 232002,
+        "sha256": "D6F48CF6523FC0F90B228B135BF19695EF34126EEE57A2C0025C51822443013B",
+        "status": "PASS"
+      }
+    ],
+    "findings": [
+      "Page 14 begins cleanly after the page-13 Pushouts material and reaches Section 13 without clipping or collision.",
+      "The Lemma 13.2 transition from item (1) on page 14 to item (2) on page 15 is clean and logically continuous.",
+      "References 2.5, 13.5, and 13.2 render as resolved numbered links; the visible colored rectangles are the document's hyperlink-border style, not unresolved references.",
+      "The history and reference environments are intentionally non-printing in this build; their absence from the rendered prose is expected.",
+      "No clipping, overlap, missing glyph, malformed equation, orphaned heading, or abnormal whitespace was observed."
+    ],
+    "status": "STRICT_PASS"
+  },
+  "conclusion": "STRICT_PASS: the live history block has the approved identity and authorized scope, the deterministic PDF build is successful, and pages 13-16 are visually sound."
+}

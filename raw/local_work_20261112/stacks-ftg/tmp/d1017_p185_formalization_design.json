@@ -1,0 +1,147 @@
+{
+  "schema": "tohoku-stacks-d1017-formalization-design-v1",
+  "formalization_id": "D1017",
+  "status": "STACKS_BUILD_PASS_SOURCE_REPAIR_AND_MAPPING_REQUIRED",
+  "selection": {
+    "unit_id": "tohoku:definition:hom-o-and-local-hom",
+    "printed_page": 185,
+    "source_locator": "sem/r18/nodes.csv:344",
+    "r60_map_physical_line": 344,
+    "current_decision": "D000404",
+    "current_disposition": "existing_weaker",
+    "mapped_label": "modules-section-internal-hom",
+    "mapped_tag": "01CM",
+    "continuation_order": "first gap-class row after D1016 physical line 246"
+  },
+  "source_scope": {
+    "exact_target": "English and corrected-French p185 lines 14--24",
+    "statement": "For a topological space X, a sheaf O of unital possibly noncommutative rings, and left O-modules A and B, define the global morphism group Hom_O(A,B) and, for every arbitrary subspace U of X, Hom_O(U;A,B)=Hom_{O|U}(A|U,B|U).",
+    "excluded_following_unit": "The sheaf property on open subsets, equations (4.1.1)--(4.1.2), and the internal-Hom center-sheaf action begin at the next LayerTarget and are not silently part of this source unit.",
+    "other_exclusions": [
+      "No stalk comparison, finite-type or pseudo-coherent assertion is included.",
+      "No Ext, derived-functor, or exactness assertion is included.",
+      "The arbitrary subset in the restricted-Hom definition is not weakened to an open subset."
+    ]
+  },
+  "source_identities": {
+    "authority_pdf": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "physical_page": 1,
+      "printed_page": 185,
+      "visual_result": "PASS"
+    },
+    "english_p185": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/en/p185.tex",
+      "bytes": 4183,
+      "sha256": "6D15A561E5FCE6D3071672663DE9969249A5D147F08D6DC61A7CD5F3E43A084D",
+      "target_lines": [14, 24],
+      "target_excerpt_bytes": 574,
+      "target_excerpt_sha256": "27416BB3E39E005794E411D8270DF016794ED28ABBDB5729C5DE24154491D878"
+    },
+    "french_p185": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/fr/p185.tex",
+      "bytes": 4302,
+      "sha256": "85D04A11FF28F109C9006A850A3D9176A6483C2CAC56AA9B849058934B65C54A",
+      "target_lines": [14, 24],
+      "target_excerpt_bytes": 604,
+      "target_excerpt_sha256": "8BB5FD583D1C4D8CA017A3B59778AEBB046FAC1E1B93B0A731FED0D10D866668"
+    },
+    "semantic_r18": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/sem/r18/nodes.csv",
+      "bytes": 585012,
+      "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+      "physical_row": 344,
+      "row_bytes_without_terminator": 852,
+      "row_sha256_without_terminator": "206E8BD1A240EED41780EE2990DC3D7A7266B9EA4CE494F53E5D49467B62C10B"
+    },
+    "sealed_r60_map": {
+      "path": "user/Documents/stacks-ftg/tohoku_r60/map.csv",
+      "bytes": 484523,
+      "sha256": "99A6754134043E3434541A1E9CE1D62B18E1BC40B020080EA13BF06280849872",
+      "physical_row": 344,
+      "row_bytes_without_terminator": 472,
+      "row_sha256_without_terminator": "88FC8263CACBAFA7B8EA652A3FBD9BBB61F65AB40AD5973C75E0AD720F481791"
+    }
+  },
+  "source_defect": {
+    "id": "D1017-R001",
+    "classification": "global_center_does_not_restrict_to_local_centers",
+    "printed_claim": "Hom_O(A,B) is a module over Z(Gamma(X,O)).",
+    "result": "STRICT_FAIL_AS_STATED_FOR_ARBITRARY_NONCOMMUTATIVE_RING_SHEAVES",
+    "reason": "A section central in O(X) need not restrict to a central section of O(V), because local sections on V need not extend globally; multiplication by its restriction can therefore fail to be O|V-linear.",
+    "counterexample": {
+      "space": "The Sierpinski space X={x,y} with nonempty proper open U={y}.",
+      "ring_sheaf": "O(X)=Q[t], O(U)=M_2(Q), with restriction t mapped to D=diag(1,0).",
+      "central_global_section": "t lies in Z(O(X)), while D is not central in O(U).",
+      "modules_and_map": "Take A=B=O as left regular sheaves and f=id.",
+      "failed_linearity": "For h_U(M)=DM, s=E_12 and m=I give h_U(sm)=D E_12=E_12 but s h_U(m)=E_12 D=0.",
+      "independent_gates": 2
+    },
+    "correct_replacement": "Replace Z(Gamma(X,O)) by Gamma(X,O^natural), where O^natural is the sheaf-theoretic center: its sections over W remain central after restriction to every open V contained in W.",
+    "maximality": "Gamma(X,O^natural) is the largest subring of O(X) whose pointwise left-multiplication formula acts on Hom_O(A,B) for every pair of left O-modules.",
+    "valid_special_case": "The printed claim is valid when restrictions preserve centers, in particular when O is commutative."
+  },
+  "source_repair_plan": {
+    "diplomatic_french": "byte-identical",
+    "corrected_french": "Replace only `sur le centre de Gamma(O)` by `sur Gamma(O^natural)`; the immediately following source unit already identifies O^natural as the center sheaf.",
+    "english": "Replace only `over the center of Gamma(O)` by `over Gamma(O^natural)`; the immediately following source unit already identifies O^natural as the center sheaf.",
+    "root_decision_id": "TOH-SRC-P185-002",
+    "family_decision_id": "TOH-P185-COR-002",
+    "production_successor": "production/p185_fix2",
+    "reader_successor": "build/v068c3r20",
+    "reader_qa_successor": "qa/v68r42",
+    "semantic_successor": "sem/r21",
+    "overwrite_allowed": false
+  },
+  "stacks_state": {
+    "live_source": {
+      "path": "user/Documents/stacks-ftg/modules.tex",
+      "preimage": {
+        "bytes": 227768,
+        "sha256": "6BDE2852FFC50945A781FE7598FE96EC69D8B650EEF5C4C608C440D9E7E53BC0"
+      },
+      "postimage": {
+        "bytes": 232828,
+        "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+      },
+      "build_status": "TWO_PASS_PDF_AND_VISUAL_QA_PASS"
+    },
+    "existing_block": {
+      "lines": [3984, 4019],
+      "finding": "The existing internal-Hom section covers commutative ringed spaces and uses equality of pre- and postmultiplication; it does not cover left modules over a possibly noncommutative ring sheaf or a center-sheaf action."
+    },
+    "planned_labels": [
+      "modules-definition-hom-left-modules",
+      "modules-lemma-sheaf-hom-left-modules"
+    ],
+    "planned_placement": "Immediately after the introductory internal-Hom block and before modules-lemma-internal-hom.",
+    "planned_content": [
+      "Define left modules, global Hom, and restricted Hom on every arbitrary subspace using inverse images along the inclusion.",
+      "Define the sheaf-theoretic center by locally central sections, not by the generally nonfunctorial rule U maps to Z(A(U)).",
+      "Prove that open-set Hom groups form a sheaf of abelian groups.",
+      "Prove the canonical O^natural-module action and the global-sections identity.",
+      "State that the commutative case recovers the existing internal Hom."
+    ],
+    "new_official_tags": 0
+  },
+  "mapping_plan": {
+    "predecessor": "tohoku_r60",
+    "planned_successor": "tohoku_r61",
+    "planned_decision": "D001041",
+    "supersedes": "D000404",
+    "planned_disposition": "existing_equivalent",
+    "planned_issue": "I000032",
+    "source_repairs_appended": 1,
+    "projected_remaining_gap_class_dispositions": 25,
+    "qualification": "Equivalent only to the corrected sem/r21 source statement; the diplomatic printed Z(Gamma(O)) claim remains preserved as a recorded source error."
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "action": "Continue all local source, TeX, build, QA, semantic, and mapping work; do not attempt GitHub operations."
+    }
+  },
+  "next_action": "Execute the independently gated no-overwrite p185 repair, reader/QA/semantic successors, then replay scanners and seal r61."
+}

@@ -1,0 +1,179 @@
+{
+  "schema": "tohoku-d1019-analytic-descent-design-v1",
+  "status": "REVISED_READY_FOR_SECOND_INDEPENDENT_REVIEW",
+  "errors": [],
+  "unit": {
+    "formalization_id": "D1019",
+    "unit_id": "tohoku:descent:discontinuous-action-characteristic-zero",
+    "printed_page": 219,
+    "source_locator": "sem/r18/nodes.csv:353",
+    "predecessor_mapping": {
+      "dossier": "tohoku_r62",
+      "decision_id": "D000613",
+      "disposition": "new_statement",
+      "map_row_with_lf": {
+        "bytes": 534,
+        "sha256": "6961D6333DAC830C1D896CC675126CD591223A47B36BF131668B0C99D4F9E658"
+      }
+    }
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "semantic_row_with_lf": {
+      "path": "sem/r18/nodes.csv:353",
+      "bytes": 886,
+      "sha256": "C70FA78166FA5BDB8EE9D52ECD48D09C18EF13F2F24AE492FBEAA7647FB5A5BE"
+    },
+    "page_layers": {
+      "diplomatic": {
+        "path": "build/v068c3r20/src/dip/p219.tex",
+        "bytes": 4809,
+        "sha256": "53B23B8B039FA4BD34EB83A6F5E02B18758614E17A5737723A854F72C3A225B1",
+        "segment_bytes": 418,
+        "segment_sha256": "4BD311B2F0B0B7071A0C909424D88132A047AE60313BF357A992F459544D071D"
+      },
+      "corrected_french": {
+        "path": "build/v068c3r20/src/fr/p219.tex",
+        "bytes": 4814,
+        "sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE",
+        "segment_bytes": 418,
+        "segment_sha256": "4BD311B2F0B0B7071A0C909424D88132A047AE60313BF357A992F459544D071D"
+      },
+      "english": {
+        "path": "build/v068c3r20/src/en/p219.tex",
+        "bytes": 4520,
+        "sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+        "segment_bytes": 354,
+        "segment_sha256": "95CE63EF6F3AE2056A95CBB1A213627473B512AE66AF7262510AF16D35EF74FA"
+      }
+    },
+    "repair_required": false
+  },
+  "exact_claims": [
+    "For a discontinuous action in characteristic zero and every G-sheaf L of vector spaces, H^1(X;G,L) is canonically identified with H^1(Y,q_*^G L).",
+    "If L is a coherent analytic equivariant module, q_*^G L is coherent analytic on Y.",
+    "The preceding assertion applies to the coherent sheaf O(E^vee tensor F)."
+  ],
+  "excluded_claims": [
+    "No categorical descent equivalence is asserted for nontrivial stabilizers.",
+    "No GAGA comparison is asserted.",
+    "No compactness or finite-dimensionality conclusion is asserted.",
+    "The preceding equivariant Ext/H^1 identification and following compact-quotient finiteness unit remain separate."
+  ],
+  "existing_coverage": {
+    "cohomology": {
+      "label": "cohomology-lemma-orbit-space-equivariant-cohomology-stabilizer-orders",
+      "file": "cohomology.tex",
+      "line": 16865,
+      "tag": "",
+      "text_sha256": "130C13A69DD7D36D3E3F14FDA97127CEA510928A36DF7E714E99EF08F630AE6F",
+      "finding": "This is stronger than the source's degree-one clause: all degrees are covered whenever finite stabilizer orders act invertibly on stalks, which holds for complex vector spaces."
+    },
+    "missing_before_d1019": "Coherence of invariant direct image for a coherent analytic module on a discontinuous analytic quotient."
+  },
+  "candidate": {
+    "path": "tmp/d1019_analytic_descent_candidate.tex",
+    "bytes": 3303,
+    "sha256": "497B3D12B59EB8DF3D77B0FF6BA4161A20B1D450E735C63CD47A381A700C943A",
+    "target_file": "cohomology.tex",
+    "target_anchor": "cohomology-remark-equivariant-extension-classes-analytic-boundary",
+    "new_label": "cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "new_tag": "",
+    "placement": "Immediately after the analytic-boundary remark following the equivariant extension-class lemma."
+  },
+  "bibliography_prerequisite": {
+    "path": "my.bib",
+    "bytes": 220625,
+    "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE",
+    "appended_keys": [
+      "Cartan-analytic-quotient",
+      "Grauert-direct-image"
+    ],
+    "authorities": [
+      {
+        "key": "Cartan-analytic-quotient",
+        "claim_bound": "Separated discontinuous quotients have local finite stabilizer quotient charts and invariant structure sheaf.",
+        "pin": "Theorems 1 and 2, pp. 1--6"
+      },
+      {
+        "key": "Grauert-direct-image",
+        "claim_bound": "Proper, hence finite, holomorphic direct image preserves coherence; Oka coherence and coherent kernel closure are also recorded.",
+        "pin": "Hauptsatz I, p. 57; Oka coherence discussion p. 16"
+      }
+    ]
+  },
+  "proof_obligations": [
+    {
+      "id": "P0",
+      "claim": "The separated analytic quotient has local charts U=V/H with p:V to U finite and O_U=(p_*O_V)^H.",
+      "authority": "Cartan-analytic-quotient",
+      "pin": "Theorems 1 and 2, pp. 1--6",
+      "statement_status": "properties stated explicitly as hypotheses/structure in the candidate"
+    },
+    {
+      "id": "P1",
+      "claim": "The underlying discontinuous action supplies a finite stabilizer H and a topological slice V whose translates are disjoint.",
+      "local_label": "sheaves-lemma-discontinuous-group-action-neighbourhoods",
+      "text_sha256": "44A63CFBF073C94FD343FCE4AC250FF6FDE98F782FB101EB76E67A30DDFB9947"
+    },
+    {
+      "id": "P2",
+      "claim": "On the slice, invariant direct image for G identifies with invariant direct image for H; the candidate verifies this sectionwise identification is O_U-linear.",
+      "local_label": "cohomology-lemma-higher-invariant-direct-image-slice",
+      "text_sha256": "CC64B0EBDA8B7FD0BA1D46A916FCEF71C96F8595A158D332702545DD435CABC8"
+    },
+    {
+      "id": "P3",
+      "claim": "For the finite analytic quotient p:V to V/H, finite direct image carries coherent analytic modules to coherent analytic modules.",
+      "authority": "Grauert-direct-image",
+      "pin": "Hauptsatz I, p. 57",
+      "bridge": "A finite holomorphic map is proper."
+    },
+    {
+      "id": "P4",
+      "claim": "For finite H, semilinearity restricts to O_U-linearity because O_U consists of invariant functions; M^H is the kernel of M to the finite direct sum indexed by H and is coherent.",
+      "local_label": "modules-lemma-coherent-abelian",
+      "tag": "01BY",
+      "text_sha256": "D15F4D0FD6D37D6F42043B9E5F13D997B4D6105EF4731B20582EE6AD98100FDC"
+    },
+    {
+      "id": "P5",
+      "claim": "Compatible bundle actions induce a G-linearization on E^vee tensor F, whose holomorphic-section sheaf is finite locally free and coherent by Oka coherence.",
+      "authority": "Grauert-direct-image",
+      "pin": "p. 16"
+    }
+  ],
+  "live_change_plan": {
+    "bibliography_change": "The two exact primary-source keys are appended once to my.bib and must pass BibTeX closure.",
+    "source_change": "After second static review passes, insert the candidate block exactly once into cohomology.tex after the analytic-boundary remark.",
+    "build": "Run the narrow cohomology PDF build only after static review passes.",
+    "qa": "Require zero TeX errors, exact new-label count one, reference closure, PDF page-count sanity, changed-page raster review, and scanner replay before mapping.",
+    "mapping": "Only after build and QA, append D001043 and replace the single D000613 map row in a no-overwrite r63 successor."
+  },
+  "mapping_projection": {
+    "decision_id": "D001043",
+    "action": "replace",
+    "supersedes": "D000613",
+    "disposition": "existing_equivalent",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-lemma-orbit-space-equivariant-cohomology-stabilizer-orders;cohomology-lemma-discontinuous-analytic-invariant-direct-image-coherent",
+    "stacks_tags": "",
+    "issue_append": null,
+    "source_repair_append": null,
+    "projected_counts_before_scanner_rebind": {
+      "decisions": 1043,
+      "existing_equivalent": 386,
+      "new_statement": 5,
+      "remaining_gap_class_dispositions": 23,
+      "source_issues": 32,
+      "active_source_issues": 0
+    }
+  },
+  "external_constraints": {
+    "github": "Temporarily unavailable under the reported VPN/security review; local production and QA continue without Git or GitHub operations."
+  }
+}

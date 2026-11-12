@@ -1,0 +1,395 @@
+\GAGASubsection{13. Proof of Theorem 1}{gaga:no:13}
+
+Suppose that $X$ is embedded in the projective space $\mathbf{P}_r(\mathbf{C})$. If we identify $\mathcal{F}$ with the sheaf obtained by extending it by zero outside $X$, we know (\GAGACite{18}, no.~26) that
+
+\begin{equation*}
+\mathrm{H}^q(X,\mathcal{F})=\mathrm{H}^q(\mathbf{P}_r(\mathbf{C}),\mathcal{F})
+\quad\text{and}\quad
+\mathrm{H}^q(X^h,\mathcal{F}^h)=
+\mathrm{H}^q(\mathbf{P}_r(\mathbf{C})^h,\mathcal{F}^h),
+\end{equation*}
+
+where the notation $\mathcal{F}^h$ is justified by Proposition~\hyperref[gaga:prop:11]{11}. It is therefore enough to prove that
+
+\begin{equation*}
+\varepsilon:\mathrm{H}^q(\mathbf{P}_r(\mathbf{C}),\mathcal{F})
+\longrightarrow
+\mathrm{H}^q(\mathbf{P}_r(\mathbf{C})^h,\mathcal{F}^h)
+\end{equation*}
+
+is bijective. In other words, we are reduced to the case $X=\mathbf{P}_r(\mathbf{C})$.
+
+We shall first establish two lemmas.
+
+\GAGATarget{gaga:lemma:4}\textsc{Lemma 4}. --- \emph{Theorem~\hyperref[gaga:thm:1]{1} is true for the sheaf $\mathcal{O}$.}
+
+For $q=0$, both $\mathrm{H}^0(X,\mathcal{O})$ and $\mathrm{H}^0(X^h,\mathcal{O}^h)$ consist only of the constants. For $q>0$, we know that $\mathrm{H}^q(X,\mathcal{O})=0$ (cf. \GAGACite{18}, no.~65, Proposition~8). On the other hand, by the Dolbeault theorem (cf. \GAGACite{8}), $\mathrm{H}^q(X^h,\mathcal{O}^h)$ is isomorphic to the cohomology of type $(0,q)$ of the projective space $X$, and hence is zero. This proves the lemma.\footnote{One may also calculate $\mathrm{H}^q(X,\mathcal{O})$ \emph{directly}, using the open covering of $X$ defined in \GAGAInternalRef{gaga:no:16}{no.~16} and Laurent-series expansions (J. Frenkel, unpublished). This avoids any appeal to the theory of Kähler manifolds.}
+
+\GAGATarget{gaga:lemma:5}\textsc{Lemma 5}. --- \emph{Theorem~\hyperref[gaga:thm:1]{1} is true for the sheaf $\mathcal{O}(n)$.}
+
+(For the definition of $\mathcal{O}(n)$, cf. \GAGACite{18}, no.~54, as well as \hyperref[gaga:no:16]{no.~16} below.)
+
+We argue by induction on $r=\dim X$, the case $r=0$ being trivial. Let $t$ be a linear form, not identically zero, in the homogeneous coordinates $t_0,\ldots,t_r$, and let $E$ be the hyperplane defined by the equation $t=0$. There is an exact sequence
+
+\begin{equation*}
+0\longrightarrow\mathcal{O}(-1)\longrightarrow\mathcal{O}
+\longrightarrow\mathcal{O}_E\longrightarrow0,
+\end{equation*}
+
+where $\mathcal{O}\to\mathcal{O}_E$ is the restriction homomorphism, whereas $\mathcal{O}(-1)\to\mathcal{O}$ is multiplication by $t$ (cf. \GAGACite{18}, no.~81). We deduce an exact sequence, valid for every $n\in\mathbf{Z}$,
+
+\begin{equation*}
+0\longrightarrow\mathcal{O}(n-1)\longrightarrow\mathcal{O}(n)
+\longrightarrow\mathcal{O}_E(n)\longrightarrow0.
+\end{equation*}
+
+By \hyperref[gaga:no:11]{no.~11}, there is a commutative diagram
+
+\begin{center}
+\scriptsize
+\begin{tikzcd}[column sep=tiny,row sep=large]
+\cdots \arrow[r] &
+\mathrm{H}^{q}(X,\mathcal{O}(n-1)) \arrow[r] \arrow[d,"\varepsilon"'] &
+\mathrm{H}^{q}(X,\mathcal{O}(n)) \arrow[r] \arrow[d,"\varepsilon"'] &
+\mathrm{H}^{q}(E,\mathcal{O}_{E}(n)) \arrow[r] \arrow[d,"\varepsilon"'] &
+\mathrm{H}^{q+1}(X,\mathcal{O}(n-1)) \arrow[r] \arrow[d,"\varepsilon"'] &
+\cdots \\
+\cdots \arrow[r] &
+\mathrm{H}^{q}(X^{h},\mathcal{O}(n-1)^{h}) \arrow[r] &
+\mathrm{H}^{q}(X^{h},\mathcal{O}(n)^{h}) \arrow[r] &
+\mathrm{H}^{q}(E^{h},\mathcal{O}_{E}(n)^{h}) \arrow[r] &
+\mathrm{H}^{q+1}(X^{h},\mathcal{O}(n-1)^{h}) \arrow[r] &
+\cdots
+\end{tikzcd}
+\end{center}
+
+By the induction hypothesis, the homomorphism
+
+\begin{equation*}
+\varepsilon:\mathrm{H}^{q}(E,\mathcal{O}_{E}(n))
+\longrightarrow
+\mathrm{H}^{q}(E^{h},\mathcal{O}_{E}(n)^{h})
+\end{equation*}
+
+is bijective for every $q\geqslant0$ and every $n\in\mathbf{Z}$. The five lemma then shows that, if Theorem~\hyperref[gaga:thm:1]{1} is true for $\mathcal{O}(n)$, it is true for $\mathcal{O}(n-1)$, and conversely. Since it is true for $n=0$ by Lemma~\hyperref[gaga:lemma:4]{4}, it is therefore true for every $n$.
+
+We can now prove Theorem~\hyperref[gaga:thm:1]{1}. We argue by descending induction on $q$. The theorem is trivial for $q>2r$, since both $\mathrm{H}^q(X,\mathcal{F})$ and $\mathrm{H}^q(X^h,\mathcal{F}^h)$ then vanish. By \GAGACite{18}, no.~55, Corollary to Theorem~1, there is an exact sequence of coherent algebraic sheaves
+
+\begin{equation*}
+0\longrightarrow\mathcal{R}\longrightarrow\mathcal{L}
+\longrightarrow\mathcal{F}\longrightarrow0,
+\end{equation*}
+
+where $\mathcal{L}$ is a direct sum of sheaves isomorphic to $\mathcal{O}(n)$. By Lemma~\hyperref[gaga:lemma:5]{5}, Theorem~\hyperref[gaga:thm:1]{1} is true for $\mathcal{L}$.
+
+There is a commutative diagram
+
+\begin{center}
+\scriptsize
+\begin{tikzcd}[column sep=tiny,row sep=large]
+\mathrm{H}^{q}(X,\mathcal{R}) \arrow[r] \arrow[d,"\varepsilon_{1}"'] &
+\mathrm{H}^{q}(X,\mathcal{L}) \arrow[r] \arrow[d,"\varepsilon_{2}"'] &
+\mathrm{H}^{q}(X,\mathcal{F}) \arrow[r] \arrow[d,"\varepsilon_{3}"'] &
+\mathrm{H}^{q+1}(X,\mathcal{R}) \arrow[r] \arrow[d,"\varepsilon_{4}"'] &
+\mathrm{H}^{q+1}(X,\mathcal{L}) \arrow[d,"\varepsilon_{5}"'] \\
+\mathrm{H}^{q}(X^{h},\mathcal{R}^{h}) \arrow[r] &
+\mathrm{H}^{q}(X^{h},\mathcal{L}^{h}) \arrow[r] &
+\mathrm{H}^{q}(X^{h},\mathcal{F}^{h}) \arrow[r] &
+\mathrm{H}^{q+1}(X^{h},\mathcal{R}^{h}) \arrow[r] &
+\mathrm{H}^{q+1}(X^{h},\mathcal{L}^{h}).
+\end{tikzcd}
+\end{center}
+
+In this diagram, $\varepsilon_4$ and $\varepsilon_5$ are bijective by the induction hypothesis; by what was just proved, the same is true of $\varepsilon_2$. The five lemma therefore shows that $\varepsilon_3$ is surjective. Since this result holds for every coherent algebraic sheaf $\mathcal{F}$, it applies in particular to $\mathcal{R}$, and hence $\varepsilon_1$ is surjective. A second application of the five lemma then shows that $\varepsilon_3$ is bijective, completing the proof.
+
+\GAGASubsection{14. Proof of Theorem 2}{gaga:no:14}
+
+Let $\mathcal{A}=\mathrm{Hom}(\mathcal{F},\mathcal{G})$ be the sheaf of germs of homomorphisms from $\mathcal{F}$ to $\mathcal{G}$ (cf. \GAGACite{18}, nos.~11 and 14). An element $f\in\mathcal{A}_x$ is a germ of a homomorphism from $\mathcal{F}$ to $\mathcal{G}$ in a neighbourhood of $x$, and therefore defines a germ of a homomorphism $f^h$ from the analytic sheaf $\mathcal{F}^h$ to $\mathcal{G}^h$. The map $f\mapsto f^h$ is an $\mathcal{O}'$-linear homomorphism from the sheaf $\mathcal{A}'$ defined by $\mathcal{A}$ (cf. \hyperref[gaga:no:9]{no.~9}) to the sheaf
+
+\begin{equation*}
+\mathcal{B}=\mathrm{Hom}(\mathcal{F}^h,\mathcal{G}^h).
+\end{equation*}
+
+By linearity, this homomorphism extends to a homomorphism
+
+\begin{equation*}
+\iota:\mathcal{A}^h\longrightarrow\mathcal{B}.
+\end{equation*}
+
+\GAGATarget{gaga:lemma:6}\textsc{Lemma 6}. --- \emph{The homomorphism $\iota:\mathcal{A}^h\to\mathcal{B}$ is bijective.}
+
+Let $x\in X$. Since $\mathcal{F}$ is coherent, \GAGACite{18}, no.~14 gives
+
+\begin{equation*}
+\mathcal{A}_x=\mathrm{Hom}(\mathcal{F}_x,\mathcal{G}_x),
+\qquad\text{and hence}\qquad
+\mathcal{A}^h_x=
+\mathrm{Hom}(\mathcal{F}_x,\mathcal{G}_x)\otimes\mathcal{H}_x,
+\end{equation*}
+
+where the functors $\otimes$ and $\mathrm{Hom}$ are taken over the ring $\mathcal{O}_x$.
+
+Since $\mathcal{F}^h$ is coherent, we similarly have
+
+\begin{equation*}
+\mathcal{B}_x=
+\mathrm{Hom}(\mathcal{F}_x\otimes\mathcal{H}_x,
+\mathcal{G}_x\otimes\mathcal{H}_x),
+\end{equation*}
+
+where $\otimes$ is taken over $\mathcal{O}_x$ and $\mathrm{Hom}$ over $\mathcal{H}_x$.
+
+It is therefore enough to see that
+
+\begin{equation*}
+\iota_x:
+\mathrm{Hom}(\mathcal{F}_x,\mathcal{G}_x)\otimes\mathcal{H}_x
+\longrightarrow
+\mathrm{Hom}(\mathcal{F}_x\otimes\mathcal{H}_x,
+\mathcal{G}_x\otimes\mathcal{H}_x)
+\end{equation*}
+
+is bijective. This follows from the flatness of the pair $(\mathcal{O}_x,\mathcal{H}_x)$ and Proposition~\GAGAInternalRef{gaga:prop:21}{21} of the \GAGAInternalRef{gaga:appendix}{Appendix}.
+
+We now prove Theorem~\hyperref[gaga:thm:2]{2}. Consider the homomorphisms
+
+\begin{equation*}
+\mathrm{H}^0(X,\mathcal{A})
+\xrightarrow{\varepsilon}
+\mathrm{H}^0(X^h,\mathcal{A}^h)
+\xrightarrow{\iota}
+\mathrm{H}^0(X^h,\mathcal{B}).
+\end{equation*}
+
+An element of $\mathrm{H}^0(X,\mathcal{A})$ (respectively, of $\mathrm{H}^0(X^h,\mathcal{B})$) is simply a homomorphism from $\mathcal{F}$ to $\mathcal{G}$ (respectively, from $\mathcal{F}^h$ to $\mathcal{G}^h$). Moreover, if $f\in\mathrm{H}^0(X,\mathcal{A})$, then $\iota\circ\varepsilon(f)=f^h$ by the very definition of $\iota$. Thus Theorem~\hyperref[gaga:thm:2]{2} amounts to saying that $\iota\circ\varepsilon$ is bijective. But $\varepsilon$ is bijective by Theorem~\hyperref[gaga:thm:1]{1}, which applies because $\mathcal{A}$ is coherent by \GAGACite{18}, no.~14, and $\iota$ is bijective by Lemma~\hyperref[gaga:lemma:6]{6}. This completes the proof.
+
+\GAGASubsection{15. Proof of Theorem 3. Preliminaries}{gaga:no:15}
+
+The \emph{uniqueness} of the sheaf $\mathcal{F}$ follows from Theorem~\hyperref[gaga:thm:2]{2}. Indeed, if $\mathcal{F}$ and $\mathcal{G}$ are two coherent algebraic sheaves on $X$ satisfying the requirement, there is by hypothesis an isomorphism $g:\mathcal{F}^h\to\mathcal{G}^h$. By Theorem~\hyperref[gaga:thm:2]{2}, there is therefore a homomorphism $f:\mathcal{F}\to\mathcal{G}$ such that $g=f^h$. If $\mathcal{A}$ and $\mathcal{B}$ denote the kernel and cokernel of $f$, there is an exact sequence
+
+\begin{equation*}
+0\longrightarrow\mathcal{A}\longrightarrow\mathcal{F}
+\xrightarrow{f}\mathcal{G}\longrightarrow\mathcal{B}\longrightarrow0,
+\end{equation*}
+
+and hence, by Proposition~\hyperref[gaga:prop:10]{10} \emph{a)}, an exact sequence
+
+\begin{equation*}
+0\longrightarrow\mathcal{A}^h\longrightarrow\mathcal{F}^h
+\xrightarrow{g}\mathcal{G}^h\longrightarrow\mathcal{B}^h\longrightarrow0.
+\end{equation*}
+
+Since $g$ is bijective, this implies $\mathcal{A}^h=\mathcal{B}^h=0$, and hence, by Proposition~\hyperref[gaga:prop:10]{10} \emph{b)}, $\mathcal{A}=\mathcal{B}=0$. Thus $f$ is bijective.
+
+It remains to prove the \emph{existence} of $\mathcal{F}$. We claim that it is enough to consider the case in which $X$ \emph{is a projective space} $\mathbf{P}_r(\mathbf{C})$. Indeed, let $Y$ be an algebraic subvariety of $X=\mathbf{P}_r(\mathbf{C})$, and let $\mathcal{M}$ be a coherent analytic sheaf on $Y^h$. The sheaf $\mathcal{M}^X$ obtained by extending $\mathcal{M}$ by zero outside $Y^h$ is a coherent analytic sheaf on $X^h$. If Theorem~\hyperref[gaga:thm:3]{3} is assumed for $X$, there is a coherent algebraic sheaf $\mathcal{G}$ on $X$ such that $\mathcal{G}^h$ is isomorphic to $\mathcal{M}^X$.
+
+Let $\mathcal{I}=\mathcal{I}(Y)$ be the coherent sheaf of ideals defined by $Y$. If $f\in\mathcal{I}_x$, multiplication by $f$ is an endomorphism $\varphi$ of $\mathcal{G}_x$. The endomorphism $\varphi^h$ of $\mathcal{G}^h_x=\mathcal{M}^X_x$ is zero, since $\mathcal{M}$ is a coherent analytic sheaf on $Y^h$; hence $\varphi$ is also zero by Proposition~\hyperref[gaga:prop:10]{10} \emph{b)}. Thus $\mathcal{I}\mathcal{G}=0$, which means that there is a coherent algebraic sheaf $\mathcal{F}$ on $Y$ such that $\mathcal{G}=\mathcal{F}^X$ (\GAGACite{18}, no.~39, Proposition~3). By Proposition~\hyperref[gaga:prop:11]{11}, $(\mathcal{F}^h)^X$ is isomorphic to $(\mathcal{F}^X)^h=\mathcal{G}^h$, which is itself isomorphic to $\mathcal{M}^X$. Restricting to $Y$, we see that $\mathcal{F}^h$ is isomorphic to $\mathcal{M}$, proving the claim.
+
+\GAGASubsection{\texorpdfstring{16. Proof of Theorem 3. The sheaves $\mathcal{M}(n)$}{16. Proof of Theorem 3. The sheaves M(n)}}{gaga:no:16}
+
+In view of the preceding number, we shall suppose that $X=\mathbf{P}_r(\mathbf{C})$ and argue by induction on $r$, the case $r=0$ being trivial.
+
+For every $n\in\mathbf{Z}$, we first define a new analytic sheaf, the sheaf $\mathcal{M}(n)$.
+
+Let $t_0,\ldots,t_r$ be a system of homogeneous coordinates on $X$, and let $U_i$ be the open set consisting of the points at which $t_i\neq0$. Denote by $\mathcal{M}_i$ the restriction of $\mathcal{M}$ to $U_i$. Multiplication by $t_j^n/t_i^n$ is an isomorphism from $\mathcal{M}_j$ onto $\mathcal{M}_i$, defined over $U_i\cap U_j$. The sheaf $\mathcal{M}(n)$ is obtained by gluing the sheaves $\mathcal{M}_i$ by means of these isomorphisms (cf. \GAGACite{18}, no.~54, where the same construction is applied to algebraic sheaves). The sheaf $\mathcal{M}(n)$ is locally isomorphic to $\mathcal{M}$ and is therefore coherent, since $\mathcal{M}$ is. There is a canonical isomorphism
+
+\begin{equation*}
+\mathcal{M}(n)=\mathcal{M}\otimes\mathcal{H}(n),
+\end{equation*}
+
+where the tensor product is taken over $\mathcal{H}$. If $\mathcal{F}$ is an algebraic sheaf, then $\mathcal{F}^h(n)=\mathcal{F}(n)^h$.
+
+\GAGATarget{gaga:lemma:7}\textsc{Lemma 7}. --- \emph{Let $E$ be a hyperplane in $\mathbf{P}_r(\mathbf{C})$, and let $\mathcal{A}$ be a coherent analytic sheaf on $E$. Then $\mathrm{H}^q(E^h,\mathcal{A}(n))=0$ for $q>0$ and all sufficiently large $n$.}
+
+(This is ``Theorem B'' of \GAGACite{3}, exposé XVIII.)
+
+By the induction hypothesis, there is a coherent algebraic sheaf $\mathcal{F}$ on $E$ such that $\mathcal{A}=\mathcal{F}^h$, whence $\mathcal{A}(n)=\mathcal{F}(n)^h$. By Theorem~\hyperref[gaga:thm:1]{1}, $\mathrm{H}^q(E^h,\mathcal{A}(n))$ is isomorphic to $\mathrm{H}^q(E,\mathcal{F}(n))$, and Lemma~\hyperref[gaga:lemma:7]{7} then follows from Proposition~7 of \GAGACite{8}, no.~65.
+
+\GAGATarget{gaga:lemma:8}\textsc{Lemma 8}. --- \emph{Let $\mathcal{M}$ be a coherent analytic sheaf on $X=\mathbf{P}_r(\mathbf{C})$. There is an integer $n(\mathcal{M})$ such that, for every $n\geqslant n(\mathcal{M})$ and every $x\in X$, the $\mathcal{H}_x$-module $\mathcal{M}(n)_x$ is generated by the elements of $\mathrm{H}^0(X^h,\mathcal{M}(n))$.}
+
+(This is ``Theorem A'' of \GAGACite{3}, exposé XVIII.)
+
+First observe that, if $\mathrm{H}^0(X^h,\mathcal{M}(n))$ generates $\mathcal{M}(n)_x$, the same property holds for every $m\geqslant n$. Indeed, choose an index $k$ such that $x\in U_k$. For every $i$, let $\theta_i$ be scalar multiplication by $(t_k/t_i)^{m-n}$ on $\mathcal{M}_i$. The $\theta_i$ commute with the identifications defining $\mathcal{M}(n)$ and $\mathcal{M}(m)$, respectively, and thus give rise to a homomorphism $\theta:\mathcal{M}(n)\to\mathcal{M}(m)$. Since $\theta$ is an isomorphism over $U_k$, the assertion follows.
+
+Also observe that, if $\mathrm{H}^0(X^h,\mathcal{M}(n))$ generates $\mathcal{M}(n)_x$, it also generates $\mathcal{M}(n)_y$ for $y$ sufficiently near $x$, by \GAGACite{18}, no.~12.
+
+Together with the compactness of $X^h$, these two observations reduce us to proving the following assertion:
+
+\begin{quote}
+\emph{For every $x\in X$, there is an integer $n$, depending on $x$ and on $\mathcal{M}$, such that $\mathrm{H}^0(X^h,\mathcal{M}(n))$ generates $\mathcal{M}(n)_x$.}
+\end{quote}
+
+Choose a hyperplane $E$ through $x$, with homogeneous equation $t=0$. If $\mathcal{A}(E)$ denotes the sheaf of ideals defined by $E$ (cf. \GAGAInternalRef{gaga:no:3}{no.~3}), there is an exact sequence
+
+\begin{equation*}
+0\longrightarrow\mathcal{A}(E)\longrightarrow\mathcal{H}
+\longrightarrow\mathcal{H}_E\longrightarrow0.
+\end{equation*}
+
+Moreover, $\mathcal{A}(E)$ is isomorphic to $\mathcal{H}(-1)$, the isomorphism $\mathcal{H}(-1)\to\mathcal{A}(E)$ being defined by multiplication by $t$ (cf. the proof of Lemma~\hyperref[gaga:lemma:5]{5}).
+
+Tensoring with $\mathcal{M}$ gives an exact sequence
+
+\begin{equation*}
+\mathcal{M}\otimes\mathcal{A}(E)\longrightarrow\mathcal{M}
+\longrightarrow\mathcal{M}\otimes\mathcal{H}_E\longrightarrow0.
+\end{equation*}
+
+Write $\mathcal{B}=\mathcal{M}\otimes\mathcal{H}_E$, and let $\mathcal{C}$ be the kernel of the homomorphism $\mathcal{M}\otimes\mathcal{A}(E)\to\mathcal{M}$; thus $\mathcal{C}=\mathrm{Tor}_1(\mathcal{M},\mathcal{H}_E)$. Since $\mathcal{A}(E)$ is isomorphic to $\mathcal{H}(-1)$, the sheaf $\mathcal{M}\otimes\mathcal{A}(E)$ is isomorphic to $\mathcal{M}(-1)$, and we obtain the exact sequence
+
+\GAGATarget{gaga:eq:1}
+\begin{equation*}\tag{1}
+0\longrightarrow\mathcal{C}\longrightarrow\mathcal{M}(-1)
+\longrightarrow\mathcal{M}\longrightarrow\mathcal{B}\longrightarrow0.
+\end{equation*}
+
+Twisting exact sequence~\hyperref[gaga:eq:1]{(1)} by $n$ gives the exact sequence
+
+\GAGATarget{gaga:eq:2}
+\begin{equation*}\tag{2}
+0\longrightarrow\mathcal{C}(n)\longrightarrow\mathcal{M}(n-1)
+\longrightarrow\mathcal{M}(n)\longrightarrow\mathcal{B}(n)\longrightarrow0.
+\end{equation*}
+
+Let $\mathcal{L}_n$ be the kernel of $\mathcal{M}(n)\to\mathcal{B}(n)$. Sequence~\hyperref[gaga:eq:2]{(2)} decomposes into the two exact sequences
+
+\GAGATarget{gaga:eq:3}
+\begin{equation*}\tag{3}
+0\longrightarrow\mathcal{C}(n)\longrightarrow\mathcal{M}(n-1)
+\longrightarrow\mathcal{L}_n\longrightarrow0,
+\end{equation*}
+
+\GAGATarget{gaga:eq:4}
+\begin{equation*}\tag{4}
+0\longrightarrow\mathcal{L}_n\longrightarrow\mathcal{M}(n)
+\longrightarrow\mathcal{B}(n)\longrightarrow0,
+\end{equation*}
+
+which in turn give the exact cohomology sequences
+
+\GAGATarget{gaga:eq:5}
+\begin{equation*}\tag{5}
+\mathrm{H}^1(X^h,\mathcal{M}(n-1))
+\longrightarrow\mathrm{H}^1(X^h,\mathcal{L}_n)
+\longrightarrow\mathrm{H}^2(X^h,\mathcal{C}(n))
+\end{equation*}
+
+and
+
+\GAGATarget{gaga:eq:6}
+\begin{equation*}\tag{6}
+\mathrm{H}^1(X^h,\mathcal{L}_n)
+\longrightarrow\mathrm{H}^1(X^h,\mathcal{M}(n))
+\longrightarrow\mathrm{H}^1(X^h,\mathcal{B}(n)).
+\end{equation*}
+
+By the definitions of $\mathcal{B}$ and $\mathcal{C}$, we have $\mathcal{A}(E)\mathcal{B}=0$ and $\mathcal{A}(E)\mathcal{C}=0$, which means that $\mathcal{B}$ and $\mathcal{C}$ are coherent analytic sheaves on the hyperplane $E$. Lemma~\hyperref[gaga:lemma:7]{7} therefore shows that there is an integer $n_0$ such that, for every $n\geqslant n_0$,
+
+\begin{equation*}
+\mathrm{H}^1(X^h,\mathcal{B}(n))=0
+\quad\text{and}\quad
+\mathrm{H}^2(X^h,\mathcal{C}(n))=0.
+\end{equation*}
+
+The exact sequences~\hyperref[gaga:eq:5]{(5)} and \hyperref[gaga:eq:6]{(6)} then give the inequalities
+
+\GAGATarget{gaga:eq:7}
+\begin{equation*}\tag{7}
+\dim\mathrm{H}^1(X^h,\mathcal{M}(n-1))
+\geqslant
+\dim\mathrm{H}^1(X^h,\mathcal{L}_n)
+\geqslant
+\dim\mathrm{H}^1(X^h,\mathcal{M}(n)).
+\end{equation*}
+
+These dimensions are \emph{finite} by \GAGACite{5} (see also \GAGACite{3}, exposé XVII). Hence $\dim\mathrm{H}^1(X^h,\mathcal{M}(n))$ is a \emph{decreasing} function of $n$ for $n\geqslant n_0$. There is therefore an integer $n_1\geqslant n_0$ such that this function is \emph{constant} for $n\geqslant n_1$. We then have
+
+\GAGATarget{gaga:eq:8}
+\begin{equation*}\tag{8}
+\dim\mathrm{H}^1(X^h,\mathcal{M}(n-1))
+=
+\dim\mathrm{H}^1(X^h,\mathcal{L}_n)
+=
+\dim\mathrm{H}^1(X^h,\mathcal{M}(n))
+\quad\text{if }n>n_1.
+\end{equation*}
+
+Since $n_1\geqslant n_0$, we have $\mathrm{H}^1(X^h,\mathcal{B}(n))=0$, and exact sequence~\hyperref[gaga:eq:6]{(6)} shows that
+
+\begin{equation*}
+\mathrm{H}^1(X^h,\mathcal{L}_n)
+\longrightarrow
+\mathrm{H}^1(X^h,\mathcal{M}(n))
+\end{equation*}
+
+is surjective. But by \hyperref[gaga:eq:8]{(8)} these two vector spaces have the same dimension, so the homomorphism is injective. The exact cohomology sequence associated with \hyperref[gaga:eq:4]{(4)} therefore shows that\footnote{This is the method used by Kodaira--Spencer to prove the Lefschetz theorem (cf. \GAGACite{12}).}
+
+\GAGATarget{gaga:eq:9}
+\begin{equation*}\tag{9}
+\mathrm{H}^0(X^h,\mathcal{M}(n))
+\longrightarrow
+\mathrm{H}^0(X^h,\mathcal{B}(n))
+\quad\text{\emph{is surjective for}}\quad n>n_1.
+\end{equation*}
+
+Now choose an integer $n>n_1$ such that $\mathrm{H}^0(X^h,\mathcal{B}(n))$ generates $\mathcal{B}(n)_x$. This is possible because $\mathcal{B}$, being a coherent analytic sheaf on $E$, is of the form $\mathcal{G}^h$, and hence
+
+\begin{equation*}
+\mathrm{H}^0(X^h,\mathcal{B}(n))
+=
+\mathrm{H}^0(X,\mathcal{G}(n))
+\end{equation*}
+
+by Theorem~\hyperref[gaga:thm:1]{1}; and we know that $\mathrm{H}^0(X,\mathcal{G}(n))$ generates $\mathcal{G}(n)_x$ for all sufficiently large $n$ (cf. \GAGACite{18}, no.~55, Theorem~1).
+
+We claim that such an integer $n$ has the required property. To simplify the notation, put
+
+\begin{equation*}
+A=\mathcal{H}_x,\qquad M=\mathcal{M}(n)_x,\qquad
+\mathfrak{p}=\mathcal{A}_x(E),
+\end{equation*}
+
+and let $N$ be the $A$-submodule of $M$ generated by $\mathrm{H}^0(X^h,\mathcal{M}(n))$. We have
+
+\begin{equation*}
+\mathcal{B}(n)_x
+=\mathcal{M}(n)_x\otimes\mathcal{H}_{x,E}
+=M\otimes_A A/\mathfrak{p}
+=M/\mathfrak{p}M.
+\end{equation*}
+
+The preceding argument shows that the canonical image of $N$ in $M/\mathfrak{p}M$ generates $M/\mathfrak{p}M$. This may be written $M=N+\mathfrak{p}M$, and therefore, \emph{a fortiori}, $M=N+\mathfrak{m}M$, where $\mathfrak{m}$ is the maximal ideal of the local ring $A$. It follows that $M=N$ (\GAGAInternalRef{gaga:appendix}{Appendix}, Proposition~\GAGAInternalRef{gaga:prop:24}{24}, \GAGAInternalRef{gaga:prop:24:cor}{Corollary}), completing the proof of Lemma~\hyperref[gaga:lemma:8]{8}.
+
+\GAGASubsection{17. Completion of the proof of Theorem 3}{gaga:no:17}
+
+Let $\mathcal{M}$ still denote a coherent analytic sheaf on $X=\mathbf{P}_r(\mathbf{C})$. By Lemma~\hyperref[gaga:lemma:8]{8}, there is an integer $n$ such that $\mathcal{M}(n)$ is isomorphic to a quotient sheaf of a sheaf $\mathcal{H}^p$, and hence $\mathcal{M}$ is isomorphic to a quotient of $\mathcal{H}(-n)^p$. If $\mathcal{L}_0$ denotes the coherent algebraic sheaf $\mathcal{O}(-n)^p$, there is therefore an exact sequence
+
+\begin{equation*}
+0\longrightarrow\mathcal{R}\longrightarrow\mathcal{L}_0^h
+\longrightarrow\mathcal{M}\longrightarrow0,
+\end{equation*}
+
+where $\mathcal{R}$ is a coherent analytic sheaf.
+
+Applying the same argument to $\mathcal{R}$, we construct a coherent algebraic sheaf $\mathcal{L}_1$ and a surjective analytic homomorphism $\mathcal{L}_1^h\to\mathcal{R}$. Hence there is an exact sequence
+
+\begin{equation*}
+\mathcal{L}_1^h\xrightarrow{g}\mathcal{L}_0^h
+\longrightarrow\mathcal{M}\longrightarrow0.
+\end{equation*}
+
+By Theorem~\hyperref[gaga:thm:2]{2}, there is a homomorphism $f:\mathcal{L}_1\to\mathcal{L}_0$ such that $g=f^h$. If $\mathcal{F}$ denotes the cokernel of $f$, there is an exact sequence
+
+\begin{equation*}
+\mathcal{L}_1\xrightarrow{f}\mathcal{L}_0
+\longrightarrow\mathcal{F}\longrightarrow0,
+\end{equation*}
+
+and hence, by Proposition~\hyperref[gaga:prop:10]{10}, a new exact sequence
+
+\begin{equation*}
+\mathcal{L}_1^h\xrightarrow{g}\mathcal{L}_0^h
+\longrightarrow\mathcal{F}^h\longrightarrow0.
+\end{equation*}
+
+This shows that $\mathcal{M}$ is isomorphic to $\mathcal{F}^h$ and completes the proof of Theorem~\hyperref[gaga:thm:3]{3}.

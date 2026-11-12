@@ -1,0 +1,508 @@
+{
+  "cohomology_build": {
+    "log": {
+      "bytes": 47248,
+      "name": "cohomology.log",
+      "sha256": "D91B3B9ECCBB8A3FA6ACF6E6C3D69034CDD42E6B97F9B9E4BF53354E2397C442"
+    },
+    "new_block_overfull_boxes": 0,
+    "pdf": {
+      "bytes": 1763626,
+      "name": "cohomology.pdf",
+      "sha256": "2E08FEA7721E55A50E205014B5F337E875D8B2F6F6E6CE77B8E7031A68CDD29C"
+    },
+    "pdf_pages": 202,
+    "rerun_notices": 0,
+    "tex": {
+      "bytes": 774053,
+      "name": "cohomology.tex",
+      "sha256": "F8D720F5FECC2EF4215438C8E301230550D5ABFBFB6E395476A64F741F1BEEC4"
+    },
+    "undefined_citations": 0,
+    "undefined_references": 0,
+    "visual_reviewed_pages": [
+      162,
+      163,
+      164,
+      165,
+      166
+    ]
+  },
+  "deltas": {
+    "decisions": [
+      {
+        "action": "replace",
+        "decision_id": "D000929",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves all three assertions of Lemma 5.6.1 for an injective G-O-module B: q_*^G SheafHom_O(A,B) is flasque on Y, Hom_O(A,B) is right acyclic for G-invariants, and the internal Hom is right acyclic for Gamma_X^G. It also proves the underlying abelian internal-Hom sheaf flasque and explicitly makes no false claim that the global Hom module is injective.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-hom-injective-acyclic",
+        "supersedes": "D000622",
+        "unit_id": "tohoku:lemma:5.6.1"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000930",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now identifies each orbit product prod_{x in y} H_x canonically with Coind_{G_y}^G(H_y), proves the Shapiro isomorphisms H^n(G,Coind_{G_y}^G(M))=H^n(G_y,M), and proves that arbitrary products preserve this acyclicity. This is exactly the source's clean coinduced-Hom module step; the separate erroneous quotient-product formula remains open under D000590.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-equivariant-product-internal-hom",
+        "supersedes": "D000578",
+        "unit_id": "tohoku:construction:coinduced-hom-module"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000931",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now proves the corollary for an arbitrary ring R with G-action and semilinear left R-modules A and B: if B is injective in the equivariant module category, then Hom_R(A,B) is right acyclic for invariants in every positive degree. It also retains the source's warning that this Hom module need not be injective.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-skew-group-hom-injective-acyclic",
+        "supersedes": "D000598",
+        "unit_id": "tohoku:corollary:coinduced-hom-acyclicity"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000932",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now defines the source's auxiliary coinduced object B' as prod_{g in G} B, equivalently Map(G,B), and gives its formulas (r f)_g=g(r)f_g and (h f)_g=f_{gh}; this is the same definition expressed without separate crossed-product notation.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-skew-group-hom-injective-acyclic",
+        "supersedes": "D000603",
+        "unit_id": "tohoku:definition:coinduced-module-b-prime"
+      },
+      {
+        "action": "replace",
+        "decision_id": "D000933",
+        "disposition": "existing_equivalent",
+        "rationale": "Stacks now verifies that the displayed formulas make B' a compatible semilinear equivariant R-module and that eta:B->B', eta(b)_g=gb, is an injective equivariant map; injectivity of B then splits eta, exactly giving the source's U-module construction and direct-summand reduction.",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "stacks_labels": "cohomology-lemma-skew-group-hom-injective-acyclic",
+        "supersedes": "D000579",
+        "unit_id": "tohoku:construction:coinduced-u-module-b-prime"
+      }
+    ],
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 2,
+      "candidate_units": 0,
+      "decided_units": 678,
+      "decisions": 933,
+      "dispositions": {
+        "example_or_remark": 82,
+        "existing_equivalent": 302,
+        "existing_stronger": 38,
+        "existing_weaker": 19,
+        "extend_existing": 55,
+        "historical_reference": 33,
+        "new_section": 10,
+        "new_statement": 35,
+        "structural_only": 416
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 21,
+      "unit_candidates": 0,
+      "units": 990
+    },
+    "new_labels": [
+      "cohomology-lemma-equivariant-hom-injective-acyclic",
+      "cohomology-lemma-equivariant-product-internal-hom",
+      "cohomology-lemma-skew-group-hom-injective-acyclic"
+    ],
+    "remaining_gap_class_dispositions": 119,
+    "scan_counts": {
+      "labels": 21995,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1239,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13
+    },
+    "source_issues": [
+      {
+        "claim": "The printed formula H_y=prod_{q(x)=y}(H_x)^{G_x} is false: it repeats one stabilizer-fixed factor for every point of a single orbit, whereas an invariant family on that orbit is determined by one representative and gives H_{xi(y)}^{G_{xi(y)}}.",
+        "control": "Preserve the printed product diplomatically. In corrected French, English, and semantic source replace it by (prod_{q(x)=y}H_x)^G congruent H_{xi(y)}^{G_{xi(y)}} and hence one factor per orbit; keep D000590 open until that no-overwrite source correction is admitted, then append a resolving mapping successor.",
+        "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 215. For G=C2 acting freely and transitively on two points with H_x=Z and identity transport, (prod_{x in y}H_x)^G is the diagonal Z, while the printed product of stabilizer-fixed groups is Z x Z. The corrective Stacks lemma proves the one-factor formula.",
+        "evidence_labels": "cohomology-lemma-equivariant-product-internal-hom",
+        "issue_id": "I000020",
+        "kind": "source_orbit_product_overcount",
+        "resolution_decision": "",
+        "status": "confirmed",
+        "unit_id": "tohoku:construction:product-hom-sheaf"
+      },
+      {
+        "claim": "With the two displayed G-actions and the claimed direction H'->H'', the printed formula psi(f)(g)=g f(g) is not G-equivariant; the equivariant formula in that direction is psi(f)(g)=g^{-1}f(g).",
+        "control": "Preserve the printed formula diplomatically. In corrected French, English, and semantic source replace g by g^{-1} in the stated H'->H'' direction; keep D000591 open until that no-overwrite correction is admitted, then append a resolving mapping successor.",
+        "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 216. For (h v)_g=v_{gh} and (h star v)_g=h dot v_{gh}, the printed map gives psi(hv)_g=g dot v_{gh}, while (h star psi(v))_g=(hgh) dot v_{gh} in general; with g^{-1}, both sides equal g^{-1} dot v_{gh}. The printed g-formula is equivariant only in the reverse H''->H' direction.",
+        "evidence_labels": "cohomology-lemma-skew-group-hom-injective-acyclic",
+        "issue_id": "I000021",
+        "kind": "source_wrong_coinduction_intertwiner",
+        "resolution_decision": "",
+        "status": "confirmed",
+        "unit_id": "tohoku:construction:two-coinduced-g-actions"
+      }
+    ],
+    "substantive_map_changes": [
+      "tohoku:construction:coinduced-hom-module",
+      "tohoku:construction:coinduced-u-module-b-prime",
+      "tohoku:corollary:coinduced-hom-acyclicity",
+      "tohoku:definition:coinduced-module-b-prime",
+      "tohoku:lemma:5.6.1"
+    ]
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "contract": "read_once_then_execute_builder_same_bytes",
+        "path": "srcmap/start_build_tohoku_r16.py"
+      },
+      "builder": {
+        "bytes": 43588,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r16.py",
+        "sha256": "E0F27641B6CA8D55011B67D47D2EFD7F3C0D2407D24072AC5DA386F358747BE0"
+      }
+    },
+    "bootstrap": {
+      "bytes": 1330,
+      "name": "start_build_tohoku_r16.py",
+      "sha256": "F1F3B9C8DC37A3990D2A7C86BE16608354343DB684F81D8A29DD088CA9CAC2A5"
+    },
+    "contract": "same_bytes_bootstrap; exact_inputs_locked_against_write_delete_through_generation_replay_and_promotion",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "powershell_envelope": {
+      "bytes": 722,
+      "name": "start_build_tohoku_r16.ps1",
+      "sha256": "C814A84C07256E83235306063A4FE2645B95D6C993DC9A3C203CC14D1ED12AD3"
+    }
+  },
+  "files": [
+    {
+      "bytes": 624,
+      "name": "STATUS.md",
+      "sha256": "0D76370F5227DF4A300B042FC3CD1FD832A3B07179C85A05A987D0BBF98DD000"
+    },
+    {
+      "bytes": 5193,
+      "name": "cfg.json",
+      "sha256": "26911209D4EB7A27D0E088B92B94AE4695D4D13135621927DD28CB71F4740B7E"
+    },
+    {
+      "bytes": 70599,
+      "name": "check.json",
+      "sha256": "39843DAEF7DA5542B099A0ED9AAC21ABD932B5C8D473B6D5A7F3BCA012982D50"
+    },
+    {
+      "bytes": 317550,
+      "name": "dec.csv",
+      "sha256": "A112C2E0ECF5D8CF65E854F0114554099CF40A23240A9E78F0BB9C400780A1B9"
+    },
+    {
+      "bytes": 1877,
+      "name": "intake.json",
+      "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+    },
+    {
+      "bytes": 17080,
+      "name": "issues.csv",
+      "sha256": "E49BB99134A71F847FCCFD6E9E9D3ABAD4AFAD4D8E6267D565E6BD33881DD74D"
+    },
+    {
+      "bytes": 453856,
+      "name": "map.csv",
+      "sha256": "2E9975E9E93180028EFE6F621DF48153C03DE611B6E26EE2DBDBCAE5B739AF7D"
+    },
+    {
+      "bytes": 60428,
+      "name": "mcheck.json",
+      "sha256": "0977275901D8F2D9135A1F9B8E02024ED854256DA0AC9F25F6926AD9D4314A0F"
+    },
+    {
+      "bytes": 5258055,
+      "name": "stx.csv",
+      "sha256": "A861089289AE8B8BA47CCB8B799112FA2B5B05213D7B965DA03BA509D1232305"
+    },
+    {
+      "bytes": 472664,
+      "name": "tcand.csv",
+      "sha256": "9F2D1D24E3BCE5F84A6554587CD13B5EA4982CEC644F5602AEE5E88A7221DA09"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 391651,
+      "name": "units.csv",
+      "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+    }
+  ],
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 15403,
+      "path": "tohoku_r15/r15-check.json",
+      "sha256": "A0E4BF3601FA68AF5FA43D46697B384F655FEF08C208C7DD48FAB4B2E3966ADE"
+    },
+    "reason": "Workspace machine-safety policy forbids repository-wide Git inspection.",
+    "remote_server_freshness_verified": false
+  },
+  "nonclaims": [
+    "No Git command is executed by this ledger-only successor.",
+    "No Git commit or push is made by this receipt.",
+    "No remote-server freshness check is performed.",
+    "The Stacks scan binds the exact live integrated worktree, not the frozen HEAD tree.",
+    "The transaction denies write/delete access to every existing consumed file; hostile same-user mutation of directory namespaces is outside this lock contract.",
+    "No release, publication, upload, DOI, Zenodo, rights, or whole-paper gate is closed.",
+    "119 Tohoku gap-class dispositions remain after D000933.",
+    "Two newly confirmed source-formula issues remain open for the translation phase."
+  ],
+  "predecessor_dossier": {
+    "aggregate_sha256": "1563E7A4B54EC9894726E0AD699AD3D88EF2817F2C810C01D791BCFAE6E50268",
+    "bytes": 7063101,
+    "file_count": 15,
+    "files": [
+      {
+        "bytes": 518,
+        "name": "STATUS.md",
+        "sha256": "6E89984476035E75F09375E8C24D5282A37EA97BE746C6648B43447B7C0AAFFA"
+      },
+      {
+        "bytes": 5193,
+        "name": "cfg.json",
+        "sha256": "298FC999C14B1B6E942808664076F05B7CD837B074AA26387B9EB9CCFDFF7E31"
+      },
+      {
+        "bytes": 70283,
+        "name": "check.json",
+        "sha256": "29268CA2C499AFD64C47EA206CF3E7F095F0E3985E4CF0EDA081D3DCEA4C02E9"
+      },
+      {
+        "bytes": 315065,
+        "name": "dec.csv",
+        "sha256": "B516296DA756674B9F31ECB4252C00737AFA6D95BD50C03E3B68869618BF47E0"
+      },
+      {
+        "bytes": 1877,
+        "name": "intake.json",
+        "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+      },
+      {
+        "bytes": 15036,
+        "name": "issues.csv",
+        "sha256": "16DD4BCA450F4030F9EF3FE6F6A3C51CF64BEE81CE59F56AF141D572CB1C4328"
+      },
+      {
+        "bytes": 453050,
+        "name": "map.csv",
+        "sha256": "8DE9E955B23200953E123D8264B3F67D4B3903388333EC12EA8C7E6254A5C080"
+      },
+      {
+        "bytes": 60112,
+        "name": "mcheck.json",
+        "sha256": "00C8CE1BE9D796AEBC130EAB5BB99F647BA036DF624941EB49E4C4427305CE75"
+      },
+      {
+        "bytes": 15403,
+        "name": "r15-check.json",
+        "sha256": "A0E4BF3601FA68AF5FA43D46697B384F655FEF08C208C7DD48FAB4B2E3966ADE"
+      },
+      {
+        "bytes": 5257252,
+        "name": "stx.csv",
+        "sha256": "77F9F7EA8292BB8B6F2E192869089D948FBE86D3B1A3CBAE894CB9D29F8EDD23"
+      },
+      {
+        "bytes": 472664,
+        "name": "tcand.csv",
+        "sha256": "51B7838C66549088139BA6B519169571AC88243B3953E411C5AE3652438F655B"
+      },
+      {
+        "bytes": 2424,
+        "name": "tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      {
+        "bytes": 2453,
+        "name": "topics.csv",
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      },
+      {
+        "bytes": 120,
+        "name": "ucand.csv",
+        "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+      },
+      {
+        "bytes": 391651,
+        "name": "units.csv",
+        "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+      }
+    ],
+    "name": "tohoku_r15"
+  },
+  "schema": "tohoku-stacks-mapping-successor-r16-v1",
+  "semantic_source": {
+    "aggregate_sha256": "80A41130E5797219568E87AC0E15F7AF5F996EFE2895A159FC807C0356DCC33D",
+    "bytes": 2020949,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 10421,
+        "name": "bib.csv",
+        "sha256": "B8DBAF65161B60DC973DFAB6F57037185F8808274BB9618D27FE8BC65AD0B695"
+      },
+      {
+        "bytes": 768,
+        "name": "catalog.csv",
+        "sha256": "69896FB82FDAFD0AB0AEEC1D3387262F67740F952AAD102E5DA662CD9DA15AF9"
+      },
+      {
+        "bytes": 260771,
+        "name": "edges.csv",
+        "sha256": "5DCC1F11489A88AC02351103A6B5987877F55424CFFB066EAB9404EA5FA38BB1"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 6402,
+        "name": "manifest.json",
+        "sha256": "F314863C1F6586FBEBC91ADBF7256C3C3B3B32307F72C5726DD5DB916C758D52"
+      },
+      {
+        "bytes": 582572,
+        "name": "nodes.csv",
+        "sha256": "0F656565E4F4732E7DF1CE1ABA910A6A68BE4CC6896B325ED562E8CD573CF7A8"
+      },
+      {
+        "bytes": 106247,
+        "name": "objects.csv",
+        "sha256": "5BBAB7CD31239A509E4E927BE6D827285FE07CD8DED6180DC60DDB90A6AF7133"
+      },
+      {
+        "bytes": 513504,
+        "name": "occ.csv",
+        "sha256": "478BF2F1A3FC211E6D888A5D0E3DA8EAF20E44CC6439ACDD838678A1B221FFDB"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2190,
+        "name": "README.md",
+        "sha256": "61CFC939C8D65180675226D65B05C444ED8AE25D554A8A90D0168B4C886A11B8"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 159814,
+        "name": "refs.csv",
+        "sha256": "723B0C2B06713607EE39A78A33991C7E92CAB6A13BD5503ACA51F6C727C49C76"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325273,
+        "name": "terms.csv",
+        "sha256": "5E416E9CDC6983745E6D907110F4E91B5DD9EE273FF613FD70A0CC34CE8C4B12"
+      },
+      {
+        "bytes": 3744,
+        "name": "validation.json",
+        "sha256": "CBD612B566B2517A854A841154391E62C01EE0AE02834AB5BE7C48926673C9D2"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r10",
+    "sem_check": {
+      "bytes": 6395,
+      "name": "qa/v68r24/sem-check.json",
+      "sha256": "A425DDAA035F9E00D01579039F0E3786BCB0B52B079D614A7421D8828D837ADB"
+    },
+    "sem_input": {
+      "bytes": 299780,
+      "name": "qa/v68r24/sem-input.json",
+      "sha256": "42437BDDF7BE9AAB14869FD4B1F741191C8BCC9EDE1FFCDA3EB04964F8F1FB26"
+    }
+  },
+  "status": "PASS"
+}

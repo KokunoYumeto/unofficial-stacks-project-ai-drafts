@@ -1,0 +1,20 @@
+commit 491f9997fc177db20f1acff6cdfb854189a50721
+parent a04446e57ec1fbc252a871afcec7752fb2807b14
+date Tue Aug 11 18:22:56 2026 +0200
+subject Fix parenthesis in generator proof
+
+The definition of S_Y has an unmatched closing parenthesis after phi. The predicate is simply that phi factors through Y; this also agrees with the corresponding argument in Tohoku section 1.9, printed page 134.
+
+diff --git a/injectives.tex b/injectives.tex
+index 1b24742..a9e1347 100644
+--- a/injectives.tex
++++ b/injectives.tex
+@@ -1368,7 +1368,7 @@ Part (2) follows from the definition of cofinality and (1).
+ \medskip\noindent
+ Proof of (3). For any subobject $Y \subset X$
+ define $S_Y \in \mathcal{P}(\Mor(U, X))$ (power set) as
+-$S_Y = \{\phi \in \Mor(U,X) : \phi)\text{ factors through }Y\}$.
++$S_Y = \{\phi \in \Mor(U,X) : \phi\text{ factors through }Y\}$.
+ Then $Y = Y'$ if and only if $S_Y = S_{Y'}$. Hence the cardinality
+ of the set of subobjects is at most the cardinality of this power set.
+ \end{proof}

@@ -1,0 +1,81 @@
+{
+  "schema": "tohoku-stacks-d1014-independent-review-v1",
+  "formalization_id": "D1014",
+  "status": "STRICT_PASS",
+  "reviewer": "independent local replay",
+  "source_binding": {
+    "unit_id": "tohoku:construction:divisor-sequence:p1",
+    "map_row": 155,
+    "sem_r18_node_row": 155,
+    "english_p160_sha256": "EBDEF8E7B5AAFBA3B345F29137ED20A3CCA8B721422B48194B65D1324086D1CA",
+    "french_p160_sha256": "179E2429456CA9D0FC13CA75E2D560B0E508CB889C300F14DA4208B5BE995AE6",
+    "target_occurrences": {"english": 1, "french": 1},
+    "source_claim": "K^*/O^* is the sheaf of locally principal divisor germs and, under factorial local rings, the sheaf of divisor germs"
+  },
+  "candidate_replay": {
+    "path": "user/Documents/stacks-ftg/tmp/d1014_block_candidate.tex",
+    "bytes": 2795,
+    "sha256": "3BD61D287F0EB4A17FE1931694A8D7FED445009A3E3644CB00731C9D73DD498F",
+    "lines": 67,
+    "labels": [
+      "lemma-meromorphic-quotient-divisor-germs",
+      "equation-meromorphic-quotient-divisor-germs",
+      "remark-meromorphic-quotient-algebraic-boundary"
+    ],
+    "unique_labels": true,
+    "balanced_begin_end": true,
+    "balanced_display_math": true,
+    "all_refs_resolve_against_live_or_candidate": true,
+    "live_label_collisions": [],
+    "live_occurrences": 1
+  },
+  "mathematical_checks": [
+    {
+      "id": "M001",
+      "claim": "The quotient is taken in sheaves of abelian groups and is the cokernel of the divisor map.",
+      "basis": ["lemma-locally-UFD-divisor-resolution", "equation-locally-UFD-divisor-resolution"],
+      "result": "PASS"
+    },
+    {
+      "id": "M002",
+      "claim": "For every stalk A=O_{X,x} with fraction field K, K^*/A^* is the direct sum of height-one prime exponent groups.",
+      "basis": ["UFD stalk factorization", "lemma-locally-UFD-divisor-resolution"],
+      "result": "PASS"
+    },
+    {
+      "id": "M003",
+      "claim": "For an integral scheme the quotient stalks are locally principal divisor germs modulo local units; under local factoriality these are exactly Weil-divisor germs.",
+      "basis": ["lemma-meromorphic-functions-integral-scheme", "definition-sheaf-Weil-divisors", "local UFD identification"],
+      "result": "PASS"
+    },
+    {
+      "id": "M004",
+      "claim": "The candidate covers the general locally-principal clause and the post-assumption factorial/Weil clause; the p.161 flasque/cohomology consequences are inherited prerequisites rather than remapped claims.",
+      "result": "PASS"
+    },
+    {
+      "id": "M005",
+      "claim": "No analytic quotient, GAGA comparison, descent, projective-bundle lifting, or whole-section completion assertion is made.",
+      "result": "PASS"
+    }
+  ],
+  "mapping_review": {
+    "decision_id": "D001038",
+    "supersedes": "D000249",
+    "disposition": "existing_equivalent",
+    "reason": "The candidate covers both source clauses under the source's factorial assumption. Existing_stronger is not appropriate because the extra flasque/cohomology results belong to p.161, while extend_existing would understate the exact bounded match.",
+    "stacks_labels": "divisors-lemma-meromorphic-quotient-divisor-germs;divisors-section-meromorphic-functions;divisors-section-Weil-divisors",
+    "stacks_tags": "01X1;0BE0",
+    "result": "PASS"
+  },
+  "write_boundary_review": {
+    "source_layers_unchanged": true,
+    "source_corrections_unchanged": true,
+    "sealed_r57_unchanged": true,
+    "github_actions": 0,
+    "cleanup_actions": 0,
+    "broad_scans": 0,
+    "result": "PASS"
+  },
+  "errors": []
+}

@@ -1,0 +1,740 @@
+{
+  "schema": "gaga-stacks-foundation-1-4-design-v1",
+  "audit_date": "2026-08-24",
+  "status": "DESIGN_COMPLETE_CANDIDATE_STATIC_PASS_WITH_EXPLICIT_ANALYTIC_DEPENDENCIES",
+  "scope": {
+    "repository": "user/Documents/stacks-ftg",
+    "map_file": "user/Documents/stacks-ftg/gaga/map.csv",
+    "map_physical_lines": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "unit_ids": [
+      "gaga:no:1",
+      "gaga:no:2",
+      "gaga:def:1",
+      "gaga:no:3",
+      "gaga:prop:1",
+      "gaga:no:4"
+    ],
+    "source_section": "GAGA Section 1, nos. 1-4 only",
+    "write_boundary": [
+      "user/Documents/stacks-ftg/tmp/gaga_foundation_1_4_design.json",
+      "user/Documents/stacks-ftg/tmp/gaga_foundation_1_4_candidate.tex"
+    ],
+    "excluded": [
+      "No later GAGA source units.",
+      "No edits to live TeX, map, dossier, Makefile, chapters.tex, or my.bib.",
+      "No build, tag generation, scanner rerun, Git operation, publication, or cleanup audit."
+    ]
+  },
+  "conclusion": {
+    "pure_structural_containers_among_six": [],
+    "substantive_units": [
+      "gaga:no:1",
+      "gaga:def:1",
+      "gaga:prop:1",
+      "gaga:no:4"
+    ],
+    "mixed_heading_and_substantive_units": [
+      "gaga:no:2",
+      "gaga:no:3"
+    ],
+    "exact_recommendation": "Create a standalone top-level gaga.tex chapter and integrate only its stem, chapters.tex entry, and GAGA bibliography record. Do not insert these analytic foundations into existing algebraic chapters.",
+    "rationale": [
+      "The tranche defines a distinct reduced complex-analytic category, not an algebraic special case.",
+      "Its essential inputs are analytic theorems absent from the current Stacks tree.",
+      "A standalone chapter makes the reduced convention and external dependencies explicit and prevents silent contamination of algebraic definitions.",
+      "It supplies one dependency hub for existing and future uses of analytic spaces, analytification, and comparison theorems.",
+      "The baseline design constraint says analytic foundations must not be forced silently into algebraic chapters."
+    ]
+  },
+  "evidence": {
+    "controlling_source_component": {
+      "path": "user/Documents/stacks-ftg/gaga_source_r1.__stage__/english_source_aligned_workpass/components/01_analytic_spaces.tex",
+      "bytes": 12471,
+      "sha256": "49C0C95E80CE4DE5341753689911045E7AD1C00C8E2CD237AA427268C251BB29",
+      "line_count": 71,
+      "role": "Controlling English source for this audit.",
+      "lifecycle_note": "The path is staged; any later live integration must first verify that this exact byte identity remains the designated source."
+    },
+    "source_tranche_lf": {
+      "source_lines": [
+        3,
+        71
+      ],
+      "normalization": "UTF-8 source lines joined with LF and terminated by one LF",
+      "bytes": 12418,
+      "sha256": "4B45FE8BD8883CFB9D0F4EE2D38C03DC041FADBED121EE435314F2BFEA734DE0"
+    },
+    "authority_pdf": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/serre_gaga_bilingual_source_aligned_successor_20260803_r1/authority/AIF_1956__6__1_0.pdf",
+      "url": "https://www.numdam.org/article/AIF_1956__6__1_0.pdf",
+      "bytes": 4134102,
+      "sha256": "9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98",
+      "page_count": 43,
+      "reviewed_pdf_pages_1_based": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reviewed_printed_pages": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "visual_result": "PASS: rendered pages are legible and contain the controlling nos. 1-4, Definition 1, and Proposition 1 without observed source-layout defects.",
+      "render_directory": "user/Documents/stacks-ftg/tmp/pdfs/gaga_foundation_1_4/source",
+      "render_pngs": [
+        {
+          "file": "gaga-source-04.png",
+          "bytes": 243755,
+          "sha256": "D824EF3D1503D7EF4019EDC3E79BEAB4AD2F01CF51C11EB7EEA9F22AC6389487"
+        },
+        {
+          "file": "gaga-source-05.png",
+          "bytes": 238468,
+          "sha256": "795662EE4DB6E3CA56B09C23221B6E72F9348AC8929F93263DA72A9F85262F44"
+        },
+        {
+          "file": "gaga-source-06.png",
+          "bytes": 258747,
+          "sha256": "00336D52815DD0C76760313A2AEAD178D1FB12B1FB3DB6BD9F7D6CBC125023D8"
+        },
+        {
+          "file": "gaga-source-07.png",
+          "bytes": 262080,
+          "sha256": "8E637EEF7831F944AF0DA5674A2165FE97A5690F6CEF074C437E60D671864835"
+        },
+        {
+          "file": "gaga-source-08.png",
+          "bytes": 236598,
+          "sha256": "4F35A286A3588912B7A7BA1D608342937B23F80A324936043E401009840FC9C2"
+        }
+      ]
+    },
+    "mapping_files": {
+      "map_csv": {
+        "path": "user/Documents/stacks-ftg/gaga/map.csv",
+        "bytes": 58008,
+        "sha256": "8D89199320F8BECF05C73EFCB1468763AC17B0DBD3D78383160BB92887B5C0D7"
+      },
+      "units_csv": {
+        "path": "user/Documents/stacks-ftg/gaga/units.csv",
+        "bytes": 60100,
+        "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+      }
+    },
+    "current_scanner_oracle": {
+      "directory": "user/Documents/stacks-ftg/tmp/gaga_post_tohoku_scan_probe_r1",
+      "stx_csv": {
+        "bytes": 5291400,
+        "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"
+      },
+      "tcand_csv": {
+        "bytes": 222670,
+        "sha256": "143156A4BACED58796C3AED709A919DEC3F9E1BBE37A7D2AC275908991A3F933"
+      },
+      "tmap_csv": {
+        "bytes": 1792,
+        "sha256": "E1798EA106C06DC3E5E04B8A9C659B24409DCE9FD7A451119723C6776027FD99"
+      },
+      "check_json": {
+        "bytes": 84422,
+        "sha256": "88BEB039B2838BEAC8C9CF61CCA18E056A0336DDF9705970DCBEDFBB63D35464"
+      },
+      "counts": {
+        "tex_files": 119,
+        "labels": 22116,
+        "official_tags": 21437,
+        "topic_candidates": 569,
+        "errors": 0
+      },
+      "replay": "byte-identical",
+      "analytic_space_topic_result": {
+        "coverage": "no_direct",
+        "confidence": "high",
+        "rationale": "The current Stacks tree intentionally has no general category of complex analytic spaces."
+      }
+    },
+    "current_tree_file_identities": [
+      {
+        "path": "sheaves.tex",
+        "bytes": 215623,
+        "sha256": "78A727DA8893E4FB2362CC6343BD6B2E66FEBD1519328CA84835BF5E2C225B9F"
+      },
+      {
+        "path": "modules.tex",
+        "bytes": 232828,
+        "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+      },
+      {
+        "path": "algebra.tex",
+        "bytes": 1849442,
+        "sha256": "EBF5B66A0C9D62263F73815DE03651214CB27259C7DBA39564C859E4A123B7D6"
+      },
+      {
+        "path": "cohomology.tex",
+        "bytes": 948056,
+        "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+      },
+      {
+        "path": "pione.tex",
+        "bytes": 344238,
+        "sha256": "D725E01F5B388D5C3EA38EB9075C5AB93EAFB6C9B5B0C4331FCBE6D757A04DDD"
+      },
+      {
+        "path": "etale.tex",
+        "bytes": 112726,
+        "sha256": "E87F2A92F8FE668037ED225F11D5BFE42DFEDDF52A164975CE5BB54DE2ABF991"
+      },
+      {
+        "path": "Makefile",
+        "bytes": 7931,
+        "sha256": "416F12A2D33E065E2011966B1F82F633942AA8543F464A48C97F4F0E7F31810C"
+      },
+      {
+        "path": "chapters.tex",
+        "bytes": 8672,
+        "sha256": "0D1C01A1CB829E33114B7EE6DCC67E2C06DF43011D0AA9498C7BD2DCB283F11E"
+      },
+      {
+        "path": "my.bib",
+        "bytes": 220625,
+        "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE"
+      }
+    ],
+    "live_gaga_tex_exists": false,
+    "existing_gaga_bibliography_key_exists": false
+  },
+  "unit_audit": [
+    {
+      "unit_id": "gaga:no:1",
+      "map_physical_line": 4,
+      "map_row_lf_bytes": 408,
+      "map_row_lf_sha256": "34090F5F402FEB84A42B687E8AE4F8249472FF60A2A738C61813E47CDAE0ABEC",
+      "source_lines": [
+        3,
+        29
+      ],
+      "source_lf_bytes": 3883,
+      "source_lf_sha256": "C33AECD232AEB601C34B3F7F3FE12FFDA1142554E35E7EC0EE29E37F784A6727",
+      "classification": "substantive_numbered_unit",
+      "pure_structural_container": false,
+      "exact_role": "Defines analytic subsets of complex affine space, their induced sheaves of holomorphic function germs, holomorphic maps and analytic isomorphisms, and products.",
+      "projected_labels": [
+        "gaga-definition-analytic-subset",
+        "gaga-definition-holomorphic-map-analytic-subsets",
+        "gaga-lemma-analytic-subset-basic-properties"
+      ],
+      "map_row_text_lf": "gaga:no:1,gaga:no:1,numbered_unit,gaga,english_source_aligned_workpass/components/01_analytic_spaces.tex:3,english_source_aligned_workpass/components/01_analytic_spaces.tex:3,english_source_aligned_workpass/components/01_analytic_spaces.tex:3,9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98,analytic-space,,,,needs_review,generated_intake,,,Requires statement-level mathematical comparison.\n",
+      "exact_source_text_lf": "\\GAGASubsection{1. Analytic subsets of affine space}{gaga:no:1}\n\nLet $n$ be an integer $\\geqslant 0$, and let $\\mathbf{C}^n$ denote complex numerical space of dimension $n$, endowed with its usual topology. A subset $\\mathrm{U}$ of $\\mathbf{C}^n$ is said to be \\emph{analytic} if, for every $x\\in\\mathrm{U}$, there exist functions $f_1,\\ldots,f_k$, holomorphic in a neighbourhood $\\mathrm{W}$ of $x$, such that $\\mathrm{U}\\cap\\mathrm{W}$ is exactly the set of points $z\\in\\mathrm{W}$ satisfying the equations $f_i(z)=0$, $i=1,\\ldots,k$. The subset $\\mathrm{U}$ is then locally closed in $\\mathbf{C}^n$ (that is, the intersection of an open and a closed subset), hence locally compact when endowed with the topology induced from $\\mathbf{C}^n$.\n\nWe now endow the topological space $\\mathrm{U}$ with a sheaf. If $\\mathrm{X}$ is any space, we write $\\mathcal{C}(\\mathrm{X})$ for the sheaf of germs of complex-valued functions on $\\mathrm{X}$ (cf. \\GAGACite{18}, no.~3). If $\\mathcal{H}$ denotes the sheaf of germs of holomorphic functions on $\\mathbf{C}^n$, then $\\mathcal{H}$ is a subsheaf of $\\mathcal{C}(\\mathbf{C}^n)$. For $x\\in\\mathrm{U}$ there is a restriction homomorphism\n\n\\begin{equation*}\n\\varepsilon_x:\\quad \\mathcal{C}(\\mathbf{C}^n)_x\\longrightarrow\\mathcal{C}(\\mathrm{U})_x.\n\\end{equation*}\n\nThe image of $\\mathcal{H}_x$ under $\\varepsilon_x$ is a subring $\\mathcal{H}_{x,\\,\\mathrm{U}}$ of $\\mathcal{C}(\\mathrm{U})_x$; the rings $\\mathcal{H}_{x,\\,\\mathrm{U}}$ form a subsheaf $\\mathcal{H}_{\\mathrm{U}}$ of $\\mathcal{C}(\\mathrm{U})$, which we call the \\emph{sheaf of germs of holomorphic functions on $\\mathrm{U}$}; it is a sheaf of rings. We write $\\mathcal{A}_x(\\mathrm{U})$ for the kernel of $\\varepsilon_x:\\mathcal{H}_x\\to\\mathcal{H}_{x,\\,\\mathrm{U}}$. By the definition of $\\mathcal{H}_{x,\\,\\mathrm{U}}$, this is the set of $f\\in\\mathcal{H}_x$ whose restriction to $\\mathrm{U}$ vanishes in a neighbourhood of $x$. We shall frequently identify $\\mathcal{H}_{x,\\,\\mathrm{U}}$ with the quotient ring $\\mathcal{H}_x/\\mathcal{A}_x(\\mathrm{U})$.\n\nSince $\\mathrm{U}$ now has both a topology and a sheaf of functions, we can define the notion of a \\emph{holomorphic map} (cf. \\GAGACite{3}, Expos\\'e VI, and \\GAGACite{18}, no.~32):\n\nLet $\\mathrm{U}$ and $\\mathrm{V}$ be analytic subsets of $\\mathbf{C}^r$ and $\\mathbf{C}^s$, respectively. A map $\\varphi:\\mathrm{U}\\to\\mathrm{V}$ is called holomorphic if it is continuous and if $f\\in\\mathcal{H}_{\\varphi(x),\\,\\mathrm{V}}$ implies $f\\circ\\varphi\\in\\mathcal{H}_{x,\\,\\mathrm{U}}$.\n\nEquivalently, the $s$ coordinates of $\\varphi(x)$, $x\\in\\mathrm{U}$, are holomorphic functions of $x$, that is, sections of $\\mathcal{H}_{\\mathrm{U}}$.\n\nThe composite of two holomorphic maps is holomorphic. A bijection $\\varphi:\\mathrm{U}\\to\\mathrm{V}$ is called an \\emph{analytic isomorphism} (or simply an isomorphism) if $\\varphi$ and $\\varphi^{-1}$ are holomorphic. Equivalently, $\\varphi$ is a homeomorphism of $\\mathrm{U}$ onto $\\mathrm{V}$ that carries the sheaf $\\mathcal{H}_{\\mathrm{U}}$ to the sheaf $\\mathcal{H}_{\\mathrm{V}}$.\n\nIf $\\mathrm{U}$ and $\\mathrm{U}'$ are analytic subsets of $\\mathbf{C}^r$ and $\\mathbf{C}^{r'}$, then $\\mathrm{U}\\times\\mathrm{U}'$ is an analytic subset of $\\mathbf{C}^{r+r'}$. The properties stated in \\GAGACite{18}, no.~33 remain valid upon replacing every occurrence of ``locally closed subset'' by ``analytic subset'' and every occurrence of ``regular map'' by ``holomorphic map.'' In particular, if $\\varphi:\\mathrm{U}\\to\\mathrm{V}$ and $\\varphi':\\mathrm{U}'\\to\\mathrm{V}'$ are analytic isomorphisms, then so is\n\n\\begin{equation*}\n\\varphi\\times\\varphi':\\quad \\mathrm{U}\\times\\mathrm{U}'\\longrightarrow\\mathrm{V}\\times\\mathrm{V}'.\n\\end{equation*}\n\nUnlike the algebraic case, however, the topology of $\\mathrm{U}\\times\\mathrm{U}'$ is the product topology of the topologies of $\\mathrm{U}$ and $\\mathrm{U}'$.\n"
+    },
+    {
+      "unit_id": "gaga:no:2",
+      "map_physical_line": 5,
+      "map_row_lf_bytes": 411,
+      "map_row_lf_sha256": "981CC935C92011BE43966344770774E9B20AD4AE9ADC3C0230E920426E998DF1",
+      "source_lines": [
+        31,
+        43
+      ],
+      "source_lf_bytes": 2910,
+      "source_lf_sha256": "4D2E72DFE8CD683733C379829CD963FDCE94A57B154F7D5A1771158B72E0F1DF",
+      "classification": "mixed_heading_container_and_substantive_numbered_unit",
+      "pure_structural_container": false,
+      "exact_role": "Contains Definition 1 and, outside that nested definition, defines holomorphic maps of analytic spaces and charts, induced analytic subspaces, products, and their topology.",
+      "overlap_note": "Lines 33-37 are separately mapped as gaga:def:1; the residual prose in lines 39-43 remains substantive and cannot be discarded as a structural wrapper.",
+      "projected_labels": [
+        "gaga-section-serre-analytic-spaces",
+        "gaga-definition-serre-analytic-space",
+        "gaga-definition-analytic-subspace",
+        "gaga-lemma-serre-analytic-subspaces-products"
+      ],
+      "map_row_text_lf": "gaga:no:2,gaga:no:2,numbered_unit,gaga,english_source_aligned_workpass/components/01_analytic_spaces.tex:31,english_source_aligned_workpass/components/01_analytic_spaces.tex:31,english_source_aligned_workpass/components/01_analytic_spaces.tex:31,9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98,analytic-space,,,,needs_review,generated_intake,,,Requires statement-level mathematical comparison.\n",
+      "exact_source_text_lf": "\\GAGASubsection{2. The notion of analytic space}{gaga:no:2}\n\n\\GAGATarget{gaga:def:1}\\textsc{Definition 1}. --- \\emph{An analytic space is a set $\\mathrm{X}$ endowed with a topology and with a subsheaf $\\mathcal{H}_{\\mathrm{X}}$ of the sheaf $\\mathcal{C}(\\mathrm{X})$, subject to the following axioms:}\n\n$(\\mathrm{H}_{\\mathrm{I}})$. \\emph{There exists an open cover $\\{\\mathrm{V}_i\\}$ of $\\mathrm{X}$ such that every $\\mathrm{V}_i$, endowed with the topology and sheaf induced by those of $\\mathrm{X}$, is isomorphic to an analytic subset $\\mathrm{U}_i$ of an affine space, endowed with the topology and sheaf defined in \\GAGAInternalRef{gaga:no:1}{no.~1}.}\n\n$(\\mathrm{H}_{\\mathrm{II}})$. \\emph{The topology of $\\mathrm{X}$ is Hausdorff.}\n\nThe definitions in \\GAGAInternalRef{gaga:no:1}{no.~1} are local in nature and therefore carry over to analytic spaces. Thus, if $\\mathrm{X}$ is an analytic space, the sheaf $\\mathcal{H}_{\\mathrm{X}}$ is called the sheaf of germs of holomorphic functions on $\\mathrm{X}$. If $\\mathrm{X}$ and $\\mathrm{Y}$ are analytic spaces, a map $\\varphi:\\mathrm{X}\\to\\mathrm{Y}$ is called holomorphic if it is continuous and if $f\\in\\mathcal{H}_{\\varphi(x),\\,\\mathrm{Y}}$ implies $f\\circ\\varphi\\in\\mathcal{H}_{x,\\,\\mathrm{X}}$; these maps form a family of \\emph{morphisms} (in the sense of N. \\textsc{Bourbaki}) for the structure of analytic space.\n\nIf $\\mathrm{V}$ is an open subset of an analytic space $\\mathrm{X}$, a \\emph{chart} on $\\mathrm{V}$ means any analytic isomorphism from $\\mathrm{V}$ onto an analytic subset $\\mathrm{U}$ of an affine space. Axiom $(\\mathrm{H}_{\\mathrm{I}})$ says that $\\mathrm{X}$ can be covered by open subsets possessing charts. If $\\mathrm{Y}$ is a subset of $\\mathrm{X}$, we call $\\mathrm{Y}$ analytic if, for every chart $\\varphi:\\mathrm{V}\\to\\mathrm{U}$, the image $\\varphi(\\mathrm{Y}\\cap\\mathrm{V})$ is an analytic subset of $\\mathrm{U}$. If this is so, $\\mathrm{Y}$ is locally closed in $\\mathrm{X}$ and may naturally be endowed with a structure of analytic space, said to be \\emph{induced} by that of $\\mathrm{X}$ (cf. \\GAGACite{18}, no.~35 for the algebraic case). Likewise, if $\\mathrm{X}$ and $\\mathrm{X}'$ are analytic spaces, there exists a unique structure of analytic space on $\\mathrm{X}\\times\\mathrm{X}'$ such that, whenever $\\varphi:\\mathrm{V}\\to\\mathrm{U}$ and $\\varphi':\\mathrm{V}'\\to\\mathrm{U}'$ are charts, $\\varphi\\times\\varphi':\\mathrm{V}\\times\\mathrm{V}'\\to\\mathrm{U}\\times\\mathrm{U}'$ is a chart on $\\mathrm{V}\\times\\mathrm{V}'$. Endowed with this structure, $\\mathrm{X}\\times\\mathrm{X}'$ is called the \\emph{product} of the analytic spaces $\\mathrm{X}$ and $\\mathrm{X}'$. Notice that the topology of $\\mathrm{X}\\times\\mathrm{X}'$ agrees with the product topology of the topologies of $\\mathrm{X}$ and $\\mathrm{X}'$.\n\nWe leave it to the reader to carry over to analytic spaces the other results of \\GAGACite{18}, nos.~34--35.\n"
+    },
+    {
+      "unit_id": "gaga:def:1",
+      "map_physical_line": 6,
+      "map_row_lf_bytes": 410,
+      "map_row_lf_sha256": "E09306F46BC00CB68B8AF79FA7B8DC0994FBDEF77B0803E0A59E6E63EBAA8AFE",
+      "source_lines": [
+        33,
+        37
+      ],
+      "source_lf_bytes": 677,
+      "source_lf_sha256": "4A288836DB8B748A3AEDFBEC84314D92AB050E2767DE45BEB70C183FEF18DE4C",
+      "classification": "substantive_definition_nested_in_gaga:no:2",
+      "pure_structural_container": false,
+      "exact_role": "Defines Serre's reduced analytic spaces by the local analytic-subset chart axiom and Hausdorff axiom.",
+      "projected_labels": [
+        "gaga-definition-serre-analytic-space",
+        "gaga-remark-serre-analytic-spaces-reduced"
+      ],
+      "map_row_text_lf": "gaga:def:1,gaga:def:1,definition,gaga,english_source_aligned_workpass/components/01_analytic_spaces.tex:33,english_source_aligned_workpass/components/01_analytic_spaces.tex:33,english_source_aligned_workpass/components/01_analytic_spaces.tex:33,9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98,analytic-space,,,,needs_review,generated_intake,,,Requires statement-level mathematical comparison.\n",
+      "exact_source_text_lf": "\\GAGATarget{gaga:def:1}\\textsc{Definition 1}. --- \\emph{An analytic space is a set $\\mathrm{X}$ endowed with a topology and with a subsheaf $\\mathcal{H}_{\\mathrm{X}}$ of the sheaf $\\mathcal{C}(\\mathrm{X})$, subject to the following axioms:}\n\n$(\\mathrm{H}_{\\mathrm{I}})$. \\emph{There exists an open cover $\\{\\mathrm{V}_i\\}$ of $\\mathrm{X}$ such that every $\\mathrm{V}_i$, endowed with the topology and sheaf induced by those of $\\mathrm{X}$, is isomorphic to an analytic subset $\\mathrm{U}_i$ of an affine space, endowed with the topology and sheaf defined in \\GAGAInternalRef{gaga:no:1}{no.~1}.}\n\n$(\\mathrm{H}_{\\mathrm{II}})$. \\emph{The topology of $\\mathrm{X}$ is Hausdorff.}\n"
+    },
+    {
+      "unit_id": "gaga:no:3",
+      "map_physical_line": 7,
+      "map_row_lf_bytes": 397,
+      "map_row_lf_sha256": "8C0881615BEB2864610D615B409BE70217BFB4A63B76240F5CB7B31A35194807",
+      "source_lines": [
+        45,
+        57
+      ],
+      "source_lf_bytes": 2488,
+      "source_lf_sha256": "4509BAA2CB509BE8107BA7528FF85BC5B27CDB288CAC279D0E63493270BDF75D",
+      "classification": "mixed_heading_container_and_substantive_numbered_unit",
+      "pure_structural_container": false,
+      "exact_role": "Defines analytic sheaves as structure-sheaf modules, defines the vanishing ideal of a closed analytic subset and its quotient, contains Proposition 1 and its reduction to Oka-Cartan, and records examples.",
+      "overlap_note": "Lines 51-55 are separately mapped as gaga:prop:1; lines 47-49 and 57 remain substantive and cannot be discarded as a structural wrapper.",
+      "projected_labels": [
+        "gaga-section-analytic-modules",
+        "gaga-definition-analytic-module",
+        "gaga-definition-vanishing-ideal-analytic-subspace",
+        "gaga-theorem-oka-cartan-coherence",
+        "gaga-remark-examples-coherent-analytic-modules",
+        "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules"
+      ],
+      "map_row_text_lf": "gaga:no:3,gaga:no:3,numbered_unit,gaga,english_source_aligned_workpass/components/01_analytic_spaces.tex:45,english_source_aligned_workpass/components/01_analytic_spaces.tex:45,english_source_aligned_workpass/components/01_analytic_spaces.tex:45,9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98,,,,,needs_review,generated_intake,,,Requires statement-level mathematical comparison.\n",
+      "exact_source_text_lf": "\\GAGASubsection{3. Analytic sheaves}{gaga:no:3}\n\nThe definition of analytic sheaves given in \\GAGACite{2}, Expos\\'e XV extends immediately to an analytic space $\\mathrm{X}$: an analytic sheaf $\\mathcal{F}$ is simply a sheaf of modules over the sheaf of rings $\\mathcal{H}_{\\mathrm{X}}$, in other words, a sheaf of $\\mathcal{H}_{\\mathrm{X}}$-modules (cf. \\GAGACite{18}, no.~6).\n\nLet $\\mathrm{Y}$ be a closed analytic subset of $\\mathrm{X}$. For every $x\\in\\mathrm{X}$, let $\\mathcal{J}_x(\\mathrm{Y})$ be the set of $f\\in\\mathcal{H}_{x,\\,\\mathrm{X}}$ whose restriction to $\\mathrm{Y}$ vanishes in a neighbourhood of $x$. The $\\mathcal{J}_x(\\mathrm{Y})$ form a sheaf of ideals $\\mathcal{J}(\\mathrm{Y})$ of $\\mathcal{H}_{\\mathrm{X}}$; hence $\\mathcal{J}(\\mathrm{Y})$ is an analytic sheaf. The quotient sheaf $\\mathcal{H}_{\\mathrm{X}}/\\mathcal{J}(\\mathrm{Y})$ vanishes outside $\\mathrm{Y}$, and its restriction to $\\mathrm{Y}$ is precisely $\\mathcal{H}_{\\mathrm{Y}}$ by the definition of the induced structure. We may therefore identify it with $\\mathcal{H}_{\\mathrm{Y}}$; cf. \\GAGACite{18}, no.~5.\n\n\\GAGATarget{gaga:prop:1}\\textsc{Proposition 1}. --- a) \\emph{The sheaf $\\mathcal{H}_{\\mathrm{X}}$ is a coherent sheaf of rings} (\\GAGACite{18}, no.~15).\n\nb) \\emph{If $\\mathrm{Y}$ is a closed analytic subspace of $\\mathrm{X}$, then $\\mathcal{J}(\\mathrm{Y})$ is a coherent analytic sheaf (that is, a coherent sheaf of $\\mathcal{H}_{\\mathrm{X}}$-modules in the sense of \\GAGACite{18}, no.~12).}\n\nWhen $\\mathrm{X}$ is an open subset of $\\mathbf{C}^n$, these results are due to K. \\textsc{Oka} and H. \\textsc{Cartan}; cf. \\GAGACite{1}, Theorems~1 and~2, and \\GAGACite{2}, Expos\\'es XV--XVI. The general case reduces immediately to this one. Since the question is local, we may suppose that $\\mathrm{X}$ is a closed analytic subset of an open set $\\mathrm{U}\\subset\\mathbf{C}^n$. Then $\\mathcal{H}_{\\mathrm{X}}=\\mathcal{H}_{\\mathrm{U}}/\\mathcal{J}(\\mathrm{X})$, and, by what precedes, $\\mathcal{H}_{\\mathrm{U}}$ is a coherent sheaf of rings and $\\mathcal{J}(\\mathrm{X})$ is a coherent sheaf of ideals of $\\mathcal{H}_{\\mathrm{U}}$. It follows that $\\mathcal{H}_{\\mathrm{X}}$ is coherent; cf. \\GAGACite{18}, no.~16. Assertion b) is proved in the same way.\n\nOther examples of coherent analytic sheaves are the sheaves of germs of sections of fibre spaces with vector-space fibre (cf. \\GAGAInternalRef{gaga:no:20}{no.~20}) and the sheaves of germs of automorphic functions (\\GAGACite{3}, Expos\\'e XX).\n"
+    },
+    {
+      "unit_id": "gaga:prop:1",
+      "map_physical_line": 8,
+      "map_row_lf_bytes": 474,
+      "map_row_lf_sha256": "B5CADB793A23ABA17C2410BE53FDA62F092517A0F4DD2903357056CAC6D8B090",
+      "source_lines": [
+        51,
+        55
+      ],
+      "source_lf_bytes": 1149,
+      "source_lf_sha256": "8DFA71B5C8DEB377B1CEDBBA8D2E773725CC293682A822B8A18EF8B19AA891B6",
+      "classification": "substantive_proposition_nested_in_gaga:no:3",
+      "pure_structural_container": false,
+      "exact_role": "States coherence of the analytic structure sheaf and coherence of every closed analytic subspace's vanishing ideal, with a local reduction to Oka-Cartan on open subsets of complex affine space.",
+      "projected_labels": [
+        "gaga-theorem-oka-cartan-coherence"
+      ],
+      "map_row_text_lf": "gaga:prop:1,gaga:prop:1,proposition,gaga,english_source_aligned_workpass/components/01_analytic_spaces.tex:51,english_source_aligned_workpass/components/01_analytic_spaces.tex:51,english_source_aligned_workpass/components/01_analytic_spaces.tex:51,9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98,coherent,coherent-section-coherent-sheaves;modules-section-coherent,01BU;01XY,,needs_review,generated_intake,,,Requires statement-level mathematical comparison.\n",
+      "exact_source_text_lf": "\\GAGATarget{gaga:prop:1}\\textsc{Proposition 1}. --- a) \\emph{The sheaf $\\mathcal{H}_{\\mathrm{X}}$ is a coherent sheaf of rings} (\\GAGACite{18}, no.~15).\n\nb) \\emph{If $\\mathrm{Y}$ is a closed analytic subspace of $\\mathrm{X}$, then $\\mathcal{J}(\\mathrm{Y})$ is a coherent analytic sheaf (that is, a coherent sheaf of $\\mathcal{H}_{\\mathrm{X}}$-modules in the sense of \\GAGACite{18}, no.~12).}\n\nWhen $\\mathrm{X}$ is an open subset of $\\mathbf{C}^n$, these results are due to K. \\textsc{Oka} and H. \\textsc{Cartan}; cf. \\GAGACite{1}, Theorems~1 and~2, and \\GAGACite{2}, Expos\\'es XV--XVI. The general case reduces immediately to this one. Since the question is local, we may suppose that $\\mathrm{X}$ is a closed analytic subset of an open set $\\mathrm{U}\\subset\\mathbf{C}^n$. Then $\\mathcal{H}_{\\mathrm{X}}=\\mathcal{H}_{\\mathrm{U}}/\\mathcal{J}(\\mathrm{X})$, and, by what precedes, $\\mathcal{H}_{\\mathrm{U}}$ is a coherent sheaf of rings and $\\mathcal{J}(\\mathrm{X})$ is a coherent sheaf of ideals of $\\mathcal{H}_{\\mathrm{U}}$. It follows that $\\mathcal{H}_{\\mathrm{X}}$ is coherent; cf. \\GAGACite{18}, no.~16. Assertion b) is proved in the same way.\n"
+    },
+    {
+      "unit_id": "gaga:no:4",
+      "map_physical_line": 9,
+      "map_row_lf_bytes": 411,
+      "map_row_lf_sha256": "362E53A9C5DFF8EB5323F0C0BB45F09A3799CE81CB54F0C83A898569176ACAA7",
+      "source_lines": [
+        59,
+        71
+      ],
+      "source_lf_bytes": 3134,
+      "source_lf_sha256": "4256BA107724047D54D56F62DFB67043942F76E6A707222C5A87247C2B7B9140",
+      "classification": "substantive_numbered_unit",
+      "pure_structural_container": false,
+      "exact_role": "Identifies local rings as reduced Noetherian quotients of convergent power-series rings, states germ reconstruction, characterizes simple points by regularity, and relates analytic components and dimension to minimal primes and Krull dimension.",
+      "projected_labels": [
+        "gaga-section-local-analytic-algebras",
+        "gaga-lemma-local-analytic-algebra",
+        "gaga-lemma-analytic-germ-local-algebra",
+        "gaga-lemma-simple-point-regular-local",
+        "gaga-lemma-components-dimension-analytic-space"
+      ],
+      "map_row_text_lf": "gaga:no:4,gaga:no:4,numbered_unit,gaga,english_source_aligned_workpass/components/01_analytic_spaces.tex:59,english_source_aligned_workpass/components/01_analytic_spaces.tex:59,english_source_aligned_workpass/components/01_analytic_spaces.tex:59,9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98,analytic-space,,,,needs_review,generated_intake,,,Requires statement-level mathematical comparison.\n",
+      "exact_source_text_lf": "\\GAGASubsection{4. A neighbourhood of a point in an analytic space}{gaga:no:4}\n\nLet $\\mathrm{X}$ be an analytic space, let $x\\in\\mathrm{X}$, and let $\\mathcal{H}_x$ be the ring of germs of holomorphic functions on $\\mathrm{X}$ at $x$. This ring is an algebra over $\\mathbf{C}$ with a unique maximal ideal $\\mathfrak{m}$, consisting of the functions $f$ that vanish at $x$, and the field $\\mathcal{H}_x/\\mathfrak{m}$ is precisely $\\mathbf{C}$. In other words, $\\mathcal{H}_x$ is a \\emph{local algebra} over $\\mathbf{C}$. When $\\mathrm{X}=\\mathbf{C}^n$, the algebra $\\mathcal{H}_x$ is the algebra $\\mathbf{C}\\{z_1,\\ldots,z_n\\}$ of convergent power series in $n$ variables. In general, $\\mathcal{H}_x$ is isomorphic to a quotient algebra $\\mathbf{C}\\{z_1,\\ldots,z_n\\}/\\mathfrak{a}$, since $\\mathrm{X}$ is locally isomorphic to an analytic subspace of $\\mathbf{C}^n$. It follows that $\\mathcal{H}_x$ is a \\emph{Noetherian ring}; it is also an \\emph{analytic ring} in the sense of H. \\textsc{Cartan} (\\GAGACite{3}, Expos\\'e VII).\n\nIt is easy to see that knowledge of $\\mathcal{H}_x$ determines $\\mathrm{X}$ in a neighbourhood of $x$ (\\GAGACite{3}, \\emph{loc. cit.}). In particular, $\\mathrm{X}$ is isomorphic to $\\mathbf{C}^n$ in a neighbourhood of $x$ if and only if the algebra $\\mathcal{H}_x$ is isomorphic to $\\mathbf{C}\\{z_1,\\ldots,z_n\\}$. One readily sees that this is equivalent to $\\mathcal{H}_x$ being a \\emph{regular} local ring of dimension $n$ (for all matters concerning local rings, cf. \\GAGACite{16}). The point $x$ is then called a \\emph{simple point} of dimension $n$ on $\\mathrm{X}$; if all points of $\\mathrm{X}$ are simple, $\\mathrm{X}$ is called an analytic \\emph{variety}.\n\nReturn to the general case. Since $\\mathcal{H}_x$ has no nilpotent element other than $0$, it follows (cf. \\GAGACite{15}, Chapter IV, \\S 2) that\n\n\\begin{equation*}\n0=\\bigcap\\mathfrak{p}_i,\n\\end{equation*}\n\nwhere the $\\mathfrak{p}_i$ are the minimal prime ideals of $\\mathcal{H}_x$. If $\\mathrm{X}_i$ denotes the irreducible components of $\\mathrm{X}$ at $x$, then $\\mathfrak{p}_i=\\mathcal{A}_x(\\mathrm{X}_i)$ and $\\mathcal{H}_x/\\mathfrak{p}_i=\\mathcal{H}_{x,\\,\\mathrm{X}_i}$. This essentially reduces the local study of $\\mathrm{X}$ to that of the $\\mathrm{X}_i$. For example, the \\emph{analytic dimension} (that is, half the topological dimension) of $\\mathrm{X}$ at $x$ is the supremum of the dimensions of the $\\mathrm{X}_i$. Notice that this dimension \\emph{coincides} with the dimension, in the sense of Krull, of the local ring $\\mathcal{H}_x$. Indeed, it is enough to verify this when $\\mathrm{X}$ is irreducible at $x$, that is, when $\\mathcal{H}_x$ is an integral domain. In that case, if $r$ denotes the analytic dimension of $\\mathrm{X}$ at $x$, it is known (cf. \\GAGACite{14}, \\S 4 and \\GAGACite{3}, Expos\\'e VIII) that $\\mathcal{H}_x$ is a finite extension of $\\mathbf{C}\\{z_1,\\ldots,z_r\\}$. Since the completion of $\\mathbf{C}\\{z_1,\\ldots,z_r\\}$ is the formal power-series algebra $\\mathbf{C}[[z_1,\\ldots,z_r]]$, its dimension is $r$; the same is therefore true of $\\mathcal{H}_x$ by \\GAGACite{16}, p.~18, proving the assertion.\n"
+    }
+  ],
+  "exact_claims": {
+    "gaga:def:1": {
+      "convention": "Reduced 1956 Serre analytic spaces only.",
+      "ambient_data": "A set X with a topology and a subsheaf H_X of the sheaf C(X) of germs of complex-valued functions.",
+      "axiom_H_I": "X admits an open cover by pieces isomorphic, with induced topology and sheaf, to analytic subsets of complex affine spaces carrying the no. 1 topology and sheaf.",
+      "axiom_H_II": "The topology of X is Hausdorff.",
+      "consequence": "Because H_X is a subsheaf of a function sheaf, its stalks have no nonzero nilpotents. The definition must not be silently modernized to nonreduced analytic spaces."
+    },
+    "gaga:prop:1": {
+      "part_a": "The analytic structure sheaf H_X is a coherent sheaf of rings; in current Stacks language H_X is coherent as an H_X-module.",
+      "part_b": "For every closed analytic subspace Y of X, its vanishing ideal J(Y) is a coherent H_X-module.",
+      "local_reduction": "Locally write X as a closed analytic subset of an open Omega in C^n and Y as a closed analytic subset with ideals I_X subset I_Y. Oka-Cartan gives coherence of O_Omega, I_X, and I_Y; coherent quotients and change of rings give coherence of O_X=O_Omega/I_X and J_Y=I_Y/I_X."
+    }
+  },
+  "current_stacks_coverage": {
+    "reusable_foundations": [
+      {
+        "label": "sheaves-definition-ringed-space",
+        "official_tag": "0091",
+        "use": "Abstract ringed-space language."
+      },
+      {
+        "label": "modules-definition-coherent",
+        "official_tag": "01BV",
+        "use": "Definition of coherent structure-sheaf modules."
+      },
+      {
+        "label": "modules-lemma-coherent-abelian",
+        "official_tag": "01BY",
+        "use": "Kernels, cokernels, and two-out-of-three for coherent modules."
+      },
+      {
+        "label": "modules-lemma-coherent-structure-sheaf",
+        "official_tag": "01BZ",
+        "use": "Coherence versus finite presentation once the structure sheaf is coherent."
+      },
+      {
+        "label": "modules-lemma-coherent-change-rings",
+        "official_tag": null,
+        "use": "Passage through a coherent quotient sheaf of rings."
+      },
+      {
+        "label": "algebra-lemma-Noetherian-permanence",
+        "official_tag": "00FN",
+        "use": "Noetherian quotient/permanence consequences after analytic Noetherianity is supplied."
+      },
+      {
+        "label": "algebra-definition-regular-local",
+        "official_tag": "00KU",
+        "use": "Algebraic definition of regular local ring."
+      },
+      {
+        "label": "algebra-lemma-Noetherian-irreducible-components",
+        "official_tag": null,
+        "use": "Finiteness of minimal primes."
+      },
+      {
+        "label": "algebra-lemma-Zariski-topology",
+        "official_tag": "00E0",
+        "use": "Nilradical/intersection-of-primes algebra."
+      }
+    ],
+    "existing_analytic_consumers_not_foundations": [
+      "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules",
+      "cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional",
+      "cohomology-lemma-coherent-analytic-sheaf-ext",
+      "pione-section-comparison-complex",
+      "etale-lemma-etale-analytification-local-isomorphism"
+    ],
+    "finding": "Existing files use complex analytic spaces or analytification in bounded statements but do not define the general category or prove the Oka-Cartan foundation. Algebraic lemmas can discharge formal consequences only after the analytic inputs are supplied."
+  },
+  "missing_analytic_foundations": [
+    {
+      "id": "analytic-subsets-and-category",
+      "needed_for": [
+        "gaga:no:1",
+        "gaga:no:2",
+        "gaga:def:1"
+      ],
+      "statement": "Local zero-set definition, induced holomorphic-function sheaf, holomorphic maps, charts, induced analytic subspaces, and products for reduced Serre analytic spaces.",
+      "candidate_status": "stated_and_elementarily_proved_in_candidate"
+    },
+    {
+      "id": "oka-cartan-coherence",
+      "needed_for": [
+        "gaga:prop:1"
+      ],
+      "statement": "On an open subset of C^n, O and vanishing ideals of closed analytic subsets are coherent.",
+      "candidate_status": "explicit_external_theorem_dependency_then_formal_reduction"
+    },
+    {
+      "id": "weierstrass-noetherianity",
+      "needed_for": [
+        "gaga:no:4"
+      ],
+      "statement": "The convergent power-series ring C{z_1,...,z_n} is Noetherian.",
+      "candidate_status": "explicit_external_theorem_dependency"
+    },
+    {
+      "id": "analytic-germ-local-algebra-realization",
+      "needed_for": [
+        "gaga:no:4"
+      ],
+      "statement": "Local homomorphisms between analytic local C-algebras arise contravariantly from holomorphic germ maps; local-algebra isomorphisms recover analytic germs.",
+      "candidate_status": "candidate_proof_sketch_given"
+    },
+    {
+      "id": "regular-analytic-local-ring-criterion",
+      "needed_for": [
+        "gaga:no:4"
+      ],
+      "statement": "A reduced analytic germ is smooth/simple of dimension n exactly when its local analytic ring is regular of dimension n.",
+      "candidate_status": "explicit_dependency_on_analytic_inverse_or_implicit_function_theorem"
+    },
+    {
+      "id": "local-analytic-nullstellensatz",
+      "needed_for": [
+        "gaga:no:4"
+      ],
+      "statement": "Radical ideals/minimal primes of a local analytic algebra correspond to analytic subgerms/irreducible components.",
+      "candidate_status": "explicit_external_theorem_dependency"
+    },
+    {
+      "id": "analytic-parameter-and-dimension-theorem",
+      "needed_for": [
+        "gaga:no:4"
+      ],
+      "statement": "An irreducible analytic local algebra of analytic dimension r is finite over C{z_1,...,z_r}, yielding equality with Krull dimension.",
+      "candidate_status": "explicit_external_theorem_dependency"
+    }
+  ],
+  "architecture_evaluation": {
+    "selected": "standalone_top_level_gaga_tex",
+    "standalone": {
+      "decision": "recommended",
+      "benefits": [
+        "Keeps the analytic category, reduced convention, and external analytic theorems visible in one place.",
+        "Preserves the scope and terminology of GAGA nos. 1-4.",
+        "Avoids turning algebraic chapters into mixed analytic/algebraic foundations.",
+        "Provides stable gaga-* labels for current analytic consumers and later GAGA comparison sections."
+      ],
+      "cost": "One narrow chapter registration and one bibliography record."
+    },
+    "insert_into_existing_algebraic_chapters": {
+      "decision": "rejected",
+      "reasons": [
+        "No existing chapter owns the category of complex analytic spaces.",
+        "Sheaves and Modules provide reusable abstract language but not analytic existence theorems.",
+        "Algebra provides formal local-ring consequences but not convergent power-series or analytic dimension theorems.",
+        "Splitting the source would obscure the reduced convention and make later dependencies harder to audit."
+      ]
+    }
+  },
+  "initial_tex_spine": {
+    "candidate_path": "user/Documents/stacks-ftg/tmp/gaga_foundation_1_4_candidate.tex",
+    "candidate_bytes": 14067,
+    "candidate_sha256": "8D4C4D9C9CF3E7386077E6E00E99415E69696BFC4708C37DAFB1DD7A46FF8800",
+    "complete_standalone_shell": true,
+    "title": "Complex Analytic Spaces and GAGA",
+    "scope_note": "Only GAGA Section 1, nos. 1-4 are developed; later GAGA units are deliberately absent.",
+    "ordered_sections": [
+      {
+        "title": "Introduction",
+        "labels": [
+          "gaga-section-introduction"
+        ],
+        "purpose": "Declare the reduced 1956 scope and link to ringed spaces/coherent modules."
+      },
+      {
+        "title": "Analytic subsets of complex affine space",
+        "labels": [
+          "gaga-section-analytic-subsets",
+          "gaga-definition-analytic-subset",
+          "gaga-definition-holomorphic-map-analytic-subsets",
+          "gaga-lemma-analytic-subset-basic-properties"
+        ],
+        "source_units": [
+          "gaga:no:1"
+        ]
+      },
+      {
+        "title": "Serre complex analytic spaces",
+        "labels": [
+          "gaga-section-serre-analytic-spaces",
+          "gaga-definition-serre-analytic-space",
+          "gaga-remark-serre-analytic-spaces-reduced",
+          "gaga-definition-analytic-subspace",
+          "gaga-lemma-serre-analytic-subspaces-products"
+        ],
+        "source_units": [
+          "gaga:no:2",
+          "gaga:def:1"
+        ]
+      },
+      {
+        "title": "Analytic modules and Oka--Cartan coherence",
+        "labels": [
+          "gaga-section-analytic-modules",
+          "gaga-definition-analytic-module",
+          "gaga-definition-vanishing-ideal-analytic-subspace",
+          "gaga-theorem-oka-cartan-coherence",
+          "gaga-remark-examples-coherent-analytic-modules"
+        ],
+        "source_units": [
+          "gaga:no:3",
+          "gaga:prop:1"
+        ]
+      },
+      {
+        "title": "Local analytic algebras",
+        "labels": [
+          "gaga-section-local-analytic-algebras",
+          "gaga-lemma-local-analytic-algebra",
+          "gaga-lemma-analytic-germ-local-algebra",
+          "gaga-lemma-simple-point-regular-local",
+          "gaga-lemma-components-dimension-analytic-space"
+        ],
+        "source_units": [
+          "gaga:no:4"
+        ]
+      }
+    ],
+    "static_qa": {
+      "begin_environments": 38,
+      "end_environments": 38,
+      "environment_mismatches": 0,
+      "local_labels": 21,
+      "unique_local_labels": 21,
+      "duplicate_local_labels": 0,
+      "unique_references": 17,
+      "unresolved_references_against_candidate_and_fresh_stx": 0,
+      "projected_full_label_collisions_against_fresh_stx": 0,
+      "citations": [
+        "GAGA"
+      ],
+      "missing_bibliography_keys": [
+        "GAGA"
+      ],
+      "build_performed": false,
+      "build_reason": "Explicit task boundary forbids builds."
+    }
+  },
+  "narrow_integration_design": {
+    "live_files_to_change_later": [
+      "user/Documents/stacks-ftg/gaga.tex",
+      "user/Documents/stacks-ftg/Makefile",
+      "user/Documents/stacks-ftg/tags/Makefile",
+      "user/Documents/stacks-ftg/chapters.tex",
+      "user/Documents/stacks-ftg/preamble.tex",
+      "user/Documents/stacks-ftg/my.bib"
+    ],
+    "gaga_tex": {
+      "operation": "Promote the exact candidate bytes to the new top-level gaga.tex, after rechecking candidate SHA-256.",
+      "source_candidate_sha256": "8D4C4D9C9CF3E7386077E6E00E99415E69696BFC4708C37DAFB1DD7A46FF8800"
+    },
+    "makefile": {
+      "anchor_before": "algebraization curves resolve models functors equiv \\\npione etale-cohomology \\",
+      "replacement": "algebraization curves resolve models functors equiv gaga \\\npione etale-cohomology \\",
+      "rationale": "Register gaga immediately after equiv and before pione, with no unrelated reorder."
+    },
+    "chapters_tex": {
+      "anchor_after": "\\item \\hyperref[equiv-section-phantom]{Derived Categories of Varieties}",
+      "inserted_line": "\\item \\hyperref[gaga-section-phantom]{Complex Analytic Spaces and GAGA}",
+      "next_existing_line": "\\item \\hyperref[pione-section-phantom]{Fundamental Groups of Schemes}"
+    },
+    "my_bib": {
+      "missing_key": "GAGA",
+      "exact_candidate_entry": "@ARTICLE{GAGA,\n    AUTHOR = {Serre, Jean-Pierre},\n     TITLE = {G\\'eom\\'etrie alg\\'ebrique et g\\'eom\\'etrie analytique},\n   JOURNAL = {Annales de l'Institut Fourier},\n    VOLUME = {6},\n      YEAR = {1956},\n     PAGES = {1--42},\n       DOI = {10.5802/aif.59},\n       URL = {https://www.numdam.org/item/AIF_1956__6__1_0/},\n}\n"
+    }
+  },
+  "projected_mapping_transaction": [
+    {
+      "unit_id": "gaga:no:1",
+      "preintegration_assessment": "new_section",
+      "postintegration_target_disposition": "existing_equivalent",
+      "target_labels": [
+        "gaga-definition-analytic-subset",
+        "gaga-definition-holomorphic-map-analytic-subsets",
+        "gaga-lemma-analytic-subset-basic-properties"
+      ]
+    },
+    {
+      "unit_id": "gaga:no:2",
+      "preintegration_assessment": "new_section",
+      "postintegration_target_disposition": "existing_equivalent",
+      "target_labels": [
+        "gaga-section-serre-analytic-spaces",
+        "gaga-definition-serre-analytic-space",
+        "gaga-definition-analytic-subspace",
+        "gaga-lemma-serre-analytic-subspaces-products"
+      ]
+    },
+    {
+      "unit_id": "gaga:def:1",
+      "preintegration_assessment": "new_statement",
+      "postintegration_target_disposition": "existing_equivalent",
+      "target_labels": [
+        "gaga-definition-serre-analytic-space",
+        "gaga-remark-serre-analytic-spaces-reduced"
+      ]
+    },
+    {
+      "unit_id": "gaga:no:3",
+      "preintegration_assessment": "new_section",
+      "postintegration_target_disposition": "existing_equivalent",
+      "target_labels": [
+        "gaga-section-analytic-modules",
+        "gaga-definition-analytic-module",
+        "gaga-definition-vanishing-ideal-analytic-subspace",
+        "gaga-theorem-oka-cartan-coherence",
+        "gaga-remark-examples-coherent-analytic-modules",
+        "cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules"
+      ]
+    },
+    {
+      "unit_id": "gaga:prop:1",
+      "preintegration_assessment": "new_statement",
+      "postintegration_target_disposition": "existing_equivalent",
+      "target_labels": [
+        "gaga-theorem-oka-cartan-coherence"
+      ]
+    },
+    {
+      "unit_id": "gaga:no:4",
+      "preintegration_assessment": "new_section",
+      "postintegration_target_disposition": "existing_equivalent",
+      "target_labels": [
+        "gaga-section-local-analytic-algebras",
+        "gaga-lemma-local-analytic-algebra",
+        "gaga-lemma-analytic-germ-local-algebra",
+        "gaga-lemma-simple-point-regular-local",
+        "gaga-lemma-components-dimension-analytic-space"
+      ]
+    }
+  ],
+  "blockers_and_prerequisites": [
+    {
+      "id": "missing-GAGA-bib-key",
+      "state": "open_deterministic",
+      "evidence": "The candidate cites GAGA and my.bib has no GAGA key.",
+      "remedy": "Add the exact proposed entry before any live build."
+    },
+    {
+      "id": "external-analytic-theorems",
+      "state": "explicit_dependencies_not_yet_internalized",
+      "evidence": "Oka-Cartan coherence, Weierstrass Noetherianity, the analytic regularity criterion, the local analytic Nullstellensatz, and the local parameter/dimension theorem are not present in the current Stacks analytic foundations.",
+      "remedy": "Retain explicit authoritative citations and independently verify the mathematical statements during the live integration review; do not pretend algebraic Stacks lemmas prove the analytic inputs."
+    },
+    {
+      "id": "staged-source-identity",
+      "state": "operational_prerequisite_for_live_integration",
+      "evidence": "The controlling component is currently under gaga_source_r1.__stage__.",
+      "remedy": "At integration time, deterministically verify that the designated source still has SHA-256 49C0C95E80CE4DE5341753689911045E7AD1C00C8E2CD237AA427268C251BB29."
+    },
+    {
+      "id": "live-transaction-not-executed",
+      "state": "out_of_scope_by_instruction",
+      "evidence": "gaga.tex does not exist and Makefile, chapters.tex, my.bib, map.csv, and dossier were intentionally not edited.",
+      "remedy": "Execute the narrow integration transaction in a separately authorized production step."
+    },
+    {
+      "id": "build-tag-map-gates",
+      "state": "not_run_by_instruction",
+      "evidence": "No build, tag generation, fresh post-edit scan, or map write was authorized for this design task.",
+      "remedy": "After integration: build gaga.pdf serially; check diagnostics/references; render and visually inspect affected pages; generate tags; rerun the scanner and byte-identical replay; then update map decisions without overwriting unrelated rows."
+    }
+  ],
+  "integration_gates_in_order": [
+    "Reverify controlling source and candidate SHA-256 identities.",
+    "Apply candidate as gaga.tex and add only the exact Makefile, chapters.tex, and my.bib changes.",
+    "Build gaga.pdf serially and require zero fatal TeX errors and resolved references/citations.",
+    "Render and visually inspect all pages introduced by this first tranche.",
+    "Generate official tags and rerun the fresh scanner oracle with byte-identical replay.",
+    "Write only the six bounded map decisions, preserving the no. 2/Definition 1 and no. 3/Proposition 1 overlaps explicitly.",
+    "Verify the external analytic theorem citations and proof boundaries.",
+    "Only afterward add bounded cross-references from existing analytic consumers where mathematically exact."
+  ],
+  "non_goals": [
+    "No nonreduced analytic-space generalization in this tranche.",
+    "No analytification functor construction or GAGA comparison theorem from later source sections.",
+    "No relocation of analytic foundations into Sheaves, Modules, Algebra, Cohomology, pione, or etale.",
+    "No claim that lexical analytic-space mentions in current Stacks constitute a general analytic-space foundation."
+  ]
+}

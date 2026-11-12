@@ -1,0 +1,581 @@
+{
+  "schema": "gaga_analytification_5_8_design/v1",
+  "audit_date": "2026-08-24",
+  "status": "complete_design_only_no_live_source_or_dossier_edits_no_build",
+  "scope": {
+    "workspace": "user/Documents/stacks-ftg",
+    "component": "02_associated_analytic_space",
+    "first_unit": "gaga:no:5",
+    "last_unit": "gaga:lemma:3",
+    "baseline_review_state": "needs_review",
+    "audited_unit_count": 18,
+    "audited_units": [
+      "gaga:no:5",
+      "gaga:lemma:1",
+      "gaga:prop:2",
+      "gaga:no:6",
+      "gaga:prop:3",
+      "gaga:prop:4",
+      "gaga:cor:1",
+      "gaga:cor:2",
+      "gaga:cor:3",
+      "gaga:no:7",
+      "gaga:prop:5",
+      "gaga:prop:6",
+      "gaga:lemma:2",
+      "gaga:prop:7",
+      "gaga:no:8",
+      "gaga:prop:8",
+      "gaga:prop:9",
+      "gaga:lemma:3"
+    ],
+    "excluded_nested_rows": [
+      "gaga:lemma:1:item:a",
+      "gaga:lemma:1:item:b",
+      "gaga:lemma:1:item:c",
+      "gaga:lemma:1:item:d"
+    ],
+    "excluded_nested_rows_reason": "The sealed baseline marks these rows inherits_parent, not needs_review. Their four substantive assertions are nevertheless recovered inside the audited parent span gaga:lemma:1."
+  },
+  "conclusion": {
+    "coverage_disposition_histogram": {
+      "new_material": 16,
+      "existing_stronger": 2,
+      "existing_exact": 0,
+      "existing_weaker": 0
+    },
+    "new_material_breakdown": {
+      "new_section_or_mixed_numbered_unit": 4,
+      "new_statement": 12
+    },
+    "true_gap_count": 16,
+    "true_gap_definition": "Count of the 18 sealed needs_review mapping units whose exact source content is not presently stated by an exact or stronger live Stacks result. Numbered units count because their natural source spans contain substantive uncatalogued prose and nested results, as recorded below.",
+    "already_covered_units": [
+      "gaga:lemma:2",
+      "gaga:lemma:3"
+    ],
+    "recommendation": "Continue the planned standalone gaga.tex. Insert the candidate fragment after the foundation block. The two existing-stronger source lemmas may remain as short contextual bridge lemmas, but their mapping must retain the live algebraic/topological labels as the primary coverage."
+  },
+  "evidence": {
+    "source": {
+      "path": "user/Documents/stacks-ftg/gaga_source_r1/english_source_aligned_workpass/components/02_associated_analytic_space.tex",
+      "bytes": 23350,
+      "sha256": "1EE5AED7FF6912F3CFE4D262951334A45C6FBC8F67A81DDDC15251BF02CEDE81",
+      "expected_sha256": "1EE5AED7FF6912F3CFE4D262951334A45C6FBC8F67A81DDDC15251BF02CEDE81",
+      "identity_match": true,
+      "span_hash_convention": "UTF-8 bytes of the inclusive source lines joined with LF and followed by one LF"
+    },
+    "sealed_mapping": {
+      "directory": "user/Documents/stacks-ftg/gaga_r1",
+      "map_csv": {
+        "bytes": 64686,
+        "sha256": "B1332587032EA06E3FCCA3C595CDBA8CAEA825D7B8F278035E688B84CD84BE91"
+      },
+      "units_csv": {
+        "bytes": 60100,
+        "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+      },
+      "ucand_csv": {
+        "bytes": 395282,
+        "sha256": "609ACD1D0B1186D79B25BA787EB740CFB138CFA052CA17D153F9BA7CDCD7E400"
+      },
+      "stx_csv": {
+        "bytes": 5291661,
+        "sha256": "2AFD11C6BA12EDDF5BBCADFF60973BE4E1ACA58CA1A7A6E9D6C66EE0C2D55D7F"
+      },
+      "r1_check_json": {
+        "bytes": 11536,
+        "sha256": "90ABB05D7CDCA4710370E354F40DCF08429B2A7E4949BFCAC2C7DF2BE4CAC06B"
+      }
+    },
+    "preceding_candidate": {
+      "path": "user/Documents/stacks-ftg/tmp/gaga_foundation_1_4_candidate.tex",
+      "bytes": 14067,
+      "sha256": "8D4C4D9C9CF3E7386077E6E00E99415E69696BFC4708C37DAFB1DD7A46FF8800",
+      "unique_terminal_anchor": "\\input{chapters}",
+      "anchor_count": 1,
+      "anchor_line_before_integration": 368
+    },
+    "live_label_files": [
+      {
+        "file": "pione.tex",
+        "sha256": "D725E01F5B388D5C3EA38EB9075C5AB93EAFB6C9B5B0C4331FCBE6D757A04DDD",
+        "labels": [
+          {"full_label": "pione-section-comparison-complex", "live_line": 1602, "finding": "Assumes X^an and analytification; does not construct them."}
+        ]
+      },
+      {
+        "file": "etale.tex",
+        "sha256": "E87F2A92F8FE668037ED225F11D5BFE42DFEDDF52A164975CE5BB54DE2ABF991",
+        "labels": [
+          {"full_label": "etale-lemma-etale-analytification-local-isomorphism", "live_line": 2067, "finding": "Downstream comparison that assumes analytification and only mentions completed local-ring compatibility in its proof."},
+          {"full_label": "etale-lemma-characterize-etale-Noetherian", "live_line": 1094, "finding": "Exact algebraic dependency used after the new local comparison."},
+          {"full_label": "etale-theorem-etale-radicial-open", "live_line": 1370, "finding": "Exact algebraic dependency for the analytic-isomorphism criterion."}
+        ]
+      },
+      {
+        "file": "topologies.tex",
+        "sha256": "7A4BA6F4BEA12B060EEC6A6F6613F729340A14F4C8A5B988C82D3663F2A29143",
+        "labels": [
+          {"full_label": "topologies-lemma-Zariski-usual", "live_line": 359, "finding": "False lexical candidate: compares the small Zariski site with the scheme's Zariski topological space, not the classical complex topology."}
+        ]
+      },
+      {
+        "file": "sheaves.tex",
+        "sha256": "78A727DA8893E4FB2362CC6343BD6B2E66FEBD1519328CA84835BF5E2C225B9F",
+        "labels": [
+          {"full_label": "sheaves-lemma-glue-sheaves-structures", "live_line": 6012, "finding": "Exact general gluing dependency; it does not itself supply analytification."}
+        ]
+      },
+      {
+        "file": "algebra.tex",
+        "sha256": "1AD1C80E33CA42280B09915B7A0D15A91A9F9740C04545ADB7BFAD9B49E3BA37",
+        "labels": [
+          {"full_label": "algebra-lemma-reduced-ring-sub-product-fields", "live_line": 4579},
+          {"full_label": "algebra-lemma-total-ring-fractions-no-embedded-points", "live_line": 4631},
+          {"full_label": "algebra-lemma-local-flat-ff", "live_line": 9203},
+          {"full_label": "algebra-lemma-intersect-powers-ideal-module-zero", "live_line": 12260},
+          {"full_label": "algebra-lemma-faithfully-flat-universally-injective", "live_line": 20802},
+          {"full_label": "algebra-lemma-completion-tensor", "live_line": 23448}
+        ]
+      },
+      {
+        "file": "more-algebra.tex",
+        "sha256": "F70B0B6973F3330DE04F862DF8217459400BE75B511741B04CBC0D0C2852375B",
+        "labels": [
+          {"full_label": "more-algebra-lemma-completion-dimension", "live_line": 11230},
+          {"full_label": "more-algebra-lemma-completion-reduced", "live_line": 11305},
+          {"full_label": "more-algebra-lemma-flat-completion", "live_line": 11337},
+          {"full_label": "more-algebra-lemma-finite-type-over-excellent", "live_line": 13979},
+          {"full_label": "more-algebra-proposition-ubiquity-excellent", "live_line": 13992},
+          {"full_label": "more-algebra-lemma-quasi-excellent-nagata", "live_line": 14070}
+        ]
+      },
+      {
+        "file": "varieties.tex",
+        "sha256": "E8175DA57DBCC5441294A537D666355DF1BDAC451DA7BD0ECC0E8855CF1D7D9B",
+        "labels": [
+          {"full_label": "varieties-lemma-locally-finite-type-Jacobson", "live_line": 2680},
+          {"full_label": "varieties-lemma-dimension-locally-algebraic", "live_line": 3793},
+          {"full_label": "varieties-item-dimension-at-closed-point", "live_line": 3804},
+          {"full_label": "varieties-item-dimension-irreducible", "live_line": 3807}
+        ]
+      },
+      {
+        "file": "limits.tex",
+        "sha256": "1957DE475B47E434589F24BA0182A0E46818549371E1E7A56330A771924C60AC",
+        "labels": [
+          {"full_label": "limits-lemma-chow-finite-type", "live_line": 3071, "finding": "Exact Chow-lemma input used to prove proper iff compact without assuming an external properness-comparison theorem."}
+        ]
+      },
+      {
+        "file": "morphisms.tex",
+        "sha256": "31A65A4C73778740F7D66030AE5D21D9670B9DF251EDBA367DF793399B6B9519",
+        "labels": [
+          {"full_label": "morphisms-lemma-universally-injective", "live_line": 1578},
+          {"full_label": "morphisms-lemma-chevalley", "live_line": 4378},
+          {"full_label": "morphisms-proposition-generic-flatness", "live_line": 5181},
+          {"full_label": "morphisms-lemma-image-proper-is-proper", "live_line": 10075},
+          {"full_label": "morphisms-lemma-finite-degree", "live_line": 13459}
+        ]
+      },
+      {
+        "file": "topology.tex",
+        "sha256": "86FD4B6E4E0116F8DD6253E8B01BD04F6E270DDA0FCE0628996BEEEF1F24F190",
+        "labels": [
+          {"full_label": "topology-lemma-dense-in-constructible", "live_line": 4289}
+        ]
+      },
+      {
+        "file": "schemes.tex",
+        "sha256": "E9230E2238EE271D23BC6806231C249A31B7DBBCEB68F0CA9ABA3BC541B35541",
+        "labels": [
+          {"full_label": "schemes-lemma-scheme-sober", "live_line": 2052}
+        ]
+      }
+    ]
+  },
+  "unit_audit": [
+    {
+      "unit_id": "gaga:no:5",
+      "map_physical_line": 11,
+      "map_row_lf_bytes": 438,
+      "map_row_lf_sha256": "BA8B9C437E9A8EF97E3C83AE00A8201C68303D0AAE8D3A4F774F949A48930E82",
+      "source_lines": [5, 41],
+      "source_lf_bytes": 5136,
+      "source_lf_sha256": "7DB82A8F75358D2340C650553FB27BDA5B100527775B0C763880022B025A0B91",
+      "classification": "mixed_numbered_unit_and_substantive_section",
+      "claim_normalized_exact": "Construct X^h uniquely by algebraic charts; its topology is finer than the Zariski topology; it is locally compact and countable at infinity; analytification preserves products and reduced locally closed subvarieties; regular maps analytify to holomorphic maps.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_section",
+      "existing_labels_inspected": ["pione-section-comparison-complex", "etale-lemma-etale-analytification-local-isomorphism"],
+      "rationale": "Both live passages presuppose the associated analytic space and functor; neither constructs or characterizes it.",
+      "planned_full_labels": ["gaga-section-analytification", "gaga-proposition-analytification", "gaga-lemma-analytification-properties"]
+    },
+    {
+      "unit_id": "gaga:lemma:1",
+      "map_physical_line": 12,
+      "map_row_lf_bytes": 422,
+      "map_row_lf_sha256": "E4A9F23FF78458E90DDAB6E375DA554AC17340D9866BBE44EDD03CD2FC5C1AD6",
+      "source_lines": [9, 17],
+      "source_lf_bytes": 1183,
+      "source_lf_sha256": "5802900B7762732F22921DFB699C0EBD543004C376338875E056ACB148DD575C",
+      "classification": "substantive_lemma_with_four_inherited_subitems",
+      "claim_normalized_exact": [
+        "The Zariski topology on C^n is coarser than the usual topology.",
+        "Every Zariski locally closed reduced subset of C^n is analytic.",
+        "Every regular map between such subsets is holomorphic.",
+        "Every biregular isomorphism between such subsets is an analytic isomorphism."
+      ],
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["topologies-lemma-Zariski-usual"],
+      "rationale": "The lexical candidate concerns sheaves on the small Zariski site, not the complex classical topology or holomorphic maps.",
+      "planned_full_labels": ["gaga-lemma-algebraic-charts-analytic"]
+    },
+    {
+      "unit_id": "gaga:prop:2",
+      "map_physical_line": 17,
+      "map_row_lf_bytes": 443,
+      "map_row_lf_sha256": "CB158A3F19412800B091621D83AAD1ACE350F7B178573416115094F3F937BD2E",
+      "source_lines": [27, 31],
+      "source_lf_bytes": 1677,
+      "source_lf_sha256": "0D474CE964A3E84F4A2762FCD347A70AD54B184AFC7CF84EAB777D8866C9AFB9",
+      "classification": "substantive_proposition",
+      "claim_normalized_exact": "There is a unique analytic-space structure on X for which every algebraic chart is an analytic chart.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["sheaves-lemma-glue-sheaves-structures"],
+      "rationale": "The live sheaf-gluing lemma is a proof ingredient only and supplies neither the topology, Hausdorff verification, analytic charts, nor functoriality.",
+      "planned_full_labels": ["gaga-proposition-analytification"]
+    },
+    {
+      "unit_id": "gaga:no:6",
+      "map_physical_line": 18,
+      "map_row_lf_bytes": 441,
+      "map_row_lf_sha256": "DAF7EC7F45EFD510A8FACC2B2817309B4AE7CD92E85096D421A0D589628F5B74",
+      "source_lines": [43, 89],
+      "source_lf_bytes": 6626,
+      "source_lf_sha256": "D912740D8189189E8794C10FE8495C07EAED92F4623D3F1D91B582E433A502A8",
+      "classification": "mixed_numbered_unit_and_substantive_section",
+      "claim_normalized_exact": "Compare the algebraic and analytic local rings through the natural local map, its completion, closed-subvariety ideals, flatness, and dimension.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_section",
+      "existing_labels_inspected": ["etale-lemma-etale-analytification-local-isomorphism"],
+      "rationale": "The live etale lemma mentions completed-local-ring compatibility but does not state or prove the comparison package.",
+      "planned_full_labels": ["gaga-section-local-comparison", "gaga-proposition-analytification-closed-ideal", "gaga-theorem-analytification-completed-local-rings", "gaga-theorem-analytification-local-faithfully-flat", "gaga-lemma-analytification-local-dimension", "gaga-lemma-analytification-dimension"]
+    },
+    {
+      "unit_id": "gaga:prop:3",
+      "map_physical_line": 19,
+      "map_row_lf_bytes": 429,
+      "map_row_lf_sha256": "94E53E64096DFE658084916CD5E343411790D860A670891330CACF2EE028BD29",
+      "source_lines": [47, 75],
+      "source_lf_bytes": 4920,
+      "source_lf_sha256": "8378BF9479E8BDFA621958ABA4F519E70F28FAF570BACEF92230ED1D3662B830",
+      "classification": "substantive_proposition_with_joint_proof",
+      "claim_normalized_exact": "The natural map from the completed algebraic local ring to the completed analytic local ring is an isomorphism.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["etale-lemma-etale-analytification-local-isomorphism", "algebra-lemma-completion-tensor"],
+      "rationale": "One live proof alludes to compatibility and the other is abstract completion exactness; neither states the analytic comparison.",
+      "planned_full_labels": ["gaga-theorem-analytification-completed-local-rings"]
+    },
+    {
+      "unit_id": "gaga:prop:4",
+      "map_physical_line": 20,
+      "map_row_lf_bytes": 429,
+      "map_row_lf_sha256": "3633472DE9906A3B03192A73F56D411CAF74E81006255DF62541F2361A1719F5",
+      "source_lines": [53, 75],
+      "source_lf_bytes": 4139,
+      "source_lf_sha256": "6707B31B6416BD56FF4858F93FC4D07869D82E6149A9958D0B9970B0C1779E9F",
+      "classification": "substantive_proposition_with_joint_proof",
+      "claim_normalized_exact": "The analytic ideal of a reduced algebraic subvariety germ is generated by its algebraic ideal germ.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": [],
+      "rationale": "No live Stacks label states algebraic-analytic ideal extension or the resulting quotient compatibility.",
+      "planned_full_labels": ["gaga-proposition-analytification-closed-ideal"]
+    },
+    {
+      "unit_id": "gaga:cor:1",
+      "map_physical_line": 21,
+      "map_row_lf_bytes": 558,
+      "map_row_lf_sha256": "D3B1C4A4616399B876FF49203F58B2E1ADC17751C6E88F8FAE01230DF5486943",
+      "source_lines": [77, 81],
+      "source_lf_bytes": 691,
+      "source_lf_sha256": "5C48A62697C3C01FE12EB19E351D0605470B208A70FC5B1320EEF2395835D0C8",
+      "classification": "substantive_corollary",
+      "claim_normalized_exact": "The algebraic-to-analytic local map is a flat pair; in modern terms it is faithfully flat, has ideal contraction, and its cokernel is flat.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["more-algebra-lemma-flat-completion", "algebra-lemma-local-flat-ff", "algebra-lemma-faithfully-flat-universally-injective"],
+      "rationale": "The live labels give the abstract deduction from a flat completed map, but the required analytic local map and its completed isomorphism are absent.",
+      "planned_full_labels": ["gaga-theorem-analytification-local-faithfully-flat"]
+    },
+    {
+      "unit_id": "gaga:cor:2",
+      "map_physical_line": 22,
+      "map_row_lf_bytes": 425,
+      "map_row_lf_sha256": "8E9530DE3CF868A0B911F02524C7B4E66B7060573D0FEB4BF9D665CDE44BD1E3",
+      "source_lines": [83, 85],
+      "source_lf_bytes": 246,
+      "source_lf_sha256": "06D66DAF8CB75FE51CEB236E618CCE181928D653D60DAA3D1029A374DD76F07E",
+      "classification": "substantive_corollary",
+      "claim_normalized_exact": "The algebraic and analytic local rings at a classical point have equal Krull dimension.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["more-algebra-lemma-completion-dimension"],
+      "rationale": "The abstract completion-dimension lemma becomes applicable only after the missing analytic completion isomorphism.",
+      "planned_full_labels": ["gaga-lemma-analytification-local-dimension"]
+    },
+    {
+      "unit_id": "gaga:cor:3",
+      "map_physical_line": 23,
+      "map_row_lf_bytes": 539,
+      "map_row_lf_sha256": "C15D9E85B4581B03AA4576837BC24FC21BD0EB3BA3039DA2E4006FE111089B10",
+      "source_lines": [87, 89],
+      "source_lf_bytes": 357,
+      "source_lf_sha256": "EDC7F4E5E8278A6898573669BBF9DE92DE68A2DAF236BF1342B49C42B4ED293F",
+      "classification": "substantive_corollary",
+      "claim_normalized_exact": "If X is irreducible of algebraic dimension r, X^an has analytic dimension r at every classical point.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["varieties-lemma-dimension-locally-algebraic"],
+      "rationale": "The live variety lemma computes algebraic local dimension but contains no bridge to analytic dimension.",
+      "planned_full_labels": ["gaga-lemma-analytification-dimension"]
+    },
+    {
+      "unit_id": "gaga:no:7",
+      "map_physical_line": 24,
+      "map_row_lf_bytes": 427,
+      "map_row_lf_sha256": "856602672404A8FA922BF49DAEC9AC0A968094F5535B4B39FB53E89299D746BA",
+      "source_lines": [91, 115],
+      "source_lf_bytes": 3862,
+      "source_lf_sha256": "53D322959C9510086CF7B275B5134FD4C1F54A18F0FEF850877BEF7FDF1D83BC",
+      "classification": "mixed_numbered_unit_and_substantive_section",
+      "claim_normalized_exact": "Compare classical and Zariski density, compactness versus completeness/properness, dense images, and the two closures of a morphism image.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_section",
+      "existing_labels_inspected": ["topologies-lemma-Zariski-usual", "morphisms-lemma-chevalley", "topology-lemma-dense-in-constructible"],
+      "rationale": "Chevalley covers only the algebraic dense-image lemma; the classical-topology comparisons are absent, while the Zariski-usual lexical candidate is unrelated.",
+      "planned_full_labels": ["gaga-section-classical-zariski-topologies", "gaga-lemma-zariski-dense-open-analytically-dense", "gaga-proposition-proper-if-and-only-if-compact-analytification", "gaga-proposition-image-closure"]
+    },
+    {
+      "unit_id": "gaga:prop:5",
+      "map_physical_line": 25,
+      "map_row_lf_bytes": 429,
+      "map_row_lf_sha256": "3066F56146F0675683D98233C6EF8DA8695527F7ABCAF6964AB47F51380D12B5",
+      "source_lines": [93, 97],
+      "source_lf_bytes": 1042,
+      "source_lf_sha256": "D1C09BB06D2DD5B60B7EF62F292026907F8EDA722AD55568B95B3C0E72CE7E91",
+      "classification": "substantive_proposition",
+      "claim_normalized_exact": "A Zariski open dense subset of an algebraic variety is dense in the classical analytic topology.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": [],
+      "rationale": "No live label compares these two topologies on complex points.",
+      "planned_full_labels": ["gaga-lemma-zariski-dense-open-analytically-dense"]
+    },
+    {
+      "unit_id": "gaga:prop:6",
+      "map_physical_line": 26,
+      "map_row_lf_bytes": 511,
+      "map_row_lf_sha256": "F2365A41CA1775684F6A370A9D5EA62FE05A0D08776268F4D00E06D6C53BA570",
+      "source_lines": [99, 105],
+      "source_lf_bytes": 977,
+      "source_lf_sha256": "EB29F0356DFECD15725E01C94048A556D6A282E918A442F24D640AD2D9D79760",
+      "classification": "substantive_proposition",
+      "claim_normalized_exact": "A reduced separated finite type C-scheme is proper over C if and only if its analytification is compact.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["limits-lemma-chow-finite-type", "morphisms-lemma-image-proper-is-proper"],
+      "rationale": "The live labels provide the algebraic Chow argument but do not state compactness of analytification or the equivalence.",
+      "planned_full_labels": ["gaga-proposition-proper-if-and-only-if-compact-analytification"]
+    },
+    {
+      "unit_id": "gaga:lemma:2",
+      "map_physical_line": 27,
+      "map_row_lf_bytes": 428,
+      "map_row_lf_sha256": "DBFFBDF3E27F7674640078C7E62792E329A8C28EEC711587DB80EA3F4F90EEAA",
+      "source_lines": [107, 111],
+      "source_lf_bytes": 1074,
+      "source_lf_sha256": "9AE64C4AA11D897E9ADD01F582B2D830B75B1FCC751DF559A483595EA060408E",
+      "classification": "substantive_lemma",
+      "claim_normalized_exact": "If the image of a morphism of algebraic varieties is Zariski dense, it contains a Zariski open dense subset of the target.",
+      "coverage_disposition": "existing_stronger",
+      "preintegration_assessment": "existing_stronger_composite",
+      "exact_existing_labels": ["morphisms-lemma-chevalley", "topology-lemma-dense-in-constructible"],
+      "rationale": "Chevalley's theorem makes the image constructible in the more general scheme setting, and the topological lemma says any dense constructible subset contains a dense open.",
+      "optional_context_bridge_label": "gaga-lemma-dense-image-contains-open"
+    },
+    {
+      "unit_id": "gaga:prop:7",
+      "map_physical_line": 28,
+      "map_row_lf_bytes": 432,
+      "map_row_lf_sha256": "DAA1FE83DC703E3DB22A175AE48CFCE71EEFBB215EA0DDD5FD78C1C36763198D",
+      "source_lines": [113, 115],
+      "source_lf_bytes": 648,
+      "source_lf_sha256": "A9C8114A5F5C87CBF69C92C25B4E7A9AAFAFE0329030CC4B6802C92AE35CA3CB",
+      "classification": "substantive_proposition",
+      "claim_normalized_exact": "For a morphism of complex algebraic varieties, the classical closure of its image equals the classical points of its Zariski closure.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["morphisms-lemma-chevalley", "topology-lemma-dense-in-constructible"],
+      "rationale": "The live labels supply the algebraic dense-open step but no comparison with the classical topology.",
+      "planned_full_labels": ["gaga-proposition-image-closure"]
+    },
+    {
+      "unit_id": "gaga:no:8",
+      "map_physical_line": 29,
+      "map_row_lf_bytes": 430,
+      "map_row_lf_sha256": "46129C7825E76E227CE0C4D95EB86A4D04C6B2AF978D4333D80BFD73F7023FA2",
+      "source_lines": [117, 167],
+      "source_lf_bytes": 7280,
+      "source_lf_sha256": "CCD156F8F7CEFE922BD7BB85CF1BBAC8E5077810C289E07F7E4C89D898AD9957",
+      "classification": "mixed_numbered_unit_and_substantive_section",
+      "claim_normalized_exact": "Give an algebraic-graph criterion for a holomorphic map to be regular and prove that a bijective regular analytic isomorphism is algebraic, using local faithful flatness and total quotient rings.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_section",
+      "existing_labels_inspected": ["etale-lemma-etale-analytification-local-isomorphism"],
+      "rationale": "The live etale comparison is neither the graph criterion nor algebraicity of an analytic inverse.",
+      "planned_full_labels": ["gaga-section-analytic-regularity", "gaga-proposition-algebraic-graph-holomorphic-regular", "gaga-proposition-analytic-isomorphism-algebraic"]
+    },
+    {
+      "unit_id": "gaga:prop:8",
+      "map_physical_line": 30,
+      "map_row_lf_bytes": 446,
+      "map_row_lf_sha256": "33C703E7EAF535BE49AB6703899DED630AFD47E6A5DE1965E8F5E5DC0978FE2B",
+      "source_lines": [119, 123],
+      "source_lf_bytes": 876,
+      "source_lf_sha256": "3A5EE3CAC2FCD61D15F5A6473DD386E72081EF8A2422D41DBD7BF3F486C11AAE",
+      "classification": "substantive_proposition",
+      "claim_normalized_exact": "A holomorphic map between algebraic varieties whose graph is a Zariski locally closed algebraic subvariety is regular.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["topology-lemma-graph-closed"],
+      "rationale": "The live topology lemma only says graphs of continuous maps to Hausdorff spaces are closed; it gives no algebraicity criterion.",
+      "planned_full_labels": ["gaga-proposition-algebraic-graph-holomorphic-regular"]
+    },
+    {
+      "unit_id": "gaga:prop:9",
+      "map_physical_line": 31,
+      "map_row_lf_bytes": 432,
+      "map_row_lf_sha256": "24DDE53A14CEB927A742EB5FA736A10E45C67592B50101CD9768A28E3376574D",
+      "source_lines": [125, 145],
+      "source_lf_bytes": 4288,
+      "source_lf_sha256": "FBBFFDEDA8735BFC7A19E838DF217CD28E1680E0AA68A583C526763AD1CB2D75",
+      "classification": "substantive_proposition",
+      "claim_normalized_exact": "A bijective morphism of complex algebraic varieties whose analytification is an analytic isomorphism is an algebraic isomorphism.",
+      "coverage_disposition": "new_material",
+      "preintegration_assessment": "new_statement",
+      "existing_labels_inspected": ["etale-lemma-characterize-etale-Noetherian", "morphisms-lemma-universally-injective", "etale-theorem-etale-radicial-open", "algebra-lemma-faithfully-flat-universally-injective"],
+      "rationale": "These are exact algebraic ingredients after local comparison, but no live result connects an analytic isomorphism to equality of algebraic local rings and algebraicity of the inverse.",
+      "planned_full_labels": ["gaga-proposition-analytic-isomorphism-algebraic"]
+    },
+    {
+      "unit_id": "gaga:lemma:3",
+      "map_physical_line": 32,
+      "map_row_lf_bytes": 428,
+      "map_row_lf_sha256": "EA4C0C7E3E3C67BEA5666FC8AAE2A4F5DECA69B237321D618C477800E9FD84D2",
+      "source_lines": [147, 167],
+      "source_lf_bytes": 2045,
+      "source_lf_sha256": "98B352F6D0AC70C16190659B0A300FF3D1AA8FF7802E667E1BE9E1001679440F",
+      "classification": "substantive_lemma",
+      "claim_normalized_exact": "For a reduced ring with finitely many minimal primes, localization away from their union is the product of the fraction fields of the minimal-prime quotients.",
+      "coverage_disposition": "existing_stronger",
+      "preintegration_assessment": "existing_stronger_composite",
+      "exact_existing_labels": ["algebra-lemma-reduced-ring-sub-product-fields", "algebra-lemma-total-ring-fractions-no-embedded-points"],
+      "rationale": "The first live lemma identifies the nonzerodivisors and minimal-prime localizations for any reduced ring; the second gives the product decomposition under the more general no-embedded-points hypothesis.",
+      "optional_context_bridge_label": "gaga-lemma-total-fractions-reduced"
+    }
+  ],
+  "external_analytic_theorems": [
+    {
+      "name": "Local analytic Nullstellensatz",
+      "exact_use": "For an ideal J of the convergent-power-series local ring, the ideal of germs vanishing on its zero germ is sqrt(J). Used only in gaga-proposition-analytification-closed-ideal.",
+      "status": "explicit_external_dependency_already_named_in_foundation_design"
+    },
+    {
+      "name": "Taylor expansion and completion of convergent power series",
+      "exact_use": "The maximal-adic completion of C{z_1,...,z_n} is C[[z_1,...,z_n]], and the polynomial local ring has the same completion. Used in the ideal and completed-local-ring comparisons.",
+      "status": "explicit_external_analytic_input"
+    },
+    {
+      "name": "Compactness of complex projective space",
+      "exact_use": "P^n(C) is compact Hausdorff and a closed algebraic subset has closed, hence compact, analytification. Used in the Chow-lemma proof of proper iff compact.",
+      "status": "explicit_elementary_complex_topological_input"
+    }
+  ],
+  "external_analytic_theorems_not_used": [
+    "No external properness-comparison theorem is assumed.",
+    "No unmentioned analytic identity theorem is used.",
+    "No analytic normalization or generic-degree theorem is used; those steps are discharged by exact live algebraic labels."
+  ],
+  "logical_dependency_order": [
+    {"step": 1, "labels": ["gaga-lemma-algebraic-charts-analytic"], "depends_on": ["gaga-definition-analytic-subset", "gaga-definition-holomorphic-map-analytic-subsets"]},
+    {"step": 2, "labels": ["gaga-proposition-analytification"], "depends_on": ["gaga-lemma-algebraic-charts-analytic", "sheaves-lemma-glue-sheaves-structures"]},
+    {"step": 3, "labels": ["gaga-lemma-analytification-properties"], "depends_on": ["gaga-proposition-analytification"]},
+    {"step": 4, "labels": ["gaga-proposition-analytification-closed-ideal"], "depends_on": ["gaga-lemma-local-analytic-algebra", "local analytic Nullstellensatz", "Taylor completion", "algebra-lemma-completion-tensor", "more-algebra-proposition-ubiquity-excellent", "more-algebra-lemma-finite-type-over-excellent", "more-algebra-lemma-quasi-excellent-nagata", "more-algebra-lemma-completion-reduced", "algebra-lemma-intersect-powers-ideal-module-zero"]},
+    {"step": 5, "labels": ["gaga-theorem-analytification-completed-local-rings"], "depends_on": ["gaga-proposition-analytification-closed-ideal", "Taylor completion", "algebra-lemma-completion-tensor"]},
+    {"step": 6, "labels": ["gaga-theorem-analytification-local-faithfully-flat"], "depends_on": ["gaga-theorem-analytification-completed-local-rings", "more-algebra-lemma-flat-completion", "algebra-lemma-local-flat-ff", "algebra-lemma-faithfully-flat-universally-injective"]},
+    {"step": 7, "labels": ["gaga-lemma-analytification-local-dimension", "gaga-lemma-analytification-dimension"], "depends_on": ["gaga-theorem-analytification-completed-local-rings", "more-algebra-lemma-completion-dimension", "varieties-lemma-dimension-locally-algebraic", "gaga-lemma-components-dimension-analytic-space"]},
+    {"step": 8, "labels": ["gaga-lemma-zariski-dense-open-analytically-dense"], "depends_on": ["gaga-proposition-analytification-closed-ideal", "gaga-theorem-analytification-completed-local-rings"]},
+    {"step": 9, "labels": ["gaga-proposition-proper-if-and-only-if-compact-analytification"], "depends_on": ["gaga-lemma-zariski-dense-open-analytically-dense", "gaga-lemma-analytification-properties", "limits-lemma-chow-finite-type", "morphisms-lemma-image-proper-is-proper", "compactness of complex projective space"]},
+    {"step": 10, "labels": ["gaga-lemma-dense-image-contains-open"], "depends_on": ["morphisms-lemma-chevalley", "topology-lemma-dense-in-constructible"]},
+    {"step": 11, "labels": ["gaga-proposition-image-closure"], "depends_on": ["gaga-lemma-dense-image-contains-open", "gaga-lemma-zariski-dense-open-analytically-dense"]},
+    {"step": 12, "labels": ["gaga-lemma-total-fractions-reduced"], "depends_on": ["algebra-lemma-reduced-ring-sub-product-fields", "algebra-lemma-total-ring-fractions-no-embedded-points"]},
+    {"step": 13, "labels": ["gaga-proposition-analytic-isomorphism-algebraic"], "depends_on": ["gaga-proposition-image-closure", "gaga-theorem-analytification-local-faithfully-flat", "gaga-lemma-total-fractions-reduced", "morphisms-lemma-finite-degree", "morphisms-proposition-generic-flatness", "varieties-lemma-locally-finite-type-Jacobson", "schemes-lemma-scheme-sober", "etale-lemma-characterize-etale-Noetherian", "morphisms-lemma-universally-injective", "etale-theorem-etale-radicial-open"]},
+    {"step": 14, "labels": ["gaga-proposition-algebraic-graph-holomorphic-regular"], "depends_on": ["gaga-lemma-analytification-properties", "gaga-proposition-analytic-isomorphism-algebraic"]}
+  ],
+  "candidate": {
+    "path": "user/Documents/stacks-ftg/tmp/gaga_analytification_5_8_candidate.tex",
+    "artifact_kind": "continuation_fragment_not_standalone_shell",
+    "bytes": 21726,
+    "sha256": "C465951DB15EEDAA888147A4D7AEC01076C5F0A7E59937E66B172DFA7EF0DAA9",
+    "line_count": 500,
+    "local_label_count": 19,
+    "projected_full_label_prefix": "gaga-",
+    "first_local_label": "section-analytification",
+    "tail_local_label": "lemma-total-fractions-reduced",
+    "tail_full_label": "gaga-lemma-total-fractions-reduced"
+  },
+  "integration": {
+    "target_live_file": "user/Documents/stacks-ftg/gaga.tex",
+    "precondition": "Promote or otherwise preserve the exact foundation candidate bytes with SHA-256 8D4C4D9C9CF3E7386077E6E00E99415E69696BFC4708C37DAFB1DD7A46FF8800.",
+    "exact_anchor": "Insert the exact continuation fragment immediately before the unique terminal line \\input{chapters}.",
+    "anchor_count_expected": 1,
+    "preceding_foundation_tail_label": "gaga-lemma-components-dimension-analytic-space",
+    "new_tail_label": "gaga-lemma-total-fractions-reduced",
+    "next_component_anchor": "Insert component 03 after gaga-lemma-total-fractions-reduced and before the same unique terminal \\input{chapters} line.",
+    "no_other_live_files_needed_for_this_fragment": true
+  },
+  "deterministic_checks": {
+    "source_sha256_match": true,
+    "sealed_needs_review_unit_count": 18,
+    "audited_unit_count": 18,
+    "candidate_begin_environment_count": 32,
+    "candidate_end_environment_count": 32,
+    "environment_mismatches": 0,
+    "candidate_label_count": 19,
+    "candidate_unique_label_count": 19,
+    "duplicate_local_labels": 0,
+    "candidate_reference_count": 57,
+    "unresolved_references_against_candidate_foundation_and_sealed_stx": 0,
+    "projected_full_label_collisions_against_sealed_stx": 0,
+    "local_label_collisions_with_foundation_candidate": 0,
+    "unique_terminal_integration_anchor_count": 1,
+    "build_performed": false,
+    "build_reason": "The task explicitly forbids builds.",
+    "git_used": false,
+    "live_source_or_dossier_files_edited": false
+  },
+  "write_set": [
+    "user/Documents/stacks-ftg/tmp/gaga_analytification_5_8_design.json",
+    "user/Documents/stacks-ftg/tmp/gaga_analytification_5_8_candidate.tex"
+  ],
+  "non_goals": [
+    "No live gaga.tex, mapping CSV, dossier, Makefile, bibliography, or tag file was edited.",
+    "No build, broad scan, publication, cleanup, Git operation, or archive operation was performed."
+  ]
+}

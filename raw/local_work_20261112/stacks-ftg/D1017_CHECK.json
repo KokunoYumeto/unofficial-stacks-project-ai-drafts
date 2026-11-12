@@ -1,0 +1,330 @@
+{
+  "schema": "tohoku-stacks-d1017-check-v1",
+  "formalization_id": "D1017",
+  "status": "STRICT_PASS_PREREQUISITES_R61_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-23T21:24:00Z",
+  "finalized_utc": "2026-08-24T01:20:58.789Z",
+  "selection": {
+    "unit": "tohoku:definition:hom-o-and-local-hom",
+    "printed_page": 185,
+    "source_locator": "sem/r18/nodes.csv:344",
+    "predecessor_decision": "D000404",
+    "predecessor_disposition": "existing_weaker"
+  },
+  "source_defect": {
+    "id": "D1017-R001",
+    "printed_claim": "Hom_O(A,B) is a module over Z(Gamma(X,O)).",
+    "result": "FALSE_AS_STATED_FOR_ARBITRARY_NONCOMMUTATIVE_RING_SHEAVES",
+    "reason": "A globally central section need not restrict to a central local section, so multiplication by its restriction need not be O-linear.",
+    "counterexample": "On the Sierpinski space with nonempty proper open U, take O(X)=Q[t], O(U)=M_2(Q), and restrict t to e_11. Then t is globally central but e_11 is not locally central.",
+    "correct_scalar_ring": "Gamma(X,Z_O), where Z_O consists of sections that remain central after restriction to every smaller open subset.",
+    "source_repair": "Preserve diplomatic French; replace only the global scalar ring by Gamma(O^natural) in corrected French and English."
+  },
+  "design": {
+    "path": "user/Documents/stacks-ftg/tmp/d1017_p185_formalization_design.json",
+    "bytes": 8424,
+    "sha256": "C1E54BDFB4F52D6761248992D8C669CFB43FB21976A2539063FD893BDEAF43DC",
+    "status": "STACKS_BUILD_PASS_SOURCE_REPAIR_AND_MAPPING_REQUIRED"
+  },
+  "candidate": {
+    "path": "user/Documents/stacks-ftg/tmp/d1017_noncommutative_internal_hom_candidate.tex",
+    "bytes": 5063,
+    "sha256": "FB6278770580656A6904DC4505A7E69DAB222710D62633937125C557A2E75190",
+    "independent_review": "STRICT_PASS",
+    "reviewed_scope": [
+      "left modules over a possibly noncommutative ring sheaf",
+      "arbitrary-subspace inverse-image restriction",
+      "Hom sheaf gluing",
+      "sheaf-theoretic center",
+      "center-sheaf action",
+      "strict-inclusion counterexample",
+      "label and environment integrity"
+    ]
+  },
+  "independent_stacks_review": {
+    "path": "user/Documents/stacks-ftg/tmp/d1017_stacks_independent_review_r1.json",
+    "bytes": 12100,
+    "sha256": "E446CBFC413104F7D0D888F795DDB9C3100C87E615CBC1845667E4830A2A15BC",
+    "status": "STRICT_PASS_STACKS_FORMALIZATION",
+    "predicates": "14/14 PASS",
+    "errors": []
+  },
+  "stacks_edit": {
+    "path": "user/Documents/stacks-ftg/modules.tex",
+    "preimage": {
+      "bytes": 227768,
+      "sha256": "6BDE2852FFC50945A781FE7598FE96EC69D8B650EEF5C4C608C440D9E7E53BC0"
+    },
+    "postimage": {
+      "bytes": 232828,
+      "sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5"
+    },
+    "placement": "after the introductory internal-Hom block and before modules-lemma-internal-hom",
+    "normalized_candidate_occurrences": 1,
+    "labels": [
+      "modules-definition-hom-left-modules",
+      "modules-lemma-sheaf-hom-left-modules"
+    ],
+    "label_occurrences_each": 1
+  },
+  "pdf_build": {
+    "path": "user/Documents/stacks-ftg/modules.pdf",
+    "bytes": 767323,
+    "sha256": "A35B4D3FDD5A8A106A24570FA6E8890BACF45E83BD01B2F949A838F33D311638",
+    "pages": 60,
+    "pdflatex_passes": 2,
+    "pass_exit_codes": [0, 0],
+    "undefined_references_after_second_pass": 0,
+    "fatal_log_findings": 0,
+    "inserted_line_interval_overfull_findings": 0,
+    "other_overfull_findings": 5,
+    "log": {
+      "path": "user/Documents/stacks-ftg/modules.log",
+      "bytes": 35923,
+      "sha256": "862702CB6A31FDCCCE60E025BF894C60E20E53C5F32A80DE19C1D65EF4B01514"
+    }
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "inspected_pdf_pages": [35, 36, 37],
+    "defects": [],
+    "checks": [
+      "no clipped or overlapping text",
+      "display equations fit the text block",
+      "definition, lemma, proof, and following section transition are legible",
+      "headers, page numbers, margins, and proof terminator are intact"
+    ],
+    "rasters": [
+      {
+        "path": "user/Documents/stacks-ftg/tmp/pdfs/d1017_modules/modules-35.png",
+        "bytes": 353575,
+        "sha256": "C0C64D172C846126CB71C5FE5302E075555FF140BDC023CA5C5C6DB6AB23C959"
+      },
+      {
+        "path": "user/Documents/stacks-ftg/tmp/pdfs/d1017_modules/modules-36.png",
+        "bytes": 338459,
+        "sha256": "475701F331313BC4EFDDF32F10A9709CA5E489B479466D28683AD103E9163731"
+      },
+      {
+        "path": "user/Documents/stacks-ftg/tmp/pdfs/d1017_modules/modules-37.png",
+        "bytes": 387930,
+        "sha256": "DB29C0557D121155D271BCFCCE70A29D6BCD99A53241EC2ACBE52CF1F4500B87"
+      }
+    ]
+  },
+  "source_admission": {
+    "status": "PASS",
+    "successor": "production/p185_fix2",
+    "receipt": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/production/p185_fix2/check.json",
+      "bytes": 5291,
+      "sha256": "E54AE998A9D8AB863652521E329731789727DD064B48E6A52CAB83584C802EEA"
+    },
+    "decisions": {
+      "path": "production/p185_fix2/decisions.jsonl",
+      "bytes": 3493,
+      "sha256": "BB7813EA38AD72B878C4AE825141A82FEF092F8A99FEDDD7397AE705A56D4D4B",
+      "appended_id": "TOH-P185-COR-002",
+      "append_bytes": 776,
+      "append_sha256": "E5DCC58D900A1F5EB80D8CB7FDE543B7F15B306FED5711754FE50AE7D6AC8A7A"
+    },
+    "source_ledger": {
+      "path": "SOURCE_CORRECTIONS.jsonl",
+      "bytes": 212239,
+      "sha256": "31E8894E57B355383B49BB403FAE65B935C81B4C1DAC65C17B20C3C7A6E70439",
+      "appended_id": "TOH-SRC-P185-002",
+      "append_bytes": 1098,
+      "append_sha256": "ED03ED1D5B4597056D798FA1C22624016D5D2A6D568516E000DB38F6BA790B83"
+    },
+    "layers": {
+      "diplomatic": {
+        "bytes": 3964,
+        "sha256": "C95797FF736C53A873F08DC7124460F7EE7E50E5490C656E8F5F6493A784153A",
+        "predecessor_byte_exact": true
+      },
+      "corrected_french": {
+        "bytes": 4298,
+        "sha256": "EBE37CBFBE00FA4CA72C21CC4C542D60603A61E92EE446D15C941FA136B20847"
+      },
+      "english": {
+        "bytes": 4178,
+        "sha256": "9F3F8C932149B3F2ECC9A25C4D4C2D010A48A2CFE6B621CE12BE178CC4DADE60"
+      }
+    },
+    "exact_delta": "one corrected-French and one English scalar-ring replacement; zero diplomatic, LayerTarget, seam, or unrelated source changes"
+  },
+  "reader_and_source_qa": {
+    "status": "PASS",
+    "reader_revision": "v068c3r20",
+    "reader_receipt": {
+      "path": "build/v068c3r20/build.json",
+      "bytes": 22216,
+      "sha256": "BA5D7BFDEA8F733CBA65703C5DA017E26A3FEB417297A975EBCAEFEA41D2BEA1"
+    },
+    "pdfs": {
+      "french": {
+        "path": "output/pdf/fr-p119-221-v068c3r20.pdf",
+        "bytes": 1417551,
+        "sha256": "91EE76111A240E36AC107FCAC9605A5E32E9E9796AAE86AAB495D5F36DB3AFB8",
+        "pages": 94
+      },
+      "english": {
+        "path": "output/pdf/en-p119-221-v068c3r20.pdf",
+        "bytes": 1381128,
+        "sha256": "3E78467B441F801DE742584CA9FBE906A886B4B9DD6AA4585315DB9482175AA1",
+        "pages": 90
+      }
+    },
+    "qa_revision": "v68r42",
+    "qa_receipt": {
+      "path": "qa/v68r42/check.json",
+      "bytes": 5375,
+      "sha256": "C3D039B399FDA3A2232F07A0D33ABB3E07ADEA431182FCEC26F3C8A9DFD703D0"
+    },
+    "structural_receipt": {
+      "path": "qa/v68r42/structural.json",
+      "bytes": 7900,
+      "sha256": "06EBFDCE2E77644BADB3A38606662FEBA4B518AECC99A84BEEE70DA930E71171"
+    },
+    "visual_attestation": {
+      "path": "tmp/d1017_p185_repair_toolchain/r42_visual_attestation.json",
+      "bytes": 2058,
+      "sha256": "FFD8A778DC32F9A31F9239B0B0B788245D44A83E8989B24E6128DC8DC04EE042"
+    },
+    "changed_physical_content_pages": {
+      "french": [55],
+      "english": [53]
+    },
+    "adjacent_page_content_streams_byte_identical": true
+  },
+  "semantic_successor": {
+    "status": "PASS_COMMITTED_AND_REPLAYED",
+    "revision": "sem/r21",
+    "manifest": {
+      "path": "sem/r21/manifest.json",
+      "bytes": 32119,
+      "sha256": "38275B0B2BB116467B3848F2E7EB1740F3692551E531E4130E72279F47F98C59"
+    },
+    "validation": {
+      "path": "sem/r21/validation.json",
+      "bytes": 9395,
+      "sha256": "D15C85751526EA144BFA02AFBB580540C93620C7AC12A6656D1C895EEA5A8BDB"
+    },
+    "execution": {
+      "script": {
+        "path": "tmp/d1017_p185_repair_toolchain/sem_r21.py",
+        "bytes": 49335,
+        "sha256": "09D09EBEC02A0A498863F34034450CB9FD2843662C2CD8379F710A52B8DA254E"
+      },
+      "contract": {
+        "path": "tmp/d1017_p185_repair_toolchain/sem_r21_contract.json",
+        "bytes": 1382,
+        "sha256": "106E1D86B248793644E4412FEE29A1B5CC2CD2F72EA196725205E51C995E19D2"
+      }
+    },
+    "delta": {
+      "changed_tables": 3,
+      "changed_existing_fields": 12,
+      "appended_rows": 0,
+      "affected_node_ids": ["tohoku:definition:hom-o-and-local-hom"],
+      "affected_occurrence_ids": ["tohoku:occ:p185:o003"],
+      "unchanged_payload_files": 13,
+      "all_ids_and_row_counts_preserved": true
+    },
+    "file_surface": {
+      "records": 16,
+      "bytes": 2019611,
+      "aggregate_manifest_bytes": 1297,
+      "aggregate_sha256": "23E318106C44AD42B947EE10BDDA5FFA5D90398B68C5CCE420C7AD55EDEEE6FB"
+    },
+    "corrected_segments": {
+      "diplomatic_sha256": "3BF8F59B6ED631FE86D797C4EB9AE894D860719F49428A62CF5B65009E97AF1D",
+      "french_sha256": "3E97451428511EE1FBAAB18FF58FEEF38EA6A1783FC2DEEE5AE52C684098F075",
+      "english_sha256": "E2AEF6054B1908D55A32194BB68F0274634F5F0724388C498F0A445A617DDE25"
+    }
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_FOR_NO_OVERWRITE_R61_TRANSACTION",
+    "predecessor": "tohoku_r60",
+    "successor": "tohoku_r61",
+    "decision": {
+      "decision_id": "D001041",
+      "unit_id": "tohoku:definition:hom-o-and-local-hom",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "modules-definition-hom-left-modules;modules-lemma-sheaf-hom-left-modules",
+      "rationale": "Stacks now gives the arbitrary-ring-sheaf left-module global Hom group, arbitrary-subspace local Hom groups, their restriction maps and sheaf property, and the canonical action by Gamma(X,Z_O). This is equivalent to the corrected sem/r21 source statement. The diplomatic printed Z(Gamma(X,O)) scalar claim is preserved as a source error and is not asserted; the following sheaf-Hom unit remains separate.",
+      "review_state": "integrated_source_repair_semantic_stacks_and_independent_review",
+      "supersedes": "D000404"
+    },
+    "issue": {
+      "issue_id": "I000032",
+      "unit_id": "tohoku:definition:hom-o-and-local-hom",
+      "status": "resolved",
+      "kind": "global_center_does_not_restrict_to_local_centers",
+      "claim": "The printed p. 185 sentence makes Hom_O(A,B) a module over Z(Gamma(X,O)), but a globally central section can restrict to a noncentral local section, so its multiplication need not be O-linear. The canonical scalar ring is Gamma(X,Z_O)=Gamma(O^natural).",
+      "evidence_labels": "modules-definition-hom-left-modules;modules-lemma-sheaf-hom-left-modules",
+      "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 185. On the Sierpinski space take O(X)=Q[t], O(U)=M_2(Q), with t restricting to e_11: t is globally central but e_11 is not locally central. D1017 formalizes the correct Gamma(X,Z_O)-action, and production/p185_fix2, reader v068c3r20, QA v68r42, and sem/r21 bind the repaired source statement.",
+      "control": "Preserve the printed scalar-ring sentence in diplomatic French. Use TOH-P185-COR-002 and TOH-SRC-P185-002 only in corrected French and English; bind the exact reader, visual QA, semantic successor, and final D1017 prerequisite audit before replacing D000404. Do not merge the following sheaf-Hom source unit.",
+      "resolution_decision": "D001041"
+    },
+    "map_replacement": {
+      "physical_line": 344,
+      "source_locator_preserved": "sem/r18/nodes.csv:344",
+      "predecessor_row_bytes": 473,
+      "predecessor_row_sha256": "401AC64FB3F40FB5BA9F710311A042FE59379707E3FC5125D6B33B6010B4E54E",
+      "only_fields_changed": ["decision_id", "disposition", "review_state", "stacks_labels", "official_tags", "rationale"],
+      "official_tags": "",
+      "qualification": "Equivalent only to the corrected sem/r21 source statement; the diplomatic printed claim remains preserved as a recorded source error."
+    },
+    "projected_counts": {
+      "decisions": 1041,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 384,
+      "existing_weaker": 4,
+      "remaining_gap_class_dispositions": 25,
+      "source_repairs_appended": 1,
+      "mapping_closures": 1,
+      "changed_map_rows": 1
+    }
+  },
+  "scope_separation": {
+    "current_unit": "global and arbitrary-subspace Hom definition plus corrected scalar-ring qualification",
+    "following_unit": "the open-set internal-Hom sheaf and equations (4.1.1)--(4.1.2)",
+    "rule": "The shared foundational Stacks block may support both mappings, but D1017 does not silently merge the following source unit."
+  },
+  "scanner_oracle": {
+    "status": "PASS",
+    "counts": {
+      "tex_files": 119,
+      "labels": 22103,
+      "official_tags_joined": 21437,
+      "topics": 13,
+      "topic_candidates": 1286,
+      "direct_topic_coverage": 13,
+      "warnings": 675,
+      "errors": 0
+    },
+    "modules_tex_sha256": "EF800D241EBA37CE7099F9B09440228969710988903EE393261C866F902A12F5",
+    "probe": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_scan_probe",
+      "stx": {"bytes": 5287716, "sha256": "8AF5DD35D91AF45EC6DACE5F3DDC03213992D9EB6316353DC0FEABC7A9B23427"},
+      "tcand": {"bytes": 489256, "sha256": "B7481F3F3FB7F5DDF59F6646B3DB440452751D760C21519D53619EB7510C4B13"},
+      "tmap": {"bytes": 2424, "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"},
+      "check": {"bytes": 82658, "sha256": "9D67B79E80E20D8A93FCC5C7B57F5FAC099F849F5273B3936BFE73A356DC9405"}
+    },
+    "replay": {
+      "path": "user/Documents/stacks-ftg/tmp/d1017_scan_probe_replay",
+      "all_six_output_files_byte_identical": true
+    }
+  },
+  "remaining_work": [
+    "construct, validate, promote, and replay tohoku_r61 exactly as authorized here; do not mutate this frozen prerequisite audit afterward"
+  ],
+  "external_constraints": {
+    "github": "TEMPORARILY_UNAVAILABLE_BY_DIRECT_USER_REPORT; NO_GIT_OR_REMOTE_ACTION_PERFORMED"
+  },
+  "errors": []
+}

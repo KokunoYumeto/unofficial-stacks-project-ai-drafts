@@ -1,0 +1,282 @@
+\begin{lemma}
+\label{lemma-constant-sheaf-ext-stalk-spectral-sequences}
+\begin{reference}
+\cite[Chapter IV, \S 4.3, Remark 2, p. 193]{Tohoku}
+\end{reference}
+Let $X$ be a topological space, let $R$ be a ring, let $M$ be an
+$R$-module, let $\mathcal{A}$ be an $\underline{R}$-module on $X$, and let
+$x \in X$. Denote by $\mathcal{N}_x$ the filtered set of open
+neighbourhoods of $x$, ordered by reverse inclusion. There is a functorial
+first quadrant spectral sequence
+\begin{equation}
+\label{equation-constant-sheaf-ext-stalk-first-spectral-sequence}
+{}^{\mathrm{II}}E_2^{p, q} =
+\colim_{U \in \mathcal{N}_x}
+\Ext_R^p(M, H^q(U, \mathcal{A}))
+\quad\Longrightarrow\quad
+\SheafExt^{p + q}_{\underline{R}}(\underline{M}, \mathcal{A})_x.
+\end{equation}
+It induces a finite filtration on the abutment in every total degree.
+
+Let $I \subset R$ be a two-sided ideal, put $S = R/I$, and assume that
+$\mathcal{A}$ is an $\underline{S}$-module, viewed as an
+$\underline{R}$-module. There is also a functorial first quadrant spectral
+sequence
+\begin{equation}
+\label{equation-constant-sheaf-ext-stalk-quotient-spectral-sequence}
+{}^{\mathrm{III}}E_2^{p, q} =
+\bigoplus_{a + b = q}
+\colim_{U \in \mathcal{N}_x}
+\Ext_S^p(\text{Tor}_a^R(S, M), H^b(U, \mathcal{A}))
+\quad\Longrightarrow\quad
+\SheafExt^{p + q}_{\underline{R}}(\underline{M}, \mathcal{A})_x.
+\end{equation}
+It too induces a finite filtration in every total degree. Both spectral
+sequences are additive and functorial in $\mathcal{A}$ from the $E_2$-page
+onward.
+\end{lemma}
+
+\begin{proof}
+Choose once and for all a free resolution $L_\bullet \to M$ and the
+Godement resolution
+$\mathcal{A} \to \mathcal{C}^\bullet(\mathcal{A})$ of
+Lemma \ref{lemma-godement-resolution}. The construction of the Godement
+resolution commutes with restriction to open subspaces: this follows
+directly from its construction by the discrete space having the same
+points. Thus, for $U \in \mathcal{N}_x$, the complex
+$$
+C_U^\bullet = \Gamma(U, \mathcal{C}^\bullet(\mathcal{A}))
+$$
+computes $R\Gamma(U, \mathcal{A})$, and an inclusion $V \subset U$ gives
+a restriction map $C_U^\bullet \to C_V^\bullet$. These maps commute
+strictly with composition.
+
+Apply Lemma \ref{lemma-constant-sheaf-ext-double-complex} on every $U$,
+using the fixed resolution $L_\bullet$. The restriction maps just described
+give a directed system, from the $E_2$-page onward, of first quadrant
+spectral sequences with
+$$
+E_2^{p, q}(U) = \Ext_R^p(M, H^q(U, \mathcal{A}))
+$$
+and abutment
+$$
+H_U^n =
+\Ext^n_{D(\underline{R}|_U)}
+(\underline{M}|_U, \mathcal{A}|_U).
+$$
+For the quotient construction, apply
+Lemma \ref{lemma-constant-sheaf-ext-quotient-spectral-sequence} on every
+$U$. Its functoriality with respect to the maps
+$C_U^\bullet \to C_V^\bullet$ gives a directed system from the $E_2$-page
+onward. Its $E_2$-page is
+$$
+\bigoplus_{a + b = q}
+\Ext_S^p(\text{Tor}_a^R(S, M), H^b(U, \mathcal{A})).
+$$
+The canonical comparison maps between the Cartan--Eilenberg resolutions
+used in that lemma are functorial from the $E_2$-page onward, so the maps
+for restrictions are compatible with identities and composition.
+
+We explain carefully the passage to the filtered colimit. For either
+directed system write $E_r(U)$ for its $r$th page and set
+$$
+\overline E_r^{p, q} =
+\colim_{U \in \mathcal{N}_x} E_r^{p, q}(U),
+\qquad
+\overline d_r = \colim_{U \in \mathcal{N}_x} d_r(U).
+$$
+Filtered colimits of abelian groups are exact. Consequently they commute
+with kernels, images, and cokernels, and hence
+$$
+H(\overline E_r, \overline d_r) = \overline E_{r + 1}.
+$$
+Thus the colimit pages form spectral sequences with the displayed
+$E_2$-pages. In the quotient spectral sequence the sum indexed by
+$a + b = q$ is finite for fixed $q$, so it commutes with the filtered
+colimit and gives exactly the second displayed $E_2$-page.
+
+For completeness, convergence also passes to the colimit. In total degree
+$n$, each spectral sequence over $U$ has a finite filtration
+$$
+H_U^n = F_U^0H_U^n \supset F_U^1H_U^n \supset \ldots
+\supset F_U^{n + 1}H_U^n = 0
+$$
+whose graded pieces are $E_\infty^{p, n - p}(U)$. Restriction maps preserve
+these filtrations. Exactness of filtered colimits gives exact sequences
+$$
+0 \longrightarrow \colim_U F_U^{p + 1}H_U^n
+\longrightarrow \colim_U F_U^pH_U^n
+\longrightarrow \colim_U E_\infty^{p, n - p}(U)
+\longrightarrow 0.
+$$
+Hence $F^p = \colim_U F_U^pH_U^n$ is a finite filtration of
+$\colim_U H_U^n$. For a fixed bidegree $(p, q)$, a first quadrant spectral
+sequence stabilizes after a page depending only on $p$ and $q$, and not on
+$U$. Consequently
+$\colim_U E_\infty^{p, q}(U) = \overline E_\infty^{p, q}$, so the graded
+pieces of this filtration are the stable page of the colimit spectral
+sequence.
+
+Finally, by Lemma \ref{lemma-section-RHom-over-U}, the sheaf
+$\SheafExt^n_{\underline{R}}(\underline{M}, \mathcal{A})$ is the
+sheafification of the presheaf $U \mapsto H_U^n$. Sheafification does not
+change stalks, and therefore
+\begin{equation}
+\label{equation-constant-sheaf-ext-stalk-colimit}
+\SheafExt^n_{\underline{R}}(\underline{M}, \mathcal{A})_x
+= \colim_{U \in \mathcal{N}_x}
+\Ext^n_{D(\underline{R}|_U)}
+(\underline{M}|_U, \mathcal{A}|_U).
+\end{equation}
+This identifies the colimit abutments and their finite filtrations with
+those asserted in the lemma. Additivity and functoriality pass to filtered
+colimits.
+\end{proof}
+
+
+\begin{lemma}
+\label{lemma-constant-sheaf-ext-stalk-comparison}
+\begin{reference}
+\cite[Chapter IV, \S 4.3, Remark 2, p. 193]{Tohoku}
+\end{reference}
+In the situation of
+Lemma \ref{lemma-constant-sheaf-ext-stalk-spectral-sequences}, there are
+canonical maps
+\begin{equation}
+\label{equation-constant-sheaf-ext-stalk-comparison}
+\SheafExt^n_{\underline{R}}(\underline{M}, \mathcal{A})_x
+\longrightarrow \Ext_R^n(M, \mathcal{A}_x),
+\qquad n \geq 0.
+\end{equation}
+They are isomorphisms if either one of the following sets of hypotheses
+holds.
+\begin{enumerate}
+\item For every $p, q \geq 0$, the canonical map
+$$
+\colim_{U \in \mathcal{N}_x}
+\Ext_R^p(M, H^q(U, \mathcal{A}))
+\longrightarrow
+\Ext_R^p\left(M,
+\colim_{U \in \mathcal{N}_x}H^q(U, \mathcal{A})\right)
+$$
+is an isomorphism.
+\item There is a two-sided ideal $I \subset R$ such that, with $S = R/I$,
+the sheaf $\mathcal{A}$ is an $\underline{S}$-module, and for every
+$a, b, p \geq 0$ the canonical map
+$$
+\begin{aligned}
+&
+\colim_{U \in \mathcal{N}_x}
+\Ext_S^p(\text{Tor}_a^R(S, M), H^b(U, \mathcal{A}))
+\\
+&\qquad\longrightarrow
+\Ext_S^p\left(\text{Tor}_a^R(S, M),
+\colim_{U \in \mathcal{N}_x}H^b(U, \mathcal{A})\right)
+\end{aligned}
+$$
+is an isomorphism.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The exact stalk functor sends $\underline{M}|_U$ to $M$ and
+$\mathcal{A}|_U$ to $\mathcal{A}_x$. It therefore induces maps
+$$
+\Ext^n_{D(\underline{R}|_U)}
+(\underline{M}|_U, \mathcal{A}|_U)
+\longrightarrow \Ext_R^n(M, \mathcal{A}_x)
+$$
+compatible with restriction in $U$. Their colimit, under the identification
+of Equation (\ref{equation-constant-sheaf-ext-stalk-colimit}), is the map
+in Equation (\ref{equation-constant-sheaf-ext-stalk-comparison}).
+
+We first record the cohomology groups appearing after passage to the stalk:
+$$
+\colim_{U \in \mathcal{N}_x} H^q(U, \mathcal{A}) =
+\begin{cases}
+\mathcal{A}_x & q = 0, \\
+0 & q > 0.
+\end{cases}
+$$
+For $q = 0$ this is the definition of the stalk. If $q > 0$, then every
+class over a neighbourhood $U$ vanishes after restriction to an open
+covering of $U$ by
+Lemma \ref{lemma-kill-cohomology-class-on-covering}. Choosing a member of
+that covering which contains $x$ shows that the germ of the class is zero.
+
+The fixed Godement resolution gives strict maps
+$C_U^\bullet \to \mathcal{C}^\bullet(\mathcal{A})_x$. By
+Lemma \ref{lemma-godement-resolution}, the augmentation
+$\mathcal{A}_x[0] \to \mathcal{C}^\bullet(\mathcal{A})_x$ is a homotopy
+equivalence. Thus the double complexes formed with the stalk complex compute
+$\Ext_R^*(M, \mathcal{A}_x)$, and the maps from the neighbourhood complexes
+give a comparison from the spectral sequence of Equation
+(\ref{equation-constant-sheaf-ext-stalk-first-spectral-sequence}) to this
+stalk spectral sequence. Its $E_2$-page is concentrated in the row $q = 0$
+and that row is $\Ext_R^p(M, \mathcal{A}_x)$. Under hypothesis (1), the map
+on $E_2$-pages is an isomorphism. Therefore it is an isomorphism on every
+later page and on the graded pieces of the finite abutment filtrations.
+Descending induction on those finite filtrations proves that the map on
+abutments is an isomorphism. By construction that map is the canonical map
+in Equation (\ref{equation-constant-sheaf-ext-stalk-comparison}).
+
+Under hypothesis (2), use instead the spectral sequence of Equation
+(\ref{equation-constant-sheaf-ext-stalk-quotient-spectral-sequence}). The
+quotient hyper-Ext construction applied to the stalk complex has
+$$
+E_2^{p, q} =
+\Ext_S^p(\text{Tor}_q^R(S, M), \mathcal{A}_x)
+\quad\Longrightarrow\quad
+\Ext_R^{p + q}(M, \mathcal{A}_x),
+$$
+because the stalk complex has cohomology $\mathcal{A}_x$ in degree zero and
+zero in higher degrees. The displayed colimit calculation and hypothesis
+(2) identify the two $E_2$-pages.
+The same finite-filtration argument proves that the canonical map on
+abutments is an isomorphism.
+\end{proof}
+
+
+\begin{lemma}
+\label{lemma-constant-sheaf-ext-stalk-noetherian-quotient}
+\begin{reference}
+\cite[Chapter IV, \S 4.3, Remark 2(b), p. 193]{Tohoku}
+\end{reference}
+Let $X$ be a topological space, let $R$ be a ring, let $I \subset R$ be a
+two-sided ideal, and put $S = R/I$. Let $M$ be an $R$-module, let
+$\mathcal{A}$ be an $\underline{S}$-module on $X$, and let $x \in X$.
+Assume that $S$ is left Noetherian and that
+$\text{Tor}_a^R(S, M)$ is a finite $S$-module for every $a \geq 0$. Then
+the canonical maps
+$$
+\SheafExt^n_{\underline{R}}(\underline{M}, \mathcal{A})_x
+\longrightarrow \Ext_R^n(M, \mathcal{A}_x)
+$$
+are isomorphisms for all $n \geq 0$.
+\end{lemma}
+
+\begin{proof}
+Put $T_a = \text{Tor}_a^R(S, M)$. Since $S$ is left Noetherian and $T_a$
+is finite, $T_a$ has a resolution by finite free $S$-modules. Indeed, choose
+a surjection from a finite free module onto $T_a$; its kernel is finite by
+the left Noetherian hypothesis, and iteration gives the desired resolution.
+
+Let $(N_i)$ be any filtered system of $S$-modules and let $P_\bullet$ be
+such a resolution of $T_a$. Since every $P_j$ is finite free, the canonical
+maps
+$$
+\colim_i \Hom_S(P_j, N_i)
+\longrightarrow \Hom_S(P_j, \colim_i N_i)
+$$
+are isomorphisms. Filtered colimits of abelian groups are exact, so taking
+cohomology of the Hom complexes gives isomorphisms
+$$
+\colim_i \Ext_S^p(T_a, N_i)
+\longrightarrow \Ext_S^p(T_a, \colim_i N_i)
+$$
+for every $p \geq 0$. Apply this with
+$N_U = H^b(U, \mathcal{A})$, where $\mathcal{N}_x$ is the filtered set of
+open neighbourhoods of $x$ ordered by reverse inclusion. Hypothesis (2) of
+Lemma \ref{lemma-constant-sheaf-ext-stalk-comparison} holds for every
+$a, b, p$, and the result follows from that lemma.
+\end{proof}

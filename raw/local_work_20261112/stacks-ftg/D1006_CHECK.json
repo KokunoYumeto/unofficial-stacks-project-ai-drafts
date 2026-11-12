@@ -1,0 +1,276 @@
+{
+  "schema": "tohoku-stacks-d1006-audit-v1",
+  "created_at": "2026-08-22T09:23:23.7230859+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1006",
+  "primary_unit": "tohoku:proposition:3.6.2",
+  "related_units": [
+    "tohoku:subitem:3.6.2:a",
+    "tohoku:subitem:3.6.2:b",
+    "tohoku:proof:3.6.2:p1",
+    "tohoku:proof:3.6.2:p2",
+    "tohoku:eq:derived-colimit-comparison",
+    "tohoku:eq:colimit-resolution",
+    "tohoku:eq:T-acyclic-computation",
+    "tohoku:eq:T-colimit-complex",
+    "tohoku:eq:cohomology-colimit-comparison",
+    "tohoku:eq:derived-colimit-isomorphism"
+  ],
+  "stacks_label": "derived-lemma-right-derived-functor-commutes-filtered-colimits",
+  "source_reference": "Tohoku, Chapter III, Section 3.6, Proposition 3.6.2 and proof, pp. 169--170, with the right-derived-functor convention on p. 143",
+  "mapping": {
+    "status": "PENDING_NO_OVERWRITE_SUCCESSOR",
+    "current_mapping_state": "UNCHANGED_R48",
+    "unit": "tohoku:proposition:3.6.2",
+    "nonclaim": "This receipt does not update or promote the Tohoku mapping ledger. D1006 mapping admission belongs to a later audited no-overwrite mapping successor."
+  },
+  "source_qualification": {
+    "status": "STRICT_PASS",
+    "decision_id": "TOH-SRC-P169-011",
+    "preflight": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p169_r3\\preflight.json",
+      "bytes": 2640,
+      "sha256": "A308156AC404A36DB5AA786A1FF88A0E1BA5B80F5EC2D5435C8B2CF2ADBB3405",
+      "schema": "tohoku-p169-degree-zero-qualification-preflight-v1",
+      "status": "PASS"
+    },
+    "admission": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p169_r3\\check.json",
+      "bytes": 3204,
+      "sha256": "251C31E08DC42F608E1A11624D8E81D0C28BB889861C8BEBC9E08AF15BC27565",
+      "schema": "tohoku-p169-degree-zero-source-repair-v1",
+      "status": "PASS"
+    },
+    "decisions": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p169_r3\\decisions.jsonl",
+      "bytes": 8622,
+      "sha256": "90E8B19597A04C8EF233772F3AE59D5A79889B653696339BED66F7D6AF836DD9",
+      "decision_rows": 12,
+      "decision_ids_unique": true
+    },
+    "layers": {
+      "diplomatic_french": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p169_r3\\tex\\fr_diplomatic\\p169.tex",
+        "bytes": 4542,
+        "sha256": "478667FAAD8CE663B598B3B0DD795D7824CC10E7D89F7F84DB0B3DDD475C69E1",
+        "qualification_insertions": 0,
+        "unchanged_from_predecessor": true
+      },
+      "corrected_french": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p169_r3\\tex\\fr_corrected\\p169.tex",
+        "bytes": 6449,
+        "sha256": "B1D666F87DAE3FC41ED4A0223605BD3CEC4EE9A66F54E14E50133744F0231680",
+        "qualification_insertions": 1
+      },
+      "english": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\production\\p169_r3\\tex\\en\\p169.tex",
+        "bytes": 5993,
+        "sha256": "4928C93B3E4AE8BEB7387F9F773FE2BC288B89CD3DE3FC4D110AB2A75F48EF88",
+        "qualification_insertions": 1
+      }
+    },
+    "ordered_layer_target_sha256": "C031A569CDDE8D3ACBE22E6F35780FAEC5DB2ABFF4C50A55EA334033E138D003",
+    "layer_targets_added": 0,
+    "layer_targets_removed": 0,
+    "checks": [
+      "The diplomatic French layer is byte-identical to its predecessor; the qualification is append-only in corrected French and English.",
+      "The visible qualification identifies the missing degree-zero comparison T(M)->R^0T(M) for an arbitrary additive functor.",
+      "The source proposition is valid after adding left exactness, or after strengthening condition b) to full right T-acyclicity.",
+      "Condition a), the necessity parenthetical, the compatible-resolution construction, p. 170, and all ordered LayerTarget identities are unchanged."
+    ]
+  },
+  "reader_successor": {
+    "status": "STRICT_PASS",
+    "revision": "v068c3r16",
+    "predecessor_revision": "v068c3r15",
+    "build_receipt": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r16\\build.json",
+      "bytes": 31798,
+      "sha256": "5850BE56D81E84201A6B4183AFDA476FEB170A475817BF4AFDDF4A7C35980942",
+      "schema": "tohoku-v068-staged-successor-build-v1",
+      "status": "PASS"
+    },
+    "independent_qa": {
+      "qa_revision": "v68r38",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\qa\\v68r38\\check.json",
+      "bytes": 57117,
+      "sha256": "002286F200FB8CEC1826C868988E8CC46AEA855DA5585637757450EE3EC24D26",
+      "schema": "tohoku-v068-reader-independent-qa-v1",
+      "status": "PASS"
+    },
+    "staged_source_manifest": {
+      "rows": 543,
+      "total_file_bytes": 11854663,
+      "manifest_bytes": 62845,
+      "sha256": "7E465B4A4CF1E6EDA2EA3FFE4AFDFCE05872896842298028E1DA56E28AC249D1",
+      "replaced_paths": [
+        "en/p169.tex",
+        "fr/p169.tex"
+      ],
+      "byte_identical_predecessor_files": 541,
+      "other_staged_source_changes": 0
+    },
+    "pdfs": {
+      "english": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\output\\pdf\\en-p119-221-v068c3r16.pdf",
+        "bytes": 1380459,
+        "sha256": "06930C6F40143BAEE80AC86C04ADDECD99CC2B8B986AF1E26823C86D15FED96E",
+        "pages": 90,
+        "media_box": [
+          0,
+          0,
+          595.276,
+          841.89
+        ],
+        "rotation": 0,
+        "encrypted": false,
+        "strict_parse": "PASS"
+      },
+      "french": {
+        "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\output\\pdf\\fr-p119-221-v068c3r16.pdf",
+        "bytes": 1415606,
+        "sha256": "7D635D230C1E3C5A81E1E6A7AA0DB93A1F905CFEFD73643F1B7440DF05A9CB25",
+        "pages": 93,
+        "media_box": [
+          0,
+          0,
+          595.276,
+          841.89
+        ],
+        "rotation": 0,
+        "encrypted": false,
+        "strict_parse": "PASS"
+      }
+    },
+    "build_checks": {
+      "compile_order": [
+        "fr",
+        "en"
+      ],
+      "passes_per_language": 2,
+      "shell_escape": false,
+      "receipt_errors": 0,
+      "qa_errors": 0,
+      "source_transition_exact": true,
+      "pdf_pair_accepted": true
+    },
+    "visual_audit": {
+      "status": "STRICT_PASS",
+      "all_changed_or_semantic_pages_reviewed": true,
+      "english_qualification_visible": "Editorial qualification across physical pages 39--40",
+      "french_qualification_visible": "Qualification editoriale on physical page 41",
+      "clipping": false,
+      "overlap": false,
+      "margin_defects": false,
+      "header_footer_defects": false,
+      "page_number_defects": false,
+      "missing_or_broken_glyphs": false,
+      "semantic_only_pages_pixel_identical": true
+    }
+  },
+  "artifacts": {
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\derived.tex",
+      "bytes": 531085,
+      "sha256": "0568168AA8E3D596D6D42FC782F1EF17091BFA07F5F715807743E99CDA5FB7F5",
+      "new_block_lines": [
+        7237,
+        7386
+      ]
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\derived.aux",
+      "bytes": 37261,
+      "sha256": "66B037847BB3DD460C05476BF20FBB37D4EDBCE69DA6B9BD5E951F9051A82E74"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\derived.log",
+      "bytes": 46303,
+      "sha256": "8F316FEE745734153B59AED81A5999B16FE5F4006D0300DF6FB34231B8DD5078"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\derived.pdf",
+      "bytes": 1389613,
+      "sha256": "F2CD82CE55D0100044F435BA4B2FB48F9C229CEDAE2D49D285AA972437B00B90",
+      "pages": 148,
+      "media_box": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_label": "\\newlabel{lemma-right-derived-functor-commutes-filtered-colimits}{{20.6}{74}{Filtered colimits of objects}{subsection.20.6}{}}",
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The Stacks statement cites Proposition 3.6.2 on pp. 169--170 and explicitly records the p. 143 degree-zero issue.",
+      "Its arbitrary-additive formulation uses full right T-acyclicity: T(Q)->R^0T(Q) is an isomorphism and R^qT(Q)=0 for q>0.",
+      "Its left-exact specialization recovers the source's positive-degree vanishing formulation because degree zero is then automatic.",
+      "The r16 reader successor consumes exactly the admitted corrected French and English p. 169 layers, and r38 independently accepts the source transition and visible render."
+    ]
+  },
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "checks": [
+      "The indexing object I is a small filtered partially ordered set, and the theorem is not stated for arbitrary or large colimits.",
+      "The category A^I is Grothendieck; evaluation is exact and preserves injectives by the preceding compatible-resolution result.",
+      "The filtered-colimit functor L:A^I->A is exact by AB5, while T commuting with filtered colimits identifies colim_i(T o ev_i) with T o L.",
+      "The preceding filtered-colimit-of-functors lemma computes colim_i R^pT(M_i) as R^p(T o L)(M).",
+      "A resolution by injectives in A^I evaluates to injective resolutions of all M_i, and its L-images are assumed fully right T-acyclic; Leray acyclicity therefore computes R^pT(L(M)).",
+      "The proof identifies the resulting isomorphism with the canonical map induced by the colimit cocone and proves naturality without a functorial choice of resolution.",
+      "No step asserts that a filtered colimit of injectives is injective."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "label": "Lemma 20.6",
+    "label_page": 74,
+    "final_passes": 2,
+    "stable_aux_sha256": "66B037847BB3DD460C05476BF20FBB37D4EDBCE69DA6B9BD5E951F9051A82E74",
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0,
+    "existing_out_of_scope_overfull_diagnostics": 26,
+    "existing_out_of_scope_underfull_diagnostics": 1
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_parser": "pypdf PdfReader(strict=True), every page/content/text/geometry sweep",
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 2830816,
+    "content_stream_bytes_min": 4302,
+    "content_stream_bytes_max": 30666,
+    "uniform_media_box": true,
+    "uniform_rotation": true,
+    "mupdf_interpretation_pages": 148,
+    "mupdf_interpretation_result": "PASS",
+    "visual_pages": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "visual_result": "The incoming context, complete Lemma 20.6 statement and proof, three displayed comparison equations, outgoing seam, typography, margins, headers, page numbers, proof marker, and mathematical glyphs render cleanly with no clipping, overlap, crowding, malformed symbols, or bad page breaks.",
+    "independent_full_pdf_result": "All 148 pages passed strict pypdf decompression and text/content inspection plus full MuPDF interpretation; the D1006 neighborhood on pages 72--77 passed Poppler rasterization and independent visual inspection."
+  },
+  "nonclaims": [
+    "The theorem is for a small filtered partially ordered set, not an arbitrary diagram category or a large indexing category.",
+    "For an arbitrary additive T, positive-degree vanishing alone is not claimed sufficient; full right T-acyclicity includes the degree-zero isomorphism T(Q)->R^0T(Q).",
+    "Positive-degree vanishing alone is used only in the explicitly stated left-exact specialization.",
+    "No filtered colimit of injective objects is asserted to be injective.",
+    "No assertion is made for arbitrary or large colimits.",
+    "No mapping-ledger update, mapping promotion, release, or publication is claimed; D1006 mapping remains pending."
+  ],
+  "errors": []
+}

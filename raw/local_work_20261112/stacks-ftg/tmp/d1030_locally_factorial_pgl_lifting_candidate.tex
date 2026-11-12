@@ -1,0 +1,48 @@
+\begin{lemma}[Projective linear torsors on a locally factorial scheme]
+\label{lemma-locally-UFD-projective-linear-torsors-lift}
+\begin{reference}
+\cite[Chapter III, \S 3.4, Proposition 3.4.1, p. 161]{Tohoku}
+\end{reference}
+Let $X$ be a Noetherian integral scheme all of whose local rings are unique
+factorization domains, and let $n\geq1$. On the Zariski site of $X$, the map
+\[
+H^1(X,\mathcal{GL}_n)\longrightarrow H^1(X,\mathcal{PGL}_n)
+\]
+is surjective. Equivalently, every Zariski locally trivial
+$\mathcal{PGL}_n$-torsor is induced by a $\mathcal{GL}_n$-torsor. Thus every
+Zariski locally trivial projective-space bundle of relative dimension
+$n-1$ with structure group $\mathcal{PGL}_n$ is the projectivization of a
+rank $n$ vector bundle on $X$.
+\end{lemma}
+
+\begin{proof}
+The central extension of group schemes
+\[
+1\longrightarrow\mathbf G_m\longrightarrow\mathrm{GL}_n
+\longrightarrow\mathrm{PGL}_n\longrightarrow1
+\]
+gives an exact sequence of sheaves of groups on the Zariski site of $X$,
+\[
+1\longrightarrow\mathcal O_X^*\longrightarrow\mathcal{GL}_n
+\longrightarrow\mathcal{PGL}_n\longrightarrow1.
+\]
+Indeed, the last morphism is a $\mathbf G_m$-torsor and hence has sections
+Zariski locally. Its kernel $\mathcal O_X^*$ is central.
+
+Let $\mathcal E$ be a $\mathcal{PGL}_n$-torsor. Cohomology, Lemma
+\ref{cohomology-lemma-pointwise-envelope-degree-two-boundary} associates to
+$\mathcal E$ an obstruction
+\[
+\partial(\mathcal E)\in H^2(X,\mathcal O_X^*)
+\]
+which vanishes if and only if $\mathcal E$ is induced by a
+$\mathcal{GL}_n$-torsor. Divisors, Lemma
+\ref{lemma-locally-UFD-divisor-resolution} gives
+$H^2(X,\mathcal O_X^*)=0$, so the obstruction vanishes.
+
+Finally, $\mathcal{GL}_n$-torsors are frame torsors of rank $n$ vector
+bundles, and extension of structure group along
+$\mathrm{GL}_n\to\mathrm{PGL}_n$ is projectivization. This proves the last
+assertion.
+\end{proof}
+

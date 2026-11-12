@@ -1,0 +1,345 @@
+{
+  "schema": "tohoku-stacks-d1009-audit-v1",
+  "created_at": "2026-08-22T22:54:25.0255565+02:00",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1009",
+  "primary_units": [
+    "tohoku:section:5.7",
+    "tohoku:definition:support-antifilter",
+    "tohoku:construction:invariant-support-antifilter",
+    "tohoku:spectral-sequence:5.7-i-supported-equivariant",
+    "tohoku:obstruction:second-spectral-sequence-with-supports"
+  ],
+  "source_reference": "Tohoku, Chapter V, Section 5.7, pp. 219--220",
+  "mapping": {
+    "status": "PENDING_NO_OVERWRITE_SUCCESSOR",
+    "current_mapping_state": "UNCHANGED_R51",
+    "predecessor": {
+      "path": "user\\Documents\\stacks-ftg\\tohoku_r51",
+      "receipt": {
+        "path": "user\\Documents\\stacks-ftg\\tohoku_r51\\r51-check.json",
+        "bytes": 48954,
+        "sha256": "711F5162BB7830ABA202B9A51BE356427126C28624FE7BA3797EF0BF4F528922"
+      },
+      "complete_surface": {
+        "files": 15,
+        "bytes": 7241947,
+        "aggregate_sha256": "82DDD6C08EDFD0775E58B22A7D5688B6B37CFBC61003EDC7B016978E0CF7AA7F"
+      },
+      "decisions": 1018,
+      "remaining_gap_class_dispositions": 47
+    },
+    "planned_successor": "tohoku_r52",
+    "planned_decisions": [
+      {
+        "decision_id": "D001019",
+        "unit_id": "tohoku:section:5.7",
+        "supersedes": "D000340",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-section-equivariant-cohomology-supports"
+      },
+      {
+        "decision_id": "D001020",
+        "unit_id": "tohoku:definition:support-antifilter",
+        "supersedes": "D000612",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-definition-equivariant-cohomology-family-supports"
+      },
+      {
+        "decision_id": "D001021",
+        "unit_id": "tohoku:construction:invariant-support-antifilter",
+        "supersedes": "D000588",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-equivariant-family-supports-invariant-saturation"
+      },
+      {
+        "decision_id": "D001022",
+        "unit_id": "tohoku:spectral-sequence:5.7-i-supported-equivariant",
+        "supersedes": "D000954",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence"
+      },
+      {
+        "decision_id": "D001023",
+        "unit_id": "tohoku:obstruction:second-spectral-sequence-with-supports",
+        "supersedes": "D000625",
+        "disposition": "existing_equivalent",
+        "stacks_label": "cohomology-remark-equivariant-support-second-spectral-sequence"
+      }
+    ],
+    "expected_postsuccessor_counts": {
+      "units": 991,
+      "decisions": 1023,
+      "decided_units": 679,
+      "existing_equivalent": 367,
+      "existing_stronger": 41,
+      "existing_weaker": 6,
+      "extend_existing": 18,
+      "new_section": 5,
+      "new_statement": 13,
+      "remaining_gap_class_dispositions": 42
+    },
+    "classification_reason": "The new section gives the source's supported equivariant degree-zero functor, invariant saturation, orbit-space support family, supported first Grothendieck spectral sequence, and exact obstruction plus neighbourhood hypothesis. The later filtered-colimit construction and second spectral sequence are deliberately deferred to separate source units.",
+    "nonclaim": "This receipt does not mutate or promote the mapping ledger; D001019--D001023 belong to a separately validated no-overwrite r52 transaction."
+  },
+  "source_audit": {
+    "status": "STRICT_PASS",
+    "authority_pdf": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\authority_snapshot\\jstage_part_II_9_3_185.pdf",
+      "bytes": 3984260,
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "reader_revision": "v068c3r17",
+    "reader_build_receipt": {
+      "path": "build/v068c3r17/build.json",
+      "bytes": 30957,
+      "sha256": "6A7E647F3BEDCBAC4E7538D56F83830CB2BC134F124AC257D9E64662A8D0C380"
+    },
+    "source_pages": {
+      "english_p219": {
+        "path": "build/v068c3r17/src/en/p219.tex",
+        "bytes": 4520,
+        "sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088"
+      },
+      "english_p220": {
+        "path": "build/v068c3r17/src/en/p220.tex",
+        "bytes": 3953,
+        "sha256": "47A7AC303744F50E1D3DF5A742D0B31093E4E80234574FCA4932CA17F6321195"
+      },
+      "french_p219": {
+        "path": "build/v068c3r17/src/fr/p219.tex",
+        "bytes": 4814,
+        "sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE"
+      },
+      "french_p220": {
+        "path": "build/v068c3r17/src/fr/p220.tex",
+        "bytes": 4085,
+        "sha256": "85ED56255B7F863667D66D3A957B8904B51ADB5344A702A2D16D034A6D82FD71"
+      }
+    },
+    "existing_source_correction": {
+      "decision_id": "TOH-SRC-P220-004",
+      "ledger": {
+        "path": "SOURCE_CORRECTIONS.jsonl",
+        "bytes": 208551,
+        "sha256": "2D99ED4D9F4697A6991405BEFFA5EF755F58F42AFAA17FB4198DA30D806AEF90",
+        "decision_occurrences": 1,
+        "state": "active"
+      },
+      "effect": "The corrected English and French p. 220 restore the support subscript Phi on the spectral-sequence abutment immediately before (5.7.4).",
+      "live_formalization_history_lines": [19783, 19787],
+      "live_supported_abutment_lines": [19818, 19822]
+    },
+    "source_repair_required": false,
+    "source_repair_reason": "The only relevant print-level defect was already corrected, admitted, and propagated by TOH-SRC-P220-004; D1009 changes no reader or semantic source layer.",
+    "terminology": "The source's antifilter of closed subsets is normalized to the existing Stacks term family of supports without changing its closure axioms."
+  },
+  "semantic_audit": {
+    "status": "STRICT_PASS_INHERITED_R51",
+    "generation": "sem/r18",
+    "complete_surface": {
+      "files": 18,
+      "bytes": 2060023,
+      "aggregate_sha256": "76B6EBA7042FCFF59306E6178AC702BFDEDA392D2ADD754DDE932EBFAA6E6302"
+    },
+    "stable_surfaces": {
+      "nodes": 991,
+      "occurrences": 1036,
+      "edges": 1475,
+      "references": 436
+    },
+    "mutation": "NONE"
+  },
+  "artifacts": {
+    "reviewed_draft": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1009_block.tex",
+      "lines": 264,
+      "bytes": 9642,
+      "sha256": "2B9125E67DCA91E7C7F0CEA8367BD349B94C5CA275BD4AE2FDA6F5067B71D18C"
+    },
+    "tex": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "lines": 23608,
+      "bytes": 869226,
+      "sha256": "31E9F1607073933C2159AE5D1595A451CB298FFD3BB9E006B4DB28B7B5CD48D0",
+      "predecessor_bytes": 859582,
+      "predecessor_sha256": "A7421C2A20D1D2E9DEE9CB85D7EEA352CE72A22FC87D1CB0AE2DAE95EB6F087D",
+      "new_block_lines": [19671, 19934],
+      "draft_and_live_line_arrays_identical": true
+    },
+    "aux": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.aux",
+      "bytes": 53482,
+      "sha256": "6C5A5E80839E7AA8B24A391B73157B7BB6A85D540CF928C558AD3F32092BC31E"
+    },
+    "out": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.out",
+      "bytes": 12488,
+      "sha256": "B1ED91FACA237DCDC40B39E74C3BDF1FEA084B652BEAF2F1C9B7940F177C58DD"
+    },
+    "toc": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.toc",
+      "bytes": 5477,
+      "sha256": "7AF072814F59D0B8156D5D673BE213FB2435FDE242DE09465685FE1AC0D557BB"
+    },
+    "log": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.log",
+      "bytes": 47369,
+      "sha256": "FFDACC3A15E1C35EF674EB90543324F5A46AB10A656571ECA7224D5CF75EE7E0"
+    },
+    "pdf": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.pdf",
+      "bytes": 1910921,
+      "sha256": "3B98EA5B1C1010BDBAB73D717A148CE8A2F691FA158F7509882B3A655BA77E18",
+      "pages": 227,
+      "media_box": [0, 0, 612, 792],
+      "rotation": 0,
+      "encrypted": false
+    }
+  },
+  "aux_labels": [
+    "\\newlabel{section-equivariant-cohomology-supports}{{46}{189}{Equivariant cohomology with supports}{section.46}{}}",
+    "\\newlabel{definition-equivariant-cohomology-family-supports}{{46.1}{189}{}{subsection.46.1}{}}",
+    "\\newlabel{lemma-equivariant-family-supports-invariant-saturation}{{46.2}{190}{Invariant saturation of a family of supports}{subsection.46.2}{}}",
+    "\\newlabel{lemma-orbit-space-equivariant-support-spectral-sequence}{{46.3}{190}{Equivariant cohomology with supports on the orbit space}{subsection.46.3}{}}",
+    "\\newlabel{remark-equivariant-support-second-spectral-sequence}{{46.4}{191}{}{subsection.46.4}{}}"
+  ],
+  "math_audit": {
+    "status": "STRICT_PASS",
+    "independent_mathematical_review": "STRICT_PASS",
+    "independent_source_mapping_review": "STRICT_PASS",
+    "root_replay": "STRICT_PASS",
+    "checks": [
+      "Invariant saturation Phi^G is a G-stable family contained in Phi and gives the same invariant supported sections.",
+      "The orbit-space family q^dagger Psi uses the closure of q(Z), is a family of supports, and equals its invariant saturation.",
+      "The support identity on Y is Supp(tilde s)=closure(q(Supp(s))); no closed-image property of an arbitrary orbit map is assumed.",
+      "The degree-zero supported invariant-section identity is natural and left exact.",
+      "Invariant direct image sends equivariant injectives to flasque sheaves, which are acyclic for Gamma_Psi, so the Grothendieck spectral sequence applies.",
+      "The E2-page, supported abutment, first-quadrant indexing, additivity, functoriality, and finite filtration are all stated.",
+      "The second factorization is not misrepresented as automatically satisfying Grothendieck acyclicity.",
+      "The exact source hypothesis that every member of Psi has a neighbourhood again in Psi is stated, while the later filtered-colimit construction, second spectral sequence, and interchange with group cohomology are explicitly deferred.",
+      "The section is restricted to abelian G-sheaves and asserts no extension to modules over a general equivariant ring sheaf."
+    ]
+  },
+  "build_audit": {
+    "status": "STRICT_PASS",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.29 (MiKTeX 26.5)",
+    "command": "pdflatex -interaction=nonstopmode -halt-on-error cohomology.tex",
+    "passes": 3,
+    "final_aux_out_toc_stable_across_last_pass": true,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_notices": 0,
+    "fatal_errors": 0,
+    "new_block_box_diagnostics": 0,
+    "out_of_block_overfull_diagnostics": 33,
+    "out_of_block_underfull_diagnostics": 0
+  },
+  "pdf_audit": {
+    "status": "STRICT_PASS",
+    "strict_parser": "pypdf 6.12.2 PdfReader(strict=True), every page content stream, text extraction, media box, and rotation inspected",
+    "xref_objects_swept": 4109,
+    "strict_page_parse_errors": 0,
+    "content_stream_decode_errors": 0,
+    "contentless_pages": 0,
+    "textless_pages": 0,
+    "decoded_content_stream_bytes_total": 4322820,
+    "extracted_text_characters": 497030,
+    "uniform_media_box": true,
+    "uniform_rotation": true,
+    "poppler_full_text_interpretation": "PASS",
+    "visual_pages": [188, 189, 190, 191, 192],
+    "visual_render_sha256": [
+      "CDD9CEB23DAD317F65E0AA506B212902C2679E1D6CAE3CA772B869A0337EA747",
+      "A4C40CE7A477EB910C1EA5E9539DB2BE8F3472345668AD394E0E94C06714B5CD",
+      "C8929781454DF268413E98479623E6C88E40752226B383EC2A0BDEE149405E79",
+      "EF015173EAABB4DE2D1CC140E061086B711336AA65FB04232A6279534521974C",
+      "6AE027BEE53F9F52092612357E76480B69A792B1445F2BEF51BC3F89B6F7DBA0"
+    ],
+    "visual_result": "The incoming seam, complete section and definition, split Phi^G display, support-closure formulas, spectral-sequence page, proof markers, continued obstruction remark, outgoing Ext-with-support seam, typography, margins, headers, page numbers, links, and mathematical glyphs render cleanly with no clipping, overlap, crowding, malformed symbols, or bad page break."
+  },
+  "scanner_audit": {
+    "status": "STRICT_PASS",
+    "bounded_scan_path": "user\\Documents\\stacks-ftg\\tmp\\d1009_scan",
+    "deterministic_replay_identical": true,
+    "counts": {
+      "labels": 22069,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1275,
+      "topics": 13,
+      "warnings": 641,
+      "errors": 0
+    },
+    "outputs": {
+      "stx.csv": {
+        "bytes": 5278176,
+        "sha256": "A5535AF7AA7C02780D88DBEAB50417ED0BB7688865AB4A002D7B6656BAD41D14"
+      },
+      "tcand.csv": {
+        "bytes": 487516,
+        "sha256": "7CF3E31793144F7AB87F7A9E79923E7B654E527713C3467823179BA74F224915"
+      },
+      "tmap.csv": {
+        "bytes": 2424,
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      "check.json": {
+        "bytes": 78742,
+        "sha256": "F674AE16BCC04E12FF97705F7CC29B6E26B3CBA8EC978DD84A80FFA0F27B8808"
+      }
+    },
+    "delta_from_r51": {
+      "new_labels": [
+        "cohomology-section-equivariant-cohomology-supports",
+        "cohomology-definition-equivariant-cohomology-family-supports",
+        "cohomology-lemma-equivariant-family-supports-invariant-saturation",
+        "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence",
+        "cohomology-remark-equivariant-support-second-spectral-sequence"
+      ],
+      "removed_labels": 0,
+      "existing_label_rows_line_number_only": 99,
+      "existing_label_text_hash_changes": 0,
+      "existing_label_other_changes": 0,
+      "candidate_keys_added": 6,
+      "candidate_keys_removed": 1,
+      "candidate_rows_line_number_only": 16,
+      "candidate_other_changes": 0,
+      "official_tag_changes": 0,
+      "changed_tex_files": ["cohomology.tex"],
+      "warning_delta": 5,
+      "warning_delta_reason": "Exactly the five new local labels have no official tag in the pinned snapshot.",
+      "candidate_cap_displacement": {
+        "topic": "sheaf-cohomology",
+        "removed_label": "cohomology-lemma-RHom-from-K-flat-into-K-injective",
+        "added_label": "cohomology-definition-equivariant-cohomology-family-supports",
+        "score": 46,
+        "reason": "The bounded per-topic candidate cap sorts equal scores by full label; the new definition lexically displaces the former last tied candidate."
+      }
+    },
+    "new_label_rows": [
+      {"full_label": "cohomology-section-equivariant-cohomology-supports", "line": 19672, "kind": "section", "text_sha256": "63B38805D94DCE15C874618D99A183AA9313E799465A70E344245B094CAF41CB"},
+      {"full_label": "cohomology-definition-equivariant-cohomology-family-supports", "line": 19679, "kind": "definition", "text_sha256": "B07F316C49A03E8DEFCA70D8499B5036127CCCFABE3BC6FE7AC96E9BA35EF423"},
+      {"full_label": "cohomology-lemma-equivariant-family-supports-invariant-saturation", "line": 19720, "kind": "lemma", "text_sha256": "061C3B457661BEB5BD4CBBFE06B89D65A97B960A5A338369CF6DD48326AD6587"},
+      {"full_label": "cohomology-lemma-orbit-space-equivariant-support-spectral-sequence", "line": 19779, "kind": "lemma", "text_sha256": "657097332F5844AD4D07DF89CC1A8B5251735F22346BDF873C854A0ACBF846D4"},
+      {"full_label": "cohomology-remark-equivariant-support-second-spectral-sequence", "line": 19904, "kind": "remark", "text_sha256": "BDEF977FBB8E238096D4A9689BF307284C430F4EBB4A0F8310FFFFA02048B706"}
+    ]
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "authority": "Direct user report: the account was suspended after VPN use and a support ticket is filed.",
+      "effect": "No GitHub inspection, synchronization, push, or publication was attempted. This does not block local D1009 production or the r52 successor."
+    }
+  },
+  "nonclaims": [
+    "No extension from abelian G-sheaves to modules over a general equivariant sheaf of rings is asserted in this section.",
+    "No closed-image property is assumed for the orbit map; q^dagger Psi is defined using closure of q(Z).",
+    "The degree-zero factorization through supported sections and invariants is not claimed by itself to satisfy the Grothendieck acyclicity hypothesis.",
+    "The filtered-colimit identification, the second supported spectral sequence, and interchange of group cohomology with filtered colimits are not constructed or claimed by D1009.",
+    "No reader or semantic source file is changed by D1009; TOH-SRC-P220-004 is inherited exactly.",
+    "The five new local labels claim no official Stacks tag.",
+    "No mapping promotion, Git operation, GitHub action, release, or publication is claimed by this receipt."
+  ],
+  "errors": []
+}

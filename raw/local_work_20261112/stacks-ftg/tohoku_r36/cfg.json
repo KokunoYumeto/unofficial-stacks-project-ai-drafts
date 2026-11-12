@@ -1,0 +1,192 @@
+{
+  "adapter": "tohoku_nodes",
+  "authority": [
+    {
+      "bytes": 7305283,
+      "doi": "10.2748/tmj/1178244839",
+      "name": "J-STAGE Part I",
+      "scope": "printed pages 119--183",
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    {
+      "bytes": 3984260,
+      "doi": "10.2748/tmj/1178244774",
+      "name": "J-STAGE Part II",
+      "scope": "printed pages 185--221",
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    }
+  ],
+  "corpus": "Tohoku",
+  "dossier_id": "tohoku_r36",
+  "embedded_types": [
+    "conclusion",
+    "diagram",
+    "equation",
+    "footnote",
+    "formula",
+    "proof",
+    "setup",
+    "subitem",
+    "transition"
+  ],
+  "expected_units": 990,
+  "historical_types": [
+    "bibliography",
+    "bibliography_entry"
+  ],
+  "inputs": {
+    "edges": {
+      "bytes": 260771,
+      "filename": "edges.csv",
+      "name": "edges.csv",
+      "sha256": "5DCC1F11489A88AC02351103A6B5987877F55424CFFB066EAB9404EA5FA38BB1"
+    },
+    "part_i": {
+      "bytes": 7305283,
+      "filename": "jstage_part_I_9_2_119.pdf",
+      "name": "J-STAGE Part I",
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    "part_ii": {
+      "bytes": 3984260,
+      "filename": "jstage_part_II_9_3_185.pdf",
+      "name": "J-STAGE Part II",
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    "primary": {
+      "bytes": 582746,
+      "filename": "nodes.csv",
+      "name": "nodes.csv",
+      "sha256": "70A629E17A2782D8EFBD6C827D665FD3E24BAC6CEC1A9A25F3D35F676F9320DA",
+      "source_file": "sem/r12/nodes.csv"
+    },
+    "sem_check": {
+      "bytes": 6528,
+      "filename": "sem-check.json",
+      "name": "v68r28 sem check",
+      "sha256": "CDD157630C633D68ED5CEFBA55F56DFDD027FDDCE39B6EA91A451ABAC110DF78"
+    },
+    "sem_input": {
+      "bytes": 330107,
+      "filename": "sem-input.json",
+      "name": "v68r28 sem input",
+      "sha256": "6C02F64A84747026BB7732B5CC066A309EE676DB76ADFB6670FD10FB32C759D8"
+    },
+    "sem_manifest": {
+      "bytes": 6403,
+      "filename": "manifest.json",
+      "name": "sem/r12 manifest",
+      "sha256": "3410B4D850DE7EF7F2CA5CF5DA8784A279AEA9D2A813451CDC1AFB86786E8CDC"
+    },
+    "sem_validation": {
+      "bytes": 3777,
+      "filename": "validation.json",
+      "name": "sem/r12 validation",
+      "sha256": "CFF4ADAB13369B2D4C7CE733334B1687C0547E0C5BB5D8A0685585E8B71B37EB"
+    },
+    "stacks": {
+      "bytes": 11777,
+      "filename": "stacks.csv",
+      "name": "stacks.csv",
+      "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+    },
+    "terms": {
+      "bytes": 325587,
+      "filename": "terms.csv",
+      "name": "terms.csv",
+      "sha256": "6D93CBBD2D6CF3E354FE90DC51605ACD9C7B0932CEF216FB9D606AD97D666E5D"
+    }
+  },
+  "integration_base": "952bb0e39acfa050db054d7ae7ea91c51487b7a9",
+  "official_upstream": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "required_extra_keys": [
+    "part_i",
+    "part_ii",
+    "edges",
+    "terms",
+    "stacks",
+    "sem_manifest",
+    "sem_validation",
+    "sem_input",
+    "sem_check"
+  ],
+  "root_id": "tohoku",
+  "semantic_successor": {
+    "generation": "sem/r12",
+    "receipt": {
+      "bytes": 6528,
+      "name": "qa/v68r28/sem-check.json",
+      "sha256": "CDD157630C633D68ED5CEFBA55F56DFDD027FDDCE39B6EA91A451ABAC110DF78"
+    },
+    "surface_bytes": 2022604,
+    "surface_files": 18,
+    "surface_sha256": "1FFB9D0BB60E32937A66F3AE43E22793B5594C0A039AD5F7062E3FC7F135A219"
+  },
+  "stacks_baseline": {
+    "branch": "codex/fac-tohoku-gaga",
+    "head": "952bb0e39acfa050db054d7ae7ea91c51487b7a9",
+    "remote_server_freshness_verified": false,
+    "scan_basis": "exact_live_worktree_receipted_by_check_json_tex_sha256",
+    "tree": "5a07bc1e20e706f88e2d7a4856bba6a7d7bf29b9",
+    "upstream": "952bb0e39acfa050db054d7ae7ea91c51487b7a9"
+  },
+  "structural_types": [
+    "chapter",
+    "contents",
+    "paper"
+  ],
+  "topic_rules": [
+    {
+      "pattern": "additive categor|preadditive",
+      "topic_id": "additive"
+    },
+    {
+      "pattern": "abelian categor",
+      "topic_id": "abelian"
+    },
+    {
+      "pattern": "exact functor",
+      "topic_id": "exact-functor"
+    },
+    {
+      "pattern": "injective|cogenerator",
+      "topic_id": "injectives"
+    },
+    {
+      "pattern": "AB[3456]|grothendieck categor|generator",
+      "topic_id": "grothendieck-category"
+    },
+    {
+      "pattern": "delta.functor|effaceable|erasable",
+      "topic_id": "delta-functor"
+    },
+    {
+      "pattern": "derived functor|acyclic",
+      "topic_id": "derived-functor"
+    },
+    {
+      "pattern": "\\bExt\\b|extension",
+      "topic_id": "ext"
+    },
+    {
+      "pattern": "spectral sequence",
+      "topic_id": "spectral-sequence"
+    },
+    {
+      "pattern": "sheaf cohomology|cohomology of sheaves",
+      "topic_id": "sheaf-cohomology"
+    },
+    {
+      "pattern": "Cech|covering",
+      "topic_id": "cech"
+    },
+    {
+      "pattern": "support",
+      "topic_id": "support"
+    },
+    {
+      "pattern": "limit|filtered colimit|direct limit",
+      "topic_id": "limits"
+    }
+  ]
+}

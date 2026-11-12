@@ -1,0 +1,57 @@
+{
+  "schema": "tohoku-stacks-d1015-fixed-point-replay-v1",
+  "formalization_id": "D1015",
+  "status": "PASS",
+  "command": "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=user/Documents/stacks-ftg/tmp/d1015_fixed_point_replay cohomology.tex",
+  "working_directory": "user/Documents/stacks-ftg",
+  "exit_code": 0,
+  "method": "Seed the isolated output directory with the bound live AUX, OUT, and TOC files, execute one complete pdflatex pass against the unchanged live TeX source, and compare the resulting auxiliary bytes with the bound live bytes.",
+  "live_source": {
+    "path": "user/Documents/stacks-ftg/cohomology.tex",
+    "bytes": 919109,
+    "sha256": "81D07AAE646D776C3F0CBAA090EE311100634A2F57EBFC98719C1EC79F4A3082"
+  },
+  "auxiliary_comparison": {
+    "cohomology.aux": {
+      "seed_and_live_bytes": 57294,
+      "seed_and_live_sha256": "138AD4A77E4909EDF6E876A0745853D706FDAD9BDABD946F771176BA3F7A8F12",
+      "replay_bytes": 57294,
+      "replay_sha256": "138AD4A77E4909EDF6E876A0745853D706FDAD9BDABD946F771176BA3F7A8F12",
+      "byte_identical": true
+    },
+    "cohomology.out": {
+      "seed_and_live_bytes": 12725,
+      "seed_and_live_sha256": "E20175BCE90BA5C272D88818F692C70BF698D24E5E04C6CAF200E3D812D62651",
+      "replay_bytes": 12725,
+      "replay_sha256": "E20175BCE90BA5C272D88818F692C70BF698D24E5E04C6CAF200E3D812D62651",
+      "byte_identical": true
+    },
+    "cohomology.toc": {
+      "seed_and_live_bytes": 5574,
+      "seed_and_live_sha256": "DE5F077DD607BEB71C275883505AD6B3964D28999393C56B70BD98DD46A49229",
+      "replay_bytes": 5574,
+      "replay_sha256": "DE5F077DD607BEB71C275883505AD6B3964D28999393C56B70BD98DD46A49229",
+      "byte_identical": true
+    }
+  },
+  "replay_outputs": {
+    "pdf": {
+      "path": "user/Documents/stacks-ftg/tmp/d1015_fixed_point_replay/cohomology.pdf",
+      "bytes": 2008210,
+      "sha256": "E04F886AE1BE7F7F08E30E42CBFB1734DD1DC6AD76E2E5D3BEDAA96FE1CB400A",
+      "note": "The isolated replay PDF differs bytewise from the bound final PDF because PDF build metadata and the output path are not part of the auxiliary fixed-point predicate."
+    },
+    "log": {
+      "path": "user/Documents/stacks-ftg/tmp/d1015_fixed_point_replay/cohomology.log",
+      "bytes": 48493,
+      "sha256": "9267B62F67FAEC1CD7E2FF65858819DD9E0932E145D3A4A91B0B15DA4273D925"
+    }
+  },
+  "result": {
+    "auxiliary_files_compared": 3,
+    "byte_identical": 3,
+    "different": 0,
+    "fixed_point": true
+  },
+  "errors": []
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "tohoku-stacks-d1011-design-audit-v1",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1011",
+  "source_reference": "Tohoku, Chapter IV, Section 4.3, printed p. 193",
+  "source_pages": {
+    "english_p193": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p193.tex",
+      "bytes": 4186,
+      "sha256": "E12D0413BAB9D7C66916AFCACF28757C5D4BE8A569AF0892D79AF9F6B67D4858"
+    },
+    "corrected_french_p193": {
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p193.tex",
+      "bytes": 4381,
+      "sha256": "9EB244D7FC0BA1C69C778560677BE83F48880E027905A4E34D197FF5EA1B6906"
+    }
+  },
+  "existing_source_repair": {
+    "decision_id": "TOH-P193-COR-001",
+    "root_source_correction_ids": [
+      "TOH-SRC-P193-001",
+      "TOH-SRC-P193-002",
+      "TOH-SRC-P193-003",
+      "TOH-SRC-P193-004",
+      "TOH-SRC-P193-005"
+    ],
+    "mathematical_effect": "The quotient spectral-sequence initial term uses Tor over the original ring, written in the formalization as Tor_a^R(S,M), rather than the diplomatic erroneous quotient-ring superscript.",
+    "new_source_repair_required": false
+  },
+  "candidate": {
+    "path": "user\\Documents\\stacks-ftg\\tmp\\d1011_block_candidate.tex",
+    "bytes": 10924,
+    "sha256": "EC0D7CDD7E3D04925D992EBA671835AD46004D029DDDA0AAEAD8BEE92E3F800D",
+    "lines": 278,
+    "live_dependency": {
+      "path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "bytes": 884397,
+      "sha256": "674F30B8D7AA56314504F14A4C781590997641ADE09D4A759F35BB4FEB7D9914"
+    },
+    "labels": [
+      "lemma-constant-sheaf-ext-stalk-spectral-sequences",
+      "equation-constant-sheaf-ext-stalk-colimit",
+      "equation-constant-sheaf-ext-stalk-first-spectral-sequence",
+      "equation-constant-sheaf-ext-stalk-quotient-spectral-sequence",
+      "lemma-constant-sheaf-ext-stalk-comparison",
+      "equation-constant-sheaf-ext-stalk-comparison",
+      "lemma-constant-sheaf-ext-stalk-noetherian-quotient"
+    ],
+    "labels_unique": true,
+    "live_label_collisions": 0,
+    "references": 11,
+    "unresolved_references": 0,
+    "tex_environment_pairs": 30,
+    "brace_depth_final": 0,
+    "math_delimiter_parity_even": true
+  },
+  "mathematical_audit": {
+    "status": "STRICT_PASS",
+    "amendments_required": 0,
+    "checks": [
+      "For left modules, S=R/I is used as an (S,R)-bimodule and Tor_a^R(S,M) is a left S-module, so left Noetherianity is the relevant finiteness side.",
+      "Restriction maps over reverse-inclusion neighbourhoods form the required direct systems and are compatible with one fixed free resolution and the open-restriction-compatible Godement construction.",
+      "Exact filtered colimits pass through page homology, finite direct sums, and the finite abutment filtrations.",
+      "First-quadrant stabilization is uniform in each bidegree and total degree.",
+      "The filtered colimit of neighbourhood Ext groups identifies with the stalk of the sheafified Ext presheaf.",
+      "The componentwise Ext-colimit comparison hypotheses give the stated comparison and collapse results.",
+      "The quotient/change-of-rings E2 indexing and finite direct sums are correct.",
+      "Left Noetherianity supplies degreewise finite-free resolutions for the finitely generated Tor_a^R(S,M), so the required Ext functors commute with filtered colimits.",
+      "The candidate uses the admitted repaired Tor_a^R(S,M) everywhere."
+    ]
+  },
+  "planned_mapping": [
+    {
+      "decision_id": "D001028",
+      "supersedes": "D000476",
+      "unit_id": "tohoku:construction:stalk-spectral-sequence-limits",
+      "disposition": "existing_equivalent",
+      "primary_label": "cohomology-lemma-constant-sheaf-ext-stalk-spectral-sequences",
+      "audit": "PASS"
+    },
+    {
+      "decision_id": "D001029",
+      "supersedes": "D000490",
+      "unit_id": "tohoku:criterion:stalk-ext-limit-transfer",
+      "disposition": "existing_equivalent",
+      "primary_labels": "cohomology-lemma-constant-sheaf-ext-stalk-comparison;cohomology-lemma-constant-sheaf-ext-stalk-noetherian-quotient",
+      "audit": "PASS"
+    },
+    {
+      "decision_id": "D001030",
+      "supersedes": "D000332",
+      "unit_id": "tohoku:section:4.3",
+      "disposition": "existing_equivalent",
+      "primary_label": "cohomology-section-ext",
+      "aggregation": "Existing p.191--192 constant-sheaf Ext lemmas plus D1011 cover the remaining substantive section children; HLC and failure illustrations remain nonblocking example_or_remark units.",
+      "audit": "PASS"
+    }
+  ],
+  "projected_counts": {
+    "decisions": 1030,
+    "existing_equivalent": 374,
+    "existing_weaker": 6,
+    "extend_existing": 13,
+    "new_section": 5,
+    "new_statement": 11,
+    "remaining_gap_class_dispositions": 35
+  },
+  "nonclaims": [
+    "D1011 does not formalize the p.193 HLC example or the subsequent failure example; those are nonblocking example_or_remark units.",
+    "D1011 makes no analytic-geometry, coherent-sheaf, or equivariant-vector-bundle claim.",
+    "Functoriality of the quotient hyper-Ext system is claimed from the E2 page onward, not from an unconstructed E1 page.",
+    "No unconditional Ext/filtered-colimit interchange is claimed; the general comparison lemma states the required componentwise hypotheses explicitly.",
+    "The Noetherian specialization uses left Noetherianity and finitely generated left S-modules; it does not assert right Noetherianity.",
+    "No new source correction is made; the admitted p.193 Tor-base repair is inherited exactly.",
+    "This design audit does not edit live cohomology.tex, build a PDF, mutate a semantic or mapping ledger, or perform a Git/GitHub/publication action."
+  ],
+  "errors": []
+}

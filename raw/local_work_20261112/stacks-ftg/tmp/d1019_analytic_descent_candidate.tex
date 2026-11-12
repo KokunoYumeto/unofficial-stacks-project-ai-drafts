@@ -1,0 +1,80 @@
+\begin{lemma}[Coherence on a discontinuous analytic quotient]
+\label{lemma-discontinuous-analytic-invariant-direct-image-coherent}
+\begin{reference}
+\cite[Chapter V, \S 5.6, p. 219]{Tohoku}
+\cite[Theorems 1 and 2, pp. 1--6]{Cartan-analytic-quotient}
+\cite[Hauptsatz I, p. 57]{Grauert-direct-image}
+\end{reference}
+\begin{history}
+The notation $\mathcal L^G$ in the cited source means the invariant direct
+image $q_*^G\mathcal L$ on the quotient, not a subsheaf on $X$. Coherence is
+a local finite-analytic-quotient statement and does not require the
+characteristic-zero hypothesis used there for the cohomology comparison. No
+GAGA comparison, global properness, compactness, or finite-dimensionality
+assertion is made.
+\end{history}
+Let $X$ be a complex analytic space and let $G$ act discontinuously on $X$
+by analytic automorphisms. Let
+$$
+q:X\longrightarrow Y=X/G
+$$
+be the separated complex analytic quotient, and write $q_*^G$ for invariant
+direct image. We use the standard local finite-quotient structure: for every
+$x\in X$, with $H=G_x$ and $y=q(x)$, an $H$-invariant slice $V$ can be
+chosen such that $U=q(V)$ is an open neighbourhood of $y$, the quotient map
+identifies $U$ with $V/H$ as a complex analytic space, the induced map
+$p:V\to U$ is finite, and
+$$
+\mathcal O_U=(p_*\mathcal O_V)^H.
+$$
+If $\mathcal L$ is a coherent analytic $G$-$\mathcal O_X$-module,
+then $q_*^G\mathcal L$ is a coherent $\mathcal O_Y$-module.
+Consequently, if $E$ and $F$ are holomorphic vector bundles on $X$ with
+compatible $G$-actions, then
+$$
+q_*^G\mathcal O(E^\vee\otimes F)
+$$
+is a coherent analytic sheaf on $Y$.
+\end{lemma}
+
+\begin{proof}
+We work locally on $Y$. Fix $y\in Y$, choose $x\in q^{-1}(y)$, and put
+$H=G_x$. Choose the finite analytic quotient chart $p:V\to U$ from the
+statement; its underlying slice is the one supplied by Sheaves, Lemma
+\ref{sheaves-lemma-discontinuous-group-action-neighbourhoods}. Since $p$ is
+finite, it is proper. Grauert's direct-image theorem therefore shows that
+$$
+\mathcal M=p_*(\mathcal L|_V)
+$$
+is a coherent $\mathcal O_U$-module.
+
+The sectionwise restriction isomorphism in the degree-zero case of Lemma
+\ref{lemma-higher-invariant-direct-image-slice} is compatible with invariant
+holomorphic functions. It therefore gives a canonical isomorphism of
+$\mathcal O_U$-modules
+$$
+(q_*^G\mathcal L)|_U=\mathcal M^H.
+$$
+Indeed, if $a$ is a local section of
+$\mathcal O_U=(p_*\mathcal O_V)^H$, then
+$$
+h(as)=h(a)h(s)=a h(s)
+$$
+for $h\in H$. Thus the $H$-action on $\mathcal M$ is
+$\mathcal O_U$-linear. Since $H$ is finite, its invariant subsheaf is the
+kernel of the $\mathcal O_U$-linear morphism
+$$
+\mathcal M\longrightarrow\bigoplus_{h\in H}\mathcal M,
+\qquad
+s\longmapsto(hs-s)_{h\in H}.
+$$
+The source and target are coherent, so their kernel is coherent by Modules,
+Lemma \ref{modules-lemma-coherent-abelian}. Hence $q_*^G\mathcal L$ is
+coherent near $y$, and therefore on $Y$.
+
+For the final assertion, compatible actions on $E$ and $F$ induce the dual
+and tensor action on $E^\vee\otimes F$. Its sheaf of holomorphic sections is
+finite locally free over $\mathcal O_X$, hence coherent by Oka coherence for
+complex spaces; see \cite[p. 16]{Grauert-direct-image}. It is therefore a
+coherent analytic $G$-$\mathcal O_X$-module, so the result applies.
+\end{proof}

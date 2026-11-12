@@ -1,0 +1,89 @@
+{
+  "schema": "tohoku-stacks-d1013-formalization-design-v1",
+  "formalization_id": "D1013",
+  "status": "STRICT_DESIGN_PASS",
+  "selection": {
+    "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+    "source_pages": [219],
+    "current_decision": "D000565",
+    "current_disposition": "new_statement",
+    "planned_disposition": "new_statement",
+    "supersedes": "D000565",
+    "reason": "The p.219 extension-class assertion is documented by a new bounded abstract bridge; the analytic bundle realization remains a separately unresolved unit."
+  },
+  "authority": {
+    "english_p219": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/en/p219.tex",
+      "bytes": 4520,
+      "sha256": "96C843642C094D827A66D6B154198C5B8E9E25F2EAB96E516F8F6CB9BF9A6088",
+      "target_occurrences": 1
+    },
+    "french_p219": {
+      "path": "user/Documents/interlanguage/03_projects/language_management/english_germanic/03_working_translations/tohoku_bilingual_canonical_stacks_20260804_r1/build/v068c3r19/src/fr/p219.tex",
+      "bytes": 4814,
+      "sha256": "0B11034BB5735A95DD5849B9FDCD6277A47D6A5E2AB57B25A54B8C87A0BC3FAE",
+      "target_occurrences": 1
+    },
+    "semantic_node": "tohoku:classification:equivariant-bundle-extensions",
+    "semantic_generation": "sem/r20",
+    "predecessor_mapping": {
+      "path": "user/Documents/stacks-ftg/tohoku_r56/map.csv",
+      "bytes": 483640,
+      "sha256": "0F06BCBBCAE7ED210C382BF60DE8B998D6598B9130D99E96071CB48B752DCD91"
+    },
+    "predecessor_receipt": {
+      "path": "user/Documents/stacks-ftg/tohoku_r56/r56-check.json",
+      "bytes": 6894,
+      "sha256": "A931C701449D33944193E4AB5B4819B1A4CD3912A6ADDB7456DED7B2C514A62D"
+    }
+  },
+  "mathematical_scope": {
+    "hypotheses": [
+      "(X,O) is a commutative G-ringed space",
+      "E and F are G-O-modules",
+      "the underlying O-module E is locally isomorphic to O^r for one finite r"
+    ],
+    "claims": [
+      "Ext^1 in Mod_G(O) classifies equivalence classes of short exact equivariant extensions",
+      "the finite-locally-free edge isomorphism identifies Ext^1 with H^1(X;G,SheafHom_O(E,F))",
+      "evaluation identifies E^vee tensor_O F with SheafHom_O(E,F) as G-O-modules"
+    ],
+    "proof_dependencies": [
+      "degree-one Yoneda description of Ext",
+      "lemma-equivariant-ext-properties",
+      "lemma-equivariant-ext-locally-free",
+      "lemma-equivariant-internal-hom"
+    ],
+    "boundary": "No analytic bundle/module equivalence, coherence theorem for analytic sheaves, GAGA comparison, discontinuous-action descent, or compact-quotient finiteness claim is made."
+  },
+  "candidate": {
+    "path": "user/Documents/stacks-ftg/tmp/d1013_block_candidate.tex",
+    "bytes": 2945,
+    "sha256": "6B5B8A8685A72D07CA94214BA21693490B28238ECBB3275960E26D9EC0C6E272",
+    "labels": [
+      "lemma-equivariant-extension-classes-finite-locally-free",
+      "remark-equivariant-extension-classes-analytic-boundary"
+    ],
+    "label_count": 2,
+    "terminal_lf": true,
+    "balanced_environments": true,
+    "balanced_display_math": true,
+    "live_label_collisions": []
+  },
+  "mapping_projection": {
+    "decision_id": "D001037",
+    "supersedes": "D000565",
+    "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+    "disposition": "new_statement",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "stacks_labels": "cohomology-lemma-equivariant-extension-classes-finite-locally-free;cohomology-lemma-equivariant-ext-locally-free",
+    "stacks_tags": "",
+    "rationale": "The new lemma supplies an explicit abstract Yoneda/Ext bridge for equivariant finite-locally-free modules while leaving the source's analytic bundle correspondence as an explicit unresolved boundary. No analytic or GAGA theorem is silently substituted."
+  },
+  "write_boundaries": [
+    "Append one mathematical block to cohomology.tex only after independent review.",
+    "Do not modify either p.219 source layer or SOURCE_CORRECTIONS.jsonl.",
+    "Do not edit AGENTS.md.",
+    "Do not perform GitHub, cleanup, archive, watcher, or broad-scan actions."
+  ]
+}

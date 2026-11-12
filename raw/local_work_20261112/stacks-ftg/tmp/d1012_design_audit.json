@@ -1,0 +1,215 @@
+{
+  "schema": "tohoku-stacks-d1012-design-audit-v1",
+  "status": "STRICT_DESIGN_PASS_SOURCE_REPAIR_REQUIRED",
+  "unit": "D1012",
+  "review_resolution": {
+    "defect_id": "D1012-R001",
+    "status": "EXACTLY_DISCHARGED_AT_DESIGN_LEVEL",
+    "finding": "The p179 self-trace sentence does not imply the cross-cover trace used by the p180 induction.",
+    "resolution": "Preserve diplomatic p179; replace exactly one corrected-French sentence and one English sentence by the cross-cover axiom; use proposed decisions TOH-P179-COR-002 and TOH-SRC-P179-009; bind the revised formalization axiom to the same quantifiers.",
+    "repair_design_path": "user\\Documents\\stacks-ftg\\tmp\\d1012_source_repair_design.json",
+    "repair_design_bytes": 11812,
+    "repair_design_sha256": "9F282268F4496469D2601BE25523EF6276F9CF15722D6F50A71B202F32E80B82",
+    "production_state": "NOT_APPLIED"
+  },
+  "scope": "Tohoku Chapter III, Section 3.9, printed pages 179-180, with page 181 inspected only as the closing seam",
+  "write_boundary": {
+    "created": [
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_design_audit.json"
+    ],
+    "not_modified": [
+      "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "user\\Documents\\stacks-ftg\\tohoku_r53\\map.csv",
+      "user\\Documents\\stacks-ftg\\TOHOKU_STACKS_PRODUCTION_CURSOR.json"
+    ],
+    "build_or_scan_run": false,
+    "git_used": false
+  },
+  "source_authority": [
+    {
+      "page": 179,
+      "layer": "dip",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\dip\\p179.tex",
+      "bytes": 4413,
+      "sha256": "3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182"
+    },
+    {
+      "page": 179,
+      "layer": "fr",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p179.tex",
+      "bytes": 4347,
+      "sha256": "C3B0470AC85B9A34A0DFAAF5A0325690756C7FB541B12421CC651A29C7410CC7"
+    },
+    {
+      "page": 179,
+      "layer": "en",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p179.tex",
+      "bytes": 4144,
+      "sha256": "3CD9D83B12C0B48B94577F0BBDA2E632B8E6EE8E7778B1B9442D5054D8505FE1"
+    },
+    {
+      "page": 180,
+      "layer": "dip",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\dip\\p180.tex",
+      "bytes": 4626,
+      "sha256": "8AB7B01C86B798D9E5E9E0ECF7AB3791688EF7C8902A311DBFC0E5C93FED6A31"
+    },
+    {
+      "page": 180,
+      "layer": "fr",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p180.tex",
+      "bytes": 5138,
+      "sha256": "2F68D547A44E47A0F9CA5B602C440454D0244B3CA8EA62430DA0D6AAA9F83D18"
+    },
+    {
+      "page": 180,
+      "layer": "en",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p180.tex",
+      "bytes": 4928,
+      "sha256": "F7D39A2F78D45C9CEA5A00360B96EBF6F1A5CBC656A8AB075DDE7B6093735961"
+    },
+    {
+      "page": 181,
+      "layer": "dip",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\dip\\p181.tex",
+      "bytes": 4151,
+      "sha256": "4E79B6D13131BF504B0AF63C5001D1297D2C1640F1F3A88FFD0817F73C080431"
+    },
+    {
+      "page": 181,
+      "layer": "fr",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\fr\\p181.tex",
+      "bytes": 4097,
+      "sha256": "B0335E067B6405E3AB7A0BC621E80828F0917AFCE0C8BF8201D4FF6A838F7D27"
+    },
+    {
+      "page": 181,
+      "layer": "en",
+      "path": "user\\Documents\\interlanguage\\03_projects\\language_management\\english_germanic\\03_working_translations\\tohoku_bilingual_canonical_stacks_20260804_r1\\build\\v068c3r18\\src\\en\\p181.tex",
+      "bytes": 3850,
+      "sha256": "B88E5CE78F19532500B47905EAF2DD0D0B15F38A820E6DFE730217E84E1F6BFE"
+    }
+  ],
+  "baseline": {
+    "mapping_path": "user\\Documents\\stacks-ftg\\tohoku_r53\\map.csv",
+    "mapping_bytes": 479894,
+    "mapping_sha256": "7BF8C6794D743ACE1334F5979B820E955C70C14537F0B00A0E6A679376668BAE",
+    "live_source_path": "user\\Documents\\stacks-ftg\\cohomology.tex",
+    "live_source_bytes": 895363,
+    "live_source_sha256": "4D5B94EE9819CC663011358CB50F1E44D56243E309DA3D396C8074F38D26840C"
+  },
+  "mandatory_gate": {
+    "result": "PASS",
+    "open_cover_only_01ES_is_insufficient": true,
+    "finite_closed_case": {
+      "result": "PASS",
+      "construction": "The augmented complex K^p(R,F)=product over (p+1)-fold intersections of closed direct images is stalkwise the contractible simplex complex. For a finite covering the product is finite, and derived global sections of each closed direct image are the cohomology of the closed intersection. The hypercohomology spectral sequence therefore has the required E1 page and abuts to H*(A,F)."
+    },
+    "paracompact_locally_finite_closed_case": {
+      "result": "PASS",
+      "construction": "Local finiteness makes the covering-resolution products exact on stalks. On a paracompact space a flasque resolution is soft; its restrictions to closed intersections are soft, and the locally finite products of their closed direct images are soft. These terms are global-section acyclic, so the same E1 page and abutment follow."
+    },
+    "edge_identification": {
+      "result": "PASS",
+      "bottom_edge": "H^n(R,F) -> H^n(A,F)",
+      "vertical_edge": "H^n(A,F) -> H^0(R,underline H^n(F)), equal to the compatible family of restrictions",
+      "vanishing_range": "If intersection cohomology vanishes for 0<q<n, the edge sequence H^n(R,F) -> H^n(A,F) -> H^0(R,underline H^n(F)) is exact."
+    },
+    "trace_and_refinement_naturality": {
+      "result": "PASS",
+      "construction": "Restriction defines the refinement and trace maps on the covering resolutions. The standard prism homotopy makes refinement-function choices equal from E2 onward; augmentations identify refinement with the identity and trace with restriction on abutments."
+    }
+  },
+  "candidate": {
+    "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+    "bytes": 14479,
+    "sha256": "47846682E4B789557EDAA8F5DADAC4F927267394FAC57ACED0590210F039311D",
+    "lf_count": 352,
+    "append_only_ready": true,
+    "tex_labels": [
+      "section-covering-acyclicity-criteria",
+      "lemma-cech-spectral-sequence-closed-covering",
+      "lemma-covering-acyclicity-local-killing",
+      "lemma-covering-acyclicity-conditions",
+      "lemma-special-coverings-compute-acyclicity",
+      "lemma-bounded-nerve-special-coverings-acyclic"
+    ],
+    "expected_scanner_labels": [
+      "cohomology-section-covering-acyclicity-criteria",
+      "cohomology-lemma-cech-spectral-sequence-closed-covering",
+      "cohomology-lemma-covering-acyclicity-local-killing",
+      "cohomology-lemma-covering-acyclicity-conditions",
+      "cohomology-lemma-special-coverings-compute-acyclicity",
+      "cohomology-lemma-bounded-nerve-special-coverings-acyclic"
+    ],
+    "official_tags": [],
+    "label_count": 6,
+    "lemma_count": 5,
+    "explicit_tex_tag_count": 0
+  },
+  "exact_closures": [
+    {
+      "decision_id": "D000446",
+      "unit_id": "tohoku:theorem:3.9.1",
+      "page": 179,
+      "prior_disposition": "new_statement",
+      "target_label": "cohomology-lemma-covering-acyclicity-local-killing",
+      "target_disposition": "equivalent",
+      "official_tag": null
+    },
+    {
+      "decision_id": "D000378",
+      "unit_id": "tohoku:corollary:3.9.1:1",
+      "page": 179,
+      "prior_disposition": "new_statement",
+      "target_label": "cohomology-lemma-covering-acyclicity-conditions",
+      "target_disposition": "equivalent",
+      "official_tag": null
+    },
+    {
+      "decision_id": "D000379",
+      "unit_id": "tohoku:corollary:3.9.1:2",
+      "page": 179,
+      "prior_disposition": "new_statement",
+      "target_label": "cohomology-lemma-special-coverings-compute-acyclicity",
+      "target_disposition": "equivalent",
+      "official_tag": null
+    },
+    {
+      "decision_id": "D000380",
+      "unit_id": "tohoku:corollary:3.9.1:3",
+      "page": 180,
+      "prior_disposition": "new_statement",
+      "target_label": "cohomology-lemma-bounded-nerve-special-coverings-acyclic",
+      "target_disposition": "equivalent",
+      "official_tag": null
+    },
+    {
+      "decision_id": "D000329",
+      "unit_id": "tohoku:section:3.9",
+      "page": "179-180",
+      "prior_disposition": "extend_existing",
+      "target_label": "cohomology-section-covering-acyclicity-criteria",
+      "target_disposition": "equivalent",
+      "official_tag": null
+    }
+  ],
+  "source_exactness": {
+    "theorem_3_9_1": "PASS CONDITIONAL ON TOH-P179-COR-002/TOH-SRC-P179-009: the revised cross-cover trace axiom licenses the induction on the finite number of coverings; the exact edge sequence and trace naturality then prove the source conclusion",
+    "corollary_1": "PASS: equivalence of derived vanishing through n with A(n) plus B(n)",
+    "corollary_2": "PASS: the local killing lemma and cofinal common-intersection coverings make every B(m) automatic",
+    "corollary_3": "PASS: alternating normalization plus the bounded nerve makes special-cover cohomology zero above d",
+    "page_181_seam": "PASS: page 181 continues Proposition 3.9.2 and applications, which are outside these five closures and are not asserted by the candidate"
+  },
+  "dependencies_verified_in_live_source": [
+    "cohomology-lemma-kill-cohomology-class-on-covering",
+    "cohomology-lemma-cech-spectral-sequence",
+    "cohomology-lemma-covering-resolution",
+    "cohomology-lemma-godement-resolution",
+    "cohomology-lemma-flasque-soft-family-supports",
+    "cohomology-lemma-family-supports-flasque-soft-acyclic",
+    "cohomology-lemma-alternating-usual"
+  ],
+  "next_action": "Apply and seal the ordered source-repair/reader/QA/semantic gates in d1012_source_repair_design.json first; then independently review and append the revised candidate once, run build/PDF/scanner gates, and create the five atomic mapping transitions."
+}

@@ -1,0 +1,500 @@
+% Candidate continuation fragment for gaga.tex covering GAGA source units
+% gaga:no:5 through gaga:lemma:3. Insert this fragment immediately before
+% the unique terminal \input{chapters} in the foundation candidate.
+%
+% Convention: throughout this fragment an algebraic variety over C means a
+% reduced separated scheme of finite type over C, not necessarily irreducible.
+
+\section{Analytification of algebraic varieties}
+\label{section-analytification}
+
+\noindent
+Throughout this section an {\it algebraic variety over $\mathbf C$} means a
+reduced separated scheme of finite type over $\mathbf C$, not necessarily
+irreducible. Its classical points are its closed points, equivalently its
+$\mathbf C$-points. This convention is the scheme-theoretic translation of
+the convention in \cite[\S 2, no. 5]{GAGA} and is compatible with the reduced
+analytic spaces of Section \ref{section-serre-analytic-spaces}.
+
+\begin{lemma}
+\label{lemma-algebraic-charts-analytic}
+Let $U \subset \mathbf C^n$ and $U' \subset \mathbf C^{n'}$ be Zariski locally
+closed reduced subsets.
+\begin{enumerate}
+\item The Zariski topology on $\mathbf C^n$ is coarser than its usual topology.
+\item The set $U$, with its reduced induced structure, is a Serre complex
+analytic space.
+\item A regular map $f : U \to U'$ is holomorphic.
+\item A biregular isomorphism $U \to U'$ is an analytic isomorphism.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A Zariski closed subset is the common zero set of polynomials, and polynomials
+are continuous and holomorphic. This proves (1) and proves (2) for a closed
+subset; a locally closed subset is open in its closure, and restriction gives
+the general case. A regular function on a Zariski open subset is locally a
+quotient $g/h$ of polynomials with $h$ nonvanishing. Hence it is holomorphic.
+Applying this coordinate by coordinate proves (3). Applying (3) to $f$ and to
+$f^{-1}$ proves (4).
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytification}
+Let $X$ be an algebraic variety over $\mathbf C$. There is a unique Serre
+complex analytic space $X^{an}$ with the following property: for every
+algebraic chart
+$$
+\varphi : V \longrightarrow U \subset \mathbf C^n
+$$
+from a Zariski open $V \subset X$ onto a Zariski locally closed reduced
+subset, $V$ is open in $X^{an}$ and $\varphi$ is an analytic isomorphism.
+
+The construction is functorial. Every morphism $f : X \to Y$ induces a
+holomorphic map $f^{an} : X^{an} \to Y^{an}$, and there is a canonical
+morphism of locally ringed spaces
+$$
+a_X : (X^{an}, \mathcal O_{X^{an}}) \longrightarrow
+(X, \mathcal O_X)
+$$
+whose map on points sends a classical point to the corresponding closed
+scheme point and whose map on structure sheaves sends a regular function to
+the same function viewed as holomorphic.
+\end{proposition}
+
+\begin{proof}
+Cover $X$ by finitely many algebraic charts $V_i \to U_i$. Transport the
+analytic structure of $U_i$ to $V_i$. On $V_i \cap V_j$ the transition maps
+and their inverses are holomorphic by
+Lemma \ref{lemma-algebraic-charts-analytic}; the overlap is open for the usual
+topology by the same lemma. The cocycle condition is inherited from the
+algebraic charts. The sheaves and the locally ringed spaces therefore glue by
+Sheaves, Lemma \ref{sheaves-lemma-glue-sheaves-structures}.
+
+It remains to check the Hausdorff axiom, rather than hide it in the word
+``glue''. The inverse image of the diagonal of the glued point set in every
+$V_i \times V_j$ is the graph of the algebraic identification on the overlap.
+Since $X$ is separated, this graph is Zariski closed; it is closed in the usual
+topology by Lemma \ref{lemma-algebraic-charts-analytic}. These products form an
+open cover, so the diagonal is closed and the glued space is Hausdorff.
+Uniqueness follows because the charts cover $X$ and determine both its topology
+and its structure sheaf.
+
+For a morphism $f : X \to Y$, its restrictions in algebraic charts are
+holomorphic by Lemma \ref{lemma-algebraic-charts-analytic}; they glue to
+$f^{an}$, compatibly with identities and composition. The usual topology is
+finer than the Zariski topology, so the point map underlying $a_X$ is
+continuous. Regular functions are holomorphic in charts, and the induced maps
+on stalks are local. This constructs the asserted morphism of locally ringed
+spaces.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-properties}
+Let $X$ and $Y$ be algebraic varieties over $\mathbf C$.
+\begin{enumerate}
+\item The space $X^{an}$ is locally compact, second countable, and countable
+at infinity.
+\item There is a canonical analytic isomorphism
+$(X \times_{\mathbf C} Y)^{an} \cong X^{an} \times Y^{an}$.
+\item If $Z \subset X$ is a Zariski locally closed reduced subvariety, then
+$Z^{an}$ is the reduced analytic subspace induced on $Z(\mathbf C)$ by
+$X^{an}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A Zariski locally closed subset of $\mathbf C^n$ is locally compact, second
+countable, and a countable union of compact subsets. The same properties pass
+to a finite union of open chart domains, proving (1). Products of algebraic
+charts are algebraic charts and the usual topology on a product of subsets of
+complex affine spaces is the product topology; uniqueness in
+Proposition \ref{proposition-analytification} proves (2). Restricting charts of
+$X$ to $Z$ and using Lemma \ref{lemma-algebraic-charts-analytic} proves (3).
+\end{proof}
+
+\section{Local algebra of analytification}
+\label{section-local-comparison}
+
+\noindent
+Let $x \in X(\mathbf C)$. We write
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+for the local homomorphism induced by $a_X$. Both rings are Noetherian local
+rings with residue field $\mathbf C$: this is standard for the algebraic ring,
+and for the analytic ring it is Lemma \ref{lemma-local-analytic-algebra}.
+
+\begin{proposition}
+\label{proposition-analytification-closed-ideal}
+Let $Z \subset X$ be a Zariski locally closed reduced subvariety and let
+$x \in Z(\mathbf C)$. After replacing $X$ by a Zariski neighbourhood of $x$,
+view $Z$ as closed. If $\mathcal J_{Z,x} \subset \mathcal O_{X,x}$ is its
+algebraic ideal and $\mathcal I_{Z^{an},x} \subset
+\mathcal O_{X^{an},x}$ is the ideal of holomorphic germs vanishing on
+$Z^{an}$, then
+$$
+\mathcal I_{Z^{an},x} =
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+Consequently
+$$
+\mathcal O_{Z^{an},x} \cong
+\mathcal O_{X^{an},x}/
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+\end{proposition}
+
+\begin{proof}
+First take $X=\mathbf A^n_{\mathbf C}$ and translate $x$ to the origin. Put
+$$
+R=\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)},
+\qquad
+H=\mathbf C\{z_1,\ldots,z_n\}.
+$$
+Let $J \subset R$ be the radical ideal of $Z$. The local analytic
+Nullstellensatz says that the ideal of holomorphic germs vanishing on $Z$ is
+$\sqrt{JH}$. We show that $JH$ is already radical.
+
+The Taylor homomorphisms identify the maximal-adic completions of both $R$ and
+$H$ with $\mathbf C[[z_1,\ldots,z_n]]$. Completion is exact on finite modules
+by Algebra, Lemma \ref{algebra-lemma-completion-tensor}; hence the completion
+of $H/JH$ is
+$$
+\mathbf C[[z_1,\ldots,z_n]]/
+J\mathbf C[[z_1,\ldots,z_n]],
+$$
+which is also the completion of $R/J$. The field $\mathbf C$ is excellent by
+More on Algebra, Proposition
+\ref{more-algebra-proposition-ubiquity-excellent}, and $R/J$, being a
+localization of a finite type $\mathbf C$-algebra, is excellent by More on
+Algebra, Lemma \ref{more-algebra-lemma-finite-type-over-excellent}. It is
+therefore Nagata by More on Algebra, Lemma
+\ref{more-algebra-lemma-quasi-excellent-nagata}. Its
+completion is reduced by More on Algebra, Lemma
+\ref{more-algebra-lemma-completion-reduced}. Thus the completion of $H/JH$ is
+reduced. The ring $H/JH$ injects into its completion by Krull's intersection
+theorem, Algebra, Lemma
+\ref{algebra-lemma-intersect-powers-ideal-module-zero}; hence $H/JH$ is
+reduced and $JH=\sqrt{JH}$. The analytic Nullstellensatz now gives the desired
+equality in affine space.
+
+For general $X$, work in an algebraic chart which realizes $X$ and $Z$ as
+reduced locally closed subsets of one affine space. Apply the affine result to
+their ambient ideals and pass to the quotient. This gives both displayed
+formulas.
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-completed-local-rings}
+For every algebraic variety $X$ over $\mathbf C$ and every
+$x \in X(\mathbf C)$, the local homomorphism $\theta_x$ induces an isomorphism
+of completed local rings
+$$
+\widehat{\theta}_x :
+\widehat{\mathcal O}_{X,x} \xrightarrow{\ \sim\ }
+\widehat{\mathcal O}_{X^{an},x}.
+$$
+In particular, $\theta_x$ is injective.
+\end{theorem}
+
+\begin{proof}
+For affine space at the origin the map is
+$$
+\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)}
+\longrightarrow \mathbf C\{z_1,\ldots,z_n\},
+$$
+and both maximal-adic completions are canonically
+$\mathbf C[[z_1,\ldots,z_n]]$ by Taylor expansion and truncation. For a
+locally closed reduced $X$ in affine space, Proposition
+\ref{proposition-analytification-closed-ideal} identifies its analytic local
+ring with the quotient by the extended algebraic ideal. Exactness of
+completion on finite modules, Algebra, Lemma
+\ref{algebra-lemma-completion-tensor}, identifies both completions with the
+same quotient of the formal power-series ring. The assertion is local, so
+charts prove the general case. Finally, $\mathcal O_{X,x}$ injects into its
+completion by Algebra, Lemma
+\ref{algebra-lemma-intersect-powers-ideal-module-zero}, which proves the last
+sentence.
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-local-faithfully-flat}
+The local homomorphism
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+is faithfully flat. In Serre's terminology,
+$(\mathcal O_{X,x},\mathcal O_{X^{an},x})$ is a flat pair: the quotient
+$\mathcal O_{X^{an},x}/\mathcal O_{X,x}$ is flat over $\mathcal O_{X,x}$,
+and for every ideal $I \subset \mathcal O_{X,x}$ one has
+$$
+I\mathcal O_{X^{an},x}\cap\mathcal O_{X,x}=I.
+$$
+\end{theorem}
+
+\begin{proof}
+The map on completions is an isomorphism by
+Theorem \ref{theorem-analytification-completed-local-rings}, hence is flat.
+More on Algebra, Lemma \ref{more-algebra-lemma-flat-completion} implies that
+$\theta_x$ is flat, and Algebra, Lemma
+\ref{algebra-lemma-local-flat-ff} makes this local flat map faithfully flat.
+The contraction formula is Algebra, Lemma
+\ref{algebra-lemma-faithfully-flat-universally-injective}. Universal
+injectivity after tensoring the exact sequence
+$0\to\mathcal O_{X,x}\to\mathcal O_{X^{an},x}$ shows that the displayed
+quotient is flat, which is precisely the flat-pair assertion.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-local-dimension}
+For every $x \in X(\mathbf C)$,
+$$
+\dim(\mathcal O_{X,x})=\dim(\mathcal O_{X^{an},x}).
+$$
+\end{lemma}
+
+\begin{proof}
+Each ring has the same dimension as its completion by More on Algebra, Lemma
+\ref{more-algebra-lemma-completion-dimension}, and the two completions are
+isomorphic by Theorem \ref{theorem-analytification-completed-local-rings}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-dimension}
+If $X$ is irreducible of dimension $r$, then $X^{an}$ has analytic dimension
+$r$ at every point.
+\end{lemma}
+
+\begin{proof}
+For a closed point $x$, Varieties, Lemma
+\ref{varieties-lemma-dimension-locally-algebraic}, parts
+\ref{varieties-item-dimension-at-closed-point} and
+\ref{varieties-item-dimension-irreducible}, gives
+$$
+\dim(\mathcal O_{X,x})=r.
+$$
+Apply
+Lemma \ref{lemma-analytification-local-dimension}, followed by
+Lemma \ref{lemma-components-dimension-analytic-space}, which identifies
+analytic dimension with the Krull dimension of the analytic local ring.
+\end{proof}
+
+\section{The classical and Zariski topologies}
+\label{section-classical-zariski-topologies}
+
+\begin{lemma}
+\label{lemma-zariski-dense-open-analytically-dense}
+Let $U \subset X$ be Zariski open and Zariski dense. Then $U^{an}$ is dense
+in $X^{an}$.
+\end{lemma}
+
+\begin{proof}
+Put $Z=X\setminus U$ with its reduced induced structure. If a point
+$x \in X^{an}$ were not in the closure of $U^{an}$, then $Z^{an}$ would
+contain an analytic neighbourhood of $x$. Its local vanishing ideal at $x$
+would therefore be zero. Proposition
+\ref{proposition-analytification-closed-ideal} and the injectivity in
+Theorem \ref{theorem-analytification-completed-local-rings} would give
+$\mathcal J_{Z,x}=0$. Thus $Z$ would agree with $X$ on a nonempty Zariski
+neighbourhood of $x$, contradicting the Zariski density of $U$.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-proper-if-and-only-if-compact-analytification}
+An algebraic variety $X$ over $\mathbf C$ is proper over $\mathbf C$ if and
+only if the topological space $X^{an}$ is compact.
+\end{proposition}
+
+\begin{proof}
+Apply Chow's lemma in the precise form of Limits, Lemma
+\ref{limits-lemma-chow-finite-type}. After replacing the source by its
+reduction as allowed by the following remark there, we obtain a proper
+surjective morphism $\pi : U \to X$ and an immersion
+$U \to \mathbf P^n_{\mathbf C}$. Let $Y$ be the reduced closure of $U$ in
+$\mathbf P^n_{\mathbf C}$. Then $Y$ is projective and $U$ is Zariski open
+and dense in $Y$. Moreover the graph of $\pi$ is closed in $X\times Y$:
+over $X$ it is the graph of a morphism from the proper $X$-scheme $U$ to the
+separated $X$-scheme $X\times Y$.
+
+If $X$ is proper, then $U$ is proper over $\mathbf C$. Its immersion into
+projective space is proper and hence closed, so $U=Y$. The space
+$Y^{an}$ is a closed subset of the compact Hausdorff space
+$\mathbf P^n(\mathbf C)$, hence compact. The continuous surjection
+$\pi^{an}:Y^{an}\to X^{an}$ shows that $X^{an}$ is compact.
+
+Conversely, assume $X^{an}$ compact. Then $X^{an}\times Y^{an}$ is compact,
+and the analytification of the closed graph is closed in this product by
+Lemma \ref{lemma-analytification-properties}. Its projection to $Y^{an}$ is
+$U^{an}$, hence $U^{an}$ is compact and therefore closed in the Hausdorff
+space $Y^{an}$. It is dense by
+Lemma \ref{lemma-zariski-dense-open-analytically-dense}, so $U^{an}=Y^{an}$.
+Thus $U=Y$ because a nonempty closed subset of a finite type
+$\mathbf C$-scheme has a closed $\mathbf C$-point. Now the projective variety
+$Y$ is proper and maps surjectively to $X$; Morphisms, Lemma
+\ref{morphisms-lemma-image-proper-is-proper} implies that $X$ is proper.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-dense-image-contains-open}
+Let $f : X \to Y$ be a morphism of algebraic varieties over $\mathbf C$. If
+$f(X)$ is Zariski dense in $Y$, then $f(X)$ contains a Zariski open dense
+subset of $Y$.
+\end{lemma}
+
+\begin{proof}
+The image is constructible by Morphisms, Lemma
+\ref{morphisms-lemma-chevalley}. A dense constructible subset contains a dense
+open subset by Topology, Lemma
+\ref{topology-lemma-dense-in-constructible}.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-image-closure}
+Let $f : X \to Y$ be a morphism of algebraic varieties. The closure of
+$f(X(\mathbf C))$ in $Y^{an}$ is the set of classical points of the Zariski
+closure of $f(X)$ in $Y$.
+\end{proposition}
+
+\begin{proof}
+Let $T$ be the reduced Zariski closure of $f(X)$. Applying
+Lemma \ref{lemma-dense-image-contains-open} to $X\to T$ gives a Zariski open
+dense $V\subset T$ contained in $f(X)$. By
+Lemma \ref{lemma-zariski-dense-open-analytically-dense}, $V^{an}$ is dense in
+$T^{an}$, so $T^{an}$ is contained in the analytic closure of $f(X)$. The
+opposite inclusion holds because $T^{an}$ is closed in $Y^{an}$ by
+Lemma \ref{lemma-analytification-properties}.
+\end{proof}
+
+\section{An analytic criterion for regularity}
+\label{section-analytic-regularity}
+
+\begin{proposition}
+\label{proposition-algebraic-graph-holomorphic-regular}
+Let $X$ and $Y$ be algebraic varieties and let
+$f : X^{an}\to Y^{an}$ be holomorphic. If its graph is the classical point
+set of a Zariski locally closed reduced subvariety
+$T\subset X\times_{\mathbf C}Y$, then $f$ is induced by a morphism
+$X\to Y$.
+\end{proposition}
+
+\begin{proof}
+The first projection $p:T\to X$ is a morphism and is bijective on classical
+points. Its inverse $x\mapsto(x,f(x))$ is holomorphic. By
+Lemma \ref{lemma-analytification-properties}, $p^{an}$ is therefore an
+analytic isomorphism. Proposition
+\ref{proposition-analytic-isomorphism-algebraic} below shows that $p$ is an
+isomorphism. Hence $f=\operatorname{pr}_Y\circ p^{-1}$ is regular.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytic-isomorphism-algebraic}
+Let $p:T\to X$ be a morphism of algebraic varieties which is bijective on
+classical points. If $p^{an}:T^{an}\to X^{an}$ is an analytic isomorphism,
+then $p$ is an isomorphism.
+\end{proposition}
+
+\begin{proof}
+First $p$ is a homeomorphism for the Zariski topology on classical points.
+Indeed, if $F\subset T$ is Zariski closed, then $F^{an}$ is closed in
+$T^{an}$. Its image under the analytic homeomorphism is closed in $X^{an}$.
+By Proposition \ref{proposition-image-closure}, applied to $F\to X$, this
+image is Zariski closed.
+
+Both schemes are Jacobson by Varieties, Lemma
+\ref{varieties-lemma-locally-finite-type-Jacobson}. Hence their closed subsets
+are determined by their closed points. Passing from irreducible closed subsets
+to their unique generic points (Schemes, Lemma
+\ref{schemes-lemma-scheme-sober}) extends the preceding homeomorphism uniquely
+to a homeomorphism of the full underlying scheme spaces.
+
+Fix $t\in T(\mathbf C)$ and put $x=p(t)$. The Zariski homeomorphism makes
+$$
+A=\mathcal O_{X,x}\longrightarrow A'=\mathcal O_{T,t}
+$$
+injective. The analytic isomorphism identifies
+$B=\mathcal O_{X^{an},x}$ with $\mathcal O_{T^{an},t}$. By
+Theorem \ref{theorem-analytification-local-faithfully-flat}, both $A$ and
+$A'$ embed in this common ring $B$.
+
+The irreducible components through $x$ correspond to those through $t$.
+Write their minimal primes as $\mathfrak p_i\subset A$ and
+$\mathfrak p'_i\subset A'$, with
+$\mathfrak p'_i\cap A=\mathfrak p_i$. Put
+$$
+K_i=\operatorname{Frac}(A/\mathfrak p_i),
+\qquad
+K'_i=\operatorname{Frac}(A'/\mathfrak p'_i).
+$$
+The corresponding irreducible varieties are homeomorphic and have the same
+dimension, so $K'_i/K_i$ is a finite extension. To see that its degree is one,
+use Morphisms, Lemma \ref{morphisms-lemma-finite-degree} and generic flatness,
+Morphisms, Proposition \ref{morphisms-proposition-generic-flatness}, to shrink
+the target to a nonempty open over which the component map is finite locally
+free. Since the ground field has characteristic zero, $K'_i/K_i$ is separable;
+after shrinking once more the map is finite etale of degree
+$[K'_i:K_i]$. Every closed fibre then consists of that many reduced
+$\mathbf C$-points. Bijectivity of $p$ forces $[K'_i:K_i]=1$.
+
+Let $S$ be the complement in $A$ of the union of its minimal primes and define
+$S'$ similarly for $A'$. Lemma \ref{lemma-total-fractions-reduced} below gives
+$$
+A_S=\prod_iK_i=\prod_iK'_i=A'_{S'}.
+$$
+If $h\in A'$, write $h=g/s$ in this common total ring of fractions with
+$g\in A$ and $s\in S$. Thus $g=sh\in sB$. Faithful flatness and Algebra,
+Lemma \ref{algebra-lemma-faithfully-flat-universally-injective}, give
+$sB\cap A=sA$, so $g=sa$ for some $a\in A$. Hence $s(h-a)=0$. The element
+$s$ lies in no minimal prime of the reduced ring $A'$, and is therefore a
+nonzerodivisor by Algebra, Lemma
+\ref{algebra-lemma-reduced-ring-sub-product-fields}. Thus $h=a$ and $A'=A$.
+
+We have proved that the local maps are isomorphisms at every closed point.
+Thus $p$ is etale at every closed point by Etale, Lemma
+\ref{etale-lemma-characterize-etale-Noetherian}. The etale locus is open; its
+closed complement, if nonempty, would contain a closed point because $T$ is
+Jacobson. Hence $p$ is etale everywhere.
+
+Finally, repeat the finite-degree argument above for the restriction of $p$ to
+the reduced closure of an arbitrary point of $T$. The Zariski homeomorphism
+identifies this closure with the closure of its image, and the same argument
+shows that the induced extension of their function fields, namely the residue
+field extension at the two generic points, has degree one. Thus $p$ is
+injective on points with trivial residue extensions, hence radicial by
+Morphisms, Lemma \ref{morphisms-lemma-universally-injective}. An etale
+radicial morphism is an open immersion by Etale, Theorem
+\ref{etale-theorem-etale-radicial-open}. Since $p$ is also surjective, it is an
+isomorphism.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-total-fractions-reduced}
+Let $A$ be a reduced ring with finitely many minimal primes
+$\mathfrak p_1,\ldots,\mathfrak p_r$. Let $S$ be the set of elements lying in
+none of the $\mathfrak p_i$ and put
+$K_i=\operatorname{Frac}(A/\mathfrak p_i)$. Then
+$$
+A_S=\prod_{i=1}^rK_i.
+$$
+\end{lemma}
+
+\begin{proof}
+Algebra, Lemma \ref{algebra-lemma-reduced-ring-sub-product-fields} says that
+$S$ is exactly the set of nonzerodivisors and that
+$A_{\mathfrak p_i}=K_i$. Algebra, Lemma
+\ref{algebra-lemma-total-ring-fractions-no-embedded-points} then identifies
+the total ring of fractions $A_S$ with the displayed product.
+\end{proof}
+
+% External analytic input ledger for this continuation:
+% (1) the local analytic Nullstellensatz, used exactly once in the proof of
+%     Proposition \ref{proposition-analytification-closed-ideal};
+% (2) Taylor expansion and the completion identity
+%     \widehat{\mathbf C\{z_1,...,z_n\}}=\mathbf C[[z_1,...,z_n]], used in
+%     the two local-comparison proofs;
+% (3) compactness and Hausdorffness of complex projective space, used in the
+%     proof of Proposition
+%     \ref{proposition-proper-if-and-only-if-compact-analytification}.
+% Oka--Cartan coherence and Weierstrass Noetherianity were already stated as
+% explicit dependencies in the foundation block; no properness-comparison,
+% identity, normalization, or unmentioned analytic theorem is invoked here.

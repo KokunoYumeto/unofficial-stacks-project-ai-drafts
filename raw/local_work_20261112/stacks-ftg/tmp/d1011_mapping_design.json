@@ -1,0 +1,172 @@
+{
+  "schema": "tohoku-stacks-d1011-mapping-design-v1",
+  "status": "STRICT_PASS",
+  "formalization_id": "D1011",
+  "predecessor_projection": {
+    "dossier": "tohoku_r53",
+    "dec_csv_bytes": 375251,
+    "dec_csv_sha256": "84639B0A99BDDC58980FEEA5E221D249B3B898956DA79F4D41DEFE79297C71D9",
+    "map_csv_bytes": 479894,
+    "map_csv_sha256": "7BF8C6794D743ACE1334F5979B820E955C70C14537F0B00A0E6A679376668BAE",
+    "issues_csv_bytes": 31413,
+    "issues_csv_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503",
+    "status_note": "These are frozen r53 projections and become the exact predecessor identities only if the sealed r53 dossier matches them byte for byte."
+  },
+  "planned_successor": "tohoku_r54",
+  "decision_csv_schema": [
+    "decision_id",
+    "unit_id",
+    "action",
+    "disposition",
+    "stacks_labels",
+    "rationale",
+    "review_state",
+    "supersedes"
+  ],
+  "planned_decisions": [
+    {
+      "decision_id": "D001028",
+      "unit_id": "tohoku:construction:stalk-spectral-sequence-limits",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-constant-sheaf-ext-stalk-spectral-sequences",
+      "rationale": "Stacks now constructs the two p. 193 neighbourhood-colimit spectral sequences functorially from the E_2-page onward. Exactness of filtered colimits passes their pages and finite abutment filtrations to the colimit, whose abutment is identified with the stalk of sheaf Ext. In the quotient sequence the Tor term is the admitted corrected Tor_a^R(S,M); no Ext/filtered-colimit interchange is used at this construction stage.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000476"
+    },
+    {
+      "decision_id": "D001029",
+      "unit_id": "tohoku:criterion:stalk-ext-limit-transfer",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-constant-sheaf-ext-stalk-comparison;cohomology-lemma-constant-sheaf-ext-stalk-noetherian-quotient",
+      "rationale": "Stacks now constructs the canonical maps from the stalk of sheaf Ext to Ext_R^n(M,A_x), proves them isomorphisms when the componentwise Ext_R or Ext_S terms commute with the neighbourhood colimit, and proves the p. 193 left-Noetherian quotient specialization using the finite S-modules Tor_a^R(S,M). The comparison is conditional; left Noetherianity is not replaced by right Noetherianity, and the repaired Tor base is the original ring R.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000490"
+    },
+    {
+      "decision_id": "D001030",
+      "unit_id": "tohoku:section:4.3",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-section-ext",
+      "rationale": "The existing Stacks Ext section, together with the p. 191--192 constant-sheaf Ext lemmas already mapped and the new D1011 stalk lemmas, now covers the remaining substantive section-level content: the neighbourhood spectral sequences, their conditional stalk comparison, and the left-Noetherian finite-Tor case. The HLC and failure illustrations remain nonblocking example_or_remark units, and no unconditional Ext-colimit comparison is claimed.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000332"
+    }
+  ],
+  "canonical_decision_rows": {
+    "encoding": "json.dumps(rows,ensure_ascii=True,sort_keys=True,separators=(',',':'))",
+    "bytes": 2259,
+    "sha256": "BAD064FA7667B3F068BBC47B00CAA47680A9C5CB256600761DB978F5D52F6066",
+    "csv_encoding": "csv.writer(...,lineterminator='\\n') over decision_csv_schema, UTF-8 without BOM, no header",
+    "csv_suffix_bytes": 1901,
+    "csv_suffix_sha256": "A2B246F22DF653D5272FEB19634F99BAA2DFBB21E79D3B6F8944B1A5A9636A6E"
+  },
+  "contingent_successor_identities": {
+    "condition": "The sealed r53 dec.csv, map.csv, and issues.csv identities must exactly equal predecessor_projection.",
+    "dec_csv_bytes": 377152,
+    "dec_csv_sha256": "1B9A6A95DC3C50C04E5754AA7E8890827111D51350E124D6E0220C23FA77B679",
+    "map_csv_bytes": 480773,
+    "map_csv_sha256": "B6D7482C57477FB8360514487AC16FD2298DD05B3CE1AC76BAC8E5F0220A0F60",
+    "issues_csv_bytes": 31413,
+    "issues_csv_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503",
+    "issues_csv_change": "none"
+  },
+  "expected_map_delta": {
+    "changed_units": 3,
+    "unchanged_units": 988,
+    "changed_fields_per_unit": [
+      "decision_id",
+      "disposition",
+      "rationale",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags"
+    ],
+    "tag_behavior": {
+      "D001028": "",
+      "D001029": "",
+      "D001030": "0BQP"
+    },
+    "tag_control": "Only D001030 receives official Stacks tag 0BQP; the two new local lemma targets receive no official tag."
+  },
+  "existing_source_repair": {
+    "new_issue_row_required": false,
+    "new_source_repair_required": false,
+    "family_decision": {
+      "decision_id": "TOH-P193-COR-001",
+      "state": "active",
+      "record": "production/p193_r1/decisions.jsonl",
+      "record_bytes": 4460,
+      "record_sha256": "DB247240625B2A3606364FF65873293DA7C41C2B28A9907576C46DFA461D4C39"
+    },
+    "root_source_corrections": {
+      "decision_ids": [
+        "TOH-SRC-P193-001",
+        "TOH-SRC-P193-002",
+        "TOH-SRC-P193-003",
+        "TOH-SRC-P193-004",
+        "TOH-SRC-P193-005"
+      ],
+      "states": [
+        "active",
+        "active",
+        "active",
+        "active",
+        "active"
+      ],
+      "record": "SOURCE_CORRECTIONS.jsonl",
+      "record_bytes": 209932,
+      "record_sha256": "0C9A8424C88DCF4F474ACF5EE7F8C0F8F51D0B1D1F1482E04B57ECD43DC80429"
+    },
+    "mathematical_binding": "The quotient spectral-sequence initial term uses the admitted corrected Tor base Tor_a^R(S,M), rather than the diplomatically preserved erroneous quotient-ring superscript."
+  },
+  "design_audit": {
+    "path": "tmp/d1011_design_audit.json",
+    "bytes": 6027,
+    "sha256": "74D76A31F65848F8B995E31CB5221427603EADB5B04A08157527E4DBCC64E327",
+    "status": "STRICT_PASS",
+    "candidate": {
+      "path": "tmp/d1011_block_candidate.tex",
+      "bytes": 10924,
+      "sha256": "EC0D7CDD7E3D04925D992EBA671835AD46004D029DDDA0AAEAD8BEE92E3F800D",
+      "lines": 278
+    },
+    "referenced_identity_replay": "PASS"
+  },
+  "expected_postsuccessor_counts": {
+    "active_graph_corrections": 0,
+    "active_source_issues": 0,
+    "candidate_units": 0,
+    "decided_units": 679,
+    "decisions": 1030,
+    "dispositions": {
+      "example_or_remark": 84,
+      "existing_equivalent": 374,
+      "existing_stronger": 41,
+      "existing_weaker": 6,
+      "extend_existing": 13,
+      "historical_reference": 33,
+      "new_section": 5,
+      "new_statement": 11,
+      "structural_only": 424
+    },
+    "graph_corrections": 0,
+    "review_units": 0,
+    "source_issues": 30,
+    "unit_candidates": 0,
+    "units": 991,
+    "remaining_gap_class_dispositions_before": 38,
+    "remaining_gap_class_dispositions_after": 35
+  },
+  "nonclaims": [
+    "D1011 does not formalize the p.193 HLC example or the subsequent failure example; those are nonblocking example_or_remark units.",
+    "D1011 makes no analytic-geometry, coherent-sheaf, or equivariant-vector-bundle claim.",
+    "Functoriality of the quotient hyper-Ext system is claimed from the E2 page onward, not from an unconstructed E1 page.",
+    "No unconditional Ext/filtered-colimit interchange is claimed; the general comparison lemma states the required componentwise hypotheses explicitly.",
+    "The Noetherian specialization uses left Noetherianity and finitely generated left S-modules; it does not assert right Noetherianity.",
+    "No new source correction is made; the admitted p.193 Tor-base repair is inherited exactly.",
+    "This design audit does not edit live cohomology.tex, build a PDF, mutate a semantic or mapping ledger, or perform a Git/GitHub/publication action."
+  ]
+}

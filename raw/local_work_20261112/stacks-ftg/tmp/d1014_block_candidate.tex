@@ -1,0 +1,67 @@
+\begin{lemma}[Meromorphic quotient as divisor germs]
+\label{lemma-meromorphic-quotient-divisor-germs}
+\begin{reference}
+\cite[Chapter III, \S 3.4, p. 160]{Tohoku}
+\end{reference}
+Let $X$ be a Noetherian integral scheme and let $\mathcal{K}_X$ be the
+sheaf of meromorphic functions. Taking the quotient in the category of
+sheaves of abelian groups, the stalk at $x \in X$ is
+\[
+(\mathcal{K}_X^*/\mathcal{O}_X^*)_x
+\cong K^*/\mathcal{O}_{X,x}^*,
+\]
+where $K$ is the function field of $X$. We call this quotient the sheaf of
+germs of locally principal divisors: a germ is represented by a nonzero
+meromorphic function, with two representatives identified when their ratio
+is a unit in the local ring. If, in addition, every local ring of $X$ is a
+unique factorization domain and $\mathcal{D}_X$ is the sheaf of Weil
+divisors, then the divisor map induces a canonical isomorphism
+\begin{equation}
+\label{equation-meromorphic-quotient-divisor-germs}
+\mathcal{K}_X^*/\mathcal{O}_X^*
+\xrightarrow{\ \sim\ }
+\mathcal{D}_X.
+\end{equation}
+For every $x \in X$, with $A = \mathcal{O}_{X,x}$ and $K$ its fraction
+field, the induced stalk isomorphism is
+\[
+(\mathcal{K}_X^*/\mathcal{O}_X^*)_x
+\cong K^*/A^*
+\cong
+\bigoplus_{\substack{\mathfrak p \subset A\\
+\operatorname{height}(\mathfrak p)=1}}
+\mathbf Z[\mathfrak p].
+\]
+Thus under the locally factorial hypotheses the locally principal divisor
+germs are exactly the Weil-divisor germs.
+\end{lemma}
+
+\begin{proof}
+The meromorphic-functions lemma identifies the stalk of $\mathcal{K}_X$ at
+every point of the integral scheme with the function field $K$. Hence the
+stalk of the sheaf quotient is $K^*/A^*$, which is exactly the stated
+locally principal divisor-germ relation. Under the additional locally UFD
+hypothesis, the exact sequence of Lemma
+\ref{lemma-locally-UFD-divisor-resolution} identifies its cokernel with
+the quotient in (\ref{equation-meromorphic-quotient-divisor-germs}).
+Taking stalks and using the computation in that lemma then gives
+\[
+(\mathcal{K}_X^*/\mathcal{O}_X^*)_x \cong K^*/A^*
+\cong
+\bigoplus_{\substack{\mathfrak p \subset A\\
+\operatorname{height}(\mathfrak p)=1}}
+\mathbf Z[\mathfrak p].
+\]
+The last group is the stalk of $\mathcal{D}_X$. Unique factorization lets
+one choose a meromorphic representative for every finite divisor germ, so
+the stalkwise description is exactly the stated locally principal
+interpretation.
+\end{proof}
+
+\begin{remark}[Algebraic scope of the quotient identification]
+\label{remark-meromorphic-quotient-algebraic-boundary}
+The preceding identification is conditional on the displayed algebraic
+hypotheses and uses multiplicative sheaves of abelian groups. It does not
+assert an analytic quotient, a GAGA comparison, or any descent statement;
+those require separate analytic input.
+\end{remark}

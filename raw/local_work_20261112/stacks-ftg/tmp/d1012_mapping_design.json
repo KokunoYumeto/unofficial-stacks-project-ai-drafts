@@ -1,0 +1,399 @@
+{
+  "schema": "tohoku-stacks-d1012-r56-mapping-design-v1",
+  "status": "STRICT_DESIGN_PASS_CONTINGENT",
+  "unit": "D1012",
+  "successor": "tohoku_r56",
+  "predecessor": "tohoku_r55",
+  "write_boundary": {
+    "created": [
+      "user\\Documents\\stacks-ftg\\tmp\\d1012_mapping_design.json"
+    ],
+    "not_modified": [
+      "user\\Documents\\stacks-ftg\\tohoku_r55",
+      "user\\Documents\\stacks-ftg\\cohomology.tex",
+      "all canonical source and source-repair ledgers",
+      "all reader and semantic generations",
+      "all mapping successors and cursors"
+    ],
+    "build_or_scan_run": false,
+    "git_used": false,
+    "cleanup_run": false
+  },
+  "sealed_predecessor": {
+    "receipt": {
+      "path": "user\\Documents\\stacks-ftg\\tohoku_r55\\r55-check.json",
+      "bytes": 51881,
+      "sha256": "710219F6C9B79B9448E73209F2C3C129FB8D63FEDE134D12FA42643C78B9360B",
+      "schema": "tohoku-stacks-mapping-successor-r55-v1",
+      "status": "PASS",
+      "sealed_receipt_replay": "PASS"
+    },
+    "locked_files": {
+      "dec.csv": {
+        "bytes": 378984,
+        "sha256": "CBA7EB96B1EF1E61A1E1AE824EB40BF54B4B8D6388E31EE88DC20DF3860E3B45",
+        "lf_count": 1032,
+        "rows_excluding_header": 1031
+      },
+      "issues.csv": {
+        "bytes": 31413,
+        "sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503",
+        "lf_count": 31,
+        "rows_excluding_header": 30
+      },
+      "map.csv": {
+        "bytes": 482243,
+        "sha256": "0EAAF30DD6AC08B21E6C7156FD9C7FA92A5033D20AED7F172A564A491FA1503B",
+        "lf_count": 992,
+        "rows_excluding_header": 991
+      }
+    },
+    "maximum_decision_id": "D001031",
+    "maximum_issue_id": "I000030",
+    "decision_count": 1031,
+    "source_issue_count": 30,
+    "remaining_gap_class_dispositions": 34,
+    "source_repairs_appended": 0
+  },
+  "bound_design_evidence": {
+    "source_repair_design": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_source_repair_design.json",
+      "bytes": 11812,
+      "sha256": "9F282268F4496469D2601BE25523EF6276F9CF15722D6F50A71B202F32E80B82",
+      "status": "DESIGN_PASS_NOT_APPLIED"
+    },
+    "independent_review": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_independent_review_r1.json",
+      "bytes": 14941,
+      "sha256": "E8685E081850E1D31ABC93498839FCDB2975DB72BB5972ECC176DEC6BF0C5B55",
+      "status": "STRICT_PASS",
+      "blocking_defects": 0
+    },
+    "revised_candidate": {
+      "path": "user\\Documents\\stacks-ftg\\tmp\\d1012_block_candidate.tex",
+      "bytes": 14479,
+      "sha256": "47846682E4B789557EDAA8F5DADAC4F927267394FAC57ACED0590210F039311D",
+      "labels": 6,
+      "official_tags": 0
+    }
+  },
+  "production_amendments_incorporated": [
+    {
+      "id": "D1012-A001",
+      "result": "INCORPORATED",
+      "implementation": "Use r56 from sealed r55, allocate D001032-D001036 and I000031, and set source_repairs_appended=1."
+    },
+    {
+      "id": "D1012-A002",
+      "result": "INCORPORATED_AS_SOURCE_GATE",
+      "implementation": "Require TOH-SRC-P179-009 to use the established SOURCE_CORRECTIONS.jsonl layer token fr_corrected;en, not fr_corrected_and_english."
+    }
+  ],
+  "contingent_production_gates": [
+    {
+      "order": 1,
+      "gate": "source_ledgers_and_exact_repair",
+      "required": "Seal TOH-P179-COR-002 and TOH-SRC-P179-009 with layer fr_corrected;en; preserve dip p179 at 4413 bytes/SHA-256 3B4424E9...; obtain corrected FR p179 at 4375 bytes/SHA-256 27C6C84E... and EN p179 at 4173 bytes/SHA-256 A7491524....",
+      "state": "PENDING"
+    },
+    {
+      "order": 2,
+      "gate": "reader_and_visual_qa",
+      "required": "Seal reader v068c3r19 and QA successor v68r41 with strict parse, fixed-point auxiliaries, and visual inspection of the affected p178-p180 seams.",
+      "state": "PENDING"
+    },
+    {
+      "order": 3,
+      "gate": "semantic_successor",
+      "required": "Seal sem/r20 with stable IDs/count/order and the exact one-node setup-text delta bound to the p180 induction.",
+      "state": "PENDING"
+    },
+    {
+      "order": 4,
+      "gate": "live_formalization_and_qa",
+      "required": "Append the revised candidate exactly once, prove predecessor reconstruction, complete fixed-point TeX/PDF/log/visual/scanner QA, and seal a final D1012 formalization audit with independent replay.",
+      "state": "PENDING"
+    },
+    {
+      "order": 5,
+      "gate": "atomic_r56_build_and_receipt",
+      "required": "Reverify every bound r55 byte, append exactly the planned rows, change exactly the five planned map rows, validate r56 independently, and seal its receipt before treating any closure as active.",
+      "state": "PENDING"
+    }
+  ],
+  "planned_decisions": [
+    {
+      "decision_id": "D001032",
+      "unit_id": "tohoku:theorem:3.9.1",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-covering-acyclicity-local-killing",
+      "rationale": "Stacks now proves the covering-family local-killing theorem under the corrected cross-cover trace axiom: for any two assigned coverings R and R' of A and any member B of R, the trace of R' on B is assigned to B. The finite-closed and paracompact locally-finite-closed Leray--Cartan spectral sequences supply the required edge sequence; the two inductions give vanishing through degree n-1 and the exact degree-n local-killing criterion. Source defect D1012-R001 is preserved diplomatically and corrected by TOH-P179-COR-002 and TOH-SRC-P179-009.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000446"
+    },
+    {
+      "decision_id": "D001033",
+      "unit_id": "tohoku:corollary:3.9.1:1",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-covering-acyclicity-conditions",
+      "rationale": "Stacks now proves that derived-cohomology vanishing through degree n is equivalent to coverwise Cech vanishing A(n) together with finite common-intersection local killing B(n), using the repaired local-killing theorem and the closed-cover spectral sequence. No official tag is claimed.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000378"
+    },
+    {
+      "decision_id": "D001034",
+      "unit_id": "tohoku:corollary:3.9.1:2",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-special-coverings-compute-acyclicity",
+      "rationale": "Stacks now proves the cofinal special-cover criterion: if every open covering is refined by a finite common intersection of assigned coverings, local killing makes every B(m) automatic, so derived vanishing through degree n is equivalent to assigned-cover cohomology vanishing through degree n. No official tag is claimed.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000379"
+    },
+    {
+      "decision_id": "D001035",
+      "unit_id": "tohoku:corollary:3.9.1:3",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-lemma-bounded-nerve-special-coverings-acyclic",
+      "rationale": "Stacks now proves the bounded-nerve upgrade: alternating normalization kills assigned-cover cohomology above the uniform nerve dimension, while the special-cover criterion supplies all lower degrees, hence all positive-degree derived cohomology vanishes. No official tag is claimed.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000380"
+    },
+    {
+      "decision_id": "D001036",
+      "unit_id": "tohoku:section:3.9",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "cohomology-section-covering-acyclicity-criteria",
+      "rationale": "The new Stacks section on acyclicity criteria by coverings collects the open, finite-closed, and paracompact locally-finite-closed Leray--Cartan spectral sequence together with the repaired local-killing theorem and its three corollaries. Proposition 3.9.2, its application, and the nonabelian remark remain separately tracked subordinate units. No official tag is claimed.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000329"
+    }
+  ],
+  "planned_issue": {
+    "issue_id": "I000031",
+    "unit_id": "tohoku:setup:acyclicity-cover-families",
+    "status": "resolved",
+    "kind": "source_internal_quantifier_omission",
+    "claim": "The printed p. 179 setup quantifies only the trace of a covering on one of its own members, but the p. 180 induction traces each different covering R^i onto a member B of R^1. The cross-cover trace closure required by the induction is therefore omitted.",
+    "evidence_labels": "cohomology-lemma-cech-spectral-sequence-closed-covering;cohomology-lemma-covering-acyclicity-local-killing",
+    "evidence": "Exact diplomatic p179.tex is 4413 bytes, SHA-256 3B4424E98669777F4352A6911DA83D6391DD1412F79FE9C5EE77B8172DB75182. The p180 dip/fr/en proof layers are bound in d1012_source_repair_design.json, 11812 bytes, SHA-256 9F282268F4496469D2601BE25523EF6276F9CF15722D6F50A71B202F32E80B82. Independent review d1012_independent_review_r1.json, 14941 bytes, SHA-256 E8685E081850E1D31ABC93498839FCDB2975DB72BB5972ECC176DEC6BF0C5B55, replays the corrected FR/EN projections, diplomatic invariance, and the exact discharge of D1012-R001. Production resolution additionally requires sealed TOH-P179-COR-002, TOH-SRC-P179-009, and the final D1012 formalization audit.",
+    "control": "Preserve the printed self-trace sentence byte-identically in diplomatic French. In corrected French and English use the exact cross-cover quantifier under TOH-P179-COR-002 and TOH-SRC-P179-009. Require the repaired reader and semantic successors plus the final D1012 formalization audit before appending this resolved issue and D001032.",
+    "resolution_decision": "D001032"
+  },
+  "map_mutation_contract": {
+    "changed_units": 5,
+    "unchanged_units": 986,
+    "changed_fields_each": [
+      "decision_id",
+      "disposition",
+      "rationale",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags"
+    ],
+    "inherited_fields_byte_semantics": "All other parsed fields and all non-target raw CSV rows are inherited exactly from sealed r55.",
+    "target_stacks_tags": "",
+    "official_tag_claims": 0
+  },
+  "projected_counts": {
+    "decisions": 1036,
+    "decisions_appended": 5,
+    "source_issues": 31,
+    "issues_appended": 1,
+    "active_source_issues": 0,
+    "source_repairs_appended": 1,
+    "decided_units": 679,
+    "units": 991,
+    "dispositions": {
+      "example_or_remark": 84,
+      "existing_equivalent": 380,
+      "existing_stronger": 41,
+      "existing_weaker": 6,
+      "extend_existing": 12,
+      "historical_reference": 33,
+      "new_section": 4,
+      "new_statement": 7,
+      "structural_only": 424
+    },
+    "remaining_gap_class_dispositions_before": 34,
+    "remaining_gap_class_dispositions_after": 29
+  },
+  "canonical_encodings": {
+    "rule": "Python csv.writer compatible minimal quoting; UTF-8 without BOM; LF line terminators",
+    "decision_schema": [
+      "decision_id",
+      "unit_id",
+      "action",
+      "disposition",
+      "stacks_labels",
+      "rationale",
+      "review_state",
+      "supersedes"
+    ],
+    "decision_rows": [
+      {
+        "decision_id": "D001032",
+        "bytes": 712,
+        "sha256": "410FC0D6E9D52D95361BAA865247D43B7BDEA8FC8CFC39A4D63B4795726AA1FC",
+        "base64": "RDAwMTAzMix0b2hva3U6dGhlb3JlbTozLjkuMSxyZXBsYWNlLGV4aXN0aW5nX2VxdWl2YWxlbnQsY29ob21vbG9neS1sZW1tYS1jb3ZlcmluZy1hY3ljbGljaXR5LWxvY2FsLWtpbGxpbmcsIlN0YWNrcyBub3cgcHJvdmVzIHRoZSBjb3ZlcmluZy1mYW1pbHkgbG9jYWwta2lsbGluZyB0aGVvcmVtIHVuZGVyIHRoZSBjb3JyZWN0ZWQgY3Jvc3MtY292ZXIgdHJhY2UgYXhpb206IGZvciBhbnkgdHdvIGFzc2lnbmVkIGNvdmVyaW5ncyBSIGFuZCBSJyBvZiBBIGFuZCBhbnkgbWVtYmVyIEIgb2YgUiwgdGhlIHRyYWNlIG9mIFInIG9uIEIgaXMgYXNzaWduZWQgdG8gQi4gVGhlIGZpbml0ZS1jbG9zZWQgYW5kIHBhcmFjb21wYWN0IGxvY2FsbHktZmluaXRlLWNsb3NlZCBMZXJheS0tQ2FydGFuIHNwZWN0cmFsIHNlcXVlbmNlcyBzdXBwbHkgdGhlIHJlcXVpcmVkIGVkZ2Ugc2VxdWVuY2U7IHRoZSB0d28gaW5kdWN0aW9ucyBnaXZlIHZhbmlzaGluZyB0aHJvdWdoIGRlZ3JlZSBuLTEgYW5kIHRoZSBleGFjdCBkZWdyZWUtbiBsb2NhbC1raWxsaW5nIGNyaXRlcmlvbi4gU291cmNlIGRlZmVjdCBEMTAxMi1SMDAxIGlzIHByZXNlcnZlZCBkaXBsb21hdGljYWxseSBhbmQgY29ycmVjdGVkIGJ5IFRPSC1QMTc5LUNPUi0wMDIgYW5kIFRPSC1TUkMtUDE3OS0wMDkuIixpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3JldmlldyxEMDAwNDQ2Cg=="
+      },
+      {
+        "decision_id": "D001033",
+        "bytes": 453,
+        "sha256": "19DFE5B2CE2728850231CD5DFE9CDEE9A7D73F83AB1B0AC5A496085F618E14CF",
+        "base64": "RDAwMTAzMyx0b2hva3U6Y29yb2xsYXJ5OjMuOS4xOjEscmVwbGFjZSxleGlzdGluZ19lcXVpdmFsZW50LGNvaG9tb2xvZ3ktbGVtbWEtY292ZXJpbmctYWN5Y2xpY2l0eS1jb25kaXRpb25zLCJTdGFja3Mgbm93IHByb3ZlcyB0aGF0IGRlcml2ZWQtY29ob21vbG9neSB2YW5pc2hpbmcgdGhyb3VnaCBkZWdyZWUgbiBpcyBlcXVpdmFsZW50IHRvIGNvdmVyd2lzZSBDZWNoIHZhbmlzaGluZyBBKG4pIHRvZ2V0aGVyIHdpdGggZmluaXRlIGNvbW1vbi1pbnRlcnNlY3Rpb24gbG9jYWwga2lsbGluZyBCKG4pLCB1c2luZyB0aGUgcmVwYWlyZWQgbG9jYWwta2lsbGluZyB0aGVvcmVtIGFuZCB0aGUgY2xvc2VkLWNvdmVyIHNwZWN0cmFsIHNlcXVlbmNlLiBObyBvZmZpY2lhbCB0YWcgaXMgY2xhaW1lZC4iLGludGVncmF0ZWRfc291cmNlX3N0YWNrc19hbmRfaW5kZXBlbmRlbnRfcmV2aWV3LEQwMDAzNzgK"
+      },
+      {
+        "decision_id": "D001034",
+        "bytes": 496,
+        "sha256": "82FC4DCE2BE41FB66AD684BFD10ED41D65815C33C64152EED1B4C5D74AE83334",
+        "base64": "RDAwMTAzNCx0b2hva3U6Y29yb2xsYXJ5OjMuOS4xOjIscmVwbGFjZSxleGlzdGluZ19lcXVpdmFsZW50LGNvaG9tb2xvZ3ktbGVtbWEtc3BlY2lhbC1jb3ZlcmluZ3MtY29tcHV0ZS1hY3ljbGljaXR5LCJTdGFja3Mgbm93IHByb3ZlcyB0aGUgY29maW5hbCBzcGVjaWFsLWNvdmVyIGNyaXRlcmlvbjogaWYgZXZlcnkgb3BlbiBjb3ZlcmluZyBpcyByZWZpbmVkIGJ5IGEgZmluaXRlIGNvbW1vbiBpbnRlcnNlY3Rpb24gb2YgYXNzaWduZWQgY292ZXJpbmdzLCBsb2NhbCBraWxsaW5nIG1ha2VzIGV2ZXJ5IEIobSkgYXV0b21hdGljLCBzbyBkZXJpdmVkIHZhbmlzaGluZyB0aHJvdWdoIGRlZ3JlZSBuIGlzIGVxdWl2YWxlbnQgdG8gYXNzaWduZWQtY292ZXIgY29ob21vbG9neSB2YW5pc2hpbmcgdGhyb3VnaCBkZWdyZWUgbi4gTm8gb2ZmaWNpYWwgdGFnIGlzIGNsYWltZWQuIixpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3JldmlldyxEMDAwMzc5Cg=="
+      },
+      {
+        "decision_id": "D001035",
+        "bytes": 459,
+        "sha256": "D342456BE2F7BAA9875E24C5751A682E865C818BC5B8395CE87B44649E721F99",
+        "base64": "RDAwMTAzNSx0b2hva3U6Y29yb2xsYXJ5OjMuOS4xOjMscmVwbGFjZSxleGlzdGluZ19lcXVpdmFsZW50LGNvaG9tb2xvZ3ktbGVtbWEtYm91bmRlZC1uZXJ2ZS1zcGVjaWFsLWNvdmVyaW5ncy1hY3ljbGljLCJTdGFja3Mgbm93IHByb3ZlcyB0aGUgYm91bmRlZC1uZXJ2ZSB1cGdyYWRlOiBhbHRlcm5hdGluZyBub3JtYWxpemF0aW9uIGtpbGxzIGFzc2lnbmVkLWNvdmVyIGNvaG9tb2xvZ3kgYWJvdmUgdGhlIHVuaWZvcm0gbmVydmUgZGltZW5zaW9uLCB3aGlsZSB0aGUgc3BlY2lhbC1jb3ZlciBjcml0ZXJpb24gc3VwcGxpZXMgYWxsIGxvd2VyIGRlZ3JlZXMsIGhlbmNlIGFsbCBwb3NpdGl2ZS1kZWdyZWUgZGVyaXZlZCBjb2hvbW9sb2d5IHZhbmlzaGVzLiBObyBvZmZpY2lhbCB0YWcgaXMgY2xhaW1lZC4iLGludGVncmF0ZWRfc291cmNlX3N0YWNrc19hbmRfaW5kZXBlbmRlbnRfcmV2aWV3LEQwMDAzODAK"
+      },
+      {
+        "decision_id": "D001036",
+        "bytes": 535,
+        "sha256": "60497632DBCAABC230BE1FD5EF0FE07ABE8EA4A8395BBD0BE01E6A71A91E3926",
+        "base64": "RDAwMTAzNix0b2hva3U6c2VjdGlvbjozLjkscmVwbGFjZSxleGlzdGluZ19lcXVpdmFsZW50LGNvaG9tb2xvZ3ktc2VjdGlvbi1jb3ZlcmluZy1hY3ljbGljaXR5LWNyaXRlcmlhLCJUaGUgbmV3IFN0YWNrcyBzZWN0aW9uIG9uIGFjeWNsaWNpdHkgY3JpdGVyaWEgYnkgY292ZXJpbmdzIGNvbGxlY3RzIHRoZSBvcGVuLCBmaW5pdGUtY2xvc2VkLCBhbmQgcGFyYWNvbXBhY3QgbG9jYWxseS1maW5pdGUtY2xvc2VkIExlcmF5LS1DYXJ0YW4gc3BlY3RyYWwgc2VxdWVuY2UgdG9nZXRoZXIgd2l0aCB0aGUgcmVwYWlyZWQgbG9jYWwta2lsbGluZyB0aGVvcmVtIGFuZCBpdHMgdGhyZWUgY29yb2xsYXJpZXMuIFByb3Bvc2l0aW9uIDMuOS4yLCBpdHMgYXBwbGljYXRpb24sIGFuZCB0aGUgbm9uYWJlbGlhbiByZW1hcmsgcmVtYWluIHNlcGFyYXRlbHkgdHJhY2tlZCBzdWJvcmRpbmF0ZSB1bml0cy4gTm8gb2ZmaWNpYWwgdGFnIGlzIGNsYWltZWQuIixpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3JldmlldyxEMDAwMzI5Cg=="
+      }
+    ],
+    "decision_block": {
+      "bytes": 2655,
+      "sha256": "5056693050904219689E8BF96B53072FE5E061D89C4CD3D64F45CD6F339DFCFC",
+      "base64": "RDAwMTAzMix0b2hva3U6dGhlb3JlbTozLjkuMSxyZXBsYWNlLGV4aXN0aW5nX2VxdWl2YWxlbnQsY29ob21vbG9neS1sZW1tYS1jb3ZlcmluZy1hY3ljbGljaXR5LWxvY2FsLWtpbGxpbmcsIlN0YWNrcyBub3cgcHJvdmVzIHRoZSBjb3ZlcmluZy1mYW1pbHkgbG9jYWwta2lsbGluZyB0aGVvcmVtIHVuZGVyIHRoZSBjb3JyZWN0ZWQgY3Jvc3MtY292ZXIgdHJhY2UgYXhpb206IGZvciBhbnkgdHdvIGFzc2lnbmVkIGNvdmVyaW5ncyBSIGFuZCBSJyBvZiBBIGFuZCBhbnkgbWVtYmVyIEIgb2YgUiwgdGhlIHRyYWNlIG9mIFInIG9uIEIgaXMgYXNzaWduZWQgdG8gQi4gVGhlIGZpbml0ZS1jbG9zZWQgYW5kIHBhcmFjb21wYWN0IGxvY2FsbHktZmluaXRlLWNsb3NlZCBMZXJheS0tQ2FydGFuIHNwZWN0cmFsIHNlcXVlbmNlcyBzdXBwbHkgdGhlIHJlcXVpcmVkIGVkZ2Ugc2VxdWVuY2U7IHRoZSB0d28gaW5kdWN0aW9ucyBnaXZlIHZhbmlzaGluZyB0aHJvdWdoIGRlZ3JlZSBuLTEgYW5kIHRoZSBleGFjdCBkZWdyZWUtbiBsb2NhbC1raWxsaW5nIGNyaXRlcmlvbi4gU291cmNlIGRlZmVjdCBEMTAxMi1SMDAxIGlzIHByZXNlcnZlZCBkaXBsb21hdGljYWxseSBhbmQgY29ycmVjdGVkIGJ5IFRPSC1QMTc5LUNPUi0wMDIgYW5kIFRPSC1TUkMtUDE3OS0wMDkuIixpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3JldmlldyxEMDAwNDQ2CkQwMDEwMzMsdG9ob2t1OmNvcm9sbGFyeTozLjkuMToxLHJlcGxhY2UsZXhpc3RpbmdfZXF1aXZhbGVudCxjb2hvbW9sb2d5LWxlbW1hLWNvdmVyaW5nLWFjeWNsaWNpdHktY29uZGl0aW9ucywiU3RhY2tzIG5vdyBwcm92ZXMgdGhhdCBkZXJpdmVkLWNvaG9tb2xvZ3kgdmFuaXNoaW5nIHRocm91Z2ggZGVncmVlIG4gaXMgZXF1aXZhbGVudCB0byBjb3Zlcndpc2UgQ2VjaCB2YW5pc2hpbmcgQShuKSB0b2dldGhlciB3aXRoIGZpbml0ZSBjb21tb24taW50ZXJzZWN0aW9uIGxvY2FsIGtpbGxpbmcgQihuKSwgdXNpbmcgdGhlIHJlcGFpcmVkIGxvY2FsLWtpbGxpbmcgdGhlb3JlbSBhbmQgdGhlIGNsb3NlZC1jb3ZlciBzcGVjdHJhbCBzZXF1ZW5jZS4gTm8gb2ZmaWNpYWwgdGFnIGlzIGNsYWltZWQuIixpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3JldmlldyxEMDAwMzc4CkQwMDEwMzQsdG9ob2t1OmNvcm9sbGFyeTozLjkuMToyLHJlcGxhY2UsZXhpc3RpbmdfZXF1aXZhbGVudCxjb2hvbW9sb2d5LWxlbW1hLXNwZWNpYWwtY292ZXJpbmdzLWNvbXB1dGUtYWN5Y2xpY2l0eSwiU3RhY2tzIG5vdyBwcm92ZXMgdGhlIGNvZmluYWwgc3BlY2lhbC1jb3ZlciBjcml0ZXJpb246IGlmIGV2ZXJ5IG9wZW4gY292ZXJpbmcgaXMgcmVmaW5lZCBieSBhIGZpbml0ZSBjb21tb24gaW50ZXJzZWN0aW9uIG9mIGFzc2lnbmVkIGNvdmVyaW5ncywgbG9jYWwga2lsbGluZyBtYWtlcyBldmVyeSBCKG0pIGF1dG9tYXRpYywgc28gZGVyaXZlZCB2YW5pc2hpbmcgdGhyb3VnaCBkZWdyZWUgbiBpcyBlcXVpdmFsZW50IHRvIGFzc2lnbmVkLWNvdmVyIGNvaG9tb2xvZ3kgdmFuaXNoaW5nIHRocm91Z2ggZGVncmVlIG4uIE5vIG9mZmljaWFsIHRhZyBpcyBjbGFpbWVkLiIsaW50ZWdyYXRlZF9zb3VyY2Vfc3RhY2tzX2FuZF9pbmRlcGVuZGVudF9yZXZpZXcsRDAwMDM3OQpEMDAxMDM1LHRvaG9rdTpjb3JvbGxhcnk6My45LjE6MyxyZXBsYWNlLGV4aXN0aW5nX2VxdWl2YWxlbnQsY29ob21vbG9neS1sZW1tYS1ib3VuZGVkLW5lcnZlLXNwZWNpYWwtY292ZXJpbmdzLWFjeWNsaWMsIlN0YWNrcyBub3cgcHJvdmVzIHRoZSBib3VuZGVkLW5lcnZlIHVwZ3JhZGU6IGFsdGVybmF0aW5nIG5vcm1hbGl6YXRpb24ga2lsbHMgYXNzaWduZWQtY292ZXIgY29ob21vbG9neSBhYm92ZSB0aGUgdW5pZm9ybSBuZXJ2ZSBkaW1lbnNpb24sIHdoaWxlIHRoZSBzcGVjaWFsLWNvdmVyIGNyaXRlcmlvbiBzdXBwbGllcyBhbGwgbG93ZXIgZGVncmVlcywgaGVuY2UgYWxsIHBvc2l0aXZlLWRlZ3JlZSBkZXJpdmVkIGNvaG9tb2xvZ3kgdmFuaXNoZXMuIE5vIG9mZmljaWFsIHRhZyBpcyBjbGFpbWVkLiIsaW50ZWdyYXRlZF9zb3VyY2Vfc3RhY2tzX2FuZF9pbmRlcGVuZGVudF9yZXZpZXcsRDAwMDM4MApEMDAxMDM2LHRvaG9rdTpzZWN0aW9uOjMuOSxyZXBsYWNlLGV4aXN0aW5nX2VxdWl2YWxlbnQsY29ob21vbG9neS1zZWN0aW9uLWNvdmVyaW5nLWFjeWNsaWNpdHktY3JpdGVyaWEsIlRoZSBuZXcgU3RhY2tzIHNlY3Rpb24gb24gYWN5Y2xpY2l0eSBjcml0ZXJpYSBieSBjb3ZlcmluZ3MgY29sbGVjdHMgdGhlIG9wZW4sIGZpbml0ZS1jbG9zZWQsIGFuZCBwYXJhY29tcGFjdCBsb2NhbGx5LWZpbml0ZS1jbG9zZWQgTGVyYXktLUNhcnRhbiBzcGVjdHJhbCBzZXF1ZW5jZSB0b2dldGhlciB3aXRoIHRoZSByZXBhaXJlZCBsb2NhbC1raWxsaW5nIHRoZW9yZW0gYW5kIGl0cyB0aHJlZSBjb3JvbGxhcmllcy4gUHJvcG9zaXRpb24gMy45LjIsIGl0cyBhcHBsaWNhdGlvbiwgYW5kIHRoZSBub25hYmVsaWFuIHJlbWFyayByZW1haW4gc2VwYXJhdGVseSB0cmFja2VkIHN1Ym9yZGluYXRlIHVuaXRzLiBObyBvZmZpY2lhbCB0YWcgaXMgY2xhaW1lZC4iLGludGVncmF0ZWRfc291cmNlX3N0YWNrc19hbmRfaW5kZXBlbmRlbnRfcmV2aWV3LEQwMDAzMjkK"
+    },
+    "issue_schema": [
+      "issue_id",
+      "unit_id",
+      "status",
+      "kind",
+      "claim",
+      "evidence_labels",
+      "evidence",
+      "control",
+      "resolution_decision"
+    ],
+    "issue_row": {
+      "bytes": 1453,
+      "sha256": "A5040DA4963681FF69203DD46CB67894437557100AB71BB6C21799B37DAC2E43",
+      "base64": "STAwMDAzMSx0b2hva3U6c2V0dXA6YWN5Y2xpY2l0eS1jb3Zlci1mYW1pbGllcyxyZXNvbHZlZCxzb3VyY2VfaW50ZXJuYWxfcXVhbnRpZmllcl9vbWlzc2lvbiwiVGhlIHByaW50ZWQgcC4gMTc5IHNldHVwIHF1YW50aWZpZXMgb25seSB0aGUgdHJhY2Ugb2YgYSBjb3ZlcmluZyBvbiBvbmUgb2YgaXRzIG93biBtZW1iZXJzLCBidXQgdGhlIHAuIDE4MCBpbmR1Y3Rpb24gdHJhY2VzIGVhY2ggZGlmZmVyZW50IGNvdmVyaW5nIFJeaSBvbnRvIGEgbWVtYmVyIEIgb2YgUl4xLiBUaGUgY3Jvc3MtY292ZXIgdHJhY2UgY2xvc3VyZSByZXF1aXJlZCBieSB0aGUgaW5kdWN0aW9uIGlzIHRoZXJlZm9yZSBvbWl0dGVkLiIsY29ob21vbG9neS1sZW1tYS1jZWNoLXNwZWN0cmFsLXNlcXVlbmNlLWNsb3NlZC1jb3ZlcmluZztjb2hvbW9sb2d5LWxlbW1hLWNvdmVyaW5nLWFjeWNsaWNpdHktbG9jYWwta2lsbGluZywiRXhhY3QgZGlwbG9tYXRpYyBwMTc5LnRleCBpcyA0NDEzIGJ5dGVzLCBTSEEtMjU2IDNCNDQyNEU5ODY2OTc3N0Y0MzUyQTY5MTFEQTgzRDYzOTFERDE0MTJGNzlGRTlDNUVFNzdCODE3MkRCNzUxODIuIFRoZSBwMTgwIGRpcC9mci9lbiBwcm9vZiBsYXllcnMgYXJlIGJvdW5kIGluIGQxMDEyX3NvdXJjZV9yZXBhaXJfZGVzaWduLmpzb24sIDExODEyIGJ5dGVzLCBTSEEtMjU2IDlGMjgyMjY4RjQ0OTY0NjlEMjYwMUJFMjU1MjNFRjYyNzZGOUNGMTU3MjJENkY1MEE3MUIyMDJGMzJFODBCODIuIEluZGVwZW5kZW50IHJldmlldyBkMTAxMl9pbmRlcGVuZGVudF9yZXZpZXdfcjEuanNvbiwgMTQ5NDEgYnl0ZXMsIFNIQS0yNTYgRTg2ODVFMDgxODUwRTFEMzFBQkM5MzQ5ODgzOUZDREIyOTc1REI3MkJCNTk3MkVDQzE3NkRFQzZCRjBDNUI1NSwgcmVwbGF5cyB0aGUgY29ycmVjdGVkIEZSL0VOIHByb2plY3Rpb25zLCBkaXBsb21hdGljIGludmFyaWFuY2UsIGFuZCB0aGUgZXhhY3QgZGlzY2hhcmdlIG9mIEQxMDEyLVIwMDEuIFByb2R1Y3Rpb24gcmVzb2x1dGlvbiBhZGRpdGlvbmFsbHkgcmVxdWlyZXMgc2VhbGVkIFRPSC1QMTc5LUNPUi0wMDIsIFRPSC1TUkMtUDE3OS0wMDksIGFuZCB0aGUgZmluYWwgRDEwMTIgZm9ybWFsaXphdGlvbiBhdWRpdC4iLFByZXNlcnZlIHRoZSBwcmludGVkIHNlbGYtdHJhY2Ugc2VudGVuY2UgYnl0ZS1pZGVudGljYWxseSBpbiBkaXBsb21hdGljIEZyZW5jaC4gSW4gY29ycmVjdGVkIEZyZW5jaCBhbmQgRW5nbGlzaCB1c2UgdGhlIGV4YWN0IGNyb3NzLWNvdmVyIHF1YW50aWZpZXIgdW5kZXIgVE9ILVAxNzktQ09SLTAwMiBhbmQgVE9ILVNSQy1QMTc5LTAwOS4gUmVxdWlyZSB0aGUgcmVwYWlyZWQgcmVhZGVyIGFuZCBzZW1hbnRpYyBzdWNjZXNzb3JzIHBsdXMgdGhlIGZpbmFsIEQxMDEyIGZvcm1hbGl6YXRpb24gYXVkaXQgYmVmb3JlIGFwcGVuZGluZyB0aGlzIHJlc29sdmVkIGlzc3VlIGFuZCBEMDAxMDMyLixEMDAxMDMyCg=="
+    },
+    "map_schema": [
+      "unit_id",
+      "item",
+      "unit_type",
+      "parent_id",
+      "source_start",
+      "source_end",
+      "source_loc",
+      "authority_sha256",
+      "source_topics",
+      "topic_evidence_labels",
+      "topic_evidence_tags",
+      "decision_id",
+      "disposition",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags",
+      "rationale"
+    ],
+    "map_replacement_rows": [
+      {
+        "unit_id": "tohoku:theorem:3.9.1",
+        "decision_id": "D001032",
+        "bytes": 826,
+        "sha256": "C86403566DF9865006F0CF8140F971B10A81AB7DF0E1E6FB8B6AFC92B0C9215E",
+        "base64": "dG9ob2t1OnRoZW9yZW06My45LjEsMTc5LHRoZW9yZW0sdG9ob2t1OnNlY3Rpb246My45LDE3OSwxNzksc2VtL3IxOC9ub2Rlcy5jc3Y6OTY1LDVBOEU1NzIwQkMyRUY4OTA1QkY4NUY3OTE5QzY1QUM0QTg3QTMxQ0ZDODU0QkQ3N0U2QjUwODRDMEQyREVCRUYsLCwsRDAwMTAzMixleGlzdGluZ19lcXVpdmFsZW50LGludGVncmF0ZWRfc291cmNlX3N0YWNrc19hbmRfaW5kZXBlbmRlbnRfcmV2aWV3LGNvaG9tb2xvZ3ktbGVtbWEtY292ZXJpbmctYWN5Y2xpY2l0eS1sb2NhbC1raWxsaW5nLCwiU3RhY2tzIG5vdyBwcm92ZXMgdGhlIGNvdmVyaW5nLWZhbWlseSBsb2NhbC1raWxsaW5nIHRoZW9yZW0gdW5kZXIgdGhlIGNvcnJlY3RlZCBjcm9zcy1jb3ZlciB0cmFjZSBheGlvbTogZm9yIGFueSB0d28gYXNzaWduZWQgY292ZXJpbmdzIFIgYW5kIFInIG9mIEEgYW5kIGFueSBtZW1iZXIgQiBvZiBSLCB0aGUgdHJhY2Ugb2YgUicgb24gQiBpcyBhc3NpZ25lZCB0byBCLiBUaGUgZmluaXRlLWNsb3NlZCBhbmQgcGFyYWNvbXBhY3QgbG9jYWxseS1maW5pdGUtY2xvc2VkIExlcmF5LS1DYXJ0YW4gc3BlY3RyYWwgc2VxdWVuY2VzIHN1cHBseSB0aGUgcmVxdWlyZWQgZWRnZSBzZXF1ZW5jZTsgdGhlIHR3byBpbmR1Y3Rpb25zIGdpdmUgdmFuaXNoaW5nIHRocm91Z2ggZGVncmVlIG4tMSBhbmQgdGhlIGV4YWN0IGRlZ3JlZS1uIGxvY2FsLWtpbGxpbmcgY3JpdGVyaW9uLiBTb3VyY2UgZGVmZWN0IEQxMDEyLVIwMDEgaXMgcHJlc2VydmVkIGRpcGxvbWF0aWNhbGx5IGFuZCBjb3JyZWN0ZWQgYnkgVE9ILVAxNzktQ09SLTAwMiBhbmQgVE9ILVNSQy1QMTc5LTAwOS4iCg=="
+      },
+      {
+        "unit_id": "tohoku:corollary:3.9.1:1",
+        "decision_id": "D001033",
+        "bytes": 569,
+        "sha256": "7E3099B66A7DA621F565126D3930BB86EF926EC8C018F0A846457913803E970F",
+        "base64": "dG9ob2t1OmNvcm9sbGFyeTozLjkuMToxLDE3OSxjb3JvbGxhcnksdG9ob2t1OnNlY3Rpb246My45LDE3OSwxNzksc2VtL3IxOC9ub2Rlcy5jc3Y6MjI4LDVBOEU1NzIwQkMyRUY4OTA1QkY4NUY3OTE5QzY1QUM0QTg3QTMxQ0ZDODU0QkQ3N0U2QjUwODRDMEQyREVCRUYsLCwsRDAwMTAzMyxleGlzdGluZ19lcXVpdmFsZW50LGludGVncmF0ZWRfc291cmNlX3N0YWNrc19hbmRfaW5kZXBlbmRlbnRfcmV2aWV3LGNvaG9tb2xvZ3ktbGVtbWEtY292ZXJpbmctYWN5Y2xpY2l0eS1jb25kaXRpb25zLCwiU3RhY2tzIG5vdyBwcm92ZXMgdGhhdCBkZXJpdmVkLWNvaG9tb2xvZ3kgdmFuaXNoaW5nIHRocm91Z2ggZGVncmVlIG4gaXMgZXF1aXZhbGVudCB0byBjb3Zlcndpc2UgQ2VjaCB2YW5pc2hpbmcgQShuKSB0b2dldGhlciB3aXRoIGZpbml0ZSBjb21tb24taW50ZXJzZWN0aW9uIGxvY2FsIGtpbGxpbmcgQihuKSwgdXNpbmcgdGhlIHJlcGFpcmVkIGxvY2FsLWtpbGxpbmcgdGhlb3JlbSBhbmQgdGhlIGNsb3NlZC1jb3ZlciBzcGVjdHJhbCBzZXF1ZW5jZS4gTm8gb2ZmaWNpYWwgdGFnIGlzIGNsYWltZWQuIgo="
+      },
+      {
+        "unit_id": "tohoku:corollary:3.9.1:2",
+        "decision_id": "D001034",
+        "bytes": 694,
+        "sha256": "07D41A051F615258ED222450C76C83D695ED02A500BD7A0117AD156BE38F75E8",
+        "base64": "dG9ob2t1OmNvcm9sbGFyeTozLjkuMToyLDE3OSxjb3JvbGxhcnksdG9ob2t1OnNlY3Rpb246My45LDE3OSwxNzksc2VtL3IxOC9ub2Rlcy5jc3Y6MjI5LDVBOEU1NzIwQkMyRUY4OTA1QkY4NUY3OTE5QzY1QUM0QTg3QTMxQ0ZDODU0QkQ3N0U2QjUwODRDMEQyREVCRUYsY2VjaCxjb2hvbW9sb2d5LXNlY3Rpb24tY2VjaDtjb2hvbW9sb2d5LXNlY3Rpb24tY2VjaC1jb2hvbW9sb2d5LWNvaG9tb2xvZ3ksMDFFRDswMUVPLEQwMDEwMzQsZXhpc3RpbmdfZXF1aXZhbGVudCxpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3Jldmlldyxjb2hvbW9sb2d5LWxlbW1hLXNwZWNpYWwtY292ZXJpbmdzLWNvbXB1dGUtYWN5Y2xpY2l0eSwsIlN0YWNrcyBub3cgcHJvdmVzIHRoZSBjb2ZpbmFsIHNwZWNpYWwtY292ZXIgY3JpdGVyaW9uOiBpZiBldmVyeSBvcGVuIGNvdmVyaW5nIGlzIHJlZmluZWQgYnkgYSBmaW5pdGUgY29tbW9uIGludGVyc2VjdGlvbiBvZiBhc3NpZ25lZCBjb3ZlcmluZ3MsIGxvY2FsIGtpbGxpbmcgbWFrZXMgZXZlcnkgQihtKSBhdXRvbWF0aWMsIHNvIGRlcml2ZWQgdmFuaXNoaW5nIHRocm91Z2ggZGVncmVlIG4gaXMgZXF1aXZhbGVudCB0byBhc3NpZ25lZC1jb3ZlciBjb2hvbW9sb2d5IHZhbmlzaGluZyB0aHJvdWdoIGRlZ3JlZSBuLiBObyBvZmZpY2lhbCB0YWcgaXMgY2xhaW1lZC4iCg=="
+      },
+      {
+        "unit_id": "tohoku:corollary:3.9.1:3",
+        "decision_id": "D001035",
+        "bytes": 657,
+        "sha256": "9736F2E5D2F2A7D45E5CEF04A97CC56C0FF8F67F13D3C7ADBEA2D5A6D68CFCDD",
+        "base64": "dG9ob2t1OmNvcm9sbGFyeTozLjkuMTozLDE4MCxjb3JvbGxhcnksdG9ob2t1OnNlY3Rpb246My45LDE4MCwxODAsc2VtL3IxOC9ub2Rlcy5jc3Y6MjMwLDVBOEU1NzIwQkMyRUY4OTA1QkY4NUY3OTE5QzY1QUM0QTg3QTMxQ0ZDODU0QkQ3N0U2QjUwODRDMEQyREVCRUYsY2VjaCxjb2hvbW9sb2d5LXNlY3Rpb24tY2VjaDtjb2hvbW9sb2d5LXNlY3Rpb24tY2VjaC1jb2hvbW9sb2d5LWNvaG9tb2xvZ3ksMDFFRDswMUVPLEQwMDEwMzUsZXhpc3RpbmdfZXF1aXZhbGVudCxpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3Jldmlldyxjb2hvbW9sb2d5LWxlbW1hLWJvdW5kZWQtbmVydmUtc3BlY2lhbC1jb3ZlcmluZ3MtYWN5Y2xpYywsIlN0YWNrcyBub3cgcHJvdmVzIHRoZSBib3VuZGVkLW5lcnZlIHVwZ3JhZGU6IGFsdGVybmF0aW5nIG5vcm1hbGl6YXRpb24ga2lsbHMgYXNzaWduZWQtY292ZXIgY29ob21vbG9neSBhYm92ZSB0aGUgdW5pZm9ybSBuZXJ2ZSBkaW1lbnNpb24sIHdoaWxlIHRoZSBzcGVjaWFsLWNvdmVyIGNyaXRlcmlvbiBzdXBwbGllcyBhbGwgbG93ZXIgZGVncmVlcywgaGVuY2UgYWxsIHBvc2l0aXZlLWRlZ3JlZSBkZXJpdmVkIGNvaG9tb2xvZ3kgdmFuaXNoZXMuIE5vIG9mZmljaWFsIHRhZyBpcyBjbGFpbWVkLiIK"
+      },
+      {
+        "unit_id": "tohoku:section:3.9",
+        "decision_id": "D001036",
+        "bytes": 835,
+        "sha256": "C39448956C6F89288F5DF238B30E1D91EDCC52AC9ED3A55185DDE3454E8ADB48",
+        "base64": "dG9ob2t1OnNlY3Rpb246My45LDEyMTsxNzksc2VjdGlvbix0b2hva3U6Y2hhcHRlcjpJSUksMTIxLDE3OSxzZW0vcjE4L25vZGVzLmNzdjo5MTksNUE4RTU3MjBCQzJFRjg5MDVCRjg1Rjc5MTlDNjVBQzRBODdBMzFDRkM4NTRCRDc3RTZCNTA4NEMwRDJERUJFRixjZWNoO2Rlcml2ZWQtZnVuY3Rvcixjb2hvbW9sb2d5LXNlY3Rpb24tY2VjaDtjb2hvbW9sb2d5LXNlY3Rpb24tY2VjaC1jb2hvbW9sb2d5LWNvaG9tb2xvZ3k7Y29ob21vbG9neS1zZWN0aW9uLWRlcml2ZWQtZnVuY3RvcnM7ZGVyaXZlZC1zZWN0aW9uLXJpZ2h0LWRlcml2ZWQtZnVuY3RvciwwMTU2OzAxRUQ7MDFFTzswNzE2LEQwMDEwMzYsZXhpc3RpbmdfZXF1aXZhbGVudCxpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3Jldmlldyxjb2hvbW9sb2d5LXNlY3Rpb24tY292ZXJpbmctYWN5Y2xpY2l0eS1jcml0ZXJpYSwsIlRoZSBuZXcgU3RhY2tzIHNlY3Rpb24gb24gYWN5Y2xpY2l0eSBjcml0ZXJpYSBieSBjb3ZlcmluZ3MgY29sbGVjdHMgdGhlIG9wZW4sIGZpbml0ZS1jbG9zZWQsIGFuZCBwYXJhY29tcGFjdCBsb2NhbGx5LWZpbml0ZS1jbG9zZWQgTGVyYXktLUNhcnRhbiBzcGVjdHJhbCBzZXF1ZW5jZSB0b2dldGhlciB3aXRoIHRoZSByZXBhaXJlZCBsb2NhbC1raWxsaW5nIHRoZW9yZW0gYW5kIGl0cyB0aHJlZSBjb3JvbGxhcmllcy4gUHJvcG9zaXRpb24gMy45LjIsIGl0cyBhcHBsaWNhdGlvbiwgYW5kIHRoZSBub25hYmVsaWFuIHJlbWFyayByZW1haW4gc2VwYXJhdGVseSB0cmFja2VkIHN1Ym9yZGluYXRlIHVuaXRzLiBObyBvZmZpY2lhbCB0YWcgaXMgY2xhaW1lZC4iCg=="
+      }
+    ]
+  },
+  "contingent_output_identities": {
+    "dec.csv": {
+      "preimage_bytes": 378984,
+      "preimage_sha256": "CBA7EB96B1EF1E61A1E1AE824EB40BF54B4B8D6388E31EE88DC20DF3860E3B45",
+      "appended_bytes": 2655,
+      "appended_rows": 5,
+      "output_bytes": 381639,
+      "output_sha256": "5680E5911F51D5A583FD184BFA954618C9E45D73A32192F3D9AC824C57F6BDFA",
+      "preimage_is_exact_prefix": true
+    },
+    "issues.csv": {
+      "preimage_bytes": 31413,
+      "preimage_sha256": "C9E2B573A63D834205AC8B2714A0E32230309AFBDD22FA0764F9A8831DF65503",
+      "appended_bytes": 1453,
+      "appended_rows": 1,
+      "output_bytes": 32866,
+      "output_sha256": "D882954C9D55F7AB93F2910CE99D86FA1D107F6EFE7008B26722F012F50BC2BC",
+      "preimage_is_exact_prefix": true
+    },
+    "map.csv": {
+      "preimage_bytes": 482243,
+      "preimage_sha256": "0EAAF30DD6AC08B21E6C7156FD9C7FA92A5033D20AED7F172A564A491FA1503B",
+      "replaced_rows": 5,
+      "unchanged_raw_rows": 986,
+      "output_bytes": 483640,
+      "output_sha256": "0F06BCBBCAE7ED210C382BF60DE8B998D6598B9130D99E96071CB48B752DCD91",
+      "lf_count": 992,
+      "exact_inverse_reconstruction": true
+    }
+  },
+  "audit_predicates": {
+    "sealed_r55_bound": true,
+    "decision_ids_consecutive_and_fresh": true,
+    "issue_id_next_and_fresh": true,
+    "superseded_rows_exact": true,
+    "five_target_labels_exact": true,
+    "all_target_dispositions_existing_equivalent": true,
+    "source_defect_issue_resolved_by_D001032": true,
+    "source_repairs_appended_exactly_one": true,
+    "gap_projection_34_to_29": true,
+    "official_tag_claims_zero": true,
+    "future_gates_not_assumed": true,
+    "amendments_A001_A002_incorporated": true
+  },
+  "nonclaims": [
+    "This design does not assert that either source-repair decision has been appended or that any canonical source byte has changed.",
+    "This design does not assert that reader v068c3r19, QA v68r41, sem/r20, the live D1012 block, its build, PDF, scanner, or final formalization audit exists or has passed.",
+    "This design does not create r56, append any decision or issue, update map.csv, change a cursor, run a build, use Git, or perform cleanup.",
+    "No official Stacks tag is assigned or inferred for any of the five target labels.",
+    "The closed-cover spectral-sequence helper label is evidence for the theorem but is not a sixth mapping transition."
+  ],
+  "terminal_condition": "Only after every contingent production gate is sealed may the exact projected rows be applied atomically to the locked r55 preimages and independently replayed as r56."
+}

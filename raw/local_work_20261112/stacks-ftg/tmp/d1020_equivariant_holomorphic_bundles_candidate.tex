@@ -1,0 +1,117 @@
+\begin{lemma}[Holomorphic bundles and locally free analytic modules]
+\label{lemma-holomorphic-vector-bundles-locally-free-analytic-modules}
+\begin{reference}
+\cite[Chapter V, \S 5.6, p. 219]{Tohoku}
+\end{reference}
+\begin{history}
+This is the analytic bundle--module correspondence. It is separate from
+the scheme-theoretic vector-bundle construction and does not use GAGA.
+\end{history}
+Let $X$ be a complex analytic space and let $n>0$. Sending a holomorphic
+vector bundle $E$ of rank $n$ to its sheaf $\mathcal O(E)$ of holomorphic
+sections defines an equivalence between
+\begin{enumerate}
+\item holomorphic vector bundles of rank $n$ on $X$, and
+\item analytic $\mathcal O_X$-modules locally isomorphic to
+$\mathcal O_X^n$.
+\end{enumerate}
+Every module in (2) is coherent. Under the inverse equivalence, the fibre
+at $x\in X$ is canonically
+$$
+(E_{\mathcal L})_x
+\cong
+\mathcal L_x\otimes_{\mathcal O_{X,x}}\mathbf C,
+$$
+where $\mathbf C=\mathcal O_{X,x}/\mathfrak m_x$ is regarded as an
+$\mathcal O_{X,x}$-module through the residue, or evaluation, map.
+\end{lemma}
+
+\begin{proof}
+Choose a trivializing open covering $X=\bigcup U_i$ of a holomorphic vector
+bundle $E$. On every $U_i$ its sheaf of holomorphic sections is
+$\mathcal O_{U_i}^n$. In bundle trivializations, a holomorphic bundle map is
+given by a matrix of holomorphic functions. The same matrix gives the
+corresponding $\mathcal O_X$-linear map on section sheaves, and every such
+module map is locally given by such a matrix. Hence the section-sheaf
+functor is fully faithful.
+
+Conversely, let $\mathcal L$ be an analytic $\mathcal O_X$-module locally
+isomorphic to $\mathcal O_X^n$. Choose an open covering and bases
+$$
+\mathcal L|_{U_i}\longrightarrow\mathcal O_{U_i}^n.
+$$
+On $U_i\cap U_j$ the changes of basis are matrices
+$$
+A_{ij}\in\operatorname{GL}_n(\mathcal O_X(U_i\cap U_j))
+$$
+satisfying the cocycle identities. Gluing the trivial bundles
+$U_i\times\mathbf C^n$ with these transition matrices produces a
+holomorphic vector bundle $E_{\mathcal L}$, and the chosen bases glue to a
+canonical isomorphism
+$$
+\mathcal O(E_{\mathcal L})\longrightarrow\mathcal L.
+$$
+In a chosen local basis, the fibre of the glued trivial bundle at $x$ is
+$\mathbf C^n$, while tensoring the corresponding stalk basis with
+$\mathcal O_{X,x}/\mathfrak m_x$ gives the same vector space. The
+transition matrices on both sides are obtained by evaluation at $x$, so
+these local identifications glue to the displayed canonical fibre
+isomorphism.
+Changing the covering or the bases gives the uniquely isomorphic bundle
+corresponding under full faithfulness. Thus the section-sheaf functor is an
+equivalence. Finally, an analytic module locally isomorphic to
+$\mathcal O_X^n$ is coherent by Oka coherence; see
+\cite[p. 16]{Grauert-direct-image}.
+\end{proof}
+
+\begin{lemma}[Equivariant holomorphic bundles and locally free modules]
+\label{lemma-equivariant-holomorphic-vector-bundles-locally-free-modules}
+\begin{reference}
+\cite[Chapter V, \S 5.6, p. 219]{Tohoku}
+\end{reference}
+\begin{history}
+This is the equivariant analytic bundle--module correspondence, not merely
+the algebraic definition of an equivariant module. It does not assert the
+following classification of bundle extensions, a cohomological
+identification, descent to the quotient, or a GAGA comparison.
+\end{history}
+Let $X$ be a complex analytic space, let $n>0$, and let a group $G$ act on
+$X$ by analytic automorphisms. The equivalence of the preceding lemma
+restricts to an equivalence between holomorphic vector bundles of rank $n$
+with a compatible $G$-action and $G$-$\mathcal O_X$-modules whose underlying
+$\mathcal O_X$-module is locally isomorphic to $\mathcal O_X^n$.
+Here the action on a bundle is by holomorphic, fibrewise linear
+isomorphisms over the action on $X$, and the module action is in the sense
+of Modules, Definition \ref{modules-definition-G-O-module}.
+\end{lemma}
+
+\begin{proof}
+A compatible action on $E$ sends a
+section $s$ over $U$ to the section over $gU$ defined by
+$$
+(\rho_gs)(gx)=g(s(x)).
+$$
+These maps obey the group law and
+$$
+\rho_g(as)=\rho_g(a)\rho_g(s),
+$$
+so $\mathcal O(E)$ is a $G$-$\mathcal O_X$-module.
+
+In the other direction, let $\mathcal L$ be a locally free
+$G$-$\mathcal O_X$-module. In local bases on $U$ and $gU$, each semilinear
+map
+$$
+\rho_g:\mathcal L(U)\longrightarrow\mathcal L(gU)
+$$
+is represented by a matrix of holomorphic functions. The matrix is
+invertible because $\rho_{g^{-1}}$ is its inverse after transport of the
+base. It therefore defines a holomorphic fibrewise linear bundle
+isomorphism
+$$
+E_{\mathcal L}|_U\longrightarrow E_{\mathcal L}|_{gU}
+$$
+over $x\mapsto gx$. Independence of bases follows from the transition
+matrices, and the identities $\rho_{gh}=\rho_g\rho_h$ make these local maps
+an action of $G$ on $E_{\mathcal L}$. The two constructions are inverse,
+and full faithfulness identifies equivariant morphisms on both sides.
+\end{proof}

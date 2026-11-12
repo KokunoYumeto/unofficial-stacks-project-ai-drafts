@@ -1,0 +1,439 @@
+{
+  "cohomology_build": {
+    "log": {
+      "bytes": 47266,
+      "name": "cohomology.log",
+      "sha256": "CC996E7A5F7ADCBAADF8CFF50D29F079F418ADFAF24E7F2A8B6CE98BC598F944"
+    },
+    "new_block_overfull_boxes": 0,
+    "pdf": {
+      "bytes": 1786462,
+      "name": "cohomology.pdf",
+      "sha256": "F0A5BC1BB4F4A3FA521D2E59D7B737D52E0AF67C7546D7CEDF0B2B5916E43EE5"
+    },
+    "pdf_pages": 205,
+    "rerun_notices": 0,
+    "tex": {
+      "bytes": 788892,
+      "name": "cohomology.tex",
+      "sha256": "82FDAE359BED05E263D28CBE0E4DA5089E4F5EB9F0F126B6A37060FF83403180"
+    },
+    "undefined_citations": 0,
+    "undefined_references": 0,
+    "visual_reviewed_pages": [
+      168,
+      169,
+      170,
+      171
+    ]
+  },
+  "deltas": {
+    "candidate_units": 0,
+    "decision_delta": [],
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 4,
+      "candidate_units": 0,
+      "decided_units": 678,
+      "decisions": 941,
+      "dispositions": {
+        "example_or_remark": 82,
+        "existing_equivalent": 309,
+        "existing_stronger": 38,
+        "existing_weaker": 19,
+        "extend_existing": 48,
+        "historical_reference": 33,
+        "new_section": 10,
+        "new_statement": 35,
+        "structural_only": 416
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 23,
+      "unit_candidates": 0,
+      "units": 990
+    },
+    "remaining_gap_class_dispositions": 112,
+    "review_queue_units": 0,
+    "scan_counts": {
+      "labels": 22001,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1239,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13
+    },
+    "source_issues": [
+      {
+        "claim": "For a nontrivial action of G on R, the fixed subgroup N^G of a semilinear R-module is generally only an R^G-module, not an R-module. Consequently the printed claims that N^G is an injective R-module and that Ext_R^p(M,H^q(X;G,B)) is the initial term of sequence V are not typed at the stated generality.",
+        "control": "Preserve the printed formula diplomatically. Keep D000644 and D000651 open. During the translation phase, adjudicate either an added trivial G-action hypothesis on R or a corrected coefficient functor/ring, then create no-overwrite corrected source and semantic successors before any resolving mapping decision.",
+        "evidence": "Official Part II SHA-256 8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53, printed p. 218. Take R=k[t], G=C2 acting by t maps to -t, and the semilinear module N=R. Then N^G=k[t^2], which is not stable under multiplication by t and hence is not an R-submodule. The adjacent formalized sequence IV uses the correctly typed skew group ring U.",
+        "evidence_labels": "cohomology-lemma-equivariant-ext-crossed-product-spectral-sequence",
+        "issue_id": "I000023",
+        "kind": "source_coefficient_module_type_error",
+        "resolution_decision": "",
+        "status": "confirmed",
+        "unit_id": "tohoku:spectral-sequence:v"
+      }
+    ],
+    "substantive_map_changes": []
+  },
+  "errors": [],
+  "execution": {
+    "attestation": {
+      "bootstrap": {
+        "contract": "read_once_then_execute_builder_same_bytes",
+        "path": "srcmap/start_build_tohoku_r20.py"
+      },
+      "builder": {
+        "bytes": 17638,
+        "contract": "read_hash_compile_and_exec_same_payload",
+        "path": "srcmap/build_tohoku_r20.py",
+        "sha256": "99BEBE699DAA283260A67838D98BE31CAC6872C8125FBAE65055C947152A3D43"
+      }
+    },
+    "bootstrap": {
+      "bytes": 1328,
+      "name": "start_build_tohoku_r20.py",
+      "sha256": "93A64ADE289BE7C6EE7669C5528B35236638126FBB61127258CD4EED0CEC7761"
+    },
+    "contract": "same_bytes_bootstrap; exact fixed inputs locked against write/delete through generation replay and promotion",
+    "dependencies": {
+      "fga/__pycache__/mkidx.cpython-313.pyc": {
+        "bytes": 21123,
+        "name": "mkidx.cpython-313.pyc",
+        "sha256": "A78A1E45C6EB3960139B1D2A8AF42E5B10768034F0A87274448EBA69779BD424"
+      },
+      "fga/__pycache__/mkmap.cpython-313.pyc": {
+        "bytes": 26471,
+        "name": "mkmap.cpython-313.pyc",
+        "sha256": "1AA6B79FFE873AB6C2E58FF2A9826DE6FDB6B1DD69A8D3473FD5F56168F2077D"
+      },
+      "fga/mkidx.py": {
+        "bytes": 14844,
+        "name": "mkidx.py",
+        "sha256": "4425B5D021B3E35371DEBB567881697F88DF6F533ACFC9783A749CE1A5176A6B"
+      },
+      "fga/mkmap.py": {
+        "bytes": 22213,
+        "name": "mkmap.py",
+        "sha256": "7281F57EC7439E00431F2962DF9A6944779294955A9C4369615FFF04318B0053"
+      },
+      "srcmap/intake.py": {
+        "bytes": 9923,
+        "name": "intake.py",
+        "sha256": "CFD53B71649BEF84A166397AA18E39AC5E4EDF00DD860142B2936F886AB080B1"
+      },
+      "srcmap/map.py": {
+        "bytes": 27167,
+        "name": "map.py",
+        "sha256": "57A92E34DB189E0EE95E6816074DB686C5616590C33DF823EF8EB9E9AFC2E1DF"
+      },
+      "srcmap/scan.py": {
+        "bytes": 3403,
+        "name": "scan.py",
+        "sha256": "269E4D2F73405BDA82F373F04AF0109431416FF25CCA874F0051D193BC444D30"
+      },
+      "tags/tags": {
+        "bytes": 991506,
+        "name": "tags",
+        "sha256": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+      }
+    },
+    "frozen_r19_builder": {
+      "bytes": 40547,
+      "name": "build_tohoku_r19.py",
+      "sha256": "C2C2A1F8A58A86DDCF7D662073889C00F653620DB3E103717DC9B0879D894123"
+    },
+    "powershell_envelope": {
+      "bytes": 722,
+      "name": "start_build_tohoku_r20.ps1",
+      "sha256": "15D831E04F84B116A06186A76A3AFE2721391B499C1ACAFB8AB7DF49BDB759BA"
+    }
+  },
+  "files": [
+    {
+      "bytes": 585,
+      "name": "STATUS.md",
+      "sha256": "FF5F6DE5448E38772005D4369252EF34431770338EDB9CA25FAFB7C634449BF0"
+    },
+    {
+      "bytes": 5193,
+      "name": "cfg.json",
+      "sha256": "F90BE7D75867491D548044734E3BC977425848CE165715ECFDC21283FD559ECD"
+    },
+    {
+      "bytes": 71262,
+      "name": "check.json",
+      "sha256": "23C87BC36C56C28E50430128DC1CBAA6C402694A3930DAE28AA62796376DA585"
+    },
+    {
+      "bytes": 322185,
+      "name": "dec.csv",
+      "sha256": "8052A9B92110463AC781FEF7CE773468925AA7DC5B2A4D873CBBA65CB63204DF"
+    },
+    {
+      "bytes": 1877,
+      "name": "intake.json",
+      "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+    },
+    {
+      "bytes": 19355,
+      "name": "issues.csv",
+      "sha256": "B8BD643A42E9D29E3DAC0CCCC220FA3C482194FFD334A1C56BE492C8270A604B"
+    },
+    {
+      "bytes": 455434,
+      "name": "map.csv",
+      "sha256": "E728D857F5B5C7C4015499109C30D34BD371C3267926D4129FE865453EB5FA47"
+    },
+    {
+      "bytes": 61091,
+      "name": "mcheck.json",
+      "sha256": "FACCBA4476E4D136067E08F02A3444E232254FDACF62BC30F999E94B866601BF"
+    },
+    {
+      "bytes": 5259723,
+      "name": "stx.csv",
+      "sha256": "7012998E449D3AB11A2938B6F2AF4D4849E7263F8B5AF6599323127B938DA8F9"
+    },
+    {
+      "bytes": 472644,
+      "name": "tcand.csv",
+      "sha256": "804E6D3435C85F8E4857C684ADCEF18891D2F65B0E9A7F3EA66AD1C6F2941B60"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 391651,
+      "name": "units.csv",
+      "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+    }
+  ],
+  "git": {
+    "inspection_performed": false,
+    "predecessor_receipt": {
+      "bytes": 15351,
+      "path": "tohoku_r19/r19-check.json",
+      "sha256": "7A36482D9D549CF2FA613FF5CC30D17C9848C008705041979BB781F4BD9A4DF8"
+    },
+    "reason": "Workspace machine-safety policy forbids repository-wide Git inspection.",
+    "remote_server_freshness_verified": false
+  },
+  "nonclaims": [
+    "No Git command, commit, push, or remote-server freshness check is performed.",
+    "No Stacks mathematical statement or mapping disposition changes in this issue-only successor.",
+    "Sequence V remains open; no source repair or unstated coefficient hypothesis is adopted.",
+    "All 990 source units retain reviewed dispositions; the mapper has zero review and candidate queues.",
+    "The 112 residual gap-class dispositions are explicit scope results, not undecided rows.",
+    "No release, publication, upload, DOI, rights, or whole-paper gate is closed by this receipt."
+  ],
+  "predecessor_dossier": {
+    "aggregate_sha256": "D78C22ABC31791E1D8BA2FA3D1D0B803F1B598B93CEA2D6CE80CCC079FE4B22C",
+    "bytes": 7080471,
+    "file_count": 15,
+    "files": [
+      {
+        "bytes": 836,
+        "name": "STATUS.md",
+        "sha256": "A8BB15854CDE4873AF36ED436A0B258011C58ED0CDB6A6381A31C8D97D320AE7"
+      },
+      {
+        "bytes": 5193,
+        "name": "cfg.json",
+        "sha256": "A82D62E531A1A951957375D4F535F6FDFD1BFC9953FEC9CAF1327216922AC395"
+      },
+      {
+        "bytes": 71262,
+        "name": "check.json",
+        "sha256": "956A03E03411A3BED95DCB869EC89F6C5BBFA184A28A429B8DC4B0D0E671116A"
+      },
+      {
+        "bytes": 322185,
+        "name": "dec.csv",
+        "sha256": "8052A9B92110463AC781FEF7CE773468925AA7DC5B2A4D873CBBA65CB63204DF"
+      },
+      {
+        "bytes": 1877,
+        "name": "intake.json",
+        "sha256": "86273E19DB8A912BF9558DE007EF4A39C9C7FB93EBEA64A85D31A4F4A4BE42F2"
+      },
+      {
+        "bytes": 18227,
+        "name": "issues.csv",
+        "sha256": "AABA123C53D04D9DF99FC693BFB3C21222973BB5194C16F4B48B9C90BDA2AA69"
+      },
+      {
+        "bytes": 455434,
+        "name": "map.csv",
+        "sha256": "E728D857F5B5C7C4015499109C30D34BD371C3267926D4129FE865453EB5FA47"
+      },
+      {
+        "bytes": 61091,
+        "name": "mcheck.json",
+        "sha256": "D9B836BAD11F29123EE8914A04498BB17BA5CF7D5EC6743388A3BC4AC1380D8C"
+      },
+      {
+        "bytes": 15351,
+        "name": "r19-check.json",
+        "sha256": "7A36482D9D549CF2FA613FF5CC30D17C9848C008705041979BB781F4BD9A4DF8"
+      },
+      {
+        "bytes": 5259723,
+        "name": "stx.csv",
+        "sha256": "7012998E449D3AB11A2938B6F2AF4D4849E7263F8B5AF6599323127B938DA8F9"
+      },
+      {
+        "bytes": 472644,
+        "name": "tcand.csv",
+        "sha256": "804E6D3435C85F8E4857C684ADCEF18891D2F65B0E9A7F3EA66AD1C6F2941B60"
+      },
+      {
+        "bytes": 2424,
+        "name": "tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      {
+        "bytes": 2453,
+        "name": "topics.csv",
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      },
+      {
+        "bytes": 120,
+        "name": "ucand.csv",
+        "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+      },
+      {
+        "bytes": 391651,
+        "name": "units.csv",
+        "sha256": "E65D82E4B014B283485CAE6EFC4639E4275467BAEC0A45A15CB81759CA3D1040"
+      }
+    ],
+    "name": "tohoku_r19"
+  },
+  "schema": "tohoku-stacks-source-issue-successor-r20-v1",
+  "semantic_source": {
+    "aggregate_sha256": "80A41130E5797219568E87AC0E15F7AF5F996EFE2895A159FC807C0356DCC33D",
+    "bytes": 2020949,
+    "file_count": 18,
+    "files": [
+      {
+        "bytes": 10421,
+        "name": "bib.csv",
+        "sha256": "B8DBAF65161B60DC973DFAB6F57037185F8808274BB9618D27FE8BC65AD0B695"
+      },
+      {
+        "bytes": 768,
+        "name": "catalog.csv",
+        "sha256": "69896FB82FDAFD0AB0AEEC1D3387262F67740F952AAD102E5DA662CD9DA15AF9"
+      },
+      {
+        "bytes": 260771,
+        "name": "edges.csv",
+        "sha256": "5DCC1F11489A88AC02351103A6B5987877F55424CFFB066EAB9404EA5FA38BB1"
+      },
+      {
+        "bytes": 473,
+        "name": "idmap.csv",
+        "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+      },
+      {
+        "bytes": 6402,
+        "name": "manifest.json",
+        "sha256": "F314863C1F6586FBEBC91ADBF7256C3C3B3B32307F72C5726DD5DB916C758D52"
+      },
+      {
+        "bytes": 582572,
+        "name": "nodes.csv",
+        "sha256": "0F656565E4F4732E7DF1CE1ABA910A6A68BE4CC6896B325ED562E8CD573CF7A8"
+      },
+      {
+        "bytes": 106247,
+        "name": "objects.csv",
+        "sha256": "5BBAB7CD31239A509E4E927BE6D827285FE07CD8DED6180DC60DDB90A6AF7133"
+      },
+      {
+        "bytes": 513504,
+        "name": "occ.csv",
+        "sha256": "478BF2F1A3FC211E6D888A5D0E3DA8EAF20E44CC6439ACDD838678A1B221FFDB"
+      },
+      {
+        "bytes": 23686,
+        "name": "pages.csv",
+        "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+      },
+      {
+        "bytes": 2190,
+        "name": "README.md",
+        "sha256": "61CFC939C8D65180675226D65B05C444ED8AE25D554A8A90D0168B4C886A11B8"
+      },
+      {
+        "bytes": 2313,
+        "name": "refdec.csv",
+        "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+      },
+      {
+        "bytes": 159814,
+        "name": "refs.csv",
+        "sha256": "723B0C2B06713607EE39A78A33991C7E92CAB6A13BD5503ACA51F6C727C49C76"
+      },
+      {
+        "bytes": 6415,
+        "name": "resid.csv",
+        "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+      },
+      {
+        "bytes": 11777,
+        "name": "stacks.csv",
+        "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+      },
+      {
+        "bytes": 2133,
+        "name": "subjects.csv",
+        "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+      },
+      {
+        "bytes": 325273,
+        "name": "terms.csv",
+        "sha256": "5E416E9CDC6983745E6D907110F4E91B5DD9EE273FF613FD70A0CC34CE8C4B12"
+      },
+      {
+        "bytes": 3744,
+        "name": "validation.json",
+        "sha256": "CBD612B566B2517A854A841154391E62C01EE0AE02834AB5BE7C48926673C9D2"
+      },
+      {
+        "bytes": 2446,
+        "name": "xwork.csv",
+        "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+      }
+    ],
+    "generation": "sem/r10",
+    "sem_check": {
+      "bytes": 6395,
+      "name": "qa/v68r24/sem-check.json",
+      "sha256": "A425DDAA035F9E00D01579039F0E3786BCB0B52B079D614A7421D8828D837ADB"
+    },
+    "sem_input": {
+      "bytes": 299780,
+      "name": "qa/v68r24/sem-input.json",
+      "sha256": "42437BDDF7BE9AAB14869FD4B1F741191C8BCC9EDE1FFCDA3EB04964F8F1FB26"
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "tohoku-d1019-independent-review-v2",
+  "created_at": "2026-08-24T04:27:12.8271134+02:00",
+  "formalization_id": "D1019",
+  "unit_id": "tohoku:descent:discontinuous-action-characteristic-zero",
+  "status": "STRICT_PASS_FOR_LIVE_INSERTION_AND_BUILD",
+  "candidate": {
+    "path": "tmp/d1019_analytic_descent_candidate.tex",
+    "bytes": 3303,
+    "sha256": "497B3D12B59EB8DF3D77B0FF6BA4161A20B1D450E735C63CD47A381A700C943A"
+  },
+  "design": {
+    "path": "tmp/d1019_analytic_descent_design.json",
+    "bytes": 8307,
+    "sha256": "86599B850BCE94517AB47464B22EC9364D9F6D4C2B20978DBFAA1CCC4221FB3B"
+  },
+  "bibliography": {
+    "path": "my.bib",
+    "bytes": 220625,
+    "sha256": "6502A16A823B313079B50B08563C7400052E753C62C701B8C5650FE66915EABE"
+  },
+  "reviews": [
+    {
+      "reviewer": "d1018_source",
+      "scope": "source fidelity and boundary",
+      "verdict": "PASS",
+      "predicates": [
+        "degree-one comparison and analytic coherence are kept distinct",
+        "the invariant-direct-image notation matches the cited source",
+        "the particular bundle consequence is retained",
+        "GAGA, compactness, global properness, finite-dimensionality, and categorical descent are excluded"
+      ]
+    },
+    {
+      "reviewer": "d1018_math",
+      "scope": "mathematical proof closure",
+      "verdict": "PASS",
+      "predicates": [
+        "the local finite quotient chart and invariant structure sheaf are explicit",
+        "finite implies proper and Grauert gives coherent direct image",
+        "the slice identification and invariant-kernel morphism are O_U-linear",
+        "dual and tensor linearizations and coherence of the bundle sheaf are explicit"
+      ]
+    },
+    {
+      "reviewer": "d1018_r62",
+      "scope": "byte-exact integration, citations, labels, and projected mapping",
+      "verdict": "PASS",
+      "predicates": [
+        "candidate and design identities replay exactly",
+        "design JSON parses and internally binds the candidate identity",
+        "Grauert page pins are exactly Hauptsatz I p. 57 and Oka coherence p. 16",
+        "the new raw and full labels are unique and the target anchor is exact",
+        "D001043 replacing D000613 is conditionally correct after build and scanner gates"
+      ]
+    }
+  ],
+  "remaining_gates": [
+    "insert the candidate exactly once after the target remark",
+    "run the narrow cohomology build and close BibTeX and reference diagnostics",
+    "render and visually inspect every changed PDF page",
+    "run the r63 scanner oracle and byte-exact transaction replay",
+    "commit D001043 only if every deterministic gate passes"
+  ]
+}

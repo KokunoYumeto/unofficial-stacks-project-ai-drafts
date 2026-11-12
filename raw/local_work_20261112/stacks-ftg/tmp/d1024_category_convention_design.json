@@ -1,0 +1,74 @@
+{
+  "schema": "tohoku-stacks-d1024-design-v1",
+  "formalization_id": "D1024",
+  "status": "STRICT_PASS_READY_FOR_LIVE_INSERTION_AFTER_R67_SEALS",
+  "selection": {
+    "unit": "tohoku:section:1.1:p1",
+    "printed_page": 122,
+    "source_locator": "sem/r18/nodes.csv:861",
+    "predecessor_decision": "D000070",
+    "predecessor_disposition": "extend_existing",
+    "predecessor_dossier": "tohoku_r66",
+    "predecessor_map_row_with_lf": {
+      "physical_line": 861,
+      "bytes": 561,
+      "sha256": "94144CB69E919AF52E64260DB3943D1D24D9FA28DE9160BCD04FEE2BD8BAB4FE"
+    }
+  },
+  "source_claim": {
+    "shared_axioms": [
+      "a Hom set for every ordered object pair",
+      "associative composition",
+      "identity morphisms"
+    ],
+    "source_conventions": [
+      "the object class is nonempty",
+      "the object collection may be a proper class",
+      "Hom sets for distinct ordered object pairs are disjoint"
+    ],
+    "source_repair_required": false
+  },
+  "source_evidence": {
+    "semantic_row_with_lf": {"physical_line": 861, "bytes": 820, "sha256": "254395E1D5A5D0EE45F6BE6178B316AB6C7924DAAC9F7B0072A5351BF5982265"},
+    "occurrence_row_with_lf": {"physical_line": 71, "bytes": 475, "sha256": "37B2459004875B04A61AADB7FB3EA359C9C75A971227D0383FB79D99B6E3377A"},
+    "diplomatic_and_corrected_french_segment": {"bytes": 1078, "sha256": "6B3CB609486A78966DFC2B784FC37DF3A625870E2BE644A900D7E47C183BC9C2"},
+    "english_segment": {"bytes": 987, "sha256": "3EB75C8F12BB187861B4BEF8A2BB5DDF46466F1984F3EE7F2B431CD35754D065"}
+  },
+  "live_coverage": {
+    "path": "categories.tex",
+    "bytes": 376252,
+    "sha256": "81219656E0CA82EE8605B4AB88B0916A9157EEEB084E69FEC14D3BFFA68D145A",
+    "definition_block": {"lines": "37--74", "bytes": 1824, "sha256": "5A541777ED9DFFE83E12E54EDCD876D32E7815D7B8FCD49357FCB77D0F674D35"},
+    "big_category_remark": {"lines": "76--115", "bytes": 1985, "sha256": "4E7E7D642488F2C15CC54EAC819BD329FA44E2F55F5E215777DC15584E8A95B2"},
+    "result": "The mathematical category axioms and the optional disjoint-Hom convention are present, but the three convention differences are not consolidated in a source-equivalent labeled statement."
+  },
+  "candidate": {
+    "path": "tmp/d1024_category_convention_candidate.tex",
+    "bytes": 1634,
+    "sha256": "8AA72971AB351F6C90D49E161D9E13F993C5F53327CCD170B7F0353D67A05EF8",
+    "placement": "immediately after categories-remark-big-categories and before categories-remark-unique-identity",
+    "raw_label": "remark-category-convention-boundary",
+    "proof_obligations": [
+      "state all three convention differences without treating them as mathematical axioms shared by Stacks",
+      "do not claim arbitrary proper-class categories are admitted by the Stacks convention",
+      "give a well-defined tagged-arrow category with pairwise disjoint Hom sets",
+      "verify composition, identities, and the explicit inverse isomorphism",
+      "preserve object-size and nonemptiness as convention boundaries"
+    ]
+  },
+  "independent_review": {
+    "path": "tmp/d1024_independent_review_r1.json",
+    "status": "STRICT_PASS_FOR_LIVE_INSERTION_AFTER_R67_SEALS"
+  },
+  "projected_mapping": {
+    "expected_decision_after_D1023": "D001048",
+    "replace_only": "D000070",
+    "disposition": "existing_equivalent",
+    "stacks_labels": "categories-definition-category;categories-remark-category-convention-boundary",
+    "official_tags": "0014",
+    "review_state": "integrated_source_stacks_and_independent_review",
+    "issue_append": null,
+    "source_repair_append": null
+  },
+  "write_gate": "Do not edit categories.tex until tohoku_r67 is sealed, because r67 is frozen against the D1023 scanner surface."
+}

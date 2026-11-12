@@ -1,0 +1,41 @@
+{
+  "schema": "d1017-sem-r21-contract-v1",
+  "contract_id": "D1017-R001-p185-r20-r42-sem21-v1",
+  "purpose": "Byte-pinned, no-overwrite semantic admission of the corrected p.185 scalar-ring statement and its D1017 Stacks formalization.",
+  "script": {
+    "path": "tmp/d1017_p185_repair_toolchain/sem_r21.py",
+    "bytes": 49335,
+    "sha256": "09D09EBEC02A0A498863F34034450CB9FD2843662C2CD8379F710A52B8DA254E"
+  },
+  "predecessor": {
+    "path": "sem/r20/manifest.json",
+    "bytes": 33263,
+    "sha256": "A5ADE906B63382C3071F8EE4908546F010A3F08ED7DC1F6FD8D2C84D9713782D"
+  },
+  "target": "sem/r21",
+  "transaction": {
+    "preflight_writes": false,
+    "target_overwrite_allowed": false,
+    "stage": "sem/.r21.d1017.stage",
+    "promotion": "same-parent atomic directory rename after full staged readback",
+    "final_readback_required": true,
+    "replay_required": true
+  },
+  "authorized_delta": {
+    "existing_fields": 12,
+    "appended_rows": 0,
+    "changed_tables": [
+      "catalog.csv",
+      "nodes.csv",
+      "occ.csv"
+    ],
+    "target_node_id": "tohoku:definition:hom-o-and-local-hom",
+    "target_occurrence_id": "tohoku:occ:p185:o003"
+  },
+  "external_constraints": {
+    "github": {
+      "status": "temporarily_unavailable",
+      "effect": "Continue local production and QA; defer GitHub-only actions; do not treat this as a local-work blocker."
+    }
+  }
+}

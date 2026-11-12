@@ -1,0 +1,238 @@
+{
+  "schema": "tohoku-stacks-d1026-check-v1",
+  "formalization_id": "D1026",
+  "status": "STRICT_PASS_PREREQUISITES_R69_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T06:45:14Z",
+  "finalized_utc": "2026-08-24T06:45:14Z",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:section:1.1:p3",
+    "printed_page": 122,
+    "source_locator": "sem/r18/nodes.csv:863",
+    "predecessor_decision": "D000072",
+    "predecessor_disposition": "extend_existing",
+    "predecessor_dossier": "tohoku_r68"
+  },
+  "source_claim": {
+    "summary": "The source defines monomorphisms and epimorphisms by the usual cancellation conditions, also calls them injective and surjective, and calls a morphism satisfying both conditions bijective.",
+    "scope_boundary": [
+      "injective and surjective are recorded as the source's arbitrary-category terminology and are not identified with underlying-set injectivity or surjectivity outside a concrete category",
+      "a morphism which is both mono and epi is not asserted to be an isomorphism",
+      "the mathematical definition and proof in the containing Stacks lemma are unchanged"
+    ],
+    "source_repair_required": false,
+    "transcription_or_translation_repair_required": false
+  },
+  "source_evidence": {
+    "authority_pdf": {
+      "path": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+      "bytes": 7305283,
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+      "printed_page": 122,
+      "pdf_page": 4
+    },
+    "semantic_file": {
+      "path": "sem/r18/nodes.csv",
+      "bytes": 585012,
+      "sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D"
+    },
+    "semantic_row_with_lf": {
+      "physical_line": 863,
+      "bytes": 821,
+      "sha256": "DF349B5BAA56DD4A1B90D533B86731AE6D613A5945E671AEB0412486A4F9C907"
+    },
+    "occurrence_row_with_lf": {
+      "path": "sem/r18/occ.csv",
+      "physical_line": 73,
+      "bytes": 475,
+      "sha256": "EF3D4DFF75669E5905104E831CF71707A027AC423999311A50FA03A99517056A",
+      "parity": "PASS"
+    },
+    "source_segments": {
+      "diplomatic_and_corrected_french": {
+        "bytes": 624,
+        "sha256": "28BFAA88F9660E88A2969582B2EC5FE955A426DB800E5A28E44F5ADD062C3882"
+      },
+      "english": {
+        "bytes": 591,
+        "sha256": "3A3FDE59ADD151C4D0423448EA828C35721E58335FAA5B3503F34B7D56858A19"
+      }
+    }
+  },
+  "predecessor_evidence": {
+    "map_file": {
+      "path": "tohoku_r68/map.csv",
+      "bytes": 487490,
+      "sha256": "1EDF4CFB722D6EFFC601FA64E1EB3E801BF2C63D8CC973B6467FA68C647E5ED2"
+    },
+    "map_row_with_lf": {
+      "physical_line": 863,
+      "bytes": 502,
+      "sha256": "CAA2A54FC4D3D2721457B400F0B76C90224C47FB1007630AB92273361C13393E"
+    },
+    "decision_file": {
+      "path": "tohoku_r68/dec.csv",
+      "bytes": 390012,
+      "sha256": "0532BAB5CD37951A0885E841EF4881CBAF6A6F8C4C010F2289AFA1A03BB1DBC6"
+    },
+    "decision_row_with_lf": {
+      "decision_id": "D000072",
+      "physical_line": 73,
+      "bytes": 289,
+      "sha256": "E801854695200F22769010980168AC052B473C435D3B42AA1B2C7767D66A25FA"
+    },
+    "sealed_receipt": {
+      "path": "tohoku_r68/r68-check.json",
+      "bytes": 11900,
+      "sha256": "1FD05FEBBDF081DEF558736D34FDC78846EE5F34F9E5730CE1D34E19B91C671B",
+      "status": "PASS"
+    }
+  },
+  "design_and_reviews": {
+    "design": {
+      "path": "tmp/d1026_mono_epi_terminology_design.json",
+      "bytes": 7412,
+      "sha256": "312D7DC106563AF5B5EAD416CB4FCD3E099B4FB6357EE93230D26B3ACDC873C6",
+      "status": "STRICT_PREINSERTION_PASS"
+    },
+    "candidate": {
+      "path": "tmp/d1026_mono_epi_terminology_candidate.tex",
+      "bytes": 608,
+      "sha256": "6863D0CC63ECC1019D3169DBBCE6770DBAB72D65E836045A1A68A6E0E73AC5EA"
+    },
+    "source_mapping_review": {
+      "path": "tmp/d1025_d1026_source_mapping_review.json",
+      "bytes": 7625,
+      "sha256": "3E19B7FF578240254832EC5FE3E6B36B493218FB8F96CB9EFAB753CEC5D9074A",
+      "status": "STRICT_PASS"
+    },
+    "post_live_independent_review": {
+      "path": "tmp/d1026_post_live_review_r1.json",
+      "bytes": 6542,
+      "sha256": "1B1C1A12EBD46FCEE4DE0D490C50AE63AE900E3AE48B44E132DA94F717FF508E",
+      "status": "STRICT_PASS"
+    }
+  },
+  "stacks_edit": {
+    "path": "categories.tex",
+    "preimage": {
+      "bytes": 377883,
+      "sha256": "985DF3DBDABAC4FDF1CD9378F41406B6620B577469F403EAE7C7323D459589C3"
+    },
+    "postimage": {
+      "bytes": 378258,
+      "sha256": "DFAA13F0F29E5DD2AAD961D2C054A4914C1EF6C7BF91D5E05E4D5737D1DE1A39"
+    },
+    "operation": "replace only the existing history environment inside categories-lemma-mono-epi-composition",
+    "placement_lines": "1256-1266",
+    "inserted_block": {
+      "line_endings": "LF",
+      "bytes": 608,
+      "sha256": "6863D0CC63ECC1019D3169DBBCE6770DBAB72D65E836045A1A68A6E0E73AC5EA",
+      "exact_candidate_occurrences": 1
+    },
+    "unchanged_definition_block": {
+      "lines": "1237-1249",
+      "lf_bytes": 516,
+      "lf_sha256": "8DF87F3E05060B6B4590C9F46F6055FC6A7CE8853BE8427C0C38D29A1708972B"
+    },
+    "new_labels": [],
+    "bibliography_changes": 0,
+    "source_layer_changes": 0
+  },
+  "pdf_build": {
+    "target": "categories.pdf",
+    "driver": "mingw32-make categories.pdf",
+    "exit_code": 0,
+    "preimage": {
+      "bytes": 1099993,
+      "sha256": "6CF58B0E153E5007F60587F943F799B7757D6F7D4A64DFE4E884787D35A5BD41"
+    },
+    "postimage": {
+      "path": "categories.pdf",
+      "bytes": 1099993,
+      "sha256": "01D6BCA5CFEFF76F17847A5DEB532C1551FA4E0947CE4B2C4651FA09810CA172",
+      "pages": 107,
+      "page_size": "612 x 792 pt",
+      "pdf_version": "1.5"
+    },
+    "diagnostics": {
+      "fatal_errors": 0,
+      "latex_warnings": 0,
+      "package_warnings": 0,
+      "undefined_references_or_citations": 0,
+      "multiply_defined_labels": 0,
+      "rerun_requests": 0,
+      "bibtex_warnings": 0,
+      "changed_source_range_warning_hits": 0,
+      "preexisting_or_unrelated_overfull_hboxes": 4
+    },
+    "supporting_files": {
+      "categories.aux": {"bytes": 31606, "sha256": "93FA4AAC8F6C2B730B056AAAA6B0E30148A700BA5E826213530F5C729EA04A0D"},
+      "categories.bbl": {"bytes": 1482, "sha256": "2D97AA0E9A1E329ADA1C2953203946178AD79D9577324891735B4DAA8F54C6F1"},
+      "categories.blg": {"bytes": 1024, "sha256": "FA3CA43F69ADEBFE9760E51A66109F5256BEF5645332B20965F2CE3D7236F185"},
+      "categories.log": {"bytes": 38413, "sha256": "1059D51677274557BAAACAC875D0DDE14B7FC4198F3BE1DA837EA1773CE0F5E0"}
+    },
+    "numbering": {
+      "definition_13_1_page": 14,
+      "lemma_13_2_page": 14,
+      "examples_13_3_and_13_4_page": 15
+    }
+  },
+  "visual_qa": {
+    "status": "STRICT_PASS",
+    "inspected_pdf_pages": [13, 14, 15, 16],
+    "defects": [],
+    "note": "The edited history environment is intentionally suppressed in PDF output; the visible definition, lemma, examples, page break, and neighboring transitions remain clean.",
+    "rasters": [
+      {"path": "tmp/d1026_pdf_qa/page-013.png", "bytes": 198391, "sha256": "C37AF2276828D4780227AB19981C2CEC2D8852BFAAD4C443287DCEFA901C07E9"},
+      {"path": "tmp/d1026_pdf_qa/page-014.png", "bytes": 290703, "sha256": "D24BF7EFC2AA508F6C1C4B4D915632A2540A86D38C6348FE003A6B0331EE397D"},
+      {"path": "tmp/d1026_pdf_qa/page-015.png", "bytes": 340972, "sha256": "8B9D61754FBA488D1696EB01AD411EB081D50C6C74D14F1171D01F08D4667548"},
+      {"path": "tmp/d1026_pdf_qa/page-016.png", "bytes": 232002, "sha256": "D6F48CF6523FC0F90B228B135BF19695EF34126EEE57A2C0025C51822443013B"}
+    ]
+  },
+  "shared_scanner_probe": {
+    "status": "PASS_BYTE_IDENTICAL_REPLAY",
+    "oracle_path": "tmp/d1027_scan_probe_r1",
+    "replay_path": "tmp/d1027_scan_probe_replay_r1",
+    "inventory": {"files": 6, "bytes": 5873866, "surface_bytes": 483, "surface_sha256": "98CA0B13CC826020BF5A631A8E4B358758202D779649C334B7AA017DACBD2CF2"},
+    "counts": {"tex_files": 119, "labels": 22112, "official_tags_joined": 21437, "topics": 13, "topic_candidates": 1287, "direct_topic_coverage": 13, "warnings": 684, "errors": 0},
+    "changed_existing_label": {
+      "full_label": "categories-lemma-mono-epi-composition",
+      "physical_line": 2284,
+      "source_line": 1252,
+      "row_bytes_with_lf": 216,
+      "row_sha256_with_lf": "67441070172AF4EC7985F4FD0958DE9CE3A8D2E72A157FAB0A374FC9FF43A419",
+      "text_sha256": "2046B2664D945FB00860CAFB928D82E2C1FC23B5F924AC0746D38327B0263B65"
+    }
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_FOR_BUNDLED_NO_OVERWRITE_R69_TRANSACTION",
+    "predecessor": "tohoku_r68",
+    "successor": "tohoku_r69",
+    "decision": {
+      "decision_id": "D001050",
+      "unit_id": "tohoku:section:1.1:p3",
+      "action": "replace",
+      "disposition": "existing_equivalent",
+      "stacks_labels": "categories-definition-mono-epi;categories-lemma-mono-epi-composition",
+      "official_tags": "003B",
+      "rationale": "The definition supplies the source cancellation conditions, while the revised bounded history records injective, surjective, and bijective as the source's terminology with explicit guards against underlying-set and balanced-category overclaims.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000072"
+    },
+    "issue_append": null,
+    "source_repair_append": null,
+    "changed_map_rows": [863],
+    "projected_counts_after_this_decision": {
+      "decisions": 1050,
+      "decided_units": 679,
+      "issues": 32,
+      "active_issues": 0,
+      "existing_equivalent": 393,
+      "extend_existing": 7,
+      "new_statement": 2,
+      "remaining_gap_class_dispositions": 16
+    }
+  }
+}

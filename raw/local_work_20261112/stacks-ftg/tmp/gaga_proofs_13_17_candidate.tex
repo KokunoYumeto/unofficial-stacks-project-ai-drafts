@@ -1,0 +1,437 @@
+% Candidate continuation for GAGA source nos. 13--17.
+% Insert after remark-gaga-comparison-factorization and before the
+% unique terminal \input{chapters} in the standalone gaga.tex candidate.
+% This fragment assumes the analytification functor, its flatness and
+% exactness, the comparison maps on cohomology, and the statements of the
+% three GAGA theorems have already been introduced.
+
+\section{Proof of the cohomology comparison theorem}
+\label{section-proof-gaga-cohomology}
+
+We first record the two analytic inputs used to start and bound the proof.
+They are deliberately visible: neither is a formal consequence of the
+algebraic cohomology calculation.
+
+\begin{lemma}[Analytic cohomological dimension of projective space]
+\label{lemma-projective-analytic-cohomological-dimension}
+Let $r \geq 0$ and let $\mathcal A$ be a sheaf of abelian groups on
+$\mathbf P^r(\mathbf C)$ with its analytic topology. Then
+$$
+H^q(\mathbf P^r(\mathbf C),\mathcal A)=0
+\quad\text{for }q>2r.
+$$
+\end{lemma}
+
+\begin{proof}
+The underlying space of $\mathbf P^r(\mathbf C)$ is a compact triangulable
+real manifold of dimension $2r$. We use the topological cohomological
+dimension theorem saying that a paracompact Hausdorff space of covering
+dimension $d$ has vanishing sheaf cohomology in degrees greater than $d$.
+This covering-dimension theorem is an external topological input; the
+current Stacks chapter on Cohomology defines cohomological dimension but
+does not prove this comparison with covering dimension.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-structure-sheaf-comparison}
+For every $r \geq 0$ and every $q \geq 0$, the comparison map
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O)
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O^{\mathrm{an}})
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+By Cohomology of Schemes, Lemma
+\ref{coherent-lemma-cohomology-projective-space-over-ring}, the group on the
+left is $\mathbf C$ for $q=0$ and is zero for $q>0$. On the analytic side we
+use the Dolbeault theorem together with the standard computation
+$$
+H^{0,q}_{\overline\partial}(\mathbf P^r(\mathbf C))=
+\begin{cases}
+\mathbf C & q=0,\\
+0 & q>0.
+\end{cases}
+$$
+This Dolbeault--projective-space calculation is the external analytic input
+in this lemma; see \cite[\S 2, no. 13]{GAGA}. In degree zero the comparison
+map sends a constant algebraic function to the same constant holomorphic
+function, and hence is the identity on $\mathbf C$. In positive degree both
+sides vanish.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-twist-comparison}
+Let $r \geq 0$ and $n \in \mathbf Z$. For every $q \geq 0$, the comparison
+map
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O(n))
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O(n)^{\mathrm{an}})
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+We argue by induction on $r$. The assertion for $r=0$ is immediate. Suppose
+$r>0$, choose a hyperplane
+$i:E\longrightarrow\mathbf P^r_{\mathbf C}$, and identify $E$ with
+$\mathbf P^{r-1}_{\mathbf C}$ as in Varieties, Lemma
+\ref{varieties-lemma-hyperplane}. Multiplication by an equation of $E$ gives,
+for every $n$, a short exact sequence
+$$
+0\longrightarrow\mathcal O(n-1)\longrightarrow\mathcal O(n)
+\longrightarrow i_*\mathcal O_E(n)\longrightarrow0.
+$$
+Analytification is exact by Lemma
+\ref{lemma-analytification-exact-faithful-coherent} and commutes with the
+closed-immersion pushforward by Lemma
+\ref{lemma-analytification-pushforward-closed-immersion}. Thus this sequence
+and its analytification give two long exact cohomology sequences. The
+comparison maps form a morphism between them by Lemma
+\ref{lemma-analytification-cohomology-map-functorial}.
+
+The induction hypothesis gives the comparison isomorphisms for
+$\mathcal O_E(n)$ in all degrees. The four and five lemmas (Homology, Lemmas
+\ref{homology-lemma-four-lemma} and \ref{homology-lemma-five-lemma}) now show
+that comparison for $\mathcal O(n)$ in every degree is equivalent to
+comparison for $\mathcal O(n-1)$ in every degree. The case $n=0$ is Lemma
+\ref{lemma-projective-structure-sheaf-comparison}; induction upward and
+downward in $n$ proves the result for every integer.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{theorem-gaga-cohomology}]
+Let $X$ be projective over $\mathbf C$, let $\mathcal F$ be coherent, and
+choose a closed immersion $i:X\to\mathbf P^r_{\mathbf C}$. The direct image
+$i_*\mathcal F$ is coherent, and Cohomology, Lemma
+\ref{cohomology-lemma-cohomology-and-closed-immersions} identifies its
+algebraic and analytic cohomology with the corresponding cohomology on $X$
+and $X^{\mathrm{an}}$. Lemma
+\ref{lemma-analytification-pushforward-closed-immersion} identifies
+$(i_*\mathcal F)^{\mathrm{an}}$ with $i_*\mathcal F^{\mathrm{an}}$, compatibly
+with the comparison map. We may therefore assume
+$X=\mathbf P^r_{\mathbf C}$.
+
+We use descending induction on $q$, simultaneously for all coherent
+$\mathcal F$. For $q>2r$, the algebraic group vanishes by Cohomology of
+Schemes, Lemma \ref{coherent-lemma-coherent-projective}, and the analytic
+group vanishes by Lemma
+\ref{lemma-projective-analytic-cohomological-dimension}.
+
+Assume comparison is known in degree $q+1$ for every coherent sheaf. By
+Cohomology of Schemes, Lemma
+\ref{coherent-lemma-coherent-projective}, there is a short exact sequence
+$$
+0\longrightarrow\mathcal R\longrightarrow
+\mathcal L\longrightarrow\mathcal F\longrightarrow0
+$$
+with $\mathcal R$ coherent and $\mathcal L$ a finite direct sum of twists
+$\mathcal O(n)$. Comparison is an isomorphism for $\mathcal L$ in every
+degree by Lemma \ref{lemma-projective-twist-comparison}. In the morphism of
+long exact sequences, the four lemma applied to
+$$
+H^q(\mathcal L)\longrightarrow H^q(\mathcal F)
+\longrightarrow H^{q+1}(\mathcal R)\longrightarrow H^{q+1}(\mathcal L)
+$$
+shows first that the comparison map for $\mathcal F$ in degree $q$ is
+surjective. Since this holds for every coherent sheaf, it holds for
+$\mathcal R$. Apply the injective half of the four lemma to
+$$
+H^q(\mathcal R)\longrightarrow H^q(\mathcal L)
+\longrightarrow H^q(\mathcal F)\longrightarrow H^{q+1}(\mathcal R).
+$$
+The comparison map for $\mathcal F$ is injective as well. This completes
+the descending induction and the proof.
+\end{proof}
+
+\section{Proof of full faithfulness}
+\label{section-proof-gaga-fully-faithful}
+
+\begin{lemma}
+\label{lemma-analytification-internal-hom}
+Let $X$ be a variety over $\mathbf C$ and let $\mathcal F,\mathcal G$ be
+coherent $\mathcal O_X$-modules. There is a canonical isomorphism
+$$
+\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)^{\mathrm{an}}
+\longrightarrow
+\SheafHom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+\end{lemma}
+
+\begin{proof}
+Write $a_X:X^{\mathrm{an}}\to X$ for the canonical morphism of locally
+ringed spaces. A coherent module on the locally Noetherian scheme $X$ is
+finitely presented, and $a_X$ is flat by Theorem
+\ref{theorem-analytification-local-faithfully-flat}. The displayed map is
+therefore the flat-pullback internal-Hom isomorphism of Modules, Lemma
+\ref{modules-lemma-pullback-internal-hom}. Equivalently, on a stalk it is
+the flat base-change isomorphism of More on Algebra, Lemma
+\ref{more-algebra-lemma-pseudo-coherence-and-base-change-ext}. Coherence of
+the source follows from Cohomology of Schemes, Lemma
+\ref{coherent-lemma-tensor-hom-coherent}; coherence of the target is also the
+$q=0$ case of Cohomology, Lemma
+\ref{cohomology-lemma-coherent-analytic-sheaf-ext}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{theorem-gaga-fully-faithful}]
+Put $\mathcal A=\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)$. Then
+$$
+\Hom_{\mathcal O_X}(\mathcal F,\mathcal G)
+=H^0(X,\mathcal A).
+$$
+Theorem \ref{theorem-gaga-cohomology} in degree zero and Lemma
+\ref{lemma-analytification-internal-hom} give canonical isomorphisms
+$$
+H^0(X,\mathcal A)
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal A^{\mathrm{an}})
+\longrightarrow
+\Hom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+Their composite sends $f$ to $f^{\mathrm{an}}$ by construction of the
+cohomology comparison map. Hence analytification is fully faithful.
+\end{proof}
+
+\section{Essential surjectivity: preliminaries and reduction}
+\label{section-gaga-essential-surjectivity-preliminaries}
+
+\begin{lemma}
+\label{lemma-coherent-analytic-closed-immersion}
+Let $i:Y\to X$ be a closed immersion of complex analytic spaces whose
+structure sheaves and defining ideal are coherent. Then $i_*$ is exact and
+fully faithful on modules, carries coherent $\mathcal O_Y$-modules to
+coherent $\mathcal O_X$-modules, and its essential image consists of the
+coherent modules annihilated by the defining ideal. Moreover,
+$$
+H^q(Y,\mathcal M)=H^q(X,i_*\mathcal M)
+$$
+for every $q\geq0$.
+\end{lemma}
+
+\begin{proof}
+Exactness, full faithfulness, and the description of the essential image are
+Modules, Lemma \ref{modules-lemma-i-star-equivalence}. To check coherence,
+first regard $i_*\mathcal M$ as a module over
+$i_*\mathcal O_Y=\mathcal O_X/\mathcal I$. Modules, Lemma
+\ref{modules-lemma-i-star-reflects-finite-type}, applied with this quotient
+structure sheaf, identifies coherence on $Y$ with coherence over
+$i_*\mathcal O_Y$. Modules, Lemma
+\ref{modules-lemma-coherent-change-rings} then identifies this with
+coherence over $\mathcal O_X$. The cohomology equality is Cohomology, Lemma
+\ref{cohomology-lemma-cohomology-and-closed-immersions}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-gaga-essential-surjectivity-projective-reduction}
+Uniqueness in Theorem \ref{theorem-gaga-essential-surjectivity} follows from
+Theorem \ref{theorem-gaga-fully-faithful}. For existence, it is enough to
+prove the theorem when $X=\mathbf P^r_{\mathbf C}$.
+\end{lemma}
+
+\begin{proof}
+If $\mathcal F^{\mathrm{an}}\cong\mathcal G^{\mathrm{an}}$, full faithfulness
+lifts the isomorphism and its inverse uniquely to algebraic maps. Faithfulness
+shows that their composites are the identity, proving uniqueness.
+
+For the reduction, let $i:Y\to\mathbf P^r_{\mathbf C}$ be a closed immersion
+and let $\mathcal M$ be coherent on $Y^{\mathrm{an}}$. By Lemma
+\ref{lemma-coherent-analytic-closed-immersion}, $i_*\mathcal M$ is coherent
+on $\mathbf P^r(\mathbf C)$. Assuming essential surjectivity on projective
+space, choose a coherent algebraic module $\mathcal G$ with
+$\mathcal G^{\mathrm{an}}\cong i_*\mathcal M$.
+
+Let $\mathcal I$ be the ideal of $Y$. Compatibility of analytification with
+ideals, tensor products, and images identifies
+$(\mathcal I\mathcal G)^{\mathrm{an}}$ with
+$\mathcal I^{\mathrm{an}}\mathcal G^{\mathrm{an}}$, which is zero because
+$i_*\mathcal M$ is annihilated by $\mathcal I^{\mathrm{an}}$. Exactness and
+faithfulness in Lemma
+\ref{lemma-analytification-exact-faithful-coherent} therefore give
+$\mathcal I\mathcal G=0$. Morphisms, Lemma
+\ref{morphisms-lemma-i-star-equivalence} and Cohomology of Schemes, Lemma
+\ref{coherent-lemma-i-star-equivalence} give a coherent algebraic
+$\mathcal F$ on $Y$ with $i_*\mathcal F=\mathcal G$. Finally,
+Lemma \ref{lemma-analytification-pushforward-closed-immersion} gives
+$$
+i_*\mathcal F^{\mathrm{an}}
+\cong(i_*\mathcal F)^{\mathrm{an}}
+\cong\mathcal G^{\mathrm{an}}
+\cong i_*\mathcal M.
+$$
+Full faithfulness of analytic closed-immersion pushforward yields
+$\mathcal F^{\mathrm{an}}\cong\mathcal M$.
+\end{proof}
+
+\section{Analytic twists and global generation}
+\label{section-gaga-analytic-twists}
+
+We now fix $X=\mathbf P^r_{\mathbf C}$ and argue by induction on $r$ for
+essential surjectivity. The case $r=0$ is the equivalence between finite
+dimensional complex vector spaces and coherent modules on a point.
+
+\begin{definition}
+\label{definition-coherent-analytic-twist}
+For a coherent analytic module $\mathcal M$ on $X^{\mathrm{an}}$ and
+$n\in\mathbf Z$, set
+$$
+\mathcal M(n)=
+\mathcal M\otimes_{\mathcal O_{X^{\mathrm{an}}}}
+\mathcal O_X(n)^{\mathrm{an}}.
+$$
+This is coherent, and the tensor compatibility of pullback gives the
+canonical identity
+$$
+\mathcal F^{\mathrm{an}}(n)\cong\mathcal F(n)^{\mathrm{an}}
+$$
+for every coherent algebraic $\mathcal F$.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-hyperplane-analytic-serre-vanishing}
+Let $E\cong\mathbf P^{r-1}_{\mathbf C}$ be a hyperplane and let $\mathcal A$
+be a coherent analytic module on $E^{\mathrm{an}}$. Then
+$$
+H^q(E^{\mathrm{an}},\mathcal A(n))=0
+$$
+for every $q>0$ and all sufficiently large $n$.
+\end{lemma}
+
+\begin{proof}
+By the induction hypothesis for essential surjectivity there is a coherent
+algebraic $\mathcal F$ on $E$ with
+$\mathcal A\cong\mathcal F^{\mathrm{an}}$. Definition
+\ref{definition-coherent-analytic-twist} and Theorem
+\ref{theorem-gaga-cohomology} identify the displayed group with
+$H^q(E,\mathcal F(n))$. The latter vanishes for $q>0$ and $n$ sufficiently
+large by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-coherent-projective}. There are only finitely many
+possibly nonzero degrees, so one lower bound on $n$ works for all $q>0$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-analytic-global-generation}
+Let $\mathcal M$ be a coherent analytic module on
+$X^{\mathrm{an}}=\mathbf P^r(\mathbf C)$. There is an integer $n_0$ such
+that $\mathcal M(n)$ is generated by global sections for every $n\geq n_0$.
+\end{lemma}
+
+\begin{proof}
+We first make two elementary observations. If global sections generate
+$\mathcal M(n)$ at $x$, choose a homogeneous coordinate $T_k$ nonzero at
+$x$. Multiplication by $T_k^{m-n}$ sends global sections of $\mathcal M(n)$
+to global sections of $\mathcal M(m)$ and is an isomorphism on the stalk at
+$x$; generation at $x$ therefore persists for every $m\geq n$. Generation
+at a point is open: choose finitely many global sections generating the
+stalk, take their evaluation map from a finite free module, and use
+coherence of its cokernel to see that it vanishes near the point. Since
+$X^{\mathrm{an}}$ is compact, it is consequently enough to find, for every
+$x$, one twist generated at $x$.
+
+Fix $x$ and choose a hyperplane $i:E\to X$ through it, cut out by a linear
+form $t$. Tensoring
+$0\to\mathcal O_X(-1)^{\mathrm{an}}\xrightarrow{t}
+\mathcal O_{X^{\mathrm{an}}}\to i_*\mathcal O_{E^{\mathrm{an}}}\to0$
+with $\mathcal M$ gives an exact sequence
+$$
+0\longrightarrow\mathcal C\longrightarrow\mathcal M(-1)
+\xrightarrow{t}\mathcal M\longrightarrow\mathcal B\longrightarrow0,
+$$
+where $\mathcal C$ and $\mathcal B$ are coherent. Both are annihilated by
+$t$, so Lemma \ref{lemma-coherent-analytic-closed-immersion} regards them
+as coherent modules on $E^{\mathrm{an}}$.
+
+After twisting by $n$, let $\mathcal L_n$ be the image of
+$\mathcal M(n-1)\to\mathcal M(n)$. We have short exact sequences
+$$
+0\to\mathcal C(n)\to\mathcal M(n-1)\to\mathcal L_n\to0,
+\qquad
+0\to\mathcal L_n\to\mathcal M(n)\to\mathcal B(n)\to0.
+$$
+Lemma \ref{lemma-hyperplane-analytic-serre-vanishing} gives, for all large
+$n$,
+$$
+H^2(X^{\mathrm{an}},\mathcal C(n))=0,
+\qquad
+H^1(X^{\mathrm{an}},\mathcal B(n))=0.
+$$
+The two long exact sequences then give
+$$
+\dim H^1(\mathcal M(n-1))
+\geq\dim H^1(\mathcal L_n)
+\geq\dim H^1(\mathcal M(n)).
+$$
+All these dimensions are finite by Cohomology, Lemma
+\ref{cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}.
+Thus the nonnegative integers $\dim H^1(\mathcal M(n))$ eventually
+stabilize. For $n$ in the stable range, the surjection
+$H^1(\mathcal L_n)\to H^1(\mathcal M(n))$ is an isomorphism, and the long
+exact sequence yields a surjection
+$$
+H^0(X^{\mathrm{an}},\mathcal M(n))
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal B(n)).
+$$
+
+By induction on $r$, the module on $E^{\mathrm{an}}$ corresponding to
+$\mathcal B$ is the analytification of a coherent algebraic module
+$\mathcal G$ on $E$. For all sufficiently large $n$, the module
+$\mathcal G(n)$ is generated by global sections by Properties, Proposition
+\ref{properties-proposition-characterize-ample}. Theorem
+\ref{theorem-gaga-cohomology} in degree zero says the same for
+$\mathcal B(n)$, and the preceding surjection lifts those generators to
+global sections of $\mathcal M(n)$.
+
+At $x$, put $A=\mathcal O_{X^{\mathrm{an}},x}$,
+$M=\mathcal M(n)_x$, and let $N\subset M$ be the submodule generated by
+global sections. If $\mathfrak p=(t)\subset A$, then
+$\mathcal B(n)_x=M/\mathfrak pM$. The lifted sections generate this
+quotient, so $M=N+\mathfrak pM$. Since $\mathfrak p$ lies in the maximal
+ideal of the local ring $A$, Nakayama's lemma (Algebra, Lemma
+\ref{algebra-lemma-NAK}) gives $M=N$. This supplies the required twist at
+$x$; the two opening observations and compactness supply one $n_0$ valid at
+every point and every $n\geq n_0$.
+\end{proof}
+
+\section{Completion of essential surjectivity}
+\label{section-completion-gaga-essential-surjectivity}
+
+\begin{proof}[Completion of the proof of Theorem
+\ref{theorem-gaga-essential-surjectivity}]
+It remains, by Lemma
+\ref{lemma-gaga-essential-surjectivity-projective-reduction}, to treat
+$X=\mathbf P^r_{\mathbf C}$. Let $\mathcal M$ be coherent on
+$X^{\mathrm{an}}$. Lemma
+\ref{lemma-projective-analytic-global-generation} and compactness give a
+finite set of global generators after a twist. Untwisting produces a
+surjection
+$$
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M,
+\qquad
+\mathcal L_0=\mathcal O_X(-n)^{\oplus p}.
+$$
+Its kernel $\mathcal R$ is coherent by Modules, Lemma
+\ref{modules-lemma-coherent-abelian}. Apply the same global-generation
+argument to $\mathcal R$ to obtain a finite direct sum of twists
+$\mathcal L_1$ and a surjection
+$\mathcal L_1^{\mathrm{an}}\to\mathcal R$. Composing with the inclusion of
+$\mathcal R$ gives an exact sequence
+$$
+\mathcal L_1^{\mathrm{an}}\xrightarrow{g}
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M\longrightarrow0.
+$$
+
+Theorem \ref{theorem-gaga-fully-faithful} supplies a unique algebraic map
+$f:\mathcal L_1\to\mathcal L_0$ with $f^{\mathrm{an}}=g$. Put
+$\mathcal F=\mathop{\rm Coker}(f)$. This is coherent, and exactness of
+analytification gives
+$$
+\mathcal F^{\mathrm{an}}
+=\mathop{\rm Coker}(f^{\mathrm{an}})
+=\mathop{\rm Coker}(g)
+\cong\mathcal M.
+$$
+Together with the reduction and uniqueness already proved, this completes
+Theorem \ref{theorem-gaga-essential-surjectivity}.
+\end{proof}

@@ -1,0 +1,174 @@
+{
+  "schema": "d1025-d1026-source-mapping-review-v1",
+  "status": "STRICT_PASS",
+  "authority": {
+    "path": "authority_snapshot/jstage_part_I_9_2_119.pdf",
+    "bytes": 7305283,
+    "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF",
+    "relevant_printed_pages": [
+      121,
+      122
+    ],
+    "relevant_pdf_pages": [
+      3,
+      4
+    ]
+  },
+  "reviews": {
+    "D1025": {
+      "status": "STRICT_PASS",
+      "mode": "mapping_only_no_live_source_edit",
+      "unit_id": "tohoku:term:category",
+      "source_state": "active_derived_index",
+      "source_provenance": "p121 semantic seed + admitted p122 body coordinate",
+      "source_claim": "The term category is anchored by the p.121 contents entry and the p.122 definition using a nonempty possibly proper class of objects, Hom sets, associative composition, identities, and pairwise-disjoint Hom sets as a source/target convention.",
+      "evidence": {
+        "semantic_row": {
+          "path": "sem/r18/nodes.csv",
+          "physical_line": 5,
+          "bytes_with_lf": 190,
+          "sha256_with_lf": "32891063DA69A8BEBCF8B09A8511720DE8A2208205FBA4BD2246D17DEE5F6E71"
+        },
+        "occurrence_evidence": {
+          "kind": "derived_index_has_no_occurrence_row",
+          "p121_contents_anchor": {
+            "semantic_id": "tohoku:section:1.1",
+            "dip_fr_segment_bytes": 41,
+            "dip_fr_segment_sha256": "8C72785ACE9D124867E8A1969484B5626C431DD7402508DA78F9561CE4BD7FE2",
+            "en_segment_bytes": 40,
+            "en_segment_sha256": "3338BA06E693E283CA064D9B226AA1957EDB1052DDDEE13697141F4E6B5CB9AE"
+          },
+          "p122_body_anchor": {
+            "semantic_id": "tohoku:section:1.1:p1",
+            "dip_fr_segment_bytes": 1078,
+            "dip_fr_segment_sha256": "6B3CB609486A78966DFC2B784FC37DF3A625870E2BE644A900D7E47C183BC9C2",
+            "en_segment_bytes": 987,
+            "en_segment_sha256": "3EB75C8F12BB187861B4BEF8A2BB5DDF46466F1984F3EE7F2B431CD35754D065"
+          }
+        },
+        "predecessor_map_row": {
+          "dossier": "tohoku_r67",
+          "physical_line": 5,
+          "bytes_with_lf": 585,
+          "sha256_with_lf": "03277917DC707D59D2663A36687CD6449F4D1FB9511F07B0E781606D3DF9F8E1"
+        },
+        "predecessor_decision_row": {
+          "decision_id": "D000003",
+          "physical_line": 4,
+          "bytes_with_lf": 457,
+          "sha256_with_lf": "26B6AD2DDBDA4262CD3822BA7F4A0C25DB49A68343450F4B8F47C34E5738899F"
+        },
+        "live_convention_remark": {
+          "path": "categories.tex",
+          "lines": "117-152",
+          "bytes_with_lf": 1634,
+          "sha256_with_lf": "8AA72971AB351F6C90D49E161D9E13F993C5F53327CCD170B7F0353D67A05EF8"
+        }
+      },
+      "authorization": {
+        "expected_decision_id_if_sequence_is_unchanged": "D001049",
+        "action": "replace",
+        "supersedes": "D000003",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "categories-definition-category;categories-remark-category-convention-boundary",
+        "official_tags": "0014",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "changed_map_rows": [
+          5
+        ],
+        "source_issue_change": false,
+        "source_repair": false
+      },
+      "scope_exclusions": [
+        "No live TeX, PDF, bibliography, source-layer, semantic, occurrence, or issue edit is required.",
+        "D000070 is a separate source-target unit and is not replaced by the D1025 transaction.",
+        "No other derived term or section row is authorized."
+      ]
+    },
+    "D1026": {
+      "status": "STRICT_PASS",
+      "mode": "bounded_history_replacement_then_mapping",
+      "unit_id": "tohoku:section:1.1:p3",
+      "source_state": "active_complete",
+      "source_claim": "The source defines monomorphisms and epimorphisms by the usual cancellation conditions, also calls them injective and surjective, and calls a morphism satisfying both conditions bijective.",
+      "candidate": {
+        "path": "tmp/d1026_mono_epi_terminology_candidate.tex",
+        "bytes": 608,
+        "sha256": "6863D0CC63ECC1019D3169DBBCE6770DBAB72D65E836045A1A68A6E0E73AC5EA",
+        "history_environment_count": 1,
+        "label_count": 0,
+        "reference_environment_count": 0,
+        "required_insertion_context": "Replace only the existing history environment in categories-lemma-mono-epi-composition; retain that lemma's Tohoku pp. 122--123 reference environment."
+      },
+      "evidence": {
+        "semantic_row": {
+          "path": "sem/r18/nodes.csv",
+          "physical_line": 863,
+          "bytes_with_lf": 821,
+          "sha256_with_lf": "DF349B5BAA56DD4A1B90D533B86731AE6D613A5945E671AEB0412486A4F9C907"
+        },
+        "occurrence_row": {
+          "path": "sem/r18/occ.csv",
+          "physical_line": 73,
+          "bytes_with_lf": 475,
+          "sha256_with_lf": "EF3D4DFF75669E5905104E831CF71707A027AC423999311A50FA03A99517056A",
+          "parity_state": "PASS"
+        },
+        "p122_source_segment": {
+          "semantic_id": "tohoku:section:1.1:p3",
+          "dip_fr_segment_bytes": 624,
+          "dip_fr_segment_sha256": "28BFAA88F9660E88A2969582B2EC5FE955A426DB800E5A28E44F5ADD062C3882",
+          "en_segment_bytes": 591,
+          "en_segment_sha256": "3A3FDE59ADD151C4D0423448EA828C35721E58335FAA5B3503F34B7D56858A19"
+        },
+        "predecessor_map_row": {
+          "dossier": "tohoku_r67",
+          "physical_line": 863,
+          "bytes_with_lf": 502,
+          "sha256_with_lf": "CAA2A54FC4D3D2721457B400F0B76C90224C47FB1007630AB92273361C13393E"
+        },
+        "predecessor_decision_row": {
+          "decision_id": "D000072",
+          "physical_line": 73,
+          "bytes_with_lf": 289,
+          "sha256_with_lf": "E801854695200F22769010980168AC052B473C435D3B42AA1B2C7767D66A25FA"
+        },
+        "live_definition_block": {
+          "path": "categories.tex",
+          "lines": "1237-1249",
+          "bytes_with_lf": 516,
+          "sha256_with_lf": "8DF87F3E05060B6B4590C9F46F6055FC6A7CE8853BE8427C0C38D29A1708972B"
+        },
+        "replaced_history_block": {
+          "path": "categories.tex",
+          "lines": "1256-1260",
+          "bytes_with_lf": 233,
+          "sha256_with_lf": "4901F1920C6F39AEB549E6FF08A81911D114AAC6703BF6FE7C99F02F8A63DD7C"
+        }
+      },
+      "authorization": {
+        "expected_decision_id_if_sequence_is_unchanged": "D001050",
+        "action": "replace",
+        "supersedes": "D000072",
+        "disposition": "existing_equivalent",
+        "stacks_labels": "categories-definition-mono-epi;categories-lemma-mono-epi-composition",
+        "official_tags": "003B",
+        "review_state": "integrated_source_stacks_and_independent_review",
+        "changed_map_rows": [
+          863
+        ],
+        "source_issue_change": false,
+        "source_repair": false,
+        "deterministic_categories_pdf_rebuild_authorized": true,
+        "independent_pdf_content_edit_authorized": false
+      },
+      "scope_exclusions": [
+        "The candidate is not authorized as a standalone uncited history block.",
+        "No change to the mono/epi cancellation definition is required.",
+        "The following inverse, isomorphism, split mono/epi, and composition units are separate and are not remapped here.",
+        "No source-layer, semantic, occurrence, issue, or bibliography edit is authorized.",
+        "A deterministic rebuild of categories.pdf from the authorized TeX history replacement is allowed; no independent PDF content edit is authorized."
+      ]
+    }
+  }
+}

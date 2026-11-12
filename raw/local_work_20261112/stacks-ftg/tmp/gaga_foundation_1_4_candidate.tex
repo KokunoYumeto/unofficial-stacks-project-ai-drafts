@@ -1,0 +1,373 @@
+% Candidate standalone chapter for GAGA source units gaga:no:1 through
+% gaga:no:4. This is deliberately the reduced 1956 notion. It does not
+% introduce nonreduced complex analytic spaces.
+
+\input{preamble}
+
+% OK, start here.
+%
+\begin{document}
+
+\title{Complex Analytic Spaces and GAGA}
+
+\maketitle
+
+\phantomsection
+\label{section-phantom}
+
+\tableofcontents
+
+\section{Introduction}
+\label{section-introduction}
+
+\noindent
+This chapter develops the complex-analytic foundations needed to state and
+prove the comparison theorems usually called GAGA. The initial sections use
+the reduced notion of complex analytic space in
+\cite[\S 1, nos. 1--4, pp. 3--7]{GAGA}. This scope is recorded explicitly
+because a structure sheaf contained in a sheaf of functions has no
+nilpotents. The abstract language of ringed spaces and coherent modules is
+that of Sheaves, Definition \ref{sheaves-definition-ringed-space} and
+Modules, Section \ref{modules-section-coherent}.
+
+\section{Analytic subsets of complex affine space}
+\label{section-analytic-subsets}
+
+\begin{definition}
+\label{definition-analytic-subset}
+\begin{reference}
+\cite[\S 1, no. 1, pp. 3--4]{GAGA}
+\end{reference}
+Let $n \geq 0$ and endow $\mathbf C^n$ with its usual topology. A subset
+$U \subset \mathbf C^n$ is an {\it analytic subset in the sense of Serre}
+if, for every $x \in U$, there are an open neighbourhood $W$ of $x$ and
+holomorphic functions $f_1, \ldots, f_k$ on $W$ such that
+$$
+U \cap W = \{z \in W \mid f_1(z)=\ldots=f_k(z)=0\}.
+$$
+
+Let $\mathcal C_U$ be the sheaf of germs of all complex-valued functions on
+$U$. Let $\mathcal O_{\mathbf C^n}$ be the sheaf of holomorphic functions on
+$\mathbf C^n$. The {\it sheaf of holomorphic functions on $U$} is the image
+sheaf
+$$
+\mathcal O_U =
+\mathop{\rm Im}\left(
+\mathcal O_{\mathbf C^n}|_U \longrightarrow \mathcal C_U
+\right).
+$$
+Thus, if $x \in U$ and $\mathcal I_{U,x}$ is the ideal of germs in
+$\mathcal O_{\mathbf C^n,x}$ which vanish on $U$ near $x$, then
+$$
+\mathcal O_{U,x}=
+\mathcal O_{\mathbf C^n,x}/\mathcal I_{U,x}.
+$$
+\end{definition}
+
+\begin{definition}
+\label{definition-holomorphic-map-analytic-subsets}
+\begin{reference}
+\cite[\S 1, no. 1, pp. 3--4]{GAGA}
+\end{reference}
+Let $U \subset \mathbf C^r$ and $V \subset \mathbf C^s$ be analytic
+subsets. A map $\varphi:U\to V$ is {\it holomorphic} if it is continuous and
+composition with $\varphi$ sends every germ in
+$\mathcal O_{V,\varphi(x)}$ to a germ in $\mathcal O_{U,x}$ for every
+$x\in U$. Equivalently, the $s$ coordinate functions of $\varphi$ are
+sections of $\mathcal O_U$ locally on $U$.
+
+A bijective holomorphic map is an {\it analytic isomorphism} if its inverse
+is holomorphic.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytic-subset-basic-properties}
+Let $U \subset \mathbf C^n$ and $U' \subset \mathbf C^{n'}$ be analytic
+subsets in the sense of Definition \ref{definition-analytic-subset}.
+\begin{enumerate}
+\item The subset $U$ is locally closed and locally compact.
+\item The stalk $\mathcal O_{U,x}$ is a reduced local $\mathbf C$-algebra
+whose residue homomorphism is evaluation at $x$.
+\item The subset $U\times U'$ is analytic in $\mathbf C^{n+n'}$, its
+topology is the product topology, and its structure sheaf is the one obtained
+from the product analytic charts.
+\item Products of holomorphic maps are holomorphic.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+After shrinking around $x\in U$, the set $U$ is the common zero locus of
+finitely many continuous functions and hence is closed in an open subset of
+$\mathbf C^n$. This proves (1). The displayed quotient in Definition
+\ref{definition-analytic-subset} embeds into $\mathcal C_{U,x}$, and a germ
+is invertible exactly when its value at $x$ is nonzero. This proves (2).
+
+Near $(x,x')$, concatenate local defining equations for $U$ and $U'$.
+This proves analyticity of the product. The remaining assertions in (3) and
+(4) follow directly from the induced topology, the coordinate criterion in
+Definition \ref{definition-holomorphic-map-analytic-subsets}, and composition
+of holomorphic functions.
+\end{proof}
+
+
+\section{Serre complex analytic spaces}
+\label{section-serre-analytic-spaces}
+
+\begin{definition}
+\label{definition-serre-analytic-space}
+\begin{reference}
+\cite[\S 1, no. 2, pp. 4--5]{GAGA}
+\end{reference}
+A {\it complex analytic space in the sense of Serre} is a Hausdorff
+topological space $X$ together with a subsheaf of $\mathbf C$-algebras
+$$
+\mathcal O_X \subset \mathcal C_X
+$$
+such that $X$ has an open covering $X=\bigcup V_i$ for which every ringed
+space $(V_i,\mathcal O_X|_{V_i})$ is analytically isomorphic to an analytic
+subset of some $\mathbf C^{n_i}$ endowed with the sheaf of Definition
+\ref{definition-analytic-subset}.
+
+A map of such spaces is {\it holomorphic} if it is continuous and pullback
+by composition sends germs of holomorphic functions to germs of holomorphic
+functions. An isomorphism is a holomorphic map with holomorphic inverse.
+\end{definition}
+
+\begin{remark}[Reduced scope]
+\label{remark-serre-analytic-spaces-reduced}
+Because $\mathcal O_X$ is a subsheaf of a sheaf of functions, every
+$\mathcal O_{X,x}$ is reduced. Thus Definition
+\ref{definition-serre-analytic-space} is the reduced 1956 notion used by
+Serre. It does not include nilpotent analytic thickenings. Any later extension
+to nonreduced complex analytic spaces must be introduced separately and must
+not be attributed to GAGA, Definition 1.
+\end{remark}
+
+\begin{definition}
+\label{definition-analytic-subspace}
+Let $X$ be a Serre complex analytic space. A subset $Y\subset X$ is an
+{\it analytic subspace} if, in every analytic chart $V\to U$, the image of
+$Y\cap V$ is an analytic subset of $U$. It has the induced analytic-space
+structure. When $Y$ is closed in $X$, we call it a {\it closed analytic
+subspace}.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-serre-analytic-subspaces-products}
+\begin{reference}
+\cite[\S 1, no. 2, p. 5]{GAGA}
+\end{reference}
+Let $X$ and $X'$ be Serre complex analytic spaces.
+\begin{enumerate}
+\item Every analytic subspace of $X$ is locally closed and the induced
+structure is independent of the chosen charts.
+\item There is a unique Serre complex analytic-space structure on
+$X\times X'$ for which products of charts are charts. Its topology is the
+product topology.
+\item Serre complex analytic spaces and holomorphic maps form a category.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+All three assertions are local on the source spaces. They therefore follow
+from Lemma \ref{lemma-analytic-subset-basic-properties}, compatibility of the
+restriction maps defining the structure sheaves, and the coordinate
+criterion for holomorphic maps.
+\end{proof}
+
+
+\section{Analytic modules and Oka--Cartan coherence}
+\label{section-analytic-modules}
+
+\begin{definition}
+\label{definition-analytic-module}
+\begin{reference}
+\cite[\S 1, no. 3, p. 5]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space. An {\it analytic module} on $X$
+is an $\mathcal O_X$-module. It is {\it coherent} if it is coherent in the
+sense of Modules, Definition \ref{modules-definition-coherent}.
+\end{definition}
+
+\begin{definition}
+\label{definition-vanishing-ideal-analytic-subspace}
+Let $i:Y\to X$ be a closed analytic subspace. The {\it vanishing ideal}
+$\mathcal J_Y\subset\mathcal O_X$ has stalk
+$$
+(\mathcal J_Y)_x=
+\{f\in\mathcal O_{X,x}\mid f|_Y=0\text{ near }x\}.
+$$
+There is a canonical isomorphism
+$$
+\mathcal O_X/\mathcal J_Y \longrightarrow i_*\mathcal O_Y.
+$$
+\end{definition}
+
+\begin{theorem}[Oka--Cartan coherence]
+\label{theorem-oka-cartan-coherence}
+\begin{reference}
+\cite[\S 1, Proposition 1, pp. 5--6]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space.
+\begin{enumerate}
+\item The $\mathcal O_X$-module $\mathcal O_X$ is coherent.
+\item If $Y\subset X$ is a closed analytic subspace, then its vanishing
+ideal $\mathcal J_Y$ is a coherent $\mathcal O_X$-module.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The analytic input is the Oka--Cartan theorem that, for an open subset
+$\Omega\subset\mathbf C^n$, the sheaf $\mathcal O_\Omega$ and the vanishing
+ideal of every closed analytic subset of $\Omega$ are coherent.
+
+The assertions are local on $X$. Choose a chart and shrink it so that
+$X=Z(\mathcal I_X)$ is a closed analytic subset of an open
+$\Omega\subset\mathbf C^n$. If $Y\subset X$ is closed analytic, shrink again
+and write $Y=Z(\mathcal I_Y)$ with
+$\mathcal I_X\subset\mathcal I_Y\subset\mathcal O_\Omega$. Then
+$$
+\mathcal O_X=\mathcal O_\Omega/\mathcal I_X,
+\qquad
+\mathcal J_Y=\mathcal I_Y/\mathcal I_X.
+$$
+The Oka--Cartan input makes $\mathcal O_\Omega$, $\mathcal I_X$, and
+$\mathcal I_Y$ coherent. Modules, Lemmas
+\ref{modules-lemma-coherent-abelian} and
+\ref{modules-lemma-coherent-change-rings} now give (1) and (2).
+\end{proof}
+
+\begin{remark}[Examples]
+\label{remark-examples-coherent-analytic-modules}
+The sheaf of holomorphic sections of a holomorphic vector bundle is finite
+locally free and hence coherent by Theorem
+\ref{theorem-oka-cartan-coherence}; compare Cohomology, Lemma
+\ref{cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules}.
+Serre also records the sheaves of germs of automorphic functions from the
+Cartan seminar as coherent examples; this cited analytic construction is not
+needed for the foundation statements above.
+\end{remark}
+
+
+\section{Local analytic algebras}
+\label{section-local-analytic-algebras}
+
+\begin{lemma}
+\label{lemma-local-analytic-algebra}
+\begin{reference}
+\cite[\S 1, no. 4, p. 6]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space and $x\in X$. There are an
+integer $n\geq 0$ and a radical ideal
+$\mathfrak a\subset\mathbf C\{z_1,\ldots,z_n\}$ such that
+$$
+\mathcal O_{X,x}\cong
+\mathbf C\{z_1,\ldots,z_n\}/\mathfrak a
+$$
+as local $\mathbf C$-algebras. Its maximal ideal consists of germs vanishing
+at $x$, its residue field is $\mathbf C$, and it is reduced and Noetherian.
+\end{lemma}
+
+\begin{proof}
+Choose an analytic chart at $x$ and translate its image point to the origin.
+Definition \ref{definition-analytic-subset} gives the displayed quotient.
+The ideal is radical because it is the ideal of germs vanishing on a set.
+The residue and reducedness statements also follow from Lemma
+\ref{lemma-analytic-subset-basic-properties}. The remaining analytic input is
+the Weierstrass theorem that
+$\mathbf C\{z_1,\ldots,z_n\}$ is Noetherian; the quotient is then Noetherian
+by Algebra, Lemma \ref{algebra-lemma-Noetherian-permanence}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytic-germ-local-algebra}
+\begin{reference}
+\cite[\S 1, no. 4, p. 6]{GAGA}
+\end{reference}
+The local analytic $\mathbf C$-algebra $\mathcal O_{X,x}$ determines the
+germ of a Serre complex analytic space $X$ at $x$. More precisely, an
+isomorphism of local analytic $\mathbf C$-algebras
+$\mathcal O_{X,x}\cong\mathcal O_{Y,y}$ is induced contravariantly by an
+isomorphism of analytic germs $(X,x)\cong(Y,y)$.
+\end{lemma}
+
+\begin{proof}
+Present both local algebras as quotients of convergent power-series rings.
+Images of the coordinate germs under a local homomorphism are convergent
+germs and hence define a holomorphic map germ. The relations force its image
+to lie in the required analytic germ. Applying the same construction to the
+inverse algebra homomorphism gives inverse holomorphic germs.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-simple-point-regular-local}
+\begin{reference}
+\cite[\S 1, no. 4, p. 6]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space and $x\in X$. The following are
+equivalent for $n\geq 0$:
+\begin{enumerate}
+\item the germ $(X,x)$ is isomorphic to $(\mathbf C^n,0)$;
+\item $\mathcal O_{X,x}\cong\mathbf C\{z_1,\ldots,z_n\}$;
+\item $\mathcal O_{X,x}$ is a regular local ring of dimension $n$ in the
+sense of Algebra, Definition \ref{algebra-definition-regular-local}.
+\end{enumerate}
+Such an $x$ is a {\it simple point of dimension $n$}. If every point of $X$
+is simple, then $X$ is an {\it analytic variety}.
+\end{lemma}
+
+\begin{proof}
+The equivalence of (1) and (2) follows from Lemma
+\ref{lemma-analytic-germ-local-algebra}. The implication (2) $\Rightarrow$
+(3) is the standard dimension computation for convergent power-series
+rings. The converse is the regular analytic local-algebra theorem, proved
+from the analytic inverse-function theorem (equivalently, by choosing a
+basis of $\mathfrak m_x/\mathfrak m_x^2$ and applying the analytic implicit
+function theorem). This analytic theorem is an explicit external dependency
+of the present foundation block.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-components-dimension-analytic-space}
+\begin{reference}
+\cite[\S 1, no. 4, pp. 6--7]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space and $x\in X$.
+\begin{enumerate}
+\item The irreducible components $X_i$ of the germ $(X,x)$ correspond to
+the finitely many minimal primes $\mathfrak p_i$ of $\mathcal O_{X,x}$, and
+$$
+0=\bigcap_i\mathfrak p_i,
+\qquad
+\mathcal O_{X_i,x}=\mathcal O_{X,x}/\mathfrak p_i.
+$$
+\item The analytic dimension of $X$ at $x$ (one half of its local topological
+dimension) is the supremum of the dimensions of the $X_i$ and equals the
+Krull dimension of $\mathcal O_{X,x}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Reducedness and Noetherianity are given by Lemma
+\ref{lemma-local-analytic-algebra}. The algebraic assertion about the
+finiteness and intersection of minimal primes follows from Algebra, Lemmas
+\ref{algebra-lemma-Noetherian-irreducible-components} and
+\ref{algebra-lemma-Zariski-topology}. The correspondence with analytic
+components uses the local analytic Nullstellensatz. For (2), the analytic
+normalization/parameter theorem says that an irreducible analytic local
+algebra of analytic dimension $r$ is finite over
+$\mathbf C\{z_1,\ldots,z_r\}$. Dimension invariance under finite integral
+extensions then gives Krull dimension $r$. The analytic Nullstellensatz and
+local parameter theorem are explicit external dependencies; no algebraic
+Stacks result alone supplies them.
+\end{proof}
+
+
+
+
+\input{chapters}
+
+\bibliography{my}
+\bibliographystyle{amsalpha}
+
+\end{document}

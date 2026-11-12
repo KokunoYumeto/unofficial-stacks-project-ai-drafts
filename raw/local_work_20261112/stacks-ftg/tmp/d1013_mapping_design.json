@@ -1,0 +1,137 @@
+{
+  "schema": "tohoku-stacks-d1013-r57-mapping-design-v1",
+  "status": "STRICT_DESIGN_PASS_CONTINGENT",
+  "unit": "D1013",
+  "successor": "tohoku_r57",
+  "predecessor": "tohoku_r56",
+  "write_boundary": {
+    "created": [
+      "user/Documents/stacks-ftg/tmp/d1013_mapping_design.json"
+    ],
+    "not_modified": [
+      "user/Documents/stacks-ftg/tohoku_r56",
+      "user/Documents/stacks-ftg/tohoku_r57",
+      "user/Documents/stacks-ftg/cohomology.tex",
+      "all canonical source and source-repair ledgers",
+      "all reader and semantic generations"
+    ],
+    "build_or_scan_run": false,
+    "git_used": false,
+    "cleanup_run": false
+  },
+  "sealed_predecessor": {
+    "receipt": {
+      "path": "user/Documents/stacks-ftg/tohoku_r56/r56-check.json",
+      "bytes": 6894,
+      "sha256": "A931C701449D33944193E4AB5B4819B1A4CD3912A6ADDB7456DED7B2C514A62D",
+      "schema": "tohoku-stacks-mapping-successor-r56-v1",
+      "status": "PASS"
+    },
+    "locked_files": {
+      "dec.csv": {"bytes": 381639, "sha256": "5680E5911F51D5A583FD184BFA954618C9E45D73A32192F3D9AC824C57F6BDFA", "rows_excluding_header": 1036},
+      "issues.csv": {"bytes": 32866, "sha256": "D882954C9D55F7AB93F2910CE99D86FA1D107F6EFE7008B26722F012F50BC2BC", "rows_excluding_header": 31},
+      "map.csv": {"bytes": 483640, "sha256": "0F06BCBBCAE7ED210C382BF60DE8B998D6598B9130D99E96071CB48B752DCD91", "rows_excluding_header": 991}
+    },
+    "maximum_decision_id": "D001036",
+    "decision_count": 1036,
+    "source_issue_count": 31,
+    "remaining_gap_class_dispositions": 29,
+    "source_repairs_appended": 1
+  },
+  "bound_formalization": {
+    "audit": {
+      "path": "user/Documents/stacks-ftg/D1013_FORMALIZATION_CHECK.json",
+      "status": "STRICT_PASS"
+    },
+    "design": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_formalization_design.json",
+      "status": "STRICT_DESIGN_PASS"
+    },
+    "independent_review": {
+      "path": "user/Documents/stacks-ftg/tmp/d1013_independent_review_r1.json",
+      "status": "STRICT_PASS_WITH_EXPLICIT_ANALYTIC_BOUNDARY"
+    },
+    "mapping_rule": "D001037 supersedes D000565, remains new_statement, and does not reduce the 29 unresolved gap-class dispositions."
+  },
+  "planned_decisions": [
+    {
+      "decision_id": "D001037",
+      "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+      "action": "replace",
+      "disposition": "new_statement",
+      "stacks_labels": "cohomology-lemma-equivariant-extension-classes-finite-locally-free;cohomology-lemma-equivariant-ext-locally-free",
+      "rationale": "The new bounded lemma gives the abstract equivariant Yoneda/Ext bridge for finite locally free modules and identifies the coefficient sheaf via evaluation. It does not assert the analytic holomorphic-bundle correspondence or any GAGA comparison, so the source unit remains new_statement.",
+      "review_state": "integrated_source_stacks_and_independent_review",
+      "supersedes": "D000565"
+    }
+  ],
+  "map_mutation_contract": {
+    "changed_units": 1,
+    "unchanged_units": 990,
+    "changed_fields": [
+      "decision_id",
+      "disposition",
+      "rationale",
+      "review_state",
+      "stacks_labels",
+      "stacks_tags"
+    ],
+    "target_stacks_tags": "",
+    "official_tag_claims": 0,
+    "analytic_boundary_preserved": true
+  },
+  "projected_counts": {
+    "decisions": 1037,
+    "decisions_appended": 1,
+    "source_issues": 31,
+    "issues_appended": 0,
+    "active_source_issues": 0,
+    "source_repairs_appended": 1,
+    "decided_units": 679,
+    "units": 991,
+    "remaining_gap_class_dispositions_before": 29,
+    "remaining_gap_class_dispositions_after": 29,
+    "dispositions": {
+      "example_or_remark": 84,
+      "existing_equivalent": 380,
+      "existing_stronger": 41,
+      "existing_weaker": 6,
+      "extend_existing": 12,
+      "historical_reference": 33,
+      "new_section": 4,
+      "new_statement": 7,
+      "structural_only": 424
+    }
+  },
+  "canonical_encodings": {
+    "rule": "Python csv.writer compatible minimal quoting; UTF-8 without BOM; LF line terminators",
+    "decision_schema": ["decision_id", "unit_id", "action", "disposition", "stacks_labels", "rationale", "review_state", "supersedes"],
+    "decision_block": {
+      "base64": "RDAwMTAzNyx0b2hva3U6Y2xhc3NpZmljYXRpb246ZXF1aXZhcmlhbnQtYnVuZGxlLWV4dGVuc2lvbnMscmVwbGFjZSxuZXdfc3RhdGVtZW50LGNvaG9tb2xvZ3ktbGVtbWEtZXF1aXZhcmlhbnQtZXh0ZW5zaW9uLWNsYXNzZXMtZmluaXRlLWxvY2FsbHktZnJlZTtjb2hvbW9sb2d5LWxlbW1hLWVxdWl2YXJpYW50LWV4dC1sb2NhbGx5LWZyZWUsIlRoZSBuZXcgYm91bmRlZCBsZW1tYSBnaXZlcyB0aGUgYWJzdHJhY3QgZXF1aXZhcmlhbnQgWW9uZWRhL0V4dCBicmlkZ2UgZm9yIGZpbml0ZSBsb2NhbGx5IGZyZWUgbW9kdWxlcyBhbmQgaWRlbnRpZmllcyB0aGUgY29lZmZpY2llbnQgc2hlYWYgdmlhIGV2YWx1YXRpb24uIEl0IGRvZXMgbm90IGFzc2VydCB0aGUgYW5hbHl0aWMgaG9sb21vcnBoaWMtYnVuZGxlIGNvcnJlc3BvbmRlbmNlIG9yIGFueSBHQUdBIGNvbXBhcmlzb24sIHNvIHRoZSBzb3VyY2UgdW5pdCByZW1haW5zIG5ld19zdGF0ZW1lbnQuIixpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3JldmlldyxEMDAwNTY1Cg==",
+      "bytes": 541,
+      "sha256": "35C349ADA85CEEE0A2079BA10EA3BD48D49304B6BA7B235EF69A5DCF48EA7D38"
+    },
+    "map_schema": ["unit_id", "item", "unit_type", "parent_id", "source_start", "source_end", "source_loc", "authority_sha256", "source_topics", "topic_evidence_labels", "topic_evidence_tags", "decision_id", "disposition", "review_state", "stacks_labels", "stacks_tags", "rationale"],
+    "map_replacement_rows": [
+      {
+        "unit_id": "tohoku:classification:equivariant-bundle-extensions",
+        "decision_id": "D001037",
+        "base64": "dG9ob2t1OmNsYXNzaWZpY2F0aW9uOmVxdWl2YXJpYW50LWJ1bmRsZS1leHRlbnNpb25zLDIxOSxjbGFzc2lmaWNhdGlvbix0b2hva3U6c2VjdGlvbjo1LjYsMjE5LDIxOSxzZW0vcjE4L25vZGVzLmNzdjo5Myw4RDYzMkEwNEVFMEZBOTg3QjQwQjcyMUJFRTZFNjRCQjNFNjQxRDZBMUNFMDIzMzU1NTYyMTNGMTU2NEM5QTUzLGV4dCxjb2hvbW9sb2d5LXNlY3Rpb24tZXh0O2Rlcml2ZWQtc2VjdGlvbi1leHQsMDZYUDswQlFQLEQwMDEwMzcsbmV3X3N0YXRlbWVudCxpbnRlZ3JhdGVkX3NvdXJjZV9zdGFja3NfYW5kX2luZGVwZW5kZW50X3Jldmlldyxjb2hvbW9sb2d5LWxlbW1hLWVxdWl2YXJpYW50LWV4dGVuc2lvbi1jbGFzc2VzLWZpbml0ZS1sb2NhbGx5LWZyZWU7Y29ob21vbG9neS1sZW1tYS1lcXVpdmFyaWFudC1leHQtbG9jYWxseS1mcmVlLCwiVGhlIG5ldyBib3VuZGVkIGxlbW1hIGdpdmVzIHRoZSBhYnN0cmFjdCBlcXVpdmFyaWFudCBZb25lZGEvRXh0IGJyaWRnZSBmb3IgZmluaXRlIGxvY2FsbHkgZnJlZSBtb2R1bGVzIGFuZCBpZGVudGlmaWVzIHRoZSBjb2VmZmljaWVudCBzaGVhZiB2aWEgZXZhbHVhdGlvbi4gSXQgZG9lcyBub3QgYXNzZXJ0IHRoZSBhbmFseXRpYyBob2xvbW9ycGhpYy1idW5kbGUgY29ycmVzcG9uZGVuY2Ugb3IgYW55IEdBR0EgY29tcGFyaXNvbiwgc28gdGhlIHNvdXJjZSB1bml0IHJlbWFpbnMgbmV3X3N0YXRlbWVudC4iCg==",
+        "bytes": 715,
+        "sha256": "F798388A5354116FF750531A1086C5E0BE1DD7B1BA999DABBE189ACB2A80CABA"
+      }
+    ]
+  },
+  "contingent_output_identities": {
+    "cfg.json": {"bytes": 5151, "sha256": "A22FEC108C2A932AC2045BE31DC5BF4C0841FA2E56F163D0AD2374B05CA8F596"},
+    "dec.csv": {"bytes": 382180, "sha256": "251D9B4D766624E532C3316544CB1C0C6EB8DFC0BED9FD4D95207CE62AD170BD"},
+    "map.csv": {"bytes": 483757, "sha256": "829FA7055DCA164F741C3204489FADF441A437A1079085E64B86571D28601B73"}
+  },
+  "nonclaims": [
+    "This design does not claim that the analytic p.219 unit is closed.",
+    "This design does not modify source layers, the live TeX file, or the predecessor dossier.",
+    "No official Stacks tag is assigned or inferred for the new local label.",
+    "No GitHub, cleanup, archive, watcher, or broad-scan action is authorized by this design."
+  ],
+  "terminal_condition": "Only after D1013_FORMALIZATION_CHECK.json remains STRICT_PASS may the exact projected row be applied atomically to the locked r56 preimage and independently replayed as r57."
+}
