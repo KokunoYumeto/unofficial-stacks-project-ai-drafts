@@ -184,15 +184,15 @@ The older release snapshots below retain their historical dates and counts.
 
 - Current standalone publications are split by language and anonymously
   cross-checked against their GitHub releases. The French edition is
-  [Zenodo 22134750](https://doi.org/10.5281/zenodo.22134750) / concept
-  [21921588](https://doi.org/10.5281/zenodo.21921588), version
+  Zenodo 22134750 / concept
+  21921588, version
   `EGA-FR-complete-I-IV4-canon-current-r8-20260828`; the English edition is
-  [Zenodo 22134751](https://doi.org/10.5281/zenodo.22134751) / concept
-  [21921591](https://doi.org/10.5281/zenodo.21921591), version
+  Zenodo 22134751 / concept
+  21921591, version
   `EGA-EN-complete-0-IV4-canon-current-r7-20260828`. Their ten public assets
   are byte-identical across GitHub and Zenodo; exact sizes and hashes are in
   [`publication-current.json`](publication-current.json). The older omnibus
-  [Zenodo 21861666](https://doi.org/10.5281/zenodo.21861666) is retained as a
+  Zenodo 21861666 is retained as a
   historical checkpoint, not presented as the current edition or as a release
   of this integrated Stacks repository.
 - The 2026-08-30 separately packaged EGA semantic checkpoint covers EGA I
@@ -205,7 +205,7 @@ The older release snapshots below retain their historical dates and counts.
   at GitHub tag
   [`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
   and Zenodo version DOI
-  [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421) under
+  `10.5281/zenodo.22177421` under
   concept `10.5281/zenodo.22135180`. This is a semantic-only checkpoint: it
   changes no root TeX, root PDF, visual-QA, authority, issue, or errata
   registry bytes, and makes no new canon correction claim. The fixed point has
@@ -592,7 +592,7 @@ The semantic content was recorded at commit
 `f1b8d56b5f3c9999010455a38a289bce76735070` under tag
 [`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
 and Zenodo DOI
-[`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421). The
+`10.5281/zenodo.22177421`. The
 checkpoint is semantic-only: root TeX and PDF, visual QA, authority, issues,
 and the errata registry are unchanged. Its exact fixed point is D000328,
 S001246--S001249, R000823--R000825, and A000256: 256 agent rows, 328 decision
