@@ -1,0 +1,393 @@
+diff --git a/.github/workflows/validate.yml b/.github/workflows/validate.yml
+index ebbc33a..12d7142 100644
+--- a/.github/workflows/validate.yml
++++ b/.github/workflows/validate.yml
+@@ -11,76 +11,30 @@ jobs:
+   validate:
+     runs-on: ubuntu-latest
+     steps:
+-      - uses: actions/checkout@v4
+-      - name: Validate bound state and namespace leases
+-        run: |
+-          python - <<'PY'
+-          import json
+-          from pathlib import Path
+-
+-          for path in sorted(Path('.').rglob('*.json')):
+-              json.loads(path.read_text(encoding='utf-8'))
+-
+-          lock = json.loads(Path('upstream/stacks.lock.json').read_text(encoding='utf-8'))
+-          assert lock['commit'] == 'a04446e57ec1fbc252a871afcec7752fb2807b14'
+-          assert lock['tree'] == '3feeb703b931a6e7259782c10e7d1575adc83e5e'
+-          assert lock['license']['sha256'] == '4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85'
+-          assert lock['endorsement']['claimed'] is False
+-
+-          overlays = json.loads(Path('registry/overlays.json').read_text(encoding='utf-8'))
+-          locales = json.loads(Path('registry/locales.json').read_text(encoding='utf-8'))
+-          releases = json.loads(Path('registry/releases.json').read_text(encoding='utf-8'))
+-          assert overlays['registered_entries'] == []
+-          assert locales['admitted_locales'] == []
+-          assert releases['releases'] == []
+-
+-          leases = json.loads(Path('registry/leases.json').read_text(encoding='utf-8'))
+-          assert leases['schema'] == 'mathematics-commons-stacks-lease-registry/v1'
+-          assert leases['upstream_lock'] == 'upstream/stacks.lock.json'
+-          events = leases['events']
+-          assert [e['event_id'] for e in events] == [
+-              'lease-event-000001', 'lease-event-000002', 'lease-event-000003'
+-          ]
+-          assert len({e['event_id'] for e in events}) == len(events)
+-          assert len({e['lease_id'] for e in events}) == len(events)
+-          assert len({e['namespace'] for e in events}) == len(events)
+-          assert len({e['candidate_path'] for e in events}) == len(events)
+-          active = [e for e in events if e['state'] == 'active']
+-          assert len(active) == 3
+-          expected = {
+-              'commons/stacks/fac': 'stacks-lease-000001-fac',
+-              'commons/stacks/tohoku': 'stacks-lease-000002-tohoku',
+-              'commons/stacks/gaga': 'stacks-lease-000003-gaga',
+-          }
+-          assert {e['namespace']: e['lease_id'] for e in active} == expected
+-          for event in active:
+-              assert event['event'] == 'issued'
+-              assert event['writer_task'] == '019fca5a-c29e-7330-acdc-c93f4a3dc9fb'
+-              assert event['upstream_commit'] == lock['commit']
+-              assert event['upstream_tree'] == lock['tree']
+-              assert event['candidate_path'] == 'candidates/' + event['namespace']
+-              pointer_path = Path(event['candidate_path']) / 'LEASE.json'
+-              pointer = json.loads(pointer_path.read_text(encoding='utf-8'))
+-              for key in ('lease_id', 'namespace', 'writer_task', 'upstream_commit'):
+-                  assert pointer[key] == event[key], (pointer_path, key)
+-
+-          namespaces = sorted(e['namespace'].strip('/') for e in active)
+-          for i, left in enumerate(namespaces):
+-              for right in namespaces[i + 1:]:
+-                  assert not right.startswith(left + '/'), (left, right)
+-
+-          for manifest_path in sorted(Path('candidates').rglob('candidate.manifest.json')):
+-              manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+-              lease = next((e for e in active if e['lease_id'] == manifest['lease_id']), None)
+-              assert lease is not None, manifest_path
+-              assert manifest['namespace'] == lease['namespace']
+-              assert manifest['writer_task'] == lease['writer_task']
+-              assert manifest['upstream']['commit'] == lock['commit']
+-              assert manifest['upstream']['tree'] == lock['tree']
+-              assert manifest['source_closure']['complete'] is True
+-              assert manifest['source_closure']['expected_units'] == manifest['source_closure']['manifested_units']
+-
+-          forbidden = list(Path('.').rglob('*.tex')) + list(Path('.').rglob('*.pdf'))
+-          assert not forbidden, f'unexpected upstream or build payload: {forbidden}'
+-          print('validated exact Stacks pin, zero admissions, and three namespace leases')
+-          PY
++      - name: Check out the exact event commit
++        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
++        with:
++          fetch-depth: 0
++          persist-credentials: false
++      - name: Select Python
++        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
++        with:
++          python-version: "3.12"
++          cache: pip
++          cache-dependency-path: requirements-validator.txt
++      - name: Install the pinned validator dependency
++        run: python -m pip install --disable-pip-version-check -r requirements-validator.txt
++      - name: Run adversarial validator tests
++        run: python -m unittest discover -s tests -v
++      - name: Validate the checked-out repository
++        run: python tools/validate_repository.py
++      - name: Enforce append-only registries against the pull-request base
++        if: github.event_name == 'pull_request'
++        env:
++          BASE_REF: ${{ github.event.pull_request.base.sha }}
++        run: python tools/validate_repository.py --base-ref "$BASE_REF"
++      - name: Enforce append-only registries against the prior push
++        if: github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000'
++        env:
++          BASE_REF: ${{ github.event.before }}
++        run: python tools/validate_repository.py --base-ref "$BASE_REF"
+diff --git a/candidates/CONTRACT.md b/candidates/CONTRACT.md
+index 5a953f8..fd63c8e 100644
+--- a/candidates/CONTRACT.md
++++ b/candidates/CONTRACT.md
+@@ -23,12 +23,18 @@ more than one role in separate, receipt-bound transitions.
+ The candidate owner replaces the lease-only directory with a
+ `candidate.manifest.json` satisfying
+ `schemas/candidate-manifest.schema.json`. Every referenced ledger or artifact
+-must be inside the leased path and carry an uppercase SHA-256. The manifest must
+-bind:
++must be a Git-tracked regular file inside the leased path and carry an uppercase
++SHA-256 of its exact bytes. Paths are canonical repository-relative POSIX paths:
++absolute paths, backslashes, `.`/`..` components, case aliases, and symlink
++escapes are invalid. The manifest's `file_inventory` must enumerate every file
++below the leased path except `LEASE.json` and `candidate.manifest.json`; omitted,
++duplicate, untracked, extra, or hash-mismatched files fail closed. The manifest
++must bind:
+ 
+ 1. lease ID, namespace, writer task, and exact Stacks upstream commit/tree;
+ 2. every source authority and source/build artifact with provenance and hash;
+-3. complete stable-unit inventory and source-to-candidate map;
++3. nonempty stable IDs, a complete stable-unit inventory, and a
++   source-to-candidate map;
+ 4. append-only decisions, rejections, and supersession records;
+ 5. formula and diagram classification/invariance evidence;
+ 6. build artifacts and mechanical validation results;
+@@ -39,6 +45,10 @@ Historical mutable branches are evidence inputs only. They are never merged
+ wholesale. A candidate export must be rebuilt from exact authorities into this
+ contract and must preserve rejected or failed evidence.
+ 
++`tools/validate_repository.py` performs both JSON Schema and semantic checks.
++When supplied `--base-ref`, it also proves that prior lease, overlay, locale,
++and release registry entries remain an exact prefix of the proposed state.
++
+ ## Admission transition
+ 
+ Only a separate admission commit may append a record to
+diff --git a/candidates/commons/stacks/fac/LEASE.json b/candidates/commons/stacks/fac/LEASE.json
+index 89fad66..4784f75 100644
+--- a/candidates/commons/stacks/fac/LEASE.json
++++ b/candidates/commons/stacks/fac/LEASE.json
+@@ -1,10 +1,13 @@
+ {
++  "$schema": "schemas/candidate-lease-pointer.schema.json",
+   "schema": "mathematics-commons-stacks-candidate-lease-pointer/v1",
+   "lease_registry": "registry/leases.json",
+   "lease_id": "stacks-lease-000001-fac",
+   "namespace": "commons/stacks/fac",
++  "candidate_path": "candidates/commons/stacks/fac",
+   "writer_task": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+   "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
++  "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+   "candidate_manifest_schema": "schemas/candidate-manifest.schema.json",
+   "writer_contract": "candidates/CONTRACT.md"
+ }
+diff --git a/candidates/commons/stacks/gaga/LEASE.json b/candidates/commons/stacks/gaga/LEASE.json
+index 7616b28..75f7cd3 100644
+--- a/candidates/commons/stacks/gaga/LEASE.json
++++ b/candidates/commons/stacks/gaga/LEASE.json
+@@ -1,10 +1,13 @@
+ {
++  "$schema": "schemas/candidate-lease-pointer.schema.json",
+   "schema": "mathematics-commons-stacks-candidate-lease-pointer/v1",
+   "lease_registry": "registry/leases.json",
+   "lease_id": "stacks-lease-000003-gaga",
+   "namespace": "commons/stacks/gaga",
++  "candidate_path": "candidates/commons/stacks/gaga",
+   "writer_task": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+   "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
++  "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+   "candidate_manifest_schema": "schemas/candidate-manifest.schema.json",
+   "writer_contract": "candidates/CONTRACT.md"
+ }
+diff --git a/candidates/commons/stacks/tohoku/LEASE.json b/candidates/commons/stacks/tohoku/LEASE.json
+index d67dc2b..387949c 100644
+--- a/candidates/commons/stacks/tohoku/LEASE.json
++++ b/candidates/commons/stacks/tohoku/LEASE.json
+@@ -1,10 +1,13 @@
+ {
++  "$schema": "schemas/candidate-lease-pointer.schema.json",
+   "schema": "mathematics-commons-stacks-candidate-lease-pointer/v1",
+   "lease_registry": "registry/leases.json",
+   "lease_id": "stacks-lease-000002-tohoku",
+   "namespace": "commons/stacks/tohoku",
++  "candidate_path": "candidates/commons/stacks/tohoku",
+   "writer_task": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+   "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
++  "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+   "candidate_manifest_schema": "schemas/candidate-manifest.schema.json",
+   "writer_contract": "candidates/CONTRACT.md"
+ }
+diff --git a/registry/locales.json b/registry/locales.json
+index 4b431ec..cf0fa58 100644
+--- a/registry/locales.json
++++ b/registry/locales.json
+@@ -1,7 +1,7 @@
+ {
++  "$schema": "../schemas/locale-registry.schema.json",
+   "schema": "mathematics-commons-stacks-locale-registry/v1",
+   "updated_at_utc": "2026-08-12T19:57:48Z",
+   "edition_label": "independently_maintained_ai_produced_no_upstream_endorsement",
+   "admitted_locales": []
+ }
+-
+diff --git a/schemas/candidate-manifest.schema.json b/schemas/candidate-manifest.schema.json
+index 19d7358..07562f1 100644
+--- a/schemas/candidate-manifest.schema.json
++++ b/schemas/candidate-manifest.schema.json
+@@ -4,9 +4,9 @@
+   "title": "Manifest-complete Stacks overlay candidate",
+   "type": "object",
+   "additionalProperties": false,
+-  "required": ["schema", "candidate_id", "lease_id", "namespace", "writer_task", "upstream", "source_authorities", "source_closure", "stable_unit_manifest", "source_map", "decision_ledger", "rejection_ledger", "formula_diagram_inventory", "builds", "rights_state", "review_state", "independent_replay", "unresolved_defects", "stop_conditions", "generated_at_utc"],
++  "required": ["$schema", "schema", "candidate_id", "lease_id", "namespace", "writer_task", "upstream", "source_authorities", "source_closure", "stable_ids", "stable_unit_manifest", "source_map", "decision_ledger", "rejection_ledger", "formula_diagram_inventory", "builds", "file_inventory", "rights_state", "review_state", "independent_replay", "unresolved_defects", "stop_conditions", "generated_at_utc"],
+   "properties": {
+-    "$schema": {"type": "string"},
++    "$schema": {"const": "schemas/candidate-manifest.schema.json"},
+     "schema": {"const": "mathematics-commons-stacks-candidate-manifest/v1"},
+     "candidate_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+     "lease_id": {"type": "string", "pattern": "^stacks-lease-[0-9]{6}-[a-z0-9-]+$"},
+@@ -34,12 +34,23 @@
+         "complete": {"const": true}
+       }
+     },
++    "stable_ids": {
++      "type": "array",
++      "minItems": 1,
++      "uniqueItems": true,
++      "items": {"type": "string", "minLength": 1}
++    },
+     "stable_unit_manifest": {"$ref": "#/$defs/hashedEvidence"},
+     "source_map": {"$ref": "#/$defs/hashedEvidence"},
+     "decision_ledger": {"$ref": "#/$defs/hashedEvidence"},
+     "rejection_ledger": {"$ref": "#/$defs/hashedEvidence"},
+     "formula_diagram_inventory": {"$ref": "#/$defs/hashedEvidence"},
+     "builds": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/hashedEvidence"}},
++    "file_inventory": {
++      "type": "array",
++      "minItems": 1,
++      "items": {"$ref": "#/$defs/hashedEvidence"}
++    },
+     "rights_state": {"type": "string", "minLength": 1},
+     "review_state": {"enum": ["not_performed", "partial", "performed"]},
+     "independent_replay": {"enum": ["not_performed", "passed", "failed"]},
+diff --git a/schemas/lease-registry.schema.json b/schemas/lease-registry.schema.json
+index 4fe3264..d2e91cf 100644
+--- a/schemas/lease-registry.schema.json
++++ b/schemas/lease-registry.schema.json
+@@ -4,34 +4,76 @@
+   "title": "Mathematics Commons Stacks candidate-namespace lease registry",
+   "type": "object",
+   "additionalProperties": false,
+-  "required": ["schema", "upstream_lock", "namespace_root", "events"],
++  "required": ["$schema", "schema", "upstream_lock", "namespace_root", "events"],
+   "properties": {
+-    "$schema": {"type": "string"},
++    "$schema": {"const": "../schemas/lease-registry.schema.json"},
+     "schema": {"const": "mathematics-commons-stacks-lease-registry/v1"},
+     "upstream_lock": {"const": "upstream/stacks.lock.json"},
+     "namespace_root": {"const": "commons/stacks"},
+     "events": {
+       "type": "array",
+       "minItems": 1,
+-      "items": {
+-        "type": "object",
+-        "additionalProperties": false,
+-        "required": ["event_id", "event", "lease_id", "namespace", "candidate_path", "writer_task", "upstream_commit", "upstream_tree", "issued_at_utc", "state", "writer_contract"],
+-        "properties": {
+-          "event_id": {"type": "string", "pattern": "^lease-event-[0-9]{6}$"},
+-          "event": {"enum": ["issued", "released", "superseded"]},
+-          "lease_id": {"type": "string", "pattern": "^stacks-lease-[0-9]{6}-[a-z0-9-]+$"},
+-          "namespace": {"type": "string", "pattern": "^commons/stacks/[a-z0-9][a-z0-9/-]*$"},
+-          "candidate_path": {"type": "string", "pattern": "^candidates/commons/stacks/[a-z0-9][a-z0-9/-]*$"},
+-          "writer_task": {"type": "string", "pattern": "^[0-9a-f-]{36}$"},
+-          "upstream_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+-          "upstream_tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+-          "issued_at_utc": {"type": "string", "format": "date-time"},
+-          "state": {"enum": ["active", "released", "superseded"]},
+-          "supersedes_event_id": {"type": "string"},
+-          "writer_contract": {"const": "candidates/CONTRACT.md"}
++      "items": {"$ref": "#/$defs/leaseEvent"}
++    }
++  },
++  "$defs": {
++    "leaseEvent": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": [
++        "event_id",
++        "event",
++        "lease_id",
++        "namespace",
++        "candidate_path",
++        "writer_task",
++        "upstream_commit",
++        "upstream_tree",
++        "issued_at_utc",
++        "state",
++        "writer_contract"
++      ],
++      "properties": {
++        "event_id": {"type": "string", "pattern": "^lease-event-[0-9]{6}$"},
++        "event": {"enum": ["issued", "released", "superseded"]},
++        "lease_id": {"type": "string", "pattern": "^stacks-lease-[0-9]{6}-[a-z0-9-]+$"},
++        "namespace": {"type": "string", "pattern": "^commons/stacks/[a-z0-9][a-z0-9/-]*$"},
++        "candidate_path": {"type": "string", "pattern": "^candidates/commons/stacks/[a-z0-9][a-z0-9/-]*$"},
++        "writer_task": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
++        "upstream_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
++        "upstream_tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
++        "issued_at_utc": {"type": "string", "format": "date-time"},
++        "event_at_utc": {"type": "string", "format": "date-time"},
++        "state": {"enum": ["active", "released", "superseded"]},
++        "supersedes_event_id": {"type": "string", "pattern": "^lease-event-[0-9]{6}$"},
++        "writer_contract": {"const": "candidates/CONTRACT.md"}
++      },
++      "allOf": [
++        {
++          "if": {"properties": {"event": {"const": "issued"}}, "required": ["event"]},
++          "then": {
++            "properties": {
++              "state": {"const": "active"},
++              "supersedes_event_id": false,
++              "event_at_utc": false
++            }
++          }
++        },
++        {
++          "if": {"properties": {"event": {"const": "released"}}, "required": ["event"]},
++          "then": {
++            "required": ["supersedes_event_id", "event_at_utc"],
++            "properties": {"state": {"const": "released"}}
++          }
++        },
++        {
++          "if": {"properties": {"event": {"const": "superseded"}}, "required": ["event"]},
++          "then": {
++            "required": ["supersedes_event_id", "event_at_utc"],
++            "properties": {"state": {"const": "superseded"}}
++          }
+         }
+-      }
++      ]
+     }
+   }
+ }
+diff --git a/schemas/release-manifest.schema.json b/schemas/release-manifest.schema.json
+index 4da3f7f..0176269 100644
+--- a/schemas/release-manifest.schema.json
++++ b/schemas/release-manifest.schema.json
+@@ -4,6 +4,7 @@
+   "title": "Stacks-derived edition release registry",
+   "type": "object",
+   "additionalProperties": false,
++  "additionalProperties": false,
+   "required": ["schema", "updated_at_utc", "releases"],
+   "properties": {
+     "$schema": {"type": "string"},
+@@ -13,6 +14,7 @@
+       "type": "array",
+       "items": {
+         "type": "object",
++        "additionalProperties": false,
+         "required": ["id", "locale", "upstream_commit", "overlay_commit", "translation_commit", "composer_commit", "artifact_sha256", "rights_state", "edition_label", "independent_replay"],
+         "properties": {
+           "id": {"type": "string"},
+@@ -30,4 +32,3 @@
+     }
+   }
+ }
+-
+diff --git a/upstream/stacks.lock.json b/upstream/stacks.lock.json
+index 7ae1f20..0409b4f 100644
+--- a/upstream/stacks.lock.json
++++ b/upstream/stacks.lock.json
+@@ -1,4 +1,5 @@
+ {
++  "$schema": "../schemas/upstream-lock.schema.json",
+   "schema": "mathematics-commons-upstream-lock/v1",
+   "observed_at_utc": "2026-08-12T19:57:48Z",
+   "role": "exact_read_only_upstream_reference",
+@@ -24,4 +25,3 @@
+     "label": "independently_maintained_ai_produced_no_upstream_endorsement"
+   }
+ }
+-
